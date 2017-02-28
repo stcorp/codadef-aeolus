@@ -1,0 +1,506 @@
+<?xml version="1.0"?>
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="binary" last-modified="2010-08-26" name="Level_1B_Product_Confidence_Data_ADSR_03_05">
+  <cd:Field name="start_of_observation_time">
+    <cd:Time timeformat="binary_envisat_datetime">
+      <cd:Description>Start time at start of BRC</cd:Description>
+      <ct:NamedTest id="RangeSecond" path="seconds"/>
+      <ct:NamedTest id="RangeMicroSecond" path="microseconds"/>
+      <ct:NamedTest id="TimeNotZero"/>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="n">
+    <cd:Integer>
+      <cd:Description>Number of measurements</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="p">
+    <cd:Integer>
+      <cd:Description>Number of pulses</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="spare_1">
+    <cd:Raw>
+      <cd:Description>Spare</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="observation_pcd">
+    <cd:Record>
+      <cd:Description>Level 1B Observation PCD</cd:Description>
+      <cd:Field name="num_measurement_laser_freq_unlocked">
+        <cd:Integer>
+          <cd:Description>Number of measurements with laser transmitter frequency unlocked status</cd:Description>
+          <cd:BitSize>32</cd:BitSize>
+          <cd:NativeType>int32</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="num_reference_pulse_laser_freq_unlocked">
+        <cd:Integer>
+          <cd:Description>Number of reference pulses with laser transmitter frequency unlocked status</cd:Description>
+          <cd:BitSize>32</cd:BitSize>
+          <cd:NativeType>int32</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="num_sat_not_on_target_measurements">
+        <cd:Integer>
+          <cd:Description>Number of measurements with the satellite not no target status</cd:Description>
+          <cd:BitSize>32</cd:BitSize>
+          <cd:NativeType>int32</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="num_corrupt_mie_measurements">
+        <cd:Integer>
+          <cd:Description>Number of corrupt Mie measurements</cd:Description>
+          <cd:BitSize>32</cd:BitSize>
+          <cd:NativeType>int32</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="num_corrupt_rayleigh_measurements">
+        <cd:Integer>
+          <cd:Description>Number of corrupt Rayleigh measurements</cd:Description>
+          <cd:BitSize>32</cd:BitSize>
+          <cd:NativeType>int32</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="num_corrupt_mie_reference_pulses">
+        <cd:Integer>
+          <cd:Description>Number of corrupt Mie reference pulses</cd:Description>
+          <cd:BitSize>32</cd:BitSize>
+          <cd:NativeType>int32</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="num_corrupt_rayleigh_reference_pulses">
+        <cd:Integer>
+          <cd:Description>Number of corrupt Rayleigh reference pulses</cd:Description>
+          <cd:BitSize>32</cd:BitSize>
+          <cd:NativeType>int32</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="avg_laser_frequency_offset">
+        <cd:Float>
+          <cd:Description>Average laser frequency offset</cd:Description>
+          <cd:Unit>GHz</cd:Unit>
+          <cd:BitSize>64</cd:BitSize>
+          <cd:NativeType>double</cd:NativeType>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="avg_uv_energy">
+        <cd:Float>
+          <cd:Description>Average laser UV energy</cd:Description>
+          <cd:Unit>mJ</cd:Unit>
+          <cd:BitSize>64</cd:BitSize>
+          <cd:NativeType>double</cd:NativeType>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="laser_frequency_offset_std_dev">
+        <cd:Float>
+          <cd:Description>Laser frequency offset standard deviation</cd:Description>
+          <cd:Unit>GHz</cd:Unit>          
+          <cd:BitSize>64</cd:BitSize>
+          <cd:NativeType>double</cd:NativeType>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="uv_energy_std_dev">
+        <cd:Float>
+          <cd:Description>Laser pulse UV energy standard deviation</cd:Description>
+          <cd:Unit>mJ</cd:Unit>          
+          <cd:BitSize>64</cd:BitSize>
+          <cd:NativeType>double</cd:NativeType>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="num_mie_peak_invalid">
+        <cd:Integer>
+          <cd:Description>Number of invalid Mie bin due to invalid peak fit of the measurement data or reference pulse data</cd:Description>
+          <cd:BitSize>32</cd:BitSize>
+          <cd:NativeType>int32</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="observation_alt_bin_pcd">
+        <cd:Array>
+          <cd:Dimension>25</cd:Dimension>
+          <cd:Record>
+            <cd:Description>Level 1B Observation Alt Bin PCD</cd:Description>
+            <cd:Field name="error_quantifier_mie">
+              <cd:Float>
+                <cd:Description>Error quantifier for Mie</cd:Description>
+                <cd:Unit>m/s</cd:Unit>
+                <cd:BitSize>64</cd:BitSize>
+                <cd:NativeType>double</cd:NativeType>
+              </cd:Float>
+            </cd:Field>
+            <cd:Field name="error_quantifier_rayleigh">
+              <cd:Float>
+                <cd:Description>Error quantifier for Rayleigh</cd:Description>
+                <cd:Unit>m/s</cd:Unit>
+                <cd:BitSize>64</cd:BitSize>
+                <cd:NativeType>double</cd:NativeType>
+              </cd:Float>
+            </cd:Field>
+            <cd:Field name="error_quantifier_rayleigh_channel_a">
+              <cd:Float>
+                <cd:Description>Error quantifier for Rayleigh channel A</cd:Description>
+                <cd:Unit>AU</cd:Unit>
+                <cd:BitSize>64</cd:BitSize>
+                <cd:NativeType>double</cd:NativeType>
+              </cd:Float>
+            </cd:Field>
+            <cd:Field name="error_quantifier_rayleigh_channel_b">
+              <cd:Float>
+                <cd:Description>Error quantifier for Rayleigh channel B</cd:Description>
+                <cd:Unit>AU</cd:Unit>
+                <cd:BitSize>64</cd:BitSize>
+                <cd:NativeType>double</cd:NativeType>
+              </cd:Float>
+            </cd:Field>
+            <cd:Field name="mie_wind_velocity_std_dev">
+              <cd:Float>
+                <cd:Description>Mie wind velocity standard deviation of the altitude bin</cd:Description>
+                <cd:Unit>AU</cd:Unit>
+                <cd:BitSize>64</cd:BitSize>
+                <cd:NativeType>double</cd:NativeType>
+              </cd:Float>
+            </cd:Field>
+            <cd:Field name="rayleigh_wind_velocity_std_dev">
+              <cd:Float>
+                <cd:Description>Rayleigh wind velocity standard deviation of the altitude bin</cd:Description>
+                <cd:Unit>AU</cd:Unit>
+                <cd:BitSize>64</cd:BitSize>
+                <cd:NativeType>double</cd:NativeType>
+              </cd:Float>
+            </cd:Field>
+            <cd:Field name="mie_useful_signal_std_dev">
+              <cd:Float>
+                <cd:Description>Mie useful signal tandard deviation of the altitude bin</cd:Description>
+                <cd:Unit>AU</cd:Unit>
+                <cd:BitSize>64</cd:BitSize>
+                <cd:NativeType>double</cd:NativeType>
+              </cd:Float>
+            </cd:Field>
+            <cd:Field name="rayleigh_useful_signal_channel_a_std_dev">
+              <cd:Float>
+                <cd:Description>Rayleigh channel A  useful signal tandard deviation of the altitude bin</cd:Description>
+                <cd:Unit>AU</cd:Unit>
+                <cd:BitSize>64</cd:BitSize>
+                <cd:NativeType>double</cd:NativeType>
+              </cd:Float>
+            </cd:Field>
+            <cd:Field name="rayleigh_useful_signal_channel_b_std_dev">
+              <cd:Float>
+                <cd:Description>Rayleigh channel B  useful signal tandard deviation of the altitude bin</cd:Description>
+                <cd:Unit>AU</cd:Unit>
+                <cd:BitSize>64</cd:BitSize>
+                <cd:NativeType>double</cd:NativeType>
+              </cd:Float>
+            </cd:Field>
+            <cd:Field name="mie_core_characteristic">
+              <cd:NamedType id="Level_1B_PCD_Mie_Core_characteristics"/>
+            </cd:Field>
+            <cd:Field name="scattering_ratio_mie">
+              <cd:Float>
+                <cd:Description>Scattering ratio of the altitude bin</cd:Description>
+                <cd:Unit>AU</cd:Unit>
+                <cd:BitSize>64</cd:BitSize>
+                <cd:NativeType>double</cd:NativeType>
+              </cd:Float>
+            </cd:Field>
+            <cd:Field name="mie_signal_to_noise_ratio">
+              <cd:Float>
+                <cd:Description>Mie signal-to-noise ratio of the altitude bin. If the Mie Signal-to-Noise ratio cannot be computed, this field is set to 1.0</cd:Description>
+                <cd:Unit>AU</cd:Unit>
+                <cd:BitSize>64</cd:BitSize>
+                <cd:NativeType>double</cd:NativeType>
+              </cd:Float>
+            </cd:Field>
+            <cd:Field name="rayleigh_signal_to_noise_ratio_channel_a">
+              <cd:Float>
+                <cd:Description>Rayleigh channel A signal-to-noise ratio of the altitude bin. If the Rayleigh channel A Signal-to-Noise ratio cannot be computed, this field is set to 1.0</cd:Description>
+                <cd:Unit>AU</cd:Unit>
+                <cd:BitSize>64</cd:BitSize>
+                <cd:NativeType>double</cd:NativeType>
+              </cd:Float>
+            </cd:Field>
+            <cd:Field name="rayleigh_signal_to_noise_ratio_channel_b">
+              <cd:Float>
+                <cd:Description>Rayleigh channel B signal-to-noise ratio of the altitude bin. If the Rayleigh channel B Signal-to-Noise ratio cannot be computed, this field is set to 1.0</cd:Description>
+                <cd:Unit>AU</cd:Unit>
+                <cd:BitSize>64</cd:BitSize>
+                <cd:NativeType>double</cd:NativeType>
+              </cd:Float>
+            </cd:Field>
+          </cd:Record>
+        </cd:Array>
+      </cd:Field>
+      <cd:Field name="num_mie_invalid_measurements">
+        <cd:Integer>
+          <cd:Description>Number of Mie invalid measurement data over all bins due to source packet invalid, data corruption, laser frequency unlocked, or satellite attitude not on target</cd:Description>
+          <cd:BitSize>32</cd:BitSize>
+          <cd:NativeType>int32</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="num_mie_invalid_reference_pulse">
+        <cd:Integer>
+          <cd:Description>Number of Mie invalid measurement data over all bins due to source packet invalid, data corruption, or laser frequency unlocked</cd:Description>
+          <cd:BitSize>32</cd:BitSize>
+          <cd:NativeType>int32</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="num_rayleigh_invalid_measurements">
+        <cd:Integer>
+          <cd:Description>Number of Rayleigh invalid measurement data over all bins due to source packet invalid, data corruption, laser frequency unlocked, or satellite attitude not on target</cd:Description>
+          <cd:BitSize>32</cd:BitSize>
+          <cd:NativeType>int32</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="num_rayleigh_invalid_reference_pulse">
+        <cd:Integer>
+          <cd:Description>Number of Rayleigh invalid measurement data over all bins due to source packet invalid, data corruption, or laser frequency unlocked</cd:Description>
+          <cd:BitSize>32</cd:BitSize>
+          <cd:NativeType>int32</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="mie_mean_emitted_frequency">
+        <cd:Float>
+          <cd:Description>Emitted responses calculated using : eqn 58 from R-2 for the reference pulse of the observation : eqn 60 from R-2 for the reference pulse of a measuremen : emitted responses are then converted to emitted frequencies</cd:Description>
+          <cd:Unit>GHz</cd:Unit>
+          <cd:BitSize>64</cd:BitSize>
+          <cd:NativeType>double</cd:NativeType>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="mie_emitted_frequency_std_dev">
+        <cd:Float>
+          <cd:Description>Emitted frequencies standard deviation</cd:Description>
+          <cd:Unit>GHz</cd:Unit>          
+          <cd:BitSize>64</cd:BitSize>
+          <cd:NativeType>double</cd:NativeType>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="rayleigh_mean_emitted_frequency">
+        <cd:Float>
+          <cd:Description>Emitted responses calculated using : eqn 58 from R-2 for the reference pulse of the observation : eqn 60 from R-2 for the reference pulse of a measuremen : emitted responses are then converted to emitted frequencies</cd:Description>
+          <cd:Unit>GHz</cd:Unit>          
+          <cd:BitSize>64</cd:BitSize>
+          <cd:NativeType>double</cd:NativeType>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="rayleigh_emitted_frequency_std_dev">
+        <cd:Float>
+          <cd:Description>Emitted frequencies standard deviation</cd:Description>
+          <cd:Unit>GHz</cd:Unit>          
+          <cd:BitSize>64</cd:BitSize>
+          <cd:NativeType>double</cd:NativeType>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="multimode_ratio_quality_flag">
+        <cd:Integer>
+          <cd:Description>Flag that is set if the multimode ratio falls below the multimode ratio threshold for an observation</cd:Description>
+          <cd:BitSize>8</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+          <ct:NamedTest id="BooleanBinTest"/>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="spare_3">
+        <cd:Raw>
+          <cd:Description>Spare</cd:Description>
+          <cd:BitSize>32</cd:BitSize>
+        </cd:Raw>
+        <cd:Hidden/>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="measurement_pcd">
+    <cd:Array>
+      <cd:Dimension><![CDATA[int(/sph/n_max)]]></cd:Dimension>
+      <cd:Record>
+        <cd:Description>Level 1B measurement PCD</cd:Description>
+        <cd:Field name="num_mie_invalid_reference_pulse">
+          <cd:Integer>
+            <cd:Description>Number of Mie invalid reference pulses due to source packet invalid, data corruption, or laser frequency unlocked</cd:Description>
+            <cd:BitSize>32</cd:BitSize>
+            <cd:NativeType>int32</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="num_rayleigh_invalid_reference_pulse">
+          <cd:Integer>
+            <cd:Description>Number of Rayleigh invalid reference pulses due to source packet invalid, data corruption, or laser frequency unlocked</cd:Description>
+            <cd:BitSize>32</cd:BitSize>
+            <cd:NativeType>int32</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="avg_laser_frequency_offset">
+          <cd:Float>
+            <cd:Description>Average laser frequency offset</cd:Description>
+            <cd:Unit>GHz</cd:Unit>
+            <cd:BitSize>64</cd:BitSize>
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Field>
+        <cd:Field name="avg_uv_energy">
+          <cd:Float>
+            <cd:Description>Average laser UV energy</cd:Description>
+            <cd:Unit>mJ</cd:Unit>
+            <cd:BitSize>64</cd:BitSize>
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Field>
+        <cd:Field name="laser_frequency_offset_std_dev">
+          <cd:Float>
+            <cd:Description>Laser frequency offset standard deviation</cd:Description>
+            <cd:Unit>GHz</cd:Unit>
+            <cd:BitSize>64</cd:BitSize>
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Field>
+        <cd:Field name="uv_energy_std_dev">
+          <cd:Float>
+            <cd:Description>Laser pulse UV energy standard deviation</cd:Description>
+            <cd:Unit>mJ</cd:Unit>            
+            <cd:BitSize>64</cd:BitSize>
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Field>
+        <cd:Field name="meas_alt_bin_pcd">
+          <cd:Array>
+            <cd:Dimension>25</cd:Dimension>
+            <cd:Record>
+              <cd:Description>Level 1B Meas Alt Bin PCD</cd:Description>
+              <cd:Field name="mie_measurement_invalid">
+                <cd:Integer>
+                  <cd:Description>Invalid Mie measurement data for the current altitude bin due to source packet invalid, data corruption, laser frequency unlocked, or satellite attitude not on target, or bin below ground</cd:Description>
+                  <cd:BitSize>8</cd:BitSize>
+                  <cd:NativeType>uint8</cd:NativeType>
+                  <ct:NamedTest id="BooleanBinTest"/>
+                </cd:Integer>
+              </cd:Field>
+              <cd:Field name="rayleigh_measurement_invalid">
+                <cd:Integer>
+                  <cd:Description>Invalid Rayleigh measurement data for the current altitude bin due to source packet invalid, data corruption, laser frequency unlocked, or satellite attitude not on target, or bin below ground</cd:Description>
+                  <cd:BitSize>8</cd:BitSize>
+                  <cd:NativeType>uint8</cd:NativeType>
+                  <ct:NamedTest id="BooleanBinTest"/>
+                </cd:Integer>
+              </cd:Field>
+              <cd:Field name="mie_peak_invalid">
+                <cd:Integer>
+                  <cd:Description>Invalid mie bin due to invalid peak fit of the measurement data of reference pulse data</cd:Description>
+                  <cd:BitSize>8</cd:BitSize>
+                  <cd:NativeType>uint8</cd:NativeType>
+                  <ct:NamedTest id="BooleanBinTest"/>
+                </cd:Integer>
+              </cd:Field>
+              <cd:Field name="mie_core_characteristic">
+                <cd:NamedType id="Level_1B_PCD_Mie_Core_characteristics"/>
+              </cd:Field>
+              <cd:Field name="scattering_ratio_mie">
+                <cd:Float>
+                  <cd:Description>Scattering ratio of the altitude bin</cd:Description>
+                  <cd:Unit>AU</cd:Unit>
+                  <cd:BitSize>64</cd:BitSize>
+                  <cd:NativeType>double</cd:NativeType>
+                </cd:Float>
+              </cd:Field>
+              <cd:Field name="mie_signal_to_noise_ratio">
+                <cd:Float>
+                  <cd:Description>Mie signal to noise ratio of the altitude bin. If the Mie Signal-to-Noise ratio cannot be computed, this field is set to 1.0</cd:Description>
+                  <cd:Unit>AU</cd:Unit>
+                  <cd:BitSize>64</cd:BitSize>
+                  <cd:NativeType>double</cd:NativeType>
+                </cd:Float>
+              </cd:Field>
+              <cd:Field name="rayleigh_signal_to_noise_ratio_channel_a">
+                <cd:Float>
+                  <cd:Description>Rayleigh channel A signal to noise ratio of the altitude bin. If the Rayleigh channel A Signal-to-Noise ratio cannot be computed, this field is set to 1.0</cd:Description>
+                  <cd:Unit>AU</cd:Unit>
+                  <cd:BitSize>64</cd:BitSize>
+                  <cd:NativeType>double</cd:NativeType>
+                </cd:Float>
+              </cd:Field>
+              <cd:Field name="rayleigh_signal_to_noise_ratio_channel_b">
+                <cd:Float>
+                  <cd:Description>Rayleigh channel B signal to noise ratio of the altitude bin. If the Rayleigh channel B Signal-to-Noise ratio cannot be computed, this field is set to 1.0</cd:Description>
+                  <cd:Unit>AU</cd:Unit>
+                  <cd:BitSize>64</cd:BitSize>
+                  <cd:NativeType>double</cd:NativeType>
+                </cd:Float>
+              </cd:Field>
+            </cd:Record>
+          </cd:Array>
+        </cd:Field>
+        <cd:Field name="velocity_of_attitude_uncertainty_error">
+          <cd:Float>
+            <cd:Description>Velocity of attitude uncertainty error</cd:Description>
+            <cd:Unit>m/s</cd:Unit>
+            <cd:BitSize>64</cd:BitSize>
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Field>
+        <cd:Field name="mie_mean_emitted_frequency">
+          <cd:Float>
+            <cd:Description>emitted responses calculated using ...</cd:Description>
+            <cd:Unit>GHz</cd:Unit>            
+            <cd:BitSize>64</cd:BitSize>
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Field>
+        <cd:Field name="mie_emitted_frequency_std_dev">
+          <cd:Float>
+            <cd:Description>Emitted frequency standard deviation</cd:Description>
+            <cd:Unit>GHz</cd:Unit>            
+            <cd:BitSize>64</cd:BitSize>
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Field>
+        <cd:Field name="reference_pulse_fwhm">
+          <cd:Float>
+            <cd:Description>Reference pulse FWHM</cd:Description>
+            <cd:Unit>pixel</cd:Unit>
+            <cd:BitSize>64</cd:BitSize>
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Field>
+        <cd:Field name="rayleigh_mean_emitted_frequency">
+          <cd:Float>
+            <cd:Description>emitted responses calculated using ...</cd:Description>
+            <cd:Unit>GHz</cd:Unit>            
+            <cd:BitSize>64</cd:BitSize>
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Field>
+        <cd:Field name="rayleigh_emitted_frequency_std_dev">
+          <cd:Float>
+            <cd:Description>Rayleigh emitted frequency standard deviation</cd:Description>
+            <cd:Unit>GHz</cd:Unit>            
+            <cd:BitSize>64</cd:BitSize>
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Field>
+        <cd:Field name="uv_energy_quality_flag">
+          <cd:Integer>
+            <cd:Description>Flag that shows the quality of the UV energy</cd:Description>
+            <cd:BitSize>8</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+            <ct:NamedTest id="BooleanBinTest"/>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="spare_4">
+          <cd:Raw>
+            <cd:Description>Spare</cd:Description>
+            <cd:BitSize>64</cd:BitSize>
+          </cd:Raw>
+          <cd:Hidden/>
+        </cd:Field>
+      </cd:Record>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="spare_2">
+    <cd:Raw>
+      <cd:Description>Spare</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+</cd:Record>

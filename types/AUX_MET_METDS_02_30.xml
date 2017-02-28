@@ -1,0 +1,221 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="AUX_MET_METDS_02_30" last-modified="2016-07-22" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Field name="spare_1">
+    <cd:Raw>
+      <cd:Description>Spare</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="amd_us">
+    <cd:Integer>
+      <cd:Description>East-West wind component at the surface (&gt;0 to East). This information can be used for qualifying Mie wind in ground echo-height-bins.</cd:Description>
+      <cd:Unit>cm/s</cd:Unit>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="amd_vs">
+    <cd:Integer>
+      <cd:Description>North-South wind component at the surface (&gt;0 to North). This information can be used for qualifying Mie wind in ground echo-height-bins.</cd:Description>
+      <cd:Unit>cm/s</cd:Unit>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="amd_ps">
+    <cd:Integer>
+      <cd:Description>Surface pressure. May be used for detecting severe events like tropical cyclones.</cd:Description>
+      <cd:Unit>Pa</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="amd_err_ps">
+    <cd:Float>
+      <cd:Description>Std error on amd_ps</cd:Description>
+      <cd:Unit>Pa</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="amd_zs">
+    <cd:Integer>
+      <cd:Description>Geometric height relative to EGM96 geoid at pressure amd_ps. Gives the altitude of the surface according to the weather model.</cd:Description>
+      <cd:Unit>cm</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="spare_2">
+    <cd:Raw>
+      <cd:Description>Spare</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="profile_data">
+    <cd:Array>
+      <cd:Description>List of Num_of_Model_Layers substructures each containing the metereological data constituting the vertical profile. Each substructure corresponds to one model layer.</cd:Description>
+      <cd:Dimension><![CDATA[int(/sph/num_of_model_layers)]]></cd:Dimension>
+      <cd:Record>
+        <cd:Field name="amd_validity_flag">
+          <cd:Integer>
+            <cd:Description>0: valid level with a complete set of AMD data with all parameters extracted from the NWP modwl, -1: incomplete level containing at least valid temperature, valid pressures, and valid heights, -2: otherwise</cd:Description>
+            <cd:Unit>cm</cd:Unit>
+            <cd:BitSize>8</cd:BitSize>
+            <cd:NativeType>int8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="amd_pbase">
+          <cd:Integer>
+            <cd:Description>Pressure at the bottom of the model layer</cd:Description>
+            <cd:Unit>Pa</cd:Unit>
+            <cd:BitSize>32</cd:BitSize>
+            <cd:NativeType>uint32</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="amd_ptop">
+          <cd:Integer>
+            <cd:Description>Pressure at the top of the model layer</cd:Description>
+            <cd:Unit>Pa</cd:Unit>
+            <cd:BitSize>32</cd:BitSize>
+            <cd:NativeType>uint32</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="amd_pnom">
+          <cd:Integer>
+            <cd:Description>Nominal pressure within the model layer, can differ from (amd_pbase+amd_ptop)/2</cd:Description>
+            <cd:Unit>Pa</cd:Unit>
+            <cd:BitSize>32</cd:BitSize>
+            <cd:NativeType>uint32</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="amd_zbase">
+          <cd:Integer>
+            <cd:Description>Geometric height relative to EGM96 geoid at pressure amd_pbase</cd:Description>
+            <cd:Unit>cm</cd:Unit>
+            <cd:BitSize>32</cd:BitSize>
+            <cd:NativeType>int32</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="amd_ztop">
+          <cd:Integer>
+            <cd:Description>Geometric height relative to EGM96 geoid at pressure amd_ptop</cd:Description>
+            <cd:Unit>cm</cd:Unit>
+            <cd:BitSize>32</cd:BitSize>
+            <cd:NativeType>int32</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="amd_znom">
+          <cd:Integer>
+            <cd:Description>Geometric height relative to EGM96 geoid at pressure amd_pnom</cd:Description>
+            <cd:Unit>cm</cd:Unit>
+            <cd:BitSize>32</cd:BitSize>
+            <cd:NativeType>int32</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="amd_t">
+          <cd:Integer>
+            <cd:Description>Temperature at pressure amd_pnom</cd:Description>
+            <cd:Unit>1e-2 K</cd:Unit>
+            <cd:Conversion numerator="1.000000" denominator="100.000000">
+              <cd:Unit>K</cd:Unit>
+            </cd:Conversion>
+            <cd:BitSize>16</cd:BitSize>
+            <cd:NativeType>uint16</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="amd_err_t">
+          <cd:Integer>
+            <cd:Description>Std error on amd_t</cd:Description>
+            <cd:Unit>1e-2 K</cd:Unit>
+            <cd:Conversion numerator="1.000000" denominator="100.000000">
+              <cd:Unit>K</cd:Unit>
+            </cd:Conversion>
+            <cd:BitSize>16</cd:BitSize>
+            <cd:NativeType>uint16</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="amd_u">
+          <cd:Integer>
+            <cd:Description>East-West wind velocity (&gt;0 to East)</cd:Description>
+            <cd:Unit>cm/s</cd:Unit>
+            <cd:BitSize>16</cd:BitSize>
+            <cd:NativeType>int16</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="amd_v">
+          <cd:Integer>
+            <cd:Description>North-South wind velocity (&gt;0 to North)</cd:Description>
+            <cd:Unit>cm/s</cd:Unit>
+            <cd:BitSize>16</cd:BitSize>
+            <cd:NativeType>int16</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="spare_1">
+          <cd:Raw>
+            <cd:Description>Spare</cd:Description>
+            <cd:BitSize>32</cd:BitSize>
+          </cd:Raw>
+          <cd:Hidden/>
+        </cd:Field>
+        <cd:Field name="amd_rh">
+          <cd:Integer>
+            <cd:Description>Relative humidity at pressure amd_pnom</cd:Description>
+            <cd:Unit>%</cd:Unit>
+            <cd:BitSize>8</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="amd_err_rh">
+          <cd:Float>
+            <cd:Description>Std error on amd_rh</cd:Description>
+            <cd:Unit>%</cd:Unit>
+            <cd:BitSize>64</cd:BitSize>
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Field>
+        <cd:Field name="amd_q">
+          <cd:Float>
+            <cd:Description>Specific humidity at pressure amd_pnom</cd:Description>
+            <cd:Unit>kg/kg</cd:Unit>
+            <cd:BitSize>64</cd:BitSize>
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Field>
+        <cd:Field name="amd_cc">
+          <cd:Integer>
+            <cd:Description>Cloud cover at pressure amd_pnom</cd:Description>
+            <cd:Unit>%</cd:Unit>
+            <cd:BitSize>8</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="amd_clwc">
+          <cd:Float>
+            <cd:Description>Cloud liquid water content at pressure amd_pnom</cd:Description>
+            <cd:Unit>kg/kg</cd:Unit>
+            <cd:BitSize>64</cd:BitSize>
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Field>
+        <cd:Field name="amd_ciwc">
+          <cd:Float>
+            <cd:Description>Cloud ice water content at pressure amd_pnom</cd:Description>
+            <cd:Unit>kg/kg</cd:Unit>
+            <cd:BitSize>64</cd:BitSize>
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Field>
+      </cd:Record>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="spare_3">
+    <cd:Raw>
+      <cd:Description>Spare</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+</cd:Record>

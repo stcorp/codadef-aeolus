@@ -1,0 +1,234 @@
+<?xml version="1.0"?>
+<cd:Record name="Level_2C_Proc_Params" format="xml" namexml="Level_2C_Proc_Params" last-modified="2010-08-26" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Description>Level 2C Processing Parameters GADS DSR</cd:Description>
+  <cd:Field name="L2C_FH_Default_Fields">
+    <cd:Record namexml="L2C_FH_Default_Fields">
+      <cd:Description>Fields responsible for populating the Fixed Header</cd:Description>
+      <cd:Field name="File_Description">
+        <cd:Text namexml="File_Description">
+          <cd:Description>1-line description of the file</cd:Description>
+        </cd:Text>
+      </cd:Field>
+      <cd:Field name="Notes">
+        <cd:Text namexml="Notes">
+          <cd:Description>Multi-lines free text</cd:Description>
+        </cd:Text>
+      </cd:Field>
+      <cd:Field name="Mission">
+        <cd:Text namexml="Mission">
+          <cd:Description>Aeolus</cd:Description>
+        </cd:Text>
+      </cd:Field>
+      <cd:Field name="Mission_Id">
+        <cd:Text namexml="Mission_Id">
+          <cd:Description>AE</cd:Description>
+        </cd:Text>
+      </cd:Field>
+      <cd:Field name="File_Class">
+        <cd:Text namexml="File_Class">
+          <cd:Description>1-Line description of the file class</cd:Description>
+        </cd:Text>
+      </cd:Field>
+      <cd:Field name="File_Version">
+        <cd:Type namexml="File_Version">
+          <cd:Integer format="ascii">
+            <cd:Description>4 digits used to distinguish between versions of a file having the same validity period</cd:Description>
+            <cd:NativeType>int16</cd:NativeType>
+          </cd:Integer>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="System">
+        <cd:Text namexml="System">
+          <cd:Description>Aeolus L1bP</cd:Description>
+        </cd:Text>
+      </cd:Field>
+      <cd:Field name="Creator">
+        <cd:Text namexml="Creator">
+          <cd:Description>Aeolus L1bP</cd:Description>
+        </cd:Text>
+      </cd:Field>
+      <cd:Field name="Creator_Version">
+        <cd:Text namexml="Creator_Version">
+          <cd:Description>Version of the tool</cd:Description>
+        </cd:Text>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="L2C_MPH_Default_Fields">
+    <cd:Record namexml="L2C_MPH_Default_Fields">
+      <cd:Description>Values responsible for populating the main product header</cd:Description>
+      <cd:Field name="Ref_Doc">
+        <cd:Text namexml="Ref_Doc">
+          <cd:Description>Reference document describing the product</cd:Description>
+        </cd:Text>
+      </cd:Field>
+      <cd:Field name="Software_Ver">
+        <cd:Text namexml="Software_Ver">
+          <cd:Description>Software version number of processing software. Format: name of processor (up to 10 char) version number (4 char)</cd:Description>
+        </cd:Text>
+      </cd:Field>
+      <cd:Field name="Proc_Center">
+        <cd:Text namexml="Proc_Center">
+          <cd:Description>AEOLUS PHS</cd:Description>
+        </cd:Text>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="L2C_Assim_Params">
+    <cd:Record namexml="L2C_Assim_Params">
+      <cd:Description>Processing Parameters for the assimilation of L2B data</cd:Description>
+      <cd:Field name="File_Type">
+        <cd:Text namexml="File_Type">
+          <cd:Description>File type string</cd:Description>
+        </cd:Text>
+      </cd:Field>
+      <cd:Field name="Sph_Descriptor">
+        <cd:Text namexml="Sph_Descriptor">
+          <cd:Description>ASCII string describing the product</cd:Description>
+        </cd:Text>
+      </cd:Field>
+      <cd:Field name="Spare">
+        <cd:Hidden/>
+        <cd:Text namexml="Spare">
+        </cd:Text>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="L2C_Screening_Params">
+    <cd:Record namexml="L2C_Screening_Params">
+      <cd:Description>Collected Screening Parameters used for testing the input files and the generated results</cd:Description>
+      <cd:Field name="L2B_Input_Screening_Params">
+        <cd:Record namexml="L2B_Input_Screening_Params">
+          <cd:Description>Parameters used for screening the L2B input data</cd:Description>
+          <cd:Field name="L2B_Mie_Obs_Screening_Params">
+            <cd:Record namexml="L2B_Mie_Obs_Screening_Params">
+              <cd:Description>Parameters used for screening the L2B Mie observations from the L2B input data</cd:Description>
+              <cd:Field name="L2B_Scattering_Ratio_Min">
+                <cd:Type namexml="L2B_Scattering_Ratio_Min">
+                  <cd:Float format="ascii">
+                    <cd:Description>Minimum allowed value for Scattering_Ratio_Mie</cd:Description>
+                    <cd:NativeType>double</cd:NativeType>
+                  </cd:Float>
+                </cd:Type>
+              </cd:Field>
+              <cd:Field name="L2B_Scattering_Ratio_Max">
+                <cd:Type namexml="L2B_Scattering_Ratio_Max">
+                  <cd:Float format="ascii">
+                    <cd:Description>Maximum allowed value for Scattering_Ratio_Mie</cd:Description>
+                    <cd:NativeType>double</cd:NativeType>
+                  </cd:Float>
+                </cd:Type>
+              </cd:Field>
+              <cd:Field name="L2B_Mie_SNR_Threshold">
+                <cd:Type namexml="L2B_Mie_SNR_Threshold">
+                  <cd:Float format="ascii">
+                    <cd:Description>Threshold on the value of Mie_Signal_to_Noise_Ratio</cd:Description>
+                    <cd:NativeType>double</cd:NativeType>
+                  </cd:Float>
+                </cd:Type>
+              </cd:Field>
+              <cd:Field name="Mie_Ground_Bin_Thickness_Threshold">
+                <cd:Type namexml="Mie_Ground_Bin_Thickness_Threshold">
+                  <cd:Attribute name="unit">
+                    <cd:Optional/>
+                    <cd:FixedValue>m</cd:FixedValue>
+                  </cd:Attribute>
+                  <cd:Float format="ascii">
+                    <cd:Description>Threshold on the part of the ground bin that is above the surface according to the DEM</cd:Description>
+                    <cd:Unit>m</cd:Unit>
+                    <cd:NativeType>double</cd:NativeType>
+                  </cd:Float>
+                </cd:Type>
+              </cd:Field>
+              <cd:Field name="Max_Signal_Derivative">
+                <cd:Type namexml="Max_Signal_Derivative">
+                  <cd:Attribute name="unit">
+                    <cd:Optional/>
+                    <cd:FixedValue>PixelLevel</cd:FixedValue>
+                  </cd:Attribute>
+                  <cd:Integer format="ascii">
+                    <cd:Description>Threshold on the Mie spectrum to be able to detect corrupt channels</cd:Description>
+                    <cd:NativeType>int16</cd:NativeType>
+                  </cd:Integer>
+                </cd:Type>
+              </cd:Field>
+              <cd:Field name="Pixel_Saturation_Threshold">
+                <cd:Type namexml="Pixel_Saturation_Threshold">
+                  <cd:Attribute name="unit">
+                    <cd:Optional/>
+                    <cd:FixedValue>PixelLevel</cd:FixedValue>
+                  </cd:Attribute>
+                  <cd:Integer format="ascii">
+                    <cd:Description>Threshold on the Mie spectral channels to be able to detect saturated channels</cd:Description>
+                    <cd:NativeType>int16</cd:NativeType>
+                  </cd:Integer>
+                </cd:Type>
+              </cd:Field>
+              <cd:Field name="Spare">
+                <cd:Hidden/>
+                <cd:Text namexml="Spare">
+                </cd:Text>
+              </cd:Field>
+            </cd:Record>
+          </cd:Field>
+          <cd:Field name="L2B_Rayleigh_Obs_Screening_Params">
+            <cd:Record namexml="L2B_Rayleigh_Obs_Screening_Params">
+              <cd:Description>Parameters used for screening the L2B Rayleigh Observations from the L2B input data</cd:Description>
+              <cd:Field name="L2B_Rayleigh_SNR_Min">
+                <cd:Type namexml="L2B_Rayleigh_SNR_Min">
+                  <cd:Float format="ascii">
+                    <cd:Description>Minimum allowed value for Rayleigh_Signal_to_Noise_Ratio_Channel_A and Rayleigh_Signal_to_Noise_Ratio_Channel_B</cd:Description>
+                    <cd:NativeType>double</cd:NativeType>
+                  </cd:Float>
+                </cd:Type>
+              </cd:Field>
+              <cd:Field name="L2B_Rayleigh_SNR_Max">
+                <cd:Type namexml="L2B_Rayleigh_SNR_Max">
+                  <cd:Float format="ascii">
+                    <cd:Description>Maximum allowed value for Rayleigh_Signal_to_Noise_Ratio_Channel_A and Rayleigh_Signal_to_Noise_Ratio_Channel_B</cd:Description>
+                    <cd:NativeType>double</cd:NativeType>
+                  </cd:Float>
+                </cd:Type>
+              </cd:Field>
+              <cd:Field name="Rayleigh_Ground_Bin_Thickness_Threshold">
+                <cd:Type namexml="Rayleigh_Ground_Bin_Thickness_Threshold">
+                  <cd:Attribute name="unit">
+                    <cd:Optional/>
+                    <cd:FixedValue>m</cd:FixedValue>
+                  </cd:Attribute>
+                  <cd:Float format="ascii">
+                    <cd:Description>Threshold on the part of the ground bin that is above the surface according to the DEM</cd:Description>
+                    <cd:Unit>m</cd:Unit>
+                    <cd:NativeType>double</cd:NativeType>
+                  </cd:Float>
+                </cd:Type>
+              </cd:Field>
+              <cd:Field name="Pixel_Saturation_Threshold">
+                <cd:Type namexml="Pixel_Saturation_Threshold">
+                  <cd:Attribute name="unit">
+                    <cd:Optional/>
+                    <cd:FixedValue>PixelLevel</cd:FixedValue>
+                  </cd:Attribute>
+                  <cd:Integer format="ascii">
+                    <cd:Description>Threshold on the Rayleigh channels to be able to detect saturated signals</cd:Description>
+                    <cd:NativeType>int16</cd:NativeType>
+                  </cd:Integer>
+                </cd:Type>
+              </cd:Field>
+              <cd:Field name="Spare">
+                <cd:Hidden/>
+                <cd:Text namexml="Spare">
+                </cd:Text>
+              </cd:Field>
+            </cd:Record>
+          </cd:Field>
+        </cd:Record>
+      </cd:Field>
+      <cd:Field name="Spare">
+        <cd:Hidden/>
+        <cd:Text namexml="Spare">
+        </cd:Text>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+</cd:Record>

@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<cd:Record name="Auxiliary_Calibration_CSR_01_03" format="xml" last-modified="2009-01-23" namexml="List_of_CSR_Frequency_Steps" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+  <cd:Description>List of frequency step results</cd:Description>
+  <cd:Attribute name="count"> </cd:Attribute>
+  <cd:Field name="CSR_Frequency_Step">
+    <cd:Array>
+      <cd:Dimension/>
+      <cd:Record namexml="CSR_Frequency_Step">
+        <cd:Description>Frequency step results</cd:Description>
+        <cd:Field name="Laser_Freq_Offset">
+          <cd:Type namexml="Laser_Freq_Offset">
+            <cd:Attribute name="unit">
+              <cd:Optional/>
+              <cd:FixedValue>GHz</cd:FixedValue>
+            </cd:Attribute>
+            <cd:Float format="ascii">
+              <cd:Description>Laser frequency offset</cd:Description>
+              <cd:Unit>GHz</cd:Unit>
+              <cd:NativeType>double</cd:NativeType>
+            </cd:Float>
+          </cd:Type>
+        </cd:Field>
+        <cd:Field name="Rayleigh_A_Response">
+          <cd:Type namexml="Rayleigh_A_Response">
+            <cd:Float format="ascii">
+              <cd:Description>Response of FPA</cd:Description>
+              <cd:NativeType>double</cd:NativeType>
+            </cd:Float>
+          </cd:Type>
+        </cd:Field>
+        <cd:Field name="Rayleigh_B_Response">
+          <cd:Type namexml="Rayleigh_B_Response">
+            <cd:Float format="ascii">
+              <cd:Description>Response of FPB</cd:Description>
+              <cd:NativeType>double</cd:NativeType>
+            </cd:Float>
+          </cd:Type>
+        </cd:Field>
+      </cd:Record>
+      <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+    </cd:Array>
+  </cd:Field>
+</cd:Record>

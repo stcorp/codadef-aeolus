@@ -1,0 +1,135 @@
+<?xml version="1.0"?>
+<cd:Record name="Specific_Product_Header_MET" format="xml" namexml="Specific_Product_Header" last-modified="2008-07-01" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Description>Specific Product Header for ALD RBC products</cd:Description>
+  <cd:Field name="Sph_Descriptor">
+    <cd:Text namexml="Sph_Descriptor">
+      <cd:Description>SPH descriptor: ASCII string describing the product</cd:Description>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="Spare_1">
+    <cd:Hidden/>
+    <cd:Text namexml="Spare_1">
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="Ref_NWP_Suite">
+    <cd:Text namexml="Ref_NWP_Suite">
+      <cd:Description>Reference of the NWP suite that was used to produce the met data</cd:Description>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="Fcst_Initial_Time">
+    <cd:Type namexml="Fcst_Initial_Time">
+      <cd:Time format="ascii" timeformat="ascii_ccsds_datetime_ymd2_with_ref">
+        <cd:Description>Forecast initial date and time</cd:Description>
+        <cd:Mapping string="UTC=0000-00-00T00:00:00.000000" value="-inf"/>
+        <cd:Mapping string="UTC=9999-99-99T99:99:99.999999" value="+inf"/>
+        <cd:Mapping string="" value="nan"/>
+      </cd:Time>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Model_Timestep">
+    <cd:Type namexml="Model_Timestep">
+      <cd:Integer format="ascii">
+        <cd:Description>Model integration timestep</cd:Description>
+        <cd:Unit>s</cd:Unit>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Model_Grid_Type">
+    <cd:Text namexml="Model_Grid_Type">
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="Model_Resol_Par1">
+    <cd:Type namexml="Model_Resol_Par1">
+      <cd:Integer format="ascii">
+        <cd:Description>Model resolution parameter 1. 'SH' or 'GF' or 'GR': truncature; 'LL': latitude spacing</cd:Description>
+        <cd:NativeType>int16</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Model_Resol_Par2">
+    <cd:Type namexml="Model_Resol_Par2">
+      <cd:Integer format="ascii">
+        <cd:Description>Model resolution parameter 1. 'SH' or 'GF' or 'GR': stretching; 'LL': longitude spacing</cd:Description>
+        <cd:NativeType>int16</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Num_of_Model_Layers">
+    <cd:Type namexml="Num_of_Model_Layers">
+      <cd:Integer format="ascii">
+        <cd:Description>Number of pressure layers for AMD profiles</cd:Description>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Num_Records_in_DS1">
+    <cd:Type namexml="Num_Records_in_DS1">
+      <cd:Integer format="ascii">
+        <cd:Description>Total number of records in GeoADS#1 or MDS#1 (off-nadir met profiles)</cd:Description>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Num_Records_in_DS2">
+    <cd:Type namexml="Num_Records_in_DS2">
+      <cd:Integer format="ascii">
+        <cd:Description>Total number of records in GeoADS#2 or MDS#2 (nadir met profiles)</cd:Description>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Num_Avail_L1B_Obs">
+    <cd:Type namexml="Num_Avail_L1B_Obs">
+      <cd:Integer format="ascii">
+        <cd:Description>Number of L1B observations that were available at the time the assimilation was started</cd:Description>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Num_Missing_L1B_Obs">
+    <cd:Type namexml="Num_Missing_L1B_Obs">
+      <cd:Integer format="ascii">
+        <cd:Description>Number of L1B observations that were missing at the time the assimilation was started</cd:Description>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Num_Computed_Locations">
+    <cd:Type namexml="Num_Computed_Locations">
+      <cd:Integer format="ascii">
+        <cd:Description>Number of profile locations computed from predicted orbit tracks to compensate for missing L1B observations</cd:Description>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Spare_2">
+    <cd:Hidden/>
+    <cd:Text namexml="Spare_2">
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="Num_Input_Files">
+    <cd:Type namexml="Num_Input_Files">
+      <cd:Integer format="ascii">
+        <cd:Description>Number of input files that were used for obtaining locations for computation of AMD. Input files are either L1B (WVM) files or predicated orbit files. This files is unlikely to exceed 10</cd:Description>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Num_Files_Predict_Orbit">
+    <cd:Type namexml="Num_Files_Predict_Orbit">
+      <cd:Integer format="ascii">
+        <cd:Description>Number of predicted orbit files that were used for computing expected L1B profile locations and corresponding AMD. If no L1B data was missing, this field is zero. This field must not exceed Num_Input_Files</cd:Description>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Spare_3">
+    <cd:Hidden/>
+    <cd:Text namexml="Spare_3">
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="List_of_Dsds">
+    <cd:NamedType id="List_of_Dsds"/>
+  </cd:Field>
+</cd:Record>

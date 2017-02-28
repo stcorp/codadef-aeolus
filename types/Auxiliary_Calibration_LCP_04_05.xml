@@ -1,0 +1,384 @@
+<?xml version="1.0"?>
+<cd:Record name="Auxiliary_Calibration_LCP_04_05" format="xml" namexml="Auxiliary_Calibration_LCP" last-modified="2016-11-29" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+  <cd:Description>Auxiliary Calibration LCP</cd:Description>
+  <cd:Field name="List_of_Data_Set_Records">
+    <cd:Record namexml="List_of_Data_Set_Records">
+      <cd:Description>List of Data Set Records</cd:Description>
+      <cd:Attribute name="count">
+      </cd:Attribute>
+      <cd:Field name="Data_Set_Record">
+        <cd:Array>
+          <cd:Dimension/>
+          <cd:Record namexml="Data_Set_Record">
+            <cd:Description>Data Set Record</cd:Description>
+            <cd:Field name="First_Start_of_Observation_Time">
+              <cd:Type namexml="First_Start_of_Observation_Time">
+                <cd:Time format="ascii" timeformat="ascii_ccsds_datetime_ymd1_with_ref">
+                  <cd:Description>Start of observation time of the first BRC</cd:Description>
+                  <cd:Mapping string="UTC=0000-00-00T00:00:00" value="-inf"/>
+                  <cd:Mapping string="UTC=9999-12-31T23:59:59" value="+inf"/>
+                  <cd:Mapping string="" value="nan"/>
+                </cd:Time>
+              </cd:Type>
+            </cd:Field>
+            <cd:Field name="Last_Start_of_Observation_Time">
+              <cd:Type namexml="Last_Start_of_Observation_Time">
+                <cd:Time format="ascii" timeformat="ascii_ccsds_datetime_ymd1_with_ref">
+                  <cd:Description>Start of observation time of the last BRC</cd:Description>
+                  <cd:Mapping string="UTC=0000-00-00T00:00:00" value="-inf"/>
+                  <cd:Mapping string="UTC9999-12-31T23:59:59" value="+inf"/>
+                  <cd:Mapping string="" value="nan"/>
+                </cd:Time>
+              </cd:Type>
+            </cd:Field>
+            <cd:Field name="List_of_LCP_Results">
+              <cd:Record namexml="List_of_LCP_Results">
+                <cd:Description>List of LCP result per phase value</cd:Description>
+                <cd:Attribute name="count">
+                </cd:Attribute>
+                <cd:Field name="LCP_Result">
+                  <cd:Array>
+                    <cd:Dimension/>
+                    <cd:Record namexml="LCP_Result">
+                      <cd:Description>LCP Result</cd:Description>
+                      <cd:Field name="Laser_Chopper_Phase_Delay">
+                        <cd:Type namexml="Laser_Chopper_Phase_Delay">
+                          <cd:Attribute name="unit">
+                            <cd:Optional/>
+                            <cd:FixedValue>TMC</cd:FixedValue>
+                          </cd:Attribute>
+                          <cd:Float format="ascii">
+                            <cd:Description>Laser chopper phase delay</cd:Description>
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="Mie_Maximum_Flux">
+                        <cd:Type namexml="Mie_Maximum_Flux">
+                          <cd:Attribute name="unit">
+                            <cd:Optional/>
+                            <cd:FixedValue>ACCD counts</cd:FixedValue>
+                          </cd:Attribute>
+                          <cd:Float format="ascii">
+                            <cd:Description>Mie maximum flux: maximum column value of array of mean over all Mie measurments and atmospheric height bins</cd:Description>
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="Mie_Mean_Background">
+                        <cd:Type namexml="Mie_Mean_Background">
+                          <cd:Attribute name="unit">
+                            <cd:Optional/>
+                            <cd:FixedValue>ACCD counts</cd:FixedValue>
+                          </cd:Attribute>
+                          <cd:Float format="ascii">
+                            <cd:Description>Mie mean background: mean value of first and last value of array of mean over all Mie measurements and atmospheric height bins.</cd:Description>
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="Mie_Mean_Flux">
+                        <cd:Type namexml="Mie_Mean_Flux">
+                          <cd:Attribute name="unit">
+                            <cd:Optional/>
+                            <cd:FixedValue>ACCD counts</cd:FixedValue>
+                          </cd:Attribute>
+                          <cd:Float format="ascii">
+                            <cd:Description>Mie mean flux: mean value of array of mean over all Mie measurements and atmospheric height bins of all 16 usable ACCD columns</cd:Description>
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="Mie_Mean_Flux_Lowest_Col">
+                        <cd:Type namexml="Mie_Mean_Flux_Lowest_Col">
+                          <cd:Attribute name="unit">
+                            <cd:Optional/>
+                            <cd:FixedValue>ACCD counts</cd:FixedValue>
+                          </cd:Attribute>
+                          <cd:Float format="ascii">
+                            <cd:Description>First value of array of mean over all Mie measurements and atmospheric height bins of 16 usable ACCD columns</cd:Description>
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="Mie_Mean_Flux_Highest_Col">
+                        <cd:Type namexml="Mie_Mean_Flux_Highest_Col">
+                          <cd:Attribute name="unit">
+                            <cd:Optional/>
+                            <cd:FixedValue>ACCD counts</cd:FixedValue>
+                          </cd:Attribute>
+                          <cd:Float format="ascii">
+                            <cd:Description>Last value of array of mean over all Mie measurements and atmospheric height bins of 16 usable ACCD columns</cd:Description>
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="Mie_Reference_Pulse_Maximum_Flux">
+                        <cd:Type namexml="Mie_Reference_Pulse_Maximum_Flux">
+                          <cd:Attribute name="unit">
+                            <cd:Optional/>
+                            <cd:FixedValue>ACCD counts</cd:FixedValue>
+                          </cd:Attribute>
+                          <cd:Float format="ascii">
+                            <cd:Description>Mie maximum reference pulse flux: maximum column value of mean reference pulse array of phase step</cd:Description>
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="Mie_Reference_Pulse_Mean_Background">
+                        <cd:Type namexml="Mie_Reference_Pulse_Mean_Background">
+                          <cd:Attribute name="unit">
+                            <cd:Optional/>
+                            <cd:FixedValue>ACCD counts</cd:FixedValue>
+                          </cd:Attribute>
+                          <cd:Float format="ascii">
+                            <cd:Description>Mie mean reference pulse background: mean value of first and last useful pixel of mean reference pulse array of phase step</cd:Description>
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="Mie_Reference_Pulse_Mean_Flux">
+                        <cd:Type namexml="Mie_Reference_Pulse_Mean_Flux">
+                          <cd:Attribute name="unit">
+                            <cd:Optional/>
+                            <cd:FixedValue>ACCD counts</cd:FixedValue>
+                          </cd:Attribute>
+                          <cd:Float format="ascii">
+                            <cd:Description>Mie mean reference pulse flux: mean value of all 16 usable ACCD columns of mean reference pulse array</cd:Description>
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="Mie_Reference_Pulse_Mean_Flux_Lowest_Col">
+                        <cd:Type namexml="Mie_Reference_Pulse_Mean_Flux_Lowest_Col">
+                          <cd:Attribute name="unit">
+                            <cd:Optional/>
+                            <cd:FixedValue>ACCD counts</cd:FixedValue>
+                          </cd:Attribute>
+                          <cd:Float format="ascii">
+                            <cd:Description>Mie mean reference pulse flux:value of first of 16 usable ACCD columns of mean reference pulse</cd:Description>
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="Mie_Reference_Pulse_Mean_Flux_Highest_Col">
+                        <cd:Type namexml="Mie_Reference_Pulse_Mean_Flux_Highest_Col">
+                          <cd:Attribute name="unit">
+                            <cd:Optional/>
+                            <cd:FixedValue>ACCD counts</cd:FixedValue>
+                          </cd:Attribute>
+                          <cd:Float format="ascii">
+                            <cd:Description>Mie mean reference pulse flux: value of last of 16 usable ACCD columns of mean reference pulse</cd:Description>
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="Rayleigh_Maximum_Flux">
+                        <cd:Type namexml="Rayleigh_Maximum_Flux">
+                          <cd:Attribute name="unit">
+                            <cd:Optional/>
+                            <cd:FixedValue>ACCD counts</cd:FixedValue>
+                          </cd:Attribute>
+                          <cd:Float format="ascii">
+                            <cd:Description>Rayleigh maximum flux: mean value of first and last value of array of mean over all Rayleigh measurements and atmospheric height bins.</cd:Description>
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="Rayleigh_Mean_Background">
+                        <cd:Type namexml="Rayleigh_Mean_Background">
+                          <cd:Attribute name="unit">
+                            <cd:Optional/>
+                            <cd:FixedValue>ACCD counts</cd:FixedValue>
+                          </cd:Attribute>
+                          <cd:Float format="ascii">
+                            <cd:Description>Rayleigh mean background: mean value of first and last value of array of mean over all Rayleigh measurements and atmospheric height bins.</cd:Description>
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="Rayleigh_Mean_Flux_Channel_A">
+                        <cd:Type namexml="Rayleigh_Mean_Flux_Channel_A">
+                          <cd:Attribute name="unit">
+                            <cd:Optional/>
+                            <cd:FixedValue>ACCD counts</cd:FixedValue>
+                          </cd:Attribute>
+                          <cd:Float format="ascii">
+                            <cd:Description>Rayleigh mean flux: mean value of array of mean over all Rayleigh measurements and atmospheric height bins of 8 ACCD columns of channel A</cd:Description>
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="Rayleigh_Mean_Flux_Channel_B">
+                        <cd:Type namexml="Rayleigh_Mean_Flux_Channel_B">
+                          <cd:Attribute name="unit">
+                            <cd:Optional/>
+                            <cd:FixedValue>ACCD counts</cd:FixedValue>
+                          </cd:Attribute>
+                          <cd:Float format="ascii">
+                            <cd:Description>Rayleigh mean flux: mean value of array of mean over all Rayleigh measurements and atmospheric height bins of 8 ACCD columns of channel B</cd:Description>
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="Rayleigh_Reference_Pulse_Maximum_Flux">
+                        <cd:Type namexml="Rayleigh_Reference_Pulse_Maximum_Flux">
+                          <cd:Attribute name="unit">
+                            <cd:Optional/>
+                            <cd:FixedValue>ACCD counts</cd:FixedValue>
+                          </cd:Attribute>
+                          <cd:Float format="ascii">
+                            <cd:Description>Rayleigh reference pulse maximum flux:: maximum column value of mean reference pulse array of phase step</cd:Description>
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="Rayleigh_Reference_Pulse_Mean_Background">
+                        <cd:Type namexml="Rayleigh_Reference_Pulse_Mean_Background">
+                          <cd:Attribute name="unit">
+                            <cd:Optional/>
+                            <cd:FixedValue>ACCD counts</cd:FixedValue>
+                          </cd:Attribute>
+                          <cd:Float format="ascii">
+                            <cd:Description>Rayleigh reference pulse mean background: mean value of first and last useful pixel of mean reference pulse array of phase step</cd:Description>
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="Rayleigh_Reference_Pulse_Mean_Flux_Channel_A">
+                        <cd:Type namexml="Rayleigh_Reference_Pulse_Mean_Flux_Channel_A">
+                          <cd:Attribute name="unit">
+                            <cd:Optional/>
+                            <cd:FixedValue>ACCD counts</cd:FixedValue>
+                          </cd:Attribute>
+                          <cd:Float format="ascii">
+                            <cd:Description>Rayleigh reference pulse mean flux:mean value of 8 ACCD columns of channel A mean reference pulse</cd:Description>
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="Rayleigh_Reference_Pulse_Mean_Flux_Channel_B">
+                        <cd:Type namexml="Rayleigh_Reference_Pulse_Mean_Flux_Channel_B">
+                          <cd:Attribute name="unit">
+                            <cd:Optional/>
+                            <cd:FixedValue>ACCD counts</cd:FixedValue>
+                          </cd:Attribute>
+                          <cd:Float format="ascii">
+                            <cd:Description>Rayleigh reference pulse mean flux:mean value of 8 ACCD columns of channel B mean reference pulse</cd:Description>
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="Phase_Step_Data_Statistics">
+                        <cd:Record namexml="Phase_Step_Data_Statistics">
+                          <cd:Description>Data statistics for the phase step</cd:Description>
+                          <cd:Field name="Num_Mie_Observations_Used">
+                            <cd:Type namexml="Num_Mie_Observations_Used">
+                              <cd:Integer format="ascii">
+                                <cd:Description>Number of Mie observations used when there are usuable Mie measuremtns and reference pulses</cd:Description>
+                                <cd:NativeType>int32</cd:NativeType>
+                              </cd:Integer>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="Num_Rayleigh_Observations_Used">
+                            <cd:Type namexml="Num_Rayleigh_Observations_Used">
+                              <cd:Integer format="ascii">
+                                <cd:Description>Number of Rayleigh observations used when there are usuable Rayleigh measuremtns and pulses</cd:Description>
+                                <cd:NativeType>int32</cd:NativeType>
+                              </cd:Integer>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="Num_Mie_Measurements_Usable">
+                            <cd:Type namexml="Num_Mie_Measurements_Usable">
+                              <cd:Integer format="ascii">
+                                <cd:Description>Number of Mie measurements usable. The measurement is usable if the laser transmitter frequency is locked; and Mie measurement is not corrupted</cd:Description>
+                                <cd:NativeType>int32</cd:NativeType>
+                              </cd:Integer>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="Num_Rayleigh_Measurements_Usable">
+                            <cd:Type namexml="Num_Rayleigh_Measurements_Usable">
+                              <cd:Integer format="ascii">
+                                <cd:Description>Number of Rayleigh measurements usable. The measurement is usable if the laser transmitter frequency is locked;and Rayleigh measurement is not corrupted</cd:Description>
+                                <cd:NativeType>int32</cd:NativeType>
+                              </cd:Integer>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="Num_Mie_Reference_Pulses_Usable">
+                            <cd:Type namexml="Num_Mie_Reference_Pulses_Usable">
+                              <cd:Integer format="ascii">
+                                <cd:Description>Number of Mie reference pulses usable. The pulse is usable if the laser transmitter frequency is locked; and Mie reference pulse is not corrupted</cd:Description>
+                                <cd:NativeType>int32</cd:NativeType>
+                              </cd:Integer>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="Num_Rayleigh_Reference_Pulses_Usable">
+                            <cd:Type namexml="Num_Rayleigh_Reference_Pulses_Usable">
+                              <cd:Integer format="ascii">
+                                <cd:Description>Number of Rayleigh reference pulses usable. The pulse is usable if the laser transmitter frequency is locked; and Rayleigh reference pulse is not corrupted</cd:Description>
+                                <cd:NativeType>int32</cd:NativeType>
+                              </cd:Integer>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="Num_Measurement_Invalid">
+                            <cd:Type namexml="Num_Measurement_Invalid">
+                              <cd:Integer format="ascii">
+                                <cd:Description>Currently NOT used.</cd:Description>
+                                <cd:NativeType>int32</cd:NativeType>
+                              </cd:Integer>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="Num_Reference_Pulse_Invalid">
+                            <cd:Type namexml="Num_Reference_Pulse_Invalid">
+                              <cd:Integer format="ascii">
+                                <cd:Description>Currently NOT used.</cd:Description>
+                                <cd:NativeType>int32</cd:NativeType>
+                              </cd:Integer>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="Num_Corrupt_Mie_Measurements">
+                            <cd:Type namexml="Num_Corrupt_Mie_Measurements">
+                              <cd:Integer format="ascii">
+                                <cd:Description>Total number of corrupt Mie measurements</cd:Description>
+                                <cd:NativeType>int32</cd:NativeType>
+                              </cd:Integer>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="Num_Corrupt_Rayleigh_Measurements">
+                            <cd:Type namexml="Num_Corrupt_Rayleigh_Measurements">
+                              <cd:Integer format="ascii">
+                                <cd:Description>Total number of corrupt Rayleigh measurements</cd:Description>
+                                <cd:NativeType>int32</cd:NativeType>
+                              </cd:Integer>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="Num_Corrupt_Mie_Reference_Pulses">
+                            <cd:Type namexml="Num_Corrupt_Mie_Reference_Pulses">
+                              <cd:Integer format="ascii">
+                                <cd:Description>Total number of corrupt Mie reference pulses</cd:Description>
+                                <cd:NativeType>int32</cd:NativeType>
+                              </cd:Integer>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="Num_Corrupt_Rayleigh_Reference_Pulses">
+                            <cd:Type namexml="Num_Corrupt_Rayleigh_Reference_Pulses">
+                              <cd:Integer format="ascii">
+                                <cd:Description>Total number of corrupt Rayleigh reference pulses</cd:Description>
+                                <cd:NativeType>int32</cd:NativeType>
+                              </cd:Integer>
+                            </cd:Type>
+                          </cd:Field>
+                        </cd:Record>
+                      </cd:Field>
+                    </cd:Record>
+                    <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                  </cd:Array>
+                </cd:Field>
+              </cd:Record>
+            </cd:Field>
+          </cd:Record>
+        </cd:Array>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+</cd:Record>

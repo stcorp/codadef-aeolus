@@ -1,0 +1,230 @@
+<?xml version="1.0"?>
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="binary" last-modified="2008-07-01" name="Level_2A_Opt_MDSR_02_02">
+  <cd:Field name="start_of_obs_time">
+    <cd:Time timeformat="binary_envisat_datetime">
+      <cd:Description>Start date and time of the observation or BRC covered by the present DSR. This is the same time as in the Geolcation ADS repeated here for crosschecking purposes</cd:Description>
+      <ct:NamedTest id="RangeSecond" path="seconds"/>
+      <ct:NamedTest id="RangeMicroSecond" path="microseconds"/>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="n_meas">
+    <cd:Integer>
+      <cd:Description>Number of L1 measurements reported in the L1B product for this BRC. Note this figure may vary from one BRC to the other</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="p">
+    <cd:Integer>
+      <cd:Description>Total number of laser pulses (valid or invalid) fired during one measurement</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="n_prof_actual">
+    <cd:Integer>
+      <cd:Description>Number of meaningful set of optical profiles reported in this BRC. Note this figure may vary from one BRC to the other but will not exceed Max_Num_Prof</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="map_of_l1_measurements_used">
+    <cd:Array>
+      <cd:Description>Structure (N_Meas columns of 24 height bins) giving the attribution of each L1 measurement to the L2A profile</cd:Description>
+      <cd:Dimension><![CDATA[int(../n_meas)]]></cd:Dimension>
+      <cd:Dimension>24</cd:Dimension>
+      <cd:Integer>
+        <cd:Description>Positive integer number for the current L1 measurement between 0 and M_Meas pointing to the Opt profile. Zero indicates the L1 measurement was not used ; a number between 1 and N_Obs_Actual points to a set of Opt profiles</cd:Description>
+        <cd:BitSize>8</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="l1_measurement_weights">
+    <cd:Array>
+      <cd:Description>Structure (N_Meas columns of 24 height bins) giving the relative weights of each of the N L1 measurements acquired in the same height bin to the wind indicated in Map_of_L1_Measurements_Used. The weights are positive integer numbers between 0 and 1000. For each height bin, the sum of the N weights must be equal to 1000</cd:Description>
+      <cd:Dimension><![CDATA[int(../n_meas)]]></cd:Dimension>
+      <cd:Dimension>24</cd:Dimension>
+      <cd:Integer>
+        <cd:Description>Relative weight (positive integer number between 0 and 1000) of the current L1 measurement making up the observation indicated by L1_Measurement_Used</cd:Description>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="optical_profiles">
+    <cd:Array>
+      <cd:Dimension><![CDATA[int(../n_prof_actual)]]></cd:Dimension>
+      <cd:Record>
+        <cd:Description>Structure containing all the information related to the sets of optical profiles associated to the current observation</cd:Description>
+        <cd:Field name="algorithm">
+          <cd:Text format="ascii">
+            <cd:Description>String (3 capital characters) indicating which algorithm was used for the derivation of the present profile. The string must not contain any national character. If none of the possible algorithm has been able to produce a profile, the string is "XXX"</cd:Description>
+            <cd:ByteSize>3</cd:ByteSize>
+            <cd:NativeType>string</cd:NativeType>
+          </cd:Text>
+        </cd:Field>
+        <cd:Field name="prof_type">
+          <cd:Integer>
+            <cd:Description>Defines whether this observation was classified as cloud, no cloud. 0: no profile, 1: clear, 2: cloudy</cd:Description>
+            <cd:BitSize>8</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="height_bin_opt">
+          <cd:Array>
+            <cd:Dimension>24</cd:Dimension>
+            <cd:Record>
+              <cd:Description>Structure containing 24 sub-structures with all the information pertaining to the 24 possible height bins of the profile</cd:Description>
+              <cd:Field name="validity_flag">
+                <cd:Integer>
+                  <cd:Description>Validity flag (1 or TRUE = valid, 0 or FALSE = unvalid) attached to the reported optical parameters</cd:Description>
+                  <cd:BitSize>8</cd:BitSize>
+                  <cd:NativeType>uint8</cd:NativeType>
+                </cd:Integer>
+              </cd:Field>
+              <cd:Field name="reference_pressure">
+                <cd:Integer>
+                  <cd:Description>Reference pressure used for predicting the Rayleigh return and cross-talk between Mie and Rayleigh</cd:Description>
+                  <cd:Unit>Pa</cd:Unit>
+                  <cd:BitSize>32</cd:BitSize>
+                  <cd:NativeType>uint32</cd:NativeType>
+                </cd:Integer>
+              </cd:Field>
+              <cd:Field name="reference_temperature">
+                <cd:Integer>
+                  <cd:Description>Reference temperature used for predicting the Rayleigh return and cross-talk between Mie and Rayleigh</cd:Description>
+                  <cd:Unit>1e-2 K</cd:Unit>
+                  <cd:Conversion denominator="100.000000" numerator="1.000000">
+                    <cd:Unit>K</cd:Unit>
+                  </cd:Conversion>
+                  <cd:BitSize>16</cd:BitSize>
+                  <cd:NativeType>uint16</cd:NativeType>
+                </cd:Integer>
+              </cd:Field>
+              <cd:Field name="reference_hlos_wind">
+                <cd:Integer>
+                  <cd:Description>Reference Hlos wind (in m/s) used for predicting the Rayleigh return and cross-talk between Mie and Rayleigh (rounded to the nearest integer). At the present, all options are opened. The information could come from met data, HLOS velocities measured by ADM, or a constant velocity (0 m/s). The prototype/first version of the operational code of the L2A uses the last option</cd:Description>
+                  <cd:Unit>m/s</cd:Unit>
+                  <cd:BitSize>16</cd:BitSize>
+                  <cd:NativeType>int16</cd:NativeType>
+                </cd:Integer>
+              </cd:Field>
+              <cd:Field name="opt_mol_bck">
+                <cd:Float>
+                  <cd:Description>Molecular backscatter 1e-6 m-1sr-1 and rounded to the nearest integer</cd:Description>
+                  <cd:Unit>1e-6/m/sr</cd:Unit>
+                  <cd:BitSize>64</cd:BitSize>
+                  <cd:NativeType>double</cd:NativeType>
+                </cd:Float>
+              </cd:Field>
+              <cd:Field name="opt_aer_bck">
+                <cd:Float>
+                  <cd:Description>Aerosol backscatter 1e-6 m-1sr-1 and rounded to the nearest integer</cd:Description>
+                  <cd:Unit>1e-6/m/sr</cd:Unit>
+                  <cd:BitSize>64</cd:BitSize>
+                  <cd:NativeType>double</cd:NativeType>
+                </cd:Float>
+              </cd:Field>
+              <cd:Field name="opt_mol_ext">
+                <cd:Float>
+                  <cd:Description>Molecular extinction 1e-6 m-1 and rounded to the nearest integer</cd:Description>
+                  <cd:Unit>1e-6/m</cd:Unit>
+                  <cd:BitSize>64</cd:BitSize>
+                  <cd:NativeType>double</cd:NativeType>
+                </cd:Float>
+              </cd:Field>
+              <cd:Field name="opt_aer_ext">
+                <cd:Float>
+                  <cd:Description>Aerosol extinction 1e-6 m-1 and rounded to the nearest integer</cd:Description>
+                  <cd:Unit>1e-6/m</cd:Unit>
+                  <cd:BitSize>64</cd:BitSize>
+                  <cd:NativeType>double</cd:NativeType>
+                </cd:Float>
+              </cd:Field>
+              <cd:Field name="scat_ratio">
+                <cd:Integer>
+                  <cd:Description>Scattering ratio = aerosol backscatter / molecular backscatter in units of 1e-6</cd:Description>
+                  <cd:Unit>1e-6</cd:Unit>
+                  <cd:BitSize>32</cd:BitSize>
+                  <cd:NativeType>uint32</cd:NativeType>
+                </cd:Integer>
+              </cd:Field>
+              <cd:Field name="comp_aer_ext_to_bck">
+                <cd:Integer>
+                  <cd:Description>Flag indicating whether the aerosol extinction to backscatter ratio is computed or taken from the aerosol extinction to backscatter ratio data base (1 or TRUE = computed, 0 or FALSE = from database)</cd:Description>
+                  <cd:BitSize>8</cd:BitSize>
+                  <cd:NativeType>uint8</cd:NativeType>
+                </cd:Integer>
+              </cd:Field>
+              <cd:Field name="aer_ext_to_bck">
+                <cd:Integer>
+                  <cd:Description>Aerosol extinction to backscatter ratio in units of 1e-6/sr rounded to the nearest integer</cd:Description>
+                  <cd:Unit>1e-6/sr</cd:Unit>
+                  <cd:BitSize>16</cd:BitSize>
+                  <cd:NativeType>uint16</cd:NativeType>
+                </cd:Integer>
+              </cd:Field>
+              <cd:Field name="opt_mol_bck_err">
+                <cd:Float>
+                  <cd:Description>Error quantifier for the molecular backscatter</cd:Description>
+                  <cd:Unit>1e-6/m/sr</cd:Unit>
+                  <cd:BitSize>64</cd:BitSize>
+                  <cd:NativeType>double</cd:NativeType>
+                </cd:Float>
+              </cd:Field>
+              <cd:Field name="opt_aer_bck_err">
+                <cd:Float>
+                  <cd:Description>Error quantifier for the aerosol backscatter</cd:Description>
+                  <cd:Unit>1e-6/m/sr</cd:Unit>
+                  <cd:BitSize>64</cd:BitSize>
+                  <cd:NativeType>double</cd:NativeType>
+                </cd:Float>
+              </cd:Field>
+              <cd:Field name="opt_mol_ext_err">
+                <cd:Float>
+                  <cd:Description>Error quantifier for the molecular extinction</cd:Description>
+                  <cd:Unit>1e-6/m</cd:Unit>
+                  <cd:BitSize>64</cd:BitSize>
+                  <cd:NativeType>double</cd:NativeType>
+                </cd:Float>
+              </cd:Field>
+              <cd:Field name="opt_aer_ext_err">
+                <cd:Float>
+                  <cd:Description>Error quantifier for the aerosol extinction</cd:Description>
+                  <cd:Unit>1e-6/m</cd:Unit>
+                  <cd:BitSize>64</cd:BitSize>
+                  <cd:NativeType>double</cd:NativeType>
+                </cd:Float>
+              </cd:Field>
+              <cd:Field name="scat_ratio_err">
+                <cd:Integer>
+                  <cd:Description>Error quantifier for the scattering ratio</cd:Description>
+                  <cd:Unit>1e-6</cd:Unit>
+                  <cd:BitSize>32</cd:BitSize>
+                  <cd:NativeType>uint32</cd:NativeType>
+                </cd:Integer>
+              </cd:Field>
+              <cd:Field name="aer_ext_to_bck_err">
+                <cd:Integer>
+                  <cd:Description>Error quantifier for the aerosol extinction to backscatter ratio</cd:Description>
+                  <cd:Unit>1e-6/sr</cd:Unit>
+                  <cd:BitSize>16</cd:BitSize>
+                  <cd:NativeType>uint16</cd:NativeType>
+                </cd:Integer>
+              </cd:Field>
+              <cd:Field name="integration_length">
+                <cd:Integer>
+                  <cd:Description>Integration length for the reported Mie height bin wind</cd:Description>
+                  <cd:Unit>m</cd:Unit>
+                  <cd:BitSize>32</cd:BitSize>
+                  <cd:NativeType>uint32</cd:NativeType>
+                </cd:Integer>
+              </cd:Field>
+            </cd:Record>
+          </cd:Array>
+        </cd:Field>
+      </cd:Record>
+    </cd:Array>
+  </cd:Field>
+</cd:Record>

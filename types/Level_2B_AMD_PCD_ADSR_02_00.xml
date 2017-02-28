@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="Level_2B_AMD_PCD_ADSR_02_00" last-modified="2014-10-15" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/tests/2008/10">
+  <cd:Field name="start_of_obs_datetime">
+    <cd:Time timeformat="binary_envisat_datetime">
+      <cd:Description>Start date and time of Measurement</cd:Description>
+      <ct:NamedTest id="RangeSecond" path="seconds"/>
+      <ct:NamedTest id="RangeMicroSecond" path="microseconds"/>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="l2b_amd_screening">
+    <cd:Record>
+      <cd:Description>Structure describing any problems found during reading of the L1B datafile</cd:Description>
+      <cd:Field name="l2b_amd_screening_qc">
+        <cd:Integer>
+          <cd:Description>A code describing a problem which prevents using this L2B AMD profile</cd:Description>
+          <cd:BitSize>8</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="l2b_amd_screening_qc_flags">
+        <cd:Integer>
+          <cd:Description>Flags describing problems which prevent using this L2B AMD file.</cd:Description>
+          <cd:BitSize>8</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="spare">
+        <cd:Raw>
+          <cd:Description>Spare</cd:Description>
+          <cd:BitSize>160</cd:BitSize>
+        </cd:Raw>
+        <cd:Hidden/>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="spare">
+    <cd:Raw>
+      <cd:Description>Spare</cd:Description>
+      <cd:BitSize>160</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+</cd:Record>

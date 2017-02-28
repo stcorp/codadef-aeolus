@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<cd:ProductDefinition id="AUX_DCC_1B_03_05" format="xml" last-modified="2008-07-01" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+  <cd:Record format="xml">
+    <cd:Field name="Earth_Explorer_File">
+      <cd:Record namexml="Earth_Explorer_File">
+        <cd:Description>Earth Explorer File</cd:Description>
+        <cd:Field name="Earth_Explorer_Header">
+          <cd:Record namexml="Earth_Explorer_Header">
+            <cd:Description>Earth Explorer Header File</cd:Description>
+            <cd:Field name="Fixed_Header">
+              <cd:NamedType id="Fixed_Header"/>
+            </cd:Field>
+            <cd:Field name="Variable_Header">
+              <cd:Record namexml="Variable_Header">
+                <cd:Description>Variable Header Section</cd:Description>
+                <cd:Field name="Main_Product_Header">
+                  <cd:NamedType id="Main_Product_Header_v1"/>
+                </cd:Field>
+                <cd:Field name="Specific_Product_Header">
+                  <cd:NamedType id="Specific_Product_Header_Level1BAux_03_05"/>
+                </cd:Field>
+              </cd:Record>
+            </cd:Field>
+            <ct:NamedTest id="FileNameCheckEEF" path="Fixed_Header/File_Name"/>
+            <ct:NamedTest id="FileNameMatchFileVersionAt51" path="Fixed_Header/File_Name"/>
+            <ct:NamedTest id="FileNameMatchValidityStart" path="Fixed_Header/File_Name"/>
+          </cd:Record>
+        </cd:Field>
+        <cd:Field name="Data_Block">
+          <cd:Record namexml="Data_Block">
+            <cd:Attribute name="type">
+              <cd:Optional/>
+              <cd:FixedValue>xml</cd:FixedValue>
+            </cd:Attribute>
+            <cd:Field name="Auxiliary_Calibration_DCC">
+              <cd:NamedType id="Auxiliary_Calibration_DCC_03_05"/>
+            </cd:Field>
+          </cd:Record>
+        </cd:Field>
+      </cd:Record>
+    </cd:Field>
+  </cd:Record>
+</cd:ProductDefinition>

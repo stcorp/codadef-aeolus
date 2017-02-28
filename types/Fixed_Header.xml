@@ -1,0 +1,102 @@
+<?xml version="1.0"?>
+<cd:Record name="Fixed_Header" format="xml" namexml="Fixed_Header" last-modified="2015-04-24" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+  <cd:Description>Earth Explorer Fixed Header</cd:Description>
+  <cd:Field name="File_Name">
+    <cd:Text namexml="File_Name">
+      <cd:Description>The Logical File Name, i.e. the File Name excluding the extension</cd:Description>
+      <ct:NamedTest id="FileNameMatchFileClass"/>
+      <ct:NamedTest id="FileNameMatchFileType"/>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="File_Description">
+    <cd:Text namexml="File_Description">
+      <cd:Description>A 1-line description of the File Type</cd:Description>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="Notes">
+    <cd:Text namexml="Notes">
+      <cd:Description>Multi-lines free text. This can be used for any type of comment, relevant to that instance of the file.</cd:Description>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="Mission">
+    <cd:Text namexml="Mission">
+      <cd:Description>A 1-word description of the Mission, coherent with the Mission element in the File Name.</cd:Description>
+      <ct:NamedTest id="FixedValueAeolus"/>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="File_Class">
+    <cd:Text namexml="File_Class">
+      <cd:Description>A 1-line description of the file class, coherent with the File Class element in the File Name.</cd:Description>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="File_Type">
+    <cd:Text namexml="File_Type">
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="Validity_Period">
+    <cd:Record namexml="Validity_Period">
+      <cd:Field name="Validity_Start">
+        <cd:Type namexml="Validity_Start">
+          <cd:Time format="ascii" timeformat="ascii_ccsds_datetime_ymd1_with_ref">
+            <cd:Description>This is the UTC Validity Start Time, coherent with the Validity Start Time in the File Name, but in CCSDS ASCII format with time reference. Note that this can have the special value indicating "beginning of mission" (without an absolute time specified)</cd:Description>
+            <cd:Mapping string="UTC=0000-00-00T00:00:00" value="-inf"/>
+            <cd:Mapping string="UTC=9999-12-31T23:59:59" value="+inf"/>
+            <cd:Mapping string="UTC=9999-99-99T99:99:99" value="+inf"/>
+            <cd:Mapping string="" value="nan"/>
+          </cd:Time>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="Validity_Stop">
+        <cd:Type namexml="Validity_Stop">
+          <cd:Time format="ascii" timeformat="ascii_ccsds_datetime_ymd1_with_ref">
+            <cd:Description>This is the UTC Validity Stop Time, coherent with the Validity Stop Time in the File Name, but in CCSDS ASCII format with time reference. Note that this can have the special value indicating "end of mission" (without an absolute time specified)</cd:Description>
+            <cd:Mapping string="UTC=0000-00-00T00:00:00" value="-inf"/>
+            <cd:Mapping string="UTC=9999-12-31T23:59:59" value="+inf"/>
+            <cd:Mapping string="UTC=9999-99-99T99:99:99" value="+inf"/>
+            <cd:Mapping string="" value="nan"/>
+          </cd:Time>
+        </cd:Type>
+      </cd:Field>
+      <ct:NamedTest id="ValidityPeriodOrder"/>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="File_Version">
+    <cd:Type namexml="File_Version">
+      <cd:Integer format="ascii">
+        <cd:Description>A repetition of the File Version element in the File Name.</cd:Description>
+        <cd:ByteSize>4</cd:ByteSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Source">
+    <cd:Record namexml="Source">
+      <cd:Field name="System">
+        <cd:Text namexml="System">
+          <cd:Description>Name of the Ground Segment element creating the file (e.g. FOS, PDS, SSALTO...)</cd:Description>
+        </cd:Text>
+      </cd:Field>
+      <cd:Field name="Creator">
+        <cd:Text namexml="Creator">
+          <cd:Description>Name of the tool, within the Ground Segment element, creating the file (e.g. CS-MCS, IPF1...)</cd:Description>
+        </cd:Text>
+      </cd:Field>
+      <cd:Field name="Creator_Version">
+        <cd:Text namexml="Creator_Version">
+          <cd:Description>Version of the tool (e.g. 1.0, 2.1a ...)</cd:Description>
+        </cd:Text>
+      </cd:Field>
+      <cd:Field name="Creation_Date">
+        <cd:Type namexml="Creation_Date">
+          <cd:Time format="ascii" timeformat="ascii_ccsds_datetime_ymd1_with_ref">
+            <cd:Description>This is the UTC Creation Date, in CCSDS ASCII format with time reference</cd:Description>
+            <cd:Mapping string="UTC=0000-00-00T00:00:00" value="-inf"/>
+            <cd:Mapping string="UTC=9999-12-31T23:59:59" value="+inf"/>
+            <cd:Mapping string="UTC=9999-99-99T99:99:99" value="+inf"/>
+            <cd:Mapping string="" value="nan"/>
+          </cd:Time>
+        </cd:Type>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+</cd:Record>

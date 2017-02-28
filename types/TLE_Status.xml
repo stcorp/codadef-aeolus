@@ -1,0 +1,102 @@
+<?xml version="1.0"?>
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="binary" last-modified="2010-04-14" name="TLE_Status">
+  <cd:Description>TLE status</cd:Description>
+  <cd:Field name="MO_Vsw_Status">
+    <cd:Integer>
+        <cd:Description>MO Vsw Status</cd:Description>
+        <cd:BitSize>1</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="MO_I_Status">
+    <cd:Integer>
+        <cd:Description>MO I Status</cd:Description>
+        <cd:BitSize>1</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="PreAmp_Vsw_Status">
+    <cd:Integer>
+        <cd:Description>PreAmp Vsw Status</cd:Description>
+        <cd:BitSize>1</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="PreAmp_I_Status">
+    <cd:Integer>
+        <cd:Description>PreAmp I Status</cd:Description>
+        <cd:BitSize>1</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="Amp_Vsw_Status">
+    <cd:Integer>
+        <cd:Description>Amp Vsw Status</cd:Description>
+        <cd:BitSize>1</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="Amp_I_Status">
+    <cd:Integer>
+        <cd:Description>Amp I Status</cd:Description>
+        <cd:BitSize>1</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="Q_S_PSU_section_OK">
+    <cd:Integer>
+        <cd:Description>Q/S PSU section OK</cd:Description>
+        <cd:BitSize>1</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="RLH_PSU_section_OK">
+    <cd:Integer>
+        <cd:Description>RLH PSU section OK</cd:Description>
+        <cd:BitSize>1</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="TLE_PSU_Section_OK">
+    <cd:Integer>
+        <cd:Description>TLE PSU Section OK</cd:Description>
+        <cd:BitSize>1</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="MO_LD_N_R_Status">
+    <cd:Integer>
+        <cd:Description>MO LD N/R Status</cd:Description>
+        <cd:BitSize>1</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="MO_LDPSM_Status">
+    <cd:Integer>
+        <cd:Description>MO LDPSM Status</cd:Description>
+        <cd:BitSize>1</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="PreAmp_LDPSM_Status">
+    <cd:Integer>
+        <cd:Description>PreAmp LDPSM Status</cd:Description>
+        <cd:BitSize>1</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="Amp_LDPSM_Status">
+    <cd:Integer>
+        <cd:Description>Amp LDPSM Status</cd:Description>
+        <cd:BitSize>1</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="Actual_op_mode">
+    <cd:Integer>
+        <cd:Description>Actual op mode</cd:Description>
+        <cd:BitSize>3</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>                    
+</cd:Record>

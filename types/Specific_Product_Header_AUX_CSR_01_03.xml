@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<cd:Record name="Specific_Product_Header_AUX_CSR_01_03" format="xml" namexml="Specific_Product_Header" last-modified="2009-01-23" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+  <cd:Description>Specific Product Header for AUX_CSR products</cd:Description>
+  <cd:Field name="Sph_Descriptor">
+    <cd:Text namexml="Sph_Descriptor">
+      <cd:Description>SPH descriptor: ASCII string describing the product</cd:Description>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="Spare_1">
+    <cd:Hidden/>
+    <cd:Text namexml="Spare_1">
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="Num_Freq">
+    <cd:Type namexml="Num_Freq">
+      <cd:Integer format="ascii">
+        <cd:Description>Number of frequency offsets for which the transmission of FPs A and B are characterized. The number depends on the frequency resolution and the value of the Free Spectral Range.</cd:Description>
+        <cd:NativeType>uint32</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Checked_against_RRC">
+    <cd:Type namexml="Checked_against_RRC">
+      <cd:Integer format="ascii">
+        <cd:Description>This field is true or false. It is false if the current AUX_CSR has been obtained  direclty from the AUX_ISR without comparison to an RRC. It is true if a comparison with an RRC has been made.</cd:Description>
+        <cd:NativeType>uint8</cd:NativeType>
+        <cd:Mapping string="FALSE" value="0"/>
+        <cd:Mapping string="False" value="0"/>
+        <cd:Mapping string="false" value="0"/>
+        <cd:Mapping string="TRUE" value="1"/>
+        <cd:Mapping string="True" value="1"/>
+        <cd:Mapping string="true" value="1"/>
+        <ct:NamedTest id="BooleanXmlTest"/>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="width">
+    <cd:Type namexml="width">
+      <cd:Attribute name="unit">
+        <cd:Optional/>
+        <cd:FixedValue>MHz</cd:FixedValue>
+      </cd:Attribute>
+      <cd:Integer format="ascii">
+        <cd:Description>Width in MHz of the top-hat function that has been applied to the currently valid ISR in order to modify the transmission curves TA and TB of FPs A and B. If no correction has been applied (that is the case when the AUX_CSR is computed directly from the ISR, or if a comparison has been carried nout with a RRC that has shown no modification is necessary), it is equal to 0.</cd:Description>
+        <cd:Unit>MHz</cd:Unit>
+        <cd:NativeType>uint32</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Spare_2">
+    <cd:Hidden/>
+    <cd:Text namexml="Spare_2">
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="List_of_Dsds">
+    <cd:NamedType id="List_of_Dsds"/>
+  </cd:Field>
+</cd:Record>

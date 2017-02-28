@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="binary" last-modified="2015-12-07" name="Level_2A_Scene_Classification_ADSR_03_02">
+  <cd:Field name="starttime">
+    <cd:Time timeformat="binary_envisat_datetime">
+      <cd:Description>BRC start time</cd:Description>
+      <ct:NamedTest id="RangeSecond" path="seconds"/>
+      <ct:NamedTest id="RangeMicroSecond" path="microseconds"/>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="height_bin_index">
+    <cd:Integer>
+      <cd:Description>Index of the height level of the group in Rayleigh scale</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="aladin_cloud_flag">
+    <cd:Record>
+      <cd:Field name="padding">
+        <cd:Raw>
+          <cd:BitSize>4</cd:BitSize>
+        </cd:Raw>
+        <cd:Hidden/>
+      </cd:Field>
+      <cd:Field name="clrh">
+        <cd:Integer>
+          <cd:Description>1 if the relative humidity is greater than a given threshold. 0 else</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="clsr">
+        <cd:Integer>
+          <cd:Description>1 if the scattering ratio in the bin is greater than a given threshold above which a cloud is assumed. 0 else</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="downclber">
+        <cd:Integer>
+          <cd:Description>1 if the BER of the lower middle bin is lesser than the threshold. 0 else</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="topclber">
+        <cd:Integer>
+          <cd:Description>1 if the BER of the upper middle bin is lesser than a given threshold under which a cloud is assumed. 0 else</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="nwp_cloud_flag">
+    <cd:Integer>
+      <cd:Description>Flag testifying for various pieces of information about the cloud composition inferred from NWP data. ClContent is based on clwc &amp; ciwc analysis and ClTp on the temperature analysis, in case the lidar detects a cloud unforeseen by the model.
+- ClContent: 0 if no cloud is forecasted; 1 if there is only a liquid phase; 2 if there is a mixed liquid+solid phase (i.e. clwc and ciwc are, each taken separately, &gt;0 in at least one region of the group); 3 if there is only a solid phase.
+- ClTp: 1 if there is only a liquid phase (T&gt;273.15K); 2 if there is a probability of a mixed liquid+solid phase (233.15K&lt;T&lt;273.15K); 3 if there is only a solid phase (T&lt;273.15K).
+It is built as: ClTp + 3*ClContent.
+1: no cloud forecasted but if one is detected, it will be in liquid phase.
+2: no cloud forecasted but if one is detected, it may be in mixed phase.
+3: no cloud forecasted but if one is detected, it will be in solid phase.
+4: liquid cloud forecasted.
+5: liquid cloud forecasted but if one is detected, it may be in mixed phase.
+6: liquid cloud forecasted but if one is detected, it may be in solid phase (very unlikely).
+7: mixed phase cloud forecasted but if one is detected, it will be in liquid phase (very unlikely).
+8: mixed phase cloud forecasted.
+9: mixed phase cloud forecasted but if one is detected, it will be in solid phase(very unlikely).
+10: solid phase cloud forecasted but if one is detected, it will be in liquid phase (very unlikely).
+11: solid phase cloud forecasted but if one is detected, it may be in mixed phase.
+12: solid cloud forecasted.</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="l2a_group_class_reliability">
+    <cd:Float>
+      <cd:Description>Coefficient characterising the reliability of the classification</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="spare">
+    <cd:Raw>
+      <cd:BitSize>8</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+</cd:Record>

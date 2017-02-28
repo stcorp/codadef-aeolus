@@ -1,0 +1,186 @@
+<?xml version="1.0"?>
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="binary" last-modified="2015-12-08" name="Level_2A_Meas_PCD_ADSR_03_02">
+  <cd:Field name="start_of_obs_time">
+    <cd:Time timeformat="binary_envisat_datetime">
+      <cd:Description>Start date and time of Observation (or BRC)</cd:Description>
+      <ct:NamedTest id="RangeSecond" path="seconds"/>
+      <ct:NamedTest id="RangeMicroSecond" path="microseconds"/>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="l1b_input_screening">
+    <cd:Record>
+      <cd:Description>Structure describing any problems found during reading of the L1B datafile</cd:Description>
+      <cd:Field name="l1b_obs_screening">
+        <cd:Integer>
+          <cd:Description>A code describing a problem which prevent using this whole BRC (TBD)</cd:Description>
+          <cd:BitSize>8</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="l1b_obs_screening_flags">
+        <cd:Array>
+          <cd:Description>Flags to store individual problems detected in the L1B_Obs screening (exact definition to be defined later)</cd:Description>
+          <cd:Dimension>40</cd:Dimension>
+          <cd:Integer>
+            <cd:BitSize>1</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Array>
+      </cd:Field>
+      <cd:Field name="l1b_mie_meas_screening">
+        <cd:Array>
+          <cd:Dimension><![CDATA[$num_meas_max_brc]]></cd:Dimension>
+          <cd:Record>
+            <cd:Field name="l1b_mie_meas_qc">
+              <cd:Integer>
+                <cd:Description>A code describing a problem which prevent using this Mie measurement (TBD)</cd:Description>
+                <cd:BitSize>16</cd:BitSize>
+                <cd:NativeType>uint16</cd:NativeType>
+              </cd:Integer>
+            </cd:Field>
+            <cd:Field name="l1b_mie_meas_qc_flags">
+              <cd:Array>
+                <cd:Description>Flags describing problems which prevent using this Mie Measurement</cd:Description>
+                <cd:Dimension>8</cd:Dimension>
+                <cd:Integer>
+                  <cd:BitSize>1</cd:BitSize>
+                  <cd:NativeType>uint8</cd:NativeType>
+                </cd:Integer>
+              </cd:Array>
+            </cd:Field>
+            <cd:Field name="spare">
+              <cd:Raw>
+                <cd:BitSize>8</cd:BitSize>
+              </cd:Raw>
+              <cd:Hidden/>
+            </cd:Field>
+          </cd:Record>
+        </cd:Array>
+      </cd:Field>
+      <cd:Field name="l1b_rayleigh_meas_screening">
+        <cd:Array>
+          <cd:Dimension><![CDATA[$num_meas_max_brc]]></cd:Dimension>
+          <cd:Record>
+            <cd:Field name="l1b_rayleigh_meas_qc">
+              <cd:Integer>
+                <cd:Description>A code describing a problem which prevent using this Rayleigh measurement (TBD)</cd:Description>
+                <cd:BitSize>16</cd:BitSize>
+                <cd:NativeType>uint16</cd:NativeType>
+              </cd:Integer>
+            </cd:Field>
+            <cd:Field name="l1b_rayleigh_meas_qc_flags">
+              <cd:Array>
+                <cd:Description>Flags describing problems which prevent using this Rayleigh Measurement</cd:Description>
+                <cd:Dimension>8</cd:Dimension>
+                <cd:Integer>
+                  <cd:BitSize>1</cd:BitSize>
+                  <cd:NativeType>uint8</cd:NativeType>
+                </cd:Integer>
+              </cd:Array>
+            </cd:Field>
+            <cd:Field name="spare">
+              <cd:Raw>
+                <cd:BitSize>8</cd:BitSize>
+              </cd:Raw>
+              <cd:Hidden/>
+            </cd:Field>
+          </cd:Record>
+        </cd:Array>
+      </cd:Field>
+      <cd:Field name="spare">
+        <cd:Raw>
+          <cd:BitSize>8</cd:BitSize>
+        </cd:Raw>
+        <cd:Hidden/>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="l1b_cal_screening">
+    <cd:Record>
+      <cd:Description>Structure describing any problem found during reading of the calibration datafile</cd:Description>
+      <cd:Field name="cal_valid">
+        <cd:Integer>
+          <cd:Description>A flag indicating the calibration file was found correct</cd:Description>
+          <cd:BitSize>8</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="spare">
+        <cd:Raw>
+          <cd:BitSize>40</cd:BitSize>
+        </cd:Raw>
+        <cd:Hidden/>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="l2a_processing_qc">
+    <cd:Record>
+      <cd:Description>Structure describing QC parameters resulting from the processing algorithms</cd:Description>
+      <cd:Field name="sca_applied">
+        <cd:Integer>
+          <cd:Description>SCA algorithm was applied to this input BRC level data.</cd:Description>
+          <cd:BitSize>8</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="ica_applied">
+        <cd:Integer>
+          <cd:Description>ICA algorithm was applied to this input BRC level data.</cd:Description>
+          <cd:BitSize>8</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="mca_applied">
+        <cd:Integer>
+          <cd:Description>MCA algorithm was applied to this input BRC level data.</cd:Description>
+          <cd:BitSize>8</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="spare">
+        <cd:Raw>
+          <cd:BitSize>160</cd:BitSize>
+        </cd:Raw>
+        <cd:Hidden/>
+      </cd:Field>
+      <cd:Field name="feature_finder_indicators">
+        <cd:Record>
+          <cd:Field name="layer_information">
+            <cd:Array>
+              <cd:Dimension>24</cd:Dimension>
+              <cd:Record>
+                <cd:Field name="bin_loaded">
+                  <cd:Integer>
+                    <cd:Description>Set to 1 if bin was loaded for group detection and groups have been discovered. Set 0 if bin was loaded for group detection, but no group detected. Set to -1 if bin was not loaded fo group detection.</cd:Description>
+                    <cd:BitSize>8</cd:BitSize>
+                    <cd:NativeType>uint8</cd:NativeType>
+                  </cd:Integer>
+                </cd:Field>
+                <cd:Field name="seed">
+                  <cd:Array>
+                    <cd:Dimension>30</cd:Dimension>
+                    <cd:Integer>
+                      <cd:Description>Set to 1 if the measurement was set as seed for the group detection, set to 0 if measruement was no seed.</cd:Description>
+                      <cd:BitSize>8</cd:BitSize>
+                      <cd:NativeType>uint8</cd:NativeType>
+                    </cd:Integer>
+                  </cd:Array>
+                </cd:Field>
+              </cd:Record>
+            </cd:Array>
+          </cd:Field>
+          <cd:Field name="lowest_computable_bin">
+            <cd:Array>
+              <cd:Dimension>30</cd:Dimension>
+              <cd:Integer>
+                <cd:Description>Lowest (in atmosphere) bin that was used by the Feature Finder to detect groups for a maximum of 30 measurements.</cd:Description>
+                <cd:BitSize>8</cd:BitSize>
+                <cd:NativeType>uint8</cd:NativeType>
+              </cd:Integer>
+            </cd:Array>
+          </cd:Field>
+        </cd:Record>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+</cd:Record>

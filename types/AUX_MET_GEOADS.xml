@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="binary" last-modified="2010-08-26" name="AUX_MET_GEOADS">
+  <cd:Field name="amd_datetime">
+    <cd:Time timeformat="binary_envisat_datetime">
+      <cd:Description>Date and time</cd:Description>
+      <ct:NamedTest id="RangeSecond" path="seconds"/>
+      <ct:NamedTest id="RangeMicroSecond" path="microseconds"/>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="amd_latitude">
+    <cd:Integer>
+      <cd:Description>Latitude of the whole profile</cd:Description>
+      <cd:Unit>1e-6 degrees_north</cd:Unit>
+      <cd:Conversion denominator="1000000.000000" numerator="1.000000">
+        <cd:Unit>degrees_north</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="amd_longitude">
+    <cd:Integer>
+      <cd:Description>Longitude of the whole profile</cd:Description>
+      <cd:Unit>1e-6 degrees_east</cd:Unit>
+      <cd:Conversion denominator="1000000.000000" numerator="1.000000">
+        <cd:Unit>degrees_east</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="amd_zg">
+    <cd:Integer>
+      <cd:Description>Geoid height above WGS84 reference ellipsoid</cd:Description>
+      <cd:Unit>cm</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+</cd:Record>

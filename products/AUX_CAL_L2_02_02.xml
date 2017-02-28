@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<cd:ProductDefinition id="AUX_CAL_L2_02_02" format="binary" last-modified="2008-07-01" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+  <cd:Record format="binary">
+    <cd:Description>ADM-Aeolus L2A calibration coefficients and functions</cd:Description>
+    <cd:Field name="mph">
+      <cd:NamedType id="MPH_v1"/>
+    </cd:Field>
+    <cd:Field name="sph">
+      <cd:NamedType id="AUX_CAL_SPH_02_02"/>
+    </cd:Field>
+    <cd:Field name="dsd">
+      <cd:Array format="ascii">
+        <cd:Dimension><![CDATA[$num_dsd]]></cd:Dimension>
+        <cd:NamedType id="DSD"/>
+      </cd:Array>
+    </cd:Field>
+    <cd:Field name="cal">
+      <cd:Array>
+        <cd:Description>Calibration Coefficients</cd:Description>
+        <cd:Dimension>1</cd:Dimension>
+        <cd:NamedType id="CAL_DSR"/>
+      </cd:Array>
+    </cd:Field>
+  </cd:Record>
+  <cd:ProductVariable name="num_dsd">
+    <cd:Init><![CDATA[$num_dsd = int(/mph/num_dsd)]]></cd:Init>
+  </cd:ProductVariable>
+
+  <!-- MPH Cross File Tests -->
+  <ct:NamedCrossFileTest id="MPH_Product"/>
+  <ct:NamedCrossFileTest id="MPH_Proc_Stage"/>
+  <ct:NamedCrossFileTest id="MPH_Ref_Doc"/>
+  <ct:NamedCrossFileTest id="MPH_Acquisition_Station"/>
+  <ct:NamedCrossFileTest id="MPH_Proc_Center"/>
+  <ct:NamedCrossFileTest id="MPH_Proc_Time"/>
+  <ct:NamedCrossFileTest id="MPH_Software_Ver"/>
+  <ct:NamedCrossFileTest id="MPH_Sensing_Start"/>
+  <ct:NamedCrossFileTest id="MPH_Sensing_Stop"/>
+  <ct:NamedCrossFileTest id="MPH_Phase"/>
+  <ct:NamedCrossFileTest id="MPH_Cycle"/>
+  <ct:NamedCrossFileTest id="MPH_Rel_Orbit"/>
+  <ct:NamedCrossFileTest id="MPH_Abs_Orbit"/>
+  <ct:NamedCrossFileTest id="MPH_State_Vector_Time"/>
+  <ct:NamedCrossFileTest id="MPH_Delta_UT1"/>
+  <ct:NamedCrossFileTest id="MPH_X_Position"/>
+  <ct:NamedCrossFileTest id="MPH_Y_Position"/>
+  <ct:NamedCrossFileTest id="MPH_Z_Position"/>
+  <ct:NamedCrossFileTest id="MPH_X_Velocity"/>
+  <ct:NamedCrossFileTest id="MPH_Y_Velocity"/>
+  <ct:NamedCrossFileTest id="MPH_Z_Velocity"/>
+  <ct:NamedCrossFileTest id="MPH_Vector_Source"/>
+  <ct:NamedCrossFileTest id="MPH_Utc_Sbt_Time"/>
+  <ct:NamedCrossFileTest id="MPH_Sat_Binary_Time"/>
+  <ct:NamedCrossFileTest id="MPH_Leap_Utc"/>
+  <ct:NamedCrossFileTest id="MPH_Leap_Sign"/>
+  <ct:NamedCrossFileTest id="MPH_Leap_Err"/>
+  <ct:NamedCrossFileTest id="MPH_Product_Err"/>
+  <ct:NamedCrossFileTest id="MPH_Tot_Size"/>
+  <ct:NamedCrossFileTest id="MPH_Sph_Size"/>
+  <ct:NamedCrossFileTest id="MPH_Num_Dsd"/>
+  <ct:NamedCrossFileTest id="MPH_Dsd_Size"/>
+  <ct:NamedCrossFileTest id="MPH_Num_Data_Sets"/>
+
+  <!-- SPH Cross File Tests -->
+  <ct:NamedCrossFileTest id="SPH_Sph_Descriptor"/>
+  <ct:NamedCrossFileTest id="SPH_Ref_CAL_Suite"/>
+  <ct:NamedCrossFileTest id="SPH_Num_P"/>
+  <ct:NamedCrossFileTest id="SPH_Num_T"/>
+  <ct:NamedCrossFileTest id="SPH_Num_fd"/>
+  <ct:NamedCrossFileTest id="SPH_Num_FP"/>
+  <ct:NamedCrossFileTest id="SPH_P_min"/>
+  <ct:NamedCrossFileTest id="SPH_P_max"/>
+  <ct:NamedCrossFileTest id="SPH_T_min"/>
+  <ct:NamedCrossFileTest id="SPH_T_max"/>
+  <ct:NamedCrossFileTest id="SPH_fd_min"/>
+  <ct:NamedCrossFileTest id="SPH_fd_max"/>
+
+</cd:ProductDefinition>

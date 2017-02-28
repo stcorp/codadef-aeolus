@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="binary" last-modified="2010-08-26" name="Level_1A_Observation_Geolocation_of_Height_Bin">
+  <cd:Field name="longitude_of_height_bin">
+    <cd:Integer>
+      <cd:Description>Longitude of the lower edge of the height bin along the line-of-sight</cd:Description>
+      <cd:Unit>1e-6 degrees_east</cd:Unit>
+      <cd:Conversion denominator="1000000.000000" numerator="1.000000">
+        <cd:Unit>degrees_east</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+      <ct:NamedTest id="RangeLongitude6"/>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="latitude_of_height_bin">
+    <cd:Integer>
+      <cd:Description>Latitude of the lower edge of the height bin along the line-of-sight</cd:Description>
+      <cd:Unit>1e-6 degrees_north</cd:Unit>
+      <cd:Conversion denominator="1000000.000000" numerator="1.000000">
+        <cd:Unit>degrees_north</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+      <ct:NamedTest id="RangeLatitude6"/>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="altitude_of_height_bin">
+    <cd:Float>
+      <cd:Description>Altitude of the lower edge of the height bin along the line-of-sight. Value is negative if below DEM surface</cd:Description>
+      <cd:Unit>m</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="topocentric_azimuth_of_height_bin">
+    <cd:Float>
+      <cd:Description>Azimuth of target-to-satellite topocentric pointing vector of the height bin</cd:Description>
+      <cd:Unit>degrees</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="topocentric_elevation_of_height_bin">
+    <cd:Float>
+      <cd:Description>Elevation of target-to-satellite topocentric pointing vector of the height bin</cd:Description>
+      <cd:Unit>degrees</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="target_to_sun_visibility_flag">
+    <cd:Integer>
+      <cd:Description>Value set to -1 of sun ecclipsed by earth; value set to +1 if sun (center) visible</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="satellite_range_of_height_bin">
+    <cd:Float>
+      <cd:Description>Distance along the LOS between the instrument and the lower edge of the height bin</cd:Description>
+      <cd:Unit>m</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+</cd:Record>

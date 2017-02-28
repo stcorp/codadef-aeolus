@@ -1,0 +1,297 @@
+<?xml version="1.0"?>
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="binary" last-modified="2008-04-05" name="Level_2A_PCD_ADSR_02_02">
+  <cd:Field name="start_of_obs_time">
+    <cd:Time timeformat="binary_envisat_datetime">
+      <cd:Description>Start date and time of Observation (or BRC)</cd:Description>
+      <ct:NamedTest id="RangeSecond" path="seconds"/>
+      <ct:NamedTest id="RangeMicroSecond" path="microseconds"/>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="n_meas">
+    <cd:Integer>
+      <cd:Description>Number of L1 measurements reported in the L1B product for this BRC. Note this figure may vary from one BRC to the other</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="n_prof_actual">
+    <cd:Integer>
+      <cd:Description>Number of meaningful sets of optical profiles in this BRC. Note this figure may vary from one BRC to the other but will not exceed Max_Num_Prof</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="l1b_input_screening">
+    <cd:Record>
+      <cd:Description>Structure describing any problems found during reading of the L1B datafile</cd:Description>
+      <cd:Field name="l1b_obs_screening">
+        <cd:Integer>
+          <cd:Description>A code describing a problem which prevent using this whole BRC</cd:Description>
+          <cd:BitSize>8</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="profile_geolocation">
+        <cd:Array>
+          <cd:Dimension>40</cd:Dimension>
+          <cd:Integer>
+            <cd:Description>5 bytes each holding up to 8 flags, so in total 40 flags to store individual problems detected in the L1B_Obs screening</cd:Description>
+            <cd:BitSize>1</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Array>
+      </cd:Field>
+      <cd:Field name="l1b_mie_meas_screening">
+        <cd:Array>
+          <cd:Dimension><![CDATA[int(../../n_meas)]]></cd:Dimension>
+          <cd:Record>
+            <cd:Description>List of N_Meas structures describing the problems found for each Mie measurement</cd:Description>
+            <cd:Field name="l1b_mie_meas_qc">
+              <cd:Integer>
+                <cd:Description>A code describing a problem which prevent using this Mie measurement</cd:Description>
+                <cd:BitSize>16</cd:BitSize>
+                <cd:NativeType>uint16</cd:NativeType>
+              </cd:Integer>
+            </cd:Field>
+            <cd:Field name="l1b_mie_meas_qc_flags">
+              <cd:Array>
+                <cd:Dimension>8</cd:Dimension>
+                <cd:Integer>
+                  <cd:Description>Flags describing problems which prevent using this Mie Measurement</cd:Description>
+                  <cd:BitSize>1</cd:BitSize>
+                  <cd:NativeType>uint8</cd:NativeType>
+                </cd:Integer>
+              </cd:Array>
+            </cd:Field>
+            <cd:Field name="spare_1">
+              <cd:Raw>
+                <cd:Description>Spare</cd:Description>
+                <cd:BitSize>8</cd:BitSize>
+              </cd:Raw>
+              <cd:Hidden/>
+            </cd:Field>
+          </cd:Record>
+        </cd:Array>
+      </cd:Field>
+      <cd:Field name="l1b_rayleigh_meas_screening">
+        <cd:Array>
+          <cd:Dimension><![CDATA[int(../../n_meas)]]></cd:Dimension>
+          <cd:Record>
+            <cd:Description>List of N_Meas structures describing the problems found for each Rayleigh measurement</cd:Description>
+            <cd:Field name="l1b_rayleigh_meas_qc">
+              <cd:Integer>
+                <cd:Description>A code describing a problem which prevent using this Rayleigh measurement</cd:Description>
+                <cd:BitSize>16</cd:BitSize>
+                <cd:NativeType>uint16</cd:NativeType>
+              </cd:Integer>
+            </cd:Field>
+            <cd:Field name="l1b_rayleigh_meas_qc_flags">
+              <cd:Array>
+                <cd:Dimension>8</cd:Dimension>
+                <cd:Integer>
+                  <cd:Description>Flags describing problems which prevent using this Rayleigh measurement</cd:Description>
+                  <cd:BitSize>1</cd:BitSize>
+                  <cd:NativeType>uint8</cd:NativeType>
+                </cd:Integer>
+              </cd:Array>
+            </cd:Field>
+            <cd:Field name="spare_1">
+              <cd:Raw>
+                <cd:Description>Spare</cd:Description>
+                <cd:BitSize>8</cd:BitSize>
+              </cd:Raw>
+              <cd:Hidden/>
+            </cd:Field>
+          </cd:Record>
+        </cd:Array>
+      </cd:Field>
+      <cd:Field name="spare_1">
+        <cd:Raw>
+          <cd:Description>Spare</cd:Description>
+          <cd:BitSize>8</cd:BitSize>
+        </cd:Raw>
+        <cd:Hidden/>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="l1b_cal_screening">
+    <cd:Record>
+      <cd:Description>Structure describing any problem found during reading of the calibration datafile</cd:Description>
+      <cd:Field name="cal_valid">
+        <cd:Integer>
+          <cd:Description>A flag indicating the calibration file was found correct</cd:Description>
+          <cd:BitSize>8</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="spare_1">
+        <cd:Raw>
+          <cd:Description>Spare</cd:Description>
+          <cd:BitSize>40</cd:BitSize>
+        </cd:Raw>
+        <cd:Hidden/>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="l2b_amd_screening">
+    <cd:Record>
+      <cd:Description>Structure describing any problems found during reading of the L2B_AMD datafile</cd:Description>
+      <cd:Field name="l2b_amd_screening_qc">
+        <cd:Integer>
+          <cd:Description>A code describing a problem which prevent using this L2B AMD file</cd:Description>
+          <cd:BitSize>8</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="l2b_amd_screening_qc_flags">
+        <cd:Array>
+          <cd:Dimension>8</cd:Dimension>
+          <cd:Integer>
+            <cd:Description>Flags describing problems which prevent using this L2B AMD file</cd:Description>
+            <cd:BitSize>1</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Array>
+      </cd:Field>
+      <cd:Field name="l2b_amd_collocations">
+        <cd:Array>
+          <cd:Dimension><![CDATA[int(../../n_meas)]]></cd:Dimension>
+          <cd:Record>
+            <cd:Description>List of M_Meas structures describing the problems found while collocating each measurement</cd:Description>
+            <cd:Field name="l2b_amd_collocation_qc">
+              <cd:Integer>
+                <cd:Description>A code describing what problem occurred during the collocation of this measurement with the AUX NWP data</cd:Description>
+                <cd:BitSize>8</cd:BitSize>
+                <cd:NativeType>uint8</cd:NativeType>
+              </cd:Integer>
+            </cd:Field>
+            <cd:Field name="l2b_amd_collocation_qc_flags">
+              <cd:Array>
+                <cd:Dimension>8</cd:Dimension>
+                <cd:Integer>
+                  <cd:Description>Flags describing what problems occurred during the collocation of this measurement with the AUX NWP data</cd:Description>
+                  <cd:BitSize>1</cd:BitSize>
+                  <cd:NativeType>uint8</cd:NativeType>
+                </cd:Integer>
+              </cd:Array>
+            </cd:Field>
+            <cd:Field name="spare_1">
+              <cd:Raw>
+                <cd:Description>Spare</cd:Description>
+                <cd:BitSize>8</cd:BitSize>
+              </cd:Raw>
+              <cd:Hidden/>
+            </cd:Field>
+          </cd:Record>
+        </cd:Array>
+      </cd:Field>
+      <cd:Field name="spare_1">
+        <cd:Raw>
+          <cd:Description>Spare</cd:Description>
+          <cd:BitSize>160</cd:BitSize>
+        </cd:Raw>
+        <cd:Hidden/>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="l2a_classification_qc">
+    <cd:Record>
+      <cd:Description>Structure describing QC parameters resulting from the Classification algorithms</cd:Description>
+      <cd:Field name="l2a_prof_classification">
+        <cd:Array>
+          <cd:Dimension><![CDATA[int(../../n_prof_actual)]]></cd:Dimension>
+          <cd:Record>
+            <cd:Description>List of Max_Num_Prof structures describing the results of the scene classification for each reported set of opical profiles</cd:Description>
+            <cd:Field name="l2a_prof_class_flags">
+              <cd:Array>
+                <cd:Dimension>8</cd:Dimension>
+                <cd:Integer>
+                  <cd:Description>Flags describing classification properties for the current set of optical profiles</cd:Description>
+                  <cd:BitSize>1</cd:BitSize>
+                  <cd:NativeType>uint8</cd:NativeType>
+                </cd:Integer>
+              </cd:Array>
+            </cd:Field>
+            <cd:Field name="l2a_prof_class_reliability">
+              <cd:Float>
+                <cd:Description>A measure for the reliability of the classification result for this range bin</cd:Description>
+                <cd:BitSize>64</cd:BitSize>
+                <cd:NativeType>double</cd:NativeType>
+              </cd:Float>
+            </cd:Field>
+            <cd:Field name="spare_1">
+              <cd:Raw>
+                <cd:Description>Spare</cd:Description>
+                <cd:BitSize>8</cd:BitSize>
+              </cd:Raw>
+              <cd:Hidden/>
+            </cd:Field>
+          </cd:Record>
+        </cd:Array>
+      </cd:Field>
+      <cd:Field name="spare_1">
+        <cd:Raw>
+          <cd:Description>Spare</cd:Description>
+          <cd:BitSize>160</cd:BitSize>
+        </cd:Raw>
+        <cd:Hidden/>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="l2a_processing_qc">
+    <cd:Record>
+      <cd:Description>Structure describing QC parameters resulting from the processing algorithms</cd:Description>
+      <cd:Field name="l2a_prof_proc_qc">
+        <cd:Array>
+          <cd:Dimension><![CDATA[int(../../n_prof_actual)]]></cd:Dimension>
+          <cd:Record>
+            <cd:Description>List of Max_Num_Prof structures describing the results of the processing for each reported set of optical profiles</cd:Description>
+            <cd:Field name="l2a_prof_proc_bin_qc">
+              <cd:Array>
+                <cd:Dimension>24</cd:Dimension>
+                <cd:Record>
+                  <cd:Description>List of 24 structures describing the results of the processing for each reported range bin</cd:Description>
+                  <cd:Field name="spare_1">
+                    <cd:Raw>
+                      <cd:Description>Spare</cd:Description>
+                      <cd:BitSize>320</cd:BitSize>
+                    </cd:Raw>
+                    <cd:Hidden/>
+                  </cd:Field>
+                </cd:Record>
+              </cd:Array>
+            </cd:Field>
+            <cd:Field name="spare_1">
+              <cd:Raw>
+                <cd:Description>Spare</cd:Description>
+                <cd:BitSize>8</cd:BitSize>
+              </cd:Raw>
+              <cd:Hidden/>
+            </cd:Field>
+          </cd:Record>
+        </cd:Array>
+      </cd:Field>
+      <cd:Field name="background_high">
+        <cd:Integer>
+          <cd:Description>A value of 1 flags that this data was taken during daylight, so possibly the background radiation level is high</cd:Description>
+          <cd:BitSize>8</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="spare_1">
+        <cd:Raw>
+          <cd:Description>Spare</cd:Description>
+          <cd:BitSize>160</cd:BitSize>
+        </cd:Raw>
+        <cd:Hidden/>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="spare_1">
+    <cd:Raw>
+      <cd:Description>Spare</cd:Description>
+      <cd:BitSize>160</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+</cd:Record>

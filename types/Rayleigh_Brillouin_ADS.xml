@@ -1,0 +1,174 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="Rayleigh_Brillouin_ADS" last-modified="2008-07-01" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Field name="p_grid">
+    <cd:Array>
+      <cd:Dimension><![CDATA[int(/sph/num_p)]]></cd:Dimension>
+      <cd:Integer>
+        <cd:Description>Array of Num_P pressures covering the range [P_min,P_max]</cd:Description>
+        <cd:Unit>Pa</cd:Unit>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>uint32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="t_grid">
+    <cd:Array>
+      <cd:Dimension><![CDATA[int(/sph/num_t)]]></cd:Dimension>
+      <cd:Integer>
+        <cd:Description>Array of Num_T temperatures covering the range [T_min,T_max]</cd:Description>
+        <cd:Unit>1e-2 K</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="100.000000">
+          <cd:Unit>K</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="f_gridtmp">
+    <cd:Array>
+      <cd:Dimension><![CDATA[int(/sph/num_f)]]></cd:Dimension>
+      <cd:Integer>
+        <cd:Description>Array of Num_F frequencies covering the range [-FSR-USR/2,+FSR+USR/2]</cd:Description>
+        <cd:Unit>Hz</cd:Unit>
+        <cd:BitSize>64</cd:BitSize>
+        <cd:NativeType>int64</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="spec_grid_ptf">
+    <cd:Array>
+      <cd:Dimension><![CDATA[int(/sph/num_p)]]></cd:Dimension>
+      <cd:Dimension><![CDATA[int(/sph/num_t)]]></cd:Dimension>
+      <cd:Dimension><![CDATA[int(/sph/num_f)]]></cd:Dimension>
+      <cd:Float>
+        <cd:Description>Array of spectra of size Num_P x num_T x Num_F</cd:Description>
+        <cd:BitSize>64</cd:BitSize>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="f_fp">
+    <cd:Array>
+      <cd:Dimension><![CDATA[int(/sph/num_fp)]]></cd:Dimension>
+      <cd:Integer>
+        <cd:Description>Array of Num_FP frequencies covering the range [-FSR,+FSR]</cd:Description>
+        <cd:Unit>Hz</cd:Unit>
+        <cd:BitSize>64</cd:BitSize>
+        <cd:NativeType>int64</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="ta_fp">
+    <cd:Array>
+      <cd:Dimension><![CDATA[int(/sph/num_fp)]]></cd:Dimension>
+      <cd:Float>
+        <cd:Description>Array of Num_FP Fabry-Perot responses interpolated to the frequency array Freq_FP for channel A</cd:Description>
+        <cd:BitSize>64</cd:BitSize>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="tb_fp">
+    <cd:Array>
+      <cd:Dimension><![CDATA[int(/sph/num_fp)]]></cd:Dimension>
+      <cd:Float>
+        <cd:Description>Array of Num_FP Fabry-Perot responses interpolated to the frequency array Freq_FP for channel B</cd:Description>
+        <cd:BitSize>64</cd:BitSize>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="fd">
+    <cd:Array>
+      <cd:Dimension><![CDATA[int(/sph/num_fd)]]></cd:Dimension>
+      <cd:Integer>
+        <cd:Description>Array of Num_Fd frequencies covering the range [-USR/2,+USR/2]</cd:Description>
+        <cd:Unit>Hz</cd:Unit>
+        <cd:BitSize>64</cd:BitSize>
+        <cd:NativeType>int64</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="rr">
+    <cd:Array>
+      <cd:Dimension><![CDATA[int(/sph/num_rr)]]></cd:Dimension>
+      <cd:Float>
+        <cd:Description>Array of Num_RR responses covering the range [-0.5,0.5]</cd:Description>
+        <cd:BitSize>64</cd:BitSize>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="fcalib_ptr">
+    <cd:Array>
+      <cd:Dimension><![CDATA[int(/sph/num_p)]]></cd:Dimension>
+      <cd:Dimension><![CDATA[int(/sph/num_t)]]></cd:Dimension>
+      <cd:Record>
+        <cd:Description>List if Num_P x Num_T structures Fcalib_R containing the corrections for response</cd:Description>
+        <cd:Field name="fcalib_r">
+          <cd:Array>
+            <cd:Dimension><![CDATA[int(/sph/num_rr)]]></cd:Dimension>
+            <cd:Float>
+              <cd:Description>Array of corrections of size Num_RR</cd:Description>
+              <cd:Unit>Hz</cd:Unit>
+              <cd:BitSize>64</cd:BitSize>
+              <cd:NativeType>double</cd:NativeType>
+            </cd:Float>
+          </cd:Array>
+        </cd:Field>
+        <cd:Field name="fcalib_r_error">
+          <cd:Array>
+            <cd:Dimension><![CDATA[int(/sph/num_rr)]]></cd:Dimension>
+            <cd:Float>
+              <cd:Description>Error of Fcalib_R</cd:Description>
+              <cd:Unit>Hz</cd:Unit>
+              <cd:BitSize>64</cd:BitSize>
+              <cd:NativeType>double</cd:NativeType>
+            </cd:Float>
+          </cd:Array>
+        </cd:Field>
+      </cd:Record>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="nab_ptfd">
+    <cd:Array>
+      <cd:Dimension><![CDATA[int(/sph/num_p)]]></cd:Dimension>
+      <cd:Dimension><![CDATA[int(/sph/num_t)]]></cd:Dimension>
+      <cd:Record>
+        <cd:Description>List if Num_P x num_T structures Nab_TFd containing the photocounts on A &amp; B Rayleigh channels for temperature and frequency</cd:Description>
+        <cd:Field name="na_fd">
+          <cd:Array>
+            <cd:Dimension><![CDATA[int(/sph/num_fd)]]></cd:Dimension>
+            <cd:Integer>
+              <cd:Description>Array of Rayleigh photocounts for channel A, of size Num_Fd</cd:Description>
+              <cd:BitSize>32</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Array>
+        </cd:Field>
+        <cd:Field name="nb_fd">
+          <cd:Array>
+            <cd:Dimension><![CDATA[int(/sph/num_fd)]]></cd:Dimension>
+            <cd:Integer>
+              <cd:Description>Array of Rayleigh photocounts for channel B, of size Num_Fd</cd:Description>
+              <cd:BitSize>32</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Array>
+        </cd:Field>
+      </cd:Record>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="fint_r">
+    <cd:Array>
+      <cd:Dimension><![CDATA[int(/sph/num_rr)]]></cd:Dimension>
+      <cd:Integer>
+        <cd:Description>List of Num_RR frequencies corresponding to the response RR on the internal reference</cd:Description>
+        <cd:Unit>Hz</cd:Unit>
+        <cd:BitSize>64</cd:BitSize>
+        <cd:NativeType>int64</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+</cd:Record>

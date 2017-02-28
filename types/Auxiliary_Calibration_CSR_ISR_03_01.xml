@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<cd:Record name="Auxiliary_Calibration_CSR_ISR_03_01" format="xml" last-modified="2015-04-28" namexml="Internal_Spectral_Registration" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+  <cd:Description>ISR GADS</cd:Description>
+  <cd:Field name="List_of_Data_Set_Records">
+    <cd:Record namexml="List_of_Data_Set_Records">
+      <cd:Description>List of Data Set Records</cd:Description>
+      <cd:Attribute name="count">
+      </cd:Attribute>
+      <cd:Field name="Data_Set_Record">
+        <cd:Array>
+          <cd:Dimension/>
+          <cd:Record namexml="Data_Set_Record">
+            <cd:Description>Data Set Record</cd:Description>
+            <cd:Field name="List_of_ISR_Results">
+              <cd:Record namexml="List_of_ISR_Results">
+                <cd:Description>List of ISR results</cd:Description>
+                <cd:Attribute name="count"> </cd:Attribute>
+                <cd:Field name="ISR_Result">
+                  <cd:Array>
+                    <cd:Dimension/>
+                    <cd:Record namexml="ISR_Result">
+                      <cd:Description>ISR results</cd:Description>
+                      <cd:Field name="Laser_Freq_Offset">
+                        <cd:Type namexml="Laser_Freq_Offset">
+                          <cd:Attribute name="unit">
+                            <cd:Optional/>
+                            <cd:FixedValue>GHz</cd:FixedValue>
+                          </cd:Attribute>
+                          <cd:Float format="ascii">
+                            <cd:Description>Laser frequency offset</cd:Description>
+                            <cd:Unit>GHz</cd:Unit>
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="Fizeau_Transmission">
+                        <cd:Type namexml="Fizeau_Transmission">
+                          <cd:Float format="ascii">
+                            <cd:Description>Transmission through the Fizeau</cd:Description>
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="Rayleigh_A_Response">
+                        <cd:Type namexml="Rayleigh_A_Response">
+                          <cd:Float format="ascii">
+                            <cd:Description>Response of FPA</cd:Description>
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="Rayleigh_B_Response">
+                        <cd:Type namexml="Rayleigh_B_Response">
+                          <cd:Float format="ascii">
+                            <cd:Description>Response of FPB</cd:Description>
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                      </cd:Field>
+                    </cd:Record>
+                    <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                  </cd:Array>
+                </cd:Field>
+              </cd:Record>
+            </cd:Field>
+          </cd:Record>
+          <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+        </cd:Array>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+</cd:Record>

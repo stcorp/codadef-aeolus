@@ -1,0 +1,330 @@
+<?xml version="1.0"?>
+<cd:Record name="Level_2A_Processing_Parameters_02_02" format="xml" namexml="Level_2A_Processing_Parameters" last-modified="2015-08-31" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+  <cd:Description>Level 2A Processing Parameters GADS DSR</cd:Description>
+  <cd:Field name="FH_Default_Fields">
+    <cd:Record namexml="FH_Default_Fields">
+      <cd:Description>Fields responsible for populating the Fixed Header</cd:Description>
+      <cd:Field name="File_Description">
+        <cd:Text namexml="File_Description">
+          <cd:Description>1-line description of the file</cd:Description>
+        </cd:Text>
+      </cd:Field>
+      <cd:Field name="Notes">
+        <cd:Text namexml="Notes">
+          <cd:Description>Multi-lines free text</cd:Description>
+        </cd:Text>
+      </cd:Field>
+      <cd:Field name="Mission">
+        <cd:Text namexml="Mission">
+          <cd:Description>Aeolus</cd:Description>
+        </cd:Text>
+      </cd:Field>
+      <cd:Field name="Mission_Id">
+        <cd:Text namexml="Mission_Id">
+          <cd:Description>AE</cd:Description>
+        </cd:Text>
+      </cd:Field>
+      <cd:Field name="File_Class">
+        <cd:Text namexml="File_Class">
+          <cd:Description>1-Line description of the file class</cd:Description>
+        </cd:Text>
+      </cd:Field>
+      <cd:Field name="File_Version">
+        <cd:Type namexml="File_Version">
+          <cd:Integer format="ascii">
+            <cd:Description>4 digits used to distinguish between versions of a file having the same validity period</cd:Description>
+            <cd:NativeType>int16</cd:NativeType>
+          </cd:Integer>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="System">
+        <cd:Text namexml="System">
+          <cd:Description>Aeolus L1bP</cd:Description>
+        </cd:Text>
+      </cd:Field>
+      <cd:Field name="Creator">
+        <cd:Text namexml="Creator">
+          <cd:Description>Aeolus L1bP</cd:Description>
+        </cd:Text>
+      </cd:Field>
+      <cd:Field name="Creator_Version">
+        <cd:Text namexml="Creator_Version">
+          <cd:Description>Version of the tool</cd:Description>
+        </cd:Text>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="Mph_Default_Fields">
+    <cd:Record namexml="Mph_Default_Fields">
+      <cd:Description>Values responsible for populating the main product header</cd:Description>
+      <cd:Field name="Ref_Doc">
+        <cd:Text namexml="Ref_Doc">
+          <cd:Description>Reference document describing the product</cd:Description>
+        </cd:Text>
+      </cd:Field>
+      <cd:Field name="Software_Ver">
+        <cd:Text namexml="Software_Ver">
+          <cd:Description>Software version number of processing software. Format: name of processor (up to 10 char) version number (4 char)</cd:Description>
+        </cd:Text>
+      </cd:Field>
+      <cd:Field name="Proc_Center">
+        <cd:Text namexml="Proc_Center">
+          <cd:Description>AEOLUS PHS</cd:Description>
+        </cd:Text>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="Config_Params">
+    <cd:Record namexml="Config_Params">
+      <cd:Field name="SceneConstruction">
+        <cd:Record namexml="SceneConstruction">
+        <cd:Description>Configurable parameters of the Scene Construction algorithm</cd:Description>
+          <cd:Field name="rangeMax">
+            <cd:Type namexml="rangeMax">
+              <cd:Float format="ascii">
+                <cd:Description>Maximum range for matching MET profile</cd:Description>
+                <cd:NativeType>double</cd:NativeType>
+              </cd:Float>
+            </cd:Type>
+          </cd:Field>
+          <cd:Field name="timeMax">
+            <cd:Type namexml="timeMax">
+              <cd:Float format="ascii">
+                <cd:Description>Maximum time offset for matching MET profile</cd:Description>
+                <cd:NativeType>double</cd:NativeType>
+              </cd:Float>
+            </cd:Type>
+          </cd:Field>
+          <cd:Field name="RadiusOfTheEarth">
+            <cd:Type namexml="RadiusOfTheEarth">
+              <cd:Float format="ascii">
+                <cd:Description>Mean radius of the earth</cd:Description>
+                <cd:NativeType>double</cd:NativeType>
+              </cd:Float>
+            </cd:Type>
+          </cd:Field>
+          <cd:Field name="SNR_Threshold">
+            <cd:Type namexml="SNR_Threshold">
+              <cd:Integer format="ascii">
+                <cd:Description>SNR threshold to determine valid profiles</cd:Description>
+                <cd:NativeType>uint16</cd:NativeType>
+              </cd:Integer>
+            </cd:Type>
+          </cd:Field>
+          <cd:Field name="Mie_SNR_Divisor">
+            <cd:Type namexml="Mie_SNR_Divisor">
+              <cd:Integer format="ascii">
+                <cd:Description>Scaling divisor used on Mie SNR values for scene construction</cd:Description>
+                <cd:NativeType>uint16</cd:NativeType>
+              </cd:Integer>
+            </cd:Type>
+          </cd:Field>
+          <cd:Field name="Ray_SNR_Divisor">
+            <cd:Type namexml="Ray_SNR_Divisor">
+              <cd:Integer format="ascii">
+                <cd:Description>Scaling divisor used on Ray SNR values for scene construction</cd:Description>
+                <cd:NativeType>uint16</cd:NativeType>
+              </cd:Integer>
+            </cd:Type>
+          </cd:Field>
+          <cd:Field name="Mie_SR_Divisor">
+            <cd:Type namexml="Mie_SR_Divisor">
+              <cd:Integer format="ascii">
+                <cd:Description>Scaling divisor used on Mie SR values for scene construction</cd:Description>
+                <cd:NativeType>uint16</cd:NativeType>
+              </cd:Integer>
+            </cd:Type>
+          </cd:Field>
+          <cd:Field name="ABL_Height">
+            <cd:Type namexml="ABL_Height">
+              <cd:Float format="ascii">
+                <cd:Description>Mean ABL height used to determine last bin above ABL</cd:Description>
+                <cd:NativeType>double</cd:NativeType>
+              </cd:Float>
+            </cd:Type>
+          </cd:Field>
+        </cd:Record>
+      </cd:Field>
+      <cd:Field name="FindMatchingBins">
+        <cd:Record namexml="FindMatchingBins">
+        <cd:Description>Configurable parameters of the Find Matching Bins algorithm</cd:Description>
+          <cd:Field name="Altitude_Match_Threshold">
+            <cd:Type namexml="Altitude_Match_Threshold">
+              <cd:Float format="ascii">
+                <cd:Description>Threshold used to determine if bin heights match</cd:Description>
+                <cd:NativeType>double</cd:NativeType>
+              </cd:Float>
+            </cd:Type>
+          </cd:Field>
+        </cd:Record>
+      </cd:Field>
+      <cd:Field name="SSC_Params">
+        <cd:Record namexml="SSC_Params">
+        <cd:Description>Configurable parameters of the synthetic signal calculation algorithm</cd:Description>
+          <cd:Field name="Start_Height_Atmosphere_Grid">
+            <cd:Type namexml="Start_Height_Atmosphere_Grid">
+              <cd:Integer format="ascii">
+                <cd:Description>Start height of internal fine layer reference grid</cd:Description>
+                <cd:NativeType>uint16</cd:NativeType>
+              </cd:Integer>
+            </cd:Type>
+          </cd:Field>
+          <cd:Field name="Atmospheric_Grid_Size">
+            <cd:Type namexml="Atmospheric_Grid_Size">
+              <cd:Integer format="ascii">
+                <cd:Description>Number of layers of internal fine layer reference grid. Layers have a fixed size of 125m</cd:Description>
+                <cd:NativeType>uint16</cd:NativeType>
+              </cd:Integer>
+            </cd:Type>
+          </cd:Field>
+        </cd:Record>
+      </cd:Field>
+      <cd:Field name="Trans_To_LOD_Params">
+        <cd:Record namexml="Trans_To_LOD_Params">
+        <cd:Description>Configurable parameters of the transmission to local optical depth inversion algorithm</cd:Description>
+          <cd:Field name="Inversion_Start_Value">
+            <cd:Type namexml="Inversion_Start_Value">
+              <cd:Float format="ascii">
+                <cd:Description>Start value for a certain variable in the inversion algorithm</cd:Description>
+                <cd:NativeType>double</cd:NativeType>
+              </cd:Float>
+            </cd:Type>
+          </cd:Field>
+          <cd:Field name="Inversion_Tolerance_Value">
+            <cd:Type namexml="Inversion_Tolerance_Value">
+              <cd:Float format="ascii">
+                <cd:Description>Tolerance limit to stop iterative inverion</cd:Description>
+                <cd:NativeType>double</cd:NativeType>
+              </cd:Float>
+            </cd:Type>
+          </cd:Field>
+        </cd:Record>
+      </cd:Field>
+      <cd:Field name="ICA_Params">
+        <cd:Record namexml="ICA_Params">
+        <cd:Description>Configurable parameters of the iterative cloud algorithm</cd:Description>
+          <cd:Field name="Number_Cases">
+            <cd:Type namexml="Number_Cases">
+              <cd:Integer format="ascii">
+                <cd:Description>Number of different filling cases in iterative algorithm</cd:Description>
+                <cd:NativeType>uint16</cd:NativeType>
+              </cd:Integer>
+            </cd:Type>
+          </cd:Field>
+          <cd:Field name="Filling_Case_1">
+            <cd:Type namexml="Filling_Case_1">
+              <cd:Float format="ascii">
+                <cd:Description>Parameter triple for filling case</cd:Description>
+                <cd:NativeType>double</cd:NativeType>
+              </cd:Float>
+            </cd:Type>
+          </cd:Field>
+          <cd:Field name="Filling_Case_2">
+            <cd:Type namexml="Filling_Case_2">
+              <cd:Float format="ascii">
+                <cd:Description>Parameter triple for filling case</cd:Description>
+                <cd:NativeType>double</cd:NativeType>
+              </cd:Float>
+            </cd:Type>
+          </cd:Field>
+          <cd:Field name="Filling_Case_3">
+            <cd:Type namexml="Filling_Case_3">
+              <cd:Float format="ascii">
+                <cd:Description>Parameter triple for filling case</cd:Description>
+                <cd:NativeType>double</cd:NativeType>
+              </cd:Float>
+            </cd:Type>
+          </cd:Field>
+          <cd:Field name="Filling_Case_4">
+            <cd:Type namexml="Filling_Case_4">
+              <cd:Float format="ascii">
+                <cd:Description>Parameter triple for filling case</cd:Description>
+                <cd:NativeType>double</cd:NativeType>
+              </cd:Float>
+            </cd:Type>
+          </cd:Field>
+          <cd:Field name="Filling_Case_5">
+            <cd:Type namexml="Filling_Case_5">
+              <cd:Float format="ascii">
+                <cd:Description>Parameter triple for filling case</cd:Description>
+                <cd:NativeType>double</cd:NativeType>
+              </cd:Float>
+            </cd:Type>
+          </cd:Field>
+          <cd:Field name="Filling_Case_6">
+            <cd:Type namexml="Filling_Case_6">
+              <cd:Float format="ascii">
+                <cd:Description>Parameter triple for filling case</cd:Description>
+                <cd:NativeType>double</cd:NativeType>
+              </cd:Float>
+            </cd:Type>
+          </cd:Field>
+          <cd:Field name="Filling_Case_7">
+            <cd:Type namexml="Filling_Case_7">
+              <cd:Float format="ascii">
+                <cd:Description>Parameter triple for filling case</cd:Description>
+                <cd:NativeType>double</cd:NativeType>
+              </cd:Float>
+            </cd:Type>
+          </cd:Field>
+          <cd:Field name="CC_Lower_Threshold">
+            <cd:Type namexml="CC_Lower_Threshold">
+              <cd:Float format="ascii">
+                <cd:Description>Credibility criteria lower threshold for the different filling cases</cd:Description>
+                <cd:NativeType>double</cd:NativeType>
+              </cd:Float>
+            </cd:Type>
+          </cd:Field>
+          <cd:Field name="LOD_Upper_Threshold">
+            <cd:Type namexml="LOD_Upper_Threshold">
+              <cd:Float format="ascii">
+                <cd:Description>Local optical depth upper threshold to used to cut off branches of the search tree</cd:Description>
+                <cd:NativeType>double</cd:NativeType>
+              </cd:Float>
+            </cd:Type>
+          </cd:Field>
+        </cd:Record>
+      </cd:Field>
+      <cd:Field name="L2A_Main_Params">
+        <cd:Record namexml="L2A_Main_Params">
+        <cd:Description>Configurable parameters of the L2A main processing algorithm</cd:Description>
+          <cd:Field name="CC_SCA_Threshold">
+            <cd:Type namexml="CC_SCA_Threshold">
+              <cd:Float format="ascii">
+                <cd:Description>Upper limit for inverting transmission to LOD on observation level in SCA algorithm</cd:Description>
+                <cd:NativeType>double</cd:NativeType>
+              </cd:Float>
+            </cd:Type>
+          </cd:Field>
+          <cd:Field name="CC_ICA_Threshold">
+            <cd:Type namexml="CC_ICA_Threshold">
+              <cd:Float format="ascii">
+                <cd:Description>Upper limit for identifying correct solutions among the set of solutions of the ICA algorithm</cd:Description>
+                <cd:NativeType>double</cd:NativeType>
+              </cd:Float>
+            </cd:Type>
+          </cd:Field>
+        </cd:Record>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="System_Params">
+    <cd:Record namexml="System_Params">
+      <cd:Field name="Simulated_Data_Flag">
+        <cd:Type namexml="Simulated_Data_Flag">
+          <cd:Integer format="ascii">
+            <cd:Description>Flag indicating if simulated or measurement AISP data was used to process up to Level 1B</cd:Description>
+            <cd:NativeType>uint8</cd:NativeType>
+            <cd:Mapping string="FALSE" value="0"/>            
+            <cd:Mapping string="False" value="0"/>
+            <cd:Mapping string="false" value="0"/>
+            <cd:Mapping string="TRUE" value="1"/>            
+            <cd:Mapping string="True" value="1"/>
+            <cd:Mapping string="true" value="1"/>
+            <ct:NamedTest id="BooleanXmlTest"/>
+          </cd:Integer>
+        </cd:Type>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+</cd:Record>

@@ -1,0 +1,297 @@
+<?xml version="1.0"?>
+<cd:Record name="Data_Block_REP_QUA_AC" format="xml" namexml="Data_Block" last-modified="2015-11-23" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+  <cd:Attribute name="type">
+    <cd:Optional/>
+    <cd:FixedValue>xml</cd:FixedValue>
+  </cd:Attribute>
+  <cd:Description>Quality Report Data Block</cd:Description>
+  <cd:Field name="Reception_Summary">
+    <cd:Record namexml="Reception_Summary">
+      <cd:Field name="List_of_Receptions">
+        <cd:Record namexml="List_of_Receptions">
+          <cd:Attribute name="count">
+          </cd:Attribute>
+          <cd:Field name="Reception">
+            <cd:Array>
+              <cd:Dimension/>
+              <cd:Record namexml="Reception">
+                <cd:Description>Reception</cd:Description>
+                <cd:Field name="File_Name">
+                  <cd:Text namexml="File_Name">
+                    <cd:Description>Name of received file</cd:Description>
+                  </cd:Text>
+                </cd:Field>
+                <cd:Field name="Source_Facility_Name">
+                  <cd:Text namexml="Source_Facility_Name">
+                    <cd:Description>Name of the facility which has sent the file (in case of push mode of transfer) or of which the file has been acquired (in case of a pull mode of transfer)</cd:Description>
+                  </cd:Text>
+                </cd:Field>
+                <cd:Field name="Source_Server_Name">
+                  <cd:Text namexml="Source_Server_Name">
+                    <cd:Description>Name of the server at which the Source Facility resides (if available to the ACMF, otherwise the empty string will be used)</cd:Description>
+                  </cd:Text>
+                </cd:Field>
+                <cd:Field name="Arrival_Time">
+                  <cd:Type namexml="Arrival_Time">
+                    <cd:Time format="ascii" timeformat="ascii_ccsds_datetime_ymd1_with_ref">
+                      <cd:Description>Time at which the polling mechanism has detected the file on the transfer directory Format: 'UTC=YYYY-MM-DDTHH:MM:SS'</cd:Description>
+                      <cd:Mapping string="UTC=0000-00-00T00:00:00" value="-inf"/>
+                      <cd:Mapping string="UTC=9999-99-99T99:99:99" value="+inf"/>
+                      <cd:Mapping string="" value="nan"/>
+                    </cd:Time>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="Accepted">
+                  <cd:Type namexml="Accepted">
+                    <cd:Integer format="ascii">
+                      <cd:Description>True if the file has been accepted by the ACMF for further processing</cd:Description>
+                      <cd:NativeType>uint8</cd:NativeType>
+                      <cd:Mapping string="FALSE" value="0"/>                      
+                      <cd:Mapping string="False" value="0"/>
+                      <cd:Mapping string="false" value="0"/>
+                      <cd:Mapping string="TRUE" value="1"/>
+                      <cd:Mapping string="True" value="1"/>
+                      <cd:Mapping string="true" value="1"/>
+                      <ct:NamedTest id="BooleanBinTest" />
+                    </cd:Integer>
+                  </cd:Type>
+                </cd:Field>
+              </cd:Record>
+              <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+            </cd:Array>
+          </cd:Field>
+        </cd:Record>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="Calibration_Status">
+    <cd:Record namexml="Calibration_Status">
+      <cd:Field name="List_of_Calibration_Elements">
+        <cd:Record namexml="List_of_Calibration_Elements">
+          <cd:Description>List of calibration elements. The list will contain all calibration activities that haven't been closed at the start of report period (Validity_Start), or that have been generated after the start of the report period (Validity_Start) and before the end of the report period (Validity_Stop)</cd:Description>
+          <cd:Attribute name="count">
+          </cd:Attribute>
+          <cd:Field name="Calibration_Element">
+            <cd:Array>
+              <cd:Dimension/>
+              <cd:Record namexml="Calibration_Element">
+                <cd:Description>Calibration Element</cd:Description>
+                <cd:Field name="Cal_Activity">
+                  <cd:Text namexml="Cal_Activity">
+                    <cd:Description>Identifier of planned calibration activity. Value: ISR, IDC, LCMPA, LDTA, and IRC (MRC &amp; RRC), IAT, DCC Onboard_ISR, Onboard_IDC, Onboard_Onboard_LDT, and Onboard_LOS. The Onboard_XXX activity will be used generation of onboard parameter generation</cd:Description>
+                  </cd:Text>
+                </cd:Field>
+                <cd:Field name="Execution_Time">
+                  <cd:Type namexml="Execution_Time">
+                    <cd:Time format="ascii" timeformat="ascii_ccsds_datetime_ymd1_with_ref">
+                      <cd:Description>Time at which the planned calibration activity has been executed</cd:Description>
+                      <cd:Mapping string="UTC=0000-00-00T00:00:00" value="-inf"/>
+                      <cd:Mapping string="UTC=9999-99-99T99:99:99" value="+inf"/>
+                      <cd:Mapping string="" value="nan"/>
+                    </cd:Time>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="DP_File_Name">
+                  <cd:Text namexml="DP_File_Name">
+                    <cd:Description>Name of the Source file in which the data of the calibration activity can be found.</cd:Description>
+                  </cd:Text>
+                </cd:Field>
+                <cd:Field name="Output_File_Name">
+                  <cd:Text namexml="Output_File_Name">
+                    <cd:Description>Name of the output calibration file (either ADF or onboard parameter updates file)</cd:Description>
+                  </cd:Text>
+                </cd:Field>
+                <cd:Field name="Output_File_Baseline">
+                  <cd:Text namexml="Output_File_Baseline">
+                    <cd:Description>Baseline associated to the output calibration file (only applicable for ADFs, if not applicable set to ‘N/A’)</cd:Description>
+                  </cd:Text>
+                </cd:Field>
+                <cd:Field name="Output_File_Generation_Time">
+                  <cd:Type namexml="Output_File_Generation_Time">
+                    <cd:Time format="ascii" timeformat="ascii_ccsds_datetime_ymd1_with_ref">
+                      <cd:Description>Time at which the output calibration file has been generated</cd:Description>
+                      <cd:Mapping string="UTC=0000-00-00T00:00:00" value="-inf"/>
+                      <cd:Mapping string="UTC=9999-99-99T99:99:99" value="+inf"/>
+                      <cd:Mapping string="" value="nan"/>
+                    </cd:Time>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="Last_Dissemination_Time">
+                  <cd:Type namexml="Last_Dissemination_Time">
+                    <cd:Time format="ascii" timeformat="ascii_ccsds_datetime_ymd1_with_ref">
+                      <cd:Description>Time at which the output file has been transferred to the last of the intended receivers. Field is empty if not all receivers have acquired the output file</cd:Description>
+                      <cd:Mapping string="UTC=0000-00-00T00:00:00" value="-inf"/>
+                      <cd:Mapping string="UTC=9999-99-99T99:99:99" value="+inf"/>
+                      <cd:Mapping string="" value="nan"/>
+                    </cd:Time>
+                  </cd:Type>
+                </cd:Field>
+              </cd:Record>
+              <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+            </cd:Array>
+          </cd:Field>
+        </cd:Record>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="Quality_Control_Results">
+    <cd:Record namexml="Quality_Control_Results">
+      <cd:Field name="List_of_QCF_Results">
+        <cd:Record namexml="List_of_QCF_Results">
+          <cd:Description>List of QCF quality control results summary</cd:Description>
+          <cd:Attribute name="count">
+          </cd:Attribute>
+          <cd:Field name="QC_Result">
+            <cd:Array>
+              <cd:Dimension/>
+              <cd:NamedType id="QC_Result_REP_QUA_AC"/>
+              <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+            </cd:Array>
+          </cd:Field>
+        </cd:Record>
+      </cd:Field>
+      <cd:Field name="List_of_ACMF_A_Results">
+        <cd:Record namexml="List_of_ACMF_A_Results">
+          <cd:Description>List of ACMF_A quality control results summary</cd:Description>
+          <cd:Attribute name="count">
+          </cd:Attribute>
+          <cd:Field name="QC_Result">
+            <cd:Array>
+              <cd:Dimension/>
+              <cd:NamedType id="QC_Result_REP_QUA_AC"/>
+              <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+            </cd:Array>
+          </cd:Field>
+        </cd:Record>
+      </cd:Field>
+      <cd:Field name="List_of_ACMF_P_Results">
+        <cd:Record namexml="List_of_ACMF_P_Results">
+          <cd:Description>List of ACMF_P quality control results summary</cd:Description>
+          <cd:Attribute name="count">
+          </cd:Attribute>
+          <cd:Field name="QC_Result">
+            <cd:Array>
+              <cd:Dimension/>
+              <cd:NamedType id="QC_Result_REP_QUA_AC"/>
+              <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+            </cd:Array>
+          </cd:Field>
+        </cd:Record>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="Dissemination_Status">
+    <cd:Record namexml="Dissemination_Status">
+      <cd:Field name="List_of_Dissemination_Elements">
+        <cd:Record namexml="List_of_Dissemination_Elements">
+          <cd:Description>List of Dissemination_elements</cd:Description>
+          <cd:Attribute name="count">
+          </cd:Attribute>
+          <cd:Field name="Dissemination_Element">
+            <cd:Array>
+              <cd:Dimension/>
+              <cd:Record namexml="Dissemination_Element">
+                <cd:Description>Dissemination element</cd:Description>
+                <cd:Field name="File_Name">
+                  <cd:Text namexml="File_Name">
+                    <cd:Description>Name of the file of which transfer information is provided</cd:Description>
+                  </cd:Text>
+                </cd:Field>
+                <cd:Field name="Generation_Time">
+                  <cd:Type namexml="Generation_Time">
+                    <cd:Time format="ascii" timeformat="ascii_ccsds_datetime_ymd1_with_ref">
+                      <cd:Description>Time at which the file has been generated</cd:Description>
+                      <cd:Mapping string="UTC=0000-00-00T00:00:00" value="-inf"/>
+                      <cd:Mapping string="UTC=9999-99-99T99:99:99" value="+inf"/>
+                      <cd:Mapping string="" value="nan"/>
+                    </cd:Time>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="Validation_Time">
+                  <cd:Type namexml="Validation_Time">
+                    <cd:Time format="ascii" timeformat="ascii_ccsds_datetime_ymd1_with_ref">
+                      <cd:Description>Time at which the file has been validated</cd:Description>
+                      <cd:Mapping string="UTC=0000-00-00T00:00:00" value="-inf"/>
+                      <cd:Mapping string="UTC=9999-99-99T99:99:99" value="+inf"/>
+                      <cd:Mapping string="" value="nan"/>
+                    </cd:Time>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="List_of_Dissemination_Destination_Elements">
+                  <cd:Record namexml="List_of_Dissemination_Destination_Elements">
+                    <cd:Description>Contains the dissemination information of the file to each of its intended receivers</cd:Description>
+                    <cd:Attribute name="count">
+                    </cd:Attribute>
+                    <cd:Field name="Dissemination_Destination_Element">
+                      <cd:Array>
+                        <cd:Dimension/>
+                        <cd:Record namexml="Dissemination_Destination_Element">
+                          <cd:Description>Dissemination Destination element</cd:Description>
+                          <cd:Field name="Destination_Facility_Name">
+                            <cd:Text namexml="Destination_Facility_Name">
+                              <cd:Description>Name of the facility to which the file has to be transferred</cd:Description>
+                            </cd:Text>
+                          </cd:Field>
+                          <cd:Field name="Destination_Server_Name">
+                            <cd:Text namexml="Destination_Server_Name">
+                              <cd:Description>Server name of the Destination Facility</cd:Description>
+                            </cd:Text>
+                          </cd:Field>
+                          <cd:Field name="Transfer_Start_Time">
+                            <cd:Type namexml="Transfer_Start_Time">
+                              <cd:Time format="ascii" timeformat="ascii_ccsds_datetime_ymd1_with_ref">
+                                <cd:Description>Time of the initial transfer action</cd:Description>
+                                <cd:Mapping string="UTC=0000-00-00T00:00:00" value="-inf"/>
+                                <cd:Mapping string="UTC=9999-99-99T99:99:99" value="+inf"/>
+                                <cd:Mapping string="" value="nan"/>
+                              </cd:Time>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="Retries">
+                            <cd:Type namexml="Retries">
+                              <cd:Integer format="ascii">
+                                <cd:Description>The number of transfer retries</cd:Description>
+                                <cd:NativeType>uint16</cd:NativeType>
+                              </cd:Integer>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="Transfer_Completed">
+                            <cd:Type namexml="Transfer_Completed">
+                              <cd:Integer format="ascii">
+                                <cd:Description>True if transfer has been successfully completed</cd:Description>
+                                <cd:NativeType>uint8</cd:NativeType>
+                                <cd:Mapping string="FALSE" value="0"/>                      
+                                <cd:Mapping string="False" value="0"/>
+                                <cd:Mapping string="false" value="0"/>
+                                <cd:Mapping string="TRUE" value="1"/>
+                                <cd:Mapping string="True" value="1"/>
+                                <cd:Mapping string="true" value="1"/>
+                                <ct:NamedTest id="BooleanBinTest" />
+                              </cd:Integer>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="Transfer_Completed_Time">
+                            <cd:Type namexml="Transfer_Completed_Time">
+                              <cd:Time format="ascii" timeformat="ascii_ccsds_datetime_ymd1_with_ref">
+                                <cd:Description>Time of successful end of transfer</cd:Description>
+                                <cd:Mapping string="UTC=0000-00-00T00:00:00" value="-inf"/>
+                                <cd:Mapping string="UTC=9999-99-99T99:99:99" value="+inf"/>
+                                <cd:Mapping string="" value="nan"/>
+                              </cd:Time>
+                            </cd:Type>
+                          </cd:Field>
+                        </cd:Record>
+                        <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                      </cd:Array>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+              </cd:Record>
+              <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+            </cd:Array>
+          </cd:Field>
+        </cd:Record>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+</cd:Record>

@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="Level_1A_Geolocation_of_DEM_Intersection_03_06" last-modified="2010-08-26" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Field name="latitude_of_dem_intersection">
+    <cd:Integer>
+      <cd:Description>Latitude of the intersection of DEM and the line-of-sight</cd:Description>
+      <cd:Unit>1e-6 degrees_north</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+        <cd:Unit>degrees_north</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="longitude_of_dem_intersection">
+    <cd:Integer>
+      <cd:Description>Longitude of the intersection of DEM and the line-of-sight</cd:Description>
+      <cd:Unit>1e-6 degrees_east</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+        <cd:Unit>degrees_east</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="altitude_of_dem_intersection">
+    <cd:Float>
+      <cd:Description>Altitude of the intersection of DEM and the line-of-sight</cd:Description>
+      <cd:Unit>m</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="argument_of_latitude_of_dem_intersection">
+    <cd:Integer>
+      <cd:Description>Argument of Latitude of the intersection of DEM and the line-of-sight</cd:Description>
+      <cd:Unit>1e-6 degrees_north</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+        <cd:Unit>degrees_north</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+</cd:Record>

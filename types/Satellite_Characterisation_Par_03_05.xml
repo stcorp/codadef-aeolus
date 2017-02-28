@@ -1,0 +1,757 @@
+<?xml version="1.0"?>
+<cd:Record name="Satellite_Characterisation_Par_03_05" format="xml" namexml="Satellite_Characterisation" last-modified="2010-08-26" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+  <cd:Description>Satellite Characterisation GADS DSR</cd:Description>
+  <cd:Field name="List_of_Data_Set_Records">
+    <cd:Record namexml="List_of_Data_Set_Records">
+      <cd:Description>List of Data Set Records</cd:Description>
+      <cd:Attribute name="count">
+      </cd:Attribute>
+      <cd:Field name="Data_Set_Record">
+        <cd:Array>
+          <cd:Dimension/>
+          <cd:Record namexml="Data_Set_Record">
+            <cd:Description>Data Set Record</cd:Description>
+            <cd:Field name="Mie_Accd_Temperature_TM">
+              <cd:Record namexml="Mie_Accd_Temperature_TM">
+                <cd:Description>Mie Accd Temperature TM</cd:Description>
+                <cd:Field name="Multiply_Factor">
+                  <cd:Type namexml="Multiply_Factor">
+                    <cd:Attribute name="unit">
+                      <cd:Optional/>
+                      <cd:FixedValue>celsius</cd:FixedValue>
+                    </cd:Attribute>
+                    <cd:Float format="ascii">
+                      <cd:Description>ACCD Temperature multiply coefficient</cd:Description>
+                      <cd:Unit>degC</cd:Unit>
+                      <cd:NativeType>double</cd:NativeType>
+                    </cd:Float>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="Add_Factor">
+                  <cd:Type namexml="Add_Factor">
+                    <cd:Attribute name="unit">
+                      <cd:Optional/>
+                      <cd:FixedValue>celsius</cd:FixedValue>
+                    </cd:Attribute>
+                    <cd:Float format="ascii">
+                      <cd:Description>ACCD temperature add coefficient</cd:Description>
+                      <cd:Unit>degC</cd:Unit>
+                      <cd:NativeType>double</cd:NativeType>
+                    </cd:Float>
+                  </cd:Type>
+                </cd:Field>
+              </cd:Record>
+            </cd:Field>
+            <cd:Field name="Ray_Accd_Temperature_TM">
+              <cd:Record namexml="Ray_Accd_Temperature_TM">
+                <cd:Description>Ray Accd Temperature TM</cd:Description>
+                <cd:Field name="Multiply_Factor">
+                  <cd:Type namexml="Multiply_Factor">
+                    <cd:Attribute name="unit">
+                      <cd:Optional/>
+                      <cd:FixedValue>celsius</cd:FixedValue>
+                    </cd:Attribute>
+                    <cd:Float format="ascii">
+                      <cd:Description>ACCD Temperature multiply coefficient</cd:Description>
+                      <cd:Unit>degC</cd:Unit>
+                      <cd:NativeType>double</cd:NativeType>
+                    </cd:Float>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="Add_Factor">
+                  <cd:Type namexml="Add_Factor">
+                    <cd:Attribute name="unit">
+                      <cd:Optional/>
+                      <cd:FixedValue>celsius</cd:FixedValue>
+                    </cd:Attribute>
+                    <cd:Float format="ascii">
+                      <cd:Description>ACCD temperature add coefficient</cd:Description>
+                      <cd:Unit>degC</cd:Unit>
+                      <cd:NativeType>double</cd:NativeType>
+                    </cd:Float>
+                  </cd:Type>
+                </cd:Field>
+              </cd:Record>
+            </cd:Field>
+            <cd:Field name="Laser_Transmit_Frequency">
+              <cd:Record namexml="Laser_Transmit_Frequency">
+                <cd:Description>Laser Transmit Frequency</cd:Description>
+                <cd:Field name="Base_Frequency">
+                  <cd:Type namexml="Base_Frequency">
+                    <cd:Attribute name="unit">
+                      <cd:Optional/>
+                      <cd:FixedValue>GigaHertz</cd:FixedValue>
+                    </cd:Attribute>
+                    <cd:Float format="ascii">
+                      <cd:Description>Base Laser Transmit Frequency</cd:Description>
+                      <cd:Unit>GHz</cd:Unit>
+                      <cd:NativeType>double</cd:NativeType>
+                    </cd:Float>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="List_of_Freq_Offsets">
+                  <cd:Record namexml="List_of_Freq_Offsets">
+                    <cd:Description>Table listing frequency rank TC code and actual transmitter frequency</cd:Description>
+                    <cd:Attribute name="count">
+                    </cd:Attribute>
+                    <cd:Field name="Freq_Offset">
+                      <cd:Array>
+                        <cd:Dimension/>
+                        <cd:Type namexml="Freq_Offset">
+                          <cd:Attribute name="unit">
+                            <cd:Optional/>
+                            <cd:FixedValue>GigaHertz</cd:FixedValue>
+                          </cd:Attribute>
+                          <cd:Float format="ascii">
+                            <cd:Description>Frequency offset - 12.5GigaHertz to + 12.5GigaHertz in steps of 0.025GHz</cd:Description>
+                            <cd:Unit>GHz</cd:Unit>
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                        <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                      </cd:Array>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+              </cd:Record>
+            </cd:Field>
+            <cd:Field name="List_of_Vertical_Sampling_Times">
+              <cd:Record namexml="List_of_Vertical_Sampling_Times">
+                <cd:Description>Table listing the 8 possible values of vertical sampling time coefficients, as defined in the Transfer Curve Document</cd:Description>
+                <cd:Attribute name="count">
+                </cd:Attribute>
+                <cd:Field name="Vertical_Sampling_Time">
+                  <cd:Array>
+                    <cd:Dimension/>
+                    <cd:Type namexml="Vertical_Sampling_Time">
+                      <cd:Attribute name="unit">
+                        <cd:Optional/>
+                        <cd:FixedValue>TMC</cd:FixedValue>
+                      </cd:Attribute>
+                      <cd:Integer format="ascii">
+                        <cd:Description>Vertical sampling time coefficient in TMC</cd:Description>
+                        <cd:NativeType>uint16</cd:NativeType>
+                      </cd:Integer>
+                    </cd:Type>
+                    <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                  </cd:Array>
+                </cd:Field>
+              </cd:Record>
+            </cd:Field>
+            <cd:Field name="List_of_Background_Integration_Times">
+              <cd:Record namexml="List_of_Background_Integration_Times">
+                <cd:Description>Table listing the 8 possible values of background integration time coefficients for Mie and Rayleigh, as defined in the Transfer Curve</cd:Description>
+                <cd:Attribute name="count">
+                </cd:Attribute>
+                <cd:Field name="Background_Integration_Time">
+                  <cd:Array>
+                    <cd:Dimension/>
+                    <cd:Type namexml="Background_Integration_Time">
+                      <cd:Attribute name="unit">
+                        <cd:Optional/>
+                        <cd:FixedValue>TMC</cd:FixedValue>
+                      </cd:Attribute>
+                      <cd:Integer format="ascii">
+                        <cd:Description>Background Integration time coefficient in TMC</cd:Description>
+                        <cd:NativeType>uint32</cd:NativeType>
+                      </cd:Integer>
+                    </cd:Type>
+                    <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                  </cd:Array>
+                </cd:Field>
+              </cd:Record>
+            </cd:Field>
+            <cd:Field name="List_of_Ray_Mie_Delays">
+              <cd:Record namexml="List_of_Ray_Mie_Delays">
+                <cd:Description>Table listing the 64 possible values of offset delay coefficients between Rayleigh and Mie first bin, as defined in the Transfer Curve Document</cd:Description>
+                <cd:Attribute name="count">
+                </cd:Attribute>
+                <cd:Field name="Ray_Mie_Delay">
+                  <cd:Array>
+                    <cd:Dimension/>
+                    <cd:Type namexml="Ray_Mie_Delay">
+                      <cd:Attribute name="unit">
+                        <cd:Optional/>
+                        <cd:FixedValue>TMC</cd:FixedValue>
+                      </cd:Attribute>
+                      <cd:Integer format="ascii">
+                        <cd:Description>Rayleigh Mie Time Delay coefficient in TMC</cd:Description>
+                        <cd:NativeType>uint32</cd:NativeType>
+                      </cd:Integer>
+                    </cd:Type>
+                    <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                  </cd:Array>
+                </cd:Field>
+              </cd:Record>
+            </cd:Field>
+            <cd:Field name="List_of_Imaging_Integration_Times">
+              <cd:Record namexml="List_of_Imaging_Integration_Times">
+                <cd:Description>Table listing the 4 possible values of imaging integration time coefficients for both Mie and Rayleigh, as defined in the Transfer Curve Document</cd:Description>
+                <cd:Attribute name="count">
+                </cd:Attribute>
+                <cd:Field name="Imaging_Integration_Time">
+                  <cd:Array>
+                    <cd:Dimension/>
+                    <cd:Type namexml="Imaging_Integration_Time">
+                      <cd:Attribute name="unit">
+                        <cd:Optional/>
+                        <cd:FixedValue>TMC</cd:FixedValue>
+                      </cd:Attribute>
+                      <cd:Integer format="ascii">
+                        <cd:Description>Imaging Integration Time coefficient in TMC</cd:Description>
+                        <cd:NativeType>uint32</cd:NativeType>
+                      </cd:Integer>
+                    </cd:Type>
+                    <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                  </cd:Array>
+                </cd:Field>
+              </cd:Record>
+            </cd:Field>
+            <cd:Field name="Laser_Wavelength">
+              <cd:Type namexml="Laser_Wavelength">
+                <cd:Attribute name="unit">
+                  <cd:Optional/>
+                  <cd:FixedValue>nanometers</cd:FixedValue>
+                </cd:Attribute>
+                <cd:Float format="ascii">
+                  <cd:Description>Laser wavelength in nanometers</cd:Description>
+                  <cd:Unit>nm</cd:Unit>
+                  <cd:NativeType>double</cd:NativeType>
+                </cd:Float>
+              </cd:Type>
+            </cd:Field>
+            <cd:Field name="Low_Frequency_Clock">
+              <cd:Type namexml="Low_Frequency_Clock">
+                <cd:Attribute name="unit">
+                  <cd:Optional/>
+                  <cd:FixedValue>seconds</cd:FixedValue>
+                </cd:Attribute>
+                <cd:Float format="ascii">
+                  <cd:Description>Low Frequency Clock</cd:Description>
+                  <cd:Unit>s</cd:Unit>
+                  <cd:NativeType>double</cd:NativeType>
+                </cd:Float>
+              </cd:Type>
+            </cd:Field>
+            <cd:Field name="Master_Clock_Rate">
+              <cd:Type namexml="Master_Clock_Rate">
+                <cd:Attribute name="unit">
+                  <cd:Optional/>
+                  <cd:FixedValue>GigaHertz</cd:FixedValue>
+                </cd:Attribute>
+                <cd:Float format="ascii">
+                  <cd:Description>Master Clock Rate (TMC)</cd:Description>
+                  <cd:Unit>GHz</cd:Unit>
+                  <cd:NativeType>double</cd:NativeType>
+                </cd:Float>
+              </cd:Type>
+            </cd:Field>
+            <cd:Field name="Error_Quantifiers">
+              <cd:Record namexml="Error_Quantifiers">
+                <cd:Description>Error Quantifiers</cd:Description>
+                <cd:Field name="Mie_Error_Quantifier_K1">
+                  <cd:Type namexml="Mie_Error_Quantifier_K1">
+                    <cd:Float format="ascii">
+                      <cd:Description>Mie Error Quantifier K1</cd:Description>
+                      <cd:NativeType>double</cd:NativeType>
+                    </cd:Float>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="Mie_Error_Quantifier_K2">
+                  <cd:Type namexml="Mie_Error_Quantifier_K2">
+                    <cd:Attribute name="unit">
+                      <cd:Optional/>
+                      <cd:FixedValue>PixelIntensity</cd:FixedValue>
+                    </cd:Attribute>
+                    <cd:Float format="ascii">
+                      <cd:Description>Mie Error Quantifier K2</cd:Description>
+                      <cd:NativeType>double</cd:NativeType>
+                    </cd:Float>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="Mie_Error_Quantifier_K3">
+                  <cd:Type namexml="Mie_Error_Quantifier_K3">
+                    <cd:Float format="ascii">
+                      <cd:Description>Mie Error Quantifier K3</cd:Description>
+                      <cd:NativeType>double</cd:NativeType>
+                    </cd:Float>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="Rayleigh_Error_Quantifier_Ka2">
+                  <cd:Type namexml="Rayleigh_Error_Quantifier_Ka2">
+                    <cd:Attribute name="unit">
+                      <cd:Optional/>
+                      <cd:FixedValue>PixelIntensity</cd:FixedValue>
+                    </cd:Attribute>
+                    <cd:Float format="ascii">
+                      <cd:Description>Rayleigh Error Quantifier Ka2</cd:Description>
+                      <cd:NativeType>double</cd:NativeType>
+                    </cd:Float>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="Rayleigh_Error_Quantifier_Ka3">
+                  <cd:Type namexml="Rayleigh_Error_Quantifier_Ka3">
+                    <cd:Float format="ascii">
+                      <cd:Description>Rayleigh Error Quantifier Ka3</cd:Description>
+                      <cd:NativeType>double</cd:NativeType>
+                    </cd:Float>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="Rayleigh_Error_Quantifier_Kb2">
+                  <cd:Type namexml="Rayleigh_Error_Quantifier_Kb2">
+                    <cd:Attribute name="unit">
+                      <cd:Optional/>
+                      <cd:FixedValue>PixelIntensity</cd:FixedValue>
+                    </cd:Attribute>
+                    <cd:Float format="ascii">
+                      <cd:Description>Rayleigh Error Quantifier Kb2</cd:Description>
+                      <cd:NativeType>double</cd:NativeType>
+                    </cd:Float>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="Rayleigh_Error_Quantifier_Kb3">
+                  <cd:Type namexml="Rayleigh_Error_Quantifier_Kb3">
+                    <cd:Float format="ascii">
+                      <cd:Description>Rayleigh Error Quantifier Kb3</cd:Description>
+                      <cd:NativeType>double</cd:NativeType>
+                    </cd:Float>
+                  </cd:Type>
+                </cd:Field>
+              </cd:Record>
+            </cd:Field>
+            <cd:Field name="Roll_Error">
+              <cd:Type namexml="Roll_Error">
+                <cd:Attribute name="unit">
+                  <cd:Optional/>
+                  <cd:FixedValue>degrees</cd:FixedValue>
+                </cd:Attribute>
+                <cd:Float format="ascii">
+                  <cd:Description>Roll Error</cd:Description>
+                  <cd:Unit>degrees</cd:Unit>
+                  <cd:NativeType>double</cd:NativeType>
+                </cd:Float>
+              </cd:Type>
+            </cd:Field>
+            <cd:Field name="Pitch_Error">
+              <cd:Type namexml="Pitch_Error">
+                <cd:Attribute name="unit">
+                  <cd:Optional/>
+                  <cd:FixedValue>degrees</cd:FixedValue>
+                </cd:Attribute>
+                <cd:Float format="ascii">
+                  <cd:Description>Pitch Error</cd:Description>
+                  <cd:Unit>degrees</cd:Unit>
+                  <cd:NativeType>double</cd:NativeType>
+                </cd:Float>
+              </cd:Type>
+            </cd:Field>
+            <cd:Field name="List_of_Tripod_Obscuration_Corrections">
+              <cd:Record namexml="List_of_Tripod_Obscuration_Corrections">
+                <cd:Description>Table listing the 16 Telescope Tripod Obscuration corrections</cd:Description>
+                <cd:Attribute name="count">
+                </cd:Attribute>
+                <cd:Field name="Tripod_Obscuration_Correction">
+                  <cd:Array>
+                    <cd:Dimension/>
+                    <cd:Type namexml="Tripod_Obscuration_Correction">
+                      <cd:Float format="ascii">
+                        <cd:Description>Telescope Tripod Obscuration correction for one column</cd:Description>
+                        <cd:NativeType>double</cd:NativeType>
+                      </cd:Float>
+                    </cd:Type>
+                    <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                  </cd:Array>
+                </cd:Field>
+              </cd:Record>
+            </cd:Field>
+            <cd:Field name="Laser_Pulse_Time_Delays">
+              <cd:Record namexml="Laser_Pulse_Time_Delays">
+                <cd:Description>Laser pulse time delays</cd:Description>
+                <cd:Field name="Delay_Dt1_Offset">
+                  <cd:Type namexml="Delay_Dt1_Offset">
+                    <cd:Attribute name="unit">
+                      <cd:Optional/>
+                      <cd:FixedValue>TMC</cd:FixedValue>
+                    </cd:Attribute>
+                    <cd:Float format="ascii">
+                      <cd:Description>Offset in TMC used to calculate DT1 delay, as defined in the Transfer Curve Document. It corresponds to the delay of the output signal if the minimun dt is programmed (0ms)</cd:Description>
+                      <cd:NativeType>double</cd:NativeType>
+                    </cd:Float>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="Delay_Dt2_Offset">
+                  <cd:Type namexml="Delay_Dt2_Offset">
+                    <cd:Attribute name="unit">
+                      <cd:Optional/>
+                      <cd:FixedValue>TMC</cd:FixedValue>
+                    </cd:Attribute>
+                    <cd:Float format="ascii">
+                      <cd:Description>Offset in TMC used to calculate DT2 delay, as defined in the Transfer Curve Document. It corresponds to the delay of the output signal if the minimun dt is programmed (0ms)</cd:Description>
+                      <cd:NativeType>double</cd:NativeType>
+                    </cd:Float>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="Delay_Dt3_Fixed_Offset">
+                  <cd:Type namexml="Delay_Dt3_Fixed_Offset">
+                    <cd:Attribute name="unit">
+                      <cd:Optional/>
+                      <cd:FixedValue>TMC</cd:FixedValue>
+                    </cd:Attribute>
+                    <cd:Float format="ascii">
+                      <cd:Description>Offset in TMC used to calculate DT3_Fixed delay, as defined in the Transfer Curve Document. It corresponds to the delay of the output signal if the minimun dt is programmed (0ms)</cd:Description>
+                      <cd:NativeType>double</cd:NativeType>
+                    </cd:Float>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="Delay_Dt3_Variable_Offset">
+                  <cd:Type namexml="Delay_Dt3_Variable_Offset">
+                    <cd:Attribute name="unit">
+                      <cd:Optional/>
+                      <cd:FixedValue>TMC</cd:FixedValue>
+                    </cd:Attribute>
+                    <cd:Float format="ascii">
+                      <cd:Description>Offset in TMC used to calculate DT3_Variable delay, as defined in the Transfer Curve Document. It corresponds to the delay of the output signal if the minimun dt is programmed (0ms)</cd:Description>
+                      <cd:NativeType>double</cd:NativeType>
+                    </cd:Float>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="Delay_Dt4_Offset">
+                  <cd:Type namexml="Delay_Dt4_Offset">
+                    <cd:Attribute name="unit">
+                      <cd:Optional/>
+                      <cd:FixedValue>TMC</cd:FixedValue>
+                    </cd:Attribute>
+                    <cd:Float format="ascii">
+                      <cd:Description>Offset in TMC used to calculate DT4 delay, as defined in the Transfer Curve Document. It corresponds to the delay of the output signal if the minimun dt is programmed (0ms)</cd:Description>
+                      <cd:NativeType>double</cd:NativeType>
+                    </cd:Float>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="Delay_Dt5_Offset">
+                  <cd:Type namexml="Delay_Dt5_Offset">
+                    <cd:Attribute name="unit">
+                      <cd:Optional/>
+                      <cd:FixedValue>TMC</cd:FixedValue>
+                    </cd:Attribute>
+                    <cd:Float format="ascii">
+                      <cd:Description>Offset in TMC used to calculate DT5 delay, as defined in the Transfer Curve Document. It corresponds to the delay of the output signal if the minimun dt is programmed (0ms)</cd:Description>
+                      <cd:NativeType>double</cd:NativeType>
+                    </cd:Float>
+                  </cd:Type>
+                </cd:Field>
+              </cd:Record>
+            </cd:Field>
+            <cd:Field name="List_of_Rayleigh_Linearity_Corrections">
+              <cd:Record namexml="List_of_Rayleigh_Linearity_Corrections">
+                <cd:Description>Table listing up to 65536 Rayleigh Linearity Corrections</cd:Description>
+                <cd:Attribute name="count">
+                </cd:Attribute>
+                <cd:Field name="Rayleigh_Linearity_Correction">
+                  <cd:Array>
+                    <cd:Dimension/>
+                    <cd:Record namexml="Rayleigh_Linearity_Correction">
+                      <cd:Field name="RLC_Index">
+                        <cd:Type namexml="RLC_Index">
+                          <cd:Integer format="ascii">
+                            <cd:Description>Rayleigh Linearity Correction index</cd:Description>
+                            <cd:NativeType>uint16</cd:NativeType>
+                          </cd:Integer>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="RLC_Value">
+                        <cd:Type namexml="RLC_Value">
+                          <cd:Float format="ascii">
+                            <cd:Description>Rayleigh Linearity Correction value</cd:Description>
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                      </cd:Field>
+                    </cd:Record>
+                    <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                  </cd:Array>
+                </cd:Field>
+              </cd:Record>
+            </cd:Field>
+            <cd:Field name="Aisp_Default_Parameters">
+              <cd:Record namexml="Aisp_Default_Parameters">
+                <cd:Description>Default values for unused Aisp parameters</cd:Description>
+                <cd:Field name="Source_Packet_Header">
+                  <cd:Record namexml="Source_Packet_Header">
+                    <cd:Field name="Version_Num">
+                      <cd:Type namexml="Version_Num">
+                        <cd:Integer format="ascii">
+                          <cd:Description>Version number</cd:Description>
+                          <cd:NativeType>int16</cd:NativeType>
+                        </cd:Integer>
+                      </cd:Type>
+                    </cd:Field>
+                    <cd:Field name="Sp_Type">
+                      <cd:Type namexml="Sp_Type">
+                        <cd:Integer format="ascii">
+                          <cd:Description>Source Packet Type</cd:Description>
+                          <cd:NativeType>int16</cd:NativeType>
+                        </cd:Integer>
+                      </cd:Type>
+                    </cd:Field>
+                    <cd:Field name="Data_Field_Header_Flag">
+                      <cd:Type namexml="Data_Field_Header_Flag">
+                        <cd:Integer format="ascii">
+                          <cd:Description>Data Field Header Flag</cd:Description>
+                          <cd:NativeType>int16</cd:NativeType>
+                        </cd:Integer>
+                      </cd:Type>
+                    </cd:Field>
+                    <cd:Field name="Application_Process_Id">
+                      <cd:Type namexml="Application_Process_Id">
+                        <cd:Integer format="ascii">
+                          <cd:Description>Application Process Identifier</cd:Description>
+                          <cd:NativeType>int16</cd:NativeType>
+                        </cd:Integer>
+                      </cd:Type>
+                    </cd:Field>
+                    <cd:Field name="Process_Category">
+                      <cd:Type namexml="Process_Category">
+                        <cd:Integer format="ascii">
+                          <cd:Description>Process Category</cd:Description>
+                          <cd:NativeType>int16</cd:NativeType>
+                        </cd:Integer>
+                      </cd:Type>
+                    </cd:Field>
+                    <cd:Field name="Sequence_Flags">
+                      <cd:Type namexml="Sequence_Flags">
+                        <cd:Integer format="ascii">
+                          <cd:Description>Sequence Flags</cd:Description>
+                          <cd:NativeType>int16</cd:NativeType>
+                        </cd:Integer>
+                      </cd:Type>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+                <cd:Field name="Data_Field_Header">
+                  <cd:Record namexml="Data_Field_Header">
+                    <cd:Field name="Secondary_Header_Flag">
+                      <cd:Type namexml="Secondary_Header_Flag">
+                        <cd:Integer format="ascii">
+                          <cd:Description>SP Secondary header flag</cd:Description>
+                          <cd:NativeType>int16</cd:NativeType>
+                        </cd:Integer>
+                      </cd:Type>
+                    </cd:Field>
+                    <cd:Field name="Pus_Version">
+                      <cd:Type namexml="Pus_Version">
+                        <cd:Integer format="ascii">
+                          <cd:Description>Indicates the availability of the Packet Error Control Field</cd:Description>
+                          <cd:NativeType>int16</cd:NativeType>
+                        </cd:Integer>
+                      </cd:Type>
+                    </cd:Field>
+                    <cd:Field name="Ack_N">
+                      <cd:Type namexml="Ack_N">
+                        <cd:Integer format="ascii">
+                          <cd:Description>Ack_N</cd:Description>
+                          <cd:NativeType>int16</cd:NativeType>
+                        </cd:Integer>
+                      </cd:Type>
+                    </cd:Field>
+                    <cd:Field name="Service_Type">
+                      <cd:Type namexml="Service_Type">
+                        <cd:Integer format="ascii">
+                          <cd:Description>Service type</cd:Description>
+                          <cd:NativeType>int16</cd:NativeType>
+                        </cd:Integer>
+                      </cd:Type>
+                    </cd:Field>
+                    <cd:Field name="Source_Id">
+                      <cd:Type namexml="Source_Id">
+                        <cd:Integer format="ascii">
+                          <cd:Description>SP Source Identifier</cd:Description>
+                          <cd:NativeType>int16</cd:NativeType>
+                        </cd:Integer>
+                      </cd:Type>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+              </cd:Record>
+            </cd:Field>
+            <cd:Field name="Height_Rayleigh_Bin_1">
+              <cd:Type namexml="Height_Rayleigh_Bin_1">
+                <cd:Attribute name="unit">
+                  <cd:Optional/>
+                  <cd:FixedValue>kilometers</cd:FixedValue>
+                </cd:Attribute>
+                <cd:Float format="ascii">
+                  <cd:Description>Altitude of upper edge of highest Raleigh sample bin (SP_VS_R)</cd:Description>
+                  <cd:Unit>km</cd:Unit>
+                  <cd:NativeType>double</cd:NativeType>
+                </cd:Float>
+              </cd:Type>
+            </cd:Field>
+            <cd:Field name="d2">
+              <cd:Type namexml="d2">
+                <cd:Attribute name="unit">
+                  <cd:Optional/>
+                  <cd:FixedValue>milliseconds</cd:FixedValue>
+                </cd:Attribute>
+                <cd:Float format="ascii">
+                  <cd:Description>Aladin internal delay in milliseconds</cd:Description>
+                  <cd:Unit>ms</cd:Unit>
+                  <cd:NativeType>double</cd:NativeType>
+                </cd:Float>
+              </cd:Type>
+            </cd:Field>
+            <cd:Field name="Del_2_M">
+              <cd:Type namexml="Del_2_M">
+                <cd:Attribute name="unit">
+                  <cd:Optional/>
+                  <cd:FixedValue>milliseconds</cd:FixedValue>
+                </cd:Attribute>
+                <cd:Float format="ascii">
+                  <cd:Description>Fixed delay in milliseconds before the effective first layer starting point for Rayleigh Channel</cd:Description>
+                  <cd:Unit>ms</cd:Unit>
+                  <cd:NativeType>double</cd:NativeType>
+                </cd:Float>
+              </cd:Type>
+            </cd:Field>
+            <cd:Field name="Del_2_R">
+              <cd:Type namexml="Del_2_R">
+                <cd:Attribute name="unit">
+                  <cd:Optional/>
+                  <cd:FixedValue>milliseconds</cd:FixedValue>
+                </cd:Attribute>
+                <cd:Float format="ascii">
+                  <cd:Description>Fixed delay in milliseconds before the effective first layer starting point for Mie Channel</cd:Description>
+                  <cd:Unit>ms</cd:Unit>
+                  <cd:NativeType>double</cd:NativeType>
+                </cd:Float>
+              </cd:Type>
+            </cd:Field>
+            <cd:Field name="Velocity_Offset">
+              <cd:Type namexml="Velocity_Offset">
+                <cd:Attribute name="unit">
+                  <cd:Optional/>
+                  <cd:FixedValue>meters/second</cd:FixedValue>
+                </cd:Attribute>
+                <cd:Float format="ascii">
+                  <cd:Description>Commanded Doppler velocity offset</cd:Description>
+                  <cd:Unit>m/s</cd:Unit>
+                  <cd:NativeType>double</cd:NativeType>
+                </cd:Float>
+              </cd:Type>
+            </cd:Field>
+            <cd:Field name="Scan_Limit">
+              <cd:Type namexml="Scan_Limit">
+                <cd:Attribute name="unit">
+                  <cd:Optional/>
+                  <cd:FixedValue>degrees</cd:FixedValue>
+                </cd:Attribute>
+                <cd:Float format="ascii">
+                  <cd:Description>Off-nadir angle below which the yaw steering shall be switched off</cd:Description>
+                  <cd:Unit>degrees</cd:Unit>
+                  <cd:NativeType>double</cd:NativeType>
+                </cd:Float>
+              </cd:Type>
+            </cd:Field>
+            <cd:Field name="Nominal_Scan_Angle">
+              <cd:Type namexml="Nominal_Scan_Angle">
+                <cd:Attribute name="unit">
+                  <cd:Optional/>
+                  <cd:FixedValue>degrees</cd:FixedValue>
+                </cd:Attribute>
+                <cd:Float format="ascii">
+                  <cd:Description>Nominal pointing of the satellite</cd:Description>
+                  <cd:Unit>degrees</cd:Unit>
+                  <cd:NativeType>double</cd:NativeType>
+                </cd:Float>
+              </cd:Type>
+            </cd:Field>
+            <cd:Field name="NF_Order">
+              <cd:Type namexml="NF_Order">
+                <cd:Integer format="ascii">
+                  <cd:Description>Number of Fourier terms used in the Harmonic Bias Estimation (NF). The A and B coefficient lists for both Mie and Rayleigh below must be NF_Order+1 elements in size</cd:Description>
+                  <cd:NativeType>uint32</cd:NativeType>
+                </cd:Integer>
+              </cd:Type>
+            </cd:Field>
+            <cd:Field name="List_of_Mie_Harmonic_Bias_Coefficient_As">
+              <cd:Record namexml="List_of_Mie_Harmonic_Bias_Coefficient_As">
+                <cd:Description>It should include at least NF+1 elements. NF represents the number of Fourier terms. The maximum size NF+1 of this array is 1024</cd:Description>
+                <cd:Attribute name="count">
+                </cd:Attribute>
+                <cd:Field name="Mie_Harmonic_Bias_Coefficient_A">
+                  <cd:Array>
+                    <cd:Dimension/>
+                    <cd:Type namexml="Mie_Harmonic_Bias_Coefficient_A">
+                      <cd:Float format="ascii">
+                        <cd:Description>Coefficent A in the Harmonic Bias Estimation using Fourier transform based interpolation</cd:Description>
+                        <cd:NativeType>double</cd:NativeType>
+                      </cd:Float>
+                    </cd:Type>
+                    <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                  </cd:Array>
+                </cd:Field>
+              </cd:Record>
+            </cd:Field>
+            <cd:Field name="List_of_Mie_Harmonic_Bias_Coefficient_Bs">
+              <cd:Record namexml="List_of_Mie_Harmonic_Bias_Coefficient_Bs">
+                <cd:Description>It should include at least NF+1 elements. NF represents the number of Fourier terms. The maximum size NF+1 of this array is 1024. Note that the first B coefficient in this array (i.e. b_0) is not used by the L1bP. This is done so that the A and B coefficient arrays are both the same size. Only the last NF coefficients are used in the B coefficient array (for A, all NF+1 coefficients are used)</cd:Description>
+                <cd:Attribute name="count">
+                </cd:Attribute>
+                <cd:Field name="Mie_Harmonic_Bias_Coefficient_B">
+                  <cd:Array>
+                    <cd:Dimension/>
+                    <cd:Type namexml="Mie_Harmonic_Bias_Coefficient_B">
+                      <cd:Float format="ascii">
+                        <cd:Description>Coefficent B in the Harmonic Bias Estimation using Fourier transform based interpolation</cd:Description>
+                        <cd:NativeType>double</cd:NativeType>
+                      </cd:Float>
+                    </cd:Type>
+                    <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                  </cd:Array>
+                </cd:Field>
+              </cd:Record>
+            </cd:Field>
+            <cd:Field name="List_of_Ray_Harmonic_Bias_Coefficient_As">
+              <cd:Record namexml="List_of_Ray_Harmonic_Bias_Coefficient_As">
+                <cd:Description>It should include at least NF+1 elements. NF represents the number of Fourier terms. The maximum size NF+1 of this array is 1024</cd:Description>
+                <cd:Attribute name="count">
+                </cd:Attribute>
+                <cd:Field name="Ray_Harmonic_Bias_Coefficient_A">
+                  <cd:Array>
+                    <cd:Dimension/>
+                    <cd:Type namexml="Ray_Harmonic_Bias_Coefficient_A">
+                      <cd:Float format="ascii">
+                        <cd:Description>Coefficent A in the Harmonic Bias Estimation using Fourier transform based interpolation</cd:Description>
+                        <cd:NativeType>double</cd:NativeType>
+                      </cd:Float>
+                    </cd:Type>
+                    <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                  </cd:Array>
+                </cd:Field>
+              </cd:Record>
+            </cd:Field>
+            <cd:Field name="List_of_Ray_Harmonic_Bias_Coefficient_Bs">
+              <cd:Record namexml="List_of_Ray_Harmonic_Bias_Coefficient_Bs">
+                <cd:Description>It should include at least NF+1 elements. NF represents the number of Fourier terms.  The maximum size NF+1 of this array is 1024. Note that the first B coefficient in this array (i.e. b_0) is not used by the L1bP. This is done so that the A and B coefficient arrays are both the same size. Only the last NF coefficients are used in the B coefficient array (for A, all NF+1 coefficients are used)</cd:Description>
+                <cd:Attribute name="count">
+                </cd:Attribute>
+                <cd:Field name="Ray_Harmonic_Bias_Coefficient_B">
+                  <cd:Array>
+                    <cd:Dimension/>
+                    <cd:Type namexml="Ray_Harmonic_Bias_Coefficient_B">
+                      <cd:Float format="ascii">
+                        <cd:Description>Coefficent B in the Harmonic Bias Estimation using Fourier transform based interpolation</cd:Description>
+                        <cd:NativeType>double</cd:NativeType>
+                      </cd:Float>
+                    </cd:Type>
+                    <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                  </cd:Array>
+                </cd:Field>
+              </cd:Record>
+            </cd:Field>
+          </cd:Record>
+          <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+        </cd:Array>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+</cd:Record>

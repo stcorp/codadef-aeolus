@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="CCSDSOBT" last-modified="2008-07-01" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Description>CSSDS On Board Time</cd:Description>
+  <cd:Field name="seconds">
+    <cd:Integer>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="microseconds">
+    <cd:Integer>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+</cd:Record>

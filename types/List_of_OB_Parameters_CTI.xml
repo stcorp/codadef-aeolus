@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<cd:Record name="List_of_OB_Parameters_CTI" format="xml" namexml="List_of_OB_Parameters" last-modified="2008-08-03" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+  <cd:Description>List of onboard parameters. The parameters included in the list depend on file type</cd:Description>
+  <cd:Attribute name="count">
+  </cd:Attribute>
+  <cd:Field name="OB_Parameter">
+    <cd:Array>
+      <cd:Dimension/>
+      <cd:Record namexml="OB_Parameter">
+        <cd:Field name="Parameter_Name">
+          <cd:Text namexml="Parameter_Name">
+            <cd:Description>Parameter name</cd:Description>
+            <ct:NamedTest id="ParameterNameAllowed"/>
+            <ct:NamedTest id="UniqueInList"/>
+          </cd:Text>
+        </cd:Field>
+        <cd:Field name="Value_Type">
+          <cd:Text namexml="Value_Type">
+          <ct:NamedTest id="ValueTestRE"/>
+          </cd:Text>
+        </cd:Field>
+        <cd:Field name="Parameter_Value">
+          <cd:Text namexml="Parameter_Value">
+            <cd:Description>The value of the parameter</cd:Description>
+            <ct:NamedTest id="ValueTestNotZero"/>
+          </cd:Text>
+        </cd:Field>
+        <cd:Field name="Value_Unit">
+          <cd:Text namexml="Value_Unit">
+            <cd:Description>Engineering unit of the parameter</cd:Description>
+          </cd:Text>
+        </cd:Field>
+        <cd:Field name="Value_Radix">
+          <cd:Text namexml="Value_Radix">
+          <ct:NamedTest id="ValueTestDHO"/>
+          </cd:Text>
+        </cd:Field>
+        <cd:Field name="Comments">
+          <cd:Text namexml="Comments">
+            <cd:Description>Comment field, may be empty</cd:Description>
+          </cd:Text>
+        </cd:Field>
+      </cd:Record>
+      <ct:NamedTest id="CTILOSParameterSet"/>
+      <ct:NamedTest id="AtLeastOneElement"/>
+      <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+    </cd:Array>
+  </cd:Field>
+</cd:Record>

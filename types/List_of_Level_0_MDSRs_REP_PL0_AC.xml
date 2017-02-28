@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="xml" last-modified="2008-07-01" name="List_of_Level_0_MDSRs_REP_PL0_AC" namexml="List_of_Level_0_MDSRs">
+  <cd:Description>List_of_Level_0_MDSRs</cd:Description>
+  <cd:Attribute name="count">
+  </cd:Attribute>
+  <cd:Field name="Level_0_MDSR">
+    <cd:Array>
+      <cd:Dimension/>
+      <cd:Record namexml="Level_0_MDSR">
+        <cd:Description>Level 0 MDSR</cd:Description>
+        <cd:Field name="Start_of_Observation_Time">
+          <cd:Type namexml="Start_of_Observation_Time">
+            <cd:Time format="ascii" timeformat="ascii_ccsds_datetime_ymd2_with_ref">
+              <cd:Mapping string="UTC=0000-00-00T00:00:00.000000" value="-inf"/>
+              <cd:Mapping string="UTC=9999-99-99T99:99:99.999999" value="+inf"/>
+              <cd:Mapping string="" value="nan"/>
+            </cd:Time>
+          </cd:Type>
+        </cd:Field>
+        <cd:Field name="Gs_Ref_Time">
+          <cd:Type namexml="Gs_Ref_Time">
+            <cd:Time format="ascii" timeformat="ascii_ccsds_datetime_ymd2_with_ref">
+              <cd:Mapping string="UTC=0000-00-00T00:00:00.000000" value="-inf"/>
+              <cd:Mapping string="UTC=9999-99-99T99:99:99.999999" value="+inf"/>
+              <cd:Mapping string="" value="nan"/>
+            </cd:Time>
+          </cd:Type>
+        </cd:Field>
+        <cd:Field name="List_of_Source_Packet_Infos">
+          <cd:Record namexml="List_of_Source_Packet_Infos">
+            <cd:Description>List of Source Packet Infos</cd:Description>
+            <cd:Attribute name="count">
+            </cd:Attribute>
+            <cd:Field name="Source_Packet_Info">
+              <cd:Array>
+                <cd:Dimension/>
+                <cd:Record namexml="Source_Packet_Info">
+                  <cd:Field name="Num_TF_With_Crc_Error">
+                    <cd:Type namexml="Num_TF_With_Crc_Error">
+                      <cd:Integer format="ascii">
+                        <cd:NativeType>uint32</cd:NativeType>
+                      </cd:Integer>
+                    </cd:Type>
+                  </cd:Field>
+                  <cd:Field name="Num_TF_With_Rs_Correction">
+                    <cd:Type namexml="Num_TF_With_Rs_Correction">
+                      <cd:Integer format="ascii">
+                        <cd:NativeType>uint32</cd:NativeType>
+                      </cd:Integer>
+                    </cd:Type>
+                  </cd:Field>
+                  <cd:Field name="Sp_Missing">
+                    <cd:Type namexml="Sp_Missing">
+                      <cd:Integer format="ascii">
+                        <cd:NativeType>uint8</cd:NativeType>
+                        <ct:NamedTest id="BooleanBinTest"/>
+                      </cd:Integer>
+                    </cd:Type>
+                  </cd:Field>
+                  <cd:Field name="Sp_Invalid">
+                    <cd:Type namexml="Sp_Invalid">
+                      <cd:Integer format="ascii">
+                        <cd:NativeType>uint8</cd:NativeType>
+                        <ct:NamedTest id="BooleanBinTest"/>
+                      </cd:Integer>
+                    </cd:Type>
+                  </cd:Field>
+                </cd:Record>
+                <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+              </cd:Array>
+            </cd:Field>
+          </cd:Record>
+        </cd:Field>
+      </cd:Record>
+      <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+    </cd:Array>
+  </cd:Field>
+</cd:Record>

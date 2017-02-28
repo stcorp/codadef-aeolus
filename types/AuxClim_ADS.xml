@@ -1,0 +1,159 @@
+<?xml version="1.0"?>
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="binary" last-modified="2010-08-26" name="AuxClim_ADS">
+  <cd:Field name="num_datetime_ranges">
+    <cd:Integer>
+      <cd:Description>Number of DateTime ranges used by this climatology (Typical values: 3 or 12)</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="climdate">
+    <cd:Array>
+      <cd:Description>List of Num_DateTime_Ranges structures containing the climatology as a function of Latitude, Longitude and Altitude for a series of dates.</cd:Description>
+      <cd:Dimension><![CDATA[int(:/../num_datetime_ranges)]]></cd:Dimension>
+      <cd:Record>
+        <cd:Field name="startdatetime">
+          <cd:Time timeformat="binary_envisat_datetime">
+            <cd:Description>Start of timerange for which this data should be used</cd:Description>
+            <ct:NamedTest id="RangeSecond" path="seconds"/>
+            <ct:NamedTest id="RangeMicroSecond" path="microseconds"/>
+          </cd:Time>
+        </cd:Field>
+        <cd:Field name="enddatetime">
+          <cd:Time timeformat="binary_envisat_datetime">
+            <cd:Description>End of timerange for which this data should be used</cd:Description>
+            <ct:NamedTest id="RangeSecond" path="seconds"/>
+            <ct:NamedTest id="RangeMicroSecond" path="microseconds"/>
+          </cd:Time>
+        </cd:Field>
+        <cd:Field name="num_latitude_ranges">
+          <cd:Integer>
+            <cd:Description>Number of Latitude ranges used by this climatology (Typical values: 18 or 90)</cd:Description>
+            <cd:BitSize>16</cd:BitSize>
+            <cd:NativeType>int16</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="climlat">
+          <cd:Array>
+            <cd:Description>List of Num_Latitude_Ranges structures containing the climatology as a function of Longitude and Altitude for the given date and latitude.</cd:Description>
+            <cd:Dimension><![CDATA[int(:/../num_latitude_ranges)]]></cd:Dimension>
+            <cd:Record>
+              <cd:Field name="startlatitude">
+                <cd:Integer>
+                  <cd:Description>Start of latitude range for which this data should be used</cd:Description>
+                  <cd:Unit>1e-6 degrees_north</cd:Unit>
+                  <cd:Conversion denominator="1000000.000000" numerator="1.000000">
+                    <cd:Unit>degrees_north</cd:Unit>
+                  </cd:Conversion>
+                  <cd:BitSize>32</cd:BitSize>
+                  <cd:NativeType>int32</cd:NativeType>
+                </cd:Integer>
+              </cd:Field>
+              <cd:Field name="endlatitude">
+                <cd:Integer>
+                  <cd:Description>Emd of latitude range for which this data should be used</cd:Description>
+                  <cd:Unit>1e-6 degrees_north</cd:Unit>
+                  <cd:Conversion denominator="1000000.000000" numerator="1.000000">
+                    <cd:Unit>degrees_north</cd:Unit>
+                  </cd:Conversion>
+                  <cd:BitSize>32</cd:BitSize>
+                  <cd:NativeType>int32</cd:NativeType>
+                </cd:Integer>
+              </cd:Field>
+              <cd:Field name="num_longitude_ranges">
+                <cd:Integer>
+                  <cd:Description>Number of Longitude ranges used by this climatology (Typical values: 36 or 180)</cd:Description>
+                  <cd:BitSize>16</cd:BitSize>
+                  <cd:NativeType>int16</cd:NativeType>
+                </cd:Integer>
+              </cd:Field>
+              <cd:Field name="climlon">
+                <cd:Array>
+                  <cd:Description>List of Num_Longitude_Ranges structures containing the climatology as a function of Altitude for the given date, latitude and longitude.</cd:Description>
+                  <cd:Dimension><![CDATA[int(:/../num_longitude_ranges)]]></cd:Dimension>
+                  <cd:Record>
+                    <cd:Field name="startlongitude">
+                      <cd:Integer>
+                        <cd:Description>Start of longitude range for which this data should be used</cd:Description>
+                        <cd:Unit>1e-6 degrees_east</cd:Unit>
+                        <cd:Conversion denominator="1000000.000000" numerator="1.000000">
+                          <cd:Unit>degrees_east</cd:Unit>
+                        </cd:Conversion>
+                        <cd:BitSize>32</cd:BitSize>
+                        <cd:NativeType>int32</cd:NativeType>
+                      </cd:Integer>
+                    </cd:Field>
+                    <cd:Field name="endlongitude">
+                      <cd:Integer>
+                        <cd:Description>Emd of longitude range for which this data should be used</cd:Description>
+                        <cd:Unit>1e-6 degrees_east</cd:Unit>
+                        <cd:Conversion denominator="1000000.000000" numerator="1.000000">
+                          <cd:Unit>degrees_east</cd:Unit>
+                        </cd:Conversion>
+                        <cd:BitSize>32</cd:BitSize>
+                        <cd:NativeType>int32</cd:NativeType>
+                      </cd:Integer>
+                    </cd:Field>
+                    <cd:Field name="num_altitude_ranges">
+                      <cd:Integer>
+                        <cd:Description>Number of altitude ranges used by this climatology (Typical values: 4 or 10)</cd:Description>
+                        <cd:BitSize>16</cd:BitSize>
+                        <cd:NativeType>int16</cd:NativeType>
+                      </cd:Integer>
+                    </cd:Field>
+                    <cd:Field name="climalt">
+                      <cd:Array>
+                        <cd:Description>List of Num_Altitude_Ranges structures containing the climatology for the given date, latitude, longitude and altitude.</cd:Description>
+                        <cd:Dimension><![CDATA[int(:/../num_altitude_ranges)]]></cd:Dimension>
+                        <cd:Record>
+                          <cd:Field name="startaltitude">
+                            <cd:Integer>
+                              <cd:Description>Start of altitude range for which this data should be used</cd:Description>
+                              <cd:Unit>m</cd:Unit>
+                              <cd:BitSize>32</cd:BitSize>
+                              <cd:NativeType>int32</cd:NativeType>
+                            </cd:Integer>
+                          </cd:Field>
+                          <cd:Field name="endaltitude">
+                            <cd:Integer>
+                              <cd:Description>End of altitude range for which this data should be used</cd:Description>
+                              <cd:Unit>m</cd:Unit>
+                              <cd:BitSize>32</cd:BitSize>
+                              <cd:NativeType>int32</cd:NativeType>
+                            </cd:Integer>
+                          </cd:Field>
+                          <cd:Field name="s">
+                            <cd:Integer>
+                              <cd:Description>extinction-to-backscatter ratio</cd:Description>
+                              <cd:Unit>1e-3 sr</cd:Unit>
+                              <cd:Conversion denominator="1000.000000" numerator="1.000000">
+                                <cd:Unit>sr</cd:Unit>
+                              </cd:Conversion>
+                              <cd:BitSize>32</cd:BitSize>
+                              <cd:NativeType>int32</cd:NativeType>
+                            </cd:Integer>
+                          </cd:Field>
+                          <cd:Field name="s_stdev">
+                            <cd:Integer>
+                              <cd:Description>standard deviation in the reported extinction-to-backscatter ratio</cd:Description>
+                              <cd:Unit>1e-3 sr</cd:Unit>
+                              <cd:Conversion denominator="1000.000000" numerator="1.000000">
+                                <cd:Unit>sr</cd:Unit>
+                              </cd:Conversion>
+                              <cd:BitSize>32</cd:BitSize>
+                              <cd:NativeType>int32</cd:NativeType>
+                            </cd:Integer>
+                          </cd:Field>
+                        </cd:Record>
+                      </cd:Array>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Array>
+              </cd:Field>
+            </cd:Record>
+          </cd:Array>
+        </cd:Field>
+      </cd:Record>
+    </cd:Array>
+  </cd:Field>
+</cd:Record>

@@ -1,0 +1,165 @@
+<?xml version="1.0"?>
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="binary" last-modified="2014-08-18" name="Level_1B_Measurement_ADSR_04_03">
+  <cd:Field name="start_of_observation_time">
+    <cd:Time timeformat="binary_envisat_datetime">
+      <cd:Description>Satellite time at start of BRC</cd:Description>
+      <ct:NamedTest id="RangeSecond" path="seconds"/>
+      <ct:NamedTest id="RangeMicroSecond" path="microseconds"/>
+      <ct:NamedTest id="TimeNotZero"/>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="num_of_reference_pulses">
+    <cd:Integer>
+      <cd:Description>P = Number of Reference Pulses per BRC, where P ranges from 3 to 1003</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+      <ct:NamedTest id="Range3To600"/>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="spare_1">
+    <cd:Raw>
+      <cd:Description>Spare</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="mie_reference_pulse">
+    <cd:Array>
+      <cd:Description>List of coadded Mie reference pulses for the measurements. Second dimension is an array of 20 pixel values where first 2 values are the pre-pixel of the ACCD. The 16 following pixels collects the useful signals, and the last two pixels are used to correct the offset of the detection chain</cd:Description>
+      <cd:Dimension><![CDATA[int(/sph/n_max)]]></cd:Dimension>
+      <cd:Dimension>20</cd:Dimension>
+      <cd:Integer>
+        <cd:Description>pixel value</cd:Description>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="rayleigh_reference_pulse_a">
+    <cd:Array>
+      <cd:Description>List of coadded signal of Rayleigh reference pulses for channel A</cd:Description>
+      <cd:Dimension><![CDATA[int(/sph/n_max)]]></cd:Dimension>
+      <cd:Float>
+        <cd:Description>Reference pulses corrected for detection chain offset and co-added to measurement level</cd:Description>
+        <cd:BitSize>64</cd:BitSize>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="rayleigh_reference_pulse_b">
+    <cd:Array>
+      <cd:Description>List of coadded signal of Rayleigh reference pulses for channel B</cd:Description>
+      <cd:Dimension><![CDATA[int(/sph/n_max)]]></cd:Dimension>
+      <cd:Float>
+        <cd:Description>Reference pulses corrected for detection chain offset and co-added to measurement level</cd:Description>
+        <cd:BitSize>64</cd:BitSize>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="mie_measurement_data">
+    <cd:Array>
+      <cd:Description>In LiDAR mode, array of Mie spectrometer counts by 20 columns representing spatial indices. In Imaging mode, array of Mie spectrometer counts by 16 columns.</cd:Description>
+      <cd:Dimension><![CDATA[int(/sph/n_max)]]></cd:Dimension>
+      <cd:Dimension>25</cd:Dimension>
+      <cd:Dimension>20</cd:Dimension>
+      <cd:Integer>
+        <cd:Description>Spectrometer counts</cd:Description>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>int16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="mie_time_delays">
+    <cd:Record>
+      <cd:Description>Mie Time Delays</cd:Description>
+      <cd:Field name="bin_layer_integration_time">
+        <cd:Array>
+          <cd:Dimension>24</cd:Dimension>
+          <cd:Integer>
+            <cd:Description>Individual time delay for each layer (24 bins)</cd:Description>
+            <cd:BitSize>32</cd:BitSize>
+            <cd:NativeType>int32</cd:NativeType>
+          </cd:Integer>
+        </cd:Array>
+      </cd:Field>
+      <cd:Field name="background_integration_time">
+        <cd:Integer>
+          <cd:Description>Duration of background integration time</cd:Description>
+          <cd:BitSize>32</cd:BitSize>
+          <cd:NativeType>int32</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="rayleigh_time_delays">
+    <cd:Record>
+      <cd:Description>Rayleigh Time Delays</cd:Description>
+      <cd:Field name="bin_layer_integration_time">
+        <cd:Array>
+          <cd:Dimension>24</cd:Dimension>
+          <cd:Integer>
+            <cd:Description>Individual time delay for each layer (bin)</cd:Description>
+            <cd:BitSize>32</cd:BitSize>
+            <cd:NativeType>int32</cd:NativeType>
+          </cd:Integer>
+        </cd:Array>
+      </cd:Field>
+      <cd:Field name="background_integration_time">
+        <cd:Integer>
+          <cd:Description>Duration of background integration time</cd:Description>
+          <cd:BitSize>32</cd:BitSize>
+          <cd:NativeType>int32</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="measurement_validity_indicator">
+    <cd:Array>
+      <cd:Dimension><![CDATA[int(/sph/n_max)]]></cd:Dimension>
+      <cd:Record>
+        <cd:Description>Level 1B Measurement Validity Indicator</cd:Description>
+        <cd:Field name="measurement_data_present">
+          <cd:Integer>
+            <cd:Description>TRUE = Measurement data is present in BRC. SID (measurement index + 4) missing</cd:Description>
+            <cd:BitSize>8</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+            <ct:NamedTest id="BooleanBinTest"/>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="mie_measurement_sp_valid">
+          <cd:Integer>
+            <cd:Description>TRUE = Mie Measurement Source Packet Valid</cd:Description>
+            <cd:BitSize>8</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+            <ct:NamedTest id="BooleanBinTest"/>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="rayleigh_measurement_sp_valid">
+          <cd:Integer>
+            <cd:Description>TRUE = Rayleigh Measurement Source Packet Valid</cd:Description>
+            <cd:BitSize>8</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+            <ct:NamedTest id="BooleanBinTest"/>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="measurement_valid">
+          <cd:Integer>
+            <cd:Description>TRUE = if number of valid pulses is over Meas_Cavity_Lock_Status_Thresh; FALSE = otherwise</cd:Description>
+            <cd:BitSize>8</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+            <ct:NamedTest id="BooleanBinTest"/>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="spacecraft_attitude_on_target">
+          <cd:Integer>
+            <cd:Description>TRUE = AOCS status indicates the spacecraft was in a stable state during any part of the measurement, as determined by AOCS status samples (SID1) falling within measurement interval</cd:Description>
+            <cd:BitSize>8</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+            <ct:NamedTest id="BooleanBinTest"/>
+          </cd:Integer>
+        </cd:Field>
+      </cd:Record>
+    </cd:Array>
+  </cd:Field>
+</cd:Record>

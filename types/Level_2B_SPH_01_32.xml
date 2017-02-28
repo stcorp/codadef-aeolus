@@ -1,0 +1,1097 @@
+<?xml version="1.0"?>
+<cd:Record format="ascii" name="Level_2B_SPH_01_32" last-modified="2010-08-26" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Field name="sph_descriptor_title">
+    <cd:Text>
+      <cd:Description>Sph_Descriptor=</cd:Description>
+      <cd:FixedValue>Sph_Descriptor=</cd:FixedValue>
+      <cd:ByteSize>15</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="quote_1">
+    <cd:Text>
+      <cd:Description>quotation mark</cd:Description>
+      <cd:FixedValue>"</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="sph_descriptor">
+    <cd:Text>
+      <cd:Description>"AEOLUS_L2B_SPECIFIC_HEADER" (SPH descriptor ASCII string describing the product.)</cd:Description>
+      <cd:FixedValue>AEOLUS_L2B_SPECIFIC_HEADER  </cd:FixedValue>
+      <cd:ByteSize>28</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="quote_2">
+    <cd:Text>
+      <cd:Description>quotation mark</cd:Description>
+      <cd:FixedValue>"</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="newline_char_1">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="spare_1">
+    <cd:Text>
+      <cd:Description>Spare</cd:Description>
+      <cd:ByteSize>40</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="newline_char_2">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="num_brc_title">
+    <cd:Text>
+      <cd:Description>Num_BRC=</cd:Description>
+      <cd:FixedValue>Num_BRC=</cd:FixedValue>
+      <cd:ByteSize>8</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="num_brc">
+    <cd:Integer>
+      <cd:Description>Number of BRCs in the product. This is also the number of Data Set Records in the Measurement Data Sets as there is systematically one DSR for each BRC</cd:Description>
+      <cd:ByteSize>6</cd:ByteSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_char_3">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="intersect_start_lat_title">
+    <cd:Text>
+      <cd:Description>Intersect_Start_Lat=</cd:Description>
+      <cd:FixedValue>Intersect_Start_Lat=</cd:FixedValue>
+      <cd:ByteSize>20</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="intersect_start_lat">
+    <cd:Integer>
+      <cd:Description>Latitude of the intersection of WGS84 DEM and the satellite line-of-sight for the first measurement (first measurement centroid time of the first BRC)</cd:Description>
+      <cd:Unit>1e-6 degrees_north</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+        <cd:Unit>degrees_north</cd:Unit>
+      </cd:Conversion>
+      <cd:ByteSize>11</cd:ByteSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="intersect_start_lat_units">
+    <cd:Text>
+      <cd:FixedValue>\07410-6DegN\076</cd:FixedValue>
+      <cd:ByteSize>10</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="newline_char_4">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="intersect_start_long_title">
+    <cd:Text>
+      <cd:Description>Intersect_Start_Long=</cd:Description>
+      <cd:FixedValue>Intersect_Start_Long=</cd:FixedValue>
+      <cd:ByteSize>21</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="intersect_start_long">
+    <cd:Integer>
+      <cd:Description>Latitude of the intersection of WGS84 DEM and the satellite line-of-sight for the first measurement (first measurement centroid time of the first BRC)</cd:Description>
+      <cd:Unit>1e-6 degrees_east</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+        <cd:Unit>degrees_east</cd:Unit>
+      </cd:Conversion>
+      <cd:ByteSize>11</cd:ByteSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="intersect_start_long_units">
+    <cd:Text>
+      <cd:FixedValue>\07410-6DegE\076</cd:FixedValue>
+      <cd:ByteSize>10</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="newline_char_5">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="intersect_stop_lat_title">
+    <cd:Text>
+      <cd:Description>Intersect_Stop_Lat=</cd:Description>
+      <cd:FixedValue>Intersect_Stop_Lat=</cd:FixedValue>
+      <cd:ByteSize>19</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="intersect_stop_lat">
+    <cd:Integer>
+      <cd:Description>Latitude of the intersection of WGS84 DEM and the satellite line-of-sight for the last measurement (last measurement centroid time of the last BRC)</cd:Description>
+      <cd:Unit>1e-6 degrees_north</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+        <cd:Unit>degrees_north</cd:Unit>
+      </cd:Conversion>
+      <cd:ByteSize>11</cd:ByteSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="intersect_stop_lat_units">
+    <cd:Text>
+      <cd:FixedValue>\07410-6DegN\076</cd:FixedValue>
+      <cd:ByteSize>10</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="newline_char_6">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="intersect_stop_long_title">
+    <cd:Text>
+      <cd:Description>Intersect_Stop_Long=</cd:Description>
+      <cd:FixedValue>Intersect_Stop_Long=</cd:FixedValue>
+      <cd:ByteSize>20</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="intersect_stop_long">
+    <cd:Integer>
+      <cd:Description>Latitude of the intersection of WGS84 DEM and the satellite line-of-sight for the last measurement (last measurement centroid time of the last BRC)</cd:Description>
+      <cd:Unit>1e-6 degrees_east</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+        <cd:Unit>degrees_east</cd:Unit>
+      </cd:Conversion>
+      <cd:ByteSize>11</cd:ByteSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="stop_long_units">
+    <cd:Text>
+      <cd:FixedValue>\07410-6DegE\076</cd:FixedValue>
+      <cd:ByteSize>10</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="newline_char_7">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="sat_track_title">
+    <cd:Text>
+      <cd:Description>Sat_Track=</cd:Description>
+      <cd:FixedValue>Sat_Track=</cd:FixedValue>
+      <cd:ByteSize>10</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="sat_track">
+    <cd:Float>
+      <cd:Description>Sub-satellite track heading at the Sensing Start time in the MPH</cd:Description>
+      <cd:Unit>degrees</cd:Unit>
+      <cd:ByteSize>11</cd:ByteSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="sat_track_units">
+    <cd:Text>
+      <cd:FixedValue>\074deg\076</cd:FixedValue>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="newline_char_8">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="spare_2">
+    <cd:Text>
+      <cd:Description>Spare</cd:Description>
+      <cd:ByteSize>40</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="newline_char_9">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="m_mie_title">
+    <cd:Text>
+      <cd:Description>M_Mie=</cd:Description>
+      <cd:FixedValue>M_Mie=</cd:FixedValue>
+      <cd:ByteSize>6</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="m_mie">
+    <cd:Integer>
+      <cd:Description>Maximum number of Mie profiles reserved for all the DSR in the file</cd:Description>
+      <cd:ByteSize>4</cd:ByteSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_char_10">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="m_rayleigh_title">
+    <cd:Text>
+      <cd:Description>M_Rayleigh=</cd:Description>
+      <cd:FixedValue>M_Rayleigh=</cd:FixedValue>
+      <cd:ByteSize>11</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="m_rayleigh">
+    <cd:Integer>
+      <cd:Description>Maximum number of Rayleigh profiles reserved for all the DSR in the file</cd:Description>
+      <cd:ByteSize>4</cd:ByteSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_char_11">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="m_meas_title">
+    <cd:Text>
+      <cd:Description>M_Meas=</cd:Description>
+      <cd:FixedValue>M_Meas=</cd:FixedValue>
+      <cd:ByteSize>7</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="m_meas">
+    <cd:Integer>
+      <cd:Description>Maximum number of measurements reserved for all measurement-level information in each DSR in the file</cd:Description>
+      <cd:ByteSize>4</cd:ByteSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_char_12">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="num_valid_mie_profiles_title">
+    <cd:Text>
+      <cd:Description>Num_Valid_Mie_Profiles=</cd:Description>
+      <cd:FixedValue>Num_Valid_Mie_Profiles=</cd:FixedValue>
+      <cd:ByteSize>23</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="num_valid_mie_profiles">
+    <cd:Integer>
+      <cd:Description>Number of valid Mie profiles. Beware, this number can be less than, or greater than the number of BRCs. This second option may happen when a discrimination is done in a BRC between e.g. cloudy and clear scenes and two independent profiles are produced</cd:Description>
+      <cd:ByteSize>6</cd:ByteSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_char_13">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="num_valid_rayleigh_profiles_title">
+    <cd:Text>
+      <cd:Description>Num_Valid_Rayleigh_Profiles=</cd:Description>
+      <cd:FixedValue>Num_Valid_Rayleigh_Profiles=</cd:FixedValue>
+      <cd:ByteSize>28</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="num_valid_rayleigh_profiles">
+    <cd:Integer>
+      <cd:Description>Number of valid Rayleigh profiles. Beware, this number can be less than, or greater than the number of BRCs. This second option may happen when a discrimination is done in a BRC between e.g. cloudy and clear scenes and two independent profiles are produced</cd:Description>
+      <cd:ByteSize>6</cd:ByteSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_char_14">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="num_clear_mie_profiles_title">
+    <cd:Text>
+      <cd:Description>Num_Clear_Mie_Profiles=</cd:Description>
+      <cd:FixedValue>Num_Clear_Mie_Profiles=</cd:FixedValue>
+      <cd:ByteSize>23</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="num_clear_mie_profiles">
+    <cd:Integer>
+      <cd:Description>Number of clear (no cloud) Mie profiles</cd:Description>
+      <cd:ByteSize>6</cd:ByteSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_char_15">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="num_clear_rayleigh_profiles_title">
+    <cd:Text>
+      <cd:Description>Num_Clear_Rayleigh_Profiles=</cd:Description>
+      <cd:FixedValue>Num_Clear_Rayleigh_Profiles=</cd:FixedValue>
+      <cd:ByteSize>28</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="num_clear_rayleigh_profiles">
+    <cd:Integer>
+      <cd:Description>Number of clear (no cloud) Rayleigh profiles</cd:Description>
+      <cd:ByteSize>6</cd:ByteSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_char_16">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="num_cloud_mie_profiles_title">
+    <cd:Text>
+      <cd:Description>Num_Cloud_Mie_Profiles=</cd:Description>
+      <cd:FixedValue>Num_Cloud_Mie_Profiles=</cd:FixedValue>
+      <cd:ByteSize>23</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="num_cloud_mie_profiles">
+    <cd:Integer>
+      <cd:Description>Number of cloudy Mie profiles</cd:Description>
+      <cd:ByteSize>6</cd:ByteSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_char_17">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="num_cloud_rayleigh_profiles_title">
+    <cd:Text>
+      <cd:Description>Num_Cloud_Rayleigh_Profiles=</cd:Description>
+      <cd:FixedValue>Num_Cloud_Rayleigh_Profiles=</cd:FixedValue>
+      <cd:ByteSize>28</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="num_cloud_rayleigh_profiles">
+    <cd:Integer>
+      <cd:Description>Number of cloudy Rayleigh profiles</cd:Description>
+      <cd:ByteSize>6</cd:ByteSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_char_18">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="num_mie_prof_warm_pulses_title">
+    <cd:Text>
+      <cd:Description>Num_Mie_Prof_Warm_Pulses=</cd:Description>
+      <cd:FixedValue>Num_Mie_Prof_Warm_Pulses=</cd:FixedValue>
+      <cd:ByteSize>25</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="num_mie_prof_warm_pulses">
+    <cd:Integer>
+      <cd:Description>Number of Mie profiles using warm-up pulses</cd:Description>
+      <cd:ByteSize>6</cd:ByteSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_char_19">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="num_rayleigh_prof_warm_pulses_title">
+    <cd:Text>
+      <cd:Description>Num_Rayleigh_Prof_Warm_Pulses=</cd:Description>
+      <cd:FixedValue>Num_Rayleigh_Prof_Warm_Pulses=</cd:FixedValue>
+      <cd:ByteSize>30</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="num_rayleigh_prof_warm_pulses">
+    <cd:Integer>
+      <cd:Description>Number of Rayleigh profiles using warm-up pulses</cd:Description>
+      <cd:ByteSize>6</cd:ByteSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_char_20">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="num_profiles_surface_mie_title">
+    <cd:Text>
+      <cd:Description>Num_Profiles_Surface_Mie=</cd:Description>
+      <cd:FixedValue>Num_Profiles_Surface_Mie=</cd:FixedValue>
+      <cd:ByteSize>25</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="num_profiles_surface_mie">
+    <cd:Integer>
+      <cd:Description>Number of Mie profiles reported in L2B extending down to the surface</cd:Description>
+      <cd:ByteSize>6</cd:ByteSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_char_21">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="num_profiles_surface_ray_title">
+    <cd:Text>
+      <cd:Description>Num_Profiles_Surface_Ray=</cd:Description>
+      <cd:FixedValue>Num_Profiles_Surface_Ray=</cd:FixedValue>
+      <cd:ByteSize>25</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="num_profiles_surface_ray">
+    <cd:Integer>
+      <cd:Description>Number of Rayleigh profiles reported in L2B extending down to the surface</cd:Description>
+      <cd:ByteSize>6</cd:ByteSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_char_22">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="num_valid_obs_prof_l1b_mie_title">
+    <cd:Text>
+      <cd:Description>Num_Valid_Obs_Prof_L1B_Mie=</cd:Description>
+      <cd:FixedValue>Num_Valid_Obs_Prof_L1B_Mie=</cd:FixedValue>
+      <cd:ByteSize>27</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="num_valid_obs_prof_l1b_mie">
+    <cd:Integer>
+      <cd:Description>Number of Mie profiles flagged valid at observation level in L1B input file</cd:Description>
+      <cd:ByteSize>6</cd:ByteSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_char_23">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="num_valid_obs_prof_l1b_ray_title">
+    <cd:Text>
+      <cd:Description>Num_Valid_Obs_Prof_L1B_Ray=</cd:Description>
+      <cd:FixedValue>Num_Valid_Obs_Prof_L1B_Ray=</cd:FixedValue>
+      <cd:ByteSize>27</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="num_valid_obs_prof_l1b_ray">
+    <cd:Integer>
+      <cd:Description>Number of Rayleigh profiles flagged valid at observation level in L1B input file</cd:Description>
+      <cd:ByteSize>6</cd:ByteSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_char_24">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="num_valid_meas_prof_l1b_mie_title">
+    <cd:Text>
+      <cd:Description>Num_Valid_Meas_Prof_L1B_Mie=</cd:Description>
+      <cd:FixedValue>Num_Valid_Meas_Prof_L1B_Mie=</cd:FixedValue>
+      <cd:ByteSize>28</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="num_valid_meas_prof_l1b_mie">
+    <cd:Integer>
+      <cd:Description>Number of Mie profiles flagged valid at measurement level in L1B input file</cd:Description>
+      <cd:ByteSize>6</cd:ByteSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_char_25">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="num_valid_meas_prof_l1b_ray_title">
+    <cd:Text>
+      <cd:Description>Num_Valid_Meas_Prof_L1B_Ray=</cd:Description>
+      <cd:FixedValue>Num_Valid_Meas_Prof_L1B_Ray=</cd:FixedValue>
+      <cd:ByteSize>28</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="num_valid_meas_prof_l1b_ray">
+    <cd:Integer>
+      <cd:Description>Number of Rayleigh profiles flagged valid at measurement level in L1B input file</cd:Description>
+      <cd:ByteSize>6</cd:ByteSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_char_26">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="num_valid_obs_bins_l1b_mie_title">
+    <cd:Text>
+      <cd:Description>Num_Valid_Obs_Bins_L1B_Mie=</cd:Description>
+      <cd:FixedValue>Num_Valid_Obs_Bins_L1B_Mie=</cd:FixedValue>
+      <cd:ByteSize>27</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="num_valid_obs_bins_l1b_mie">
+    <cd:Integer>
+      <cd:Description>Number of Mie range-bins flagged valid at observation level in L1B input file</cd:Description>
+      <cd:ByteSize>6</cd:ByteSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_char_27">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="num_valid_obs_bins_l1b_ray_title">
+    <cd:Text>
+      <cd:Description>Num_Valid_Obs_Bins_L1B_Ray=</cd:Description>
+      <cd:FixedValue>Num_Valid_Obs_Bins_L1B_Ray=</cd:FixedValue>
+      <cd:ByteSize>27</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="num_valid_obs_bins_l1b_ray">
+    <cd:Integer>
+      <cd:Description>Number of Rayleigh range-bins flagged valid at observation level in L1B input file</cd:Description>
+      <cd:ByteSize>6</cd:ByteSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_char_28">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="num_valid_meas_bins_l1b_mie_title">
+    <cd:Text>
+      <cd:Description>Num_Valid_Meas_Bins_L1B_Mie=</cd:Description>
+      <cd:FixedValue>Num_Valid_Meas_Bins_L1B_Mie=</cd:FixedValue>
+      <cd:ByteSize>28</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="num_valid_meas_bins_l1b_mie">
+    <cd:Integer>
+      <cd:Description>Number of Mie range-bins flagged valid at measurement level in L1B input file</cd:Description>
+      <cd:ByteSize>6</cd:ByteSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_char_29">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="num_valid_meas_bins_l1b_ray_title">
+    <cd:Text>
+      <cd:Description>Num_Valid_Meas_Bins_L1B_Ray=</cd:Description>
+      <cd:FixedValue>Num_Valid_Meas_Bins_L1B_Ray=</cd:FixedValue>
+      <cd:ByteSize>28</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="num_valid_meas_bins_l1b_ray">
+    <cd:Integer>
+      <cd:Description>Number of Rayleigh range-bins flagged valid at measurement level in L1B input file</cd:Description>
+      <cd:ByteSize>6</cd:ByteSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_char_30">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="num_invalid_meas_prof_l1b_mie_title">
+    <cd:Text>
+      <cd:Description>Num_Invalid_Meas_Prof_L1B_Mie=</cd:Description>
+      <cd:FixedValue>Num_Invalid_Meas_Prof_L1B_Mie=</cd:FixedValue>
+      <cd:ByteSize>30</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="num_invalid_meas_prof_l1b_mie">
+    <cd:Integer>
+      <cd:Description>Number of Mie profiles flagged invalid at measurement level in L1B input file</cd:Description>
+      <cd:ByteSize>6</cd:ByteSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_char_31">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="num_invalid_meas_prof_l1b_ray_title">
+    <cd:Text>
+      <cd:Description>Num_Invalid_Meas_Prof_L1B_Ray=</cd:Description>
+      <cd:FixedValue>Num_Invalid_Meas_Prof_L1B_Ray=</cd:FixedValue>
+      <cd:ByteSize>30</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="num_invalid_meas_prof_l1b_ray">
+    <cd:Integer>
+      <cd:Description>Number of Rayleigh profiles flagged invalid at measurement level in L1B input file</cd:Description>
+      <cd:ByteSize>6</cd:ByteSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_char_32">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="num_invalid_meas_prof_l2b_mie_title">
+    <cd:Text>
+      <cd:Description>Num_Invalid_Meas_Prof_L2B_Mie=</cd:Description>
+      <cd:FixedValue>Num_Invalid_Meas_Prof_L2B_Mie=</cd:FixedValue>
+      <cd:ByteSize>30</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="num_invalid_meas_prof_l2b_mie">
+    <cd:Integer>
+      <cd:Description>Number of Mie profiles valid in L1B input file but flagged invalid at measurement level during L2B processing</cd:Description>
+      <cd:ByteSize>6</cd:ByteSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_char_33">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="num_invalid_meas_prof_l2b_ray_title">
+    <cd:Text>
+      <cd:Description>Num_Invalid_Meas_Prof_L2B_Ray=</cd:Description>
+      <cd:FixedValue>Num_Invalid_Meas_Prof_L2B_Ray=</cd:FixedValue>
+      <cd:ByteSize>30</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="num_invalid_meas_prof_l2b_ray">
+    <cd:Integer>
+      <cd:Description>Number of Rayleigh profiles valid in L1B input file but flagged invalid at measurement level during L2B processing</cd:Description>
+      <cd:ByteSize>6</cd:ByteSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_char_34">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="num_invalid_meas_bins_l1b_mie_title">
+    <cd:Text>
+      <cd:Description>Num_Invalid_Meas_Bins_L1B_Mie=</cd:Description>
+      <cd:FixedValue>Num_Invalid_Meas_Bins_L1B_Mie=</cd:FixedValue>
+      <cd:ByteSize>30</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="num_invalid_meas_bins_l1b_mie">
+    <cd:Integer>
+      <cd:Description>Number of Mie range-bins flagged invalid at measurement level in L1B input file</cd:Description>
+      <cd:ByteSize>6</cd:ByteSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_char_35">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="num_invalid_meas_bins_l1b_ray_title">
+    <cd:Text>
+      <cd:Description>Num_Invalid_Meas_Bins_L1B_Ray=</cd:Description>
+      <cd:FixedValue>Num_Invalid_Meas_Bins_L1B_Ray=</cd:FixedValue>
+      <cd:ByteSize>30</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="num_invalid_meas_bins_l1b_ray">
+    <cd:Integer>
+      <cd:Description>Number of Rayleigh range-bins flagged invalid at measurement level in L1B input file</cd:Description>
+      <cd:ByteSize>6</cd:ByteSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_char_36">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="num_invalid_meas_bins_l2b_mie_title">
+    <cd:Text>
+      <cd:Description>Num_Invalid_Meas_Bins_L2B_Mie=</cd:Description>
+      <cd:FixedValue>Num_Invalid_Meas_Bins_L2B_Mie=</cd:FixedValue>
+      <cd:ByteSize>30</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="num_invalid_meas_bins_l2b_mie">
+    <cd:Integer>
+      <cd:Description>Number of Mie range-bins valid in L1B input file but flagged invalid at measurement level during L2B processing</cd:Description>
+      <cd:ByteSize>6</cd:ByteSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_char_37">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="num_invalid_meas_bins_l2b_ray_title">
+    <cd:Text>
+      <cd:Description>Num_Invalid_Meas_Bins_L2B_Ray=</cd:Description>
+      <cd:FixedValue>Num_Invalid_Meas_Bins_L2B_Ray=</cd:FixedValue>
+      <cd:ByteSize>30</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="num_invalid_meas_bins_l2b_ray">
+    <cd:Integer>
+      <cd:Description>Number of Rayleigh range-bins valid in L1B input file but flagged invalid at measurement level during L2B processing</cd:Description>
+      <cd:ByteSize>6</cd:ByteSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_char_38">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="spare_3">
+    <cd:Text>
+      <cd:Description>Spare</cd:Description>
+      <cd:ByteSize>40</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="newline_char_39">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="num_valid_obs_l2b_mie_title">
+    <cd:Text>
+      <cd:Description>Num_Valid_Obs_L2B_Mie=</cd:Description>
+      <cd:FixedValue>Num_Valid_Obs_L2B_Mie=</cd:FixedValue>
+      <cd:ByteSize>22</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="num_valid_obs_l2b_mie">
+    <cd:Integer>
+      <cd:Description>Number of Mie observations valid in L2B file</cd:Description>
+      <cd:ByteSize>6</cd:ByteSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_char_40">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="num_valid_obs_l2b_ray_title">
+    <cd:Text>
+      <cd:Description>Num_Valid_Obs_L2B_Ray=</cd:Description>
+      <cd:FixedValue>Num_Valid_Obs_L2B_Ray=</cd:FixedValue>
+      <cd:ByteSize>22</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="num_valid_obs_l2b_ray">
+    <cd:Integer>
+      <cd:Description>Number of Rayleigh observations valid in L2B file</cd:Description>
+      <cd:ByteSize>6</cd:ByteSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_char_41">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="spare_4">
+    <cd:Text>
+      <cd:Description>Spare</cd:Description>
+      <cd:ByteSize>40</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="newline_char_42">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+</cd:Record>

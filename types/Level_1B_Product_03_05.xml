@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="Level_1B_Product_03_05" last-modified="2014-08-18" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+  <cd:Description>Level 1B Wind Measurement Product</cd:Description>
+  <cd:Field name="mph">
+    <cd:NamedType id="MPH_v1"/>
+  </cd:Field>
+  <cd:Field name="sph">
+    <cd:NamedType id="Level_1B_SPH_03_05"/>
+  </cd:Field>
+  <cd:Field name="dsd">
+    <cd:Array format="ascii">
+      <cd:Dimension><![CDATA[$num_dsd]]></cd:Dimension>
+      <cd:NamedType id="DSD"/>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="geolocation">
+    <cd:Array>
+      <cd:Description>Geolocation ADS</cd:Description>
+      <cd:Dimension><![CDATA[$num_dsr[0]]]></cd:Dimension>
+      <cd:NamedType id="Level_1B_Geolocation_ADSR_03_05"/>
+    </cd:Array>
+    <cd:Available><![CDATA[$ds_available[0] != 0]]></cd:Available>
+    <cd:BitOffset><![CDATA[$ds_offset[0]]]></cd:BitOffset>
+  </cd:Field>
+  <cd:Field name="product_confidence_data">
+    <cd:Array>
+      <cd:Description>Product Confidence Data ADS</cd:Description>
+      <cd:Dimension><![CDATA[$num_dsr[1]]]></cd:Dimension>
+      <cd:NamedType id="Level_1B_Product_Confidence_Data_ADSR_03_05"/>
+    </cd:Array>
+    <cd:Available><![CDATA[$ds_available[1] != 0]]></cd:Available>
+    <cd:BitOffset><![CDATA[$ds_offset[1]]]></cd:BitOffset>
+  </cd:Field>
+  <cd:Field name="ground_wind_detection">
+    <cd:Array>
+      <cd:Description>Ground Wind Correction ADS</cd:Description>
+      <cd:Dimension><![CDATA[$num_dsr[2]]]></cd:Dimension>
+      <cd:NamedType id="Level_1B_Ground_Wind_Detection_ADSR_03_05"/>
+    </cd:Array>
+    <cd:Available><![CDATA[$ds_available[2] != 0]]></cd:Available>
+    <cd:BitOffset><![CDATA[$ds_offset[2]]]></cd:BitOffset>
+  </cd:Field>
+  <cd:Field name="measurement">
+    <cd:Array>
+      <cd:Description>Measurement ADS</cd:Description>
+      <cd:Dimension><![CDATA[$num_dsr[3]]]></cd:Dimension>
+      <cd:NamedType id="Level_1B_Measurement_ADSR_03_05"/>
+    </cd:Array>
+    <cd:Available><![CDATA[$ds_available[3] != 0]]></cd:Available>
+    <cd:BitOffset><![CDATA[$ds_offset[3]]]></cd:BitOffset>
+  </cd:Field>
+  <cd:Field name="calibration_characterization_data">
+    <cd:Array>
+      <cd:Description>Calibration Characterization Data ADS</cd:Description>
+      <cd:Dimension><![CDATA[$num_dsr[4]]]></cd:Dimension>
+      <cd:NamedType id="Level_1B_Calibration_Characterization_Data_GADSR_03_05"/>
+    </cd:Array>
+    <cd:Available><![CDATA[$ds_available[4] != 0]]></cd:Available>
+    <cd:BitOffset><![CDATA[$ds_offset[4]]]></cd:BitOffset>
+  </cd:Field>
+  <cd:Field name="useful_signal">
+    <cd:Array>
+      <cd:Description>Useful Signal MDS</cd:Description>
+      <cd:Dimension><![CDATA[$num_dsr[5]]]></cd:Dimension>
+      <cd:NamedType id="Level_1B_Useful_Signal_MDSR"/>
+    </cd:Array>
+    <cd:Available><![CDATA[$ds_available[5] != 0]]></cd:Available>
+    <cd:BitOffset><![CDATA[$ds_offset[5]]]></cd:BitOffset>
+  </cd:Field>
+  <cd:Field name="wind_velocity">
+    <cd:Array>
+      <cd:Description>Wind Velocity MDS</cd:Description>
+      <cd:Dimension><![CDATA[$num_dsr[6]]]></cd:Dimension>
+      <cd:NamedType id="Level_1B_Wind_Velocity_MDSR_03_05"/>
+    </cd:Array>
+    <cd:Available><![CDATA[$ds_available[6] != 0]]></cd:Available>
+    <cd:BitOffset><![CDATA[$ds_offset[6]]]></cd:BitOffset>
+  </cd:Field>
+  <ct:NamedTest id="NumDataSetsLevel1B_03_05" path="mph/num_data_sets"/>
+</cd:Record>

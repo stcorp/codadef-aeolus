@@ -1,0 +1,777 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="Level_2BC_PCD_ADSR_01_32" last-modified="2008-07-01" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Field name="n_meas">
+    <cd:Integer>
+      <cd:Description>Number of L1 measurements reported by the L1B product for this BRC. Note this figure may vary from one BRC to the other</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="n_obs_mie_actual">
+    <cd:Integer>
+      <cd:Description>Number of meaningful Mie profiles in this BRC. Note this figure may vary from one BRC to the other but will not exceed M_Mie</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="n_obs_rayleigh_actual">
+    <cd:Integer>
+      <cd:Description>Number of meaningful Rayleigh profiles in this BRC. Note this figure may vary from one BRC to the other but will not exceed M_Rayleigh</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="l1b_input_screening">
+    <cd:Record>
+      <cd:Description>Structure describing any problems found during reading of the L1B datafile</cd:Description>
+      <cd:Field name="l1b_obs_screening">
+        <cd:Integer>
+          <cd:Description>A code describing a problem which prevent using this whole BRC</cd:Description>
+          <cd:BitSize>8</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="l1b_obs_screening_flags">
+        <cd:Array>
+          <cd:Dimension>40</cd:Dimension>
+          <cd:Integer>
+            <cd:Description>5 bytes each holding up to 8 flags, so in total 40 flags to store individual problems detected in the L1B_Obs screening</cd:Description>
+            <cd:BitSize>1</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Array>
+      </cd:Field>
+      <cd:Field name="l1b_mie_meas_screening">
+        <cd:Array>
+          <cd:Dimension><![CDATA[int(/sph/m_meas)]]></cd:Dimension>
+          <cd:Record>
+            <cd:Description>List of M_Meas structures describing the problems found for each Mie measurement. Only the first N_Meas are meaningful in any BRC</cd:Description>
+            <cd:Field name="l1b_mie_meas_qc">
+              <cd:Integer>
+                <cd:Description>A code describing a problem which prevent using this Mie measurement</cd:Description>
+                <cd:BitSize>8</cd:BitSize>
+                <cd:NativeType>uint8</cd:NativeType>
+              </cd:Integer>
+            </cd:Field>
+            <cd:Field name="l1b_mie_meas_qc_flags">
+              <cd:Array>
+                <cd:Dimension>8</cd:Dimension>
+                <cd:Integer>
+                  <cd:Description>Flags describing problems which prevent using this Mie Measurement</cd:Description>
+                  <cd:BitSize>1</cd:BitSize>
+                  <cd:NativeType>uint8</cd:NativeType>
+                </cd:Integer>
+              </cd:Array>
+            </cd:Field>
+            <cd:Field name="l1b_mie_meas_bin_screening">
+              <cd:Array>
+                <cd:Dimension>24</cd:Dimension>
+                <cd:Record>
+                  <cd:Description>List of 24 structures describing the problems found for each Mie measurement Bin</cd:Description>
+                  <cd:Field name="l1b_mie_meas_bin_qc">
+                    <cd:Integer>
+                      <cd:Description>A code describing a problem which prevent using this Mie measurement bin</cd:Description>
+                      <cd:BitSize>8</cd:BitSize>
+                      <cd:NativeType>uint8</cd:NativeType>
+                    </cd:Integer>
+                  </cd:Field>
+                  <cd:Field name="l1b_mie_meas_bin_qc_flags">
+                    <cd:Array>
+                      <cd:Dimension>8</cd:Dimension>
+                      <cd:Integer>
+                        <cd:Description>Flags describing problems which prevent using this Mie measurement bin</cd:Description>
+                        <cd:BitSize>1</cd:BitSize>
+                        <cd:NativeType>uint8</cd:NativeType>
+                      </cd:Integer>
+                    </cd:Array>
+                  </cd:Field>
+                </cd:Record>
+              </cd:Array>
+            </cd:Field>
+            <cd:Field name="spare_1">
+              <cd:Raw>
+                <cd:Description>Spare</cd:Description>
+                <cd:BitSize>8</cd:BitSize>
+              </cd:Raw>
+              <cd:Hidden/>
+            </cd:Field>
+          </cd:Record>
+        </cd:Array>
+      </cd:Field>
+      <cd:Field name="l1b_rayleigh_meas_screening">
+        <cd:Array>
+          <cd:Dimension><![CDATA[int(/sph/m_meas)]]></cd:Dimension>
+          <cd:Record>
+            <cd:Description>List of M_Meas structures describing the problems found for each Mie measurement. Only the first N_Meas are meaningful in any BRC</cd:Description>
+            <cd:Field name="l1b_rayleigh_meas_qc">
+              <cd:Integer>
+                <cd:Description>A code describing a problem which prevent using this Rayleigh measurement</cd:Description>
+                <cd:BitSize>8</cd:BitSize>
+                <cd:NativeType>uint8</cd:NativeType>
+              </cd:Integer>
+            </cd:Field>
+            <cd:Field name="l1b_rayleigh_meas_qc_flags">
+              <cd:Array>
+                <cd:Dimension>8</cd:Dimension>
+                <cd:Integer>
+                  <cd:Description>Flags describing problems which prevent using this Rayleigh measurement</cd:Description>
+                  <cd:BitSize>1</cd:BitSize>
+                  <cd:NativeType>uint8</cd:NativeType>
+                </cd:Integer>
+              </cd:Array>
+            </cd:Field>
+            <cd:Field name="l1b_rayleigh_meas_bin_screening">
+              <cd:Array>
+                <cd:Dimension>24</cd:Dimension>
+                <cd:Record>
+                  <cd:Description>List of 24 structures describing the problems found for each Rayleigh measurement Bin</cd:Description>
+                  <cd:Field name="l1b_rayleigh_bin_qc">
+                    <cd:Integer>
+                      <cd:Description>A code describing a problem which prevent using this Rayleigh measurement bin</cd:Description>
+                      <cd:BitSize>8</cd:BitSize>
+                      <cd:NativeType>uint8</cd:NativeType>
+                    </cd:Integer>
+                  </cd:Field>
+                  <cd:Field name="l1b_rayleigh_meas_bin_qc_flags">
+                    <cd:Array>
+                      <cd:Dimension>8</cd:Dimension>
+                      <cd:Integer>
+                        <cd:Description>Flags describing problems which prevent using this Mie measurement bin</cd:Description>
+                        <cd:BitSize>1</cd:BitSize>
+                        <cd:NativeType>uint8</cd:NativeType>
+                      </cd:Integer>
+                    </cd:Array>
+                  </cd:Field>
+                </cd:Record>
+              </cd:Array>
+            </cd:Field>
+            <cd:Field name="spare_1">
+              <cd:Raw>
+                <cd:Description>Spare</cd:Description>
+                <cd:BitSize>8</cd:BitSize>
+              </cd:Raw>
+              <cd:Hidden/>
+            </cd:Field>
+          </cd:Record>
+        </cd:Array>
+      </cd:Field>
+      <cd:Field name="l1b_mrc_screening">
+        <cd:Record>
+          <cd:Description>Structure describing any problems found during reading the L1B MRC datafile</cd:Description>
+          <cd:Field name="l1b_mrc_valid">
+            <cd:Integer>
+              <cd:Description>A flag indicating this calibration is valid</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint8</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="spare_1">
+            <cd:Raw>
+              <cd:Description>Spare</cd:Description>
+              <cd:BitSize>40</cd:BitSize>
+            </cd:Raw>
+            <cd:Hidden/>
+          </cd:Field>
+        </cd:Record>
+      </cd:Field>
+      <cd:Field name="l1b_rrc_screening">
+        <cd:Record>
+          <cd:Description>Structure describing any problems found during reading the L1B RRC datafile</cd:Description>
+          <cd:Field name="l1b_rrc_valid">
+            <cd:Integer>
+              <cd:Description>A flag indicating this calibration is valid</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint8</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="spare_1">
+            <cd:Raw>
+              <cd:Description>Spare</cd:Description>
+              <cd:BitSize>40</cd:BitSize>
+            </cd:Raw>
+            <cd:Hidden/>
+          </cd:Field>
+        </cd:Record>
+      </cd:Field>
+      <cd:Field name="l1b_zwc_screening">
+        <cd:Record>
+          <cd:Description>Structure describing any problems found during reading the L1B ZWC datafile</cd:Description>
+          <cd:Field name="l1b_zwc_valid">
+            <cd:Integer>
+              <cd:Description>A flag indicating this calibration is valid</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint8</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="spare_1">
+            <cd:Raw>
+              <cd:Description>Spare</cd:Description>
+              <cd:BitSize>40</cd:BitSize>
+            </cd:Raw>
+            <cd:Hidden/>
+          </cd:Field>
+        </cd:Record>
+      </cd:Field>
+      <cd:Field name="l1b_rbc_screening">
+        <cd:Record>
+          <cd:Description>Structure describing any problems found during reading the L1B RBC datafile</cd:Description>
+          <cd:Field name="l1b_rbc_valid">
+            <cd:Integer>
+              <cd:Description>A flag indicating the Rayleigh Brillouin look-up tables were found correct</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint8</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="spare_1">
+            <cd:Raw>
+              <cd:Description>Spare</cd:Description>
+              <cd:BitSize>40</cd:BitSize>
+            </cd:Raw>
+            <cd:Hidden/>
+          </cd:Field>
+        </cd:Record>
+      </cd:Field>
+      <cd:Field name="spare_1">
+        <cd:Raw>
+          <cd:Description>Spare</cd:Description>
+          <cd:BitSize>160</cd:BitSize>
+        </cd:Raw>
+        <cd:Hidden/>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="l2b_amd_screening">
+    <cd:Record>
+      <cd:Description>Structure describing any problems found during reading of the L2B_AMD datafile</cd:Description>
+      <cd:Field name="l2b_amd_screening_qc">
+        <cd:Integer>
+          <cd:Description>A code describing a problem which prevent using this L2B AMD file</cd:Description>
+          <cd:BitSize>8</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="l2b_amd_screening_qc_flags">
+        <cd:Array>
+          <cd:Dimension>8</cd:Dimension>
+          <cd:Integer>
+            <cd:Description>Flags describing problems which prevent using this L2B AMD file</cd:Description>
+            <cd:BitSize>1</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Array>
+      </cd:Field>
+      <cd:Field name="l2b_amd_collocations">
+        <cd:Array>
+          <cd:Dimension><![CDATA[int(/sph/m_meas)]]></cd:Dimension>
+          <cd:Record>
+            <cd:Description>List of M_Meas structures describing the problems found while collocating each measurement. Only the first N_Meas are meaningful in any BRC</cd:Description>
+            <cd:Field name="l2b_amd_collocation_qc">
+              <cd:Integer>
+                <cd:Description>A code describing what problem occurred during the collocation of this measurement with the AUX NWP data</cd:Description>
+                <cd:BitSize>8</cd:BitSize>
+                <cd:NativeType>uint8</cd:NativeType>
+              </cd:Integer>
+            </cd:Field>
+            <cd:Field name="l2b_amd_collocation_qc_flags">
+              <cd:Array>
+                <cd:Dimension>8</cd:Dimension>
+                <cd:Integer>
+                  <cd:Description>Flags describing what problems occurred during the collocation of this measurement with the AUX NWP data</cd:Description>
+                  <cd:BitSize>1</cd:BitSize>
+                  <cd:NativeType>uint8</cd:NativeType>
+                </cd:Integer>
+              </cd:Array>
+            </cd:Field>
+            <cd:Field name="spare_1">
+              <cd:Raw>
+                <cd:Description>Spare</cd:Description>
+                <cd:BitSize>8</cd:BitSize>
+              </cd:Raw>
+              <cd:Hidden/>
+            </cd:Field>
+          </cd:Record>
+        </cd:Array>
+      </cd:Field>
+      <cd:Field name="spare_1">
+        <cd:Raw>
+          <cd:Description>Spare</cd:Description>
+          <cd:BitSize>160</cd:BitSize>
+        </cd:Raw>
+        <cd:Hidden/>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="l2b_mie_classification_qc">
+    <cd:Record>
+      <cd:Description>Structure describing QC parameters resulting from the Mie Classification algorithm</cd:Description>
+      <cd:Field name="l2b_mie_meas_classification">
+        <cd:Array>
+          <cd:Dimension><![CDATA[int(/sph/m_meas)]]></cd:Dimension>
+          <cd:Record>
+            <cd:Description>List of M_Meas structures describing the results of the Mie classification algoritm for each measurement. Only the first N_Meas are meaningful in any BRC</cd:Description>
+            <cd:Field name="l2b_mie_meas_bin_classification">
+              <cd:Array>
+                <cd:Dimension>24</cd:Dimension>
+                <cd:Record>
+                  <cd:Description>List of 24 structures describing the results of the Mie classification algorithm for each measurement bin</cd:Description>
+                  <cd:Field name="l2b_mie_meas_class_flags">
+                    <cd:Array>
+                      <cd:Dimension>16</cd:Dimension>
+                      <cd:Integer>
+                        <cd:Description>Flags describing classification properties for the current Mie measurement rangebin</cd:Description>
+                        <cd:BitSize>1</cd:BitSize>
+                        <cd:NativeType>uint8</cd:NativeType>
+                      </cd:Integer>
+                    </cd:Array>
+                  </cd:Field>
+                  <cd:Field name="l2b_reliability">
+                    <cd:Float>
+                      <cd:Description>A measure for the reliability of the classification result for this rangebin</cd:Description>
+                      <cd:BitSize>64</cd:BitSize>
+                      <cd:NativeType>double</cd:NativeType>
+                    </cd:Float>
+                  </cd:Field>
+                  <cd:Field name="spare_1">
+                    <cd:Raw>
+                      <cd:Description>Spare</cd:Description>
+                      <cd:BitSize>8</cd:BitSize>
+                    </cd:Raw>
+                    <cd:Hidden/>
+                  </cd:Field>
+                </cd:Record>
+              </cd:Array>
+            </cd:Field>
+            <cd:Field name="spare_1">
+              <cd:Raw>
+                <cd:Description>Spare</cd:Description>
+                <cd:BitSize>8</cd:BitSize>
+              </cd:Raw>
+              <cd:Hidden/>
+            </cd:Field>
+          </cd:Record>
+        </cd:Array>
+      </cd:Field>
+      <cd:Field name="l2b_mie_obs_classification">
+        <cd:Array>
+          <cd:Dimension><![CDATA[int(/sph/m_mie)]]></cd:Dimension>
+          <cd:Record>
+            <cd:Description>List of M_Mie structures describing the results of the scene classification for each reported Mie observation</cd:Description>
+            <cd:Field name="l2b_mie_obs_class_flags">
+              <cd:Array>
+                <cd:Dimension>8</cd:Dimension>
+                <cd:Integer>
+                  <cd:Description>Flags describing classification properties for the current Mie observation</cd:Description>
+                  <cd:BitSize>1</cd:BitSize>
+                  <cd:NativeType>uint8</cd:NativeType>
+                </cd:Integer>
+              </cd:Array>
+            </cd:Field>
+            <cd:Field name="l2b_mie_obs_bin_classification">
+              <cd:Array>
+                <cd:Dimension>24</cd:Dimension>
+                <cd:Record>
+                  <cd:Description>List of 24 structures describing the results of the classification algorithm for each reported observation bin</cd:Description>
+                  <cd:Field name="l2b_mie_meas_class_flags">
+                    <cd:Array>
+                      <cd:Dimension>16</cd:Dimension>
+                      <cd:Integer>
+                        <cd:Description>Flags describing classification properties for the current Mie measurement rangebin</cd:Description>
+                        <cd:BitSize>1</cd:BitSize>
+                        <cd:NativeType>uint8</cd:NativeType>
+                      </cd:Integer>
+                    </cd:Array>
+                  </cd:Field>
+                  <cd:Field name="l2b_reliability">
+                    <cd:Float>
+                      <cd:Description>A measure for the reliability of the classification result for this rangebin</cd:Description>
+                      <cd:BitSize>64</cd:BitSize>
+                      <cd:NativeType>double</cd:NativeType>
+                    </cd:Float>
+                  </cd:Field>
+                  <cd:Field name="spare_1">
+                    <cd:Raw>
+                      <cd:Description>Spare</cd:Description>
+                      <cd:BitSize>8</cd:BitSize>
+                    </cd:Raw>
+                    <cd:Hidden/>
+                  </cd:Field>
+                </cd:Record>
+              </cd:Array>
+            </cd:Field>
+            <cd:Field name="spare_1">
+              <cd:Raw>
+                <cd:Description>Spare</cd:Description>
+                <cd:BitSize>8</cd:BitSize>
+              </cd:Raw>
+              <cd:Hidden/>
+            </cd:Field>
+          </cd:Record>
+        </cd:Array>
+      </cd:Field>
+      <cd:Field name="spare_1">
+        <cd:Raw>
+          <cd:Description>Spare</cd:Description>
+          <cd:BitSize>160</cd:BitSize>
+        </cd:Raw>
+        <cd:Hidden/>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="l2b_rayleigh_classification_qc">
+    <cd:Record>
+      <cd:Description>Structure describing QC parameters resulting from the Rayleigh Classification algorithm</cd:Description>
+      <cd:Field name="l2b_rayleigh_meas_classification">
+        <cd:Array>
+          <cd:Dimension><![CDATA[int(/sph/m_meas)]]></cd:Dimension>
+          <cd:Record>
+            <cd:Description>List of M_Meas structures describing the results of the Rayleigh observation algoritm for each measurement. Only the first N_Meas are meaningful in any BRC</cd:Description>
+            <cd:Field name="l2b_rayleigh_meas_bin_classification">
+              <cd:Array>
+                <cd:Dimension>24</cd:Dimension>
+                <cd:Record>
+                  <cd:Description>List of 24 flag values describing the results of the Rayleigh classification algorithm for each measurement bin</cd:Description>
+                  <cd:Field name="l2b_rayleigh_meas_class_flags">
+                    <cd:Array>
+                      <cd:Dimension>16</cd:Dimension>
+                      <cd:Integer>
+                        <cd:Description>FlagFlags describing classification properties for the current Rayleigh measurement rangebin</cd:Description>
+                        <cd:BitSize>1</cd:BitSize>
+                        <cd:NativeType>uint8</cd:NativeType>
+                      </cd:Integer>
+                    </cd:Array>
+                  </cd:Field>
+                  <cd:Field name="l2b_reliability">
+                    <cd:Float>
+                      <cd:Description>A measure for the reliability of the classification result for this rangebin</cd:Description>
+                      <cd:BitSize>64</cd:BitSize>
+                      <cd:NativeType>double</cd:NativeType>
+                    </cd:Float>
+                  </cd:Field>
+                  <cd:Field name="spare_1">
+                    <cd:Raw>
+                      <cd:Description>Spare</cd:Description>
+                      <cd:BitSize>8</cd:BitSize>
+                    </cd:Raw>
+                    <cd:Hidden/>
+                  </cd:Field>
+                </cd:Record>
+              </cd:Array>
+            </cd:Field>
+            <cd:Field name="spare_1">
+              <cd:Raw>
+                <cd:Description>Spare</cd:Description>
+                <cd:BitSize>8</cd:BitSize>
+              </cd:Raw>
+              <cd:Hidden/>
+            </cd:Field>
+          </cd:Record>
+        </cd:Array>
+      </cd:Field>
+      <cd:Field name="l2b_rayleigh_obs_classification">
+        <cd:Array>
+          <cd:Dimension><![CDATA[int(/sph/m_rayleigh)]]></cd:Dimension>
+          <cd:Record>
+            <cd:Description>List of M_Rayleigh structures describing the results of the scene classification for each reported Rayleigh observation</cd:Description>
+            <cd:Field name="l2b_rayleigh_obs_class_flags">
+              <cd:Array>
+                <cd:Dimension>8</cd:Dimension>
+                <cd:Integer>
+                  <cd:Description>Flags describing classification properties for the current Rayleigh observation</cd:Description>
+                  <cd:BitSize>1</cd:BitSize>
+                  <cd:NativeType>uint8</cd:NativeType>
+                </cd:Integer>
+              </cd:Array>
+            </cd:Field>
+            <cd:Field name="l2b_rayleigh_obs_bin_classification">
+              <cd:Array>
+                <cd:Dimension>24</cd:Dimension>
+                <cd:Record>
+                  <cd:Description>List of 24 flag values describing the results of the classification algorithm for each reported observation bin</cd:Description>
+                  <cd:Field name="l2b_rayleigh_meas_class_flags">
+                    <cd:Array>
+                      <cd:Dimension>16</cd:Dimension>
+                      <cd:Integer>
+                        <cd:Description>Flags describing classification properties for the current Rayleigh measurement rangebin</cd:Description>
+                        <cd:BitSize>1</cd:BitSize>
+                        <cd:NativeType>uint8</cd:NativeType>
+                      </cd:Integer>
+                    </cd:Array>
+                  </cd:Field>
+                  <cd:Field name="l2b_reliability">
+                    <cd:Float>
+                      <cd:Description>A measure for the reliability of the classification result for this rangebin</cd:Description>
+                      <cd:BitSize>64</cd:BitSize>
+                      <cd:NativeType>double</cd:NativeType>
+                    </cd:Float>
+                  </cd:Field>
+                  <cd:Field name="spare_1">
+                    <cd:Raw>
+                      <cd:Description>Spare</cd:Description>
+                      <cd:BitSize>8</cd:BitSize>
+                    </cd:Raw>
+                    <cd:Hidden/>
+                  </cd:Field>
+                </cd:Record>
+              </cd:Array>
+            </cd:Field>
+            <cd:Field name="spare_1">
+              <cd:Raw>
+                <cd:Description>Spare</cd:Description>
+                <cd:BitSize>8</cd:BitSize>
+              </cd:Raw>
+              <cd:Hidden/>
+            </cd:Field>
+          </cd:Record>
+        </cd:Array>
+      </cd:Field>
+      <cd:Field name="spare_1">
+        <cd:Raw>
+          <cd:Description>Spare</cd:Description>
+          <cd:BitSize>160</cd:BitSize>
+        </cd:Raw>
+        <cd:Hidden/>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="l2b_mie_processing_qc">
+    <cd:Record>
+      <cd:Description>Structure describing QC parameters resulting from the Mie processing algorithm</cd:Description>
+      <cd:Field name="l2b_obs_mie_qc">
+        <cd:Array>
+          <cd:Dimension><![CDATA[int(/sph/m_mie)]]></cd:Dimension>
+          <cd:Record>
+            <cd:Description>List of M_Mie structures describing the results of the Mie processing for each reported observation</cd:Description>
+            <cd:Field name="l2b_obs_mie_bin_qc">
+              <cd:Array>
+                <cd:Dimension>24</cd:Dimension>
+                <cd:Record>
+                  <cd:Description>List of 24 structures describing the results of the Mie processing for each reported range bin</cd:Description>
+                  <cd:Field name="hlos_error_estimate">
+                    <cd:Float>
+                      <cd:Description>Error estimate reported by the Mie processing algorithm</cd:Description>
+                      <cd:Unit>m/s</cd:Unit>
+                      <cd:BitSize>64</cd:BitSize>
+                      <cd:NativeType>double</cd:NativeType>
+                    </cd:Float>
+                  </cd:Field>
+                  <cd:Field name="reliability_number">
+                    <cd:Float>
+                      <cd:Description>Probably to be derived from the SNR, to catch cases in which signal level is too low (for which fitting the spectrum might be very difficult)</cd:Description>
+                      <cd:BitSize>64</cd:BitSize>
+                      <cd:NativeType>double</cd:NativeType>
+                    </cd:Float>
+                  </cd:Field>
+                  <cd:Field name="l2b_obs_mie_bin_flags">
+                    <cd:Array>
+                      <cd:Dimension>8</cd:Dimension>
+                      <cd:Integer>
+                        <cd:Description>Flags describing Mie processing results for the current rangebin</cd:Description>
+                        <cd:BitSize>1</cd:BitSize>
+                        <cd:NativeType>uint8</cd:NativeType>
+                      </cd:Integer>
+                    </cd:Array>
+                  </cd:Field>
+                  <cd:Field name="fitting_amplitude">
+                    <cd:Float>
+                      <cd:Description>Amplitude of the curve used for fitting the Mie spectrum</cd:Description>
+                      <cd:BitSize>64</cd:BitSize>
+                      <cd:NativeType>double</cd:NativeType>
+                    </cd:Float>
+                  </cd:Field>
+                  <cd:Field name="fitting_residual">
+                    <cd:Float>
+                      <cd:Description>Residual after the fit to the Mie spectrum is performed (should also give an idea of the reliability of the fit)</cd:Description>
+                      <cd:BitSize>64</cd:BitSize>
+                      <cd:NativeType>double</cd:NativeType>
+                    </cd:Float>
+                  </cd:Field>
+                  <cd:Field name="fitting_offset">
+                    <cd:Float>
+                      <cd:Description>Offset of the curve used for fitting the Mie spectrum</cd:Description>
+                      <cd:BitSize>64</cd:BitSize>
+                      <cd:NativeType>double</cd:NativeType>
+                    </cd:Float>
+                  </cd:Field>
+                  <cd:Field name="fittting_fwhm">
+                    <cd:Float>
+                      <cd:Description>FWHM of the curve used for fitting the spectrum. This gives a measure of the wind variability in this rangebin</cd:Description>
+                      <cd:BitSize>64</cd:BitSize>
+                      <cd:NativeType>double</cd:NativeType>
+                    </cd:Float>
+                  </cd:Field>
+                  <cd:Field name="mie_snr">
+                    <cd:Float>
+                      <cd:Description>SNR of the Mie spectrum</cd:Description>
+                      <cd:BitSize>64</cd:BitSize>
+                      <cd:NativeType>double</cd:NativeType>
+                    </cd:Float>
+                  </cd:Field>
+                  <cd:Field name="extinction">
+                    <cd:Float>
+                      <cd:Description>Extinction used to determine the height assignment for this rangebin</cd:Description>
+                      <cd:Unit>1/m</cd:Unit>
+                      <cd:BitSize>64</cd:BitSize>
+                      <cd:NativeType>double</cd:NativeType>
+                    </cd:Float>
+                  </cd:Field>
+                  <cd:Field name="scattering_ratio">
+                    <cd:Float>
+                      <cd:Description>Scattering_Ratio used to estimate the extinction for this rangebin</cd:Description>
+                      <cd:BitSize>64</cd:BitSize>
+                      <cd:NativeType>double</cd:NativeType>
+                    </cd:Float>
+                  </cd:Field>
+                  <cd:Field name="variability_measure">
+                    <cd:Float>
+                      <cd:Description>Measure of the variability between the measurements of this observation for this rangebin</cd:Description>
+                      <cd:BitSize>64</cd:BitSize>
+                      <cd:NativeType>double</cd:NativeType>
+                    </cd:Float>
+                  </cd:Field>
+                  <cd:Field name="spare_1">
+                    <cd:Raw>
+                      <cd:Description>Spare</cd:Description>
+                      <cd:BitSize>8</cd:BitSize>
+                    </cd:Raw>
+                    <cd:Hidden/>
+                  </cd:Field>
+                </cd:Record>
+              </cd:Array>
+            </cd:Field>
+            <cd:Field name="spare_1">
+              <cd:Raw>
+                <cd:Description>Spare</cd:Description>
+                <cd:BitSize>8</cd:BitSize>
+              </cd:Raw>
+              <cd:Hidden/>
+            </cd:Field>
+          </cd:Record>
+        </cd:Array>
+      </cd:Field>
+      <cd:Field name="mie_background_high">
+        <cd:Integer>
+          <cd:Description>A value of 1 indicates that this data was taken during daylight, so possibly the background radiation level is high</cd:Description>
+          <cd:BitSize>8</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="spare_1">
+        <cd:Raw>
+          <cd:Description>Spare</cd:Description>
+          <cd:BitSize>160</cd:BitSize>
+        </cd:Raw>
+        <cd:Hidden/>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="l2b_rayleigh_processing_qc">
+    <cd:Record>
+      <cd:Description>Structure describing QC parameters resulting from the Rayleigh processing algorithm</cd:Description>
+      <cd:Field name="l2b_obs_rayleigh_qc">
+        <cd:Array>
+          <cd:Dimension><![CDATA[int(/sph/m_rayleigh)]]></cd:Dimension>
+          <cd:Record>
+            <cd:Description>List of M_Rayleigh structures describing the results of the Rayleigh processing for each reported observation</cd:Description>
+            <cd:Field name="l2b_obs_rayleigh_bin_qc">
+              <cd:Array>
+                <cd:Dimension>24</cd:Dimension>
+                <cd:Record>
+                  <cd:Description>List of 24 structures describing the results of the Rayleigh processing for each reported range bin</cd:Description>
+                  <cd:Field name="hlos_error_estimate">
+                    <cd:Float>
+                      <cd:Description>Error estimate reported by the Rayleigh processing algorithm</cd:Description>
+                      <cd:Unit>m/s</cd:Unit>
+                      <cd:BitSize>64</cd:BitSize>
+                      <cd:NativeType>double</cd:NativeType>
+                    </cd:Float>
+                  </cd:Field>
+                  <cd:Field name="l2b_obs_rayleigh_bin_flags">
+                    <cd:Array>
+                      <cd:Dimension>24</cd:Dimension>
+                      <cd:Integer>
+                        <cd:Description>Flags describing Rayleigh processing results for the current rangebin</cd:Description>
+                        <cd:BitSize>1</cd:BitSize>
+                        <cd:NativeType>uint8</cd:NativeType>
+                      </cd:Integer>
+                    </cd:Array>
+                  </cd:Field>
+                  <cd:Field name="extinction">
+                    <cd:Float>
+                      <cd:Description>Extinction used to determine the height assignment for this rangebin</cd:Description>
+                      <cd:Unit>1/m</cd:Unit>
+                      <cd:BitSize>64</cd:BitSize>
+                      <cd:NativeType>double</cd:NativeType>
+                    </cd:Float>
+                  </cd:Field>
+                  <cd:Field name="scattering_ratio">
+                    <cd:Float>
+                      <cd:Description>Scattering_Ratio used to estimate the Mie signal used in Mie decontamination for this rangebin</cd:Description>
+                      <cd:BitSize>64</cd:BitSize>
+                      <cd:NativeType>double</cd:NativeType>
+                    </cd:Float>
+                  </cd:Field>
+                  <cd:Field name="variability_measure">
+                    <cd:Float>
+                      <cd:Description>Some measure of the variability between the measurements of this observation for this rangebin</cd:Description>
+                      <cd:BitSize>64</cd:BitSize>
+                      <cd:NativeType>double</cd:NativeType>
+                    </cd:Float>
+                  </cd:Field>
+                  <cd:Field name="extinction_method">
+                    <cd:Integer>
+                      <cd:Description>Method was used to determine the extinction for this rangebin. 0: undefined, 1: not available, 2: using NWP information</cd:Description>
+                      <cd:BitSize>8</cd:BitSize>
+                      <cd:NativeType>uint8</cd:NativeType>
+                    </cd:Integer>
+                  </cd:Field>
+                  <cd:Field name="scattering_ratio_method">
+                    <cd:Integer>
+                      <cd:Description>Method used to determine the scattering ratio rho. 0: undefined, 1: computed from L1B Mie channel (arithmetic average), 2: computed from L1B Mie and Rayleigh channel information combined</cd:Description>
+                      <cd:BitSize>8</cd:BitSize>
+                      <cd:NativeType>uint8</cd:NativeType>
+                    </cd:Integer>
+                  </cd:Field>
+                  <cd:Field name="spare_1">
+                    <cd:Raw>
+                      <cd:Description>Spare</cd:Description>
+                      <cd:BitSize>8</cd:BitSize>
+                    </cd:Raw>
+                    <cd:Hidden/>
+                  </cd:Field>
+                </cd:Record>
+              </cd:Array>
+            </cd:Field>
+            <cd:Field name="spare_1">
+              <cd:Raw>
+                <cd:Description>Spare</cd:Description>
+                <cd:BitSize>8</cd:BitSize>
+              </cd:Raw>
+              <cd:Hidden/>
+            </cd:Field>
+          </cd:Record>
+        </cd:Array>
+      </cd:Field>
+      <cd:Field name="rayleigh_background_high">
+        <cd:Integer>
+          <cd:Description>A value of 1 flags that this data was taken during daylight, so possibly the background radiation level is high</cd:Description>
+          <cd:BitSize>8</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="spare_1">
+        <cd:Raw>
+          <cd:Description>Spare</cd:Description>
+          <cd:BitSize>160</cd:BitSize>
+        </cd:Raw>
+        <cd:Hidden/>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="spare_1">
+    <cd:Raw>
+      <cd:Description>Spare</cd:Description>
+      <cd:BitSize>160</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+</cd:Record>

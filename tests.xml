@@ -1,0 +1,891 @@
+<?xml version="1.0"?>
+<ct:Tests last-modified="2015-11-23" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+  <ct:Test name="AbsValueIsOne" criticality="Error" description="The value should be: '1' or: '-1'"><![CDATA[int(.) == 1 || int(.)==-1]]></ct:Test>
+  <ct:Test name="AtLeastOneElement" criticality="Warning" description="There should be at least one element"><![CDATA[numelements(.) >= 1]]></ct:Test>
+  <ct:Test name="BooleanBinTest" criticality="Error" description="The value should be True: '1' or False: '0'"><![CDATA[int(.) == 1 || int(.)==0]]></ct:Test>
+  <ct:Test name="BooleanXmlTest" criticality="Error" description="The value should be 'true', 'false', 'True', 'False', 'TRUE', 'FALSE', '1', or '0'"><![CDATA[str(.) == "true" || str(.)=="false" || str(.) == "True" || str(.)=="False" || str(.) == "TRUE" || str(.)=="FALSE" || str(.) == "1" || str(.)=="0"]]></ct:Test>
+  <ct:Test name="CrcCountCheckRS" criticality="Error" description="The num_rs_isps field in the SPH should equal the sum of Transfer Frame Reed Solomon corrections over all data sets"><![CDATA[int(.) == if(exists(/wind_velocity), add(/wind_velocity, count(./source_packet_info, int(./num_tf_with_rs_correction) != 0 && int(./sp_missing) == 0)), 0) + if(exists(/laser_diode_temperature), add(/laser_diode_temperature, count(./source_packet_info, int(./num_tf_with_rs_correction) != 0 && int(./sp_missing) == 0)), 0) + if(exists(/instr_response_cal), add(/instr_response_cal, count(./source_packet_info, int(./num_tf_with_rs_correction) != 0 && int(./sp_missing) == 0)), 0) + if(exists(/instr_spec_reg), add(/instr_spec_reg, count(./source_packet_info, int(./num_tf_with_rs_correction) != 0 && int(./sp_missing) == 0)), 0) + if(exists(/instr_auto_test), add(/instr_auto_test, count(./source_packet_info, int(./num_tf_with_rs_correction) != 0 && int(./sp_missing) == 0)), 0) + if(exists(/dark_current_cal), add(/dark_current_cal, count(./source_packet_info, int(./num_tf_with_rs_correction) != 0 && int(./sp_missing) == 0)), 0) + if(exists(/instr_defocus_cal), add(/instr_defocus_cal, count(./source_packet_info, int(./num_tf_with_rs_correction) != 0 && int(./sp_missing) == 0)), 0) + if(exists(/phase_adjustment), add(/phase_adjustment, count(./source_packet_info, int(./num_tf_with_rs_correction) != 0 && int(./sp_missing) == 0)), 0) + if(exists(/offline_wind_velocity), add(/offline_wind_velocity, count(./source_packet_info, int(./num_tf_with_rs_correction) != 0 && int(./sp_missing) == 0)), 0) + if(exists(/dark_current_mem_zone), add(/dark_current_mem_zone, count(./source_packet_info, int(./num_tf_with_rs_correction) != 0 && int(./sp_missing) == 0)), 0) + if(exists(/nop_udm), add(/nop_udm, count(./source_packet_info, int(./num_tf_with_rs_correction) != 0 && int(./sp_missing) == 0)), 0) + if(exists(/laser_beam_monitoring), add(/laser_beam_monitoring, count(./source_packet_info, int(./num_tf_with_rs_correction) != 0 && int(./sp_missing) == 0)), 0)]]></ct:Test>
+  <ct:Test name="CrcCountCheckTransferFrames" criticality="Error" description="The num_tf_crc_error_isps field in the SPH should equal the sum of Transfer Frames with CRC errors over all data sets"><![CDATA[int(.) == if(exists(/wind_velocity), add(/wind_velocity, count(./source_packet_info, int(./num_tf_with_crc_error) != 0 && int(./sp_missing) == 0)), 0) + if(exists(/laser_diode_temperature), add(/laser_diode_temperature, count(./source_packet_info, int(./num_tf_with_crc_error) != 0 && int(./sp_missing) == 0)), 0) + if(exists(/instr_response_cal), add(/instr_response_cal, count(./source_packet_info, int(./num_tf_with_crc_error) != 0 && int(./sp_missing) == 0)), 0) + if(exists(/instr_spec_reg), add(/instr_spec_reg, count(./source_packet_info, int(./num_tf_with_crc_error) != 0 && int(./sp_missing) == 0)), 0) + if(exists(/instr_auto_test), add(/instr_auto_test, count(./source_packet_info, int(./num_tf_with_crc_error) != 0 && int(./sp_missing) == 0)), 0) + if(exists(/dark_current_cal), add(/dark_current_cal, count(./source_packet_info, int(./num_tf_with_crc_error) != 0 && int(./sp_missing) == 0)), 0) + if(exists(/instr_defocus_cal), add(/instr_defocus_cal, count(./source_packet_info, int(./num_tf_with_crc_error) != 0 && int(./sp_missing) == 0)), 0) + if(exists(/phase_adjustment), add(/phase_adjustment, count(./source_packet_info, int(./num_tf_with_crc_error) != 0 && int(./sp_missing) == 0)), 0) + if(exists(/offline_wind_velocity), add(/offline_wind_velocity, count(./source_packet_info, int(./num_tf_with_crc_error) != 0 && int(./sp_missing) == 0)), 0) + if(exists(/dark_current_mem_zone), add(/dark_current_mem_zone, count(./source_packet_info, int(./num_tf_with_crc_error) != 0 && int(./sp_missing) == 0)), 0) + if(exists(/nop_udm), add(/nop_udm, count(./source_packet_info, int(./num_tf_with_crc_error) != 0 && int(./sp_missing) == 0)), 0) + if(exists(/laser_beam_monitoring), add(/laser_beam_monitoring, count(./source_packet_info, int(./num_tf_with_crc_error) != 0 && int(./sp_missing) == 0)), 0)]]></ct:Test>
+  <ct:Test name="CrcCountSPInvalid" criticality="Error" description="The num_isp_crc_errors field in the SPH should equal the sum of ISPs with SP CRC errors or incorrect SP length or errors in key header fields over all data sets"><![CDATA[int(.) == if(exists(/wind_velocity), add(/wind_velocity, count(./source_packet_info, int(./sp_invalid) == 1 && int(./sp_missing) == 0)), 0) + if(exists(/laser_diode_temperature), add(/laser_diode_temperature, count(./source_packet_info, int(./sp_invalid) == 1 && int(./sp_missing) == 0)), 0) + if(exists(/instr_response_cal), add(/instr_response_cal, count(./source_packet_info, int(./sp_invalid) == 1 && int(./sp_missing) == 0)), 0) + if(exists(/instr_spec_reg), add(/instr_spec_reg, count(./source_packet_info, int(./sp_invalid) == 1 && int(./sp_missing) == 0)), 0) + if(exists(/instr_auto_test), add(/instr_auto_test, count(./source_packet_info, int(./sp_invalid) == 1 && int(./sp_missing) == 0)), 0) + if(exists(/dark_current_cal), add(/dark_current_cal, count(./source_packet_info, int(./sp_invalid) == 1 && int(./sp_missing) == 0)), 0) + if(exists(/instr_defocus_cal), add(/instr_defocus_cal, count(./source_packet_info, int(./sp_invalid) == 1 && int(./sp_missing) == 0)), 0) + if(exists(/phase_adjustment), add(/phase_adjustment, count(./source_packet_info, int(./sp_invalid) == 1 && int(./sp_missing) == 0)), 0) + if(exists(/offline_wind_velocity), add(/offline_wind_velocity, count(./source_packet_info, int(./sp_invalid) == 1 && int(./sp_missing) == 0)), 0) + if(exists(/dark_current_mem_zone), add(/dark_current_mem_zone, count(./source_packet_info, int(./sp_invalid) == 1 && int(./sp_missing) == 0)), 0) + if(exists(/nop_udm), add(/nop_udm, count(./source_packet_info, int(./sp_invalid) == 1 && int(./sp_missing) == 0)), 0) + if(exists(/laser_beam_monitoring), add(/laser_beam_monitoring, count(./source_packet_info, int(./sp_invalid) == 1 && int(./sp_missing) == 0)), 0)]]></ct:Test>
+  <ct:Test name="CrcCountSPMissing" criticality="Error" description="The number_missing_isps field in the SPH should equal the sum of missing ISPs over all data sets"><![CDATA[int(.) == if(exists(/wind_velocity), add(/wind_velocity, count(./source_packet_info, int(./sp_missing) == 1)), 0) + if(exists(/laser_diode_temperature), add(/laser_diode_temperature, count(./source_packet_info, int(./sp_missing) == 1)), 0) + if(exists(/instr_response_cal), add(/instr_response_cal, count(./source_packet_info, int(./sp_missing) == 1)), 0) + if(exists(/instr_spec_reg), add(/instr_spec_reg, count(./source_packet_info, int(./sp_missing) == 1)), 0) + if(exists(/instr_auto_test), add(/instr_auto_test, count(./source_packet_info, int(./sp_missing) == 1)), 0) + if(exists(/dark_current_cal), add(/dark_current_cal, count(./source_packet_info, int(./sp_missing) == 1)), 0) + if(exists(/instr_defocus_cal), add(/instr_defocus_cal, count(./source_packet_info, int(./sp_missing) == 1)), 0) + if(exists(/phase_adjustment), add(/phase_adjustment, count(./source_packet_info, int(./sp_missing) == 1)), 0) + if(exists(/offline_wind_velocity), add(/offline_wind_velocity, count(./source_packet_info, int(./sp_missing) == 1)), 0) + if(exists(/dark_current_mem_zone), add(/dark_current_mem_zone, count(./source_packet_info, int(./sp_missing) == 1)), 0) + if(exists(/nop_udm), add(/nop_udm, count(./source_packet_info, int(./sp_missing) == 1)), 0) + if(exists(/laser_beam_monitoring), add(/laser_beam_monitoring, count(./source_packet_info, int(./sp_missing) == 1)), 0)]]></ct:Test>
+  <ct:Test name="CrcRSSignificant" criticality="Error" description="This flag should only be set if the error exceeds the treshold"><![CDATA[int(.) == if(int(../num_rs_isps) >= 34.0 * (if(exists(/wind_velocity), numelements(/wind_velocity), 0) + if(exists(/laser_diode_temperature), numelements(/laser_diode_temperature), 0) + if(exists(/instr_response_cal), numelements(/instr_response_cal), 0) + if(exists(/instr_spec_reg), numelements(/instr_spec_reg), 0) + if(exists(/instr_auto_test), numelements(/instr_auto_test), 0) + if(exists(/dark_current_cal), numelements(/dark_current_cal), 0) + if(exists(/instr_defocus_cal), numelements(/instr_defocus_cal), 0) + if(exists(/phase_adjustment), numelements(/phase_adjustment), 0) + if(exists(/offline_wind_velocity), numelements(/offline_wind_velocity), 0) + if(exists(/dark_current_mem_zone), numelements(/dark_current_mem_zone), 0) + if(exists(/nop_udm), numelements(/nop_udm), 0) + if(exists(/laser_beam_monitoring), numelements(/laser_beam_monitoring), 0)) * float(../rs_thresh) * 0.01, 1, 0)]]></ct:Test>
+  <ct:Test name="CrcSPInvalidSignificant" criticality="Error" description="This flag should only be set if the error exceeds the treshold"><![CDATA[int(.) == if(int(../num_isp_crc_errors) >= 34.0 * (if(exists(/wind_velocity), numelements(/wind_velocity), 0) + if(exists(/laser_diode_temperature), numelements(/laser_diode_temperature), 0) + if(exists(/instr_response_cal), numelements(/instr_response_cal), 0) + if(exists(/instr_spec_reg), numelements(/instr_spec_reg), 0) + if(exists(/instr_auto_test), numelements(/instr_auto_test), 0) + if(exists(/dark_current_cal), numelements(/dark_current_cal), 0) + if(exists(/instr_defocus_cal), numelements(/instr_defocus_cal), 0) + if(exists(/phase_adjustment), numelements(/phase_adjustment), 0) + if(exists(/offline_wind_velocity), numelements(/offline_wind_velocity), 0) + if(exists(/dark_current_mem_zone), numelements(/dark_current_mem_zone), 0) + if(exists(/nop_udm), numelements(/nop_udm), 0) + if(exists(/laser_beam_monitoring), numelements(/laser_beam_monitoring), 0)) * float(../isp_crc_thresh) * 0.01, 1, 0)]]></ct:Test>
+  <ct:Test name="CrcTransferFramesSignificant" criticality="Error" description="This flag should only be set if the error exceeds the treshold"><![CDATA[int(.) == if(int(../num_tf_crc_error_isps) >= 34.0 * (if(exists(/wind_velocity), numelements(/wind_velocity), 0) + if(exists(/laser_diode_temperature), numelements(/laser_diode_temperature), 0) + if(exists(/instr_response_cal), numelements(/instr_response_cal), 0) + if(exists(/instr_spec_reg), numelements(/instr_spec_reg), 0) + if(exists(/instr_auto_test), numelements(/instr_auto_test), 0) + if(exists(/dark_current_cal), numelements(/dark_current_cal), 0) + if(exists(/instr_defocus_cal), numelements(/instr_defocus_cal), 0) + if(exists(/phase_adjustment), numelements(/phase_adjustment), 0) + if(exists(/offline_wind_velocity), numelements(/offline_wind_velocity), 0) + if(exists(/dark_current_mem_zone), numelements(/dark_current_mem_zone), 0) + if(exists(/nop_udm), numelements(/nop_udm), 0) + if(exists(/laser_beam_monitoring), numelements(/laser_beam_monitoring), 0)) * float(../tf_crc_error_isps_thresh) * 0.01, 1, 0)]]></ct:Test>
+  <ct:Test name="CTILOSParameterSet" criticality="Error" description="A CTI_LOS___ product should contain 4 ASTA parameters and/or 4 ASTB parameters"><![CDATA[str(/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type) != "CTI_LOS___" || ((count(., substr(3, 1, str(./Parameter_name, 4)) == "A") | 4 == 4) && (count(., substr(3, 1, str(./Parameter_name, 4)) == "B") | 4 == 4))]]></ct:Test>
+  <ct:Test name="EVSourceEnum" criticality="Error" description="The plan event source should be one of the allowed enumeration values"><![CDATA[str(.) == "SPF" || str(.) == "MTF" || str(.) == "MMPF" || str(.) == ""]]></ct:Test>
+  <ct:Test name="FileNameCheckEEF" criticality="Error" description="The name of the EEF file should be consistent with the product name in the fixed header"><![CDATA[filename() == str(.) + ".EEF"]]></ct:Test>
+  <ct:Test name="FileNameCheckHDR" criticality="Error" description="The name of the HDR file should be consistent with the product name in the fixed header"><![CDATA[filename() == str(.) + ".HDR"]]></ct:Test>
+  <ct:Test name="FileNameMatchCreationDate" criticality="Error" description="The creation date in the product name should be consistent with the creation date field in the header"><![CDATA[substr(19, 15, str(.)) == substr(4, 4, str(../Source/Creation_Date)) + substr(9, 2, str(../Source/Creation_Date)) + substr(12, 5, str(../Source/Creation_Date)) + substr(18, 2, str(../Source/Creation_Date)) + substr(21, 2, str(../Source/Creation_Date))]]></ct:Test>
+  <ct:Test name="FileNameMatchFileClass" criticality="Error" description="The file class in the product name should be consistent with the file class field in the header"><![CDATA[substr(3, 4, str(.)) == str(../File_Class)]]></ct:Test>
+  <ct:Test name="FileNameMatchFileType" criticality="Error" description="The file type in the product name should be consistent with the file type field in the header"><![CDATA[substr(8, 10, str(.)) == str(../File_Type)]]></ct:Test>
+  <ct:Test name="FileNameMatchFileVersionAt35" criticality="Error" description="The file version in the product name should be consistent with the file version field in the header"><![CDATA[int(substr(35, 4, str(.))) == int(../File_Version)]]></ct:Test>
+  <ct:Test name="FileNameMatchFileVersionAt51" criticality="Error" description="The file version in the product name should be consistent with the file version field in the header"><![CDATA[int(substr(51, 4, str(.))) == int(../File_Version)]]></ct:Test>
+  <ct:Test name="FileNameMatchFileVersionAt55" criticality="Error" description="The file version in the product name should be consistent with the file version field in the header"><![CDATA[int(substr(55, 4, str(.))) == int(../File_Version)]]></ct:Test>
+  <ct:Test name="FileNameMatchValidityStart" criticality="Error" description="The validity start time in the product name should be consistent with the validity start time field in the header"><![CDATA[substr(19, 15, str(.)) == substr(4, 4, str(../Validity_Period/Validity_Start)) + substr(9, 2, str(../Validity_Period/Validity_Start)) + substr(12, 5, str(../Validity_Period/Validity_Start)) + substr(18, 2, str(../Validity_Period/Validity_Start)) + substr(21, 2, str(../Validity_Period/Validity_Start))]]></ct:Test>
+  <ct:Test name="FileNameMatchValidityStop" criticality="Error" description="The validity stop time in the product name should be consistent with the validity stop time field in the header"><![CDATA[substr(35, 15, str(.)) == substr(4, 4, str(../Validity_Period/Validity_Stop)) + substr(9, 2, str(../Validity_Period/Validity_Stop)) + substr(12, 5, str(../Validity_Period/Validity_Stop)) + substr(18, 2, str(../Validity_Period/Validity_Stop)) + substr(21, 2, str(../Validity_Period/Validity_Stop))]]></ct:Test>
+  <ct:Test name="FixedValue0" criticality="Error" description="The value should be 0"><![CDATA[int(.) == 0]]></ct:Test>
+  <ct:Test name="FixedValue1" criticality="Error" description="The value should be 1"><![CDATA[int(.) == 1]]></ct:Test>
+  <ct:Test name="FixedValue2" criticality="Error" description="The value should be 2"><![CDATA[int(.) == 2]]></ct:Test>
+  <ct:Test name="FixedValue4" criticality="Error" description="The value should be 4"><![CDATA[int(.) == 4]]></ct:Test>
+  <ct:Test name="FixedValue8" criticality="Error" description="The value should be 8"><![CDATA[int(.) == 8]]></ct:Test>
+  <ct:Test name="FixedValue16" criticality="Error" description="The value should be 16"><![CDATA[int(.) == 16]]></ct:Test>
+  <ct:Test name="FixedValue32" criticality="Error" description="The value should be 32"><![CDATA[int(.) == 32]]></ct:Test>
+  <ct:Test name="FixedValue64" criticality="Error" description="The value should be 64"><![CDATA[int(.) == 64]]></ct:Test>
+  <ct:Test name="FixedValue128" criticality="Error" description="The value should be 128"><![CDATA[int(.) == 128]]></ct:Test>
+  <ct:Test name="FixedValue256" criticality="Error" description="The value should be 256"><![CDATA[int(.) == 256]]></ct:Test>
+  <ct:Test name="FixedValue401" criticality="Error" description="The value should be 401"><![CDATA[int(.) == 401]]></ct:Test>
+  <ct:Test name="FixedValue611" criticality="Error" description="The value should be 611"><![CDATA[int(.) == 611]]></ct:Test>
+  <ct:Test name="FixedValueAeolus" criticality="Error" description="The value should be 'Aeolus'"><![CDATA[str(.) == "Aeolus"]]></ct:Test>
+  <ct:Test name="FixedValueAUX_PAR_QC" criticality="Error" description="The value should be 'AUX_PAR_QC'"><![CDATA[str(.) == "AUX_PAR_QC"]]></ct:Test>
+  <ct:Test name="FixedValueAUX_REP_QC" criticality="Error" description=""><![CDATA[str(.) == "AUX_REP_QC"]]></ct:Test>
+  <ct:Test name="MissingIspSignificant" criticality="Error" description="This flag should only be set if the error exceeds the treshold"><![CDATA[int(.) == if(int(../number_missing_isps) >= 34.0 * (if(exists(/wind_velocity), numelements(/wind_velocity), 0) + if(exists(/laser_diode_temperature), numelements(/laser_diode_temperature), 0) + if(exists(/instr_response_cal), numelements(/instr_response_cal), 0) + if(exists(/instr_spec_reg), numelements(/instr_spec_reg), 0) + if(exists(/instr_auto_test), numelements(/instr_auto_test), 0) + if(exists(/dark_current_cal), numelements(/dark_current_cal), 0) + if(exists(/instr_defocus_cal), numelements(/instr_defocus_cal), 0) + if(exists(/phase_adjustment), numelements(/phase_adjustment), 0) + if(exists(/offline_wind_velocity), numelements(/offline_wind_velocity), 0) + if(exists(/dark_current_mem_zone), numelements(/dark_current_mem_zone), 0) + if(exists(/nop_udm), numelements(/nop_udm), 0) + if(exists(/laser_beam_monitoring), numelements(/laser_beam_monitoring), 0)) * float(../missing_isps_thresh) * 0.01, 1, 0)]]></ct:Test>
+  <ct:Test name="NumDataSets" criticality="Error" description="num_data_sets in MPH should indicate the amount of data sets that are actually present in the product"><![CDATA[int(.) == if(exists(/wind_velocity), 1, 0) + if(exists(/laser_diode_temperature), 1, 0) + if(exists(/instr_response_cal), 1, 0) + if(exists(/instr_spec_reg), 1, 0) + if(exists(/instr_auto_test), 1, 0) + if(exists(/dark_current_cal), 1, 0) + if(exists(/instr_defocus_cal), 1, 0) + if(exists(/phase_adjustment), 1, 0) + if(exists(/offline_wind_velocity), 1, 0) + if(exists(/dark_current_mem_zone), 1, 0) + if(exists(/nop_udm), 1, 0) + if(exists(/laser_beam_monitoring), 1, 0)]]></ct:Test>
+  <ct:Test name="NumDataSetsLevel1A" criticality="Error" description="num_data_sets in MPH should indicate the amount of data sets that are actually present in the product"><![CDATA[int(.) == if(exists(/geolocation), 1, 0) + if(exists(/data_quality), 1, 0) + if(exists(/reference_pulse), 1, 0) + if(exists(/house_keeping), 1, 0) + if(exists(/mie_measurement), 1, 0) + if(exists(/rayleigh_measurement), 1, 0)]]></ct:Test>
+  <ct:Test name="NumDataSetsLevel1B_03_05" criticality="Error" description="num_data_sets in MPH should indicate the amount of data sets that are actually present in the product"><![CDATA[int(.) == if(exists(/geolocation), 1, 0) + if(exists(/product_confidence_data), 1, 0) + if(exists(/ground_wind_detection), 1, 0) + if(exists(/measurement), 1, 0) + if(exists(/calibration_characterization_data), 1, 0) + if(exists(/useful_signal), 1, 0) + if(exists(/wind_velocity), 1, 0)]]></ct:Test>
+  <ct:Test name="NumDataSetsLevel1B_03_07" criticality="Error" description="num_data_sets in MPH should indicate the amount of data sets that are actually present in the product"><![CDATA[int(.) == if(exists(/geolocation), 1, 0) + if(exists(/product_confidence_data), 1, 0) + if(exists(/ground_wind_detection), 1, 0) + if(exists(/measurement), 1, 0) + if(exists(/mie_core_params), 1, 0) + if(exists(/calibration_characterization_data), 1, 0) + if(exists(/useful_signal), 1, 0) + if(exists(/wind_velocity), 1, 0)]]></ct:Test>
+  <ct:Test name="OptionalRangeLongitude" criticality="Error" description="The longitude (in degrees) should be &gt;= 0 and &lt;= 360 if a value is present"><![CDATA[isnan(float(.)) || (float(.) >= 0 && float(.) <= 360.0)]]></ct:Test>
+  <ct:Test name="ParameterNameAllowed" criticality="Error" description="The parameter name should match with file type"><![CDATA[ ( ((str(/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type)=="CTI_ISR___") && ((str(.)=="Thermal_Hood_Temperature") || (str(.)=="Operational_Laser_Frequency"))) ||  ((str(/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type)=="CTI_IDC___") && ((str(.)=="M1_Temperature") || (str(.)=="Tripods_Struds_Temperature"))) ||  ((str(/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type)=="CTI_LCM___") && (str(.)=="LCM_Phase_Delay")) ||  ((str(/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type)=="CTI_LDT___") && ((str(.)=="Master_Osc_LD_Heating_Current") || (str(.)=="PreAmp_LD_Heating_Current") || (str(.)=="Amp_LD_Heating_Current") || (str(.)=="Master_Osc_LD_Pumping_Current") || (str(.)=="PreAmp_LD_Pumping_Current") || (str(.)=="Amp_LD_Pumping_Current"))) ||  ((str(/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type)=="CTI_LOS___") && ((str(.)=="ASTA_AQ1") || (str(.)=="ASTA_AQ2") || (str(.)=="ASTA_AQ3") || (str(.)=="ASTA_AQ4") || (str(.)=="ASTB_AQ1") || (str(.)=="ASTB_AQ2") || (str(.)=="ASTB_AQ3") || (str(.)=="ASTB_AQ4"))))]]></ct:Test>
+  <ct:Test name="PhysicalFileSizeCheck" criticality="Error" description="The value of this field should match the actual file size"><![CDATA[filesize() == int(.)]]></ct:Test>
+  <ct:Test name="PIFStatusEnum" criticality="Error" description="The status should be one of the allowed enumeration values"><![CDATA[str(.) == "AUTOMATIC" || str(.) == "MANUAL" || str(.) == "VALIDATED" || str(.) == "GENERATED" || str(.) == "COMMITTED" || str(.) == "EXPORTED" || str(.) == "RE-PLANNED" || str(.) == "RE-VALIDATED" || str(.) == "RE-GENERATED" || str(.) == "RE-COMMITTED" || str(.) == "RE-EXPORTED"]]></ct:Test>
+  <ct:Test name="QCFReportValueRangeTest_Mode" criticality="Error" description="The Test_Mode field should be one of the allowed enumeration values"><![CDATA[str(.) == "STRUCTURE_SIZE_AND_READ" || str(.) == "STRUCTURE_SIZE_AND_READ_HEADER" || str(.) == "EXPRESSION" || str(.) == "EXPRESSION_HEADER" || str(.) == "DATA_HEADER_CROSS_CHECK"]]></ct:Test>
+  <ct:Test name="Range0To4" criticality="Error" description="This value should hold a number from 0 to 4"><![CDATA[int(.) >= 0 && int(.) <= 4]]></ct:Test>
+  <ct:Test name="Range3To600" criticality="Error" description="This value should hold a number from 3 to 600"><![CDATA[int(.) >= 3 && int(.) <= 600]]></ct:Test>
+  <ct:Test name="Range3To1003" criticality="Error" description="This value should hold a number from 3 to 1003"><![CDATA[int(.) >= 3 && int(.) <= 1003]]></ct:Test>
+  <ct:Test name="RangeLatitude6" criticality="Error" description="The latitude (in 1E6 degrees) should be &gt;= -90E6 and &lt;= 90E6"><![CDATA[float(.) >= -90.0E6 && float(.) <= 90.0E6]]></ct:Test>
+  <ct:Test name="RangeLongitude6" criticality="Error" description="The longitude (in 1E6 degrees) should be &gt;= 0 and &lt;= 360E6"><![CDATA[float(.) >= 0 && float(.) <= 360.0E6]]></ct:Test>
+  <ct:Test name="RangeMicroSecond" criticality="Error" description="This value should hold the number of microseconds since the start of the second, maximum value 999999"><![CDATA[int(.) >= 0 && int(.) <= 999999]]></ct:Test>
+  <ct:Test name="RangePIFFileVersion" criticality="Error" description="The version number should be between 1 and 9999"><![CDATA[int(.) >= 1 && int(.) <= 9999]]></ct:Test>
+  <ct:Test name="RangePIFSPFVersion" criticality="Error" description="The version number should be between 1 and 9999"><![CDATA[int(.) >= 1 && int(.) <= 9999]]></ct:Test>
+  <ct:Test name="RangeSecond" criticality="Error" description="This value should hold the number of seconds since the start of the day, maximum value 86400"><![CDATA[int(.) >= 0 && int(.) <= 86400]]></ct:Test>
+  <ct:Test name="RQDestinationEnum" criticality="Error" description="The destination should be one of the allowed enumeration values"><![CDATA[str(.) == "MPS"]]></ct:Test>
+  <ct:Test name="RQParameterRadixEnum" criticality="Error" description="The Request Parameter radix should be one of the allowed enumeration values"><![CDATA[str(.) == "Decimal" || str(.) == "Hexadecimal" || str(.) == "Octal" || str(.) == "Degrees" || str(.) == "Radians" || str(.) == "Raw" || str(.) == ""]]></ct:Test>
+  <ct:Test name="RQParameterRepresentationEnum" criticality="Error" description="The Request Parameter representation type should be one of the allowed enumeration values"><![CDATA[str(.) == "Raw" || str(.) == "Engineering" || str(.) == ""]]></ct:Test>
+  <ct:Test name="RQSourceEnum" criticality="Error" description="The source should be one of the allowed enumeration values"><![CDATA[str(.) == "FDS" || str(.) == "MPS (automatic)" || str(.) == "MPS (manual)" || str(.) == "MMPF"]]></ct:Test>
+  <ct:Test name="RQStatusEnum" criticality="Error" description="The request status should be one of the allowed enumeration values"><![CDATA[str(.) == "Enabled" || str(.) == "Disabled"]]></ct:Test>
+  <ct:Test name="RQTypeEnum" criticality="Error" description="The request type should be one of the allowed enumeration values"><![CDATA[str(.) == "Real-time Sequence" || str(.) == "Time-tagged Sequence" || str(.) == "Orbital Angle tagged Sequence" || str(.) == "Orbital Time tagged Sequence" || str(.) == "Ground Station Job" || str(.) == "MAES Event"]]></ct:Test>
+  <ct:Test name="TimeNotZero" description="Time shouldn't be zero" criticality="Warning"><![CDATA[float(.) != 0]]></ct:Test>
+  <ct:Test name="UniqueInList" criticality="Error" description="Parameter name should not occur more than once"><![CDATA[count(../.., str(./Parameter_name) == str(:)) == 1]]></ct:Test>
+  <ct:Test name="ValidityPeriodOrder" description="Validity start time should be before or equal to validity stop time" criticality="Error"><![CDATA[float(./Validity_Start) <= float(./Validity_Stop)]]></ct:Test>
+  <ct:Test name="ValueOfCountAttributeForParent" criticality="Error" description="The value for the count attribute of the parent List_of_... element should equal the number of occurences of this element"><![CDATA[int(str(..@count)) == numelements(.)]]></ct:Test>
+  <ct:Test name="ValueRangeCriticality" criticality="Error" description=""><![CDATA[str(.) == "WARNING" || str(.) == "ERROR"]]></ct:Test>
+  <ct:Test name="ValueRangeProduct_Quality" criticality="Error" description=""><![CDATA[str(.) == "VALID_PRODUCT" || str(.) == "PRODUCT_HAS_WARNINGS" || str(.) == "PRODUCT_HAS_ERRORS" || str(.) == "UNSUPPORTED_PRODUCT_TYPE" || str(.) == "UNSUPPORTED_PRODUCT_VERSION"]]></ct:Test>
+  <ct:Test name="ValueTestDHO" criticality="Error" description="The value should be 'D', 'H', 'O', 'd', 'h' or 'o'"><![CDATA[str(.) == "D" || str(.)=="d" || str(.) == "H" || str(.)=="h" || str(.) == "O" || str(.)=="o"]]></ct:Test>
+  <ct:Test name="ValueTestNotZero" criticality="Warning" description="The value shouldn't be zero"><![CDATA[str(.) != "0" ]]></ct:Test>
+  <ct:Test name="ValueTestRE" criticality="Error" description="The value should be 'R', 'E', 'r' or 'e'"><![CDATA[str(.) == "R" || str(.)=="r" || str(.) == "E" || str(.)=="e"]]></ct:Test>
+  <ct:CrossFileTest name="MPH_Product" criticality="Error" description="Product mismatch">
+    <ct:ValueExpressionDbl><![CDATA[rtrim(str(/mph/product))]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[str(/Earth_Explorer_Header/Variable_Header/Main_Product_Header/Product)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="MPH_Proc_Stage" criticality="Error" description="Proc_Stage mismatch">
+    <ct:ValueExpressionDbl><![CDATA[rtrim(str(/mph/proc_stage))]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[str(/Earth_Explorer_Header/Variable_Header/Main_Product_Header/Proc_Stage)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="MPH_Ref_Doc" criticality="Error" description="Ref_Doc mismatch">
+    <ct:ValueExpressionDbl><![CDATA[rtrim(str(/mph/ref_doc))]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[str(/Earth_Explorer_Header/Variable_Header/Main_Product_Header/Ref_Doc)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="MPH_Acquisition_Station" criticality="Error" description="Acquisition_Station mismatch">
+    <ct:ValueExpressionDbl><![CDATA[rtrim(str(/mph/acquisition_station))]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[rtrim(str(/Earth_Explorer_Header/Variable_Header/Main_Product_Header/Acquisition_Station))]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="MPH_Proc_Center" criticality="Error" description="Proc_Center mismatch">
+    <ct:ValueExpressionDbl><![CDATA[rtrim(str(/mph/proc_center))]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[str(/Earth_Explorer_Header/Variable_Header/Main_Product_Header/Proc_Center)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="MPH_Proc_Time" criticality="Error" description="Proc_Time mismatch">
+    <ct:ValueExpressionDbl><![CDATA[float(/mph/proc_time)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[float(/Earth_Explorer_Header/Variable_Header/Main_Product_Header/Proc_Time)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="MPH_Software_Ver" criticality="Error" description="Software_Ver mismatch">
+    <ct:ValueExpressionDbl><![CDATA[rtrim(str(/mph/software_ver))]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[str(/Earth_Explorer_Header/Variable_Header/Main_Product_Header/Software_Ver)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="MPH_Baseline" criticality="Error" description="Baseline mismatch">
+    <ct:ValueExpressionDbl><![CDATA[rtrim(str(/mph/baseline))]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[str(/Earth_Explorer_Header/Variable_Header/Main_Product_Header/Baseline)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>  
+  <ct:CrossFileTest name="MPH_Sensing_Start" criticality="Error" description="Sensing_Start mismatch">
+    <ct:ValueExpressionDbl><![CDATA[float(/mph/sensing_start)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[float(/Earth_Explorer_Header/Variable_Header/Main_Product_Header/Sensing_Start)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="MPH_Sensing_Stop" criticality="Error" description="Sensing_Stop mismatch">
+    <ct:ValueExpressionDbl><![CDATA[float(/mph/sensing_stop)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[float(/Earth_Explorer_Header/Variable_Header/Main_Product_Header/Sensing_Stop)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="MPH_Phase" criticality="Error" description="Phase mismatch">
+    <ct:ValueExpressionDbl><![CDATA[trim(str(/mph/phase))]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[str(/Earth_Explorer_Header/Variable_Header/Main_Product_Header/Phase)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="MPH_Cycle" criticality="Error" description="Cycle mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/mph/cycle)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Main_Product_Header/Cycle)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="MPH_Rel_Orbit" criticality="Error" description="Rel_Orbit mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/mph/rel_orbit)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Main_Product_Header/Rel_Orbit)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="MPH_Abs_Orbit" criticality="Error" description="Abs_Orbit mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/mph/abs_orbit)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Main_Product_Header/Abs_Orbit)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="MPH_State_Vector_Time" criticality="Error" description="State_Vector_Time mismatch">
+    <ct:ValueExpressionDbl><![CDATA[float(/mph/state_vector_time)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[float(/Earth_Explorer_Header/Variable_Header/Main_Product_Header/State_Vector_Time)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="MPH_Delta_UT1" criticality="Error" description="Delta_UT1 mismatch">
+    <ct:ValueExpressionDbl><![CDATA[float(/mph/delta_ut1)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[float(/Earth_Explorer_Header/Variable_Header/Main_Product_Header/Delta_Ut1)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="MPH_X_Position" criticality="Error" description="X_Position mismatch">
+    <ct:ValueExpressionDbl><![CDATA[float(/mph/x_position)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[float(/Earth_Explorer_Header/Variable_Header/Main_Product_Header/X_Position)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="MPH_Y_Position" criticality="Error" description="Y_Position mismatch">
+    <ct:ValueExpressionDbl><![CDATA[float(/mph/y_position)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[float(/Earth_Explorer_Header/Variable_Header/Main_Product_Header/Y_Position)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="MPH_Z_Position" criticality="Error" description="Z_Position mismatch">
+    <ct:ValueExpressionDbl><![CDATA[float(/mph/z_position)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[float(/Earth_Explorer_Header/Variable_Header/Main_Product_Header/Z_Position)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="MPH_X_Velocity" criticality="Error" description="X_Velocity mismatch">
+    <ct:ValueExpressionDbl><![CDATA[float(/mph/x_velocity)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[float(/Earth_Explorer_Header/Variable_Header/Main_Product_Header/X_Velocity)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="MPH_Y_Velocity" criticality="Error" description="Y_Velocity mismatch">
+    <ct:ValueExpressionDbl><![CDATA[float(/mph/y_velocity)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[float(/Earth_Explorer_Header/Variable_Header/Main_Product_Header/Y_Velocity)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="MPH_Z_Velocity" criticality="Error" description="Z_Velocity mismatch">
+    <ct:ValueExpressionDbl><![CDATA[float(/mph/z_velocity)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[float(/Earth_Explorer_Header/Variable_Header/Main_Product_Header/Z_Velocity)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="MPH_Vector_Source" criticality="Error" description="Vector_Source mismatch">
+    <ct:ValueExpressionDbl><![CDATA[rtrim(str(/mph/vector_source))]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[str(/Earth_Explorer_Header/Variable_Header/Main_Product_Header/Vector_Source)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="MPH_Utc_Sbt_Time" criticality="Error" description="Utc_Sbt_Time mismatch">
+    <ct:ValueExpressionDbl><![CDATA[float(/mph/utc_sbt_time)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[float(/Earth_Explorer_Header/Variable_Header/Main_Product_Header/Utc_Sbt_Time)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="MPH_Sat_Binary_Time" criticality="Error" description="Sat_Binary_Time mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/mph/sat_binary_time)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Main_Product_Header/Sat_Binary_Time)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="MPH_Leap_Utc" criticality="Error" description="Leap_Utc mismatch">
+    <ct:ValueExpressionDbl><![CDATA[float(/mph/leap_utc)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[float(/Earth_Explorer_Header/Variable_Header/Main_Product_Header/Leap_Utc)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="MPH_Leap_Sign" criticality="Error" description="Leap_Sign mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/mph/leap_sign)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Main_Product_Header/Leap_Sign)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="MPH_Leap_Err" criticality="Error" description="Leap_Err mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/mph/leap_err) != 0]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Main_Product_Header/Leap_Err) != 0]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="MPH_Product_Err" criticality="Error" description="Product_Err mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/mph/product_err) != 0]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Main_Product_Header/Product_Err) != 0]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="MPH_Tot_Size" criticality="Error" description="Tot_Size mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/mph/tot_size)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Main_Product_Header/Tot_Size)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="MPH_Sph_Size" criticality="Error" description="Sph_Size mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/mph/sph_size)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Main_Product_Header/Sph_Size)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="MPH_Num_Dsd" criticality="Error" description="Num_Dsd mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/mph/num_dsd)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Main_Product_Header/Num_Dsd)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="MPH_Dsd_Size" criticality="Error" description="Dsd_Size mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/mph/dsd_size)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Main_Product_Header/Dsd_Size)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="MPH_Num_Data_Sets" criticality="Error" description="Num_Data_Sets mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/mph/num_data_sets)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Main_Product_Header/Num_Data_Sets)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Sph_Descriptor" criticality="Error" description="Sph_Descriptor mismatch">
+    <ct:ValueExpressionDbl><![CDATA[trim(str(/sph/sph_descriptor))]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[trim(str(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/Sph_Descriptor))]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Start_Lat" criticality="Error" description="Start_Lat mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/start_lat)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/Start_Lat)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Start_Long" criticality="Error" description="Start_Long mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/start_long)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/Start_Long)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Stop_Lat" criticality="Error" description="Stop_Lat mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/stop_lat)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/Stop_Lat)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Stop_Long" criticality="Error" description="Stop_Long mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/stop_long)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/Stop_Long)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Sat_Track" criticality="Error" description="Sat_Track mismatch">
+    <ct:ValueExpressionDbl><![CDATA[float(/sph/sat_track)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[float(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/Sat_Track)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Base_Laser_Frequency" criticality="Error" description="Base_Laser_Frequency mismatch">
+    <ct:ValueExpressionDbl><![CDATA[float(/sph/base_laser_frequency)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[float(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/Base_Laser_Frequency)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Total_Num_of_Observations" criticality="Error" description="Total_Num_of_Observations mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/total_num_of_observations)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/Total_Num_of_Observations)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Num_Valid_Observations" criticality="Error" description="Num_Valid_Observations mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/num_valid_observations)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/Num_Valid_Observations)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_N_Max" criticality="Error" description="N_Max mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/n_max)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/N_Max)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Total_Num_of_Measurements" criticality="Error" description="Total_Num_of_Measurements mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/total_num_of_measurements)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/Total_Num_of_Measurements)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Num_Measurement_Data_Present" criticality="Error" description="Num_Measurement_Data_Present mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/num_measurement_data_present)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/Num_Measurement_Data_Present)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Num_Mie_Measurement_Sp_Valid" criticality="Error" description="Num_Mie_Measurement_Sp_Valid mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/num_mie_measurement_sp_valid)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/Num_Mie_Measurement_Sp_Valid)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Num_Rayleigh_Measurement_Sp_Valid" criticality="Error" description="Num_Rayleigh_Measurement_Sp_Valid mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/num_rayleigh_measurement_sp_valid)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/Num_Rayleigh_Measurement_Sp_Valid)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Num_Measurement_Laser_Freq_Locked" criticality="Error" description="Num_Measurement_Laser_Freq_Locked mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/num_measurement_laser_freq_locked)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/Num_Measurement_Laser_Freq_Locked)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Num_Measurement_Valid" criticality="Error" description="Num_Measurement_Valid mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/num_measurement_valid)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/Num_Measurement_Valid)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>  
+  <ct:CrossFileTest name="SPH_Num_Measurement_Sat_on_Target" criticality="Error" description="Num_Measurement_Sat_on_Target mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/num_measurement_sat_on_target)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/Num_Measurement_Sat_on_Target)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Total_Num_of_Reference_Pulses" criticality="Error" description="Total_Num_of_Reference_Pulses mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/total_num_of_reference_pulses)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/Total_Num_of_Reference_Pulses)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Num_Mie_Reference_Pulses_Present" criticality="Error" description="Num_Mie_Reference_Pulses_Present mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/num_mie_reference_pulses_present)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/Num_Mie_Reference_Pulses_Present)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Num_Rayleigh_Reference_Pulses_Present" criticality="Error" description="Num_Rayleigh_Reference_Pulses_Present mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/num_rayleigh_reference_pulses_present)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/Num_Rayleigh_Reference_Pulses_Present)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Num_Mie_Reference_Pulse_Sp_Valid" criticality="Error" description="Num_Mie_Reference_Pulse_Sp_Valid mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/num_mie_reference_pulse_sp_valid)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/Num_Mie_Reference_Pulse_Sp_Valid)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Num_Rayleigh_Reference_Pulse_Sp_Valid" criticality="Error" description="Num_Rayleigh_Reference_Pulse_Sp_Valid mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/num_rayleigh_reference_pulse_sp_valid)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/Num_Rayleigh_Reference_Pulse_Sp_Valid)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Num_Reference_Pulse_Laser_Freq_Locked" criticality="Error" description="Num_Reference_Pulse_Laser_Freq_Locked mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/num_reference_pulse_laser_freq_locked)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/Num_Reference_Pulse_Laser_Freq_Locked)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Isp_TF_CRC_Errors_Significant" criticality="Error" description="Isp_TF_CRC_Errors_Significant mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/isp_tf_crc_errors_significant)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/Isp_TF_CRC_Errors_Significant)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Missing_ISPs_Significant" criticality="Error" description="Missing_ISPs_Significant mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/missing_isps_significant)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/Missing_ISPs_Significant)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_ISP_CRC_Errors_Significant" criticality="Error" description="ISP_CRC_Errors_Significant mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/isp_crc_errors_significant)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/ISP_CRC_Errors_Significant)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Rs_Corrections_Significant" criticality="Error" description="Rs_Corrections_Significant mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/rs_corrections_significant)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/Rs_Corrections_Significant)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Num_TF_CRC_Error_Isps" criticality="Error" description="Num_TF_CRC_Error_Isps mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/num_tf_crc_error_isps)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/Num_TF_CRC_Error_Isps)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_TF_CRC_Error_Isps_Thresh" criticality="Error" description="TF_CRC_Error_Isps_Thresh mismatch">
+    <ct:ValueExpressionDbl><![CDATA[float(/sph/tf_crc_error_isps_thresh)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[float(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/TF_CRC_Error_Isps_Thresh)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Number_Missing_Isps" criticality="Error" description="Number_Missing_Isps mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/number_missing_isps)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/Number_Missing_Isps)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Missing_Isps_Thresh" criticality="Error" description="Missing_Isps_Thresh mismatch">
+    <ct:ValueExpressionDbl><![CDATA[float(/sph/missing_isps_thresh)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[float(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/Missing_Isps_Thresh)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Num_ISP_CRC_Errors" criticality="Error" description="Num_ISP_CRC_Errors mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/num_isp_crc_errors)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/Num_ISP_CRC_Errors)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_ISP_CRC_Thresh" criticality="Error" description="ISP_CRC_Thresh mismatch">
+    <ct:ValueExpressionDbl><![CDATA[float(/sph/isp_crc_thresh)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[float(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/ISP_CRC_Thresh)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Num_Rs_Isps" criticality="Error" description="Num_Rs_Isps mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/num_rs_isps)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/Num_Rs_Isps)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Rs_Thresh" criticality="Error" description="Rs_Thresh mismatch">
+    <ct:ValueExpressionDbl><![CDATA[float(/sph/rs_thresh)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[float(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/Rs_Thresh)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Intersect_Start_Lat" criticality="Error" description="Intersect_Start_Lat mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/intersect_start_lat)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/Intersect_Start_Lat)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Intersect_Start_Long" criticality="Error" description="Intersect_Start_Long mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/intersect_start_long)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/Intersect_Start_Long)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Intersect_Stop_Lat" criticality="Error" description="Intersect_Stop_Lat mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/intersect_stop_lat)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/Intersect_Stop_Lat)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Intersect_Stop_Long" criticality="Error" description="Intersect_Stop_Long mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/intersect_stop_long)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/Intersect_Stop_Long)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_N_Max_Actual" criticality="Error" description="N_Max_Actual mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/n_max_actual)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/N_Max_Actual)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Num_Mie_Observations_Used" criticality="Error" description="Num_Mie_Observations_Used mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/num_mie_observations_used)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/Num_Mie_Observations_Used)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Num_Rayleigh_Observations_Used" criticality="Error" description="Num_Rayleigh_Observations_Used mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/num_rayleigh_observations_used)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/Num_Rayleigh_Observations_Used)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Num_Mie_Measurements_Used" criticality="Error" description="Num_Mie_Measurements_Used mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/num_mie_measurements_used)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/Num_Mie_Measurements_Used)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Num_Rayleigh_Measurements_Used" criticality="Error" description="Num_Rayleigh_Measurements_Used mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/num_rayleigh_measurements_used)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/Num_Rayleigh_Measurements_Used)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Num_Mie_Reference_Pulses_Used" criticality="Error" description="Num_Mie_Reference_Pulses_Used mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/num_mie_reference_pulses_used)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/Num_Mie_Reference_Pulses_Used)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Num_Rayleigh_Reference_Pulses_Used" criticality="Error" description="Num_Rayleigh_Reference_Pulses_Used mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/num_rayleigh_reference_pulses_used)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/Num_Rayleigh_Reference_Pulses_Used)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Num_Mie_Zero_Wind_Detected" criticality="Error" description="Num_Mie_Zero_Wind_Detected mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/num_mie_zero_wind_detected)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/Num_Mie_Zero_Wind_Detected)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Num_Rayleigh_Zero_Wind_Detected" criticality="Error" description="Num_Rayleigh_Zero_Wind_Detected mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/num_rayleigh_zero_wind_detected)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/Num_Rayleigh_Zero_Wind_Detected)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Num_Mie_Ground_Echo_Bins" criticality="Error" description="Num_Mie_Ground_Echo_Bins mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/num_mie_ground_echo_bins)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/Num_Mie_Ground_Echo_Bins)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Num_Rayleigh_Ground_Echo_Bins" criticality="Error" description="Num_Rayleigh_Ground_Echo_Bins mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/num_rayleigh_ground_echo_bins)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/Num_Rayleigh_Ground_Echo_Bins)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Total_Num_of_Measurement_Laser_Freq_Unlocked" criticality="Error" description="Total_Num_of_Measurement_Laser_Freq_Unlocked mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/total_num_of_measurement_laser_freq_unlocked)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/Total_Num_of_Measurement_Laser_Freq_Unlocked)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Total_Num_of_Reference_Pulse_Laser_Freq_Unlocked" criticality="Error" description="Total_Num_of_Reference_Pulse_Laser_Freq_Unlocked mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/total_num_of_reference_pulse_laser_freq_unlocked)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/Total_Num_of_Reference_Pulse_Laser_Freq_Unlocked)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Total_Num_of_Sat_Not_on_Target_Measurements" criticality="Error" description="Total_Num_of_Sat_Not_on_Target_Measurements mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/total_num_of_sat_not_on_target_measurements)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/Total_Num_of_Sat_Not_on_Target_Measurements)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Total_Num_of_Corrupt_Mie_Measurements" criticality="Error" description="Total_Num_of_Corrupt_Mie_Measurements mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/total_num_of_corrupt_mie_measurements)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/Total_Num_of_Corrupt_Mie_Measurements)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Total_Num_of_Corrupt_Rayleigh_Measurements" criticality="Error" description="Total_Num_of_Corrupt_Rayleigh_Measurements mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/total_num_of_corrupt_rayleigh_measurements)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/Total_Num_of_Corrupt_Rayleigh_Measurements)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Total_Num_of_Corrupt_Mie_Reference_Pulses" criticality="Error" description="Total_Num_of_Corrupt_Mie_Reference_Pulses mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/total_num_of_corrupt_mie_reference_pulses)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/Total_Num_of_Corrupt_Mie_Reference_Pulses)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Total_Num_of_Corrupt_Rayleigh_Reference_Pulses" criticality="Error" description="Total_Num_of_Corrupt_Rayleigh_Reference_Pulses mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/total_num_of_corrupt_rayleigh_reference_pulses)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/Total_Num_of_Corrupt_Rayleigh_Reference_Pulses)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_NF_Order" criticality="Error" description="NF_Order mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/nf_order)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/NF_Order)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Max_Num_Prof" criticality="Error" description="Max_Num_Prof mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/max_num_prof)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/Max_Num_Prof)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Num_Valid_Profiles" criticality="Error" description="Num_Valid_Profiles mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/num_valid_profiles)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/Num_Valid_Profiles)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Num_BRC" criticality="Error" description="Num_BRC mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/num_brc)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/Num_BRC)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_M_Mie" criticality="Error" description="M_Mie mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/m_mie)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/M_Mie)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_M_Rayleigh" criticality="Error" description="M_Rayleigh mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/m_rayleigh)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/M_Rayleigh)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_M_Meas" criticality="Error" description="M_Meas mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/m_meas)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/M_Meas)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Num_Valid_Mie_Profiles" criticality="Error" description="Num_Valid_Mie_Profiles mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/num_valid_mie_profiles)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/Num_Valid_Mie_Profiles)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Num_Valid_Rayleigh_Profiles" criticality="Error" description="Num_Valid_Rayleigh_Profiles mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/num_valid_rayleigh_profiles)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/Num_Valid_Rayleigh_Profiles)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Num_Clear_Mie_Profiles" criticality="Error" description="Num_Clear_Mie_Profiles mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/num_clear_mie_profiles)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/Num_Clear_Mie_Profiles)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Num_Clear_Rayleigh_Profiles" criticality="Error" description="Num_Clear_Rayleigh_Profiles mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/num_clear_rayleigh_profiles)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/Num_Clear_Rayleigh_Profiles)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Num_Cloud_Mie_Profiles" criticality="Error" description="Num_Cloud_Mie_Profiles mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/num_cloud_mie_profiles)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/Num_Cloud_Mie_Profiles)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Num_Cloud_Rayleigh_Profiles" criticality="Error" description="Num_Cloud_Rayleigh_Profiles mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/num_cloud_rayleigh_profiles)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/Num_Cloud_Rayleigh_Profiles)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Num_Mie_Prof_Warm_Pulses" criticality="Error" description="Num_Mie_Prof_Warm_Pulses mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/num_mie_prof_warm_pulses)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/Num_Mie_Prof_Warm_Pulses)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Num_Rayleigh_Prof_Warm_Pulses" criticality="Error" description="Num_Rayleigh_Prof_Warm_Pulses mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/num_rayleigh_prof_warm_pulses)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/Num_Rayleigh_Prof_Warm_Pulses)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Num_Profiles_Surface_Mie" criticality="Error" description="Num_Profiles_Surface_Mie mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/num_profiles_surface_mie)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/Num_Profiles_Surface_Mie)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Num_Profiles_Surface_Ray" criticality="Error" description="Num_Profiles_Surface_Ray mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/num_profiles_surface_ray)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/Num_Profiles_Surface_Ray)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Num_Valid_Obs_Prof_L1B_Mie" criticality="Error" description="Num_Valid_Obs_Prof_L1B_Mie mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/num_valid_obs_prof_l1b_mie)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/Num_Valid_Obs_Prof_L1B_Mie)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Num_Valid_Obs_Prof_L1B_Ray" criticality="Error" description="Num_Valid_Obs_Prof_L1B_Ray mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/num_valid_obs_prof_l1b_ray)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/Num_Valid_Obs_Prof_L1B_Ray)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Num_Valid_Meas_Prof_L1B_Mie" criticality="Error" description="Num_Valid_Meas_Prof_L1B_Mie mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/num_valid_meas_prof_l1b_mie)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/Num_Valid_Meas_Prof_L1B_Mie)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Num_Valid_Meas_Prof_L1B_Ray" criticality="Error" description="Num_Valid_Meas_Prof_L1B_Ray mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/num_valid_meas_prof_l1b_ray)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/Num_Valid_Meas_Prof_L1B_Ray)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Num_Valid_Obs_Bins_L1B_Mie" criticality="Error" description="Num_Valid_Obs_Bins_L1B_Mie mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/num_valid_obs_bins_l1b_mie)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/Num_Valid_Obs_Bins_L1B_Mie)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Num_Valid_Obs_Bins_L1B_Ray" criticality="Error" description="Num_Valid_Obs_Bins_L1B_Ray mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/num_valid_obs_bins_l1b_ray)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/Num_Valid_Obs_Bins_L1B_Ray)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Num_Valid_Meas_Bins_L1B_Mie" criticality="Error" description="Num_Valid_Meas_Bins_L1B_Mie mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/num_valid_meas_bins_l1b_mie)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/Num_Valid_Meas_Bins_L1B_Mie)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Num_Valid_Meas_Bins_L1B_Ray" criticality="Error" description="Num_Valid_Meas_Bins_L1B_Ray mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/num_valid_meas_bins_l1b_ray)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/Num_Valid_Meas_Bins_L1B_Ray)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Num_Invalid_Meas_Prof_L1B_Mie" criticality="Error" description="Num_Invalid_Meas_Prof_L1B_Mie mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/num_invalid_meas_prof_l1b_mie)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/Num_Invalid_Meas_Prof_L1B_Mie)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Num_Invalid_Meas_Prof_L1B_Ray" criticality="Error" description="Num_Invalid_Meas_Prof_L1B_Ray mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/num_invalid_meas_prof_l1b_ray)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/Num_Invalid_Meas_Prof_L1B_Ray)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Num_Invalid_Meas_Prof_L2B_Mie" criticality="Error" description="Num_Invalid_Meas_Prof_L2B_Mie mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/num_invalid_meas_prof_l2b_mie)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/Num_Invalid_Meas_Prof_L2B_Mie)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Num_Invalid_Meas_Prof_L2B_Ray" criticality="Error" description="Num_Invalid_Meas_Prof_L2B_Ray mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/num_invalid_meas_prof_l2b_ray)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/Num_Invalid_Meas_Prof_L2B_Ray)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Num_Invalid_Meas_Bins_L1B_Mie" criticality="Error" description="Num_Invalid_Meas_Bins_L1B_Mie mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/num_invalid_meas_bins_l1b_mie)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/Num_Invalid_Meas_Bins_L1B_Mie)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Num_Invalid_Meas_Bins_L1B_Ray" criticality="Error" description="Num_Invalid_Meas_Bins_L1B_Ray mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/num_invalid_meas_bins_l1b_ray)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/Num_Invalid_Meas_Bins_L1B_Ray)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Num_Invalid_Meas_Bins_L2B_Mie" criticality="Error" description="Num_Invalid_Meas_Bins_L2B_Mie mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/num_invalid_meas_bins_l2b_mie)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/Num_Invalid_Meas_Bins_L2B_Mie)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Num_Invalid_Meas_Bins_L2B_Ray" criticality="Error" description="Num_Invalid_Meas_Bins_L2B_Ray mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/num_invalid_meas_bins_l2b_ray)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/Num_Invalid_Meas_Bins_L2B_Ray)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Num_Valid_Obs_L2B_Mie" criticality="Error" description="Num_Valid_Obs_L2B_Mie mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/num_valid_obs_l2b_mie)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/Num_Valid_Obs_L2B_Mie)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Num_Valid_Obs_L2B_Ray" criticality="Error" description="Num_Valid_Obs_L2B_Ray mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/num_valid_obs_l2b_ray)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/Num_Valid_Obs_L2B_Ray)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Num_Invalid_Obs_L2C_Mie" criticality="Error" description="Num_Invalid_Obs_L2C_Mie mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/num_invalid_obs_l2c_mie)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/Num_Invalid_Obs_L2C_Mie)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Num_Invalid_Obs_L2C_Ray" criticality="Error" description="Num_Invalid_Obs_L2C_Ray mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/num_invalid_obs_l2c_ray)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/Num_Invalid_Obs_L2C_Ray)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_AuxClim_Ref_Name" criticality="Error" description="AuxClim_Ref_Name mismatch">
+    <ct:ValueExpressionDbl><![CDATA[trim(str(/sph/auxclim_ref_name))]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[str(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/AuxClim_Ref_Name)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Ref_RBC_Suite" criticality="Error" description="Ref_RBC_Suite mismatch">
+    <ct:ValueExpressionDbl><![CDATA[trim(str(/sph/ref_rbc_suite))]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[str(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/Ref_RBC_Suite)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Num_P" criticality="Error" description="Num_P mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/num_p)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/Num_P)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Num_T" criticality="Error" description="Num_T mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/num_t)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/Num_T)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Num_F" criticality="Error" description="Num_F mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/num_f)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/Num_F)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Num_FP" criticality="Error" description="Num_FP mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/num_fp)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/Num_FP)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Num_Fd" criticality="Error" description="Num_Fd mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/num_fd)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/Num_Fd)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Num_RR" criticality="Error" description="Num_RR mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/num_rr)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/Num_RR)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_P_min" criticality="Error" description="P_min mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/p_min)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/P_min)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_P_max" criticality="Error" description="P_max mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/p_max)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/P_max)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_T_min" criticality="Error" description="T_min mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/t_min)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/T_min)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_T_max" criticality="Error" description="T_max mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/t_max)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/T_max)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Laser_Freq_Offset_Start" criticality="Error" description="Laser_Freq_Offset_Start mismatch">
+    <ct:ValueExpressionDbl><![CDATA[float(/sph/laser_freq_offset_start)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[float(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/Laser_Freq_Offset_Start)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Laser_Freq_Offset_Stop" criticality="Error" description="Laser_Freq_Offset_Stop mismatch">
+    <ct:ValueExpressionDbl><![CDATA[float(/sph/laser_freq_offset_stop)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[float(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/Laser_Freq_Offset_Stop)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Total_Num_of_Corrupt_Mie_Meas" criticality="Error" description="Total_Num_of_Corrupt_Mie_Meas mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/total_num_of_corrupt_mie_meas)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/Total_Num_of_Corrupt_Mie_Meas)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Total_Num_of_Corrupt_Ray_Meas" criticality="Error" description="Total_Num_of_Corrupt_Ray_Meas mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/total_num_of_corrupt_ray_meas)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/Total_Num_of_Corrupt_Ray_Meas)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Total_Num_of_Corrupt_Mie_RefP" criticality="Error" description="Total_Num_of_Corrupt_Mie_RefP mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/total_num_of_corrupt_mie_refp)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/Total_Num_of_Corrupt_Mie_RefP)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Total_Num_of_Corrupt_Ray_RefP" criticality="Error" description="Total_Num_of_Corrupt_Ray_RefP mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/total_num_of_corrupt_ray_refp)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/Total_Num_of_Corrupt_Ray_RefP)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Average_Error_FP_Response_A" criticality="Error" description="Average_Error_FP_Response_A mismatch">
+    <ct:ValueExpressionDbl><![CDATA[float(/sph/average_error_fp_response_a)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[float(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/Average_Error_FP_Response_A)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Average_Error_FP_Response_B" criticality="Error" description="Average_Error_FP_Response_B mismatch">
+    <ct:ValueExpressionDbl><![CDATA[float(/sph/average_error_fp_response_b)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[float(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/Average_Error_FP_Response_B)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Ref_NWP_Suite" criticality="Error" description="Ref_NWP_Suite mismatch">
+    <ct:ValueExpressionDbl><![CDATA[trim(str(/sph/ref_nwp_suite))]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[str(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/Ref_NWP_Suite)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Model_Timestep" criticality="Error" description="Model_Timestep mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/model_timestep)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/Model_Timestep)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Model_Grid_Type" criticality="Error" description="Model_Grid_Type mismatch">
+    <ct:ValueExpressionDbl><![CDATA[trim(str(/sph/model_grid_type))]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[str(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/Model_Grid_Type)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Model_Resol_Par1" criticality="Error" description="Model_Resol_Par1 mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/model_resol_par1)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/Model_Resol_Par1)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Model_Resol_Par2" criticality="Error" description="Model_Resol_Par2 mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/model_resol_par2)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/Model_Resol_Par2)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Num_of_Model_Layers" criticality="Error" description="Num_of_Model_Layers mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/num_of_model_layers)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/Num_of_Model_Layers)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Num_Records_in_DS1" criticality="Error" description="Num_Records_in_DS1 mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/num_records_in_ds1)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/Num_Records_in_DS1)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Num_Records_in_DS2" criticality="Error" description="Num_Records_in_DS2 mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/num_records_in_ds2)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/Num_Records_in_DS2)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Num_Avail_L1B_Obs" criticality="Error" description="Num_Avail_L1B_Obs mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/num_avail_l1b_obs)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/Num_Avail_L1B_Obs)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Num_Missing_L1B_Obs" criticality="Error" description="Num_Missing_L1B_Obs mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/num_missing_l1b_obs)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/Num_Missing_L1B_Obs)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Num_Computed_Locations" criticality="Error" description="Num_Computed_Locations mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/num_computed_locations)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/Num_Computed_Locations)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Num_Input_Files" criticality="Error" description="Num_Input_Files mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/num_input_files)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/Num_Input_Files)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Num_Files_Predict_Orbit" criticality="Error" description="Num_Files_Predict_Orbit mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/num_files_predict_orbit)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/Num_Files_Predict_Orbit)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Ref_CAL_Suite" criticality="Error" description="Ref_CAL_Suite mismatch">
+    <ct:ValueExpressionDbl><![CDATA[trim(str(/sph/ref_cal_suite))]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[str(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/Ref_CAL_Suite)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Num_fd" criticality="Error" description="Num_fd mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/num_fd)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/Num_fd)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_fd_min" criticality="Error" description="fd_min mismatch">
+    <ct:ValueExpressionDbl><![CDATA[float(/sph/fd_min)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[float(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/fd_min)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_fd_max" criticality="Error" description="fd_max mismatch">
+    <ct:ValueExpressionDbl><![CDATA[float(/sph/fd_max)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[float(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/fd_max)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_NumMeasurements" criticality="Error" description="Num_NumMeasurements mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/NumMeasurements)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/NumMeasurements)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_NumMieGroups" criticality="Error" description="Num_NumMieGroups mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/NumMieGroups)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/NumMieGroups)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_NumRayleighGroups" criticality="Error" description="Num_NumRayleighGroups mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/NumRayleighGroups)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/NumRayleighGroups)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_NumMieWindResults" criticality="Error" description="Num_NumMieWindResults mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/NumMieWindResults)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/NumMieWindResults)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_NumRayleighWindResults" criticality="Error" description="Num_NumRayleighWindResults mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/NumRayleighWindResults)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/NumRayleighWindResults)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_NumMieProfiles" criticality="Error" description="Num_NumMieProfiles mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/NumMieProfiles)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/NumMieProfiles)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_NumRayleighProfiles" criticality="Error" description="Num_NumRayleighProfiles mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/NumRayleighProfiles)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/NumRayleighProfiles)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_NumAMDprofiles" criticality="Error" description="Num_NumAMDprofiles mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/NumAMDprofiles)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/NumAMDprofiles)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_intersect_start_lat" criticality="Error" description="Num_intersect_start_lat mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/intersect_start_lat)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/intersect_start_lat)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_intersect_start_long" criticality="Error" description="Num_intersect_start_long mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/intersect_start_long)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/intersect_start_long)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_intersect_stop_lat" criticality="Error" description="Num_intersect_stop_lat mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/intersect_stop_lat)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/intersect_stop_lat)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_intersect_stop_long" criticality="Error" description="Num_intersect_stop_long mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/intersect_stop_long)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/intersect_stop_long)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_sat_track" criticality="Error" description="Num_sat_track mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/sat_track)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/sat_track)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Num_Valid_Clear_Mie_Profiles" criticality="Error" description="Num_Num_Valid_Clear_Mie_Profiles mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/Num_Valid_Clear_Mie_Profiles)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/Num_Valid_Clear_Mie_Profiles)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Num_Valid_Clear_Rayleigh_Prof" criticality="Error" description="Num_Num_Valid_Clear_Rayleigh_Prof mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/Num_Valid_Clear_Rayleigh_Prof)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/Num_Valid_Clear_Rayleigh_Prof)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Num_Valid_Cloud_Mie_Profiles" criticality="Error" description="Num_Num_Valid_Cloud_Mie_Profiles mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/Num_Valid_Cloud_Mie_Profiles)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/Num_Valid_Cloud_Mie_Profiles)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Num_Valid_Cloud_Rayleigh_Prof" criticality="Error" description="Num_Num_Valid_Cloud_Rayleigh_Prof mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/Num_Valid_Cloud_Rayleigh_Prof)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/Num_Valid_Cloud_Rayleigh_Prof)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Num_Invalid_Clear_Mie_Profiles" criticality="Error" description="Num_Num_Invalid_Clear_Mie_Profiles mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/Num_Invalid_Clear_Mie_Profiles)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/Num_Invalid_Clear_Mie_Profiles)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Num_Invalid_Clear_Rayleigh_Prof" criticality="Error" description="Num_Num_Invalid_Clear_Rayleigh_Prof mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/Num_Invalid_Clear_Rayleigh_Prof)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/Num_Invalid_Clear_Rayleigh_Prof)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Num_Invalid_Cloud_Mie_Profiles" criticality="Error" description="Num_Num_Invalid_Cloud_Mie_Profiles mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/Num_Invalid_Cloud_Mie_Profiles)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/Num_Invalid_Cloud_Mie_Profiles)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Num_Invalid_Cloud_Rayleigh_Prof" criticality="Error" description="Num_Num_Invalid_Cloud_Rayleigh_Prof mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/Num_Invalid_Cloud_Rayleigh_Prof)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/Num_Invalid_Cloud_Rayleigh_Prof)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Num_Profiles_Surface_Mie" criticality="Error" description="Num_Num_Profiles_Surface_Mie mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/Num_Profiles_Surface_Mie)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/Num_Profiles_Surface_Mie)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Num_Profiles_Surface_Ray" criticality="Error" description="Num_Num_Profiles_Surface_Ray mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/Num_Profiles_Surface_Ray)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/Num_Profiles_Surface_Ray)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Num_Valid_Clear_Winds_L2B_Mie" criticality="Error" description="Num_Num_Valid_Clear_Winds_L2B_Mie mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/Num_Valid_Clear_Winds_L2B_Mie)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/Num_Valid_Clear_Winds_L2B_Mie)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Num_Valid_Clear_Winds_L2B_Ray" criticality="Error" description="Num_Num_Valid_Clear_Winds_L2B_Ray mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/Num_Valid_Clear_Winds_L2B_Ray)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/Num_Valid_Clear_Winds_L2B_Ray)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Num_Valid_Cloud_Winds_L2B_Mie" criticality="Error" description="Num_Num_Valid_Cloud_Winds_L2B_Mie mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/Num_Valid_Cloud_Winds_L2B_Mie)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/Num_Valid_Cloud_Winds_L2B_Mie)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Num_Valid_Cloud_Winds_L2B_Ray" criticality="Error" description="Num_Num_Valid_Cloud_Winds_L2B_Ray mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/Num_Valid_Cloud_Winds_L2B_Ray)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/Num_Valid_Cloud_Winds_L2B_Ray)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Num_Invalid_Clear_Winds_L2B_Mie" criticality="Error" description="Num_Num_Invalid_Clear_Winds_L2B_Mie mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/Num_Invalid_Clear_Winds_L2B_Mie)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/Num_Invalid_Clear_Winds_L2B_Mie)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Num_Invalid_Clear_Winds_L2B_Ray" criticality="Error" description="Num_Num_Invalid_Clear_Winds_L2B_Ray mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/Num_Invalid_Clear_Winds_L2B_Ray)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/Num_Invalid_Clear_Winds_L2B_Ray)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Num_Invalid_Cloud_Winds_L2B_Mie" criticality="Error" description="Num_Num_Invalid_Cloud_Winds_L2B_Mie mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/Num_Invalid_Cloud_Winds_L2B_Mie)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/Num_Invalid_Cloud_Winds_L2B_Mie)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Num_Invalid_Cloud_Winds_L2B_Ray" criticality="Error" description="Num_Num_Invalid_Cloud_Winds_L2B_Ray mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/Num_Invalid_Cloud_Winds_L2B_Ray)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/Num_Invalid_Cloud_Winds_L2B_Ray)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Num_Valid_Clear_Winds_L2C_Mie" criticality="Error" description="Num_Num_Valid_Clear_Winds_L2C_Mie mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/Num_Valid_Clear_Winds_L2C_Mie)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/Num_Valid_Clear_Winds_L2C_Mie)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Num_Valid_Clear_Winds_L2C_Ray" criticality="Error" description="Num_Num_Valid_Clear_Winds_L2C_Ray mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/Num_Valid_Clear_Winds_L2C_Ray)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/Num_Valid_Clear_Winds_L2C_Ray)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Num_Valid_Cloud_Winds_L2C_Mie" criticality="Error" description="Num_Num_Valid_Cloud_Winds_L2C_Mie mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/Num_Valid_Cloud_Winds_L2C_Mie)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/Num_Valid_Cloud_Winds_L2C_Mie)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Num_Valid_Cloud_Winds_L2C_Ray" criticality="Error" description="Num_Num_Valid_Cloud_Winds_L2C_Ray mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/Num_Valid_Cloud_Winds_L2C_Ray)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/Num_Valid_Cloud_Winds_L2C_Ray)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Num_Invalid_Clear_Winds_L2C_Mie" criticality="Error" description="Num_Num_Invalid_Clear_Winds_L2C_Mie mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/Num_Invalid_Clear_Winds_L2C_Mie)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/Num_Invalid_Clear_Winds_L2C_Mie)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Num_Invalid_Clear_Winds_L2C_Ray" criticality="Error" description="Num_Num_Invalid_Clear_Winds_L2C_Ray mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/Num_Invalid_Clear_Winds_L2C_Ray)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/Num_Invalid_Clear_Winds_L2C_Ray)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Num_Invalid_Cloud_Winds_L2C_Mie" criticality="Error" description="Num_Num_Invalid_Cloud_Winds_L2C_Mie mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/Num_Invalid_Cloud_Winds_L2C_Mie)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/Num_Invalid_Cloud_Winds_L2C_Mie)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>
+  <ct:CrossFileTest name="SPH_Num_Invalid_Cloud_Winds_L2C_Ray" criticality="Error" description="Num_Num_Invalid_Cloud_Winds_L2C_Ray mismatch">
+    <ct:ValueExpressionDbl><![CDATA[int(/sph/Num_Invalid_Cloud_Winds_L2C_Ray)]]></ct:ValueExpressionDbl>
+    <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/Num_Invalid_Cloud_Winds_L2C_Ray)]]></ct:ValueExpressionHdr>
+  </ct:CrossFileTest>  
+</ct:Tests>

@@ -1,0 +1,283 @@
+<?xml version="1.0"?>
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="binary" last-modified="2015-04-20" name="Level_1A_Geolocation_ADSR_04_04">
+  <cd:Field name="start_of_observation_time">
+    <cd:Time timeformat="binary_envisat_datetime">
+      <cd:Description>Start time at start of BRC</cd:Description>
+      <ct:NamedTest id="RangeSecond" path="seconds"/>
+      <ct:NamedTest id="RangeMicroSecond" path="microseconds"/>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="raw_instrument_function">
+    <cd:Integer>
+      <cd:Description>Raw instrument function (binary value in the telemetry)</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="observation_aocs">
+    <cd:Record>
+      <cd:Description>Level 1A Observation AOCS</cd:Description>
+      <cd:Field name="observation_centroid_time">
+        <cd:Time timeformat="binary_envisat_datetime">
+          <cd:Description>Observation Centroid Time</cd:Description>
+          <ct:NamedTest id="RangeSecond" path="seconds"/>
+          <ct:NamedTest id="RangeMicroSecond" path="microseconds"/>
+        </cd:Time>
+      </cd:Field>
+      <cd:Field name="x_position">
+        <cd:Float>
+          <cd:Description>X position in Earth-fixed reference</cd:Description>
+          <cd:Unit>m</cd:Unit>
+          <cd:BitSize>64</cd:BitSize>
+          <cd:NativeType>double</cd:NativeType>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="y_position">
+        <cd:Float>
+          <cd:Description>Y position in Earth-fixed reference</cd:Description>
+          <cd:Unit>m</cd:Unit>
+          <cd:BitSize>64</cd:BitSize>
+          <cd:NativeType>double</cd:NativeType>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="z_position">
+        <cd:Float>
+          <cd:Description>Z position in Earth-fixed reference</cd:Description>
+          <cd:Unit>m</cd:Unit>
+          <cd:BitSize>64</cd:BitSize>
+          <cd:NativeType>double</cd:NativeType>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="x_velocity">
+        <cd:Float>
+          <cd:Description>X velocity in Earth-fixed reference</cd:Description>
+          <cd:Unit>m/s</cd:Unit>
+          <cd:BitSize>64</cd:BitSize>
+          <cd:NativeType>double</cd:NativeType>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="y_velocity">
+        <cd:Float>
+          <cd:Description>Y velocity in Earth-fixed reference</cd:Description>
+          <cd:Unit>m/s</cd:Unit>
+          <cd:BitSize>64</cd:BitSize>
+          <cd:NativeType>double</cd:NativeType>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="z_velocity">
+        <cd:Float>
+          <cd:Description>Z velocity in Earth-fixed reference</cd:Description>
+          <cd:Unit>m/s</cd:Unit>
+          <cd:BitSize>64</cd:BitSize>
+          <cd:NativeType>double</cd:NativeType>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="roll_angle">
+        <cd:Float>
+          <cd:Description>Roll angle in satellite reference</cd:Description>
+          <cd:Unit>degrees</cd:Unit>
+          <cd:BitSize>64</cd:BitSize>
+          <cd:NativeType>double</cd:NativeType>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="pitch_angle">
+        <cd:Float>
+          <cd:Description>Pitch angle in satellite reference</cd:Description>
+          <cd:Unit>degrees</cd:Unit>
+          <cd:BitSize>64</cd:BitSize>
+          <cd:NativeType>double</cd:NativeType>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="yaw_angle">
+        <cd:Float>
+          <cd:Description>Yaw angle in satellite reference</cd:Description>
+          <cd:Unit>degrees</cd:Unit>
+          <cd:BitSize>64</cd:BitSize>
+          <cd:NativeType>double</cd:NativeType>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="spare_1">
+        <cd:Raw>
+          <cd:Description>Spare</cd:Description>
+          <cd:BitSize>64</cd:BitSize>
+        </cd:Raw>
+        <cd:Hidden/>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="measurement_aocs">
+    <cd:Array>
+      <cd:Dimension>30</cd:Dimension>
+      <cd:Record>
+        <cd:Description>Level 1A Measurement AOCS</cd:Description>
+        <cd:Field name="measurement_centroid_time">
+          <cd:Time timeformat="binary_envisat_datetime">
+            <cd:Description>Measurement Centroid Time</cd:Description>
+            <ct:NamedTest id="RangeSecond" path="seconds"/>
+            <ct:NamedTest id="RangeMicroSecond" path="microseconds"/>
+          </cd:Time>
+        </cd:Field>
+        <cd:Field name="x_position">
+          <cd:Float>
+            <cd:Description>X position in Earth-fixed reference</cd:Description>
+            <cd:Unit>m</cd:Unit>
+            <cd:BitSize>64</cd:BitSize>
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Field>
+        <cd:Field name="y_position">
+          <cd:Float>
+            <cd:Description>Y position in Earth-fixed reference</cd:Description>
+            <cd:Unit>m</cd:Unit>
+            <cd:BitSize>64</cd:BitSize>
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Field>
+        <cd:Field name="z_position">
+          <cd:Float>
+            <cd:Description>Z position in Earth-fixed reference</cd:Description>
+            <cd:Unit>m</cd:Unit>
+            <cd:BitSize>64</cd:BitSize>
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Field>
+        <cd:Field name="x_velocity">
+          <cd:Float>
+            <cd:Description>X velocity in Earth-fixed reference</cd:Description>
+            <cd:Unit>m/s</cd:Unit>
+            <cd:BitSize>64</cd:BitSize>
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Field>
+        <cd:Field name="y_velocity">
+          <cd:Float>
+            <cd:Description>Y velocity in Earth-fixed reference</cd:Description>
+            <cd:Unit>m/s</cd:Unit>
+            <cd:BitSize>64</cd:BitSize>
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Field>
+        <cd:Field name="z_velocity">
+          <cd:Float>
+            <cd:Description>Z velocity in Earth-fixed reference</cd:Description>
+            <cd:Unit>m/s</cd:Unit>
+            <cd:BitSize>64</cd:BitSize>
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Field>
+        <cd:Field name="roll_angle">
+          <cd:Float>
+            <cd:Description>Roll angle in satellite reference</cd:Description>
+            <cd:Unit>degrees</cd:Unit>
+            <cd:BitSize>64</cd:BitSize>
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Field>
+        <cd:Field name="pitch_angle">
+          <cd:Float>
+            <cd:Description>Pitch angle in satellite reference</cd:Description>
+            <cd:Unit>degrees</cd:Unit>
+            <cd:BitSize>64</cd:BitSize>
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Field>
+        <cd:Field name="yaw_angle">
+          <cd:Float>
+            <cd:Description>Yaw angle in satellite reference</cd:Description>
+            <cd:Unit>degrees</cd:Unit>
+            <cd:BitSize>64</cd:BitSize>
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Field>
+        <cd:Field name="spare_2">
+          <cd:Raw>
+            <cd:Description>Spare</cd:Description>
+            <cd:BitSize>64</cd:BitSize>
+          </cd:Raw>
+          <cd:Hidden/>
+        </cd:Field>
+      </cd:Record>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="observation_geolocation">
+    <cd:Record>
+      <cd:Description>Level 1A Observation Geolocation</cd:Description>
+      <cd:Field name="observation_mie_geolocation">
+        <cd:Array>
+          <cd:Dimension>25</cd:Dimension>
+          <cd:NamedType id="Level_1A_Observation_Geolocation_of_Height_Bin"/>
+        </cd:Array>
+      </cd:Field>
+      <cd:Field name="observation_rayleigh_geolocation">
+        <cd:Array>
+          <cd:Dimension>25</cd:Dimension>
+          <cd:NamedType id="Level_1A_Observation_Geolocation_of_Height_Bin"/>
+        </cd:Array>
+      </cd:Field>
+      <cd:Field name="geolocation_of_dem_intersection">
+        <cd:NamedType id="Level_1A_Geolocation_of_DEM_Intersection_03_06"/>
+      </cd:Field>
+      <cd:Field name="line_of_sight_velocity">
+        <cd:Float>
+          <cd:Description>Velocity along the line of sight at the DEM intersection</cd:Description>
+          <cd:Unit>m/s</cd:Unit>
+          <cd:BitSize>64</cd:BitSize>
+          <cd:NativeType>double</cd:NativeType>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="geoid_separation">
+        <cd:Float>
+          <cd:Description>Height of geoid above WGS84 ellipsoid</cd:Description>
+          <cd:Unit>m</cd:Unit>
+          <cd:BitSize>64</cd:BitSize>
+          <cd:NativeType>double</cd:NativeType>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="spare_3">
+        <cd:Raw>
+          <cd:Description>Spare</cd:Description>
+          <cd:BitSize>64</cd:BitSize>
+        </cd:Raw>
+        <cd:Hidden/>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="measurement_geolocation">
+    <cd:Array>
+      <cd:Dimension>30</cd:Dimension>
+      <cd:Record>
+        <cd:Description>Level 1A Measurement Geolocation</cd:Description>
+        <cd:Field name="mie_geolocation">
+          <cd:Array>
+            <cd:Dimension>25</cd:Dimension>
+            <cd:NamedType id="Level_1A_Geolocation_of_Height_Bin"/>
+          </cd:Array>
+        </cd:Field>
+        <cd:Field name="rayleigh_geolocation">
+          <cd:Array>
+            <cd:Dimension>25</cd:Dimension>
+            <cd:NamedType id="Level_1A_Geolocation_of_Height_Bin"/>
+          </cd:Array>
+        </cd:Field>
+        <cd:Field name="geolocation_of_dem_intersection">
+          <cd:NamedType id="Level_1A_Geolocation_of_DEM_Intersection_03_06"/>
+        </cd:Field>
+        <cd:Field name="aocs_los_velocity">
+          <cd:Float>
+            <cd:Description>Velocity along the line-of-sight at the DEM intersection</cd:Description>
+            <cd:Unit>m/s</cd:Unit>
+            <cd:BitSize>64</cd:BitSize>
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Field>
+        <cd:Field name="spare_4">
+          <cd:Raw>
+            <cd:Description>Spare</cd:Description>
+            <cd:BitSize>64</cd:BitSize>
+          </cd:Raw>
+          <cd:Hidden/>
+        </cd:Field>
+      </cd:Record>
+    </cd:Array>
+  </cd:Field>
+</cd:Record>

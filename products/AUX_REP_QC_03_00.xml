@@ -1,0 +1,116 @@
+<?xml version="1.0"?>
+<cd:ProductDefinition id="AUX_REP_QC_03_00" format="xml" last-modified="2015-04-20" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+  <cd:Record format="xml">
+    <cd:Field name="Earth_Explorer_File">
+      <cd:Record namexml="Earth_Explorer_File">
+        <cd:Attribute name="schemaversion"/>
+        <cd:Description>Earth Explorer File</cd:Description>
+        <cd:Field name="Earth_Explorer_Header">
+          <cd:Record namexml="Earth_Explorer_Header">
+            <cd:Description>Earth Explorer Header File</cd:Description>
+            <cd:Field name="Fixed_Header">
+              <cd:NamedType id="Fixed_Header"/>    
+            </cd:Field>
+            <cd:Field name="Variable_Header">
+              <cd:Record namexml="Variable_Header">
+                <cd:Description>Variable Header Section</cd:Description>
+                <cd:Field name="Product">
+                  <cd:Text namexml="Product">
+                    <cd:Description>Name of the screened product (this is the filename including extension). For a product that was split in a separate header and data block file, this field will contain the name of the data block file.</cd:Description>
+                  </cd:Text>
+                </cd:Field>
+                <cd:Field name="Test_Definition_File">
+                  <cd:Text namexml="Test_Definition_File">
+                    <cd:Description>Product name (without path or extension) of the Test Definition file that was used.</cd:Description>
+                  </cd:Text>
+                </cd:Field>
+                <cd:Field name="Format_Definition_File">
+                  <cd:Text namexml="Format_Definition_File">
+                    <cd:Description>File name (without path, but with extension) of the CODA Product Format Definition file that was used.</cd:Description>
+                  </cd:Text>
+                </cd:Field>
+                <cd:Field name="Product_Quality">
+                  <cd:Text namexml="Product_Quality">
+                    <cd:Description>Possible values: 'VALID_PRODUCT' = no errors or warnings were found in the product, 'PRODUCT_HAS_ERRORS' = the product contained errors, 'PRODUCT_HAS_WARNINGS' = the product contained warnings (but no errors).</cd:Description>
+                    <ct:NamedTest id="ValueRangeProduct_Quality"/>
+                  </cd:Text>
+                </cd:Field>
+                <cd:Field name="Quality_Reliability_Flag">
+                  <cd:Text namexml="Quality_Reliability_Flag">
+                    <cd:Description>If set to 'True', the Product_Quality field value should be used to control dissemination of the product. If set to 'False', the product should be disseminated regardless of the value of the Product_Quality field. The field is taken directly from the Test Definition File. If the value for any of the screened products types is set to False then the value in the report will be set to False, otherwise it will be True. (Note that HDR and DBL files are treated as separate product types in the Test Definition File).</cd:Description>
+                  </cd:Text>
+                </cd:Field>
+              </cd:Record>
+            </cd:Field>
+            <ct:NamedTest id="FileNameCheckEEF" path="Fixed_Header/File_Name"/>
+            <ct:NamedTest id="FixedValueAUX_REP_QC" path="Fixed_Header/File_Type"/>
+          </cd:Record>
+        </cd:Field>
+        <cd:Field name="Data_Block">
+          <cd:Record namexml="Data_Block">
+            <cd:Attribute name="type">
+              <cd:Optional/>
+              <cd:FixedValue>xml</cd:FixedValue>
+            </cd:Attribute>
+            <cd:Field name="List_of_Test_Modes">
+              <cd:Record namexml="List_of_Test_Modes">
+                <cd:Attribute name="count">
+                </cd:Attribute>
+                <cd:Field name="Test_Mode">
+                  <cd:Array>
+                    <cd:Dimension/>
+                    <cd:Text namexml="Test_Mode">
+                      <cd:Description>Possible values: 'STRUCTURE_SIZE_AND_READ' = This test performs a structural check of a file and successfully tries to read each data element from a file, 'STRUCTURE_SIZE_AND_READ_HEADER' = The same test as STRUCTURE_SIZE_AND_READ but performed on the header file that belongs to the screened file (if the screened file is already a header file, then you will only get STRUCTURE_SIZE_AND_READ), 'EXPRESSION' = This test executes all tests in the Test Definition File that are available for the screened file, 'EXPRESSION_HDR' = The same as EXPRESSION but performed on the header file (if the screened file is already a header file, then you will only get EXPRESSION), 'DATA_HEADER_CROSS_CHECK' = This test validates whether the header contents of a datablock and header file match.</cd:Description>
+                    </cd:Text>
+                    <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                  </cd:Array>
+                </cd:Field>
+              </cd:Record>
+            </cd:Field>
+            <cd:Field name="List_of_Messages">
+              <cd:Record namexml="List_of_Messages">
+                <cd:Attribute name="count">
+                </cd:Attribute>
+                <cd:Field name="Message">
+                  <cd:Array>
+                    <cd:Dimension/>
+                    <cd:Record namexml="Message">
+                      <cd:Field name="Criticality">
+                        <cd:Text namexml="Criticality">
+                          <cd:Description>Indicates the severity of failure. Valid values are 'Error' and 'Warning'.</cd:Description>
+                          <ct:NamedTest id="ValueRangeCriticality"/>
+                        </cd:Text>
+                      </cd:Field>
+                      <cd:Field name="Test_Mode">
+                        <cd:Text namexml="Test_Mode">
+                          <cd:Description>See Test_Mode field of List_of_Test_Modes definition.</cd:Description>
+                          <ct:NamedTest id="QCFReportValueRangeTest_Mode"/>
+                        </cd:Text>
+                      </cd:Field>
+                      <cd:Field name="Notes">
+                        <cd:Text namexml="Notes">
+                          <cd:Description>Message details.</cd:Description>
+                        </cd:Text>
+                      </cd:Field>
+                      <cd:Field name="Path">
+                        <cd:Text namexml="Path">
+                          <cd:Description>Location within the file where the failure occurred.</cd:Description>
+                        </cd:Text>
+                      </cd:Field>
+                      <cd:Field name="Name">
+                        <cd:Text namexml="Name">
+                          <cd:Description>Name of the test that produced this message (name can be empty depending on the value of Test_Mode).</cd:Description>
+                        </cd:Text>
+                      </cd:Field>
+                    </cd:Record>
+                    <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                  </cd:Array>
+                </cd:Field>
+              </cd:Record>
+            </cd:Field>
+          </cd:Record>
+        </cd:Field>
+      </cd:Record>
+    </cd:Field>
+  </cd:Record>
+</cd:ProductDefinition>

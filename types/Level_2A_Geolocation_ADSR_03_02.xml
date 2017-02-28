@@ -1,0 +1,146 @@
+<?xml version="1.0"?>
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="binary" last-modified="2015-12-04" name="Level_2A_Geolocation_ADSR_03_02">
+  <cd:Field name="start_of_obs_time">
+    <cd:Time timeformat="binary_envisat_datetime">
+      <cd:Description>Start date and time of Observation (or BRC)</cd:Description>
+      <ct:NamedTest id="RangeSecond" path="seconds"/>
+      <ct:NamedTest id="RangeMicroSecond" path="microseconds"/>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="num_meas_eff">
+    <cd:Integer>
+      <cd:Description>Effective number of measurement in the BRC</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="measurement_geolocation">
+    <cd:Array>
+      <cd:Dimension><![CDATA[$num_meas_max_brc]]></cd:Dimension>
+      <cd:Record>
+        <cd:Description>List of profile geolocations. This list contains the geolocations of the Max_Num_Prof possible profiles pertaining to the observation</cd:Description>
+        <cd:Field name="centroid_time">
+          <cd:Time timeformat="binary_envisat_datetime">
+            <cd:Description>Measurement centroid time from L1B</cd:Description>
+            <ct:NamedTest id="RangeSecond" path="seconds"/>
+            <ct:NamedTest id="RangeMicroSecond" path="microseconds"/>
+          </cd:Time>
+        </cd:Field>
+        <cd:Field name="mie_geolocation_height_bin">
+          <cd:Array>
+            <cd:Description>List of Mie Geolocation Height Bin structures. This list contains 25 values. The first item contains the geolocation of the upper edge of the top-most bin (= defined as lower edge of bin 0). The remaining 24 items contain the geolocation of the lower edge of the each height bin (bin 1~24).</cd:Description>
+            <cd:Dimension>25</cd:Dimension>
+            <cd:Record>
+              <cd:Field name="longitude_of_height_bin">
+                <cd:Integer>
+                  <cd:Description>Longitude of the lower edge of the height bin along the line-of-sight</cd:Description>
+                  <cd:Unit>1e-6 degrees_east</cd:Unit>
+                  <cd:Conversion denominator="1000000.000000" numerator="1.000000">
+                    <cd:Unit>degrees_east</cd:Unit>
+                  </cd:Conversion>
+                  <cd:BitSize>32</cd:BitSize>
+                  <cd:NativeType>int32</cd:NativeType>
+                </cd:Integer>
+              </cd:Field>
+              <cd:Field name="latitude_of_height_bin">
+                <cd:Integer>
+                  <cd:Description>Latitude of the lower edge of the height bin along the line-of-sight</cd:Description>
+                  <cd:Unit>1e-6 degrees_north</cd:Unit>
+                  <cd:Conversion denominator="1000000.000000" numerator="1.000000">
+                    <cd:Unit>degrees_north</cd:Unit>
+                  </cd:Conversion>
+                  <cd:BitSize>32</cd:BitSize>
+                  <cd:NativeType>int32</cd:NativeType>
+                </cd:Integer>
+              </cd:Field>
+              <cd:Field name="altitude_of_height_bin">
+                <cd:Float>
+                  <cd:Description>Altitude of the lower edge of the height bin along the line-of-sight</cd:Description>
+                  <cd:Unit>m</cd:Unit>
+                  <cd:BitSize>64</cd:BitSize>
+                  <cd:NativeType>double</cd:NativeType>
+                </cd:Float>
+              </cd:Field>
+            </cd:Record>
+          </cd:Array>
+        </cd:Field>
+        <cd:Field name="rayleigh_geolocation_height_bin">
+          <cd:Array>
+            <cd:Description>List of Rayleigh Geolocation Height Bin structures. This list contains 25 values. The first item contains the geolocation of the upper edge of the top-most bin (= defined as lower edge of bin 0). The remaining 24 items contain the geolocation of the lower edge of the each height bin (bin 1~24).</cd:Description>
+            <cd:Dimension>25</cd:Dimension>
+            <cd:Record>
+              <cd:Field name="longitude_of_height_bin">
+                <cd:Integer>
+                  <cd:Description>Longitude of the lower edge of the height bin along the line-of-sight</cd:Description>
+                  <cd:Unit>1e-6 degrees_east</cd:Unit>
+                  <cd:Conversion denominator="1000000.000000" numerator="1.000000">
+                    <cd:Unit>degrees_east</cd:Unit>
+                  </cd:Conversion>
+                  <cd:BitSize>32</cd:BitSize>
+                  <cd:NativeType>int32</cd:NativeType>
+                </cd:Integer>
+              </cd:Field>
+              <cd:Field name="latitude_of_height_bin">
+                <cd:Integer>
+                  <cd:Description>Latitude of the lower edge of the height bin along the line-of-sight</cd:Description>
+                  <cd:Unit>1e-6 degrees_north</cd:Unit>
+                  <cd:Conversion denominator="1000000.000000" numerator="1.000000">
+                    <cd:Unit>degrees_north</cd:Unit>
+                  </cd:Conversion>
+                  <cd:BitSize>32</cd:BitSize>
+                  <cd:NativeType>int32</cd:NativeType>
+                </cd:Integer>
+              </cd:Field>
+              <cd:Field name="altitude_of_height_bin">
+                <cd:Float>
+                  <cd:Description>Altitude of the lower edge of the height bin along the line-of-sight</cd:Description>
+                  <cd:Unit>m</cd:Unit>
+                  <cd:BitSize>64</cd:BitSize>
+                  <cd:NativeType>double</cd:NativeType>
+                </cd:Float>
+              </cd:Field>
+            </cd:Record>
+          </cd:Array>
+        </cd:Field>
+        <cd:Field name="longitude_of_dem_intersection">
+          <cd:Integer>
+            <cd:Description>Longitude of the intersection of the DEM and the line-of-sight</cd:Description>
+            <cd:Unit>1e-6 degrees_east</cd:Unit>
+            <cd:Conversion denominator="1000000.000000" numerator="1.000000">
+              <cd:Unit>degrees_east</cd:Unit>
+            </cd:Conversion>
+            <cd:BitSize>32</cd:BitSize>
+            <cd:NativeType>int32</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="latitude_of_dem_intersection">
+          <cd:Integer>
+            <cd:Description>Latitude of the intersection of the DEM and the line-of-sight</cd:Description>
+            <cd:Unit>1e-6 degrees_north</cd:Unit>
+            <cd:Conversion denominator="1000000.000000" numerator="1.000000">
+              <cd:Unit>degrees_north</cd:Unit>
+            </cd:Conversion>
+            <cd:BitSize>32</cd:BitSize>
+            <cd:NativeType>int32</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="altitude_of_dem_intersection">
+          <cd:Float>
+            <cd:Description>Altitude relative to the geoid of the intersection of the DEM and the line-of-sight</cd:Description>
+            <cd:Unit>m</cd:Unit>
+            <cd:BitSize>64</cd:BitSize>
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Field>
+      </cd:Record>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="geoid_separation">
+    <cd:Float>
+      <cd:Description>Height of geoid above WGS84 ellipsoid. It is assumed this difference is valid for the whole observation.</cd:Description>
+      <cd:Unit>m</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+</cd:Record>

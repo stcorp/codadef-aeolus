@@ -1,0 +1,244 @@
+<?xml version="1.0"?>
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="xml" last-modified="2008-07-01" name="Auxiliary_Calibration_ZWC_03_06" namexml="Auxiliary_Calibration_ZWC">
+  <cd:Description>Auxiliary Calibration ZWC</cd:Description>
+  <cd:Field name="List_of_Data_Set_Records">
+    <cd:Record namexml="List_of_Data_Set_Records">
+      <cd:Description>List of Data Set Records</cd:Description>
+      <cd:Attribute name="count">
+      </cd:Attribute>
+      <cd:Field name="Data_Set_Record">
+        <cd:Array>
+          <cd:Dimension/>
+          <cd:Record namexml="Data_Set_Record">
+            <cd:Description>Data Set Record</cd:Description>
+            <cd:Field name="Start_of_Observation_Time">
+              <cd:Type namexml="Start_of_Observation_Time">
+                <cd:Time format="ascii" timeformat="ascii_ccsds_datetime_ymd1_with_ref">
+                  <cd:Description>Start of observation time</cd:Description>
+                  <cd:Mapping string="UTC=0000-00-00T00:00:00" value="-inf"/>
+                  <cd:Mapping string="UTC=9999-99-99T99:99:99" value="+inf"/>
+                  <cd:Mapping string="" value="nan"/>
+                </cd:Time>
+              </cd:Type>
+            </cd:Field>
+            <cd:Field name="Observation_Info">
+              <cd:Record namexml="Observation_Info">
+                <cd:Description>Obsevation information containing the attitude and geolocation</cd:Description>
+                <cd:Field name="Latitude_of_DEM_Intersection">
+                  <cd:Type namexml="Latitude_of_DEM_Intersection">
+                    <cd:Attribute name="unit">
+                      <cd:Optional/>
+                      <cd:FixedValue>10-6DegN</cd:FixedValue>
+                    </cd:Attribute>
+                    <cd:Integer format="ascii">
+                      <cd:Description>Latitude of DEM Intersection with instrument lineof-sight at the centre of the observation</cd:Description>
+                      <cd:Unit>1e-6 degrees_north</cd:Unit>
+                      <cd:Conversion denominator="1000000.000000" numerator="1.000000">
+                        <cd:Unit>degrees_north</cd:Unit>
+                      </cd:Conversion>
+                      <cd:NativeType>int32</cd:NativeType>
+                      <ct:NamedTest id="RangeLatitude6"/>
+                    </cd:Integer>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="Longitude_of_DEM_Intersection">
+                  <cd:Type namexml="Longitude_of_DEM_Intersection">
+                    <cd:Attribute name="unit">
+                      <cd:Optional/>
+                      <cd:FixedValue>10-6DegN</cd:FixedValue>
+                    </cd:Attribute>
+                    <cd:Integer format="ascii">
+                      <cd:Description>Longitude of DEM Intersection with instrument lineof-sight at the centre of the observation</cd:Description>
+                      <cd:Unit>1e-6 degrees_east</cd:Unit>
+                      <cd:Conversion denominator="1000000.000000" numerator="1.000000">
+                        <cd:Unit>degrees_east</cd:Unit>
+                      </cd:Conversion>
+                      <cd:NativeType>int32</cd:NativeType>
+                      <ct:NamedTest id="RangeLongitude6"/>
+                    </cd:Integer>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="Argument_of_Latitude_of_DEM_Intersection">
+                  <cd:Type namexml="Argument_of_Latitude_of_DEM_Intersection">
+                    <cd:Attribute name="unit">
+                      <cd:Optional/>
+                      <cd:FixedValue>10-6DegN</cd:FixedValue>
+                    </cd:Attribute>
+                    <cd:Integer format="ascii">
+                      <cd:Description>Argument of Latitude of DEM Intersection with instrument line-of-sight at the centre of the observation</cd:Description>
+                      <cd:Unit>1e-6 degrees_north</cd:Unit>
+                      <cd:Conversion denominator="1000000.000000" numerator="1.000000">
+                        <cd:Unit>degrees_north</cd:Unit>
+                      </cd:Conversion>
+                      <cd:NativeType>int32</cd:NativeType>
+                    </cd:Integer>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="Roll_Angle">
+                  <cd:Type namexml="Roll_Angle">
+                    <cd:Attribute name="unit">
+                      <cd:Optional/>
+                      <cd:FixedValue>degrees</cd:FixedValue>
+                    </cd:Attribute>
+                    <cd:Float format="ascii">
+                      <cd:Description>Instrument roll angle in ECEF frame at the centre of the observation</cd:Description>
+                      <cd:Unit>degrees</cd:Unit>
+                      <cd:NativeType>double</cd:NativeType>
+                    </cd:Float>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="Pitch_Angle">
+                  <cd:Type namexml="Pitch_Angle">
+                    <cd:Attribute name="unit">
+                      <cd:Optional/>
+                      <cd:FixedValue>degrees</cd:FixedValue>
+                    </cd:Attribute>
+                    <cd:Float format="ascii">
+                      <cd:Description>Instrument pitch angle in ECEF frame at the centre of the observation</cd:Description>
+                      <cd:Unit>degrees</cd:Unit>
+                      <cd:NativeType>double</cd:NativeType>
+                    </cd:Float>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="Yaw_Angle">
+                  <cd:Type namexml="Yaw_Angle">
+                    <cd:Attribute name="unit">
+                      <cd:Optional/>
+                      <cd:FixedValue>degrees</cd:FixedValue>
+                    </cd:Attribute>
+                    <cd:Float format="ascii">
+                      <cd:Description>Instrument yaw angle in ECEF frame at the centre of the observation</cd:Description>
+                      <cd:Unit>degrees</cd:Unit>
+                      <cd:NativeType>double</cd:NativeType>
+                    </cd:Float>
+                  </cd:Type>
+                </cd:Field>
+              </cd:Record>
+            </cd:Field>
+            <cd:Field name="ZWC_Result_Type">
+              <cd:Text namexml="ZWC_Result_Type">
+                <cd:Description>Enum indicating ZWC result type. One of Mie only (ZWC_Mie), Rayleigh only (ZWC_Rayleigh), or both (ZWC_Both)</cd:Description>
+              </cd:Text>
+            </cd:Field>
+            <cd:Field name="Mie_Ground_Correction_Velocity">
+              <cd:Type namexml="Mie_Ground_Correction_Velocity">
+                <cd:Attribute name="unit">
+                  <cd:Optional/>
+                  <cd:FixedValue>m / s</cd:FixedValue>
+                </cd:Attribute>
+                <cd:Float format="ascii">
+                  <cd:Description>Mie ground correction velocityr. This value is filled in when ZWC_Result_Type is set to ZWC_Mie or ZWC_Both</cd:Description>
+                  <cd:Unit>m / s</cd:Unit>
+                  <cd:NativeType>double</cd:NativeType>
+                </cd:Float>
+              </cd:Type>
+            </cd:Field>
+            <cd:Field name="Rayleigh_Ground_Correction_Velocity">
+              <cd:Type namexml="Rayleigh_Ground_Correction_Velocity">
+                <cd:Attribute name="unit">
+                  <cd:Optional/>
+                  <cd:FixedValue>m / s</cd:FixedValue>
+                </cd:Attribute>
+                <cd:Float format="ascii">
+                  <cd:Description>Rayleigh ground correction factor. This value is filled in when ZWC_Result_Type is set to ZWC_Rayleigh or ZWC_Both</cd:Description>
+                  <cd:Unit>m / s</cd:Unit>
+                  <cd:NativeType>double</cd:NativeType>
+                </cd:Float>
+              </cd:Type>
+            </cd:Field>
+            <cd:Field name="Mie_Average_Ground_Echo_Bin_Altitude">
+              <cd:Type namexml="Mie_Average_Ground_Echo_Bin_Altitude">
+                <cd:Attribute name="unit">
+                  <cd:Optional/>
+                  <cd:FixedValue>m</cd:FixedValue>
+                </cd:Attribute>
+                <cd:Float format="ascii">
+                  <cd:Description>average of measurement ground wind bin altitudes for Mie</cd:Description>
+                  <cd:Unit>m</cd:Unit>
+                  <cd:NativeType>double</cd:NativeType>
+                </cd:Float>
+              </cd:Type>
+            </cd:Field>
+            <cd:Field name="Rayleigh_Average_Ground_Echo_Bin_Altitude">
+              <cd:Type namexml="Rayleigh_Average_Ground_Echo_Bin_Altitude">
+                <cd:Attribute name="unit">
+                  <cd:Optional/>
+                  <cd:FixedValue>m</cd:FixedValue>
+                </cd:Attribute>
+                <cd:Float format="ascii">
+                  <cd:Description>average of measurement ground wind bin altitudes for Rayleigh</cd:Description>
+                  <cd:Unit>m</cd:Unit>
+                  <cd:NativeType>double</cd:NativeType>
+                </cd:Float>
+              </cd:Type>
+            </cd:Field>
+            <cd:Field name="Mie_Average_Ground_Echo_Bin_Thickness_Above_DEM">
+              <cd:Type namexml="Mie_Average_Ground_Echo_Bin_Thickness_Above_DEM">
+                <cd:Attribute name="unit">
+                  <cd:Optional/>
+                  <cd:FixedValue>m</cd:FixedValue>
+                </cd:Attribute>
+                <cd:Float format="ascii">
+                  <cd:Description>average ground wind bin thickness (air column height) for Mie</cd:Description>
+                  <cd:Unit>m</cd:Unit>
+                  <cd:NativeType>double</cd:NativeType>
+                </cd:Float>
+              </cd:Type>
+            </cd:Field>
+            <cd:Field name="Rayleigh_Average_Ground_Echo_Bin_Thickness_Above_DEM">
+              <cd:Type namexml="Rayleigh_Average_Ground_Echo_Bin_Thickness_Above_DEM">
+                <cd:Attribute name="unit">
+                  <cd:Optional/>
+                  <cd:FixedValue>m</cd:FixedValue>
+                </cd:Attribute>
+                <cd:Float format="ascii">
+                  <cd:Description>average ground wind bin thickness (air column height) for Rayleigh</cd:Description>
+                  <cd:Unit>m</cd:Unit>
+                  <cd:NativeType>double</cd:NativeType>
+                </cd:Float>
+              </cd:Type>
+            </cd:Field>
+            <cd:Field name="Validity_Indicators">
+              <cd:Record namexml="Validity_Indicators">
+                <cd:Description>Validity Indicators</cd:Description>
+                <cd:Field name="Min_Num_of_Mie_Ground_Echo_Measurement_Bins">
+                  <cd:Type namexml="Min_Num_of_Mie_Ground_Echo_Measurement_Bins">
+                    <cd:Integer format="ascii">
+                      <cd:Description>Minimum number of Mie ground wind measurement bins to validate ground correction factor</cd:Description>
+                      <cd:NativeType>uint32</cd:NativeType>
+                    </cd:Integer>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="Min_Num_of_Rayleigh_Ground_Echo_Measurement_Bins">
+                  <cd:Type namexml="Min_Num_of_Rayleigh_Ground_Echo_Measurement_Bins">
+                    <cd:Integer format="ascii">
+                      <cd:Description>Minimum number of Rayleigh ground wind measurement bins to validate ground correction factor</cd:Description>
+                      <cd:NativeType>uint32</cd:NativeType>
+                    </cd:Integer>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="Number_of_Mie_Ground_Bins">
+                  <cd:Type namexml="Number_of_Mie_Ground_Bins">
+                    <cd:Integer format="ascii">
+                      <cd:Description>Number of Mie measurements with GROUND_ECHO_DETECTED=TRUE</cd:Description>
+                      <cd:NativeType>uint32</cd:NativeType>
+                    </cd:Integer>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="Number_of_Rayleigh_Ground_Bins">
+                  <cd:Type namexml="Number_of_Rayleigh_Ground_Bins">
+                    <cd:Integer format="ascii">
+                      <cd:Description>Number of Rayleigh measurements with GROUND_ECHO_DETECTED=TRUE</cd:Description>
+                      <cd:NativeType>uint32</cd:NativeType>
+                    </cd:Integer>
+                  </cd:Type>
+                </cd:Field>
+              </cd:Record>
+            </cd:Field>
+          </cd:Record>
+          <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+        </cd:Array>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+</cd:Record>

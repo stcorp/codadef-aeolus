@@ -1,0 +1,121 @@
+<?xml version="1.0"?>
+<cd:ProductDefinition id="AUX_RDB_1B_04_04" format="xml" last-modified="2015-04-23" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+  <cd:Record format="xml">
+    <cd:Field name="Earth_Explorer_File">
+      <cd:Record namexml="Earth_Explorer_File">
+        <cd:Attribute name="schemaversion"/>
+        <cd:Description>Earth Explorer File</cd:Description>
+        <cd:Field name="Earth_Explorer_Header">
+          <cd:Record namexml="Earth_Explorer_Header">
+            <cd:Description>Earth Explorer Header File</cd:Description>
+            <cd:Field name="Fixed_Header">
+              <cd:NamedType id="Fixed_Header"/>
+            </cd:Field>
+            <cd:Field name="Variable_Header">
+              <cd:Record namexml="Variable_Header">
+                <cd:Description>Variable Header Section</cd:Description>
+                <cd:Field name="Main_Product_Header">
+                  <cd:NamedType id="Main_Product_Header_v2"/>
+                </cd:Field>
+                <cd:Field name="Specific_Product_Header">
+                  <cd:NamedType id="Specific_Product_Header_Par"/>
+                </cd:Field>
+              </cd:Record>
+            </cd:Field>
+            <ct:NamedTest id="FileNameCheckEEF" path="Fixed_Header/File_Name"/>
+            <ct:NamedTest id="FileNameMatchFileVersionAt51" path="Fixed_Header/File_Name"/>
+            <ct:NamedTest id="FileNameMatchValidityStart" path="Fixed_Header/File_Name"/>
+          </cd:Record>
+        </cd:Field>
+        <cd:Field name="Data_Block">
+          <cd:Record namexml="Data_Block">
+            <cd:Attribute name="type">
+              <cd:Optional/>
+              <cd:FixedValue>xml</cd:FixedValue>
+            </cd:Attribute>
+            <cd:Field name="Range_Dependent_Bias_Characterisation">
+              <cd:Record namexml="Range_Dependent_Bias_Characterisation">
+                <cd:Description>Range Dependent Bias Parameters</cd:Description>
+                <cd:Field name="List_of_Data_Set_Records">
+                  <cd:Record namexml="List_of_Data_Set_Records">
+                    <cd:Description>List of Data Set Records</cd:Description>
+                    <cd:Attribute name="count"/>
+                    <cd:Field name="Data_Set_Record">
+                      <cd:Array>
+                        <cd:Dimension/>
+                        <cd:Record namexml="Data_Set_Record">
+                          <cd:Description>Data Set Record</cd:Description>
+                          <cd:Field name="Rayleigh_Slope_OffNadir">
+                            <cd:Type namexml="Rayleigh_Slope_OffNadir">
+                              <cd:Attribute name="unit"/>
+                              <cd:Float format="ascii">
+                                <cd:Description>Bias for the off-nadir Rayleigh measurements</cd:Description>
+                                <cd:Unit>MHz/km</cd:Unit>
+                                <cd:NativeType>double</cd:NativeType>
+                              </cd:Float>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="Mie_Slope_OffNadir">
+                            <cd:Type namexml="Mie_Slope_OffNadir">
+                              <cd:Attribute name="unit"/>
+                              <cd:Float format="ascii">
+                                <cd:Description>Bias for the off-nadir Mie measurements</cd:Description>
+                                <cd:Unit>MHz/km</cd:Unit>
+                                <cd:NativeType>double</cd:NativeType>
+                              </cd:Float>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="Rayleigh_Slope_Nadir">
+                            <cd:Type namexml="Rayleigh_Slope_Nadir">
+                              <cd:Attribute name="unit"/>
+                              <cd:Float format="ascii">
+                                <cd:Description>Bias for the nadir Rayleigh measurements</cd:Description>
+                                <cd:Unit>MHz/km</cd:Unit>
+                                <cd:NativeType>double</cd:NativeType>
+                              </cd:Float>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="Mie_Slope_Nadir">
+                            <cd:Type namexml="Mie_Slope_Nadir">
+                              <cd:Attribute name="unit"/>
+                              <cd:Float format="ascii">
+                                <cd:Description>Bias for the nadir Mie measurements</cd:Description>
+                                <cd:Unit>MHz/km</cd:Unit>
+                                <cd:NativeType>double</cd:NativeType>
+                              </cd:Float>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="Zero_Reference_Range_OffNadir">
+                            <cd:Type namexml="Zero_Reference_Range_OffNadir">
+                              <cd:Attribute name="unit"/>
+                              <cd:Float format="ascii">
+                                <cd:Description>Reference range with 0 MHz/km bias for off-nadir pointing measurements.</cd:Description>
+                                <cd:Unit>km</cd:Unit>
+                                <cd:NativeType>double</cd:NativeType>
+                              </cd:Float>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="Zero_Reference_Range_Nadir">
+                            <cd:Type namexml="Zero_Reference_Range_Nadir">
+                              <cd:Attribute name="unit"/>
+                              <cd:Float format="ascii">
+                                <cd:Description>Reference range with 0 MHz/km bias for nadir pointing measurements.</cd:Description>
+                                <cd:Unit>km</cd:Unit>
+                                <cd:NativeType>double</cd:NativeType>
+                              </cd:Float>
+                            </cd:Type>
+                          </cd:Field>
+                        </cd:Record>
+                        <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                      </cd:Array>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+              </cd:Record>
+            </cd:Field>
+          </cd:Record>
+        </cd:Field>
+      </cd:Record>
+    </cd:Field>
+  </cd:Record>
+</cd:ProductDefinition>

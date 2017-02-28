@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<cd:Record name="Specific_Product_Header_Par2A" format="xml" namexml="Specific_Product_Header" last-modified="2008-07-01" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Description>Specific Product Header for ALD Processing Parameters products</cd:Description>
+  <cd:Field name="Sph_Descriptor">
+    <cd:Text namexml="Sph_Descriptor">
+      <cd:Description>Specific Product Header descriptor</cd:Description>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="List_of_Dsds">
+    <cd:NamedType id="List_of_Dsds"/>
+  </cd:Field>
+</cd:Record>

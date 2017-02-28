@@ -1,0 +1,98 @@
+<?xml version="1.0"?>
+<cd:Record name="Data_Block_REP_DIS_AC" format="xml" namexml="Data_Block" last-modified="2008-07-01" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+  <cd:Description>Dissemination Report Data Block</cd:Description>
+  <cd:Attribute name="type">
+    <cd:Optional/>
+    <cd:FixedValue>xml</cd:FixedValue>
+  </cd:Attribute>
+  <cd:Field name="Dissemination_Status">
+    <cd:Record namexml="Dissemination_Status">
+      <cd:Field name="Disseminated_File_Name">
+        <cd:Text namexml="Disseminated_File_Name">
+          <cd:Description>Name of the file that has been disseminated by the ACMF</cd:Description>
+        </cd:Text>
+      </cd:Field>
+      <cd:Field name="Disseminated_File_Creation_Date">
+        <cd:Type namexml="Disseminated_File_Creation_Date">
+          <cd:Time format="ascii" timeformat="ascii_ccsds_datetime_ymd1_with_ref">
+            <cd:Mapping string="UTC=0000-00-00T00:00:00" value="-inf"/>
+            <cd:Mapping string="UTC=9999-99-99T99:99:99" value="+inf"/>
+            <cd:Mapping string="" value="nan"/>
+          </cd:Time>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="Quality_Result">
+        <cd:Type namexml="Quality_Result">
+          <cd:Integer format="ascii">
+            <cd:Description>True, if (QCF) quality control check succeeded</cd:Description>
+            <cd:NativeType>uint8</cd:NativeType>
+            <cd:Mapping string="False" value="0"/>
+            <cd:Mapping string="false" value="0"/>
+            <cd:Mapping string="True" value="1"/>
+            <cd:Mapping string="true" value="1"/>
+	    <ct:NamedTest id="BooleanBinTest" />
+          </cd:Integer>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="Anomaly_Summary">
+        <cd:Text namexml="Anomaly_Summary">
+          <cd:Description>Summary text of anomalies (if any)</cd:Description>
+        </cd:Text>
+      </cd:Field>
+      <cd:Field name="List_of_Dissemination_Actions">
+        <cd:Record namexml="List_of_Dissemination_Actions">
+          <cd:Description>List of Dissemination Actions</cd:Description>
+          <cd:Attribute name="count">
+          </cd:Attribute>
+          <cd:Field name="Dissemination_Action">
+            <cd:Array>
+              <cd:Dimension/>
+              <cd:Record namexml="Dissemination_Action">
+                <cd:Description>Dissemination Action</cd:Description>
+                <cd:Field name="Destination_Facility_Name">
+                  <cd:Text namexml="Destination_Facility_Name">
+                    <cd:Description>Name of the facility to which the file has to be transferred</cd:Description>
+                  </cd:Text>
+                </cd:Field>
+                <cd:Field name="Destination_Server_Name">
+                  <cd:Text namexml="Destination_Server_Name">
+                    <cd:Description>Server name of the Destination Facility</cd:Description>
+                  </cd:Text>
+                </cd:Field>
+                <cd:Field name="Transfer_Start_Time">
+                  <cd:Type namexml="Transfer_Start_Time">
+                    <cd:Time format="ascii" timeformat="ascii_ccsds_datetime_ymd1_with_ref">
+                      <cd:Description>Time of the initial transfer action</cd:Description>
+                      <cd:Mapping string="UTC=0000-00-00T00:00:00" value="-inf"/>
+                      <cd:Mapping string="UTC=9999-99-99T99:99:99" value="+inf"/>
+                      <cd:Mapping string="" value="nan"/>
+                    </cd:Time>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="Retries">
+                  <cd:Type namexml="Retries">
+                    <cd:Integer format="ascii">
+                      <cd:Description>The number of transfer retries</cd:Description>
+                      <cd:NativeType>uint16</cd:NativeType>
+                    </cd:Integer>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="Transfer_Completed_Time">
+                  <cd:Type namexml="Transfer_Completed_Time">
+                    <cd:Time format="ascii" timeformat="ascii_ccsds_datetime_ymd1_with_ref">
+                      <cd:Description>Time of successfull end of transfer</cd:Description>
+                      <cd:Mapping string="UTC=0000-00-00T00:00:00" value="-inf"/>
+                      <cd:Mapping string="UTC=9999-99-99T99:99:99" value="+inf"/>
+                      <cd:Mapping string="" value="nan"/>
+                    </cd:Time>
+                  </cd:Type>
+                </cd:Field>
+              </cd:Record>
+              <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+            </cd:Array>
+          </cd:Field>
+        </cd:Record>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+</cd:Record>

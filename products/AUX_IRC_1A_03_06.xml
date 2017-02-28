@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<cd:ProductDefinition id="AUX_IRC_1A_03_06" format="binary" last-modified="2008-09-18" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+  <cd:NamedType id="Level_1A_Product_03_06"/>
+  <cd:ProductVariable name="num_dsd">
+    <cd:Init><![CDATA[$num_dsd = int(/mph/num_dsd)]]></cd:Init>
+  </cd:ProductVariable>
+  <cd:ProductVariable name="num_ds">
+    <cd:Init><![CDATA[$num_ds = 6]]></cd:Init>
+  </cd:ProductVariable>
+  <cd:ProductVariable name="ds_to_dsd_index">
+    <cd:Dimension><![CDATA[$num_ds]]></cd:Dimension>
+    <cd:Init><![CDATA[$ds_to_dsd_index[0] = index(/dsd, str(./ds_name) == "Geolocation_ADS             "); $ds_to_dsd_index[1] = index(/dsd, str(./ds_name) == "Data_Quality_ADS            "); $ds_to_dsd_index[2] = index(/dsd, str(./ds_name) == "Reference_Pulse_ADS         "); $ds_to_dsd_index[3] = index(/dsd, str(./ds_name) == "Housekeeping_ADS            "); $ds_to_dsd_index[4] = index(/dsd, str(./ds_name) == "Mie_Measurement_MDS         "); $ds_to_dsd_index[5] = index(/dsd, str(./ds_name) == "Rayleigh_Measurement_MDS    ")]]></cd:Init>
+  </cd:ProductVariable>
+  <cd:ProductVariable name="ds_available">
+    <cd:Dimension><![CDATA[$num_ds]]></cd:Dimension>
+    <cd:Init><![CDATA[for i = 0 to $num_ds - 1 do $ds_available[i] = if($ds_to_dsd_index[i] != -1 && int(/dsd[$ds_to_dsd_index[i]]/ds_size) != 0, 1, 0)]]></cd:Init>
+  </cd:ProductVariable>
+  <cd:ProductVariable name="ds_offset">
+    <cd:Dimension><![CDATA[$num_ds]]></cd:Dimension>
+    <cd:Init><![CDATA[for i = 0 to $num_ds - 1 do $ds_offset[i] = 8 * int(/dsd[$ds_to_dsd_index[i]]/ds_offset)]]></cd:Init>
+  </cd:ProductVariable>
+  <cd:ProductVariable name="num_dsr">
+    <cd:Dimension><![CDATA[$num_ds]]></cd:Dimension>
+    <cd:Init><![CDATA[for i = 0 to $num_ds - 1 do $num_dsr[i] = int(/dsd[$ds_to_dsd_index[i]]/num_dsr)]]></cd:Init>
+  </cd:ProductVariable>
+</cd:ProductDefinition>

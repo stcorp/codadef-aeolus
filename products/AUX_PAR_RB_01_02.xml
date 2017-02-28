@@ -1,0 +1,198 @@
+<?xml version="1.0"?>
+<cd:ProductDefinition id="AUX_PAR_RB_01_02" format="xml" last-modified="2009-02-11" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+  <cd:Record format="xml">
+    <cd:Field name="Earth_Explorer_File">
+      <cd:Record namexml="Earth_Explorer_File">
+        <cd:Description>Earth Explorer File</cd:Description>
+        <cd:Field name="Earth_Explorer_Header">
+          <cd:Record namexml="Earth_Explorer_Header">
+            <cd:Description>Earth Explorer Header File</cd:Description>
+            <cd:Field name="Fixed_Header">
+              <cd:NamedType id="Fixed_Header"/>
+            </cd:Field>
+            <cd:Field name="Variable_Header">
+              <cd:Record namexml="Variable_Header">
+                <cd:Description>Variable Header Section</cd:Description>
+                <cd:Field name="Main_Product_Header">
+                  <cd:NamedType id="Main_Product_Header_v0"/>
+                </cd:Field>
+                <cd:Field name="Specific_Product_Header">
+                  <cd:NamedType id="Specific_Product_Header_AUX_PAR_RB_01_02"/>
+                </cd:Field>
+              </cd:Record>
+            </cd:Field>
+            <ct:NamedTest id="FileNameMatchValidityStart" path="Fixed_Header/File_Name"/>
+          </cd:Record>
+        </cd:Field>
+        <cd:Field name="Data_Block">
+          <cd:Record namexml="Data_Block">
+            <cd:Field name="RBC_Param_ADS">
+              <cd:Record namexml="RBC_Param_ADS">
+                <cd:Field name="List_of_Data_Set_Records">
+                  <cd:Record namexml="List_of_Data_Set_Records">
+                    <cd:Attribute name="count">
+                    </cd:Attribute>
+                    <cd:Field name="Data_Set_Record">
+                      <cd:Array>
+                        <cd:Dimension/>
+                        <cd:Record namexml="Data_Set_Record">
+                          <cd:Field name="Pmin">
+                            <cd:Type namexml="Pmin">
+                              <cd:Attribute name="unit">
+                                <cd:Optional/>
+                                <cd:FixedValue>Pa</cd:FixedValue>
+                              </cd:Attribute>
+                              <cd:Integer format="ascii">
+                                <cd:Description>Minimum pressure</cd:Description>
+                                <cd:Unit>Pa</cd:Unit>
+                                <cd:NativeType>uint32</cd:NativeType>
+                              </cd:Integer>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="Pmax">
+                            <cd:Type namexml="Pmax">
+                              <cd:Attribute name="unit">
+                                <cd:Optional/>
+                                <cd:FixedValue>Pa</cd:FixedValue>
+                              </cd:Attribute>
+                              <cd:Integer format="ascii">
+                                <cd:Description>Maximum pressure</cd:Description>
+                                <cd:Unit>Pa</cd:Unit>
+                                <cd:NativeType>uint32</cd:NativeType>
+                              </cd:Integer>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="DeltaP">
+                            <cd:Type namexml="DeltaP">
+                              <cd:Attribute name="unit">
+                                <cd:Optional/>
+                                <cd:FixedValue>Pa</cd:FixedValue>
+                              </cd:Attribute>
+                              <cd:Integer format="ascii">
+                                <cd:Description>Pressure step</cd:Description>
+                                <cd:Unit>Pa</cd:Unit>
+                                <cd:NativeType>uint16</cd:NativeType>
+                              </cd:Integer>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="Tmin">
+                            <cd:Type namexml="Tmin">
+                              <cd:Attribute name="unit">
+                                <cd:Optional/>
+                                <cd:FixedValue>K</cd:FixedValue>
+                              </cd:Attribute>
+                              <cd:Integer format="ascii">
+                                <cd:Description>Minimum temperature</cd:Description>
+                                <cd:Unit>K</cd:Unit>
+                                <cd:NativeType>uint16</cd:NativeType>
+                              </cd:Integer>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="Tmax">
+                            <cd:Type namexml="Tmax">
+                              <cd:Attribute name="unit">
+                                <cd:Optional/>
+                                <cd:FixedValue>K</cd:FixedValue>
+                              </cd:Attribute>
+                              <cd:Integer format="ascii">
+                                <cd:Description>Maximum temperature</cd:Description>
+                                <cd:Unit>K</cd:Unit>
+                                <cd:NativeType>uint16</cd:NativeType>
+                              </cd:Integer>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="DeltaT">
+                            <cd:Type namexml="DeltaT">
+                              <cd:Attribute name="unit">
+                                <cd:Optional/>
+                                <cd:FixedValue>K</cd:FixedValue>
+                              </cd:Attribute>
+                              <cd:Integer format="ascii">
+                                <cd:Description>Temperature step</cd:Description>
+                                <cd:Unit>K</cd:Unit>
+                                <cd:NativeType>uint8</cd:NativeType>
+                              </cd:Integer>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="Rrmin">
+                            <cd:Type namexml="Rrmin">
+                              <cd:Float format="ascii">
+                                <cd:Description>Minimum response</cd:Description>
+                                <cd:NativeType>double</cd:NativeType>
+                              </cd:Float>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="Rrmax">
+                            <cd:Type namexml="Rrmax">
+                              <cd:Float format="ascii">
+                                <cd:Description>Maximum response</cd:Description>
+                                <cd:NativeType>double</cd:NativeType>
+                              </cd:Float>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="DeltaRR">
+                            <cd:Type namexml="DeltaRR">
+                              <cd:Float format="ascii">
+                                <cd:Description>Response step</cd:Description>
+                                <cd:NativeType>double</cd:NativeType>
+                              </cd:Float>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="FSR">
+                            <cd:Type namexml="FSR">
+                              <cd:Attribute name="unit">
+                                <cd:Optional/>
+                                <cd:FixedValue>GHz</cd:FixedValue>
+                              </cd:Attribute>
+                              <cd:Float format="ascii">
+                                <cd:Description>Free spectral range (in GHz)</cd:Description>
+                                <cd:Unit>GHz</cd:Unit>
+                                <cd:NativeType>double</cd:NativeType>
+                              </cd:Float>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="USR">
+                            <cd:Type namexml="USR">
+                              <cd:Attribute name="unit">
+                                <cd:Optional/>
+                                <cd:FixedValue>MHz</cd:FixedValue>
+                              </cd:Attribute>
+                              <cd:Float format="ascii">
+                                <cd:Description>Useful Spectral Range</cd:Description>
+                                <cd:Unit>MHz</cd:Unit>
+                                <cd:NativeType>double</cd:NativeType>
+                              </cd:Float>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="df">
+                            <cd:Type namexml="df">
+                              <cd:Attribute name="unit">
+                                <cd:Optional/>
+                                <cd:FixedValue>MHz</cd:FixedValue>
+                              </cd:Attribute>
+                              <cd:Float format="ascii">
+                                <cd:Description>Frequency resolution for the computation of RBC_AUX parameters</cd:Description>
+                                <cd:Unit>MHz</cd:Unit>
+                                <cd:NativeType>double</cd:NativeType>
+                              </cd:Float>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="Spare_1">
+                            <cd:Hidden/>
+                            <cd:Text namexml="Spare_1">
+                            </cd:Text>
+                          </cd:Field>
+                        </cd:Record>
+                        <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                      </cd:Array>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+              </cd:Record>
+            </cd:Field>
+          </cd:Record>
+        </cd:Field>
+      </cd:Record>
+    </cd:Field>
+  </cd:Record>
+</cd:ProductDefinition>

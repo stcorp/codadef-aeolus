@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<cd:Record name="Specific_Product_Header_AUX_PAR_HB_02_02" format="xml" namexml="Specific_Product_Header" last-modified="2015-07-06" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Description>Specific Product Header for AUX_PAR_HB ADF</cd:Description>
+  <cd:Field name="Sph_Descriptor">
+    <cd:Text namexml="Sph_Descriptor">
+      <cd:Description>Specific Product Header descriptor</cd:Description>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="Spare_1">
+    <cd:Hidden/>
+    <cd:Text namexml="Spare_1">
+    </cd:Text>
+  </cd:Field>  
+  <cd:Field name="List_of_Dsds">
+    <cd:NamedType id="List_of_Dsds"/>
+  </cd:Field>
+</cd:Record>

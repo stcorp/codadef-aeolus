@@ -1,0 +1,116 @@
+<?xml version="1.0"?>
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="binary" last-modified="2010-04-14" name="RLH_Status">
+  <cd:Description>RLH status</cd:Description>
+  <cd:Field name="ULE_temperature_in_range">
+      <cd:Integer>
+        <cd:Description>ULE temperature in range</cd:Description>
+        <cd:BitSize>1</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+      </cd:Integer>
+  </cd:Field>
+  <cd:Field name="RLH_tuned">
+      <cd:Integer>
+        <cd:Description>RLH tuned</cd:Description>
+        <cd:BitSize>1</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+      </cd:Integer>
+  </cd:Field>
+  <cd:Field name="RL_Locked">
+      <cd:Integer>
+        <cd:Description>RL Locked</cd:Description>
+        <cd:BitSize>1</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+      </cd:Integer>
+  </cd:Field>
+  <cd:Field name="Seeder_Locked">
+      <cd:Integer>
+        <cd:Description>Seeder Locked</cd:Description>
+        <cd:BitSize>1</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+      </cd:Integer>
+  </cd:Field>
+  <cd:Field name="Lasers_On_Off_status">
+      <cd:Integer>
+        <cd:Description>Lasers On / Off_status</cd:Description>
+        <cd:BitSize>1</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+      </cd:Integer>
+  </cd:Field>
+  <cd:Field name="spare_1">
+      <cd:Integer>
+        <cd:Description>Spare</cd:Description>
+        <cd:BitSize>1</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+      </cd:Integer>
+  </cd:Field>
+  <cd:Field name="LD_active_Bench">
+      <cd:Integer>
+        <cd:Description>LD active Bench</cd:Description>
+        <cd:BitSize>1</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+      </cd:Integer>
+  </cd:Field>
+  <cd:Field name="RLH_Cmd_Tran_Error">
+      <cd:Integer>
+        <cd:Description>RLH Cmd Tran Error</cd:Description>
+        <cd:BitSize>1</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+      </cd:Integer>
+  </cd:Field>
+  <cd:Field name="RL_Temp_OK">
+      <cd:Integer>
+        <cd:Description>RL Temp OK</cd:Description>
+        <cd:BitSize>1</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+      </cd:Integer>
+  </cd:Field>
+  <cd:Field name="Pump_Curr_Low_High">
+      <cd:Integer>
+        <cd:Description>Pump Curr Low/High</cd:Description>
+        <cd:BitSize>1</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+      </cd:Integer>
+  </cd:Field>
+  <cd:Field name="RLH_Temp_OVRD_ON_OFF">
+      <cd:Integer>
+        <cd:Description>RLH Temp OVRD ON/OFF</cd:Description>
+        <cd:BitSize>1</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+      </cd:Integer>
+  </cd:Field>
+  <cd:Field name="spare_2">
+      <cd:Integer>
+        <cd:Description>Spare</cd:Description>
+        <cd:BitSize>1</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+      </cd:Integer>
+  </cd:Field>
+  <cd:Field name="spare_3">
+      <cd:Integer>
+        <cd:Description>Spare</cd:Description>
+        <cd:BitSize>1</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+      </cd:Integer>
+  </cd:Field>
+  <cd:Field name="Heat_up_active">
+      <cd:Integer>
+        <cd:Description>Heat up active</cd:Description>
+        <cd:BitSize>1</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+      </cd:Integer>
+  </cd:Field>
+  <cd:Field name="spare_4">
+      <cd:Integer>
+        <cd:Description>Spare</cd:Description>
+        <cd:BitSize>1</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+      </cd:Integer>
+  </cd:Field>
+  <cd:Field name="SL_Power_in_range">
+      <cd:Integer>
+        <cd:Description>SL Power in range</cd:Description>
+        <cd:BitSize>1</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+      </cd:Integer>
+  </cd:Field>
+</cd:Record>

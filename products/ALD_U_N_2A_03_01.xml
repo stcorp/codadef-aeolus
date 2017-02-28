@@ -1,0 +1,206 @@
+<?xml version="1.0"?>
+<cd:ProductDefinition id="ALD_U_N_2A_03_01" format="binary" last-modified="2016-12-22" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+  <cd:Record format="binary">
+    <cd:Description>Level 2A Product</cd:Description>
+    <cd:Field name="mph">
+      <cd:NamedType id="MPH_v2"/>
+    </cd:Field>
+    <cd:Field name="sph">
+      <cd:NamedType id="Level_2A_SPH_03_00"/>
+    </cd:Field>
+    <cd:Field name="dsd">
+      <cd:Array format="ascii">
+        <cd:Dimension><![CDATA[$num_dsd]]></cd:Dimension>
+        <cd:NamedType id="DSD"/>
+      </cd:Array>
+    </cd:Field>
+    <cd:Field name="geolocation">
+      <cd:Array>
+        <cd:Description>Geolocation and AOCS data</cd:Description>
+        <cd:Dimension><![CDATA[$num_dsr[0]]]></cd:Dimension>
+        <cd:NamedType id="Level_2A_Geolocation_ADSR_03_00"/>
+      </cd:Array>
+      <cd:Available><![CDATA[$ds_available[0] != 0]]></cd:Available>
+      <cd:BitOffset><![CDATA[$ds_offset[0]]]></cd:BitOffset>
+    </cd:Field>
+    <cd:Field name="meas_pcd">
+      <cd:Array>
+        <cd:Description>L1B, CAL and CLM input screening quality control</cd:Description>
+        <cd:Dimension><![CDATA[$num_dsr[1]]]></cd:Dimension>
+        <cd:NamedType id="Level_2A_Meas_PCD_ADSR_03_00"/>
+      </cd:Array>
+      <cd:Available><![CDATA[$ds_available[1] != 0]]></cd:Available>
+      <cd:BitOffset><![CDATA[$ds_offset[1]]]></cd:BitOffset>
+    </cd:Field>
+    <cd:Field name="sca_pcd">
+      <cd:Array>
+        <cd:Description>PCD of SCA products</cd:Description>
+        <cd:Dimension><![CDATA[$num_dsr[2]]]></cd:Dimension>
+        <cd:NamedType id="Level_2A_SCA_PCD_ADSR_03_00"/>
+      </cd:Array>
+      <cd:Available><![CDATA[$ds_available[2] != 0]]></cd:Available>
+      <cd:BitOffset><![CDATA[$ds_offset[2]]]></cd:BitOffset>
+    </cd:Field>
+    <cd:Field name="ica_pcd">
+      <cd:Array>
+        <cd:Description>PCD of ICA products</cd:Description>
+        <cd:Dimension><![CDATA[$num_dsr[3]]]></cd:Dimension>
+        <cd:NamedType id="Level_2A_ICA_PCD_ADSR_03_00"/>
+      </cd:Array>
+      <cd:Available><![CDATA[$ds_available[3] != 0]]></cd:Available>
+      <cd:BitOffset><![CDATA[$ds_offset[3]]]></cd:BitOffset>
+    </cd:Field>
+    <cd:Field name="mca_pcd">
+      <cd:Array>
+        <cd:Description>PCD of MCA products</cd:Description>
+        <cd:Dimension><![CDATA[$num_dsr[4]]]></cd:Dimension>
+        <cd:NamedType id="Level_2A_MCA_PCD_ADSR_03_00"/>
+      </cd:Array>
+      <cd:Available><![CDATA[$ds_available[4] != 0]]></cd:Available>
+      <cd:BitOffset><![CDATA[$ds_offset[4]]]></cd:BitOffset>
+    </cd:Field>
+    <cd:Field name="amd_pcd">
+      <cd:Array>
+        <cd:Description>PCD of AMD input screening</cd:Description>
+        <cd:Dimension><![CDATA[$num_dsr[5]]]></cd:Dimension>
+        <cd:NamedType id="Level_2A_AMD_PCD_ADSR_03_00"/>
+      </cd:Array>
+      <cd:Available><![CDATA[$ds_available[5] != 0]]></cd:Available>
+      <cd:BitOffset><![CDATA[$ds_offset[5]]]></cd:BitOffset>
+    </cd:Field>
+    <cd:Field name="group_pcd">
+      <cd:Array>
+        <cd:Description>PCD of processing of all algorithms</cd:Description>
+        <cd:Dimension><![CDATA[$num_dsr[6]]]></cd:Dimension>
+        <cd:NamedType id="Level_2A_Group_PCD_ADSR_03_00"/>
+      </cd:Array>
+      <cd:Available><![CDATA[$ds_available[6] != 0]]></cd:Available>
+      <cd:BitOffset><![CDATA[$ds_offset[6]]]></cd:BitOffset>
+    </cd:Field>
+    <cd:Field name="sca_optical_properties">
+      <cd:Array>
+        <cd:Description>SCA products</cd:Description>
+        <cd:Dimension><![CDATA[$num_dsr[7]]]></cd:Dimension>
+        <cd:NamedType id="Level_2A_SCA_Opt_MDSR_03_00"/>
+      </cd:Array>
+      <cd:Available><![CDATA[$ds_available[7] != 0]]></cd:Available>
+      <cd:BitOffset><![CDATA[$ds_offset[7]]]></cd:BitOffset>
+    </cd:Field>
+    <cd:Field name="ica_optical_properties">
+      <cd:Array>
+        <cd:Description>ICA products</cd:Description>
+        <cd:Dimension><![CDATA[$num_dsr[8]]]></cd:Dimension>
+        <cd:NamedType id="Level_2A_ICA_Opt_MDSR_03_00"/>
+      </cd:Array>
+      <cd:Available><![CDATA[$ds_available[8] != 0]]></cd:Available>
+      <cd:BitOffset><![CDATA[$ds_offset[8]]]></cd:BitOffset>
+    </cd:Field>
+    <cd:Field name="mca_optical_properties">
+      <cd:Array>
+        <cd:Description>MCA products</cd:Description>
+        <cd:Dimension><![CDATA[$num_dsr[9]]]></cd:Dimension>
+        <cd:NamedType id="Level_2A_MCA_Opt_MDSR_03_00"/>
+      </cd:Array>
+      <cd:Available><![CDATA[$ds_available[9] != 0]]></cd:Available>
+      <cd:BitOffset><![CDATA[$ds_offset[9]]]></cd:BitOffset>
+    </cd:Field>
+    <cd:Field name="amd">
+      <cd:Array>
+        <cd:Description>Atmospherice, molecular data computed from MET files</cd:Description>
+        <cd:Dimension><![CDATA[$num_dsr[10]]]></cd:Dimension>
+        <cd:NamedType id="Level_2A_AMD_MDSR_03_00"/>
+      </cd:Array>
+      <cd:Available><![CDATA[$ds_available[10] != 0]]></cd:Available>
+      <cd:BitOffset><![CDATA[$ds_offset[10]]]></cd:BitOffset>
+    </cd:Field>
+    <cd:Field name="group_optical_properties">
+      <cd:Array>
+        <cd:Description>group level products</cd:Description>
+        <cd:Dimension><![CDATA[$num_dsr[11]]]></cd:Dimension>
+        <cd:NamedType id="Level_2A_Group_Opt_MDSR_03_00"/>
+      </cd:Array>
+      <cd:Available><![CDATA[$ds_available[11] != 0]]></cd:Available>
+      <cd:BitOffset><![CDATA[$ds_offset[11]]]></cd:BitOffset>
+    </cd:Field>
+    <cd:Field name="scene_classification">
+      <cd:Array>
+        <cd:Description>scene classification data</cd:Description>
+        <cd:Dimension><![CDATA[$num_dsr[12]]]></cd:Dimension>
+        <cd:NamedType id="Level_2A_Scene_Classification_ADSR_03_00"/>
+      </cd:Array>
+      <cd:Available><![CDATA[$ds_available[12] != 0]]></cd:Available>
+      <cd:BitOffset><![CDATA[$ds_offset[12]]]></cd:BitOffset>
+    </cd:Field>
+  </cd:Record>
+  <cd:ProductVariable name="num_dsd">
+    <cd:Init><![CDATA[$num_dsd = int(/mph/num_dsd)]]></cd:Init>
+  </cd:ProductVariable>
+  <cd:ProductVariable name="num_ds">
+    <cd:Init><![CDATA[$num_ds = 13]]></cd:Init>
+  </cd:ProductVariable>
+  <cd:ProductVariable name="ds_to_dsd_index">
+    <cd:Dimension><![CDATA[$num_ds]]></cd:Dimension>
+    <cd:Init><![CDATA[$ds_to_dsd_index[0] = index(/dsd, str(./ds_name) == "Geolocation_ADS             "); $ds_to_dsd_index[1] = index(/dsd, str(./ds_name) == "Meas_PCD_ADS                "); $ds_to_dsd_index[2] = index(/dsd, str(./ds_name) == "SCA_PCD_ADS                 "); $ds_to_dsd_index[3] = index(/dsd, str(./ds_name) == "ICA_PCD_ADS                 "); $ds_to_dsd_index[4] = index(/dsd, str(./ds_name) == "MCA_PCD_ADS                 "); $ds_to_dsd_index[5] = index(/dsd, str(./ds_name) == "AMD_PCD_ADS                 "); $ds_to_dsd_index[6] = index(/dsd, str(./ds_name) == "Group_PCD_ADS               "); $ds_to_dsd_index[7] = index(/dsd, str(./ds_name) == "SCA_Optical_Properties_MDS  "); $ds_to_dsd_index[8] = index(/dsd, str(./ds_name) == "ICA_Optical_Properties_MDS  "); $ds_to_dsd_index[9] = index(/dsd, str(./ds_name) == "MCA_Optical_Properties_MDS  "); $ds_to_dsd_index[10] = index(/dsd, str(./ds_name) == "AMD_ADS                     "); $ds_to_dsd_index[11] = index(/dsd, str(./ds_name) == "Group_Optical_Properties_MDS"); $ds_to_dsd_index[12] = index(/dsd, str(./ds_name) == "Scene_Classification_ADS    ")]]></cd:Init>
+  </cd:ProductVariable>
+  <cd:ProductVariable name="ds_available">
+    <cd:Dimension><![CDATA[$num_ds]]></cd:Dimension>
+    <cd:Init><![CDATA[for i = 0 to $num_ds - 1 do $ds_available[i] = if($ds_to_dsd_index[i] != -1 && int(/dsd[$ds_to_dsd_index[i]]/ds_size) != 0, 1, 0)]]></cd:Init>
+  </cd:ProductVariable>
+  <cd:ProductVariable name="ds_offset">
+    <cd:Dimension><![CDATA[$num_ds]]></cd:Dimension>
+    <cd:Init><![CDATA[for i = 0 to $num_ds - 1 do $ds_offset[i] = 8 * int(/dsd[$ds_to_dsd_index[i]]/ds_offset)]]></cd:Init>
+  </cd:ProductVariable>
+  <cd:ProductVariable name="num_dsr">
+    <cd:Dimension><![CDATA[$num_ds]]></cd:Dimension>
+    <cd:Init><![CDATA[for i = 0 to $num_ds - 1 do $num_dsr[i] = int(/dsd[$ds_to_dsd_index[i]]/num_dsr)]]></cd:Init>
+  </cd:ProductVariable>
+  <cd:ProductVariable name="num_meas_max_brc">
+    <cd:Init><![CDATA[$num_meas_max_brc = int(/sph/num_meas_max_brc)]]></cd:Init>
+  </cd:ProductVariable>
+
+  <!-- MPH Cross File Tests -->
+  <ct:NamedCrossFileTest id="MPH_Product"/>
+  <ct:NamedCrossFileTest id="MPH_Proc_Stage"/>
+  <ct:NamedCrossFileTest id="MPH_Ref_Doc"/>
+  <ct:NamedCrossFileTest id="MPH_Acquisition_Station"/>
+  <ct:NamedCrossFileTest id="MPH_Proc_Center"/>
+  <ct:NamedCrossFileTest id="MPH_Proc_Time"/>
+  <ct:NamedCrossFileTest id="MPH_Software_Ver"/>
+  <ct:NamedCrossFileTest id="MPH_Baseline"/>
+  <ct:NamedCrossFileTest id="MPH_Sensing_Start"/>
+  <ct:NamedCrossFileTest id="MPH_Sensing_Stop"/>
+  <ct:NamedCrossFileTest id="MPH_Phase"/>
+  <ct:NamedCrossFileTest id="MPH_Cycle"/>
+  <ct:NamedCrossFileTest id="MPH_Rel_Orbit"/>
+  <ct:NamedCrossFileTest id="MPH_Abs_Orbit"/>
+  <ct:NamedCrossFileTest id="MPH_State_Vector_Time"/>
+  <ct:NamedCrossFileTest id="MPH_Delta_UT1"/>
+  <ct:NamedCrossFileTest id="MPH_X_Position"/>
+  <ct:NamedCrossFileTest id="MPH_Y_Position"/>
+  <ct:NamedCrossFileTest id="MPH_Z_Position"/>
+  <ct:NamedCrossFileTest id="MPH_X_Velocity"/>
+  <ct:NamedCrossFileTest id="MPH_Y_Velocity"/>
+  <ct:NamedCrossFileTest id="MPH_Z_Velocity"/>
+  <ct:NamedCrossFileTest id="MPH_Vector_Source"/>
+  <ct:NamedCrossFileTest id="MPH_Utc_Sbt_Time"/>
+  <ct:NamedCrossFileTest id="MPH_Sat_Binary_Time"/>
+  <ct:NamedCrossFileTest id="MPH_Leap_Utc"/>
+  <ct:NamedCrossFileTest id="MPH_Leap_Sign"/>
+  <ct:NamedCrossFileTest id="MPH_Leap_Err"/>
+  <ct:NamedCrossFileTest id="MPH_Product_Err"/>
+  <ct:NamedCrossFileTest id="MPH_Tot_Size"/>
+  <ct:NamedCrossFileTest id="MPH_Sph_Size"/>
+  <ct:NamedCrossFileTest id="MPH_Num_Dsd"/>
+  <ct:NamedCrossFileTest id="MPH_Dsd_Size"/>
+  <ct:NamedCrossFileTest id="MPH_Num_Data_Sets"/>
+
+  <!-- SPH Cross File Tests -->
+  <ct:NamedCrossFileTest id="SPH_Sph_Descriptor"/>
+  <ct:NamedCrossFileTest id="SPH_Num_BRC"/>
+  <ct:NamedCrossFileTest id="SPH_Intersect_Start_Lat"/>
+  <ct:NamedCrossFileTest id="SPH_Intersect_Start_Long"/>
+  <ct:NamedCrossFileTest id="SPH_Intersect_Stop_Lat"/>
+  <ct:NamedCrossFileTest id="SPH_Intersect_Stop_Long"/>
+  <ct:NamedCrossFileTest id="SPH_Sat_Track"/>
+
+</cd:ProductDefinition>

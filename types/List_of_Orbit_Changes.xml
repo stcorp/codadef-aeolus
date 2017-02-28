@@ -1,0 +1,137 @@
+<?xml version="1.0"?>
+<cd:Record name="List_of_Orbit_Changes" format="xml" namexml="List_of_Orbit_Changes" last-modified="2009-01-23" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+  <cd:Description>List of Orbit Change</cd:Description>
+  <cd:Attribute name="count"/>
+  <cd:Field name="Orbit_Change">
+    <cd:Array>
+      <cd:Dimension/>
+      <cd:Record namexml="Orbit_Change">
+        <cd:Description>Orbit Change</cd:Description>
+        <cd:Field name="Orbit">
+          <cd:Record namexml="Orbit">
+            <cd:Field name="Absolute_Orbit">
+              <cd:Type namexml="Absolute_Orbit">
+                <cd:Integer format="ascii">
+                  <cd:Description>Absolute orbit number</cd:Description>
+                  <cd:NativeType>int32</cd:NativeType>
+                </cd:Integer>
+              </cd:Type>
+            </cd:Field>
+            <cd:Field name="Relative_Orbit">
+              <cd:Type namexml="Relative_Orbit">
+                <cd:Integer format="ascii">
+                  <cd:Description>Relative orbit number</cd:Description>
+                  <cd:NativeType>int32</cd:NativeType>
+                </cd:Integer>
+              </cd:Type>
+            </cd:Field>
+            <cd:Field name="Cycle_Number">
+              <cd:Type namexml="Cycle_Number">
+                <cd:Integer format="ascii">
+                  <cd:Description>Cycle number; incremented after each new repeat cycle</cd:Description>
+                  <cd:NativeType>int32</cd:NativeType>
+                </cd:Integer>
+              </cd:Type>
+            </cd:Field>
+            <cd:Field name="Phase_Number">
+              <cd:Type namexml="Phase_Number">
+                <cd:Integer format="ascii">
+                  <cd:Description>Phase number; incremented on Mission Management decision</cd:Description>
+                  <cd:NativeType>int32</cd:NativeType>
+                </cd:Integer>
+              </cd:Type>
+            </cd:Field>
+          </cd:Record>
+        </cd:Field>
+        <cd:Field name="Cycle">
+          <cd:Record namexml="Cycle">
+            <cd:Field name="Repeat_Cycle">
+              <cd:Type namexml="Repeat_Cycle">
+                <cd:Attribute name="unit">
+                  <cd:FixedValue>day</cd:FixedValue>
+                </cd:Attribute>
+                <cd:Integer format="ascii">
+                  <cd:NativeType>int16</cd:NativeType>
+                </cd:Integer>
+              </cd:Type>
+            </cd:Field>
+            <cd:Field name="Cycle_Length">
+              <cd:Type namexml="Cycle_Length">
+                <cd:Attribute name="unit">
+                  <cd:FixedValue>orbit</cd:FixedValue>
+                </cd:Attribute>
+                <cd:Integer format="ascii">
+                  <cd:NativeType>int16</cd:NativeType>
+                </cd:Integer>
+              </cd:Type>
+            </cd:Field>
+            <cd:Field name="ANX_Longitude">
+              <cd:Type namexml="ANX_Longitude">
+                <cd:Attribute name="unit">
+                  <cd:FixedValue>deg</cd:FixedValue>
+                </cd:Attribute>
+                <cd:Float format="ascii">
+                  <cd:Description>Longitude of ascending node crossing (ANX)</cd:Description>
+                  <cd:Unit>degrees_east</cd:Unit>
+                  <cd:NativeType>double</cd:NativeType>
+                </cd:Float>
+              </cd:Type>
+            </cd:Field>
+            <cd:Field name="MLST">
+              <cd:Text namexml="MLST">
+                <cd:Description>Mean local solar time at ANX of relative orbit 1</cd:Description>
+              </cd:Text>
+            </cd:Field>
+            <cd:Field name="MLST_Drift">
+              <cd:Type namexml="MLST_Drift">
+                <cd:Attribute name="unit">
+                  <cd:FixedValue>s/day</cd:FixedValue>
+                </cd:Attribute>
+                <cd:Float format="ascii">
+                  <cd:Description>Drift of mean local solar time over 1 orbit</cd:Description>
+                  <cd:Unit>s/day</cd:Unit>
+                  <cd:NativeType>double</cd:NativeType>
+                </cd:Float>
+              </cd:Type>
+            </cd:Field>
+          </cd:Record>
+        </cd:Field>
+        <cd:Field name="Time_of_ANX">
+          <cd:Record namexml="Time_of_ANX">
+            <cd:Field name="TAI">
+              <cd:Type namexml="TAI">
+                <cd:Time format="ascii" timeformat="ascii_ccsds_datetime_ymd2_with_ref">
+                  <cd:Description>TAI date and time of ANX, in ASCII CCSDS time format, including time reference and microseconds</cd:Description>
+                  <cd:Mapping string="UTC=0000-00-00T00:00:00.000000" value="-inf"/>
+                  <cd:Mapping string="UTC=9999-99-99T99:99:99.999999" value="+inf"/>
+                  <cd:Mapping string="" value="nan"/>
+                </cd:Time>
+              </cd:Type>
+            </cd:Field>
+            <cd:Field name="UTC">
+              <cd:Type namexml="UTC">
+                <cd:Time format="ascii" timeformat="ascii_ccsds_datetime_ymd2_with_ref">
+                  <cd:Description>UTC date and time of ANX, in ASCII CCSDS time format, including time reference and microseconds</cd:Description>
+                  <cd:Mapping string="UTC=0000-00-00T00:00:00.000000" value="-inf"/>
+                  <cd:Mapping string="UTC=9999-99-99T99:99:99.999999" value="+inf"/>
+                  <cd:Mapping string="" value="nan"/>
+                </cd:Time>
+              </cd:Type>
+            </cd:Field>
+            <cd:Field name="UT1">
+              <cd:Type namexml="UT1">
+                <cd:Time format="ascii" timeformat="ascii_ccsds_datetime_ymd2_with_ref">
+                  <cd:Description>UT1 date and time of ANX, in ASCII CCSDS time format, including time reference and microseconds</cd:Description>
+                  <cd:Mapping string="UTC=0000-00-00T00:00:00.000000" value="-inf"/>
+                  <cd:Mapping string="UTC=9999-99-99T99:99:99.999999" value="+inf"/>
+                  <cd:Mapping string="" value="nan"/>
+                </cd:Time>
+              </cd:Type>
+            </cd:Field>
+          </cd:Record>
+        </cd:Field>
+      </cd:Record>
+      <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+    </cd:Array>
+  </cd:Field>
+</cd:Record>

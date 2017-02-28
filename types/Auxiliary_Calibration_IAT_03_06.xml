@@ -1,0 +1,446 @@
+<?xml version="1.0"?>
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="xml" last-modified="2010-08-26" name="Auxiliary_Calibration_IAT_03_06" namexml="Auxiliary_Calibration_IAT">
+  <cd:Description>Auxiliary Calibration IAT</cd:Description>
+  <cd:Field name="List_of_Data_Set_Records">
+    <cd:Record namexml="List_of_Data_Set_Records">
+      <cd:Description>List of Data Set Records</cd:Description>
+      <cd:Attribute name="count">
+      </cd:Attribute>
+      <cd:Field name="Data_Set_Record">
+        <cd:Array>
+          <cd:Dimension/>
+          <cd:Record namexml="Data_Set_Record">
+            <cd:Description>Data Set Record</cd:Description>
+            <cd:Field name="First_Start_of_Observation_Time">
+              <cd:Type namexml="First_Start_of_Observation_Time">
+                <cd:Time format="ascii" timeformat="ascii_ccsds_datetime_ymd1_with_ref">
+                  <cd:Description>Start of observation time of the first BRC</cd:Description>
+                  <cd:Mapping string="UTC=0000-00-00T00:00:00" value="-inf"/>
+                  <cd:Mapping string="UTC=9999-99-99T99:99:99" value="+inf"/>
+                  <cd:Mapping string="" value="nan"/>
+                </cd:Time>
+              </cd:Type>
+            </cd:Field>
+            <cd:Field name="Last_Start_of_Observation_Time">
+              <cd:Type namexml="Last_Start_of_Observation_Time">
+                <cd:Time format="ascii" timeformat="ascii_ccsds_datetime_ymd1_with_ref">
+                  <cd:Description>Start of observation time of the last BRC</cd:Description>
+                  <cd:Mapping string="UTC=0000-00-00T00:00:00" value="-inf"/>
+                  <cd:Mapping string="UTC=9999-99-99T99:99:99" value="+inf"/>
+                  <cd:Mapping string="" value="nan"/>
+                </cd:Time>
+              </cd:Type>
+            </cd:Field>
+            <cd:Field name="List_of_IAT_Results">
+              <cd:Record namexml="List_of_IAT_Results">
+                <cd:Description>List of IAT Results</cd:Description>
+                <cd:Attribute name="count">
+                </cd:Attribute>
+                <cd:Field name="IAT_Result">
+                  <cd:Array>
+                    <cd:Dimension/>
+                    <cd:Record namexml="IAT_Result">
+                      <cd:Description>IAT Result</cd:Description>
+                      <cd:Field name="Mie_Valid">
+                        <cd:Type namexml="Mie_Valid">
+                          <cd:Integer format="ascii">
+                            <cd:Description>TRUE if Mie data is available to compute the ISR result. FALSE only when ALL mie pulses were eliminated due to corruption or laser frequency is unlocked for ALL Mie pulses</cd:Description>
+                            <cd:NativeType>uint8</cd:NativeType>
+                            <cd:Mapping string="False" value="0"/>
+                            <cd:Mapping string="false" value="0"/>
+                            <cd:Mapping string="True" value="1"/>
+                            <cd:Mapping string="true" value="1"/>
+                            <ct:NamedTest id="BooleanXmlTest"/>
+                          </cd:Integer>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="Rayleigh_Valid">
+                        <cd:Type namexml="Rayleigh_Valid">
+                          <cd:Integer format="ascii">
+                            <cd:Description>TRUE if Rayleigh data is available to compute the ISR result. FALSE only when ALL mie pulses were eliminated due to corruption or laser frequency is unlocked for ALL Rayleigh pulses</cd:Description>
+                            <cd:NativeType>uint8</cd:NativeType>
+                            <cd:Mapping string="False" value="0"/>
+                            <cd:Mapping string="false" value="0"/>
+                            <cd:Mapping string="True" value="1"/>
+                            <cd:Mapping string="true" value="1"/>
+                            <ct:NamedTest id="BooleanXmlTest"/>
+                          </cd:Integer>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="Freq_In_Centre_Subrange">
+                        <cd:Type namexml="Freq_In_Centre_Subrange">
+                          <cd:Integer format="ascii">
+                            <cd:Description>TRUE if the frequency is between -0.75 GigaHertz and 0.75 GigaHertz. For frequencies outside the range, this value is set to FALSE</cd:Description>
+                            <cd:NativeType>uint8</cd:NativeType>
+                            <cd:Mapping string="False" value="0"/>
+                            <cd:Mapping string="false" value="0"/>
+                            <cd:Mapping string="True" value="1"/>
+                            <cd:Mapping string="true" value="1"/>
+                            <ct:NamedTest id="BooleanXmlTest"/>
+                          </cd:Integer>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="Laser_Freq_Offset">
+                        <cd:Type namexml="Laser_Freq_Offset">
+                          <cd:Attribute name="unit">
+                            <cd:Optional/>
+                            <cd:FixedValue>GHz</cd:FixedValue>
+                          </cd:Attribute>
+                          <cd:Float format="ascii">
+                            <cd:Description>Laser frequency offset</cd:Description>
+                            <cd:Unit>GHz</cd:Unit>
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="Mie_FWHM">
+                        <cd:Type namexml="Mie_FWHM">
+                          <cd:Attribute name="unit">
+                            <cd:Optional/>
+                            <cd:FixedValue>PixelIndex</cd:FixedValue>
+                          </cd:Attribute>
+                          <cd:Float format="ascii">
+                            <cd:Description>Mie Channel FWHM</cd:Description>
+                            <cd:Unit>pixel</cd:Unit>
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="Mie_Response">
+                        <cd:Type namexml="Mie_Response">
+                          <cd:Attribute name="unit">
+                            <cd:Optional/>
+                            <cd:FixedValue>PixelIndex</cd:FixedValue>
+                          </cd:Attribute>
+                          <cd:Float format="ascii">
+                            <cd:Description>Mie channel spectral response</cd:Description>
+                            <cd:Unit>pixel</cd:Unit>
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="Rayleigh_A_Transmission">
+                        <cd:Type namexml="Rayleigh_A_Transmission">
+                          <cd:Attribute name="unit">
+                            <cd:Optional/>
+                            <cd:FixedValue>AU</cd:FixedValue>
+                          </cd:Attribute>
+                          <cd:Float format="ascii">
+                            <cd:Description>Rayleigh Channel A Spectral Transmission</cd:Description>
+                            <cd:Unit>AU</cd:Unit>
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="Rayleigh_B_Transmission">
+                        <cd:Type namexml="Rayleigh_B_Transmission">
+                          <cd:Attribute name="unit">
+                            <cd:Optional/>
+                            <cd:FixedValue>AU</cd:FixedValue>
+                          </cd:Attribute>
+                          <cd:Float format="ascii">
+                            <cd:Description>Rayleigh Channel B Spectral Transmission</cd:Description>
+                            <cd:Unit>AU</cd:Unit>
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="Data_Stat">
+                        <cd:Record namexml="Data_Stat">
+                          <cd:Description>Input data statistics.</cd:Description>
+                          <cd:Field name="Num_Raw_Data">
+                            <cd:Type namexml="Num_Raw_Data">
+                              <cd:Integer format="ascii">
+                                <cd:Description>Number of raw reference pulses in input for each Mie and Rayleigh</cd:Description>
+                                <cd:NativeType>int32</cd:NativeType>
+                              </cd:Integer>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="Num_Laser_Freq_Unlocked">
+                            <cd:Type namexml="Num_Laser_Freq_Unlocked">
+                              <cd:Integer format="ascii">
+                                <cd:Description>Number of pulses with laser transmitter frequency unlocked status</cd:Description>
+                                <cd:NativeType>int32</cd:NativeType>
+                              </cd:Integer>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="Num_Mie_Used">
+                            <cd:Type namexml="Num_Mie_Used">
+                              <cd:Integer format="ascii">
+                                <cd:Description>Number of Mie reference pulses used</cd:Description>
+                                <cd:NativeType>int32</cd:NativeType>
+                              </cd:Integer>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="Num_Rayleigh_Used">
+                            <cd:Type namexml="Num_Rayleigh_Used">
+                              <cd:Integer format="ascii">
+                                <cd:Description>Number of Rayleigh reference pulses used</cd:Description>
+                                <cd:NativeType>int32</cd:NativeType>
+                              </cd:Integer>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="Num_Corrupt_Mie">
+                            <cd:Type namexml="Num_Corrupt_Mie">
+                              <cd:Integer format="ascii">
+                                <cd:Description>Number of corrupt Mie reference pulses</cd:Description>
+                                <cd:NativeType>int32</cd:NativeType>
+                              </cd:Integer>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="Num_Corrupt_Rayleigh">
+                            <cd:Type namexml="Num_Corrupt_Rayleigh">
+                              <cd:Integer format="ascii">
+                                <cd:Description>Number of corrupt Rayleigh reference pulses</cd:Description>
+                                <cd:NativeType>int32</cd:NativeType>
+                              </cd:Integer>
+                            </cd:Type>
+                          </cd:Field>
+                        </cd:Record>
+                      </cd:Field>
+                      <cd:Field name="Etalon_Average_Temperature">
+                        <cd:Record namexml="Etalon_Average_Temperature">
+                          <cd:Field name="Ray_Spectrometer_Temp_9">
+                            <cd:Type namexml="Ray_Spectrometer_Temp_9">
+                              <cd:Attribute name="unit">
+                                <cd:Optional/>
+                                <cd:FixedValue>celsius</cd:FixedValue>
+                              </cd:Attribute>
+                              <cd:Float format="ascii">
+                                <cd:Description>Sensor RSP etalon temperature</cd:Description>
+                                <cd:Unit>degC</cd:Unit>
+                                <cd:NativeType>double</cd:NativeType>
+                              </cd:Float>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="Ray_Spectrometer_Temp_10">
+                            <cd:Type namexml="Ray_Spectrometer_Temp_10">
+                              <cd:Attribute name="unit">
+                                <cd:Optional/>
+                                <cd:FixedValue>celsius</cd:FixedValue>
+                              </cd:Attribute>
+                              <cd:Float format="ascii">
+                                <cd:Description>Sensor RSP etalon temperature</cd:Description>
+                                <cd:Unit>degC</cd:Unit>
+                                <cd:NativeType>double</cd:NativeType>
+                              </cd:Float>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="Ray_Spectrometer_Temp_11">
+                            <cd:Type namexml="Ray_Spectrometer_Temp_11">
+                              <cd:Attribute name="unit">
+                                <cd:Optional/>
+                                <cd:FixedValue>celsius</cd:FixedValue>
+                              </cd:Attribute>
+                              <cd:Float format="ascii">
+                                <cd:Description>Sensor RSP etalon temperature</cd:Description>
+                                <cd:Unit>degC</cd:Unit>
+                                <cd:NativeType>double</cd:NativeType>
+                              </cd:Float>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="Ray_Spectrometer_Temp_12">
+                            <cd:Type namexml="Ray_Spectrometer_Temp_12">
+                              <cd:Attribute name="unit">
+                                <cd:Optional/>
+                                <cd:FixedValue>celsius</cd:FixedValue>
+                              </cd:Attribute>
+                              <cd:Float format="ascii">
+                                <cd:Description>Sensor RSP etalon temperature</cd:Description>
+                                <cd:Unit>degC</cd:Unit>
+                                <cd:NativeType>double</cd:NativeType>
+                              </cd:Float>
+                            </cd:Type>
+                          </cd:Field>
+                        </cd:Record>
+                      </cd:Field>
+                      <cd:Field name="RSPT_Average_Temperature">
+                        <cd:Record namexml="RSPT_Average_Temperature">
+                          <cd:Field name="Telecommand_8_Ray_Spectrometer_Thermal_Hood_1">
+                            <cd:Type namexml="Telecommand_8_Ray_Spectrometer_Thermal_Hood_1">
+                              <cd:Attribute name="unit">
+                                <cd:Optional/>
+                                <cd:FixedValue>celsius</cd:FixedValue>
+                              </cd:Attribute>
+                              <cd:Float format="ascii">
+                                <cd:Description>Sensor RSPT etalon temperature</cd:Description>
+                                <cd:Unit>degC</cd:Unit>
+                                <cd:NativeType>double</cd:NativeType>
+                              </cd:Float>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="Telecommand_9_Ray_Spectrometer_Thermal_Hood_2">
+                            <cd:Type namexml="Telecommand_9_Ray_Spectrometer_Thermal_Hood_2">
+                              <cd:Attribute name="unit">
+                                <cd:Optional/>
+                                <cd:FixedValue>celsius</cd:FixedValue>
+                              </cd:Attribute>
+                              <cd:Float format="ascii">
+                                <cd:Description>Sensor RSPT etalon temperature</cd:Description>
+                                <cd:Unit>degC</cd:Unit>
+                                <cd:NativeType>double</cd:NativeType>
+                              </cd:Float>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="Telecommand_10_Ray_Spectrometer_Thermal_Hood_3">
+                            <cd:Type namexml="Telecommand_10_Ray_Spectrometer_Thermal_Hood_3">
+                              <cd:Attribute name="unit">
+                                <cd:Optional/>
+                                <cd:FixedValue>celsius</cd:FixedValue>
+                              </cd:Attribute>
+                              <cd:Float format="ascii">
+                                <cd:Description>Sensor RSPT etalon temperature</cd:Description>
+                                <cd:Unit>degC</cd:Unit>
+                                <cd:NativeType>double</cd:NativeType>
+                              </cd:Float>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="Telecommand_11_Ray_Spectrometer_Thermal_Hood_4">
+                            <cd:Type namexml="Telecommand_11_Ray_Spectrometer_Thermal_Hood_4">
+                              <cd:Attribute name="unit">
+                                <cd:Optional/>
+                                <cd:FixedValue>celsius</cd:FixedValue>
+                              </cd:Attribute>
+                              <cd:Float format="ascii">
+                                <cd:Description>Sensor RSPT etalon temperature</cd:Description>
+                                <cd:Unit>degC</cd:Unit>
+                                <cd:NativeType>double</cd:NativeType>
+                              </cd:Float>
+                            </cd:Type>
+                          </cd:Field>
+                        </cd:Record>
+                      </cd:Field>
+                      <cd:Field name="Optical_Baseplate_Average_Temperature">
+                        <cd:Type namexml="Optical_Baseplate_Average_Temperature">
+                          <cd:Attribute name="unit">
+                            <cd:Optional/>
+                            <cd:FixedValue>celsius</cd:FixedValue>
+                          </cd:Attribute>
+                          <cd:Float format="ascii">
+                            <cd:Description>Sensor OB Ray average temperature of 5,6,7,8</cd:Description>
+                            <cd:Unit>degC</cd:Unit>
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                      </cd:Field>
+                    </cd:Record>
+                    <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                  </cd:Array>
+                </cd:Field>
+              </cd:Record>
+            </cd:Field>
+            <cd:Field name="Rayleigh_A_FWHM">
+              <cd:Type namexml="Rayleigh_A_FWHM">
+                <cd:Attribute name="unit">
+                  <cd:Optional/>
+                  <cd:FixedValue>GHz</cd:FixedValue>
+                </cd:Attribute>
+                <cd:Float format="ascii">
+                  <cd:Description>Rayleigh Channel A FWHM</cd:Description>
+                  <cd:Unit>GHz</cd:Unit>
+                  <cd:NativeType>double</cd:NativeType>
+                </cd:Float>
+              </cd:Type>
+            </cd:Field>
+            <cd:Field name="Rayleigh_B_FWHM">
+              <cd:Type namexml="Rayleigh_B_FWHM">
+                <cd:Attribute name="unit">
+                  <cd:Optional/>
+                  <cd:FixedValue>GHz</cd:FixedValue>
+                </cd:Attribute>
+                <cd:Float format="ascii">
+                  <cd:Description>Rayleigh Channel B FWHM</cd:Description>
+                  <cd:Unit>GHz</cd:Unit>
+                  <cd:NativeType>double</cd:NativeType>
+                </cd:Float>
+              </cd:Type>
+            </cd:Field>
+            <cd:Field name="Rayleigh_Channel_Separation">
+              <cd:Type namexml="Rayleigh_Channel_Separation">
+                <cd:Attribute name="unit">
+                  <cd:Optional/>
+                  <cd:FixedValue>GHz</cd:FixedValue>
+                </cd:Attribute>
+                <cd:Float format="ascii">
+                  <cd:Description>Rayleigh Channel Separation</cd:Description>
+                  <cd:Unit>GHz</cd:Unit>
+                  <cd:NativeType>double</cd:NativeType>
+                </cd:Float>
+              </cd:Type>
+            </cd:Field>
+            <cd:Field name="Mean_Slope_of_Mie_Response">
+              <cd:Type namexml="Mean_Slope_of_Mie_Response">
+                <cd:Attribute name="unit">
+                  <cd:Optional/>
+                  <cd:FixedValue>GHz / PixelIndex</cd:FixedValue>
+                </cd:Attribute>
+                <cd:Float format="ascii">
+                  <cd:Description>Mean Slope of Mie Channel Response calculated using the valid Freq_In_Centre_Subrange = TRUE results</cd:Description>
+                  <cd:Unit>GHz / pixel</cd:Unit>
+                  <cd:NativeType>double</cd:NativeType>
+                </cd:Float>
+              </cd:Type>
+            </cd:Field>
+            <cd:Field name="Num_of_Valid_Mie_Results">
+              <cd:Type namexml="Num_of_Valid_Mie_Results">
+                <cd:Integer format="ascii">
+                  <cd:Description>Number of valid Mie IAT results</cd:Description>
+                  <cd:NativeType>int32</cd:NativeType>
+                </cd:Integer>
+              </cd:Type>
+            </cd:Field>
+            <cd:Field name="Num_of_Valid_Rayleigh_Results">
+              <cd:Type namexml="Num_of_Valid_Rayleigh_Results">
+                <cd:Integer format="ascii">
+                  <cd:Description>Number of valid Rayleigh IAT results</cd:Description>
+                  <cd:NativeType>int32</cd:NativeType>
+                </cd:Integer>
+              </cd:Type>
+            </cd:Field>
+            <cd:Field name="Num_of_Valid_Results_in_Centre_Subrange">
+              <cd:Type namexml="Num_of_Valid_Results_in_Centre_Subrange">
+                <cd:Integer format="ascii">
+                  <cd:Description>Number of valid frequency steps available to compute Mie channel response</cd:Description>
+                  <cd:NativeType>int32</cd:NativeType>
+                </cd:Integer>
+              </cd:Type>
+            </cd:Field>
+            <cd:Field name="Mie_Rms_Error">
+              <cd:Type namexml="Mie_Rms_Error">
+                <cd:Float format="ascii">
+                  <cd:Description>Mie rms fit error</cd:Description>
+                  <cd:NativeType>double</cd:NativeType>
+                </cd:Float>
+              </cd:Type>
+            </cd:Field>
+            <cd:Field name="Mie_Std_Error">
+              <cd:Type namexml="Mie_Std_Error">
+                <cd:Float format="ascii">
+                  <cd:Description>Mie standard deviation of the fit error</cd:Description>
+                  <cd:NativeType>double</cd:NativeType>
+                </cd:Float>
+              </cd:Type>
+            </cd:Field>
+            <cd:Field name="Ray_A_Rms_Error">
+              <cd:Type namexml="Ray_A_Rms_Error">
+                <cd:Float format="ascii">
+                  <cd:Description>Rayleigh channel A rms fit error</cd:Description>
+                  <cd:NativeType>double</cd:NativeType>
+                </cd:Float>
+              </cd:Type>
+            </cd:Field>
+            <cd:Field name="Ray_B_Rms_Error">
+              <cd:Type namexml="Ray_B_Rms_Error">
+                <cd:Float format="ascii">
+                  <cd:Description>Rayleigh channel B rms fit error</cd:Description>
+                  <cd:NativeType>double</cd:NativeType>
+                </cd:Float>
+              </cd:Type>
+            </cd:Field>
+          </cd:Record>
+          <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+        </cd:Array>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+</cd:Record>

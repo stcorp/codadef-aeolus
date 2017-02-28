@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<cd:Record name="Specific_Product_Header_CLM" format="xml" namexml="Specific_Product_Header" last-modified="2008-07-01" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Description>Specific Product Header for L2B Clim products</cd:Description>
+  <cd:Field name="Sph_Descriptor">
+    <cd:Text namexml="Sph_Descriptor">
+      <cd:Description>SPH descriptor: ASCII string describing the product</cd:Description>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="Spare_1">
+    <cd:Hidden/>
+    <cd:Text namexml="Spare_1">
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="AuxClim_Ref_Name">
+    <cd:Text namexml="AuxClim_Ref_Name">
+      <cd:Description>Reference name to indicate which set of climatological data was used for constructing this look-up-table</cd:Description>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="Spare_2">
+    <cd:Hidden/>
+    <cd:Text namexml="Spare_2">
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="List_of_Dsds">
+    <cd:NamedType id="List_of_Dsds"/>
+  </cd:Field>
+</cd:Record>

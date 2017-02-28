@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="binary" last-modified="2008-07-01" name="Level_1B_Ground_Wind_Detection_03_05">
+  <cd:Description>Level 1B Measurement Ground Wind Detection</cd:Description>
+  <cd:Field name="ground_wind_detected">
+    <cd:Integer>
+      <cd:Description>TRUE=ground wind is detected in the current bin</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+      <ct:NamedTest id="BooleanBinTest"/>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="ground_bin_number">
+    <cd:Integer>
+      <cd:Description>ground wind bin number. If ground wind is not detected this is set to 0</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="ground_bin_thickness_above_dem">
+    <cd:Float>
+      <cd:Description>Ground wind thickness (air column height) above DEM intersection (= difference between the upper edgeof the ground bin and DEM height). When there is no expected ground bin, this is set to -9999. For the average ground wind bin thickness calculation, only the values with corresponding flag ground_wind_detected=TRUE are used</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+</cd:Record>

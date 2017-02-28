@@ -1,0 +1,126 @@
+<?xml version="1.0"?>
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="binary" last-modified="2008-07-01" name="Level_1B_Useful_Signal_MDSR">
+  <cd:Field name="start_of_observation_time">
+    <cd:Time timeformat="binary_envisat_datetime">
+      <cd:Description>Satellite time at start of BRC</cd:Description>
+      <ct:NamedTest id="RangeSecond" path="seconds"/>
+      <ct:NamedTest id="RangeMicroSecond" path="microseconds"/>
+      <ct:NamedTest id="TimeNotZero"/>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="observation_useful_signals">
+    <cd:Record>
+      <cd:Description>Collection of useful signal strength for the observation</cd:Description>
+      <cd:Field name="mie_altitude_bin_useful_signal_info">
+        <cd:Array>
+          <cd:Dimension>25</cd:Dimension>
+          <cd:Record>
+            <cd:Description>List of useful signal strength information for each Mie altitude bin</cd:Description>
+            <cd:Field name="data_quality_flag">
+              <cd:Integer>
+                <cd:Description>This field is a 1 byte, bit-packed field, where the first 4 bits represent contain the bin-level validity information, and the next 4 bits are the measurementlevel validity information. When the data is valid, this field will be 0. Bit 1: Overall validity. Data invalid 1, otherwise 0; Bit 2: Bin-level validity spare. Default 0; Bit 3: Data saturation found 1, otherwise 0; Bit 4: Data spike found 1, otherwise 0; Bit 5: Measurement-level validity spare. Default 0; Bit 6: Source packet invalid 1, otherwise 0; Bit 7: Laser Frequency not locked 1, otherwise 0; Bit 8: Spacecraft attitude not on target 1, otherwise 0</cd:Description>
+                <cd:BitSize>8</cd:BitSize>
+                <cd:NativeType>uint8</cd:NativeType>
+              </cd:Integer>
+            </cd:Field>
+            <cd:Field name="useful_signal">
+              <cd:Float>
+                <cd:Description>Useful signal strength for a Rayleigh altitude bin. If the Data_Quality_Flag is non-zero (data invalid), the useful signal value is set to 0</cd:Description>
+                <cd:BitSize>64</cd:BitSize>
+                <cd:NativeType>double</cd:NativeType>
+              </cd:Float>
+            </cd:Field>
+          </cd:Record>
+        </cd:Array>
+      </cd:Field>
+      <cd:Field name="rayleigh_altitude_bin_useful_signal_info">
+        <cd:Array>
+          <cd:Dimension>25</cd:Dimension>
+          <cd:Record>
+            <cd:Description>List of useful signal strength information for each Rayleigh altitude bins</cd:Description>
+            <cd:Field name="data_quality_flag">
+              <cd:Integer>
+                <cd:Description>This field is a 1 byte, bit-packed field, where the first 4 bits represent contain the bin-level validity information, and the next 4 bits are the measurementlevel validity information. When the data is valid, this field will be 0. Bit 1: Overall validity. Data invalid 1, otherwise 0; Bit 2: Bin-level validity spare. Default 0; Bit 3: Data saturation found 1, otherwise 0; Bit 4: Data spike found 1, otherwise 0; Bit 5: Measurement-level validity spare. Default 0; Bit 6: Source packet invalid 1, otherwise 0; Bit 7: Laser Frequency not locked 1, otherwise 0; Bit 8: Spacecraft attitude not on target 1, otherwise 0</cd:Description>
+                <cd:BitSize>8</cd:BitSize>
+                <cd:NativeType>uint8</cd:NativeType>
+              </cd:Integer>
+            </cd:Field>
+            <cd:Field name="useful_signal_channel_a">
+              <cd:Float>
+                <cd:Description>Useful signal strength for a Rayleigh altitude bin. If the Data_Quality_Flag is non-zero (data invalid), the useful signal value is set to 0</cd:Description>
+                <cd:BitSize>64</cd:BitSize>
+                <cd:NativeType>double</cd:NativeType>
+              </cd:Float>
+            </cd:Field>
+            <cd:Field name="useful_signal_channel_b">
+              <cd:Float>
+                <cd:Description>Useful signal strength for a Rayleigh altitude bin. If the Data_Quality_Flag is non-zero (data invalid), the useful signal value is set to 0</cd:Description>
+                <cd:BitSize>64</cd:BitSize>
+                <cd:NativeType>double</cd:NativeType>
+              </cd:Float>
+            </cd:Field>
+          </cd:Record>
+        </cd:Array>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="measurement_useful_signal">
+    <cd:Array>
+      <cd:Dimension><![CDATA[int(/sph/n_max)]]></cd:Dimension>
+      <cd:Record>
+        <cd:Description>Collection of useful signal strength for the measurement</cd:Description>
+        <cd:Field name="mie_altitude_bin_useful_signal_info">
+          <cd:Array>
+            <cd:Dimension>25</cd:Dimension>
+            <cd:Record>
+              <cd:Description>List of useful signal strength information for each Mie altitude bin</cd:Description>
+              <cd:Field name="data_quality_flag">
+                <cd:Integer>
+                  <cd:Description>This field is a 1 byte, bit-packed field, where the first 4 bits represent contain the bin-level validity information, and the next 4 bits are the measurementlevel validity information. When the data is valid, this field will be 0. Bit 1: Overall validity. Data invalid 1, otherwise 0; Bit 2: Bin-level validity spare. Default 0; Bit 3: Data saturation found 1, otherwise 0; Bit 4: Data spike found 1, otherwise 0; Bit 5: Measurement-level validity spare. Default 0; Bit 6: Source packet invalid 1, otherwise 0; Bit 7: Laser Frequency not locked 1, otherwise 0; Bit 8: Spacecraft attitude not on target 1, otherwise 0</cd:Description>
+                  <cd:BitSize>8</cd:BitSize>
+                  <cd:NativeType>uint8</cd:NativeType>
+                </cd:Integer>
+              </cd:Field>
+              <cd:Field name="useful_signal">
+                <cd:Float>
+                  <cd:Description>Useful signal strength for a Rayleigh altitude bin. If the Data_Quality_Flag is non-zero (data invalid), the useful signal value is set to 0</cd:Description>
+                  <cd:BitSize>64</cd:BitSize>
+                  <cd:NativeType>double</cd:NativeType>
+                </cd:Float>
+              </cd:Field>
+            </cd:Record>
+          </cd:Array>
+        </cd:Field>
+        <cd:Field name="rayleigh_altitude_bin_useful_signal_info">
+          <cd:Array>
+            <cd:Dimension>25</cd:Dimension>
+            <cd:Record>
+              <cd:Description>List of useful signal strength information for each Rayleigh altitude bins</cd:Description>
+              <cd:Field name="data_quality_flag">
+                <cd:Integer>
+                  <cd:Description>This field is a 1 byte, bit-packed field, where the first 4 bits represent contain the bin-level validity information, and the next 4 bits are the measurementlevel validity information. When the data is valid, this field will be 0. Bit 1: Overall validity. Data invalid 1, otherwise 0; Bit 2: Bin-level validity spare. Default 0; Bit 3: Data saturation found 1, otherwise 0; Bit 4: Data spike found 1, otherwise 0; Bit 5: Measurement-level validity spare. Default 0; Bit 6: Source packet invalid 1, otherwise 0; Bit 7: Laser Frequency not locked 1, otherwise 0; Bit 8: Spacecraft attitude not on target 1, otherwise 0</cd:Description>
+                  <cd:BitSize>8</cd:BitSize>
+                  <cd:NativeType>uint8</cd:NativeType>
+                </cd:Integer>
+              </cd:Field>
+              <cd:Field name="useful_signal_channel_a">
+                <cd:Float>
+                  <cd:Description>Useful signal strength for a Rayleigh altitude bin. If the Data_Quality_Flag is non-zero (data invalid), the useful signal value is set to 0</cd:Description>
+                  <cd:BitSize>64</cd:BitSize>
+                  <cd:NativeType>double</cd:NativeType>
+                </cd:Float>
+              </cd:Field>
+              <cd:Field name="useful_signal_channel_b">
+                <cd:Float>
+                  <cd:Description>Useful signal strength for a Rayleigh altitude bin. If the Data_Quality_Flag is non-zero (data invalid), the useful signal value is set to 0</cd:Description>
+                  <cd:BitSize>64</cd:BitSize>
+                  <cd:NativeType>double</cd:NativeType>
+                </cd:Float>
+              </cd:Field>
+            </cd:Record>
+          </cd:Array>
+        </cd:Field>
+      </cd:Record>
+    </cd:Array>
+  </cd:Field>
+</cd:Record>

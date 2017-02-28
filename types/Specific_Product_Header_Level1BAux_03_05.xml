@@ -1,0 +1,183 @@
+<?xml version="1.0"?>
+<cd:Record name="Specific_Product_Header_Level1BAux_03_05" format="xml" namexml="Specific_Product_Header" last-modified="2008-07-01" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Description>Specific Product Header for ALD Level 1B products</cd:Description>
+  <cd:Field name="Sph_Descriptor">
+    <cd:Text namexml="Sph_Descriptor">
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="Total_Num_of_Observations">
+    <cd:Type namexml="Total_Num_of_Observations">
+      <cd:Integer format="ascii">
+        <cd:Description>Number of observations</cd:Description>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Total_Num_of_Measurements">
+    <cd:Type namexml="Total_Num_of_Measurements">
+      <cd:Integer format="ascii">
+        <cd:Description>Number of total measurements</cd:Description>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Total_Num_of_Reference_Pulses">
+    <cd:Type namexml="Total_Num_of_Reference_Pulses">
+      <cd:Integer format="ascii">
+        <cd:Description>Number of total reference pulses</cd:Description>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Base_Laser_Frequency">
+    <cd:Type namexml="Base_Laser_Frequency">
+      <cd:Attribute name="unit">
+        <cd:Optional/>
+        <cd:FixedValue>GHz</cd:FixedValue>
+      </cd:Attribute>
+      <cd:Float format="ascii">
+        <cd:Description>Base Laser Transmit Frequency</cd:Description>
+        <cd:Unit>GHz</cd:Unit>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Spare_1">
+    <cd:Hidden/>
+    <cd:Text namexml="Spare_1">
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="Num_of_Mie_Observations_Used">
+    <cd:Type namexml="Num_of_Mie_Observations_Used">
+      <cd:Integer format="ascii">
+        <cd:Description>Number of Mie observations used</cd:Description>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Num_of_Rayleigh_Observations_Used">
+    <cd:Type namexml="Num_of_Rayleigh_Observations_Used">
+      <cd:Integer format="ascii">
+        <cd:Description>Number of Rayleigh observations used</cd:Description>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Num_of_Mie_Measurements_Used">
+    <cd:Type namexml="Num_of_Mie_Measurements_Used">
+      <cd:Integer format="ascii">
+        <cd:Description>Number of Mie measurements used</cd:Description>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Num_of_Rayleigh_Measurements_Used">
+    <cd:Type namexml="Num_of_Rayleigh_Measurements_Used">
+      <cd:Integer format="ascii">
+        <cd:Description>Number of Rayleigh measurements used</cd:Description>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Num_of_Mie_Reference_Pulses_Used">
+    <cd:Type namexml="Num_of_Mie_Reference_Pulses_Used">
+      <cd:Integer format="ascii">
+        <cd:Description>Number of Mie reference pulses used</cd:Description>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Num_of_Rayleigh_Reference_Pulses_Used">
+    <cd:Type namexml="Num_of_Rayleigh_Reference_Pulses_Used">
+      <cd:Integer format="ascii">
+        <cd:Description>Number of Rayleigh reference pulses used</cd:Description>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Num_of_Valid_Mie_Calibration_Results">
+    <cd:Type namexml="Num_of_Valid_Mie_Calibration_Results">
+      <cd:Integer format="ascii">
+        <cd:Description>Number of valid Mie calibration results</cd:Description>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Num_of_Valid_Rayleigh_Calibration_Results">
+    <cd:Type namexml="Num_of_Valid_Rayleigh_Calibration_Results">
+      <cd:Integer format="ascii">
+        <cd:Description>Number of valid Rayleigh calibration results</cd:Description>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Spare_2">
+    <cd:Hidden/>
+    <cd:Text namexml="Spare_2">
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="Total_Num_of_Measurement_Laser_Freq_Unlocked">
+    <cd:Type namexml="Total_Num_of_Measurement_Laser_Freq_Unlocked">
+      <cd:Integer format="ascii">
+        <cd:Description>Total number of measurements with laser transmitter frequency unlocked status</cd:Description>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Total_Num_of_Reference_Pulse_Laser_Freq_Unlocked">
+    <cd:Type namexml="Total_Num_of_Reference_Pulse_Laser_Freq_Unlocked">
+      <cd:Integer format="ascii">
+        <cd:Description>Total number of reference pulses with laser transmitter frequency unlocked status</cd:Description>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Total_Num_of_Sat_Not_on_Target_Measurements">
+    <cd:Type namexml="Total_Num_of_Sat_Not_on_Target_Measurements">
+      <cd:Integer format="ascii">
+        <cd:Description>Total number of measurements with satellite not on target status</cd:Description>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Total_Num_of_Corrupt_Mie_Measurements">
+    <cd:Type namexml="Total_Num_of_Corrupt_Mie_Measurements">
+      <cd:Integer format="ascii">
+        <cd:Description>Total number of corrupt Mie measurements</cd:Description>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Total_Num_of_Corrupt_Rayleigh_Measurements">
+    <cd:Type namexml="Total_Num_of_Corrupt_Rayleigh_Measurements">
+      <cd:Integer format="ascii">
+        <cd:Description>Total number of corrupt Rayleigh measurements</cd:Description>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Total_Num_of_Corrupt_Mie_Reference_Pulses">
+    <cd:Type namexml="Total_Num_of_Corrupt_Mie_Reference_Pulses">
+      <cd:Integer format="ascii">
+        <cd:Description>Total number of corrupt Mie reference pulses</cd:Description>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Total_Num_of_Corrupt_Rayleigh_Reference_Pulses">
+    <cd:Type namexml="Total_Num_of_Corrupt_Rayleigh_Reference_Pulses">
+      <cd:Integer format="ascii">
+        <cd:Description>Total number of corrupt Rayleigh reference pulses</cd:Description>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Spare_3">
+    <cd:Hidden/>
+    <cd:Text namexml="Spare_3">
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="List_of_Dsds">
+    <cd:NamedType id="List_of_Dsds"/>
+  </cd:Field>
+</cd:Record>

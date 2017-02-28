@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="binary" last-modified="2014-10-13" name="Level_2BC_Grouping_ADSR_01_32">
+  <cd:Field name="grouping_result_id">
+    <cd:Integer>
+      <cd:Description>a unique id for this group in this L2B file. Each channel has its own sequence of id numbers and both start counting at 1</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="start_of_obs_datetime">
+    <cd:Time timeformat="binary_envisat_datetime">
+      <cd:Description>Start date and time of Measurement</cd:Description>
+      <ct:NamedTest id="RangeSecond" path="seconds"/>
+      <ct:NamedTest id="RangeMicroSecond" path="microseconds"/>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="which_l1b_brc1">
+    <cd:Integer>
+      <cd:Description>L1B BRC1 number for the measurement at which this group starts</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="which_l1b_meas_within_this_brc1">
+    <cd:Integer>
+      <cd:Description>L1B measurement number within the above mentioned L1B BRC1 at which this group starts</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="which_l1b_brc2">
+    <cd:Integer>
+      <cd:Description>L1B BRC2 number for the measurement at which this group starts</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="which_l1b_meas_within_this_brc2">
+    <cd:Integer>
+      <cd:Description>L1B measurement number within the above mentioned L1B BRC2 at which this group starts</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="reason_to_end_this_group">
+    <cd:Integer>
+      <cd:Description>What criterium was used to end this group? 0: only used for internal initialisations, 1: grouping ended because end of L1B file was reached, 2: grouping ended because the vertical misalignment of rangebins between first and last measurement in the group passed the threshold defined in the L2B AuxPar file, 3: grouping ended because the horizontal distance between first and last measurement in the group passed the threshold defined in the L2B AuxPar file, 4: grouping ended because the distance between the first and last missing measurement passed the threshold de- fined in the L2B AuxPar file</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="rangebin_causing_group_to_end">
+    <cd:Integer>
+      <cd:Description>At which rangebin was the misalignment detected? Code 0 signals undefined/unused. Code 25 signals a terrain model shift. This field is only defined if reason to end this group equals rangebin misalignment</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="spare">
+    <cd:Raw>
+      <cd:Description>Spare</cd:Description>
+      <cd:BitSize>48</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+</cd:Record>

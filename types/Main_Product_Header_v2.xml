@@ -1,0 +1,364 @@
+<?xml version="1.0"?>
+<cd:Record name="Main_Product_Header_v2" format="xml" namexml="Main_Product_Header" last-modified="2015-04-24" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+  <cd:Description>Main Product Header</cd:Description>
+  <cd:Field name="Product">
+    <cd:Text namexml="Product">
+      <cd:Description>The Logical File Name, i.e. the File Name excluding the extension</cd:Description>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="Proc_Stage">
+    <cd:Text namexml="Proc_Stage">
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="Ref_Doc">
+    <cd:Text namexml="Ref_Doc">
+      <cd:Description>Reference document describing the product</cd:Description>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="Spare_1">
+    <cd:Hidden/>
+    <cd:Text namexml="Spare_1">
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="Acquisition_Station">
+    <cd:Text namexml="Acquisition_Station">
+      <cd:Description>Acquisition station ID</cd:Description>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="Proc_Center">
+    <cd:Text namexml="Proc_Center">
+      <cd:Description>Processing centre ID</cd:Description>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="Proc_Time">
+    <cd:Type namexml="Proc_Time">
+      <cd:Time format="ascii" timeformat="ascii_ccsds_datetime_ymd2_with_ref">
+        <cd:Description>Time of processing</cd:Description>
+        <cd:Mapping string="UTC=0000-00-00T00:00:00.000000" value="-inf"/>
+        <cd:Mapping string="UTC=9999-12-31T23:59:59.999999" value="+inf"/>
+        <cd:Mapping string="" value="nan"/>
+      </cd:Time>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Software_Ver">
+    <cd:Text namexml="Software_Ver">
+      <cd:Description>Software version number of processing software. Format: name of processing software(up to 10 characters)/version number(4 characters)</cd:Description>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="Baseline">
+    <cd:Text namexml="Baseline">
+      <cd:Description>Baseline identifier (as provided by the Job Order File)</cd:Description>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="Sensing_Start">
+    <cd:Type namexml="Sensing_Start">
+      <cd:Time format="ascii" timeformat="ascii_ccsds_datetime_ymd2_with_ref">
+        <cd:Description>Start time of sensing of the first BRC of the product</cd:Description>
+        <cd:Mapping string="UTC=0000-00-00T00:00:00.000000" value="-inf"/>
+        <cd:Mapping string="UTC=9999-12-31T23:59:59.999999" value="+inf"/>
+        <cd:Mapping string="" value="nan"/>
+      </cd:Time>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Sensing_Stop">
+    <cd:Type namexml="Sensing_Stop">
+      <cd:Time format="ascii" timeformat="ascii_ccsds_datetime_ymd2_with_ref">
+        <cd:Description>Start time of sensing of the last BRC of the product</cd:Description>
+        <cd:Mapping string="UTC=0000-00-00T00:00:00.000000" value="-inf"/>
+        <cd:Mapping string="UTC=9999-12-31T23:59:59.999999" value="+inf"/>
+        <cd:Mapping string="" value="nan"/>
+      </cd:Time>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Spare_3">
+    <cd:Hidden/>
+    <cd:Text namexml="Spare_3">
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="Phase">
+    <cd:Text namexml="Phase">
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="Cycle">
+    <cd:Type namexml="Cycle">
+      <cd:Integer format="ascii">
+        <cd:Description>Cycle Number</cd:Description>
+        <cd:NativeType>uint8</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Rel_Orbit">
+    <cd:Type namexml="Rel_Orbit">
+      <cd:Integer format="ascii">
+        <cd:Description>Start relative orbit number</cd:Description>
+        <cd:NativeType>int16</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Abs_Orbit">
+    <cd:Type namexml="Abs_Orbit">
+      <cd:Integer format="ascii">
+        <cd:Description>Start absolute orbit number</cd:Description>
+        <cd:NativeType>uint32</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="State_Vector_Time">
+    <cd:Type namexml="State_Vector_Time">
+      <cd:Time format="ascii" timeformat="ascii_ccsds_datetime_ymd2_with_ref">
+        <cd:Description>Time of state vector</cd:Description>
+        <cd:Mapping string="UTC=0000-00-00T00:00:00.000000" value="-inf"/>
+        <cd:Mapping string="UTC=9999-12-31T23:59:59.999999" value="+inf"/>
+        <cd:Mapping string="" value="nan"/>
+      </cd:Time>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Delta_UT1">
+    <cd:Type namexml="Delta_UT1">
+      <cd:Attribute name="unit">
+        <cd:Optional/>
+        <cd:FixedValue>s</cd:FixedValue>
+      </cd:Attribute>
+      <cd:Float format="ascii">
+        <cd:Description>Delta_UT1 = UT1-UTC</cd:Description>
+        <cd:Unit>s</cd:Unit>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="X_Position">
+    <cd:Type namexml="X_Position">
+      <cd:Attribute name="unit">
+        <cd:Optional/>
+        <cd:FixedValue>m</cd:FixedValue>
+      </cd:Attribute>
+      <cd:Float format="ascii">
+        <cd:Description>X position in Earth-fixed reference</cd:Description>
+        <cd:Unit>m</cd:Unit>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Y_Position">
+    <cd:Type namexml="Y_Position">
+      <cd:Attribute name="unit">
+        <cd:Optional/>
+        <cd:FixedValue>m</cd:FixedValue>
+      </cd:Attribute>
+      <cd:Float format="ascii">
+        <cd:Description>Y position in Earth-fixed reference</cd:Description>
+        <cd:Unit>m</cd:Unit>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Z_Position">
+    <cd:Type namexml="Z_Position">
+      <cd:Attribute name="unit">
+        <cd:Optional/>
+        <cd:FixedValue>m</cd:FixedValue>
+      </cd:Attribute>
+      <cd:Float format="ascii">
+        <cd:Description>Z position in Earth-fixed reference</cd:Description>
+        <cd:Unit>m</cd:Unit>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="X_Velocity">
+    <cd:Type namexml="X_Velocity">
+      <cd:Attribute name="unit">
+        <cd:Optional/>
+        <cd:FixedValue>m/s</cd:FixedValue>
+      </cd:Attribute>
+      <cd:Float format="ascii">
+        <cd:Description>X velocity in Earth-fixed reference</cd:Description>
+        <cd:Unit>m/s</cd:Unit>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Y_Velocity">
+    <cd:Type namexml="Y_Velocity">
+      <cd:Attribute name="unit">
+        <cd:Optional/>
+        <cd:FixedValue>m/s</cd:FixedValue>
+      </cd:Attribute>
+      <cd:Float format="ascii">
+        <cd:Description>Y velocity in Earth-fixed reference</cd:Description>
+        <cd:Unit>m/s</cd:Unit>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Z_Velocity">
+    <cd:Type namexml="Z_Velocity">
+      <cd:Attribute name="unit">
+        <cd:Optional/>
+        <cd:FixedValue>m/s</cd:FixedValue>
+      </cd:Attribute>
+      <cd:Float format="ascii">
+        <cd:Description>Z velocity in Earth-fixed reference</cd:Description>
+        <cd:Unit>m/s</cd:Unit>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Vector_Source">
+    <cd:Text namexml="Vector_Source">
+      <cd:Description>Source of orbit vectors</cd:Description>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="Spare_4">
+    <cd:Hidden/>
+    <cd:Text namexml="Spare_4">
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="Utc_Sbt_Time">
+    <cd:Type namexml="Utc_Sbt_Time">
+      <cd:Time format="ascii" timeformat="ascii_ccsds_datetime_ymd2_with_ref">
+        <cd:Description>Time corresponding to Sattelite Binary Time</cd:Description>
+        <cd:Mapping string="UTC=0000-00-00T00:00:00.000000" value="-inf"/>
+        <cd:Mapping string="UTC=9999-12-31T23:59:59.999999" value="+inf"/>
+        <cd:Mapping string="" value="nan"/>
+      </cd:Time>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Sat_Binary_Time">
+    <cd:Type namexml="Sat_Binary_Time">
+      <cd:Integer format="ascii">
+        <cd:Description>Satellite Binary Time (SBT)</cd:Description>
+        <cd:NativeType>uint32</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Clock_Step">
+    <cd:Type namexml="Clock_Step">
+      <cd:Attribute name="unit">
+        <cd:Optional/>
+        <cd:FixedValue>ps</cd:FixedValue>
+      </cd:Attribute>
+      <cd:Integer format="ascii">
+        <cd:Description>Clock step size</cd:Description>
+        <cd:Unit>ps</cd:Unit>
+        <cd:NativeType>uint32</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Spare_5">
+    <cd:Hidden/>
+    <cd:Text namexml="Spare_5">
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="Leap_Utc">
+    <cd:Type namexml="Leap_Utc">
+      <cd:Time format="ascii" timeformat="ascii_ccsds_datetime_ymd2_with_ref">
+        <cd:Description>Time of occurence of the leap second</cd:Description>
+        <cd:Mapping string="UTC=0000-00-00T00:00:00.000000" value="-inf"/>
+        <cd:Mapping string="UTC=9999-12-31T23:59:59.999999" value="+inf"/>
+        <cd:Mapping string="" value="nan"/>
+      </cd:Time>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Leap_Sign">
+    <cd:Type namexml="Leap_Sign">
+      <cd:Integer format="ascii">
+        <cd:Description>Leap second sign (1 if positive leap second, -1 if negative)</cd:Description>
+        <cd:NativeType>int8</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Leap_Err">
+    <cd:Type namexml="Leap_Err">
+      <cd:Integer format="ascii">
+        <cd:Description>Leap second error. 'TRUE' if leap second error occurs during processing segment, 'FALSE' otherwise</cd:Description>
+        <cd:NativeType>uint8</cd:NativeType>
+        <cd:Mapping string="FALSE" value="0"/>
+        <cd:Mapping string="False" value="0"/>
+        <cd:Mapping string="false" value="0"/>
+        <cd:Mapping string="TRUE" value="1"/>
+        <cd:Mapping string="True" value="1"/>
+        <cd:Mapping string="true" value="1"/>        
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Spare_6">
+    <cd:Hidden/>
+    <cd:Text namexml="Spare_6">
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="Product_Err">
+    <cd:Type namexml="Product_Err">
+      <cd:Integer format="ascii">
+        <cd:Description>'TRUE' or 'FALSE'. If 'TRUE', errors have been reported in the product. User should then refer to the SPH or summary quality ADS of the product for details of the error condition</cd:Description>
+        <cd:NativeType>uint8</cd:NativeType>
+        <cd:Mapping string="FALSE" value="0"/>
+        <cd:Mapping string="False" value="0"/>
+        <cd:Mapping string="false" value="0"/>
+        <cd:Mapping string="TRUE" value="1"/>
+        <cd:Mapping string="True" value="1"/>
+        <cd:Mapping string="true" value="1"/> 
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Tot_Size">
+    <cd:Type namexml="Tot_Size">
+      <cd:Attribute name="unit">
+        <cd:Optional/>
+        <cd:FixedValue>bytes</cd:FixedValue>
+      </cd:Attribute>
+      <cd:Integer format="ascii">
+        <cd:Description>Total size of product</cd:Description>
+        <cd:Unit>bytes</cd:Unit>
+        <cd:NativeType>int64</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Sph_Size">
+    <cd:Type namexml="Sph_Size">
+      <cd:Attribute name="unit">
+        <cd:Optional/>
+        <cd:FixedValue>bytes</cd:FixedValue>
+      </cd:Attribute>
+      <cd:Integer format="ascii">
+        <cd:Description>Length of SPH</cd:Description>
+        <cd:Unit>bytes</cd:Unit>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Num_Dsd">
+    <cd:Type namexml="Num_Dsd">
+      <cd:Integer format="ascii">
+        <cd:Description>Number of DSDs</cd:Description>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Dsd_Size">
+    <cd:Type namexml="Dsd_Size">
+      <cd:Attribute name="unit">
+        <cd:Optional/>
+        <cd:FixedValue>bytes</cd:FixedValue>
+      </cd:Attribute>
+      <cd:Integer format="ascii">
+        <cd:Description>Length of each DSD</cd:Description>
+        <cd:Unit>bytes</cd:Unit>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Num_Data_Sets">
+    <cd:Type namexml="Num_Data_Sets">
+      <cd:Integer format="ascii">
+        <cd:Description>Number of DSs attached (not all DSDs have DS attached)</cd:Description>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Spare_7">
+    <cd:Hidden/>
+    <cd:Text namexml="Spare_7">
+    </cd:Text>
+  </cd:Field>
+</cd:Record>

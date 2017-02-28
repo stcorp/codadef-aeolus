@@ -1,0 +1,236 @@
+<?xml version="1.0"?>
+<cd:Record name="Specific_Product_Header_RBC" format="xml" namexml="Specific_Product_Header" last-modified="2008-07-01" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Description>Specific Product Header for ALD RBC products</cd:Description>
+  <cd:Field name="Sph_Descriptor">
+    <cd:Text namexml="Sph_Descriptor">
+      <cd:Description>SPH descriptor: ASCII string describing the product</cd:Description>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="Spare_1">
+    <cd:Hidden/>
+    <cd:Text namexml="Spare_1">
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="Ref_RBC_Suite">
+    <cd:Text namexml="Ref_RBC_Suite">
+      <cd:Description>Reference of the processing suite that was used to produce the Rayleigh Brillouin lookup tables</cd:Description>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="Num_P">
+    <cd:Type namexml="Num_P">
+      <cd:Integer format="ascii">
+        <cd:Description>Number of pressure bins in P_Grid</cd:Description>
+        <cd:NativeType>int16</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Num_T">
+    <cd:Type namexml="Num_T">
+      <cd:Integer format="ascii">
+        <cd:Description>Number of temperature bins in T_Grid</cd:Description>
+        <cd:NativeType>int16</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Num_F">
+    <cd:Type namexml="Num_F">
+      <cd:Integer format="ascii">
+        <cd:Description>Number of frequency bins in F_Gridtmp</cd:Description>
+        <cd:NativeType>int16</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Num_FP">
+    <cd:Type namexml="Num_FP">
+      <cd:Integer format="ascii">
+        <cd:Description>Number of frequency bins in F_FP. This number is also the size of the arrays TA_FP and TB_FP</cd:Description>
+        <cd:NativeType>int16</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Num_Fd">
+    <cd:Type namexml="Num_Fd">
+      <cd:Integer format="ascii">
+        <cd:Description>Number of frequency bins in Fd</cd:Description>
+        <cd:NativeType>int16</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Num_RR">
+    <cd:Type namexml="Num_RR">
+      <cd:Integer format="ascii">
+        <cd:Description>Number of responses in RR</cd:Description>
+        <cd:NativeType>int16</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Spare_2">
+    <cd:Hidden/>
+    <cd:Text namexml="Spare_2">
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="P_min">
+    <cd:Type namexml="P_min">
+      <cd:Attribute name="unit">
+        <cd:Optional/>
+        <cd:FixedValue>Pa</cd:FixedValue>
+      </cd:Attribute>
+      <cd:Integer format="ascii">
+        <cd:Description>Minimum pressure considered in the RBC calculations</cd:Description>
+        <cd:Unit>Pa</cd:Unit>
+        <cd:NativeType>uint32</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="P_max">
+    <cd:Type namexml="P_max">
+      <cd:Attribute name="unit">
+        <cd:Optional/>
+        <cd:FixedValue>Pa</cd:FixedValue>
+      </cd:Attribute>
+      <cd:Integer format="ascii">
+        <cd:Description>Maximum pressure considered in the RBC calculations</cd:Description>
+        <cd:Unit>Pa</cd:Unit>
+        <cd:NativeType>uint32</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="T_min">
+    <cd:Type namexml="T_min">
+      <cd:Attribute name="unit">
+        <cd:Optional/>
+        <cd:FixedValue>10-2K</cd:FixedValue>
+      </cd:Attribute>
+      <cd:Integer format="ascii">
+        <cd:Description>Minimum temperature considered in the RBC calculations</cd:Description>
+        <cd:Unit>1e-2 K</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="100.000000">
+          <cd:Unit>K</cd:Unit>
+        </cd:Conversion>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="T_max">
+    <cd:Type namexml="T_max">
+      <cd:Attribute name="unit">
+        <cd:Optional/>
+        <cd:FixedValue>10-2K</cd:FixedValue>
+      </cd:Attribute>
+      <cd:Integer format="ascii">
+        <cd:Description>Maximum temperature considered in the RBC calculations</cd:Description>
+        <cd:Unit>1e-2 K</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="100.000000">
+          <cd:Unit>K</cd:Unit>
+        </cd:Conversion>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Laser_Freq_Offset_Start">
+    <cd:Type namexml="Laser_Freq_Offset_Start">
+      <cd:Attribute name="unit">
+        <cd:Optional/>
+        <cd:FixedValue>MHz</cd:FixedValue>
+      </cd:Attribute>
+      <cd:Float format="ascii">
+        <cd:Description>First offset of the laser frequency in the Fabry-Perot transfer function file</cd:Description>
+        <cd:Unit>MHz</cd:Unit>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Laser_Freq_Offset_Stop">
+    <cd:Type namexml="Laser_Freq_Offset_Stop">
+      <cd:Attribute name="unit">
+        <cd:Optional/>
+        <cd:FixedValue>MHz</cd:FixedValue>
+      </cd:Attribute>
+      <cd:Float format="ascii">
+        <cd:Description>Last offset of the laser frequency in the Fabry-Perot transfer function file</cd:Description>
+        <cd:Unit>MHz</cd:Unit>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Total_Num_of_Observations">
+    <cd:Type namexml="Total_Num_of_Observations">
+      <cd:Integer format="ascii">
+        <cd:Description>Total number of observations used in the Fabry-Perot transfer function file</cd:Description>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Total_Num_of_Measurements">
+    <cd:Type namexml="Total_Num_of_Measurements">
+      <cd:Integer format="ascii">
+        <cd:Description>Total number of measurements used in the Fabry-Perot transfer function file</cd:Description>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Total_Num_of_Reference_Pulses">
+    <cd:Type namexml="Total_Num_of_Reference_Pulses">
+      <cd:Integer format="ascii">
+        <cd:Description>Total number of reference pulses used in the Fabry-Perot transfer function file</cd:Description>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Total_Num_of_Corrupt_Mie_Meas">
+    <cd:Type namexml="Total_Num_of_Corrupt_Mie_Meas">
+      <cd:Integer format="ascii">
+        <cd:Description>Total number of corrupted Mie measurements in the Fabry-Perot transfer function file</cd:Description>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Total_Num_of_Corrupt_Ray_Meas">
+    <cd:Type namexml="Total_Num_of_Corrupt_Ray_Meas">
+      <cd:Integer format="ascii">
+        <cd:Description>Total number of corrupted Rayleigh measurements in the Fabry-Perot transfer function file</cd:Description>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Total_Num_of_Corrupt_Mie_RefP">
+    <cd:Type namexml="Total_Num_of_Corrupt_Mie_RefP">
+      <cd:Integer format="ascii">
+        <cd:Description>Total number of corrupted Mie reference pulses in the Fabry-Perot transfer function file</cd:Description>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Total_Num_of_Corrupt_Ray_RefP">
+    <cd:Type namexml="Total_Num_of_Corrupt_Ray_RefP">
+      <cd:Integer format="ascii">
+        <cd:Description>Total number of corrupted Rayleigh reference pulses in the Fabry-Perot transfer function file</cd:Description>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Average_Error_FP_Response_A">
+    <cd:Type namexml="Average_Error_FP_Response_A">
+      <cd:Float format="ascii">
+        <cd:Description>Average error in Fabry-Perot response in the transfer function file, for channel A</cd:Description>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Average_Error_FP_Response_B">
+    <cd:Type namexml="Average_Error_FP_Response_B">
+      <cd:Float format="ascii">
+        <cd:Description>Average error in Fabry-Perot response in the transfer function file, for channel B</cd:Description>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Spare_3">
+    <cd:Hidden/>
+    <cd:Text namexml="Spare_3">
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="List_of_Dsds">
+    <cd:NamedType id="List_of_Dsds"/>
+  </cd:Field>
+</cd:Record>

@@ -1,0 +1,604 @@
+<?xml version="1.0"?>
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="binary" last-modified="2010-08-26" name="Level_1B_Calibration_Characterization_Data_GADSR_03_05">
+  <cd:Field name="mrc_first_start_of_observation_time">
+    <cd:Time timeformat="binary_envisat_datetime">
+      <cd:Description>Start of observation time for the first BRC in processed Mie calibration data</cd:Description>
+      <ct:NamedTest id="RangeSecond" path="seconds"/>
+      <ct:NamedTest id="RangeMicroSecond" path="microseconds"/>
+      <ct:NamedTest id="TimeNotZero"/>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="mrc_last_start_of_observation_time">
+    <cd:Time timeformat="binary_envisat_datetime">
+      <cd:Description>Start of observation time for the last BRC in processed Mie calibration data</cd:Description>
+      <ct:NamedTest id="RangeSecond" path="seconds"/>
+      <ct:NamedTest id="RangeMicroSecond" path="microseconds"/>
+      <ct:NamedTest id="TimeNotZero"/>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="rrc_first_start_of_observation_time">
+    <cd:Time timeformat="binary_envisat_datetime">
+      <cd:Description>Start of observation time for the first BRC in processed Rayleigh calibration data</cd:Description>
+      <ct:NamedTest id="RangeSecond" path="seconds"/>
+      <ct:NamedTest id="RangeMicroSecond" path="microseconds"/>
+      <ct:NamedTest id="TimeNotZero"/>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="rrc_last_start_of_observation_time">
+    <cd:Time timeformat="binary_envisat_datetime">
+      <cd:Description>Start of observation time for the last BRC in processed Rayleigh calibration data</cd:Description>
+      <ct:NamedTest id="RangeSecond" path="seconds"/>
+      <ct:NamedTest id="RangeMicroSecond" path="microseconds"/>
+      <ct:NamedTest id="TimeNotZero"/>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="l1b_characterisation_data">
+    <cd:Record>
+      <cd:Description>L1B Characterisation Data</cd:Description>
+      <cd:Field name="satellite_characterisation_data">
+        <cd:Record>
+          <cd:Description>Satellite Characterisation Data</cd:Description>
+          <cd:Field name="laser_wavelength">
+            <cd:Float>
+              <cd:Description>Laser wavelength in nanometers</cd:Description>
+              <cd:Unit>nm</cd:Unit>
+              <cd:BitSize>64</cd:BitSize>
+              <cd:NativeType>double</cd:NativeType>
+            </cd:Float>
+          </cd:Field>
+          <cd:Field name="error_quantifiers">
+            <cd:Record>
+              <cd:Description>Error Quantifiers</cd:Description>
+              <cd:Field name="mie_error_quantifier_k1">
+                <cd:Float>
+                  <cd:Description>Mie error quantifier K1</cd:Description>
+                  <cd:BitSize>64</cd:BitSize>
+                  <cd:NativeType>double</cd:NativeType>
+                </cd:Float>
+              </cd:Field>
+              <cd:Field name="mie_error_quantifier_k2">
+                <cd:Float>
+                  <cd:Description>Mie error quantifier K2</cd:Description>
+                  <cd:BitSize>64</cd:BitSize>
+                  <cd:NativeType>double</cd:NativeType>
+                </cd:Float>
+              </cd:Field>
+              <cd:Field name="mie_error_quantifier_k3">
+                <cd:Float>
+                  <cd:Description>Mie error quantifier K3</cd:Description>
+                  <cd:BitSize>64</cd:BitSize>
+                  <cd:NativeType>double</cd:NativeType>
+                </cd:Float>
+              </cd:Field>
+              <cd:Field name="rayleigh_error_quantifier_ka2">
+                <cd:Float>
+                  <cd:Description>Rayleigh error quantifier Ka2</cd:Description>
+                  <cd:BitSize>64</cd:BitSize>
+                  <cd:NativeType>double</cd:NativeType>
+                </cd:Float>
+              </cd:Field>
+              <cd:Field name="rayleigh_error_quantifier_ka3">
+                <cd:Float>
+                  <cd:Description>Rayleigh error quantifier Ka3</cd:Description>
+                  <cd:BitSize>64</cd:BitSize>
+                  <cd:NativeType>double</cd:NativeType>
+                </cd:Float>
+              </cd:Field>
+              <cd:Field name="rayleigh_error_quantifier_kb2">
+                <cd:Float>
+                  <cd:Description>Rayleigh error quantifier Kb2</cd:Description>
+                  <cd:BitSize>64</cd:BitSize>
+                  <cd:NativeType>double</cd:NativeType>
+                </cd:Float>
+              </cd:Field>
+              <cd:Field name="rayleigh_error_quantifier_kb3">
+                <cd:Float>
+                  <cd:Description>Rayleigh error quantifier Kb3</cd:Description>
+                  <cd:BitSize>64</cd:BitSize>
+                  <cd:NativeType>double</cd:NativeType>
+                </cd:Float>
+              </cd:Field>
+            </cd:Record>
+          </cd:Field>
+          <cd:Field name="tripod_obscuration_correction">
+            <cd:Array>
+              <cd:Dimension>16</cd:Dimension>
+              <cd:Float>
+                <cd:Description>Telescope Tripod Obscuration correction for one column</cd:Description>
+                <cd:BitSize>64</cd:BitSize>
+                <cd:NativeType>double</cd:NativeType>
+              </cd:Float>
+            </cd:Array>
+          </cd:Field>
+          <cd:Field name="nf_order">
+            <cd:Integer>
+              <cd:Description>Number of Fourier terms used in the Harmonic Bias Estimation (NF). The A and B coefficient lists for both Mie and Rayleigh below must be NF_Order+1 elements in size</cd:Description>
+              <cd:BitSize>32</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="mie_harmonic_bias_coefficient_a">
+            <cd:Array>
+              <cd:Description>The maximum size NF+1 of this array is 1024</cd:Description>
+              <cd:Dimension><![CDATA[int(../nf_order) + 1]]></cd:Dimension>
+              <cd:Float>
+                <cd:Description>One element of vector A</cd:Description>
+                <cd:BitSize>64</cd:BitSize>
+                <cd:NativeType>double</cd:NativeType>
+              </cd:Float>
+            </cd:Array>
+          </cd:Field>
+          <cd:Field name="mie_harmonic_bias_coefficient_b">
+            <cd:Array>
+              <cd:Description>The maximum size NF+1 of this array is 1024. Note that the first B coefficient in this array (i.e. b_0) is not used by the L1bP. This is done so that the A and B coefficient arrays are both the same size. Only the last NF coefficients are used in the B coefficient array (for A, all NF+1 coefficients are used)</cd:Description>
+              <cd:Dimension><![CDATA[int(../nf_order) + 1]]></cd:Dimension>
+              <cd:Float>
+                <cd:Description>One element of vector B</cd:Description>
+                <cd:BitSize>64</cd:BitSize>
+                <cd:NativeType>double</cd:NativeType>
+              </cd:Float>
+            </cd:Array>
+          </cd:Field>
+          <cd:Field name="ray_harmonic_bias_coefficient_a">
+            <cd:Array>
+              <cd:Description>The maximum size NF+1 of this array is 1024</cd:Description>
+              <cd:Dimension><![CDATA[int(../nf_order) + 1]]></cd:Dimension>
+              <cd:Float>
+                <cd:Description>One element of vector A</cd:Description>
+                <cd:BitSize>64</cd:BitSize>
+                <cd:NativeType>double</cd:NativeType>
+              </cd:Float>
+            </cd:Array>
+          </cd:Field>
+          <cd:Field name="ray_harmonic_bias_coefficient_b">
+            <cd:Array>
+              <cd:Description>The maximum size NF+1 of this array is 1024. Note that the first B coefficient in this array (i.e. b_0) is not used by the L1bP. This is done so that the A and B coefficient arrays are both the same size. Only the last NF coefficients are used in the B coefficient array (for A, all NF+1 coefficients are used)</cd:Description>
+              <cd:Dimension><![CDATA[int(../nf_order) + 1]]></cd:Dimension>
+              <cd:Float>
+                <cd:Description>One element of vector B</cd:Description>
+                <cd:BitSize>64</cd:BitSize>
+                <cd:NativeType>double</cd:NativeType>
+              </cd:Float>
+            </cd:Array>
+          </cd:Field>
+        </cd:Record>
+      </cd:Field>
+      <cd:Field name="mie_response_calibration_data">
+        <cd:Record>
+          <cd:Description>Mie Response Calibration Data</cd:Description>
+          <cd:Field name="calibration_valid">
+            <cd:Integer>
+              <cd:Description>TRUE = Mie Response Calibration is valid. Based on acceptable ranges of calibration results for measurement and reference pulse; and the number of valid frequencies</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint8</cd:NativeType>
+              <ct:NamedTest id="BooleanBinTest"/>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="mie_frequency_step_result">
+            <cd:Array>
+              <cd:Dimension>40</cd:Dimension>
+              <cd:Record>
+                <cd:Description>Mie Frequency Step Result</cd:Description>
+                <cd:Field name="frequency_offset">
+                  <cd:Float>
+                    <cd:Description>Frequency offset</cd:Description>
+                    <cd:Unit>GHz</cd:Unit>
+                    <cd:BitSize>64</cd:BitSize>
+                    <cd:NativeType>double</cd:NativeType>
+                  </cd:Float>
+                </cd:Field>
+                <cd:Field name="frequency_valid">
+                  <cd:Integer>
+                    <cd:Description>TRUE = Satisfied minimum number of valid measurements per frequency step</cd:Description>
+                    <cd:BitSize>8</cd:BitSize>
+                    <cd:NativeType>uint8</cd:NativeType>
+                    <ct:NamedTest id="BooleanBinTest"/>
+                  </cd:Integer>
+                </cd:Field>
+                <cd:Field name="measurement_response_valid">
+                  <cd:Integer>
+                    <cd:Description>TRUE = Measurement response is valid</cd:Description>
+                    <cd:BitSize>8</cd:BitSize>
+                    <cd:NativeType>uint8</cd:NativeType>
+                    <ct:NamedTest id="BooleanBinTest"/>
+                  </cd:Integer>
+                </cd:Field>
+                <cd:Field name="reference_pulse_response_valid">
+                  <cd:Integer>
+                    <cd:Description>TRUE = Reference pulse channel response is valid</cd:Description>
+                    <cd:BitSize>8</cd:BitSize>
+                    <cd:NativeType>uint8</cd:NativeType>
+                    <ct:NamedTest id="BooleanBinTest"/>
+                  </cd:Integer>
+                </cd:Field>
+                <cd:Field name="measurement_response">
+                  <cd:Float>
+                    <cd:Description>Measurement channel response</cd:Description>
+                    <cd:Unit>pixel</cd:Unit>
+                    <cd:BitSize>64</cd:BitSize>
+                    <cd:NativeType>double</cd:NativeType>
+                  </cd:Float>
+                </cd:Field>
+                <cd:Field name="measurement_error_mie_response">
+                  <cd:Float>
+                    <cd:Description>Measurement Error_Mie_Response</cd:Description>
+                    <cd:Unit>pixel</cd:Unit>
+                    <cd:BitSize>64</cd:BitSize>
+                    <cd:NativeType>double</cd:NativeType>
+                  </cd:Float>
+                </cd:Field>
+                <cd:Field name="reference_pulse_response">
+                  <cd:Float>
+                    <cd:Description>Reference pulse channel response</cd:Description>
+                    <cd:Unit>pixel</cd:Unit>
+                    <cd:BitSize>64</cd:BitSize>
+                    <cd:NativeType>double</cd:NativeType>
+                  </cd:Float>
+                </cd:Field>
+                <cd:Field name="reference_pulse_error_mie_response">
+                  <cd:Float>
+                    <cd:Description>Reference pulse Error_Mie_Response</cd:Description>
+                    <cd:Unit>pixel</cd:Unit>
+                    <cd:BitSize>64</cd:BitSize>
+                    <cd:NativeType>double</cd:NativeType>
+                  </cd:Float>
+                </cd:Field>
+                <cd:Field name="frequency_step_data_statistics">
+                  <cd:NamedType id="Level_1B_Frequency_Step_Data_Statistics_03_05"/>
+                </cd:Field>
+              </cd:Record>
+            </cd:Array>
+          </cd:Field>
+          <cd:Field name="mie_measurement_response_calibration">
+            <cd:Record>
+              <cd:Description>Mie Measurement Response Calibration</cd:Description>
+              <cd:Field name="measurement_mean_sensitivity">
+                <cd:Float>
+                  <cd:Description>Measurement mean sensitivity (slope of the best straight line of channel response)</cd:Description>
+                  <cd:Unit>pixel/GHz</cd:Unit>
+                  <cd:BitSize>64</cd:BitSize>
+                  <cd:NativeType>double</cd:NativeType>
+                </cd:Float>
+              </cd:Field>
+              <cd:Field name="measurement_zero_frequency">
+                <cd:Float>
+                  <cd:Description>Measurement zero frequency response (intercept of the best straight line of channel response)</cd:Description>
+                  <cd:Unit>pixel</cd:Unit>
+                  <cd:BitSize>64</cd:BitSize>
+                  <cd:NativeType>double</cd:NativeType>
+                </cd:Float>
+              </cd:Field>
+              <cd:Field name="measurement_error_mie_response_std_dev">
+                <cd:Float>
+                  <cd:Description>Measurement Error_Mie_Response standard deviation</cd:Description>
+                  <cd:BitSize>64</cd:BitSize>
+                  <cd:NativeType>double</cd:NativeType>
+                </cd:Float>
+              </cd:Field>
+            </cd:Record>
+          </cd:Field>
+          <cd:Field name="mie_reference_pulse_response_calibration">
+            <cd:Record>
+              <cd:Description>Mie Reference Pulse Response Calibration</cd:Description>
+              <cd:Field name="reference_pulse_mean_sensitivity">
+                <cd:Float>
+                  <cd:Description>Reference pulse mean sensitivity (slope of the best straight line of channel response)</cd:Description>
+                  <cd:Unit>pixel/GHz</cd:Unit>
+                  <cd:BitSize>64</cd:BitSize>
+                  <cd:NativeType>double</cd:NativeType>
+                </cd:Float>
+              </cd:Field>
+              <cd:Field name="reference_pulse_zero_frequency">
+                <cd:Float>
+                  <cd:Description>Reference pulse zero frequency response(intercept of the best straight line of channel response)</cd:Description>
+                  <cd:Unit>pixel</cd:Unit>
+                  <cd:BitSize>64</cd:BitSize>
+                  <cd:NativeType>double</cd:NativeType>
+                </cd:Float>
+              </cd:Field>
+              <cd:Field name="reference_pulse_error_mie_response_std_dev">
+                <cd:Float>
+                  <cd:Description>Reference pulse Eror_Mie_Response standard deviation</cd:Description>
+                  <cd:BitSize>64</cd:BitSize>
+                  <cd:NativeType>double</cd:NativeType>
+                </cd:Float>
+              </cd:Field>
+            </cd:Record>
+          </cd:Field>
+          <cd:Field name="measurement_calibration_validity">
+            <cd:Record>
+              <cd:Description>Measurement Calibration Validity</cd:Description>
+              <cd:Field name="mean_sensitivity_valid">
+                <cd:Integer>
+                  <cd:Description>TRUE = Mean sensitivity within threshold range</cd:Description>
+                  <cd:BitSize>8</cd:BitSize>
+                  <cd:NativeType>uint8</cd:NativeType>
+                  <ct:NamedTest id="BooleanBinTest"/>
+                </cd:Integer>
+              </cd:Field>
+              <cd:Field name="error_response_std_dev_valid">
+                <cd:Integer>
+                  <cd:Description>TRUE = Error Response standard deviation within threshold range</cd:Description>
+                  <cd:BitSize>8</cd:BitSize>
+                  <cd:NativeType>uint8</cd:NativeType>
+                  <ct:NamedTest id="BooleanBinTest"/>
+                </cd:Integer>
+              </cd:Field>
+              <cd:Field name="zero_freq_response_valid">
+                <cd:Integer>
+                  <cd:Description>TRUE = Zero frequency response within threshold range</cd:Description>
+                  <cd:BitSize>8</cd:BitSize>
+                  <cd:NativeType>uint8</cd:NativeType>
+                  <ct:NamedTest id="BooleanBinTest"/>
+                </cd:Integer>
+              </cd:Field>
+              <cd:Field name="data_monotonic">
+                <cd:Integer>
+                  <cd:Description>TRUE = measurement data is monotonic</cd:Description>
+                  <cd:BitSize>8</cd:BitSize>
+                  <cd:NativeType>uint8</cd:NativeType>
+                  <ct:NamedTest id="BooleanBinTest"/>
+                </cd:Integer>
+              </cd:Field>
+            </cd:Record>
+          </cd:Field>
+          <cd:Field name="reference_pulse_calibration_validity">
+            <cd:Record>
+              <cd:Description>Reference Pulse Calibration Validity</cd:Description>
+              <cd:Field name="mean_sensitivity_valid">
+                <cd:Integer>
+                  <cd:Description>TRUE = Mean sensitivity within threshold range</cd:Description>
+                  <cd:BitSize>8</cd:BitSize>
+                  <cd:NativeType>uint8</cd:NativeType>
+                  <ct:NamedTest id="BooleanBinTest"/>
+                </cd:Integer>
+              </cd:Field>
+              <cd:Field name="error_response_std_dev_valid">
+                <cd:Integer>
+                  <cd:Description>TRUE = Error Response standard deviation within threshold range</cd:Description>
+                  <cd:BitSize>8</cd:BitSize>
+                  <cd:NativeType>uint8</cd:NativeType>
+                  <ct:NamedTest id="BooleanBinTest"/>
+                </cd:Integer>
+              </cd:Field>
+              <cd:Field name="zero_freq_response_valid">
+                <cd:Integer>
+                  <cd:Description>TRUE = Zero frequency response within threshold range</cd:Description>
+                  <cd:BitSize>8</cd:BitSize>
+                  <cd:NativeType>uint8</cd:NativeType>
+                  <ct:NamedTest id="BooleanBinTest"/>
+                </cd:Integer>
+              </cd:Field>
+              <cd:Field name="data_monotonic">
+                <cd:Integer>
+                  <cd:Description>TRUE = measurement data is monotonic</cd:Description>
+                  <cd:BitSize>8</cd:BitSize>
+                  <cd:NativeType>uint8</cd:NativeType>
+                  <ct:NamedTest id="BooleanBinTest"/>
+                </cd:Integer>
+              </cd:Field>
+            </cd:Record>
+          </cd:Field>
+        </cd:Record>
+      </cd:Field>
+      <cd:Field name="rayleigh_response_calibration_data">
+        <cd:Record>
+          <cd:Description>Rayleigh Response Calibration Data</cd:Description>
+          <cd:Field name="calibration_valid">
+            <cd:Integer>
+              <cd:Description>TRUE = Mie Response Calibration is valid. Based on acceptable ranges of calibration results for measurement and reference pulse; and the number of valid frequencies</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint8</cd:NativeType>
+              <ct:NamedTest id="BooleanBinTest"/>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="rayleigh_frequency_step_result">
+            <cd:Array>
+              <cd:Dimension>40</cd:Dimension>
+              <cd:Record>
+                <cd:Description>Rayleigh Frequency Step Result</cd:Description>
+                <cd:Field name="frequency_offset">
+                  <cd:Float>
+                    <cd:Description>Frequency offset</cd:Description>
+                    <cd:Unit>GHz</cd:Unit>
+                    <cd:BitSize>64</cd:BitSize>
+                    <cd:NativeType>double</cd:NativeType>
+                  </cd:Float>
+                </cd:Field>
+                <cd:Field name="frequency_valid">
+                  <cd:Integer>
+                    <cd:Description>TRUE = Satisfied minimum number of valid measurements per frequency step</cd:Description>
+                    <cd:BitSize>8</cd:BitSize>
+                    <cd:NativeType>uint8</cd:NativeType>
+                    <ct:NamedTest id="BooleanBinTest"/>
+                  </cd:Integer>
+                </cd:Field>
+                <cd:Field name="measurement_response_valid">
+                  <cd:Integer>
+                    <cd:Description>TRUE = Measurement response is valid</cd:Description>
+                    <cd:BitSize>8</cd:BitSize>
+                    <cd:NativeType>uint8</cd:NativeType>
+                    <ct:NamedTest id="BooleanBinTest"/>
+                  </cd:Integer>
+                </cd:Field>
+                <cd:Field name="reference_pulse_response_valid">
+                  <cd:Integer>
+                    <cd:Description>TRUE = Reference pulse channel response is valid</cd:Description>
+                    <cd:BitSize>8</cd:BitSize>
+                    <cd:NativeType>uint8</cd:NativeType>
+                    <ct:NamedTest id="BooleanBinTest"/>
+                  </cd:Integer>
+                </cd:Field>
+                <cd:Field name="measurement_response">
+                  <cd:Float>
+                    <cd:Description>Measurement channel response</cd:Description>
+                    <cd:Unit>pixel</cd:Unit>
+                    <cd:BitSize>64</cd:BitSize>
+                    <cd:NativeType>double</cd:NativeType>
+                  </cd:Float>
+                </cd:Field>
+                <cd:Field name="measurement_error_mie_response">
+                  <cd:Float>
+                    <cd:Description>Measurement Error_Mie_Response</cd:Description>
+                    <cd:Unit>pixel</cd:Unit>
+                    <cd:BitSize>64</cd:BitSize>
+                    <cd:NativeType>double</cd:NativeType>
+                  </cd:Float>
+                </cd:Field>
+                <cd:Field name="reference_pulse_response">
+                  <cd:Float>
+                    <cd:Description>Reference pulse channel response</cd:Description>
+                    <cd:Unit>pixel</cd:Unit>
+                    <cd:BitSize>64</cd:BitSize>
+                    <cd:NativeType>double</cd:NativeType>
+                  </cd:Float>
+                </cd:Field>
+                <cd:Field name="reference_pulse_error_mie_response">
+                  <cd:Float>
+                    <cd:Description>Reference pulse Error_Mie_Response</cd:Description>
+                    <cd:Unit>pixel</cd:Unit>
+                    <cd:BitSize>64</cd:BitSize>
+                    <cd:NativeType>double</cd:NativeType>
+                  </cd:Float>
+                </cd:Field>
+                <cd:Field name="frequency_step_data_statistics">
+                  <cd:NamedType id="Level_1B_Frequency_Step_Data_Statistics_03_05"/>
+                </cd:Field>
+              </cd:Record>
+            </cd:Array>
+          </cd:Field>
+          <cd:Field name="rayleigh_measurement_response_calibration">
+            <cd:Record>
+              <cd:Description>Rayleigh Measurement Response Calibration</cd:Description>
+              <cd:Field name="measurement_mean_sensitivity">
+                <cd:Float>
+                  <cd:Description>Measurement mean sensitivity (slope of the best straight line of channel response)</cd:Description>
+                  <cd:Unit>pixel/GHz</cd:Unit>
+                  <cd:BitSize>64</cd:BitSize>
+                  <cd:NativeType>double</cd:NativeType>
+                </cd:Float>
+              </cd:Field>
+              <cd:Field name="measurement_zero_frequency">
+                <cd:Float>
+                  <cd:Description>Measurement zero frequency response (intercept of the best straight line of channel response)</cd:Description>
+                  <cd:Unit>pixel</cd:Unit>
+                  <cd:BitSize>64</cd:BitSize>
+                  <cd:NativeType>double</cd:NativeType>
+                </cd:Float>
+              </cd:Field>
+              <cd:Field name="measurement_error_rayleigh_response_std_dev">
+                <cd:Float>
+                  <cd:Description>Measurement Error_Rayleigh_Response standard deviation</cd:Description>
+                  <cd:BitSize>64</cd:BitSize>
+                  <cd:NativeType>double</cd:NativeType>
+                </cd:Float>
+              </cd:Field>
+            </cd:Record>
+          </cd:Field>
+          <cd:Field name="rayleigh_reference_pulse_response_calibration">
+            <cd:Record>
+              <cd:Description>Rayleigh Reference Pulse Response Calibration</cd:Description>
+              <cd:Field name="reference_pulse_mean_sensitivity">
+                <cd:Float>
+                  <cd:Description>Reference pulse mean sensitivity (slope of the best straight line of channel response)</cd:Description>
+                  <cd:Unit>pixel/GHz</cd:Unit>
+                  <cd:BitSize>64</cd:BitSize>
+                  <cd:NativeType>double</cd:NativeType>
+                </cd:Float>
+              </cd:Field>
+              <cd:Field name="reference_pulse_zero_frequency">
+                <cd:Float>
+                  <cd:Description>Reference pulse zero frequency response(intercept of the best straight line of channel response)</cd:Description>
+                  <cd:Unit>pixel</cd:Unit>
+                  <cd:BitSize>64</cd:BitSize>
+                  <cd:NativeType>double</cd:NativeType>
+                </cd:Float>
+              </cd:Field>
+              <cd:Field name="reference_pulse_error_rayleigh_response_std_dev">
+                <cd:Float>
+                  <cd:Description>Reference pulse Eror_Rayleigh_ Response standard deviation</cd:Description>
+                  <cd:BitSize>64</cd:BitSize>
+                  <cd:NativeType>double</cd:NativeType>
+                </cd:Float>
+              </cd:Field>
+            </cd:Record>
+          </cd:Field>
+          <cd:Field name="measurement_calibration_validity">
+            <cd:Record>
+              <cd:Description>Measurement Calibration Validity</cd:Description>
+              <cd:Field name="mean_sensitivity_valid">
+                <cd:Integer>
+                  <cd:Description>TRUE = Mean sensitivity within threshold range</cd:Description>
+                  <cd:BitSize>8</cd:BitSize>
+                  <cd:NativeType>uint8</cd:NativeType>
+                  <ct:NamedTest id="BooleanBinTest"/>
+                </cd:Integer>
+              </cd:Field>
+              <cd:Field name="error_response_std_dev_valid">
+                <cd:Integer>
+                  <cd:Description>TRUE = Error Response standard deviation within threshold range</cd:Description>
+                  <cd:BitSize>8</cd:BitSize>
+                  <cd:NativeType>uint8</cd:NativeType>
+                  <ct:NamedTest id="BooleanBinTest"/>
+                </cd:Integer>
+              </cd:Field>
+              <cd:Field name="zero_freq_response_valid">
+                <cd:Integer>
+                  <cd:Description>TRUE = Zero frequency response within threshold range</cd:Description>
+                  <cd:BitSize>8</cd:BitSize>
+                  <cd:NativeType>uint8</cd:NativeType>
+                  <ct:NamedTest id="BooleanBinTest"/>
+                </cd:Integer>
+              </cd:Field>
+              <cd:Field name="data_monotonic">
+                <cd:Integer>
+                  <cd:Description>TRUE = measurement data is monotonic</cd:Description>
+                  <cd:BitSize>8</cd:BitSize>
+                  <cd:NativeType>uint8</cd:NativeType>
+                  <ct:NamedTest id="BooleanBinTest"/>
+                </cd:Integer>
+              </cd:Field>
+            </cd:Record>
+          </cd:Field>
+          <cd:Field name="reference_pulse_calibration_validity">
+            <cd:Record>
+              <cd:Description>Reference Pulse Calibration Validity</cd:Description>
+              <cd:Field name="mean_sensitivity_valid">
+                <cd:Integer>
+                  <cd:Description>TRUE = Mean sensitivity within threshold range</cd:Description>
+                  <cd:BitSize>8</cd:BitSize>
+                  <cd:NativeType>uint8</cd:NativeType>
+                  <ct:NamedTest id="BooleanBinTest"/>
+                </cd:Integer>
+              </cd:Field>
+              <cd:Field name="error_response_std_dev_valid">
+                <cd:Integer>
+                  <cd:Description>TRUE = Error Response standard deviation within threshold range</cd:Description>
+                  <cd:BitSize>8</cd:BitSize>
+                  <cd:NativeType>uint8</cd:NativeType>
+                  <ct:NamedTest id="BooleanBinTest"/>
+                </cd:Integer>
+              </cd:Field>
+              <cd:Field name="zero_freq_response_valid">
+                <cd:Integer>
+                  <cd:Description>TRUE = Zero frequency response within threshold range</cd:Description>
+                  <cd:BitSize>8</cd:BitSize>
+                  <cd:NativeType>uint8</cd:NativeType>
+                  <ct:NamedTest id="BooleanBinTest"/>
+                </cd:Integer>
+              </cd:Field>
+              <cd:Field name="data_monotonic">
+                <cd:Integer>
+                  <cd:Description>TRUE = measurement data is monotonic</cd:Description>
+                  <cd:BitSize>8</cd:BitSize>
+                  <cd:NativeType>uint8</cd:NativeType>
+                  <ct:NamedTest id="BooleanBinTest"/>
+                </cd:Integer>
+              </cd:Field>
+            </cd:Record>
+          </cd:Field>
+        </cd:Record>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+</cd:Record>

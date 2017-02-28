@@ -1,0 +1,350 @@
+<?xml version="1.0"?>
+<cd:ProductDefinition id="MPL_OBPL___02_03" format="xml" last-modified="2016-12-22" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+  <cd:Record format="xml">
+    <cd:Field name="Data_Block">
+      <cd:Record namexml="Data_Block">
+        <cd:Description>Earth Explorer Header File</cd:Description>
+        <cd:Attribute name="type">
+          <cd:FixedValue>xml</cd:FixedValue>
+        </cd:Attribute>
+        <cd:Field name="PIF_Header">
+          <cd:Record namexml="PIF_Header">
+            <cd:Field name="PIF_File_Type">
+              <cd:Type namexml="PIF_File_Type">
+                <cd:Text format="ascii">
+                  <cd:ByteSize>23</cd:ByteSize>
+                  <cd:NativeType>string</cd:NativeType>
+                  <cd:FixedValue>FOS PLAN INCREMENT FILE</cd:FixedValue>
+                </cd:Text>
+              </cd:Type>
+            </cd:Field>
+            <cd:Field name="PIF_Start">
+              <cd:Type namexml="PIF_Start">
+                <cd:Time format="ascii" timeformat="ascii_ccsds_datetime_ymd1_with_ref">
+                  <cd:Description>Start of the planning period to which this Plan Increment File refers</cd:Description>
+                </cd:Time>
+              </cd:Type>
+            </cd:Field>
+            <cd:Field name="PIF_End">
+              <cd:Type namexml="PIF_End">
+                <cd:Time format="ascii" timeformat="ascii_ccsds_datetime_ymd1_with_ref">
+                  <cd:Description>End of the planning period to which this Plan Increment File refers</cd:Description>
+                  <cd:Mapping string="" value="nan"/>
+                </cd:Time>
+              </cd:Type>
+            </cd:Field>
+            <cd:Field name="PIF_File_Version">
+              <cd:Type namexml="PIF_File_Version">
+                <cd:Integer format="ascii">
+                  <cd:Description>Version number of the Plan Increment File for the week</cd:Description>
+                  <cd:NativeType>uint16</cd:NativeType>
+                  <ct:NamedTest id="RangePIFFileVersion"/>
+                </cd:Integer>
+              </cd:Type>
+            </cd:Field>
+            <cd:Field name="PIF_Status">
+              <cd:Text namexml="PIF_Status">
+                <cd:Description>Status of the Plan Increment File for the calendar week and version</cd:Description>
+                <ct:NamedTest id="PIFStatusEnum"/>
+              </cd:Text>
+            </cd:Field>
+            <cd:Field name="PIF_Replan_Time">
+              <cd:Time timeformat="if(length(.)==0,nan,time(str(.),&quot;'UTC='yyyy-MM-dd'T'HH:mm:ss&quot;))">
+                <cd:Text namexml="PIF_Replan_Time">
+                  <cd:Description>Replan time of the Plan Increment File for the calendar week and version. It is populated only if re-planning has been performed on this calendar week</cd:Description>
+                </cd:Text>
+              </cd:Time>
+            </cd:Field>
+            <cd:Field name="PIF_List_of_Input_Files">
+              <cd:Record namexml="PIF_List_of_Input_Files">
+                <cd:Attribute name="count"/>
+                <cd:Field name="Input_File">
+                  <cd:Array>
+                    <cd:Dimension/>
+                    <cd:Record namexml="Input_File">
+                      <cd:Field name="File">
+                        <cd:Text namexml="File">
+                          <cd:Description>Type of input file (e.g. SPF, MTF, AOCPAR)</cd:Description>
+                        </cd:Text>
+                      </cd:Field>
+                      <cd:Field name="Version">
+                        <cd:Type namexml="Version">
+                          <cd:Integer format="ascii">
+                            <cd:Description>Version number of the File specified in previous tag and used for this Plan Increment File.</cd:Description>
+                            <cd:NativeType>uint16</cd:NativeType>
+                            <ct:NamedTest id="RangePIFFileVersion"/>
+                          </cd:Integer>
+                        </cd:Type>
+                      </cd:Field>
+                    </cd:Record>
+                    <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                  </cd:Array>
+                </cd:Field>
+              </cd:Record>
+            </cd:Field>
+            <cd:Field name="PIF_WODB_Version">
+              <cd:Text namexml="PIF_WODB_Version">
+                <cd:Description>Version number of the Working Database (WODB) used for this Plan Increment File</cd:Description>
+              </cd:Text>
+            </cd:Field>
+            <cd:Field name="PIF_PLANVIEW_Version">
+              <cd:Type namexml="PIF_PLANVIEW_Version">
+                <cd:Integer format="ascii">
+                  <cd:Description>Version number of the Planview used for this Plan Increment File</cd:Description>
+                  <cd:NativeType>uint16</cd:NativeType>
+                  <ct:NamedTest id="RangePIFSPFVersion"/>
+                </cd:Integer>
+              </cd:Type>
+            </cd:Field>
+            <cd:Field name="PIF_AOCPAR_Version">
+              <cd:Text namexml="PIF_AOCPAR_Version">
+                <cd:Description>Filename of the AOCPAR file used for this Plan Increment File</cd:Description>
+              </cd:Text>
+            </cd:Field>
+            <cd:Field name="PIF_DEM_Version">
+              <cd:Text namexml="PIF_DEM_Version">
+                <cd:Description>Filename of the DEM file used for this Plan Increment File</cd:Description>
+              </cd:Text>
+            </cd:Field>            
+            <cd:Field name="PIF_XSEG_Version">
+              <cd:Text namexml="PIF_XSEG_Version">
+                <cd:Description>Version of the X-SEG file used for this Plan Increment File</cd:Description>
+              </cd:Text>
+            </cd:Field>
+            <cd:Field name="PIF_RC_Version">
+              <cd:Type namexml="PIF_RC_Version">
+                <cd:Integer format="ascii">
+                  <cd:Description>Version number of the Rules and Constraints File (RC) used for this Plan Increment File</cd:Description>
+                  <cd:NativeType>uint16</cd:NativeType>
+                  <ct:NamedTest id="RangePIFSPFVersion"/>
+                </cd:Integer>
+              </cd:Type>
+            </cd:Field>
+            <cd:Field name="PIF_KUP_Version">
+              <cd:Type namexml="PIF_KUP_Version">
+                <cd:Integer format="ascii">
+                  <cd:Description>Version number of the Kiruna Unavailability Periods (KUP) used for this Plan Increment File</cd:Description>
+                  <cd:NativeType>uint16</cd:NativeType>
+                  <ct:NamedTest id="RangePIFSPFVersion"/>
+                </cd:Integer>
+              </cd:Type>
+            </cd:Field>
+            <cd:Field name="PIF_SI_Version">
+              <cd:Type namexml="PIF_SI_Version">
+                <cd:Integer format="ascii">
+                  <cd:Description>Version number of the Schedule Increments (SI) used for this Plan Increment File. This value allows to distinguish among different Schedule Increments generated from the same Plan Increment because of re-planning</cd:Description>
+                  <cd:NativeType>uint16</cd:NativeType>
+                  <ct:NamedTest id="RangePIFSPFVersion"/>
+                </cd:Integer>
+              </cd:Type>
+            </cd:Field>
+            <cd:Field name="PIF_OSSCR_Version">
+              <cd:Type namexml="PIF_OSSCR_Version">
+                <cd:Integer format="ascii">
+                  <cd:Description>Version number of the Operational Service Session Commitment Request (OSSCR) generated and used for this Plan Increment File. This value allows to distinguish among different Schedule Increments generated from the same Plan Increment because of re-planning</cd:Description>
+                  <cd:NativeType>uint16</cd:NativeType>
+                  <ct:NamedTest id="RangePIFSPFVersion"/>
+                </cd:Integer>
+              </cd:Type>
+            </cd:Field>
+          </cd:Record>
+        </cd:Field>
+        <cd:Field name="List_of_RQs">
+          <cd:Record namexml="List_of_RQs">
+            <cd:Attribute name="count"/>
+            <cd:Field name="RQ">
+              <cd:Array>
+                <cd:Dimension/>
+                <cd:Record namexml="RQ">
+                  <cd:Field name="RQ_Name">
+                    <cd:Text namexml="RQ_Name">
+                      <cd:Description>The name of the Request (i.e. command sequence or ground station high level job)</cd:Description>
+                    </cd:Text>
+                  </cd:Field>
+                  <cd:Field name="RQ_Description">
+                    <cd:Text namexml="RQ_Description">
+                      <cd:Description>Description of the Request</cd:Description>
+                    </cd:Text>
+                  </cd:Field>
+                  <cd:Field name="RQ_Source">
+                    <cd:Text namexml="RQ_Source">
+                      <cd:Description>Source of the Request</cd:Description>
+                      <ct:NamedTest id="RQSourceEnum"/>
+                    </cd:Text>
+                  </cd:Field>
+                  <cd:Field name="RQ_Destination">
+                    <cd:Text namexml="RQ_Destination">
+                      <cd:Description>Destination of the Request</cd:Description>
+                      <ct:NamedTest id="RQDestinationEnum"/>
+                    </cd:Text>
+                  </cd:Field>
+                  <cd:Field name="RQ_Type">
+                    <cd:Text namexml="RQ_Type">
+                      <cd:Description>Request Type</cd:Description>
+                      <ct:NamedTest id="RQTypeEnum"/>
+                    </cd:Text>
+                  </cd:Field>
+                  <cd:Field name="RQ_Start_Time">
+                    <cd:Time timeformat="if(length(.)==0,nan,time(str(.),&quot;'UTC='yyyy-MM-dd'T'HH:mm:ss.SSS&quot;))">
+                      <cd:Text namexml="RQ_Start_Time">
+                        <cd:Description>Start time of the Request</cd:Description>
+                      </cd:Text>
+                    </cd:Time>
+                  </cd:Field>
+                  <cd:Field name="RQ_Absolute_orbit">
+                    <cd:Type namexml="RQ_Absolute_orbit">
+                      <cd:Integer format="ascii">
+                        <cd:NativeType>uint32</cd:NativeType>
+                        <cd:Description>Absolute orbit of the Request</cd:Description>
+                        <cd:Mapping string="" value="0"/>
+                      </cd:Integer>
+                    </cd:Type>
+                  </cd:Field>
+                  <cd:Field name="RQ_Time_from_ANX">
+                    <cd:Type namexml="RQ_Time_from_ANX">
+                      <cd:Float format="ascii">
+                        <cd:Description>Time from ANX of the Request</cd:Description>
+                        <cd:NativeType>double</cd:NativeType>
+                        <cd:Unit>s</cd:Unit>
+                        <cd:Mapping string="" value="nan"/>
+                      </cd:Float>
+                    </cd:Type>
+                  </cd:Field>
+                  <cd:Field name="RQ_Deg_from_ANX">
+                    <cd:Type namexml="RQ_Deg_from_ANX">
+                      <cd:Float format="ascii">
+                        <cd:Description>Degrees from ANX of the Request</cd:Description>
+                        <cd:NativeType>double</cd:NativeType>
+                        <cd:Unit>degrees</cd:Unit>
+                        <cd:Mapping string="" value="nan"/>
+                      </cd:Float>
+                    </cd:Type>
+                  </cd:Field>
+                  <cd:Field name="RQ_Status">
+                    <cd:Text namexml="RQ_Status">
+                      <cd:Description>Status of the Request</cd:Description>
+                      <ct:NamedTest id="RQStatusEnum"/>
+                    </cd:Text>
+                  </cd:Field>
+                  <cd:Field name="RQ_Subsystem">
+                    <cd:Text namexml="RQ_Subsystem">
+                      <cd:Description>Name of the subsystem, which the Request is related to</cd:Description>
+                    </cd:Text>
+                  </cd:Field>
+                  <cd:Field name="RQ_OssRef">
+                    <cd:Text namexml="RQ_OssRef">
+                      <cd:Description>Reference to the Operational Service Session which the request is related to</cd:Description>
+                    </cd:Text>
+                  </cd:Field>
+                  <cd:Field name="RQ_Parent_Event">
+                    <cd:Record namexml="RQ_Parent_Event">
+                      <cd:Field name="EV_Name">
+                        <cd:Text namexml="EV_Name">
+                          <cd:Description>Name of the plan event, which the Request belongs to</cd:Description>
+                        </cd:Text>
+                      </cd:Field>
+                      <cd:Field name="EV_Source">
+                        <cd:Text namexml="EV_Source">
+                          <cd:Description>Source of the plan event</cd:Description>
+                          <ct:NamedTest id="EVSourceEnum"/>
+                        </cd:Text>
+                      </cd:Field>
+                      <cd:Field name="EV_Time">
+                        <cd:Time timeformat="if(length(.)==0,nan,time(str(.),&quot;'UTC='yyyy-MM-dd'T'HH:mm:ss.SSS&quot;))">
+                          <cd:Type namexml="EV_Time">
+                            <cd:Description>Time of the plan event</cd:Description>
+                          </cd:Type>
+                        </cd:Time>
+                      </cd:Field>
+                      <cd:Field name="EV_ID">
+                        <cd:Text namexml="EV_ID">
+                          <cd:Description>Unique event identifier</cd:Description>
+                        </cd:Text>
+                      </cd:Field>
+                      <cd:Field name="EV_Absolute_orbit">
+                        <cd:Type namexml="EV_Absolute_orbit">
+                          <cd:Integer format="ascii">
+                            <cd:NativeType>uint32</cd:NativeType>
+                            <cd:Description>Absolute orbit of the Event</cd:Description>
+                            <cd:Mapping string="" value="0"/>
+                          </cd:Integer>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="EV_Time_from_ANX">
+                        <cd:Type namexml="EV_Time_from_ANX">
+                          <cd:Float format="ascii">
+                            <cd:Description>Time_from_ANX of the Event</cd:Description>
+                            <cd:NativeType>double</cd:NativeType>
+                            <cd:Unit>s</cd:Unit>
+                            <cd:Mapping string="" value="nan"/>
+                          </cd:Float>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="EV_Deg_from_ANX">
+                        <cd:Type namexml="EV_Deg_from_ANX">
+                          <cd:Float format="ascii">
+                            <cd:Description>Degrees_from_ANX of the Event</cd:Description>
+                            <cd:NativeType>double</cd:NativeType>
+                            <cd:Unit>degrees</cd:Unit>
+                            <cd:Mapping string="" value="nan"/>
+                            <ct:NamedTest id="OptionalRangeLongitude"/>
+                          </cd:Float>
+                        </cd:Type>
+                      </cd:Field>
+                    </cd:Record>
+                  </cd:Field>
+                  <cd:Field name="List_of_RQ_Parameters">
+                    <cd:Record namexml="List_of_RQ_Parameters">
+                      <cd:Attribute name="count"/>
+                      <cd:Field name="RQ_Parameter">
+                        <cd:Array>
+                          <cd:Dimension/>
+                          <cd:Record namexml="RQ_Parameter">
+                            <cd:Field name="RQ_Parameter_Name">
+                              <cd:Text namexml="RQ_Parameter_Name">
+                                <cd:Description>Request Parameter Name</cd:Description>
+                              </cd:Text>
+                            </cd:Field>
+                            <cd:Field name="RQ_Parameter_Description">
+                              <cd:Text namexml="RQ_Parameter_Description">
+                                <cd:Description>Description of the Request Parameter</cd:Description>
+                              </cd:Text>
+                            </cd:Field>
+                            <cd:Field name="RQ_Parameter_Representation">
+                              <cd:Text namexml="RQ_Parameter_Representation">
+                                <cd:Description>Type of the Request Parameter</cd:Description>
+                                <ct:NamedTest id="RQParameterRepresentationEnum"/>
+                              </cd:Text>
+                            </cd:Field>
+                            <cd:Field name="RQ_Parameter_Radix">
+                              <cd:Text namexml="RQ_Parameter_Radix">
+                                <cd:Description>Radix used to supply the Request Parameter Value. It is only applicable to values supplied in Raw form for Unsigned Integer parameters</cd:Description>
+                                <ct:NamedTest id="RQParameterRadixEnum"/>
+                              </cd:Text>
+                            </cd:Field>
+                            <cd:Field name="RQ_Parameter_Unit">
+                              <cd:Text namexml="RQ_Parameter_Unit">
+                                <cd:Description>Unit in which the Request Parameters Value is expressed</cd:Description>
+                              </cd:Text>
+                            </cd:Field>
+                            <cd:Field name="RQ_Parameter_Value">
+                              <cd:Text namexml="RQ_Parameter_Value">
+                                <cd:Description>Value of the Request Parameter specified in the appropriate format depending on the parameter value type</cd:Description>
+                              </cd:Text>
+                            </cd:Field>
+                          </cd:Record>
+                          <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                        </cd:Array>
+                      </cd:Field>
+                    </cd:Record>
+                  </cd:Field>
+                </cd:Record>
+                <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+              </cd:Array>
+            </cd:Field>
+          </cd:Record>
+        </cd:Field>
+      </cd:Record>
+    </cd:Field>
+  </cd:Record>
+</cd:ProductDefinition>

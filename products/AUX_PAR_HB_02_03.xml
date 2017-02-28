@@ -1,0 +1,302 @@
+<?xml version="1.0"?>
+<cd:ProductDefinition id="AUX_PAR_HB_02_03" format="xml" last-modified="2015-07-06" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+  <cd:Record format="xml">
+    <cd:Field name="Earth_Explorer_File">
+      <cd:Record namexml="Earth_Explorer_File">
+        <cd:Attribute name="schemaversion"/>
+         <cd:Description>Earth Explorer File</cd:Description>
+        <cd:Field name="Earth_Explorer_Header">
+          <cd:Record namexml="Earth_Explorer_Header">
+            <cd:Description>Earth Explorer Header File</cd:Description>
+            <cd:Field name="Fixed_Header">
+              <cd:NamedType id="Fixed_Header"/>
+            </cd:Field>
+            <cd:Field name="Variable_Header">
+              <cd:Record namexml="Variable_Header">
+                <cd:Description>Variable Header Section</cd:Description>
+                <cd:Field name="Main_Product_Header">
+                  <cd:NamedType id="Main_Product_Header_v2"/>
+                </cd:Field>
+                <cd:Field name="Specific_Product_Header">
+                  <cd:NamedType id="Specific_Product_Header_AUX_PAR_HB_02_02"/>
+                </cd:Field>
+              </cd:Record>
+            </cd:Field>
+            <ct:NamedTest id="FileNameMatchValidityStart" path="Fixed_Header/File_Name"/>
+          </cd:Record>
+        </cd:Field>
+        <cd:Field name="Data_Block">
+          <cd:Record namexml="Data_Block">
+            <cd:Attribute name="type">
+              <cd:Optional/>
+              <cd:FixedValue>xml</cd:FixedValue>
+            </cd:Attribute>                          
+            <cd:Field name="HBE_Params">
+              <cd:Record namexml="HBE_Params">
+                <cd:Field name="List_of_Data_Set_Records">
+                  <cd:Record namexml="List_of_Data_Set_Records">
+                    <cd:Attribute name="count">
+                    </cd:Attribute>
+                    <cd:Field name="Data_Set_Record">
+                      <cd:Array>
+                        <cd:Dimension/>
+                        <cd:Record namexml="Data_Set_Record">
+                          <cd:Field name="NF_Order">
+                            <cd:Type namexml="NF_Order">
+                              <cd:Integer format="ascii">
+                                <cd:Description>Number of Fourier terms.</cd:Description>
+                                <cd:NativeType>uint32</cd:NativeType>
+                              </cd:Integer>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="Laser_Wavelength">
+                            <cd:Type namexml="Laser_Wavelength">
+                              <cd:Attribute name="unit">
+                                <cd:Optional/>
+                                <cd:FixedValue>nm</cd:FixedValue>
+                              </cd:Attribute>
+                              <cd:Float format="ascii">
+                                <cd:Description>Reference laser wavelength</cd:Description>
+                                <cd:Unit>nm</cd:Unit>
+                                <cd:NativeType>double</cd:NativeType>
+                              </cd:Float>
+                            </cd:Type>
+                          </cd:Field>                          
+                          <cd:Field name="Mie_Min_Pole_Latitude">
+                            <cd:Type namexml="Mie_Min_Pole_Latitude">
+                              <cd:Attribute name="unit">
+                                <cd:Optional/>
+                                <cd:FixedValue>10-6DegN</cd:FixedValue>
+                              </cd:Attribute>
+                              <cd:Integer format="ascii">
+                                <cd:Description>Minimum Latitude threshold to check if Mie measurement will be considered</cd:Description>
+                                <cd:Unit>1e-6 degrees_north</cd:Unit>
+                                <cd:Conversion denominator="1000000.000000" numerator="1.000000">
+                                  <cd:Unit>degrees_north</cd:Unit>
+                                </cd:Conversion>
+                                <cd:NativeType>int32</cd:NativeType>
+                                <ct:NamedTest id="RangeLatitude6"/>
+                              </cd:Integer>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="Rayleigh_Min_Pole_Latitude">
+                            <cd:Type namexml="Rayleigh_Min_Pole_Latitude">
+                              <cd:Attribute name="unit">
+                                <cd:Optional/>
+                                <cd:FixedValue>10-6DegN</cd:FixedValue>
+                              </cd:Attribute>
+                              <cd:Integer format="ascii">
+                                <cd:Description>Minimum Latitude threshold to check if Rayleigh measurement will be considered</cd:Description>
+                                <cd:Unit>1e-6 degrees_north</cd:Unit>
+                                <cd:Conversion denominator="1000000.000000" numerator="1.000000">
+                                  <cd:Unit>degrees_north</cd:Unit>
+                                </cd:Conversion>
+                                <cd:NativeType>int32</cd:NativeType>
+                                <ct:NamedTest id="RangeLatitude6"/>
+                              </cd:Integer>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="Mie_Ignore_Sea">
+                            <cd:Type namexml="Mie_Ignore_Sea">
+                              <cd:Integer format="ascii">
+                                <cd:Description>Flag set to true to ignore Mie measurement above sea, otherwise set to false</cd:Description>
+                                <cd:NativeType>uint8</cd:NativeType>
+                                <cd:Mapping string="FALSE" value="0"/>                                
+                                <cd:Mapping string="False" value="0"/>
+                                <cd:Mapping string="false" value="0"/>
+                                <cd:Mapping string="TRUE" value="1"/>
+                                <cd:Mapping string="True" value="1"/>
+                                <cd:Mapping string="true" value="1"/>
+                                <ct:NamedTest id="BooleanBinTest" />
+                              </cd:Integer>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="Rayleigh_Ignore_Sea">
+                            <cd:Type namexml="Rayleigh_Ignore_Sea">
+                              <cd:Integer format="ascii">
+                                <cd:Description>Flag set to true to ignore Rayleigh measurement above sea, otherwise set to false</cd:Description>
+                                <cd:NativeType>uint8</cd:NativeType>
+                                <cd:Mapping string="FALSE" value="0"/>                                                                
+                                <cd:Mapping string="False" value="0"/>
+                                <cd:Mapping string="false" value="0"/>
+                                <cd:Mapping string="TRUE" value="1"/>                                
+                                <cd:Mapping string="True" value="1"/>
+                                <cd:Mapping string="true" value="1"/>
+                                <ct:NamedTest id="BooleanBinTest" />
+                              </cd:Integer>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="Mie_Check_Range">
+                            <cd:Type namexml="Mie_Check_Range">
+                              <cd:Integer format="ascii">
+                                <cd:Description>Flag set to true to check the calculated range against Mie_Min_Range and Mie_Max_Range otherwise set to false</cd:Description>
+                                <cd:NativeType>uint8</cd:NativeType>
+                                <cd:Mapping string="FALSE" value="0"/>
+                                <cd:Mapping string="False" value="0"/>
+                                <cd:Mapping string="false" value="0"/>
+                                <cd:Mapping string="TRUE" value="1"/>                                
+                                <cd:Mapping string="True" value="1"/>
+                                <cd:Mapping string="true" value="1"/>
+                                <ct:NamedTest id="BooleanBinTest" />
+                              </cd:Integer>
+                            </cd:Type>
+                          </cd:Field>                          
+                          <cd:Field name="Mie_Min_Range">
+                            <cd:Type namexml="Mie_Min_Range">
+                              <cd:Attribute name="unit">
+                                <cd:Optional/>
+                                <cd:FixedValue>m</cd:FixedValue>
+                              </cd:Attribute>
+                              <cd:Integer format="ascii">
+                                <cd:Description>Mie minimum range</cd:Description>
+                                <cd:Unit>m</cd:Unit>
+                                <cd:NativeType>int32</cd:NativeType>
+                              </cd:Integer>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="Mie_Max_Range">
+                            <cd:Type namexml="Mie_Max_Range">
+                              <cd:Attribute name="unit">
+                                <cd:Optional/>
+                                <cd:FixedValue>m</cd:FixedValue>
+                              </cd:Attribute>
+                              <cd:Integer format="ascii">
+                                <cd:Description>Mie maximum range</cd:Description>
+                                <cd:Unit>m</cd:Unit>
+                                <cd:NativeType>int32</cd:NativeType>
+                              </cd:Integer>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="Rayleigh_Check_Range">
+                            <cd:Type namexml="Rayleigh_Check_Range">
+                              <cd:Integer format="ascii">
+                                <cd:Description>Flag set to true to check the calculated range against Rayleigh_Min_Range and Rayleigh_Max_Range otherwise set to false</cd:Description>
+                                <cd:NativeType>uint8</cd:NativeType>
+                                <cd:Mapping string="FALSE" value="0"/>                                                                
+                                <cd:Mapping string="False" value="0"/>
+                                <cd:Mapping string="false" value="0"/>
+                                <cd:Mapping string="TRUE" value="1"/>                                
+                                <cd:Mapping string="True" value="1"/>
+                                <cd:Mapping string="true" value="1"/>
+                                <ct:NamedTest id="BooleanBinTest" />
+                              </cd:Integer>
+                            </cd:Type>
+                          </cd:Field>                          
+                          <cd:Field name="Rayleigh_Min_Range">
+                            <cd:Type namexml="Rayleigh_Min_Range">
+                              <cd:Attribute name="unit">
+                                <cd:Optional/>
+                                <cd:FixedValue>m</cd:FixedValue>
+                              </cd:Attribute>
+                              <cd:Integer format="ascii">
+                                <cd:Description>Rayleigh minimum range</cd:Description>
+                                <cd:Unit>m</cd:Unit>
+                                <cd:NativeType>int32</cd:NativeType>
+                              </cd:Integer>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="Rayleigh_Max_Range">
+                            <cd:Type namexml="Rayleigh_Max_Range">
+                              <cd:Attribute name="unit">
+                                <cd:Optional/>
+                                <cd:FixedValue>m</cd:FixedValue>
+                              </cd:Attribute>
+                              <cd:Integer format="ascii">
+                                <cd:Description>Rayleigh maximum range</cd:Description>
+                                <cd:Unit>m</cd:Unit>
+                                <cd:NativeType>int32</cd:NativeType>
+                              </cd:Integer>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="Mie_Remove_Outlier">
+                            <cd:Type namexml="Mie_Remove_Outlier">
+                              <cd:Integer format="ascii">
+                                <cd:Description>Flag set to true to remove Mie outliers, otherwise set to false</cd:Description>
+                                <cd:NativeType>uint8</cd:NativeType>
+                                <cd:Mapping string="FALSE" value="0"/>                                
+                                <cd:Mapping string="False" value="0"/>
+                                <cd:Mapping string="false" value="0"/>
+                                <cd:Mapping string="TRUE" value="1"/>                                
+                                <cd:Mapping string="True" value="1"/>
+                                <cd:Mapping string="true" value="1"/>
+                                <ct:NamedTest id="BooleanBinTest" />
+                              </cd:Integer>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="Mie_Outlier_Iterations">
+                            <cd:Type namexml="Mie_Outlier_Iterations">
+                              <cd:Integer format="ascii">
+                                <cd:Description>Number of iterations to remove Mie outliers</cd:Description>
+                                <cd:NativeType>int32</cd:NativeType>
+                              </cd:Integer>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="Mie_Deweight_Factor">
+                            <cd:Type namexml="Mie_Deweight_Factor">
+                              <cd:Float format="ascii">
+                                <cd:Description>Weighting Factor to apply to standard deviation for Mie outliers</cd:Description>
+                                <cd:NativeType>double</cd:NativeType>
+                              </cd:Float>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="Mie_Outlier_SD">
+                            <cd:Type namexml="Mie_Outlier_SD">
+                              <cd:Float format="ascii">
+                                <cd:Description>Mie outlier sigma threshold</cd:Description>
+                                <cd:NativeType>double</cd:NativeType>
+                              </cd:Float>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="Rayleigh_Remove_Outlier">
+                            <cd:Type namexml="Rayleigh_Remove_Outlier">
+                              <cd:Integer format="ascii">
+                                <cd:Description>Flag set to true to remove Rayleigh outliers, otherwise set to false</cd:Description>
+                                <cd:NativeType>uint8</cd:NativeType>
+                                <cd:Mapping string="FALSE" value="0"/>                                
+                                <cd:Mapping string="False" value="0"/>
+                                <cd:Mapping string="false" value="0"/>
+                                <cd:Mapping string="TRUE" value="1"/>                                
+                                <cd:Mapping string="True" value="1"/>
+                                <cd:Mapping string="true" value="1"/>
+                                <ct:NamedTest id="BooleanBinTest" />
+                              </cd:Integer>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="Rayleigh_Outlier_Iterations">
+                            <cd:Type namexml="Rayleigh_Outlier_Iterations">
+                              <cd:Integer format="ascii">
+                                <cd:Description>Number of iterations to remove Rayleigh outliers</cd:Description>
+                                <cd:NativeType>int32</cd:NativeType>
+                              </cd:Integer>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="Rayleigh_Deweight_Factor">
+                            <cd:Type namexml="Rayleigh_Deweight_Factor">
+                              <cd:Float format="ascii">
+                                <cd:Description>Weighting Factor to apply to standard deviation for Rayleigh outliers</cd:Description>
+                                <cd:NativeType>double</cd:NativeType>
+                              </cd:Float>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="Rayleigh_Outlier_SD">
+                            <cd:Type namexml="Rayleigh_Outlier_SD">
+                              <cd:Float format="ascii">
+                                <cd:Description>Rayleigh outlier sigma threshold</cd:Description>
+                                <cd:NativeType>double</cd:NativeType>
+                              </cd:Float>
+                            </cd:Type>
+                          </cd:Field>                          
+                        </cd:Record>                          
+                        <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                      </cd:Array>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+              </cd:Record>
+            </cd:Field>
+          </cd:Record>
+        </cd:Field>
+      </cd:Record>
+    </cd:Field>
+  </cd:Record>
+</cd:ProductDefinition>

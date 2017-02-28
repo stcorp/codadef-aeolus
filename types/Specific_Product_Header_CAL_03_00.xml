@@ -1,0 +1,148 @@
+<?xml version="1.0"?>
+<cd:Record name="Specific_Product_Header_CAL_03_00" format="xml" namexml="Specific_Product_Header" last-modified="2015-07-22" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Description>Specific Product Header for AUX_CAL_L2 products</cd:Description>
+  <cd:Field name="Sph_Descriptor">
+    <cd:Text namexml="Sph_Descriptor">
+      <cd:Description>SPH descriptor: ASCII string describing the product</cd:Description>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="Spare_1">
+    <cd:Hidden/>
+    <cd:Text namexml="Spare_1">
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="Ref_CAL_Suite">
+    <cd:Text namexml="Ref_CAL_Suite">
+      <cd:Description>Reference of the processing suite that was used to produce this calibration file</cd:Description>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="Num_P">
+    <cd:Type namexml="Num_P">
+      <cd:Integer format="ascii">
+        <cd:Description>Number of pressure bins in P_Grid (typical value: 23)</cd:Description>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Num_T">
+    <cd:Type namexml="Num_T">
+      <cd:Integer format="ascii">
+        <cd:Description>NUmber of temperature bins in T_Grid (typical values: 161)</cd:Description>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Num_Fd">
+    <cd:Type namexml="Num_Fd">
+      <cd:Integer format="ascii">
+        <cd:Description>Number of frequency bins in fd (typical values: 61)</cd:Description>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Num_Fp">
+    <cd:Type namexml="Num_Fp">
+      <cd:Integer format="ascii">
+        <cd:Description>Number of frequency bins in Fp (typical values: 1201)</cd:Description>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Spare_2">
+    <cd:Hidden/>
+    <cd:Text namexml="Spare_2">
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="P_Min">
+    <cd:Type namexml="P_Min">
+      <cd:Attribute name="unit">
+        <cd:Optional/>
+        <cd:FixedValue>Pa</cd:FixedValue>
+      </cd:Attribute>
+      <cd:Integer format="ascii">
+        <cd:Description>Minimum pressure considered in the RBC calculations</cd:Description>
+        <cd:Unit>Pa</cd:Unit>
+        <cd:NativeType>uint32</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="P_Max">
+    <cd:Type namexml="P_Max">
+      <cd:Attribute name="unit">
+        <cd:Optional/>
+        <cd:FixedValue>Pa</cd:FixedValue>
+      </cd:Attribute>
+      <cd:Integer format="ascii">
+        <cd:Description>Maximum pressure considered in the RBC calculations</cd:Description>
+        <cd:Unit>Pa</cd:Unit>
+        <cd:NativeType>uint32</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="T_Min">
+    <cd:Type namexml="T_Min">
+      <cd:Attribute name="unit">
+        <cd:Optional/>
+        <cd:FixedValue>10-2K</cd:FixedValue>
+      </cd:Attribute>
+      <cd:Integer format="ascii">
+        <cd:Description>Minimum temperature considered in the RBC calculations</cd:Description>
+        <cd:Unit>1e-2 K</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="100.000000">
+          <cd:Unit>K</cd:Unit>
+        </cd:Conversion>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="T_Max">
+    <cd:Type namexml="T_Max">
+      <cd:Attribute name="unit">
+        <cd:Optional/>
+        <cd:FixedValue>10-2K</cd:FixedValue>
+      </cd:Attribute>
+      <cd:Integer format="ascii">
+        <cd:Description>Maximum temperature considered in the RBC calculations</cd:Description>
+        <cd:Unit>1e-2 K</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="100.000000">
+          <cd:Unit>K</cd:Unit>
+        </cd:Conversion>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Fd_Min">
+    <cd:Type namexml="Fd_Min">
+      <cd:Attribute name="unit">
+        <cd:Optional/>
+        <cd:FixedValue>MHz</cd:FixedValue>
+      </cd:Attribute>
+      <cd:Integer format="ascii">
+        <cd:Description>Starting offset of the laser frequency in Fabry-Perot transfer function file </cd:Description>
+        <cd:Unit>MHz</cd:Unit>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Fd_Max">
+    <cd:Type namexml="Fd_Max">
+      <cd:Attribute name="unit">
+        <cd:Optional/>
+        <cd:FixedValue>MHz</cd:FixedValue>
+      </cd:Attribute>
+      <cd:Integer format="ascii">
+        <cd:Description>Last offset of the laser frequency in Fabry-Perot transfer function file </cd:Description>
+        <cd:Unit>MHz</cd:Unit>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Spare_3">
+    <cd:Hidden/>
+    <cd:Text namexml="Spare_3">
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="List_of_Dsds">
+    <cd:NamedType id="List_of_Dsds"/>
+  </cd:Field>
+</cd:Record>

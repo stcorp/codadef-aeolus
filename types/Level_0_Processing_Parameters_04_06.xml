@@ -1,0 +1,215 @@
+<?xml version="1.0"?>
+<cd:Record name="Level_0_Processing_Parameters_04_06" format="xml" namexml="Level_0_Processing_Parameters" last-modified="2016-11-29" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+  <cd:Description>Level 0 Processing Parameters GADS DSR</cd:Description>
+  <cd:Field name="List_of_Data_Set_Records">
+    <cd:Record namexml="List_of_Data_Set_Records">
+      <cd:Description>List of Data Set Records</cd:Description>
+      <cd:Attribute name="count">
+      </cd:Attribute>
+      <cd:Field name="Data_Set_Record">
+        <cd:Array>
+          <cd:Dimension/>
+          <cd:Record namexml="Data_Set_Record">
+            <cd:Description>Data Set Record</cd:Description>
+            <cd:Field name="FH_Default_Fields">
+              <cd:Record namexml="FH_Default_Fields">
+                <cd:Description>Values responsible for populating the fixed header</cd:Description>
+                <cd:Field name="File_Type">
+                  <cd:Text namexml="File_Type">
+                    <cd:Description>File type string</cd:Description>
+                  </cd:Text>
+                </cd:Field>
+                <cd:Field name="File_Description">
+                  <cd:Text namexml="File_Description">
+                    <cd:Description>1-line description of the file</cd:Description>
+                  </cd:Text>
+                </cd:Field>
+                <cd:Field name="Notes">
+                  <cd:Text namexml="Notes">
+                    <cd:Description>Multi-lines free text</cd:Description>
+                  </cd:Text>
+                </cd:Field>
+                <cd:Field name="Mission">
+                  <cd:Text namexml="Mission">
+                    <cd:Description>Aeolus</cd:Description>
+                  </cd:Text>
+                </cd:Field>
+                <cd:Field name="Mission_Id">
+                  <cd:Text namexml="Mission_Id">
+                    <cd:Description>AE</cd:Description>
+                  </cd:Text>
+                </cd:Field>
+                <cd:Field name="File_Class">
+                  <cd:Text namexml="File_Class">
+                    <cd:Description>1-Line description of the file class</cd:Description>
+                  </cd:Text>
+                </cd:Field>
+                <cd:Field name="File_Version">
+                  <cd:Type namexml="File_Version">
+                    <cd:Integer format="ascii">
+                      <cd:Description>4 digits used to distinguish between versions of a file having the same validity period</cd:Description>
+                      <cd:NativeType>int16</cd:NativeType>
+                    </cd:Integer>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="System">
+                  <cd:Text namexml="System">
+                    <cd:Description>Aeolus L1bP</cd:Description>
+                  </cd:Text>
+                </cd:Field>
+                <cd:Field name="Creator">
+                  <cd:Text namexml="Creator">
+                    <cd:Description>Aeolus L1bP</cd:Description>
+                  </cd:Text>
+                </cd:Field>
+                <cd:Field name="Creator_Version">
+                  <cd:Text namexml="Creator_Version">
+                    <cd:Description>Version of the tool</cd:Description>
+                  </cd:Text>
+                </cd:Field>
+              </cd:Record>
+            </cd:Field>
+            <cd:Field name="Mph_Default_Fields">
+              <cd:Record namexml="Mph_Default_Fields">
+                <cd:Description>Values responsible for populating the main product header</cd:Description>
+                <cd:Field name="Software_Ver">
+                  <cd:Text namexml="Software_Ver">
+                    <cd:Description>Software version number of processing software. Format: name of processor (up to 10 char) version number (4 char)</cd:Description>
+                  </cd:Text>
+                </cd:Field>
+                <cd:Field name="Proc_Centre">
+                  <cd:Text namexml="Proc_Centre">
+                    <cd:Description>AEOLUS PHS</cd:Description>
+                  </cd:Text>
+                </cd:Field>
+              </cd:Record>
+            </cd:Field>
+            <cd:Field name="Sph_Descriptor">
+              <cd:Text namexml="Sph_Descriptor">
+                <cd:Description>ASCII string describing the product</cd:Description>
+              </cd:Text>
+            </cd:Field>
+            <cd:Field name="Level_0_Error_Thresholds">
+              <cd:Record namexml="Level_0_Error_Thresholds">
+                <cd:Description>Level 0 Error Thresholds</cd:Description>
+                <cd:Field name="Error_Isps_Thresh">
+                  <cd:Type namexml="Error_Isps_Thresh">
+                    <cd:Attribute name="unit">
+                      <cd:Optional/>
+                      <cd:FixedValue>%</cd:FixedValue>
+                    </cd:Attribute>                     
+                    <cd:Float format="ascii">
+                      <cd:Description>Threshold at which the number of ISPs containing CRC errors is considered significant (in percent)</cd:Description>
+                      <cd:Unit>%</cd:Unit>
+                      <cd:NativeType>double</cd:NativeType>
+                    </cd:Float>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="Missing_Isps_Thresh">
+                  <cd:Type namexml="Missing_Isps_Thresh">
+                    <cd:Attribute name="unit">
+                      <cd:Optional/>
+                      <cd:FixedValue>%</cd:FixedValue>
+                    </cd:Attribute>
+                    <cd:Float format="ascii">
+                      <cd:Description>Threshold at which number of missing ISPs is considered significant</cd:Description>
+                      <cd:Unit>%</cd:Unit>                      
+                      <cd:NativeType>double</cd:NativeType>
+                    </cd:Float>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="Rs_Thresh">
+                  <cd:Type namexml="Rs_Thresh">
+                    <cd:Attribute name="unit">
+                      <cd:Optional/>
+                      <cd:FixedValue>%</cd:FixedValue>
+                    </cd:Attribute>                     
+                    <cd:Float format="ascii">
+                      <cd:Description>Threshold at which number of ISPs with Reed Solomon corrections is considered significant</cd:Description>
+                      <cd:Unit>%</cd:Unit>                      
+                      <cd:NativeType>double</cd:NativeType>
+                    </cd:Float>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="Tf_Crc_Error_Isps_Thresh">
+                  <cd:Type namexml="Tf_Crc_Error_Isps_Thresh">
+                    <cd:Attribute name="unit">
+                      <cd:Optional/>
+                      <cd:FixedValue>%</cd:FixedValue>
+                    </cd:Attribute>                    
+                    <cd:Float format="ascii">
+                      <cd:Description>Threshold at which number of ISPs containing Transfer Frame CRC errors is considered significant</cd:Description>
+                      <cd:Unit>%</cd:Unit>                      
+                      <cd:NativeType>double</cd:NativeType>
+                    </cd:Float>
+                  </cd:Type>
+                </cd:Field>
+              </cd:Record>
+            </cd:Field>
+            <cd:Field name="Header_Validity_Checks">
+              <cd:Record namexml="Header_Validity_Checks">
+                <cd:Description>Header Validity Checks</cd:Description>
+                <cd:Field name="Sp_Version_No">
+                  <cd:Array>
+                    <cd:Dimension/>
+                    <cd:Type namexml="Sp_Version_No">
+                      <cd:Integer format="ascii">
+                        <cd:Description>SP Version number</cd:Description>
+                        <cd:NativeType>int16</cd:NativeType>
+                      </cd:Integer>
+                    </cd:Type>
+                  </cd:Array>
+                </cd:Field>
+                <cd:Field name="Sp_Type">
+                  <cd:Array>
+                    <cd:Dimension/>
+                    <cd:Type namexml="Sp_Type">
+                      <cd:Integer format="ascii">
+                        <cd:Description>0</cd:Description>
+                        <cd:NativeType>int16</cd:NativeType>
+                      </cd:Integer>
+                    </cd:Type>
+                  </cd:Array>
+                </cd:Field>
+                <cd:Field name="Sp_Data_Field_Header">
+                  <cd:Array>
+                    <cd:Dimension/>
+                    <cd:Type namexml="Sp_Data_Field_Header">
+                      <cd:Integer format="ascii">
+                        <cd:Description>1</cd:Description>
+                        <cd:NativeType>int16</cd:NativeType>
+                      </cd:Integer>
+                    </cd:Type>
+                  </cd:Array>
+                </cd:Field>
+                <cd:Field name="Sp_Application_Process_ID">
+                  <cd:Array>
+                    <cd:Dimension/>
+                    <cd:Type namexml="Sp_Application_Process_ID">
+                      <cd:Integer format="ascii">
+                        <cd:Description>Source Packet Application process ID</cd:Description>
+                        <cd:NativeType>int16</cd:NativeType>
+                      </cd:Integer>
+                    </cd:Type>
+                  </cd:Array>
+                </cd:Field>
+                <cd:Field name="Sp_Packet_Cat">
+                  <cd:Array>
+                    <cd:Dimension/>
+                    <cd:Type namexml="Sp_Packet_Cat">
+                      <cd:Integer format="ascii">
+                        <cd:Description>Source Packet packet category</cd:Description>
+                        <cd:NativeType>int16</cd:NativeType>
+                      </cd:Integer>
+                    </cd:Type>
+                  </cd:Array>
+                </cd:Field>
+              </cd:Record>
+            </cd:Field>
+          </cd:Record>
+          <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+        </cd:Array>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+</cd:Record>

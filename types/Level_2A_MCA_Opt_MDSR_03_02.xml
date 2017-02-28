@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="binary" last-modified="2015-12-07" name="Level_2A_MCA_Opt_MDSR_03_02">
+  <cd:Field name="starttime">
+    <cd:Time timeformat="binary_envisat_datetime">
+      <cd:Description>Start date and time of the MCA profile covered by the present DSR</cd:Description>
+      <ct:NamedTest id="RangeSecond" path="seconds"/>
+      <ct:NamedTest id="RangeMicroSecond" path="microseconds"/>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="mca_optical_properties">
+    <cd:Array>
+      <cd:Dimension>24</cd:Dimension>
+      <cd:Record>
+        <cd:Description>Structure containing MCA products</cd:Description>
+        <cd:Field name="climber">
+          <cd:Float>
+            <cd:Description>Particle backscatter-to-extinction ratio extracted from the climatology</cd:Description>
+            <cd:Unit>sr</cd:Unit>
+            <cd:BitSize>64</cd:BitSize>
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Field>
+        <cd:Field name="extinction">
+          <cd:Float>
+            <cd:Description>Particle extinction of the bin</cd:Description>
+            <cd:Unit>10^-6 m^-1</cd:Unit>
+            <cd:BitSize>64</cd:BitSize>
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Field>
+        <cd:Field name="lod">
+          <cd:Float>
+            <cd:Description>Particle LOD of the bin</cd:Description>
+            <cd:BitSize>64</cd:BitSize>
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Field>
+      </cd:Record>
+    </cd:Array>
+  </cd:Field>
+</cd:Record>

@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<cd:Record name="Variable_Header_CTI" format="xml" namexml="Variable_Header" last-modified="2008-07-01" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+  <cd:Description>Variable Header Section</cd:Description>
+  <cd:Field name="Task_Name">
+    <cd:Text namexml="Task_Name">
+      <cd:Description>Identifier of the ACMF-task responsible for generating the file.</cd:Description>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="List_of_Input_ADFs">
+    <cd:Record namexml="List_of_Input_ADFs">
+      <cd:Attribute name="count">
+      </cd:Attribute>
+      <cd:Field name="Input_ADF">
+        <cd:Array>
+          <cd:Dimension/>
+          <cd:Text namexml="Input_ADF">
+            <cd:Description>Name of  AUX_XX_1B file name that has been used to generate the CTI file.</cd:Description>
+          </cd:Text>
+          <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+        </cd:Array>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+</cd:Record>

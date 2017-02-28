@@ -1,0 +1,275 @@
+<?xml version="1.0"?>
+<cd:ProductDefinition id="AUX_PAR_CL_03_00" format="xml" last-modified="2015-04-28" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+  <cd:Record format="xml">
+    <cd:Field name="Earth_Explorer_File">
+      <cd:Record namexml="Earth_Explorer_File">
+        <cd:Description>Earth Explorer File</cd:Description>
+        <cd:Field name="Earth_Explorer_Header">
+          <cd:Record namexml="Earth_Explorer_Header">
+            <cd:Description>Earth Explorer Header File</cd:Description>
+            <cd:Field name="Fixed_Header">
+              <cd:NamedType id="Fixed_Header"/>
+            </cd:Field>
+            <cd:Field name="Variable_Header">
+              <cd:Record namexml="Variable_Header">
+                <cd:Description>Variable Header Section</cd:Description>
+                <cd:Field name="Main_Product_Header">
+                  <cd:NamedType id="Main_Product_Header_v2"/>
+                </cd:Field>
+                <cd:Field name="Specific_Product_Header">
+                  <cd:NamedType id="Specific_Product_Header_Par"/>
+                </cd:Field>
+              </cd:Record>
+            </cd:Field>
+            <ct:NamedTest id="FileNameMatchValidityStart" path="Fixed_Header/File_Name"/>
+          </cd:Record>
+        </cd:Field>
+        <cd:Field name="Data_Block">
+          <cd:Record namexml="Data_Block">
+            <cd:Field name="CAL_Parameters">
+              <cd:Record namexml="CAL_Parameters">
+                <cd:Field name="List_of_Data_Set_Records">
+                  <cd:Record namexml="List_of_Data_Set_Records">
+                    <cd:Attribute name="count">
+                    </cd:Attribute>
+                    <cd:Field name="Data_Set_Record">
+                      <cd:Array>
+                        <cd:Dimension/>
+                        <cd:Record namexml="Data_Set_Record">
+                          <cd:Field name="Instrument">
+                            <cd:Record namexml="Instrument">
+                              <cd:Field name="USR">
+                                <cd:Type namexml="USR">
+                                  <cd:Attribute name="unit"/>
+                                  <cd:Integer format="ascii">
+                                    <cd:Description>Useful Spectral Range</cd:Description>
+                                    <cd:Unit>GHz</cd:Unit>
+                                    <cd:NativeType>uint32</cd:NativeType>
+                                  </cd:Integer>
+                                </cd:Type>
+                              </cd:Field>
+                              <cd:Field name="FSRFP">
+                                <cd:Type namexml="FSRFP">
+                                  <cd:Attribute name="unit"/>
+                                  <cd:Integer format="ascii">
+                                    <cd:Description>Free Spectral Range of the Fabry-Perot</cd:Description>
+                                    <cd:Unit>GHz</cd:Unit>
+                                    <cd:NativeType>uint32</cd:NativeType>
+                                  </cd:Integer>
+                                </cd:Type>
+                              </cd:Field>
+                              <cd:Field name="FSRFiz">
+                                <cd:Type namexml="FSRFiz">
+                                  <cd:Attribute name="unit"/>
+                                  <cd:Integer format="ascii">
+                                    <cd:Description>Free Spectral Range of the Fizeau</cd:Description>
+                                    <cd:Unit>GHz</cd:Unit>
+                                    <cd:NativeType>uint32</cd:NativeType>
+                                  </cd:Integer>
+                                </cd:Type>
+                              </cd:Field>
+                              <cd:Field name="Df">
+                                <cd:Type namexml="Df">
+                                  <cd:Attribute name="unit"/>
+                                  <cd:Integer format="ascii">
+                                    <cd:Description>Frequency resolution</cd:Description>
+                                    <cd:Unit>MHz</cd:Unit>
+                                    <cd:NativeType>uint32</cd:NativeType>
+                                  </cd:Integer>
+                                </cd:Type>
+                              </cd:Field>
+                            </cd:Record>
+                          </cd:Field>
+                          <cd:Field name="Ref_Grid">
+                            <cd:Record namexml="Ref_Grid">
+                              <cd:Field name="Dz_Ref">
+                                <cd:Type namexml="Dz_Ref">
+                                  <cd:Attribute name="unit">
+                                    <cd:Optional/>
+                                    <cd:FixedValue>m</cd:FixedValue>
+                                  </cd:Attribute>
+                                  <cd:Integer format="ascii">
+                                    <cd:Description>Vertical resolution</cd:Description>
+                                    <cd:Unit>m</cd:Unit>
+                                    <cd:NativeType>uint16</cd:NativeType>
+                                  </cd:Integer>
+                                </cd:Type>
+                              </cd:Field>
+                              <cd:Field name="Zref_Min">
+                                <cd:Type namexml="Zref_Min">
+                                  <cd:Attribute name="unit">
+                                    <cd:Optional/>
+                                    <cd:FixedValue>m</cd:FixedValue>
+                                  </cd:Attribute>
+                                  <cd:Integer format="ascii">
+                                    <cd:Description>Minimum altitude (above WGS84 geoid)</cd:Description>
+                                    <cd:Unit>m</cd:Unit>
+                                    <cd:NativeType>uint16</cd:NativeType>
+                                  </cd:Integer>
+                                </cd:Type>
+                              </cd:Field>
+                              <cd:Field name="Zref_Max">
+                                <cd:Type namexml="Zref_Max">
+                                  <cd:Attribute name="unit">
+                                    <cd:Optional/>
+                                    <cd:FixedValue>m</cd:FixedValue>
+                                  </cd:Attribute>
+                                  <cd:Integer format="ascii">
+                                    <cd:Description>Maximum altitude (above WGS84 geoid)</cd:Description>
+                                    <cd:Unit>m</cd:Unit>
+                                    <cd:NativeType>uint16</cd:NativeType>
+                                  </cd:Integer>
+                                </cd:Type>
+                              </cd:Field>
+                            </cd:Record>
+                          </cd:Field>
+                          <cd:Field name="Atm_Grid">
+                            <cd:Record namexml="Atm_Grid">
+                              <cd:Field name="Tcal_Min">
+                                <cd:Type namexml="Tcal_Min">
+                                  <cd:Attribute name="unit"/>
+                                  <cd:Integer format="ascii">
+                                    <cd:Description>Minimun temperature defining the vector of temperatures for which calibration constants and function are to be computed.</cd:Description>
+                                    <cd:Unit>K</cd:Unit>
+                                    <cd:NativeType>uint16</cd:NativeType>
+                                  </cd:Integer>
+                                </cd:Type>
+                              </cd:Field>
+                              <cd:Field name="Tcal_Max">
+                                <cd:Type namexml="Tcal_Max">
+                                  <cd:Attribute name="unit"/>
+                                  <cd:Integer format="ascii">
+                                    <cd:Description>Maximun temperature defining the vector of temperatures for which calibration constants and function are to be computed.</cd:Description>
+                                    <cd:Unit>K</cd:Unit>
+                                    <cd:NativeType>uint32</cd:NativeType>
+                                  </cd:Integer>
+                                </cd:Type>
+                              </cd:Field>
+                              <cd:Field name="Tcal_Stp">
+                                <cd:Type namexml="Tcal_Stp">
+                                  <cd:Attribute name="unit"/>
+                                  <cd:Integer format="ascii">
+                                    <cd:Description>Temperature step defining the vector of temperatures for which calibration constants and function are to be computed.</cd:Description>
+                                    <cd:Unit>K</cd:Unit>
+                                    <cd:NativeType>uint32</cd:NativeType>
+                                  </cd:Integer>
+                                </cd:Type>
+                              </cd:Field>
+                              <cd:Field name="Pcal_Min">
+                                <cd:Type namexml="Pcal_Min">
+                                  <cd:Attribute name="unit"/>
+                                  <cd:Integer format="ascii">
+                                    <cd:Description>Minimun pressure defining the vector of pressures for which calibration constants and function are to be computed.</cd:Description>
+                                    <cd:Unit>hPa</cd:Unit>
+                                    <cd:NativeType>uint16</cd:NativeType>
+                                  </cd:Integer>
+                                </cd:Type>
+                              </cd:Field>
+                              <cd:Field name="Pcal_Max">
+                                <cd:Type namexml="Pcal_Max">
+                                  <cd:Attribute name="unit"/>
+                                  <cd:Integer format="ascii">
+                                    <cd:Description>Maximun pressure defining the vector of pressures for which calibration constants and function are to be computed.</cd:Description>
+                                    <cd:Unit>hPa</cd:Unit>
+                                    <cd:NativeType>uint32</cd:NativeType>
+                                  </cd:Integer>
+                                </cd:Type>
+                              </cd:Field>
+                              <cd:Field name="Pcal_Stp">
+                                <cd:Type namexml="Pcal_Stp">
+                                  <cd:Attribute name="unit"/>
+                                  <cd:Integer format="ascii">
+                                    <cd:Description>Oressure step defining the vector of pressures for which calibration constants and function are to be computed.</cd:Description>
+                                    <cd:Unit>hPa</cd:Unit>
+                                    <cd:NativeType>uint32</cd:NativeType>
+                                  </cd:Integer>
+                                </cd:Type>
+                              </cd:Field>
+                            </cd:Record>
+                          </cd:Field>
+                          <cd:Field name="Matchup">
+                            <cd:Record namexml="Matchup">
+                              <cd:Field name="Range_Max">
+                                <cd:Type namexml="Range_Max">
+                                  <cd:Attribute name="unit"/>
+                                  <cd:Integer format="ascii">
+                                    <cd:Description>Maximum distance tolerated between a L1B and an AUX_MET profile.</cd:Description>
+                                    <cd:Unit>km</cd:Unit>
+                                    <cd:NativeType>uint16</cd:NativeType>
+                                  </cd:Integer>
+                                </cd:Type>
+                              </cd:Field>
+                              <cd:Field name="Time_Max">
+                                <cd:Type namexml="Time_Max">
+                                  <cd:Attribute name="unit"/>
+                                  <cd:Integer format="ascii">
+                                    <cd:Description>Maximum time difference tolerated between a L1B and an AUX_MET profile.</cd:Description>
+                                    <cd:Unit>s</cd:Unit>
+                                    <cd:NativeType>uint32</cd:NativeType>
+                                  </cd:Integer>
+                                </cd:Type>
+                              </cd:Field>
+                            </cd:Record>
+                          </cd:Field>
+                          <cd:Field name="Thresholds">
+                            <cd:Record namexml="Thresholds">
+                              <cd:Field name="Min_Freq_Steps_Valid">
+                                <cd:Type namexml="Min_Freq_Steps_Valid">
+                                  <cd:Integer format="ascii">
+                                    <cd:Description>Minimum number of valid frequency steps required for the completion of the AUX_CAL generation</cd:Description>
+                                    <cd:NativeType>uint16</cd:NativeType>
+                                  </cd:Integer>
+                                </cd:Type>
+                              </cd:Field>
+                              <cd:Field name="Z_min">
+                                <cd:Type namexml="Z_min">
+                                  <cd:Attribute name="unit"/>
+                                  <cd:Integer format="ascii">
+                                    <cd:Description>Bottom altitude of the range considered for the estimation of Kray and Kmie.</cd:Description>
+                                    <cd:Unit>m</cd:Unit>
+                                    <cd:NativeType>uint32</cd:NativeType>
+                                  </cd:Integer>
+                                </cd:Type>
+                              </cd:Field>
+                              <cd:Field name="Z_max">
+                                <cd:Type namexml="Z_max">
+                                  <cd:Attribute name="unit"/>
+                                  <cd:Integer format="ascii">
+                                    <cd:Description>Top altitude of the range considered for the estimation of Kray and Kmie.</cd:Description>
+                                    <cd:Unit>m</cd:Unit>
+                                    <cd:NativeType>uint32</cd:NativeType>
+                                  </cd:Integer>
+                                </cd:Type>
+                              </cd:Field>
+                              <cd:Field name="Min_Signal_Level">
+                                <cd:Type namexml="Min_Signal_Level">
+                                  <cd:Integer format="ascii">
+                                    <cd:Description>Minimum value of the normalized useful signal accumulated in selected height-bins for Kray and Kmie estimates</cd:Description>
+                                    <cd:NativeType>uint32</cd:NativeType>
+                                  </cd:Integer>
+                                </cd:Type>
+                              </cd:Field>
+                              <cd:Field name="Max_Mie_Scat">
+                                <cd:Type namexml="Max_Mie_Scat">
+                                  <cd:Float format="ascii">
+                                    <cd:Description>Maximum value of the scattering ratio allowed for a height bin to be included in the computation of Kray and Kmie.</cd:Description>
+                                    <cd:NativeType>double</cd:NativeType>
+                                  </cd:Float>
+                                </cd:Type>
+                              </cd:Field>
+                            </cd:Record>
+                          </cd:Field>
+                        </cd:Record>
+                        <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                      </cd:Array>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+              </cd:Record>
+            </cd:Field>
+          </cd:Record>
+        </cd:Field>
+      </cd:Record>
+    </cd:Field>
+  </cd:Record>
+</cd:ProductDefinition>

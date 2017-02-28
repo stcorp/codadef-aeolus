@@ -1,0 +1,611 @@
+<?xml version="1.0"?>
+<cd:Record name="Auxiliary_Calibration_DCC_03_05" format="xml" namexml="Auxiliary_Calibration_DCC" last-modified="2010-08-26" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+  <cd:Description>Auxiliary Calibration DCC</cd:Description>
+  <cd:Field name="List_of_Data_Set_Records">
+    <cd:Record namexml="List_of_Data_Set_Records">
+      <cd:Description>List of Data Set Records</cd:Description>
+      <cd:Attribute name="count">
+      </cd:Attribute>
+      <cd:Field name="Data_Set_Record">
+        <cd:Array>
+          <cd:Dimension/>
+          <cd:Record namexml="Data_Set_Record">
+            <cd:Description>Data Set Record</cd:Description>
+            <cd:Field name="First_Start_of_Observation_Time">
+              <cd:Type namexml="First_Start_of_Observation_Time">
+                <cd:Time format="ascii" timeformat="ascii_ccsds_datetime_ymd1_with_ref">
+                  <cd:Description>Start of observation time of the first BRC</cd:Description>
+                  <cd:Mapping string="UTC=0000-00-00T00:00:00" value="-inf"/>
+                  <cd:Mapping string="UTC=9999-99-99T99:99:99" value="+inf"/>
+                  <cd:Mapping string="" value="nan"/>
+                </cd:Time>
+              </cd:Type>
+            </cd:Field>
+            <cd:Field name="Last_Start_of_Observation_Time">
+              <cd:Type namexml="Last_Start_of_Observation_Time">
+                <cd:Time format="ascii" timeformat="ascii_ccsds_datetime_ymd1_with_ref">
+                  <cd:Description>Start of observation time of the last BRC</cd:Description>
+                  <cd:Mapping string="UTC=0000-00-00T00:00:00" value="-inf"/>
+                  <cd:Mapping string="UTC=9999-99-99T99:99:99" value="+inf"/>
+                  <cd:Mapping string="" value="nan"/>
+                </cd:Time>
+              </cd:Type>
+            </cd:Field>
+            <cd:Field name="Mie_Dark_Current_Calibration_Result">
+              <cd:Record namexml="Mie_Dark_Current_Calibration_Result">
+                <cd:Description>Mie Dark Current Calibration Result</cd:Description>
+                <cd:Field name="Mean_Measurement_Dark_Signal">
+                  <cd:Type namexml="Mean_Measurement_Dark_Signal">
+                    <cd:Attribute name="unit">
+                      <cd:Optional/>
+                      <cd:FixedValue>AU</cd:FixedValue>
+                    </cd:Attribute>
+                    <cd:Float format="ascii">
+                      <cd:Description>Mean measurement dark signal over ACCD useful zone</cd:Description>
+                      <cd:Unit>AU</cd:Unit>
+                      <cd:NativeType>double</cd:NativeType>
+                    </cd:Float>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="Mean_Reference_Pulse_Dark_Signal">
+                  <cd:Type namexml="Mean_Reference_Pulse_Dark_Signal">
+                    <cd:Attribute name="unit">
+                      <cd:Optional/>
+                      <cd:FixedValue>AU</cd:FixedValue>
+                    </cd:Attribute>
+                    <cd:Float format="ascii">
+                      <cd:Description>Mean reference pulse dark signal over ACCD useful zone</cd:Description>
+                      <cd:Unit>AU</cd:Unit>
+                      <cd:NativeType>double</cd:NativeType>
+                    </cd:Float>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="Dark_Signal_Non_Uniformity">
+                  <cd:Type namexml="Dark_Signal_Non_Uniformity">
+                    <cd:Attribute name="unit">
+                      <cd:Optional/>
+                      <cd:FixedValue>AU</cd:FixedValue>
+                    </cd:Attribute>
+                    <cd:Float format="ascii">
+                      <cd:Description>Dark signal non uniformity standard deviation</cd:Description>
+                      <cd:Unit>AU</cd:Unit>
+                      <cd:NativeType>double</cd:NativeType>
+                    </cd:Float>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="Mean_Measurement_Noise">
+                  <cd:Type namexml="Mean_Measurement_Noise">
+                    <cd:Attribute name="unit">
+                      <cd:Optional/>
+                      <cd:FixedValue>AU</cd:FixedValue>
+                    </cd:Attribute>
+                    <cd:Float format="ascii">
+                      <cd:Description>Mean measurement noise over ACCD useful zone</cd:Description>
+                      <cd:Unit>AU</cd:Unit>
+                      <cd:NativeType>double</cd:NativeType>
+                    </cd:Float>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="Mean_Reference_Pulse_Noise">
+                  <cd:Type namexml="Mean_Reference_Pulse_Noise">
+                    <cd:Attribute name="unit">
+                      <cd:Optional/>
+                      <cd:FixedValue>AU</cd:FixedValue>
+                    </cd:Attribute>
+                    <cd:Float format="ascii">
+                      <cd:Description>Mean reference pulse noise over ACCD useful zone</cd:Description>
+                      <cd:Unit>AU</cd:Unit>
+                      <cd:NativeType>double</cd:NativeType>
+                    </cd:Float>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="List_of_Measurement_Dark_Signals">
+                  <cd:Record namexml="List_of_Measurement_Dark_Signals">
+                    <cd:Description>Map (Num_Measurement_Map_Height_Bins * Num_Measurement_Map_Pixels) of measurement pixel dark signals. Element (i,j) at height bin i, and pixel index j, is at Num_Measurement_Map_Pixels*(i-1) + j position in the list</cd:Description>
+                    <cd:Attribute name="count">
+                    </cd:Attribute>
+                    <cd:Field name="Measurement_Dark_Signal">
+                      <cd:Array>
+                        <cd:Dimension/>
+                        <cd:Type namexml="Measurement_Dark_Signal">
+                          <cd:Attribute name="unit">
+                            <cd:Optional/>
+                            <cd:FixedValue>AU</cd:FixedValue>
+                          </cd:Attribute>
+                          <cd:Float format="ascii">
+                            <cd:Description>Measurement pixel dark signal averaged over observations</cd:Description>
+                            <cd:Unit>AU</cd:Unit>
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                        <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                      </cd:Array>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+                <cd:Field name="List_of_Reference_Pulse_Dark_Signals">
+                  <cd:Record namexml="List_of_Reference_Pulse_Dark_Signals">
+                    <cd:Description>List of reference pulse pixel dark signals</cd:Description>
+                    <cd:Attribute name="count">
+                    </cd:Attribute>
+                    <cd:Field name="Reference_Pulse_Dark_Signal">
+                      <cd:Array>
+                        <cd:Dimension/>
+                        <cd:Type namexml="Reference_Pulse_Dark_Signal">
+                          <cd:Attribute name="unit">
+                            <cd:Optional/>
+                            <cd:FixedValue>AU</cd:FixedValue>
+                          </cd:Attribute>
+                          <cd:Float format="ascii">
+                            <cd:Description>Reference pulse pixel dark signal averaged over observations</cd:Description>
+                            <cd:Unit>AU</cd:Unit>
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                        <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                      </cd:Array>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+                <cd:Field name="List_of_Measurement_Noises">
+                  <cd:Record namexml="List_of_Measurement_Noises">
+                    <cd:Description>Map (Num_Measurement_Map_Height_Bins * Num_Measurement_Map_Pixels) of measurement pixel noise. Element (i,j) at height bin i, and pixel index j, is at Num_Measurement_Map_Pixels*(i-1) + j position in the list</cd:Description>
+                    <cd:Attribute name="count">
+                    </cd:Attribute>
+                    <cd:Field name="Measurement_Noise">
+                      <cd:Array>
+                        <cd:Dimension/>
+                        <cd:Type namexml="Measurement_Noise">
+                          <cd:Attribute name="unit">
+                            <cd:Optional/>
+                            <cd:FixedValue>AU</cd:FixedValue>
+                          </cd:Attribute>
+                          <cd:Float format="ascii">
+                            <cd:Description>Measurement pixel noise averaged over observations</cd:Description>
+                            <cd:Unit>AU</cd:Unit>
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                        <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                      </cd:Array>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+                <cd:Field name="List_of_Reference_Pulse_Noises">
+                  <cd:Record namexml="List_of_Reference_Pulse_Noises">
+                    <cd:Description>List of reference pulse pixel noise</cd:Description>
+                    <cd:Attribute name="count">
+                    </cd:Attribute>
+                    <cd:Field name="Reference_Pulse_Noise">
+                      <cd:Array>
+                        <cd:Dimension/>
+                        <cd:Type namexml="Reference_Pulse_Noise">
+                          <cd:Attribute name="unit">
+                            <cd:Optional/>
+                            <cd:FixedValue>AU</cd:FixedValue>
+                          </cd:Attribute>
+                          <cd:Float format="ascii">
+                            <cd:Description>Reference pulse pixel noise averaged over observations</cd:Description>
+                            <cd:Unit>AU</cd:Unit>
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                        <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                      </cd:Array>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+                <cd:Field name="List_of_ACCD_Die_Temperatures">
+                  <cd:Record namexml="List_of_ACCD_Die_Temperatures">
+                    <cd:Description>List of ACCD die temperature during the acquisition</cd:Description>
+                    <cd:Attribute name="count">
+                    </cd:Attribute>
+                    <cd:Field name="ACCD_Die_Temperature">
+                      <cd:Array>
+                        <cd:Dimension/>
+                        <cd:Type namexml="ACCD_Die_Temperature">
+                          <cd:Attribute name="unit">
+                            <cd:Optional/>
+                            <cd:FixedValue>C</cd:FixedValue>
+                          </cd:Attribute>
+                          <cd:Float format="ascii">
+                            <cd:Description>ACCD die temperature average over a BRC</cd:Description>
+                            <cd:Unit>degC</cd:Unit>
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                        <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                      </cd:Array>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+                <cd:Field name="List_of_Mean_Offset_Measurement_Observations">
+                  <cd:Record namexml="List_of_Mean_Offset_Measurement_Observations">
+                    <cd:Description>Average offset per observation. Map (Num_Measurement_Map_Height_Bins * Num_Observation_Map) of average height bin offsets. Element (i,m) at height bin i, and observation index m, is at Num_Observation_Map *(i-1) + m position in the list.</cd:Description>
+                    <cd:Attribute name="count">
+                    </cd:Attribute>
+                    <cd:Field name="Mean_Offset_Measurement_Observation">
+                      <cd:Array>
+                        <cd:Dimension/>
+                        <cd:Type namexml="Mean_Offset_Measurement_Observation">
+                          <cd:Attribute name="unit">
+                            <cd:Optional/>
+                            <cd:FixedValue>AU</cd:FixedValue>
+                          </cd:Attribute>
+                          <cd:Float format="ascii">
+                            <cd:Description>Average measurement offset per observation</cd:Description>
+                            <cd:Unit>AU</cd:Unit>
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                        <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                      </cd:Array>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+                <cd:Field name="List_of_Mean_Offset_Reference_Pulse_Observations">
+                  <cd:Record namexml="List_of_Mean_Offset_Reference_Pulse_Observations">
+                    <cd:Description>Average of bin offsets for each observation</cd:Description>
+                    <cd:Attribute name="count">
+                    </cd:Attribute>
+                    <cd:Field name="Mean_Offset_Reference_Pulse_Observation">
+                      <cd:Array>
+                        <cd:Dimension/>
+                        <cd:Type namexml="Mean_Offset_Reference_Pulse_Observation">
+                          <cd:Attribute name="unit">
+                            <cd:Optional/>
+                            <cd:FixedValue>AU</cd:FixedValue>
+                          </cd:Attribute>
+                          <cd:Float format="ascii">
+                            <cd:Description>Average reference pulse offset per observation</cd:Description>
+                            <cd:Unit>AU</cd:Unit>
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                        <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                      </cd:Array>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+                <cd:Field name="List_of_Mean_Offset_Measurements">
+                  <cd:Record namexml="List_of_Mean_Offset_Measurements">
+                    <cd:Description>Average of each bin offset over the entire calibration period</cd:Description>
+                    <cd:Attribute name="count">
+                    </cd:Attribute>
+                    <cd:Field name="Mean_Offset_Measurement">
+                      <cd:Array>
+                        <cd:Dimension/>
+                        <cd:Type namexml="Mean_Offset_Measurement">
+                          <cd:Attribute name="unit">
+                            <cd:Optional/>
+                            <cd:FixedValue>AU</cd:FixedValue>
+                          </cd:Attribute>
+                          <cd:Float format="ascii">
+                            <cd:Description>Average measurement offset over all observations</cd:Description>
+                            <cd:Unit>AU</cd:Unit>
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                        <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                      </cd:Array>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+                <cd:Field name="Mean_Offset_Reference_Pulse">
+                  <cd:Type namexml="Mean_Offset_Reference_Pulse">
+                    <cd:Attribute name="unit">
+                      <cd:Optional/>
+                      <cd:FixedValue>AU</cd:FixedValue>
+                    </cd:Attribute>
+                    <cd:Float format="ascii">
+                      <cd:Description>Average offset over the entire calibration interval.</cd:Description>
+                      <cd:Unit>AU</cd:Unit>
+                      <cd:NativeType>double</cd:NativeType>
+                    </cd:Float>
+                  </cd:Type>
+                </cd:Field>
+              </cd:Record>
+            </cd:Field>
+            <cd:Field name="Rayleigh_Dark_Current_Calibration_Result">
+              <cd:Record namexml="Rayleigh_Dark_Current_Calibration_Result">
+                <cd:Description>Rayleigh Dark Current Calibration Result</cd:Description>
+                <cd:Field name="Mean_Measurement_Dark_Signal">
+                  <cd:Type namexml="Mean_Measurement_Dark_Signal">
+                    <cd:Attribute name="unit">
+                      <cd:Optional/>
+                      <cd:FixedValue>AU</cd:FixedValue>
+                    </cd:Attribute>
+                    <cd:Float format="ascii">
+                      <cd:Description>Mean measurement dark signal over ACCD useful zone</cd:Description>
+                      <cd:Unit>AU</cd:Unit>
+                      <cd:NativeType>double</cd:NativeType>
+                    </cd:Float>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="Mean_Reference_Pulse_Dark_Signal">
+                  <cd:Type namexml="Mean_Reference_Pulse_Dark_Signal">
+                    <cd:Attribute name="unit">
+                      <cd:Optional/>
+                      <cd:FixedValue>AU</cd:FixedValue>
+                    </cd:Attribute>
+                    <cd:Float format="ascii">
+                      <cd:Description>Mean reference pulse dark signal over ACCD useful zone</cd:Description>
+                      <cd:Unit>AU</cd:Unit>
+                      <cd:NativeType>double</cd:NativeType>
+                    </cd:Float>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="Dark_Signal_Non_Uniformity">
+                  <cd:Type namexml="Dark_Signal_Non_Uniformity">
+                    <cd:Attribute name="unit">
+                      <cd:Optional/>
+                      <cd:FixedValue>AU</cd:FixedValue>
+                    </cd:Attribute>
+                    <cd:Float format="ascii">
+                      <cd:Description>Dark signal non uniformity standard deviation</cd:Description>
+                      <cd:Unit>AU</cd:Unit>
+                      <cd:NativeType>double</cd:NativeType>
+                    </cd:Float>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="Mean_Measurement_Noise">
+                  <cd:Type namexml="Mean_Measurement_Noise">
+                    <cd:Attribute name="unit">
+                      <cd:Optional/>
+                      <cd:FixedValue>AU</cd:FixedValue>
+                    </cd:Attribute>
+                    <cd:Float format="ascii">
+                      <cd:Description>Mean measurement noise over ACCD useful zone</cd:Description>
+                      <cd:Unit>AU</cd:Unit>
+                      <cd:NativeType>double</cd:NativeType>
+                    </cd:Float>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="Mean_Reference_Pulse_Noise">
+                  <cd:Type namexml="Mean_Reference_Pulse_Noise">
+                    <cd:Attribute name="unit">
+                      <cd:Optional/>
+                      <cd:FixedValue>AU</cd:FixedValue>
+                    </cd:Attribute>
+                    <cd:Float format="ascii">
+                      <cd:Description>Mean reference pulse noise over ACCD useful zone</cd:Description>
+                      <cd:Unit>AU</cd:Unit>
+                      <cd:NativeType>double</cd:NativeType>
+                    </cd:Float>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="List_of_Measurement_Dark_Signals">
+                  <cd:Record namexml="List_of_Measurement_Dark_Signals">
+                    <cd:Description>Map (Num_Measurement_Map_Height_Bins * Num_Measurement_Map_Pixels) of measurement pixel dark signals. Element (i,j) at height bin i, and pixel index j, is at Num_Measurement_Map_Pixels*(i-1) + j position in the list</cd:Description>
+                    <cd:Attribute name="count">
+                    </cd:Attribute>
+                    <cd:Field name="Measurement_Dark_Signal">
+                      <cd:Array>
+                        <cd:Dimension/>
+                        <cd:Type namexml="Measurement_Dark_Signal">
+                          <cd:Attribute name="unit">
+                            <cd:Optional/>
+                            <cd:FixedValue>AU</cd:FixedValue>
+                          </cd:Attribute>
+                          <cd:Float format="ascii">
+                            <cd:Description>Measurement pixel dark signal averaged over observations</cd:Description>
+                            <cd:Unit>AU</cd:Unit>
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                        <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                      </cd:Array>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+                <cd:Field name="List_of_Reference_Pulse_Dark_Signals">
+                  <cd:Record namexml="List_of_Reference_Pulse_Dark_Signals">
+                    <cd:Description>List of reference pulse pixel dark signals</cd:Description>
+                    <cd:Attribute name="count">
+                    </cd:Attribute>
+                    <cd:Field name="Reference_Pulse_Dark_Signal">
+                      <cd:Array>
+                        <cd:Dimension/>
+                        <cd:Type namexml="Reference_Pulse_Dark_Signal">
+                          <cd:Attribute name="unit">
+                            <cd:Optional/>
+                            <cd:FixedValue>AU</cd:FixedValue>
+                          </cd:Attribute>
+                          <cd:Float format="ascii">
+                            <cd:Description>Reference pulse pixel dark signal averaged over observations</cd:Description>
+                            <cd:Unit>AU</cd:Unit>
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                        <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                      </cd:Array>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+                <cd:Field name="List_of_Measurement_Noises">
+                  <cd:Record namexml="List_of_Measurement_Noises">
+                    <cd:Description>Map (Num_Measurement_Map_Height_Bins * Num_Measurement_Map_Pixels) of measurement pixel noise. Element (i,j) at height bin i, and pixel index j, is at Num_Measurement_Map_Pixels*(i-1) + j position in the list</cd:Description>
+                    <cd:Attribute name="count">
+                    </cd:Attribute>
+                    <cd:Field name="Measurement_Noise">
+                      <cd:Array>
+                        <cd:Dimension/>
+                        <cd:Type namexml="Measurement_Noise">
+                          <cd:Attribute name="unit">
+                            <cd:Optional/>
+                            <cd:FixedValue>AU</cd:FixedValue>
+                          </cd:Attribute>
+                          <cd:Float format="ascii">
+                            <cd:Description>Measurement pixel noise averaged over observations</cd:Description>
+                            <cd:Unit>AU</cd:Unit>
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                        <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                      </cd:Array>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+                <cd:Field name="List_of_Reference_Pulse_Noises">
+                  <cd:Record namexml="List_of_Reference_Pulse_Noises">
+                    <cd:Description>List of reference pulse pixel noise</cd:Description>
+                    <cd:Attribute name="count">
+                    </cd:Attribute>
+                    <cd:Field name="Reference_Pulse_Noise">
+                      <cd:Array>
+                        <cd:Dimension/>
+                        <cd:Type namexml="Reference_Pulse_Noise">
+                          <cd:Attribute name="unit">
+                            <cd:Optional/>
+                            <cd:FixedValue>AU</cd:FixedValue>
+                          </cd:Attribute>
+                          <cd:Float format="ascii">
+                            <cd:Description>Reference pulse pixel noise averaged over observations</cd:Description>
+                            <cd:Unit>AU</cd:Unit>
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                        <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                      </cd:Array>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+                <cd:Field name="List_of_ACCD_Die_Temperatures">
+                  <cd:Record namexml="List_of_ACCD_Die_Temperatures">
+                    <cd:Description>List of ACCD die temperature during the acquisition</cd:Description>
+                    <cd:Attribute name="count">
+                    </cd:Attribute>
+                    <cd:Field name="ACCD_Die_Temperature">
+                      <cd:Array>
+                        <cd:Dimension/>
+                        <cd:Type namexml="ACCD_Die_Temperature">
+                          <cd:Attribute name="unit">
+                            <cd:Optional/>
+                            <cd:FixedValue>C</cd:FixedValue>
+                          </cd:Attribute>
+                          <cd:Float format="ascii">
+                            <cd:Description>ACCD die temperature average over a BRC</cd:Description>
+                            <cd:Unit>degC</cd:Unit>
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                        <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                      </cd:Array>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+                <cd:Field name="List_of_Mean_Offset_Measurement_Observations">
+                  <cd:Record namexml="List_of_Mean_Offset_Measurement_Observations">
+                    <cd:Description>Average offset per observation. Map (Num_Measurement_Map_Height_Bins * Num_Observation_Map) of average height bin offsets. Element (i,m) at height bin i, and observation index m, is at Num_Observation_Map *(i-1) + m position in the list.</cd:Description>
+                    <cd:Attribute name="count">
+                    </cd:Attribute>
+                    <cd:Field name="Mean_Offset_Measurement_Observation">
+                      <cd:Array>
+                        <cd:Dimension/>
+                        <cd:Type namexml="Mean_Offset_Measurement_Observation">
+                          <cd:Attribute name="unit">
+                            <cd:Optional/>
+                            <cd:FixedValue>AU</cd:FixedValue>
+                          </cd:Attribute>
+                          <cd:Float format="ascii">
+                            <cd:Description>Average measurement offset per observation</cd:Description>
+                            <cd:Unit>AU</cd:Unit>
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                        <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                      </cd:Array>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+                <cd:Field name="List_of_Mean_Offset_Reference_Pulse_Observations">
+                  <cd:Record namexml="List_of_Mean_Offset_Reference_Pulse_Observations">
+                    <cd:Description>Average of bin offsets for each observation</cd:Description>
+                    <cd:Attribute name="count">
+                    </cd:Attribute>
+                    <cd:Field name="Mean_Offset_Reference_Pulse_Observation">
+                      <cd:Array>
+                        <cd:Dimension/>
+                        <cd:Type namexml="Mean_Offset_Reference_Pulse_Observation">
+                          <cd:Attribute name="unit">
+                            <cd:Optional/>
+                            <cd:FixedValue>AU</cd:FixedValue>
+                          </cd:Attribute>
+                          <cd:Float format="ascii">
+                            <cd:Description>Average reference pulse offset per observation</cd:Description>
+                            <cd:Unit>AU</cd:Unit>
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                        <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                      </cd:Array>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+                <cd:Field name="List_of_Mean_Offset_Measurements">
+                  <cd:Record namexml="List_of_Mean_Offset_Measurements">
+                    <cd:Description>Average of each bin offset over the entire calibration period</cd:Description>
+                    <cd:Attribute name="count">
+                    </cd:Attribute>
+                    <cd:Field name="Mean_Offset_Measurement">
+                      <cd:Array>
+                        <cd:Dimension/>
+                        <cd:Type namexml="Mean_Offset_Measurement">
+                          <cd:Attribute name="unit">
+                            <cd:Optional/>
+                            <cd:FixedValue>AU</cd:FixedValue>
+                          </cd:Attribute>
+                          <cd:Float format="ascii">
+                            <cd:Description>Average measurement offset over all observations</cd:Description>
+                            <cd:Unit>AU</cd:Unit>
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                        <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                      </cd:Array>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+                <cd:Field name="Mean_Offset_Reference_Pulse">
+                  <cd:Type namexml="Mean_Offset_Reference_Pulse">
+                    <cd:Attribute name="unit">
+                      <cd:Optional/>
+                      <cd:FixedValue>AU</cd:FixedValue>
+                    </cd:Attribute>
+                    <cd:Float format="ascii">
+                      <cd:Description>Average offset over the entire calibration interval.</cd:Description>
+                      <cd:Unit>AU</cd:Unit>
+                      <cd:NativeType>double</cd:NativeType>
+                    </cd:Float>
+                  </cd:Type>
+                </cd:Field>
+              </cd:Record>
+            </cd:Field>
+            <cd:Field name="Num_Measurement_Map_Height_Bins">
+              <cd:Type namexml="Num_Measurement_Map_Height_Bins">
+                <cd:Integer format="ascii">
+                  <cd:Description>Number of height bins (rows) in the measurement map list</cd:Description>
+                  <cd:NativeType>int16</cd:NativeType>
+                </cd:Integer>
+              </cd:Type>
+            </cd:Field>
+            <cd:Field name="Num_Measurement_Map_Pixels">
+              <cd:Type namexml="Num_Measurement_Map_Pixels">
+                <cd:Integer format="ascii">
+                  <cd:Description>Number of pixels (columns) in the measurement map list</cd:Description>
+                  <cd:NativeType>int16</cd:NativeType>
+                </cd:Integer>
+              </cd:Type>
+            </cd:Field>
+            <cd:Field name="Operational_Mode">
+              <cd:Text namexml="Operational_Mode">
+                <cd:Description>Value to indicate if the laser was on, off or a mix for all the observations within DCC mode</cd:Description>
+              </cd:Text>
+            </cd:Field>
+          </cd:Record>
+          <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+        </cd:Array>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+</cd:Record>

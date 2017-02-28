@@ -1,0 +1,275 @@
+<?xml version="1.0"?>
+<cd:ProductDefinition xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" id="AUX_PAR_QC_03_00" format="xml" last-modified="2015-07-13" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+  <cd:Record format="xml">
+    <cd:Field name="Earth_Explorer_File">
+      <cd:Record namexml="Earth_Explorer_File">
+        <cd:Attribute name="schemaversion"/>
+        <cd:Description>Earth Explorer File</cd:Description>
+        <cd:Field name="Earth_Explorer_Header">
+          <cd:Record namexml="Earth_Explorer_Header">
+            <cd:Description>Earth Explorer Header File</cd:Description>
+            <cd:Field name="Fixed_Header">
+              <cd:NamedType id="Fixed_Header"/>
+            </cd:Field>
+            <cd:Field name="Variable_Header">
+              <cd:Record namexml="Variable_Header">
+                <cd:Description>Variable Header Section</cd:Description>
+                <cd:Field name="Max_Error">
+                  <cd:Type namexml="Max_Error">
+                    <cd:Integer format="ascii">
+                      <cd:Description>Limit to the number of Error messages that will be shown in the output</cd:Description>
+                      <cd:NativeType>int32</cd:NativeType>
+                    </cd:Integer>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="Max_Warning">
+                  <cd:Type namexml="Max_Warning">
+                    <cd:Integer format="ascii">
+                      <cd:Description>Limit to the number of Warning messages that will be shown in the output</cd:Description>
+                      <cd:NativeType>int32</cd:NativeType>
+                    </cd:Integer>
+                  </cd:Type>
+                </cd:Field>
+              </cd:Record>
+            </cd:Field>
+            <ct:NamedTest id="FixedValueAUX_PAR_QC" path="Fixed_Header/File_Type"/>
+            <ct:NamedTest id="FileNameCheckEEF" path="Fixed_Header/File_Name"/>
+            <ct:NamedTest id="FileNameMatchValidityStart" path="Fixed_Header/File_Name"/>
+            <ct:NamedTest id="FileNameMatchValidityStop" path="Fixed_Header/File_Name"/>
+            <ct:NamedTest id="FileNameMatchFileVersionAt51" path="Fixed_Header/File_Name"/>
+          </cd:Record>
+        </cd:Field>
+        <cd:Field name="Data_Block">
+          <cd:Record namexml="Data_Block">
+            <cd:Attribute name="type">
+              <cd:Optional/>
+              <cd:FixedValue>xml</cd:FixedValue>
+            </cd:Attribute>
+            <cd:Field name="List_of_Named_Tests">
+              <cd:Record namexml="List_of_Named_Tests">
+                <cd:Attribute name="count">
+                </cd:Attribute>
+                <cd:Field name="Named_Test">
+                  <cd:Array>
+                    <cd:Dimension/>
+                    <cd:Record namexml="Named_Test">
+                      <cd:Field name="Name">
+                        <cd:Text namexml="Name">
+                          <cd:Description>Name that uniquely identifies this test</cd:Description>
+                        </cd:Text>
+                      </cd:Field>
+                      <cd:Field name="Description">
+                        <cd:Text namexml="Description">
+                          <cd:Description>Description of this test. The description will be included in the log message when the test fails.</cd:Description>
+                        </cd:Text>
+                      </cd:Field>
+                      <cd:Field name="Criticality">
+                        <cd:Text namexml="Criticality">
+                          <cd:Description>Indicates the severity of failure if this test fails. Valid values are 'Error' and 'Warning'</cd:Description>
+                        </cd:Text>
+                      </cd:Field>
+                      <cd:Field name="Test_Expression">
+                        <cd:Text namexml="Test_Expression">
+                          <cd:Description>Contains an ASCII boolean expression using the CODA expression language. A test succeeds if the expression results in True, and fails if it results in False.</cd:Description>
+                        </cd:Text>
+                      </cd:Field>
+                    </cd:Record>
+                    <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                  </cd:Array>
+                </cd:Field>
+              </cd:Record>
+            </cd:Field>
+            <cd:Field name="List_of_Named_Cross_File_Tests">
+              <cd:Record namexml="List_of_Named_Cross_File_Tests">
+                <cd:Attribute name="count">
+                </cd:Attribute>
+                <cd:Field name="Named_Cross_File_Test">
+                  <cd:Array>
+                    <cd:Dimension/>
+                    <cd:Record namexml="Named_Cross_File_Test">
+                      <cd:Field name="Name">
+                        <cd:Text namexml="Name">
+                          <cd:Description>Name that uniquely identifies this cross file test</cd:Description>
+                        </cd:Text>
+                      </cd:Field>
+                      <cd:Field name="Description">
+                        <cd:Text namexml="Description">
+                          <cd:Description>Description of this test. The description will be included in the log message when the test fails.</cd:Description>
+                        </cd:Text>
+                      </cd:Field>
+                      <cd:Field name="Criticality">
+                        <cd:Text namexml="Criticality">
+                          <cd:Description>Indicates the severity of failure if this test fails. Valid values are 'Error' and 'Warning'</cd:Description>
+                        </cd:Text>
+                      </cd:Field>
+                      <cd:Field name="Value_Expression_Dbl">
+                        <cd:Text namexml="Value_Expression_Dbl">
+                          <cd:Description>Contains an ASCII expression using the CODA expression language. The expression should evaluate in the value for the DBL file that will be compared with the value of the HDR file.</cd:Description>
+                        </cd:Text>
+                      </cd:Field>
+                      <cd:Field name="Value_Expression_Hdr">
+                        <cd:Text namexml="Value_Expression_Hdr">
+                          <cd:Description>Contains an ASCII expression using the CODA expression language. The expression should evaluate in the value for the HDR file that will be compared with the value of the DBL file.</cd:Description>
+                        </cd:Text>
+                      </cd:Field>
+                    </cd:Record>
+                    <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                  </cd:Array>
+                </cd:Field>
+              </cd:Record>
+            </cd:Field>
+            <cd:Field name="List_of_Test_Definitions">
+              <cd:Record namexml="List_of_Test_Definitions">
+                <cd:Attribute name="count">
+                </cd:Attribute>
+                <cd:Field name="Test_Definition">
+                  <cd:Array>
+                    <cd:Dimension/>
+                    <cd:Record namexml="Test_Definition">
+                      <cd:Field name="Product_Type">
+                        <cd:Text namexml="Product_Type">
+                          <cd:Description>Name of product type to which this test definition applies. A combination of product type and product format version (see Format_Version) uniquely identifies the test definition that should be used.</cd:Description>
+                        </cd:Text>
+                      </cd:Field>
+                      <cd:Field name="Format_Version">
+                        <cd:Type namexml="Format_Version">
+                          <cd:Integer format="ascii">
+                            <cd:Description>The product format version number (this number should correspond with the product type version number as used by the CODA software). Together with the Product_Type, this uniquely identifies a product format.</cd:Description>
+                            <cd:NativeType>uint32</cd:NativeType>
+                          </cd:Integer>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="Quality_Reliability_Flag">
+                        <cd:Text namexml="Quality_Reliability_Flag">
+                          <cd:Description>If set to 'True', the Product_Quality field value should be used to control dissemination of the product. If set to 'False', the product should be disseminated regardless of the value of the Product_Quality field.</cd:Description>
+                        </cd:Text>
+                      </cd:Field>
+                      <cd:Field name="List_of_Tests">
+                        <cd:Record namexml="List_of_Tests">
+                          <cd:Attribute name="count"/>
+                          <cd:Field name="Test">
+                            <cd:Array>
+                              <cd:Dimension/>
+                              <cd:Record namexml="Test">
+                                <cd:Field name="Path">
+                                  <cd:Text namexml="Path">
+                                    <cd:Description>Location in product hierarchy where this test should be applied.</cd:Description>
+                                  </cd:Text>
+                                </cd:Field>
+                                <cd:Field name="Name">
+                                  <cd:Text namexml="Name">
+                                    <cd:Description>Name of this test. The name is for convenience and will be used in the test report. It does not need to be unique but it is recommended that it is descriptive and unique in the scope of a the Test_Definition.</cd:Description>
+                                  </cd:Text>
+                                </cd:Field>
+                                <cd:Field name="Description">
+                                  <cd:Text namexml="Description">
+                                    <cd:Description>Description of this test. The description will be included in the log message when the test fails.</cd:Description>
+                                  </cd:Text>
+                                </cd:Field>
+                                <cd:Field name="Criticality">
+                                  <cd:Text namexml="Criticality">
+                                    <cd:Description>Indicates the severity of failure if this test fails. Valid values are 'Error' and 'Warning'</cd:Description>
+                                  </cd:Text>
+                                </cd:Field>
+                                <cd:Field name="Test_Expression">
+                                  <cd:Text namexml="Test_Expression">
+                                    <cd:Description>Contains an ASCII boolean expression using the CODA expression language. A test succeeds if the expression results in True, and fails if it results in False.</cd:Description>
+                                  </cd:Text>
+                                </cd:Field>
+                              </cd:Record>
+                              <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                            </cd:Array>
+                          </cd:Field>
+                        </cd:Record>
+                      </cd:Field>
+                      <cd:Field name="List_of_Named_Test_References">
+                        <cd:Record namexml="List_of_Named_Test_References">
+                          <cd:Attribute name="count"/>
+                          <cd:Field name="Named_Test_Reference">
+                            <cd:Array>
+                              <cd:Dimension/>
+                              <cd:Record namexml="Named_Test_Reference">
+                                <cd:Field name="Path">
+                                  <cd:Text namexml="Path">
+                                    <cd:Description>Location in product hierarchy where this test should be applied.</cd:Description>
+                                  </cd:Text>
+                                </cd:Field>
+                                <cd:Field name="Name">
+                                  <cd:Text namexml="Name">
+                                    <cd:Description>Cross reference to a Named_Test. The value must be a Name of a Named_Test defined in the List_of_Named_Tests.</cd:Description>
+                                  </cd:Text>
+                                </cd:Field>
+                              </cd:Record>
+                              <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                            </cd:Array>
+                          </cd:Field>
+                        </cd:Record>
+                      </cd:Field>
+                      <cd:Field name="List_of_Cross_File_Tests">
+                        <cd:Record namexml="List_of_Cross_File_Tests">
+                          <cd:Attribute name="count"/>
+                          <cd:Field name="Cross_File_Test">
+                            <cd:Array>
+                              <cd:Dimension/>
+                              <cd:Record namexml="Cross_File_Test">
+                                <cd:Field name="Name">
+                                  <cd:Text namexml="Name">
+                                    <cd:Description>Name of this test. The name is for convenience and will be used in the test report. It does not need to be unique but it is recommended that it is descriptive and unique in the scope of a the Test_Definition.</cd:Description>
+                                  </cd:Text>
+                                </cd:Field>
+                                <cd:Field name="Description">
+                                  <cd:Text namexml="Description">
+                                    <cd:Description>Description of this test. The description will be included in the log message when the test fails.</cd:Description>
+                                  </cd:Text>
+                                </cd:Field>
+                                <cd:Field name="Criticality">
+                                  <cd:Text namexml="Criticality">
+                                    <cd:Description>Indicates the severity of failure if this test fails. Valid values are 'Error' and 'Warning'</cd:Description>
+                                  </cd:Text>
+                                </cd:Field>
+                                <cd:Field name="Value_Expression_Dbl">
+                                  <cd:Text namexml="Value_Expression_Dbl">
+                                    <cd:Description>Contains an ASCII expression using the CODA expression language. The expression should evaluate in the value for the DBL file that will be compared with the value of the HDR file.</cd:Description>
+                                  </cd:Text>
+                                </cd:Field>
+                                <cd:Field name="Value_Expression_Hdr">
+                                  <cd:Text namexml="Value_Expression_Hdr">
+                                    <cd:Description>Contains an ASCII expression using the CODA expression language. The expression should evaluate in the value for the HDR file that will be compared with the value of the DBL file.</cd:Description>
+                                  </cd:Text>
+                                </cd:Field>
+                              </cd:Record>
+                              <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                            </cd:Array>
+                          </cd:Field>
+                        </cd:Record>
+                      </cd:Field>
+                      <cd:Field name="List_of_Named_Cross_File_Test_References">
+                        <cd:Record namexml="List_of_Named_Cross_File_Test_References">
+                          <cd:Attribute name="count"/>
+                          <cd:Field name="Named_Cross_File_Test_Reference">
+                            <cd:Array>
+                              <cd:Dimension/>
+                              <cd:Record namexml="Named_Cross_File_Test_Reference">
+                                <cd:Field name="Name">
+                                  <cd:Text namexml="Name">
+                                    <cd:Description>Cross reference to a Named_Cross_File_Test. The value must be a Name of a Named_Cross_File_Test defined in the List_of_Named_Cross_File_Tests.</cd:Description>
+                                  </cd:Text>
+                                </cd:Field>
+                              </cd:Record>
+                              <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                            </cd:Array>
+                          </cd:Field>
+                        </cd:Record>
+                      </cd:Field>
+                    </cd:Record>
+                    <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                  </cd:Array>
+                </cd:Field>
+              </cd:Record>
+            </cd:Field>
+          </cd:Record>
+        </cd:Field>
+      </cd:Record>
+    </cd:Field>
+  </cd:Record>
+</cd:ProductDefinition>

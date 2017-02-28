@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="binary" last-modified="2014-08-18" name="Level_1B_Frequency_Step_Data_Statistics_03_05">
+  <cd:Description>Frequency Step Data Statistics</cd:Description>
+  <cd:Field name="num_valid_measurements">
+    <cd:Integer>
+      <cd:Description>Number of measurements in which ground echo bin is found</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="num_measurements_usable">
+    <cd:Integer>
+      <cd:Description>Number of measurements usable. The measurement is usable if the spacecraft attitude is on target; laser transmitter frequency is locked; and Mie measurement is not corrupted</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="num_reference_pulses_usable">
+    <cd:Integer>
+      <cd:Description>Number reference pulses usable. Reference pulse is usable when the laser frequency is locked and the data is not corrupted</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="num_measurement_laser_freq_unlocked">
+    <cd:Integer>
+      <cd:Description>Number of measurements with laser transmitter frequency unlocked status</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="num_reference_pulse_laser_freq_unlocked">
+    <cd:Integer>
+      <cd:Description>Number of reference pulses with laser transmitter frequency unlocked status</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="num_sat_not_on_target_measurements">
+    <cd:Integer>
+      <cd:Description>Number of measurements with satellite not on target status</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="num_corrupt_measurements">
+    <cd:Integer>
+      <cd:Description>Total number of corrupt measurements</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="num_corrupt_reference_pulses">
+    <cd:Integer>
+      <cd:Description>Total number of corrupt reference pulses</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+</cd:Record>

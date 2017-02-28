@@ -1,0 +1,398 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="Level_2C_Assim_PCD_ADSR_01_32" last-modified="2008-07-01" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Field name="n_meas">
+    <cd:Integer>
+      <cd:Description>Number of L1 measurements reported in the L1B product for this BRC. Note this figure may vary from one BRC to the other</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="n_obs_mie_actual">
+    <cd:Integer>
+      <cd:Description>Number of meaningful Mie profiles in this BRC. Note this figure may vary from one BRC to the other but will not exceed M_Mie</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="n_obs_rayleigh_actual">
+    <cd:Integer>
+      <cd:Description>Number of meaningful Rayleigh profiles in this BRC. Note this figure may vary from one BRC to the other but will not exceed M_Rayleigh</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="l2b_input_screening">
+    <cd:Record>
+      <cd:Description>Structure describing any problems found during reading of the L2B data</cd:Description>
+      <cd:Field name="l2b_obs_screening">
+        <cd:Integer>
+          <cd:Description>A code describing a problem which prevent using this whole BRC</cd:Description>
+          <cd:BitSize>8</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="l2b_obs_screening_flags">
+        <cd:Array>
+          <cd:Dimension>40</cd:Dimension>
+          <cd:Integer>
+            <cd:Description>5 bytes each holding up to 8 flags, so in total 40 flags to store individual problems detected in the L2B_Obs screening</cd:Description>
+            <cd:BitSize>1</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Array>
+      </cd:Field>
+      <cd:Field name="spare_1">
+        <cd:Raw>
+          <cd:Description>Spare</cd:Description>
+          <cd:BitSize>160</cd:BitSize>
+        </cd:Raw>
+        <cd:Hidden/>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="l2c_mie_quality_param">
+    <cd:Array>
+      <cd:Dimension><![CDATA[int(/sph/m_mie)]]></cd:Dimension>
+      <cd:Record>
+        <cd:Description>Structure containing all the L2C-derived quality information related to the M_Mie HLOS wind profiles associated with the current observation</cd:Description>
+        <cd:Field name="obs_type">
+          <cd:Integer>
+            <cd:Description>Defines whether this observation was classified as cloud, no cloud</cd:Description>
+            <cd:BitSize>8</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="spare_1">
+          <cd:Raw>
+            <cd:Description>Reservered for a 36-character Obs_Type String</cd:Description>
+            <cd:BitSize>288</cd:BitSize>
+          </cd:Raw>
+          <cd:Hidden/>
+        </cd:Field>
+        <cd:Field name="l2c_mie_height_bin_quality_param">
+          <cd:Array>
+            <cd:Dimension>24</cd:Dimension>
+            <cd:Record>
+              <cd:Description>Structure containing 24 sub-structures with all the information pertaining to the 24 possible height bins of the profile</cd:Description>
+              <cd:Field name="l2b_mie_obs_screening">
+                <cd:Record>
+                  <cd:Description>Structure describing QC parameters resulting from screening of L2B Mie HLOS observations</cd:Description>
+                  <cd:Field name="l2b_mie_obs_qc">
+                    <cd:Integer>
+                      <cd:Description>A code describing a problem which prevents use of this Mie observation</cd:Description>
+                      <cd:BitSize>8</cd:BitSize>
+                      <cd:NativeType>uint8</cd:NativeType>
+                    </cd:Integer>
+                  </cd:Field>
+                  <cd:Field name="l2b_mie_obs_qc_flags">
+                    <cd:Array>
+                      <cd:Dimension>8</cd:Dimension>
+                      <cd:Integer>
+                        <cd:Description>Flags describing problems which prevent using this Mie observation</cd:Description>
+                        <cd:BitSize>1</cd:BitSize>
+                        <cd:NativeType>uint8</cd:NativeType>
+                      </cd:Integer>
+                    </cd:Array>
+                  </cd:Field>
+                  <cd:Field name="spare_1">
+                    <cd:Raw>
+                      <cd:Description>Spare</cd:Description>
+                      <cd:BitSize>128</cd:BitSize>
+                    </cd:Raw>
+                    <cd:Hidden/>
+                  </cd:Field>
+                </cd:Record>
+              </cd:Field>
+              <cd:Field name="assimilation_model_pcd">
+                <cd:Record>
+                  <cd:Description>Structure describing product confidence for assimilation model parameters associated with the current observation</cd:Description>
+                  <cd:Field name="hlos_observation_errors">
+                    <cd:Record>
+                      <cd:Description>Structure containing error estimates assumed during L2C processing, for the current L2B HLOS observation</cd:Description>
+                      <cd:Field name="persistence_error">
+                        <cd:Integer>
+                          <cd:Description>Persistence error</cd:Description>
+                          <cd:Unit>cm/s</cd:Unit>
+                          <cd:BitSize>16</cd:BitSize>
+                          <cd:NativeType>uint16</cd:NativeType>
+                        </cd:Integer>
+                      </cd:Field>
+                      <cd:Field name="representativity_error">
+                        <cd:Integer>
+                          <cd:Description>Representativity error</cd:Description>
+                          <cd:Unit>cm/s</cd:Unit>
+                          <cd:BitSize>16</cd:BitSize>
+                          <cd:NativeType>uint16</cd:NativeType>
+                        </cd:Integer>
+                      </cd:Field>
+                      <cd:Field name="final_error">
+                        <cd:Integer>
+                          <cd:Description>Final error</cd:Description>
+                          <cd:Unit>cm/s</cd:Unit>
+                          <cd:BitSize>16</cd:BitSize>
+                          <cd:NativeType>uint16</cd:NativeType>
+                        </cd:Integer>
+                      </cd:Field>
+                      <cd:Field name="estimated_obs_bias">
+                        <cd:Integer>
+                          <cd:Description>Estimated bias for the current L2B HLOS observation</cd:Description>
+                          <cd:Unit>cm/s</cd:Unit>
+                          <cd:BitSize>16</cd:BitSize>
+                          <cd:NativeType>int16</cd:NativeType>
+                        </cd:Integer>
+                      </cd:Field>
+                      <cd:Field name="spare_1">
+                        <cd:Raw>
+                          <cd:Description>Spare</cd:Description>
+                          <cd:BitSize>160</cd:BitSize>
+                        </cd:Raw>
+                        <cd:Hidden/>
+                      </cd:Field>
+                    </cd:Record>
+                  </cd:Field>
+                  <cd:Field name="background_hlos">
+                    <cd:Integer>
+                      <cd:Description>HLOS from the assimilation model background field given in cm/s and rounded to the nearest integer</cd:Description>
+                      <cd:Unit>cm/s</cd:Unit>
+                      <cd:BitSize>16</cd:BitSize>
+                      <cd:NativeType>int16</cd:NativeType>
+                    </cd:Integer>
+                  </cd:Field>
+                  <cd:Field name="background_hlos_error">
+                    <cd:Integer>
+                      <cd:Description>Error in cm/s for Background_hlos</cd:Description>
+                      <cd:Unit>cm/s</cd:Unit>
+                      <cd:BitSize>16</cd:BitSize>
+                      <cd:NativeType>uint16</cd:NativeType>
+                    </cd:Integer>
+                  </cd:Field>
+                  <cd:Field name="l2b_hlos_reliability">
+                    <cd:Float>
+                      <cd:Description>An L2C-derived measure of the reliability of the current L2B HLOS observation</cd:Description>
+                      <cd:BitSize>64</cd:BitSize>
+                      <cd:NativeType>double</cd:NativeType>
+                    </cd:Float>
+                  </cd:Field>
+                  <cd:Field name="Analysis_hlos">
+                    <cd:Integer>
+                      <cd:Description>HLOS from the assimilation model analysis field given in cm/s and rounded to the nearest integer</cd:Description>
+                      <cd:Unit>cm/s</cd:Unit>
+                      <cd:BitSize>16</cd:BitSize>
+                      <cd:NativeType>int16</cd:NativeType>
+                    </cd:Integer>
+                  </cd:Field>
+                  <cd:Field name="zonal_wind_background_error">
+                    <cd:Integer>
+                      <cd:Description>Error in cm/s for zonal wind from the assimilation model background</cd:Description>
+                      <cd:Unit>cm/s</cd:Unit>
+                      <cd:BitSize>16</cd:BitSize>
+                      <cd:NativeType>uint16</cd:NativeType>
+                    </cd:Integer>
+                  </cd:Field>
+                  <cd:Field name="meridional_wind_background_error">
+                    <cd:Integer>
+                      <cd:Description>Error in cm/s for meridional wind from the assimilation model background.</cd:Description>
+                      <cd:Unit>cm/s</cd:Unit>
+                      <cd:BitSize>16</cd:BitSize>
+                      <cd:NativeType>uint16</cd:NativeType>
+                    </cd:Integer>
+                  </cd:Field>
+                  <cd:Field name="spare_1">
+                    <cd:Raw>
+                      <cd:Description>Spare</cd:Description>
+                      <cd:BitSize>160</cd:BitSize>
+                    </cd:Raw>
+                    <cd:Hidden/>
+                  </cd:Field>
+                </cd:Record>
+              </cd:Field>
+              <cd:Field name="spare_1">
+                <cd:Raw>
+                  <cd:Description>Spare</cd:Description>
+                  <cd:BitSize>80</cd:BitSize>
+                </cd:Raw>
+                <cd:Hidden/>
+              </cd:Field>
+            </cd:Record>
+          </cd:Array>
+        </cd:Field>
+      </cd:Record>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="l2c_rayleigh_quality_param">
+    <cd:Array>
+      <cd:Dimension><![CDATA[int(/sph/m_rayleigh)]]></cd:Dimension>
+      <cd:Record>
+        <cd:Description>Structure containing all the L2C-derived quality information related to the M_Rayleigh HLOS wind profiles associated with the current observation</cd:Description>
+        <cd:Field name="obs_type">
+          <cd:Integer>
+            <cd:Description>Defines whether this observation was classified as cloud, no cloud</cd:Description>
+            <cd:BitSize>8</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="spare_1">
+          <cd:Raw>
+            <cd:Description>Reservered for a 36-character Obs_Type String</cd:Description>
+            <cd:BitSize>288</cd:BitSize>
+          </cd:Raw>
+          <cd:Hidden/>
+        </cd:Field>
+        <cd:Field name="l2c_rayleigh_height_bin_quality_param">
+          <cd:Array>
+            <cd:Dimension>24</cd:Dimension>
+            <cd:Record>
+              <cd:Description>Structure containing 24 sub-structures with all the information pertaining to the 24 possible height bins of the profile</cd:Description>
+              <cd:Field name="l2b_rayleigh_obs_screening">
+                <cd:Record>
+                  <cd:Description>Structure describing QC parameters resulting from screening of L2B Rayleigh HLOS observations</cd:Description>
+                  <cd:Field name="l2b_rayleigh_obs_qc">
+                    <cd:Integer>
+                      <cd:Description>A code describing a problem which prevents use of this Rayleigh observation</cd:Description>
+                      <cd:BitSize>8</cd:BitSize>
+                      <cd:NativeType>uint8</cd:NativeType>
+                    </cd:Integer>
+                  </cd:Field>
+                  <cd:Field name="l2b_rayleigh_obs_qc_flags">
+                    <cd:Array>
+                      <cd:Dimension>8</cd:Dimension>
+                      <cd:Integer>
+                        <cd:Description>Flags describing problems which prevent using this Rayleigh observation</cd:Description>
+                        <cd:BitSize>1</cd:BitSize>
+                        <cd:NativeType>uint8</cd:NativeType>
+                      </cd:Integer>
+                    </cd:Array>
+                  </cd:Field>
+                  <cd:Field name="spare_1">
+                    <cd:Raw>
+                      <cd:Description>Spare</cd:Description>
+                      <cd:BitSize>128</cd:BitSize>
+                    </cd:Raw>
+                    <cd:Hidden/>
+                  </cd:Field>
+                </cd:Record>
+              </cd:Field>
+              <cd:Field name="assimilation_model_pcd">
+                <cd:Record>
+                  <cd:Description>Structure describing product confidence for assimilation model parameters associated with the current observation</cd:Description>
+                  <cd:Field name="hlos_observation_errors">
+                    <cd:Record>
+                      <cd:Description>Structure containing error estimates assumed during L2C processing, for the current L2B HLOS observation</cd:Description>
+                      <cd:Field name="persistence_error">
+                        <cd:Integer>
+                          <cd:Description>Persistence error</cd:Description>
+                          <cd:Unit>cm/s</cd:Unit>
+                          <cd:BitSize>16</cd:BitSize>
+                          <cd:NativeType>uint16</cd:NativeType>
+                        </cd:Integer>
+                      </cd:Field>
+                      <cd:Field name="representativity_error">
+                        <cd:Integer>
+                          <cd:Description>Representativity error</cd:Description>
+                          <cd:Unit>cm/s</cd:Unit>
+                          <cd:BitSize>16</cd:BitSize>
+                          <cd:NativeType>uint16</cd:NativeType>
+                        </cd:Integer>
+                      </cd:Field>
+                      <cd:Field name="final_error">
+                        <cd:Integer>
+                          <cd:Description>Final error</cd:Description>
+                          <cd:Unit>cm/s</cd:Unit>
+                          <cd:BitSize>16</cd:BitSize>
+                          <cd:NativeType>uint16</cd:NativeType>
+                        </cd:Integer>
+                      </cd:Field>
+                      <cd:Field name="estimated_obs_bias">
+                        <cd:Integer>
+                          <cd:Description>Estimated bias for the current L2B HLOS observation</cd:Description>
+                          <cd:Unit>cm/s</cd:Unit>
+                          <cd:BitSize>16</cd:BitSize>
+                          <cd:NativeType>int16</cd:NativeType>
+                        </cd:Integer>
+                      </cd:Field>
+                      <cd:Field name="spare_1">
+                        <cd:Raw>
+                          <cd:Description>Spare</cd:Description>
+                          <cd:BitSize>160</cd:BitSize>
+                        </cd:Raw>
+                        <cd:Hidden/>
+                      </cd:Field>
+                    </cd:Record>
+                  </cd:Field>
+                  <cd:Field name="background_hlos">
+                    <cd:Integer>
+                      <cd:Description>HLOS from the assimilation model background field given in cm/s and rounded to the nearest integer</cd:Description>
+                      <cd:Unit>cm/s</cd:Unit>
+                      <cd:BitSize>16</cd:BitSize>
+                      <cd:NativeType>int16</cd:NativeType>
+                    </cd:Integer>
+                  </cd:Field>
+                  <cd:Field name="background_hlos_error">
+                    <cd:Integer>
+                      <cd:Description>Error in cm/s for Background_hlos</cd:Description>
+                      <cd:Unit>cm/s</cd:Unit>
+                      <cd:BitSize>16</cd:BitSize>
+                      <cd:NativeType>uint16</cd:NativeType>
+                    </cd:Integer>
+                  </cd:Field>
+                  <cd:Field name="l2b_hlos_reliability">
+                    <cd:Float>
+                      <cd:Description>An L2C-derived measure of the reliability of the current L2B HLOS observation</cd:Description>
+                      <cd:BitSize>64</cd:BitSize>
+                      <cd:NativeType>double</cd:NativeType>
+                    </cd:Float>
+                  </cd:Field>
+                  <cd:Field name="Analysis_hlos">
+                    <cd:Integer>
+                      <cd:Description>HLOS from the assimilation model analysis field given in cm/s and rounded to the nearest integer</cd:Description>
+                      <cd:Unit>cm/s</cd:Unit>
+                      <cd:BitSize>16</cd:BitSize>
+                      <cd:NativeType>int16</cd:NativeType>
+                    </cd:Integer>
+                  </cd:Field>
+                  <cd:Field name="zonal_wind_background_error">
+                    <cd:Integer>
+                      <cd:Description>Error in cm/s for zonal wind from the assimilation model background</cd:Description>
+                      <cd:Unit>cm/s</cd:Unit>
+                      <cd:BitSize>16</cd:BitSize>
+                      <cd:NativeType>uint16</cd:NativeType>
+                    </cd:Integer>
+                  </cd:Field>
+                  <cd:Field name="meridional_wind_background_error">
+                    <cd:Integer>
+                      <cd:Description>Error in cm/s for meridional wind from the assimilation model background.</cd:Description>
+                      <cd:Unit>cm/s</cd:Unit>
+                      <cd:BitSize>16</cd:BitSize>
+                      <cd:NativeType>uint16</cd:NativeType>
+                    </cd:Integer>
+                  </cd:Field>
+                  <cd:Field name="spare_1">
+                    <cd:Raw>
+                      <cd:Description>Spare</cd:Description>
+                      <cd:BitSize>160</cd:BitSize>
+                    </cd:Raw>
+                    <cd:Hidden/>
+                  </cd:Field>
+                </cd:Record>
+              </cd:Field>
+              <cd:Field name="spare_1">
+                <cd:Raw>
+                  <cd:Description>Spare</cd:Description>
+                  <cd:BitSize>80</cd:BitSize>
+                </cd:Raw>
+                <cd:Hidden/>
+              </cd:Field>
+            </cd:Record>
+          </cd:Array>
+        </cd:Field>
+      </cd:Record>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="spare_1">
+    <cd:Raw>
+      <cd:Description>Spare</cd:Description>
+      <cd:BitSize>160</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+</cd:Record>

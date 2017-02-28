@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<cd:Record name="QC_Result_REP_QUA_AC" format="xml" namexml="QC_Result" last-modified="2015-11-23" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+  <cd:Description>Generic quality control summary definition</cd:Description>
+  <cd:Field name="Source_File_Name">
+    <cd:Text namexml="Source_File_Name">
+      <cd:Description>Name of the file for which has been checked</cd:Description>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="Result">
+    <cd:Type namexml="Result">
+      <cd:Integer format="ascii">
+        <cd:Description>True, if quality control check succeeded</cd:Description>
+        <cd:NativeType>uint8</cd:NativeType>
+        <cd:Mapping string="FALSE" value="0"/>        
+        <cd:Mapping string="False" value="0"/>
+        <cd:Mapping string="false" value="0"/>
+        <cd:Mapping string="TRUE" value="1"/>        
+        <cd:Mapping string="True" value="1"/>
+        <cd:Mapping string="true" value="1"/>
+        <ct:NamedTest id="BooleanBinTest" />
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Result_Reliability">
+    <cd:Text namexml="Result_Reliability">
+      <cd:Description>True, if quality control check can be considered reliable</cd:Description>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="Anomaly_Summary">
+    <cd:Text namexml="Anomaly_Summary">
+      <cd:Description>Summary text of anomalies (if any)</cd:Description>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="Report_File_Name">
+    <cd:Text namexml="Report_File_Name">
+      <cd:Description>Name of the generated report file containing detailed information</cd:Description>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="Output_File_Generation_Time">
+    <cd:Type namexml="Output_File_Generation_Time">
+      <cd:Time format="ascii" timeformat="ascii_ccsds_datetime_ymd1_with_ref">
+        <cd:Description>Time at which the quality report file has been generated</cd:Description>
+        <cd:Mapping string="UTC=0000-00-00T00:00:00" value="-inf"/>
+        <cd:Mapping string="UTC=9999-99-99T99:99:99" value="+inf"/>
+        <cd:Mapping string="" value="nan"/>
+      </cd:Time>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Last_Dissemination_Time">
+    <cd:Type namexml="Last_Dissemination_Time">
+      <cd:Time format="ascii" timeformat="ascii_ccsds_datetime_ymd1_with_ref">
+        <cd:Description>Time at which the output file has been transferred to the last of the intended receivers. Field is empty if not all receivers have acquired the output file</cd:Description>
+        <cd:Mapping string="UTC=0000-00-00T00:00:00" value="-inf"/>
+        <cd:Mapping string="UTC=9999-99-99T99:99:99" value="+inf"/>
+        <cd:Mapping string="" value="nan"/>
+      </cd:Time>
+    </cd:Type>
+  </cd:Field>
+</cd:Record>

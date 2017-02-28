@@ -1,0 +1,132 @@
+<?xml version="1.0"?>
+<cd:Record name="Product_Report" format="xml" namexml="Product_Report" last-modified="2016-07-25" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+  <cd:Description>Dissemination Report Data Block</cd:Description>
+  <cd:Field name="Processor_Name">
+    <cd:Text namexml="Processor_Name">
+       <cd:Description>String equal to Processor_Name tag in the Job Order</cd:Description>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="Processor_Version">
+    <cd:Text namexml="Processor_Version">
+       <cd:Description>String equal to Version tag in the Job Order</cd:Description>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="List_of_Ipf_Procs">
+    <cd:Record namexml="List_of_Ipf_Procs">
+      <cd:Attribute name="count"/>
+      <cd:Field name="Ipf_Proc">
+        <cd:Array>
+          <cd:Dimension/>
+          <cd:Record namexml="Ipf_Proc">
+            <cd:Field name="Task_Name">
+              <cd:Text namexml="Task_Name">
+                <cd:Description>Name of Task as from Task_Name in the Job Order</cd:Description>
+              </cd:Text>
+            </cd:Field>
+            <cd:Field name="Task_Version">
+              <cd:Text namexml="Task_Version">
+                <cd:Description>Version of Task as from Task_Version in the Job Order</cd:Description>
+              </cd:Text>
+            </cd:Field>
+            <cd:Field name="PID">
+              <cd:Text namexml="PID">
+                <cd:Description>Operating System processor identifier</cd:Description>
+              </cd:Text>
+            </cd:Field>
+            <cd:Field name="Node_Name">
+              <cd:Text namexml="Node_Name">
+                <cd:Description>Name of the node where the processor is running</cd:Description>
+              </cd:Text>
+            </cd:Field>
+            <cd:Field name="Date_Time_of_Operation">
+              <cd:Record namexml="Date_Time_of_Operation">
+                <cd:Field name="Start">
+                  <cd:Type namexml="Start">
+                    <cd:Time format="ascii" timeformat="ascii_ccsds_datetime_ymd2">
+                      <cd:Description>Time stamp of Task start processing time in the format : YYYY-MM-DDTHH:MM:SS.uuuuuu</cd:Description>
+                    </cd:Time>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="Stop">
+                  <cd:Type namexml="Stop">
+                    <cd:Time format="ascii" timeformat="ascii_ccsds_datetime_ymd2">
+                      <cd:Description>Time stamp of Task start processing time in the format : YYYY-MM-DDTHH:MM:SS.uuuuuu</cd:Description>
+                    </cd:Time>
+                  </cd:Type>
+                </cd:Field>
+              </cd:Record>
+            </cd:Field>
+            <cd:Field name="List_of_Input_File_Names">
+              <cd:Record namexml="List_of_Input_File_Names">
+                <cd:Attribute name="count"/>
+                <cd:Field name="File_Name">
+                  <cd:Array>
+                    <cd:Dimension/>
+                    <cd:Text namexml="File_Name">
+                      <cd:Description>Input File</cd:Description>
+                    </cd:Text>
+                  </cd:Array>
+                </cd:Field>
+              </cd:Record>
+            </cd:Field>
+            <cd:Field name="List_of_Output_File_Names">
+              <cd:Record namexml="List_of_Output_File_Names">
+                <cd:Attribute name="count"/>
+                <cd:Field name="File_Name">
+                  <cd:Array>
+                    <cd:Dimension/>
+                    <cd:Text namexml="File_Name">
+                      <cd:Description>Output File</cd:Description>
+                    </cd:Text>
+                  </cd:Array>
+                </cd:Field>
+              </cd:Record>
+            </cd:Field>
+            <cd:Field name="List_of_Messages">
+              <cd:Record namexml="List_of_Messages">
+                <cd:Attribute name="count"/>
+                <cd:Field name="Messages">
+                  <cd:Array>
+                    <cd:Dimension/>
+                    <cd:Record namexml="Message">
+                      <cd:Field name="Date_Time">
+                        <cd:Type namexml="Date_Time">
+                          <cd:Time format="ascii" timeformat="ascii_ccsds_datetime_ymd2">
+                            <cd:Description>Time Stamp of Message in the format: : YYYY-MM-DDTHH:MM:SS.uuuuuu</cd:Description>
+                          </cd:Time>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="Type">
+                        <cd:Text namexml="Type">
+                          <cd:Description>Type of Message: D or I or P or W or E</cd:Description>
+                        </cd:Text>
+                      </cd:Field>
+                      <cd:Field name="Text">
+                        <cd:Text namexml="Text">
+                          <cd:Description><![CDATA[The Message Text field will be in the format of a CDATA xml tag, in order to allow any
+character to be included in the message without xml parsers and schema driven editors complain, should special characters like '<' and '>' be used inside the text]]></cd:Description>
+                        </cd:Text>
+                      </cd:Field>
+                    </cd:Record>
+                  </cd:Array>
+                </cd:Field>
+              </cd:Record>
+            </cd:Field>
+            <cd:Field name="Synthetic_Exit_Code">
+              <cd:Text namexml="Synthetic_Exit_Code">
+                <cd:Description>Task Synthetic Exit Code: SUCCESS or WARNING or ERROR</cd:Description>
+              </cd:Text>
+            </cd:Field>
+          </cd:Record>
+        </cd:Array>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="Job_Order">
+    <cd:Record>
+      <cd:Field name="Ipf_Job_Order">
+        <cd:NamedType id="Ipf_Job_Order"/>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+</cd:Record>

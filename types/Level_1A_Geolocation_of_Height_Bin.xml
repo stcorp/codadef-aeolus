@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="binary" last-modified="2010-08-26" name="Level_1A_Geolocation_of_Height_Bin">
+  <cd:Field name="longitude_of_height_bin">
+    <cd:Integer>
+      <cd:Description>Longitude of the lower edge of the height bin along the line-of-sight</cd:Description>
+      <cd:Unit>1e-6 degrees_east</cd:Unit>
+      <cd:Conversion denominator="1000000.000000" numerator="1.000000">
+        <cd:Unit>degrees_east</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+      <ct:NamedTest id="RangeLongitude6"/>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="latitude_of_height_bin">
+    <cd:Integer>
+      <cd:Description>Latitude of the lower edge of the height bin along the line-of-sight</cd:Description>
+      <cd:Unit>1e-6 degrees_north</cd:Unit>
+      <cd:Conversion denominator="1000000.000000" numerator="1.000000">
+        <cd:Unit>degrees_north</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+      <ct:NamedTest id="RangeLatitude6"/>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="altitude_of_height_bin">
+    <cd:Float>
+      <cd:Description>Altitude of the lower edge of the height bin along the line-of-sight. Value is negative if below DEM surface</cd:Description>
+      <cd:Unit>m</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+</cd:Record>

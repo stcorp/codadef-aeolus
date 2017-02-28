@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="CCSDS_packet_header" last-modified="2008-07-01" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Description>Packet Header</cd:Description>
+  <cd:Field name="packet_version">
+    <cd:Integer>
+      <cd:Description>Packet Version Number</cd:Description>
+      <cd:BitSize>3</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="packet_type">
+    <cd:Integer>
+      <cd:Description>Packet Type</cd:Description>
+      <cd:BitSize>1</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="secondary_header_flag_header">
+    <cd:Integer>
+      <cd:Description>Data Field Flag Header</cd:Description>
+      <cd:BitSize>1</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="app_pid">
+    <cd:Integer>
+      <cd:Description>Application Process ID</cd:Description>
+      <cd:BitSize>7</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="app_pcat">
+    <cd:Integer>
+      <cd:Description>Application Packet Category</cd:Description>
+      <cd:BitSize>4</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="sequence_flag">
+    <cd:Integer>
+      <cd:Description>Sequency Flags</cd:Description>
+      <cd:BitSize>2</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="sequence_count">
+    <cd:Integer>
+      <cd:Description>Sequence Count</cd:Description>
+      <cd:BitSize>14</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="packet_length">
+    <cd:Integer>
+      <cd:Description>Packet Length</cd:Description>
+      <cd:Unit>bytes</cd:Unit>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+</cd:Record>

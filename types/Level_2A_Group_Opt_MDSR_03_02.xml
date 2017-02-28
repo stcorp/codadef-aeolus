@@ -1,0 +1,209 @@
+<?xml version="1.0"?>
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="binary" last-modified="2015-12-09" name="Level_2A_Group_Opt_MDSR_03_02">
+  <cd:Field name="starttime">
+    <cd:Time timeformat="binary_envisat_datetime">
+      <cd:Description>BRC start time</cd:Description>
+      <ct:NamedTest id="RangeSecond" path="seconds"/>
+      <ct:NamedTest id="RangeMicroSecond" path="microseconds"/>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="height_bin_index">
+    <cd:Integer>
+      <cd:Description>Index of the height level of the group in Rayleigh scale</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="group_optical_property">
+    <cd:Record>
+      <cd:Field name="group_extinction">
+        <cd:Float>
+          <cd:Description>Particle extinction of the height bin</cd:Description>
+          <cd:Unit>10^-6 m^-1</cd:Unit>
+          <cd:BitSize>64</cd:BitSize>
+          <cd:NativeType>double</cd:NativeType>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="group_backscatter">
+        <cd:Float>
+          <cd:Description>Particle backscatter of the height bin</cd:Description>
+          <cd:Unit>10^-6 m^-1 sr^-1</cd:Unit>
+          <cd:BitSize>64</cd:BitSize>
+          <cd:NativeType>double</cd:NativeType>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="group_lod">
+        <cd:Float>
+          <cd:Description>Particle LOD of the height bin</cd:Description>
+          <cd:BitSize>64</cd:BitSize>
+          <cd:NativeType>double</cd:NativeType>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="group_sr">
+        <cd:Float>
+          <cd:Description>Scattering ratio of the height bin</cd:Description>
+          <cd:BitSize>64</cd:BitSize>
+          <cd:NativeType>double</cd:NativeType>
+        </cd:Float>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="group_geolocation_middle_bins">
+    <cd:Record>
+      <cd:Field name="start_longitude">
+        <cd:Integer>
+          <cd:Description>Longitude of the start point of the two group middle bins</cd:Description>
+          <cd:Unit>1e-6 degrees_east</cd:Unit>
+          <cd:Conversion denominator="1000000.000000" numerator="1.000000">
+            <cd:Unit>degrees_east</cd:Unit>
+          </cd:Conversion>
+          <cd:BitSize>32</cd:BitSize>
+          <cd:NativeType>int32</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="start_latitude">
+        <cd:Integer>
+          <cd:Description>Latitude of the start point of the two group middle bins</cd:Description>
+          <cd:Unit>1e-6 degrees_north</cd:Unit>
+          <cd:Conversion denominator="1000000.000000" numerator="1.000000">
+            <cd:Unit>degrees_north</cd:Unit>
+          </cd:Conversion>
+          <cd:BitSize>32</cd:BitSize>
+          <cd:NativeType>int32</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="start_altitude">
+        <cd:Float>
+          <cd:Description>Altitude of the start point of the two group middle bins</cd:Description>
+          <cd:Unit>m</cd:Unit>
+          <cd:BitSize>64</cd:BitSize>
+          <cd:NativeType>double</cd:NativeType>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="mid_longitude">
+        <cd:Integer>
+          <cd:Description>Longitude of the mid point of the two group middle bins</cd:Description>
+          <cd:Unit>1e-6 degrees_east</cd:Unit>
+          <cd:Conversion denominator="1000000.000000" numerator="1.000000">
+            <cd:Unit>degrees_east</cd:Unit>
+          </cd:Conversion>
+          <cd:BitSize>32</cd:BitSize>
+          <cd:NativeType>int32</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="mid_latitude">
+        <cd:Integer>
+          <cd:Description>Latitude of the mid point of the two group middle bins</cd:Description>
+          <cd:Unit>1e-6 degrees_north</cd:Unit>
+          <cd:Conversion denominator="1000000.000000" numerator="1.000000">
+            <cd:Unit>degrees_north</cd:Unit>
+          </cd:Conversion>
+          <cd:BitSize>32</cd:BitSize>
+          <cd:NativeType>int32</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="mid_altitude">
+        <cd:Float>
+          <cd:Description>Altitude of the mid point of the two group middle bins</cd:Description>
+          <cd:Unit>m</cd:Unit>
+          <cd:BitSize>64</cd:BitSize>
+          <cd:NativeType>double</cd:NativeType>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="stop_longitude">
+        <cd:Integer>
+          <cd:Description>Longitude of the stop point of the two group middle bins</cd:Description>
+          <cd:Unit>1e-6 degrees_east</cd:Unit>
+          <cd:Conversion denominator="1000000.000000" numerator="1.000000">
+            <cd:Unit>degrees_east</cd:Unit>
+          </cd:Conversion>
+          <cd:BitSize>32</cd:BitSize>
+          <cd:NativeType>int32</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="stop_latitude">
+        <cd:Integer>
+          <cd:Description>Latitude of the stop point of the two group middle bins</cd:Description>
+          <cd:Unit>1e-6 degrees_north</cd:Unit>
+          <cd:Conversion denominator="1000000.000000" numerator="1.000000">
+            <cd:Unit>degrees_north</cd:Unit>
+          </cd:Conversion>
+          <cd:BitSize>32</cd:BitSize>
+          <cd:NativeType>int32</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="stop_altitude">
+        <cd:Float>
+          <cd:Description>Altitude of the stop point of the two group middle bins</cd:Description>
+          <cd:Unit>m</cd:Unit>
+          <cd:BitSize>64</cd:BitSize>
+          <cd:NativeType>double</cd:NativeType>
+        </cd:Float>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="group_optical_property_middle_bins">
+    <cd:Record>
+      <cd:Field name="mid_extinction_top">
+        <cd:Float>
+          <cd:Description>Particle extinction of the top middle bin</cd:Description>
+          <cd:Unit>10^-6 m^-1</cd:Unit>
+          <cd:BitSize>64</cd:BitSize>
+          <cd:NativeType>double</cd:NativeType>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="mid_backscatter_top">
+        <cd:Float>
+          <cd:Description>Particle backscatter of the top middle bin</cd:Description>
+          <cd:Unit>10^-6 sr m^-1</cd:Unit>
+          <cd:BitSize>64</cd:BitSize>
+          <cd:NativeType>double</cd:NativeType>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="mid_lod_top">
+        <cd:Float>
+          <cd:Description>Particle LOD of the top middle bin</cd:Description>
+          <cd:BitSize>64</cd:BitSize>
+          <cd:NativeType>double</cd:NativeType>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="mid_ber_top">
+        <cd:Float>
+          <cd:Description>Backscatter-to-extinction ratio of the top middle bin</cd:Description>
+          <cd:BitSize>64</cd:BitSize>
+          <cd:NativeType>double</cd:NativeType>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="mid_extinction_bot">
+        <cd:Float>
+          <cd:Description>Particle extinction of the bottom middle bin</cd:Description>
+          <cd:Unit>10^-6 m^-1</cd:Unit>
+          <cd:BitSize>64</cd:BitSize>
+          <cd:NativeType>double</cd:NativeType>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="mid_backscatter_bot">
+        <cd:Float>
+          <cd:Description>Particle backscatter of the bottom middle bin</cd:Description>
+          <cd:Unit>10^-6 sr m^-1</cd:Unit>
+          <cd:BitSize>64</cd:BitSize>
+          <cd:NativeType>double</cd:NativeType>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="mid_lod_bot">
+        <cd:Float>
+          <cd:Description>Particle LOD of the bottom middle bin</cd:Description>
+          <cd:BitSize>64</cd:BitSize>
+          <cd:NativeType>double</cd:NativeType>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="mid_ber_bot">
+        <cd:Float>
+          <cd:Description>Backscatter-to-extinction ratio of the bottom middle bin</cd:Description>
+          <cd:BitSize>64</cd:BitSize>
+          <cd:NativeType>double</cd:NativeType>
+        </cd:Float>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+</cd:Record>

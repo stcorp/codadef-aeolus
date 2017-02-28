@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<cd:ProductDefinition id="MPL_RAOP__" format="ascii" last-modified="2009-01-26" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Text>
+    <cd:Description>Uninterpreted RAOP data</cd:Description>
+    <cd:ByteSize><![CDATA[filesize()]]></cd:ByteSize>
+    <cd:NativeType>string</cd:NativeType>
+  </cd:Text>
+</cd:ProductDefinition>
