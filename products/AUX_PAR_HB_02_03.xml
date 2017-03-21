@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:ProductDefinition id="AUX_PAR_HB_02_03" format="xml" last-modified="2015-07-06" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+<cd:ProductDefinition id="AUX_PAR_HB_02_03" format="xml" last-modified="2017-02-22" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
   <cd:Record format="xml">
     <cd:Field name="Earth_Explorer_File">
       <cd:Record namexml="Earth_Explorer_File">
@@ -247,6 +247,22 @@
                               </cd:Float>
                             </cd:Type>
                           </cd:Field>
+                          <cd:Field name="Mie_Correct_for_RDB">
+                            <cd:Optional/>
+                            <cd:Type namexml="Mie_Correct_for_RDB">
+                              <cd:Integer format="ascii">
+                                <cd:Description>Flag set to true to correct for RDB, otherwise set to false</cd:Description>
+                                <cd:NativeType>uint8</cd:NativeType>
+                                <cd:Mapping string="FALSE" value="0"/>                                
+                                <cd:Mapping string="False" value="0"/>
+                                <cd:Mapping string="false" value="0"/>
+                                <cd:Mapping string="TRUE" value="1"/>
+                                <cd:Mapping string="True" value="1"/>
+                                <cd:Mapping string="true" value="1"/>
+                                <ct:NamedTest id="BooleanBinTest" />
+                              </cd:Integer>
+                            </cd:Type>
+                          </cd:Field>                          
                           <cd:Field name="Rayleigh_Remove_Outlier">
                             <cd:Type namexml="Rayleigh_Remove_Outlier">
                               <cd:Integer format="ascii">
@@ -284,6 +300,22 @@
                                 <cd:Description>Rayleigh outlier sigma threshold</cd:Description>
                                 <cd:NativeType>double</cd:NativeType>
                               </cd:Float>
+                            </cd:Type>
+                          </cd:Field>                          
+                          <cd:Field name="Rayleigh_Correct_for_RDB">
+                            <cd:Optional/>
+                            <cd:Type namexml="Rayleigh_Correct_for_RDB">
+                              <cd:Integer format="ascii">
+                                <cd:Description>Flag set to true to correct for RDB, otherwise set to false</cd:Description>
+                                <cd:NativeType>uint8</cd:NativeType>
+                                <cd:Mapping string="FALSE" value="0"/>                                
+                                <cd:Mapping string="False" value="0"/>
+                                <cd:Mapping string="false" value="0"/>
+                                <cd:Mapping string="TRUE" value="1"/>
+                                <cd:Mapping string="True" value="1"/>
+                                <cd:Mapping string="true" value="1"/>
+                                <ct:NamedTest id="BooleanBinTest" />
+                              </cd:Integer>
                             </cd:Type>
                           </cd:Field>                          
                         </cd:Record>                          

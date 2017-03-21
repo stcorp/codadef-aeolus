@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:Record format="ascii" name="Level_2A_SPH_03_00" last-modified="2014-12-04" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+<cd:Record format="ascii" name="Level_2A_SPH_03_00" last-modified="2014-12-04" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
   <cd:Field name="sph_descriptor_title">
     <cd:Text>
       <cd:Description>SPH_DESCRIPTOR=</cd:Description>
@@ -452,4 +452,5 @@
     </cd:Text>
     <cd:Hidden/>
   </cd:Field>
+  <ct:NamedTest id="NumScaIcaMcaTotGreaterThanZero"/>
 </cd:Record>

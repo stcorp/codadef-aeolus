@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:Record format="binary" name="AUX_MET_METDS_01_32" last-modified="2008-07-01" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+<cd:Record format="binary" name="AUX_MET_METDS_01_32" last-modified="2017-03-01" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
   <cd:Field name="spare_1">
     <cd:Raw>
       <cd:Description>Spare</cd:Description>
@@ -29,6 +29,7 @@
       <cd:Unit>Pa</cd:Unit>
       <cd:BitSize>32</cd:BitSize>
       <cd:NativeType>int32</cd:NativeType>
+      <ct:NamedTest id="Range10To109000"/>
     </cd:Integer>
   </cd:Field>
   <cd:Field name="amd_err_ps">
@@ -45,6 +46,7 @@
       <cd:Unit>cm</cd:Unit>
       <cd:BitSize>32</cd:BitSize>
       <cd:NativeType>int32</cd:NativeType>
+      <ct:NamedTest id="RangeMinus10000To82000000"/>
     </cd:Integer>
   </cd:Field>
   <cd:Field name="spare_2">
@@ -73,6 +75,7 @@
             <cd:Unit>Pa</cd:Unit>
             <cd:BitSize>32</cd:BitSize>
             <cd:NativeType>uint32</cd:NativeType>
+            <ct:NamedTest id="Range10To109000"/>
           </cd:Integer>
         </cd:Field>
         <cd:Field name="amd_ptop">
@@ -81,6 +84,7 @@
             <cd:Unit>Pa</cd:Unit>
             <cd:BitSize>32</cd:BitSize>
             <cd:NativeType>uint32</cd:NativeType>
+            <ct:NamedTest id="Range10To109000"/>
           </cd:Integer>
         </cd:Field>
         <cd:Field name="amd_pnom">
@@ -89,6 +93,7 @@
             <cd:Unit>Pa</cd:Unit>
             <cd:BitSize>32</cd:BitSize>
             <cd:NativeType>uint32</cd:NativeType>
+            <ct:NamedTest id="Range10To109000"/>
           </cd:Integer>
         </cd:Field>
         <cd:Field name="amd_zbase">
@@ -97,6 +102,7 @@
             <cd:Unit>cm</cd:Unit>
             <cd:BitSize>32</cd:BitSize>
             <cd:NativeType>int32</cd:NativeType>
+            <ct:NamedTest id="RangeMinus10000To82000000"/>
           </cd:Integer>
         </cd:Field>
         <cd:Field name="amd_ztop">
@@ -105,6 +111,7 @@
             <cd:Unit>cm</cd:Unit>
             <cd:BitSize>32</cd:BitSize>
             <cd:NativeType>int32</cd:NativeType>
+            <ct:NamedTest id="RangeMinus10000To82000000"/>
           </cd:Integer>
         </cd:Field>
         <cd:Field name="amd_znom">
@@ -113,6 +120,7 @@
             <cd:Unit>cm</cd:Unit>
             <cd:BitSize>32</cd:BitSize>
             <cd:NativeType>int32</cd:NativeType>
+            <ct:NamedTest id="RangeMinus10000To82000000"/>
           </cd:Integer>
         </cd:Field>
         <cd:Field name="amd_t">
@@ -124,6 +132,7 @@
             </cd:Conversion>
             <cd:BitSize>16</cd:BitSize>
             <cd:NativeType>uint16</cd:NativeType>
+            <ct:NamedTest id="Range17500To33100"/>
           </cd:Integer>
         </cd:Field>
         <cd:Field name="amd_err_t">

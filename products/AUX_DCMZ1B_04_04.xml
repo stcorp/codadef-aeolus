@@ -18,8 +18,12 @@
                   <cd:NamedType id="Main_Product_Header_v2"/>
                 </cd:Field>
                 <cd:Field name="Specific_Product_Header">
-                  <cd:NamedType id="Specific_Product_Header_Level1BAux_04_03"/>
+                  <cd:NamedType id="Specific_Product_Header_Level1BAux_04_03"/>                  
                 </cd:Field>
+                <ct:NamedTest id="NumObservationsUsedGreaterThanZero" path ="Specific_Product_Header"/>
+                <ct:NamedTest id="NumMeasurementsUsedGreaterThanZero" path ="Specific_Product_Header"/>
+                <ct:NamedTest id="NumReferencePulsesUsedGreaterThanZero" path ="Specific_Product_Header"/>
+                <ct:NamedTest id="NumValidCalibrationResultsGreaterThanZero" path ="Specific_Product_Header"/>                
               </cd:Record>
             </cd:Field>
             <ct:NamedTest id="FileNameCheckEEF" path="Fixed_Header/File_Name"/>

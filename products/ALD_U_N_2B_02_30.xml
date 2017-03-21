@@ -103,15 +103,17 @@
       </cd:Array>
       <cd:Available><![CDATA[$ds_available[9] != 0]]></cd:Available>
       <cd:BitOffset><![CDATA[$ds_offset[9]]]></cd:BitOffset>
+      <ct:NamedTest id="LessThan99PercentOfMieWindVelocityMissing"/>
     </cd:Field>
     <cd:Field name="rayleigh_hloswind">
       <cd:Array>
         <cd:Description>Rayleigh HLOS winds</cd:Description>
         <cd:Dimension><![CDATA[$num_dsr[10]]]></cd:Dimension>
         <cd:NamedType id="Level_2BC_Rayleigh_HLOSWind_MDSR_02_00"/>
-      </cd:Array>
+      </cd:Array>      
       <cd:Available><![CDATA[$ds_available[10] != 0]]></cd:Available>
       <cd:BitOffset><![CDATA[$ds_offset[10]]]></cd:BitOffset>
+      <ct:NamedTest id="LessThan99PercentOfRayleighWindVelocityMissing"/>
     </cd:Field>
     <cd:Field name="mie_profile">
       <cd:Array>

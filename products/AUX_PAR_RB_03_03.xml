@@ -94,6 +94,7 @@
                               <cd:Description>Minimum pressure</cd:Description>
                               <cd:Unit>hPa</cd:Unit>
                               <cd:NativeType>uint32</cd:NativeType>
+                              <ct:NamedTest id="IntLessThanOrEqualTo10"/>
                             </cd:Integer>
                           </cd:Type>
                         </cd:Field>
@@ -104,6 +105,7 @@
                               <cd:Description>Maximum pressure</cd:Description>
                               <cd:Unit>hPa</cd:Unit>
                               <cd:NativeType>uint32</cd:NativeType>
+                              <ct:NamedTest id="IntGreaterThanOrEqualTo1050"/>
                             </cd:Integer>
                           </cd:Type>
                         </cd:Field>
@@ -114,6 +116,7 @@
                               <cd:Description>Pressure step</cd:Description>
                               <cd:Unit>hPa</cd:Unit>
                               <cd:NativeType>uint16</cd:NativeType>
+                              <ct:NamedTest id="IntLessThanOrEqualTo10"/>
                             </cd:Integer>
                           </cd:Type>
                         </cd:Field>
@@ -127,6 +130,7 @@
                               <cd:Description>Minimum temperature</cd:Description>
                               <cd:Unit>K</cd:Unit>
                               <cd:NativeType>uint16</cd:NativeType>
+                              <ct:NamedTest id="IntGreaterThanOrEqualTo150"/>
                             </cd:Integer>
                           </cd:Type>
                         </cd:Field>
@@ -140,6 +144,7 @@
                               <cd:Description>Maximum temperature</cd:Description>
                               <cd:Unit>K</cd:Unit>
                               <cd:NativeType>uint16</cd:NativeType>
+                              <ct:NamedTest id="IntGreaterThanOrEqualTo330"/>
                             </cd:Integer>
                           </cd:Type>
                         </cd:Field>
@@ -153,6 +158,7 @@
                               <cd:Description>Temperature step</cd:Description>
                               <cd:Unit>K</cd:Unit>
                               <cd:NativeType>uint8</cd:NativeType>
+                              <ct:NamedTest id="IntLessThanOrEqualTo10"/>
                             </cd:Integer>
                           </cd:Type>
                         </cd:Field>
@@ -161,6 +167,7 @@
                             <cd:Float format="ascii">
                               <cd:Description>Minimum response</cd:Description>
                               <cd:NativeType>double</cd:NativeType>
+                              <ct:NamedTest id="ValueLessThanOrEqualToMinus06"/>
                             </cd:Float>
                           </cd:Type>
                         </cd:Field>
@@ -169,6 +176,7 @@
                             <cd:Float format="ascii">
                               <cd:Description>Maximum response</cd:Description>
                               <cd:NativeType>double</cd:NativeType>
+                              <ct:NamedTest id="ValueGreaterThanOrEqualTo06"/>
                             </cd:Float>
                           </cd:Type>
                         </cd:Field>
@@ -177,6 +185,7 @@
                             <cd:Float format="ascii">
                               <cd:Description>Response step</cd:Description>
                               <cd:NativeType>double</cd:NativeType>
+                              <ct:NamedTest id="ValueLessThanOrEqualTo01"/>
                             </cd:Float>
                           </cd:Type>
                         </cd:Field>
@@ -300,6 +309,7 @@
                           <cd:Description>Frequency resolution for the computation of RBC_AUX parameters</cd:Description>
                           <cd:Unit>MHz</cd:Unit>
                           <cd:NativeType>double</cd:NativeType>
+                          <ct:NamedTest id="ValueLessThanOrEqualTo25"/>
                         </cd:Float>
                       </cd:Type>
                     </cd:Field>

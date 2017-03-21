@@ -66,6 +66,7 @@
                                     <cd:Description>Initial value for the estimation of the Full-Width-Half-Max of the T_A and T_B</cd:Description>
                                     <cd:Unit>MHz</cd:Unit>
                                     <cd:NativeType>double</cd:NativeType>
+                                    <ct:NamedTest id="Range1400To1600"/>
                                   </cd:Float>
                                 </cd:Type>
                               </cd:Field>
@@ -100,6 +101,7 @@
                                 <cd:Description>Frequency resolution of CSR computation</cd:Description>
                                 <cd:Unit>MHz</cd:Unit>
                                 <cd:NativeType>double</cd:NativeType>
+                                <ct:NamedTest id="ValueLessThanOrEqualTo25"/>
                               </cd:Float>
                             </cd:Type>
                           </cd:Field>
@@ -115,6 +117,7 @@
                                     <cd:Description>Vertical resolution</cd:Description>
                                     <cd:Unit>m</cd:Unit>
                                     <cd:NativeType>uint16</cd:NativeType>
+                                    <ct:NamedTest id="IntLessThanOrEqualTo25"/>
                                   </cd:Integer>
                                 </cd:Type>
                               </cd:Field>
@@ -128,6 +131,7 @@
                                     <cd:Description>Minimum altitude (above WGS84 geoid)</cd:Description>
                                     <cd:Unit>m</cd:Unit>
                                     <cd:NativeType>uint16</cd:NativeType>
+                                    <ct:NamedTest id="IntLessThanOrEqualToZero"/>
                                   </cd:Integer>
                                 </cd:Type>
                               </cd:Field>
@@ -141,6 +145,7 @@
                                     <cd:Description>Maximum altitude (above WGS84 geoid)</cd:Description>
                                     <cd:Unit>m</cd:Unit>
                                     <cd:NativeType>uint16</cd:NativeType>
+                                    <ct:NamedTest id="IntGreaterThanOrEqualTo30000"/>
                                   </cd:Integer>
                                 </cd:Type>
                               </cd:Field>
@@ -158,6 +163,7 @@
                                     <cd:Description>Maximum distance between an AUX_MET profile and a RRC observation.</cd:Description>
                                     <cd:Unit>km</cd:Unit>
                                     <cd:NativeType>double</cd:NativeType>
+                                    <ct:NamedTest id="ValueLessThanOrEqualTo200"/>
                                   </cd:Float>
                                 </cd:Type>
                               </cd:Field>
@@ -171,6 +177,7 @@
                                     <cd:Description>Maximum time difference between an AUX_MET profile and a RRC observation.</cd:Description>
                                     <cd:Unit>s</cd:Unit>
                                     <cd:NativeType>double</cd:NativeType>
+                                    <ct:NamedTest id="ValueLessThanOrEqualTo60"/>
                                   </cd:Float>
                                 </cd:Type>
                               </cd:Field>
@@ -240,6 +247,7 @@
                                   <cd:Integer format="ascii">
                                     <cd:Description>Minimum number of valid frequency steps (valid RRC data and valid AUX_MET profile) required for the update of the CSR to be carried out</cd:Description>
                                     <cd:NativeType>uint8</cd:NativeType>
+                                    <ct:NamedTest id="IntGreaterThanOrEqualTo35"/>
                                   </cd:Integer>
                                 </cd:Type>
                               </cd:Field>
@@ -266,6 +274,7 @@
                                     <cd:Description>Parameter setting the max difference between the offsets of the predicted and observed Rayleigh response.</cd:Description>
                                     <cd:Unit>m/s</cd:Unit>
                                     <cd:NativeType>double</cd:NativeType>
+                                    <ct:NamedTest id="ValueLessThanOrEqualTo1"/>
                                   </cd:Float>
                                 </cd:Type>
                               </cd:Field>
@@ -274,6 +283,7 @@
                                   <cd:Float format="ascii">
                                     <cd:Description>Maximum of the relative error on the Rayleigh response slope</cd:Description>
                                     <cd:NativeType>double</cd:NativeType>
+                                    <ct:NamedTest id="ValueLessThanOrEqualTo001"/>
                                   </cd:Float>
                                 </cd:Type>
                               </cd:Field>

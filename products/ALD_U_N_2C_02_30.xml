@@ -103,6 +103,7 @@
       </cd:Array>
       <cd:Available><![CDATA[$ds_available[9] != 0]]></cd:Available>
       <cd:BitOffset><![CDATA[$ds_offset[9]]]></cd:BitOffset>
+      <ct:NamedTest id="LessThan99PercentOfMieWindVelocityMissing"/>      
     </cd:Field>
     <cd:Field name="rayleigh_hloswind">
       <cd:Array>
@@ -112,6 +113,7 @@
       </cd:Array>
       <cd:Available><![CDATA[$ds_available[10] != 0]]></cd:Available>
       <cd:BitOffset><![CDATA[$ds_offset[10]]]></cd:BitOffset>
+      <ct:NamedTest id="LessThan99PercentOfRayleighWindVelocityMissing"/>
     </cd:Field>
     <cd:Field name="mie_profile">
       <cd:Array>
@@ -154,9 +156,13 @@
         <cd:Description>Mie vector winds</cd:Description>
         <cd:Dimension><![CDATA[$num_dsr[15]]]></cd:Dimension>
         <cd:NamedType id="Level_2C_Mie_VecWind_MDSR_02_00"/>
-      </cd:Array>
+      </cd:Array>      
       <cd:Available><![CDATA[$ds_available[15] != 0]]></cd:Available>
       <cd:BitOffset><![CDATA[$ds_offset[15]]]></cd:BitOffset>
+      <ct:NamedTest id="LessThan99PercentOfBackgroundZonalWindVelocityMissing"/>
+      <ct:NamedTest id="LessThan99PercentOfBackgroundMeridionalWindVelocityMissing"/>
+      <ct:NamedTest id="LessThan99PercentOfAnalysisZonalWindVelocityMissing"/>
+      <ct:NamedTest id="LessThan99PercentOfAnalysisMeridionalWindVelocityMissing"/>
     </cd:Field>
     <cd:Field name="rayleigh_vecwind">
       <cd:Array>
@@ -166,6 +172,10 @@
       </cd:Array>
       <cd:Available><![CDATA[$ds_available[16] != 0]]></cd:Available>
       <cd:BitOffset><![CDATA[$ds_offset[16]]]></cd:BitOffset>
+      <ct:NamedTest id="LessThan99PercentOfBackgroundZonalWindVelocityMissing"/>
+      <ct:NamedTest id="LessThan99PercentOfBackgroundMeridionalWindVelocityMissing"/>
+      <ct:NamedTest id="LessThan99PercentOfAnalysisZonalWindVelocityMissing"/>
+      <ct:NamedTest id="LessThan99PercentOfAnalysisMeridionalWindVelocityMissing"/>      
     </cd:Field>
   </cd:Record>
   <cd:ProductVariable name="num_dsd">

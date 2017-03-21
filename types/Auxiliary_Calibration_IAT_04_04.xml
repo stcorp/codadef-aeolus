@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="xml" last-modified="2016-11-23" name="Auxiliary_Calibration_IAT_04_04" namexml="Auxiliary_Calibration_IAT">
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="xml" last-modified="2017-03-01" name="Auxiliary_Calibration_IAT_04_04" namexml="Auxiliary_Calibration_IAT">
   <cd:Description>Auxiliary Calibration IAT</cd:Description>
   <cd:Field name="List_of_Data_Set_Records">
     <cd:Record namexml="List_of_Data_Set_Records">
@@ -714,6 +714,7 @@
                 <cd:Integer format="ascii">
                   <cd:Description>Number of valid frequency steps available to compute Mie channel response</cd:Description>
                   <cd:NativeType>int32</cd:NativeType>
+                  <ct:NamedTest id="IntGreaterThan40"/>
                 </cd:Integer>
               </cd:Type>
             </cd:Field>

@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:Record format="binary" name="CAL_DSR" last-modified="2008-07-01" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+<cd:Record format="binary" name="CAL_DSR" last-modified="2008-07-01" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
   <cd:Field name="p_grid">
     <cd:Array>
       <cd:Dimension><![CDATA[int(/sph/num_p)]]></cd:Dimension>
@@ -85,6 +85,7 @@
           <cd:Description>Overall calibration coefficient for the useful signal in the Rayleigh channel.</cd:Description>
           <cd:BitSize>64</cd:BitSize>
           <cd:NativeType>double</cd:NativeType>
+          <ct:NamedTest id="Range5E13To5E14"/>
         </cd:Float>
       </cd:Field>
       <cd:Field name="coeff">
@@ -109,6 +110,8 @@
               </cd:Float>
             </cd:Field>
           </cd:Record>
+          <ct:NamedTest id="AllC1Range05To1p5"/>
+          <ct:NamedTest id="AllC4Range09To1p1"/>
         </cd:Array>
       </cd:Field>
     </cd:Record>
@@ -121,6 +124,7 @@
           <cd:Description>Overall calibration coefficient for the useful signal in the Mie channel.</cd:Description>
           <cd:BitSize>64</cd:BitSize>
           <cd:NativeType>double</cd:NativeType>
+          <ct:NamedTest id="Range5E12To5E13"/>
         </cd:Float>
       </cd:Field>
       <cd:Field name="coeff">
@@ -143,6 +147,8 @@
               </cd:Float>
             </cd:Field>
           </cd:Record>
+          <ct:NamedTest id="AllC2Range01To1"/>
+          <ct:NamedTest id="AllC3Range05To1p5"/>
         </cd:Array>
       </cd:Field>
     </cd:Record>

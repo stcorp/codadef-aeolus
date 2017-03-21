@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:Record format="ascii" name="Level_1A_SPH_04_04" last-modified="2015-04-20" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+<cd:Record format="ascii" name="Level_1A_SPH_04_04" last-modified="2017-03-01" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
   <cd:Field name="sph_descriptor_title">
     <cd:Text>
       <cd:Description>SPH_DESCRIPTOR=</cd:Description>
@@ -315,6 +315,7 @@
       <cd:Description>Number of valid observations in the product</cd:Description>
       <cd:ByteSize>11</cd:ByteSize>
       <cd:NativeType>int32</cd:NativeType>
+      <ct:NamedTest id="IntGreaterThanZero"/>      
     </cd:Integer>
   </cd:Field>
   <cd:Field name="newline_char_10">
@@ -407,6 +408,7 @@
       <cd:Description>Number of measurements present (= number of SIDs not missing)</cd:Description>
       <cd:ByteSize>11</cd:ByteSize>
       <cd:NativeType>int32</cd:NativeType>
+      <ct:NamedTest id="IntGreaterThanZero"/>
     </cd:Integer>
   </cd:Field>
   <cd:Field name="newline_char_14">
@@ -482,6 +484,7 @@
       <cd:Description>Number of measurements for which the number of corresponding valid pulses is over Meas_Cavity_Lock_Status_Thresh and pulse is valid</cd:Description>
       <cd:ByteSize>11</cd:ByteSize>
       <cd:NativeType>int32</cd:NativeType>
+      <ct:NamedTest id="IntGreaterThanZero"/>
     </cd:Integer>
   </cd:Field>
   <cd:Field name="newline_char_17">
@@ -674,6 +677,7 @@
       <cd:Description>Number of reference pulses with valid status</cd:Description>
       <cd:ByteSize>11</cd:ByteSize>
       <cd:NativeType>int32</cd:NativeType>
+      <ct:NamedTest id="IntGreaterThanZero"/>
     </cd:Integer>
   </cd:Field>
   <cd:Field name="newline_char_25">
@@ -702,4 +706,9 @@
     </cd:Text>
     <cd:Hidden/>
   </cd:Field>
+  <ct:NamedTest id="NumReferencePulsesGreaterThanZero"/>
+  <ct:NamedTest id="NumReferencePulsesSpValidGreaterThanZero"/>
+  <ct:NamedTest id="NumMeasurementSpValidGreaterThanZero"/>
+  <ct:NamedTest id="MoreThanTwoPercentOfMeasurementsValid"/>
+  <ct:NamedTest id="MoreThanTwoPercentOfObservationsValid"/>    
 </cd:Record>

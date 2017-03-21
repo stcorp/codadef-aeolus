@@ -52,6 +52,7 @@
                                 <cd:Description>Bias for the off-nadir Rayleigh measurements</cd:Description>
                                 <cd:Unit>MHz/km</cd:Unit>
                                 <cd:NativeType>double</cd:NativeType>
+                                <ct:NamedTest id="Range015To03"/>
                               </cd:Float>
                             </cd:Type>
                           </cd:Field>
@@ -62,6 +63,7 @@
                                 <cd:Description>Bias for the off-nadir Mie measurements</cd:Description>
                                 <cd:Unit>MHz/km</cd:Unit>
                                 <cd:NativeType>double</cd:NativeType>
+                                <ct:NamedTest id="Range005To01"/>
                               </cd:Float>
                             </cd:Type>
                           </cd:Field>
@@ -72,6 +74,7 @@
                                 <cd:Description>Bias for the nadir Rayleigh measurements</cd:Description>
                                 <cd:Unit>MHz/km</cd:Unit>
                                 <cd:NativeType>double</cd:NativeType>
+                                <ct:NamedTest id="Range015To03"/>                                
                               </cd:Float>
                             </cd:Type>
                           </cd:Field>
@@ -82,6 +85,7 @@
                                 <cd:Description>Bias for the nadir Mie measurements</cd:Description>
                                 <cd:Unit>MHz/km</cd:Unit>
                                 <cd:NativeType>double</cd:NativeType>
+                                <ct:NamedTest id="Range005To01"/>
                               </cd:Float>
                             </cd:Type>
                           </cd:Field>
@@ -92,6 +96,7 @@
                                 <cd:Description>Reference range with 0 MHz/km bias for off-nadir pointing measurements.</cd:Description>
                                 <cd:Unit>km</cd:Unit>
                                 <cd:NativeType>double</cd:NativeType>
+                                <ct:NamedTest id="Range450To550"/>
                               </cd:Float>
                             </cd:Type>
                           </cd:Field>
@@ -102,6 +107,7 @@
                                 <cd:Description>Reference range with 0 MHz/km bias for nadir pointing measurements.</cd:Description>
                                 <cd:Unit>km</cd:Unit>
                                 <cd:NativeType>double</cd:NativeType>
+                                <ct:NamedTest id="Range350To450"/>
                               </cd:Float>
                             </cd:Type>
                           </cd:Field>

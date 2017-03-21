@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:Record format="binary" name="Level_1B_Product_04_04" last-modified="2015-04-20" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+<cd:Record format="binary" name="Level_1B_Product_04_04" last-modified="2017-03-01" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
   <cd:Description>Level 1B Wind Measurement Product</cd:Description>
   <cd:Field name="mph">
     <cd:NamedType id="MPH_v2"/>
@@ -86,4 +86,5 @@
     <cd:BitOffset><![CDATA[$ds_offset[7]]]></cd:BitOffset>
   </cd:Field>
   <ct:NamedTest id="NumDataSetsLevel1B_03_07" path="mph/num_data_sets"/>
+  <ct:NamedTest id="MoreThanTwoPercentOfUsefulSignalDataQualityValid"/>
 </cd:Record>

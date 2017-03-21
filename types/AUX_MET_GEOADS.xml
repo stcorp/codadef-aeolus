@@ -6,6 +6,7 @@
       <ct:NamedTest id="RangeSecond" path="seconds"/>
       <ct:NamedTest id="RangeMicroSecond" path="microseconds"/>
     </cd:Time>
+    <ct:NamedTest id="TimeWithinMphSensingPeriod"/>
   </cd:Field>
   <cd:Field name="amd_latitude">
     <cd:Integer>
@@ -16,6 +17,7 @@
       </cd:Conversion>
       <cd:BitSize>32</cd:BitSize>
       <cd:NativeType>int32</cd:NativeType>
+      <ct:NamedTest id="RangeLatitude6"/>
     </cd:Integer>
   </cd:Field>
   <cd:Field name="amd_longitude">
@@ -27,6 +29,7 @@
       </cd:Conversion>
       <cd:BitSize>32</cd:BitSize>
       <cd:NativeType>int32</cd:NativeType>
+      <ct:NamedTest id="RangeLongitudeSigned6"/>
     </cd:Integer>
   </cd:Field>
   <cd:Field name="amd_zg">

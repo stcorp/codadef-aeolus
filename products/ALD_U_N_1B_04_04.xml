@@ -23,4 +23,73 @@
     <cd:Dimension><![CDATA[$num_ds]]></cd:Dimension>
     <cd:Init><![CDATA[for i = 0 to $num_ds - 1 do $num_dsr[i] = int(/dsd[$ds_to_dsd_index[i]]/num_dsr)]]></cd:Init>
   </cd:ProductVariable>
+
+  <!-- MPH Cross File Tests -->
+  <ct:NamedCrossFileTest id="MPH_Product"/>
+  <ct:NamedCrossFileTest id="MPH_Proc_Stage"/>
+  <ct:NamedCrossFileTest id="MPH_Ref_Doc"/>
+  <ct:NamedCrossFileTest id="MPH_Acquisition_Station"/>
+  <ct:NamedCrossFileTest id="MPH_Proc_Center"/>
+  <ct:NamedCrossFileTest id="MPH_Proc_Time"/>
+  <ct:NamedCrossFileTest id="MPH_Software_Ver"/>
+  <ct:NamedCrossFileTest id="MPH_Baseline"/>
+  <ct:NamedCrossFileTest id="MPH_Sensing_Start"/>
+  <ct:NamedCrossFileTest id="MPH_Sensing_Stop"/>
+  <ct:NamedCrossFileTest id="MPH_Phase"/>
+  <ct:NamedCrossFileTest id="MPH_Cycle"/>
+  <ct:NamedCrossFileTest id="MPH_Rel_Orbit"/>
+  <ct:NamedCrossFileTest id="MPH_Abs_Orbit"/>
+  <ct:NamedCrossFileTest id="MPH_State_Vector_Time"/>
+  <ct:NamedCrossFileTest id="MPH_Delta_UT1"/>
+  <ct:NamedCrossFileTest id="MPH_X_Position"/>
+  <ct:NamedCrossFileTest id="MPH_Y_Position"/>
+  <ct:NamedCrossFileTest id="MPH_Z_Position"/>
+  <ct:NamedCrossFileTest id="MPH_X_Velocity"/>
+  <ct:NamedCrossFileTest id="MPH_Y_Velocity"/>
+  <ct:NamedCrossFileTest id="MPH_Z_Velocity"/>
+  <ct:NamedCrossFileTest id="MPH_Vector_Source"/>
+  <ct:NamedCrossFileTest id="MPH_Utc_Sbt_Time"/>
+  <ct:NamedCrossFileTest id="MPH_Sat_Binary_Time"/>
+  <ct:NamedCrossFileTest id="MPH_Leap_Utc"/>
+  <ct:NamedCrossFileTest id="MPH_Leap_Sign"/>
+  <ct:NamedCrossFileTest id="MPH_Leap_Err"/>
+  <ct:NamedCrossFileTest id="MPH_Product_Err"/>
+  <ct:NamedCrossFileTest id="MPH_Tot_Size"/>
+  <ct:NamedCrossFileTest id="MPH_Sph_Size"/>
+  <ct:NamedCrossFileTest id="MPH_Num_Dsd"/>
+  <ct:NamedCrossFileTest id="MPH_Dsd_Size"/>
+  <ct:NamedCrossFileTest id="MPH_Num_Data_Sets"/>
+
+  <!-- SPH Cross File Tests -->
+  <ct:NamedCrossFileTest id="SPH_Sph_Descriptor"/>
+  <ct:NamedCrossFileTest id="SPH_Intersect_Start_Lat"/>
+  <ct:NamedCrossFileTest id="SPH_Intersect_Start_Long"/>
+  <ct:NamedCrossFileTest id="SPH_Intersect_Stop_Lat"/>
+  <ct:NamedCrossFileTest id="SPH_Intersect_Stop_Long"/>
+  <ct:NamedCrossFileTest id="SPH_Sat_Track"/>
+  <ct:NamedCrossFileTest id="SPH_Base_Laser_Frequency"/>
+  <ct:NamedCrossFileTest id="SPH_N_Max"/>
+  <ct:NamedCrossFileTest id="SPH_N_Max_Actual"/>  
+  <ct:NamedCrossFileTest id="SPH_Total_Num_of_Observations"/>
+  <ct:NamedCrossFileTest id="SPH_Total_Num_of_Measurements"/>
+  <ct:NamedCrossFileTest id="SPH_Total_Num_of_Reference_Pulses"/>  
+  <ct:NamedCrossFileTest id="SPH_Num_Mie_Observations_Used"/>
+  <ct:NamedCrossFileTest id="SPH_Num_Rayleigh_Observations_Used"/>
+  <ct:NamedCrossFileTest id="SPH_Num_Mie_Measurements_Used"/>
+  <ct:NamedCrossFileTest id="SPH_Num_Rayleigh_Measurements_Used"/>
+  <ct:NamedCrossFileTest id="SPH_Num_Mie_Reference_Pulses_Used"/>
+  <ct:NamedCrossFileTest id="SPH_Num_Rayleigh_Reference_Pulses_Used"/>
+  <ct:NamedCrossFileTest id="SPH_Num_Mie_Zero_Wind_Detected"/>
+  <ct:NamedCrossFileTest id="SPH_Num_Rayleigh_Zero_Wind_Detected"/>
+  <ct:NamedCrossFileTest id="SPH_Num_Mie_Measurements_Ground_Echo_Detected"/>
+  <ct:NamedCrossFileTest id="SPH_Num_Rayleigh_Measurements_Ground_Echo_Detected"/>
+  <ct:NamedCrossFileTest id="SPH_Total_Num_of_Measurement_Invalid"/>
+  <ct:NamedCrossFileTest id="SPH_Total_Num_of_Pulse_Validity_Status_Flag_False"/>
+  <ct:NamedCrossFileTest id="SPH_Total_Num_of_Sat_Not_on_Target_Measurements"/>
+  <ct:NamedCrossFileTest id="SPH_Total_Num_of_Corrupt_Mie_Measurement_Bins"/>
+  <ct:NamedCrossFileTest id="SPH_Total_Num_of_Corrupt_Rayleigh_Measurement_Bins"/>
+  <ct:NamedCrossFileTest id="SPH_Total_Num_of_Corrupt_Mie_Reference_Pulses"/>
+  <ct:NamedCrossFileTest id="SPH_Total_Num_of_Corrupt_Rayleigh_Reference_Pulses"/>
+  <ct:NamedCrossFileTest id="SPH_NF_Order"/>
+
 </cd:ProductDefinition>
