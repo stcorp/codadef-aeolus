@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="binary" last-modified="2015-12-04" name="Level_2A_Group_PCD_ADSR_03_02">
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="binary" last-modified="2017-03-22" name="Level_2A_Group_PCD_ADSR_03_02">
   <cd:Field name="starttime">
     <cd:Time timeformat="binary_envisat_datetime">
       <cd:Description>Start date and time of the group profile covered by the present DSR. This is the centroid time of the first measurement of the profile.</cd:Description>
@@ -60,7 +60,7 @@
   <cd:Field name="particle_backscatter_variance">
     <cd:Float>
       <cd:Description>Variance of the particle backscatter coefficient.</cd:Description>
-      <cd:Unit>m^-2 sr / 2</cd:Unit>
+      <cd:Unit>m^-2 sr^-2</cd:Unit>
       <cd:BitSize>64</cd:BitSize>
       <cd:NativeType>double</cd:NativeType>
     </cd:Float>
@@ -90,7 +90,7 @@
   <cd:Field name="mid_particle_backscatter_variance_top">
     <cd:Float>
       <cd:Description>Variance of the particle backscatter coefficient in this height top middle bin.</cd:Description>
-      <cd:Unit>m^-2 sr / 2</cd:Unit>
+      <cd:Unit>m^-2 sr^-2</cd:Unit>
       <cd:BitSize>64</cd:BitSize>
       <cd:NativeType>double</cd:NativeType>
     </cd:Float>
@@ -121,7 +121,7 @@
   <cd:Field name="mid_particle_backscatter_variance_bot">
     <cd:Float>
       <cd:Description>Variance of the particle backscatter coefficient in this height top middle bin.</cd:Description>
-      <cd:Unit>m^-2 sr / 2</cd:Unit>
+      <cd:Unit>m^-2 sr^-2</cd:Unit>
       <cd:BitSize>64</cd:BitSize>
       <cd:NativeType>double</cd:NativeType>
     </cd:Float>

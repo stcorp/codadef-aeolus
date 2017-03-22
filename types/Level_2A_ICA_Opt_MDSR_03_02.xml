@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="binary" last-modified="2015-12-07" name="Level_2A_ICA_Opt_MDSR_03_02">
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="binary" last-modified="2017-03-22" name="Level_2A_ICA_Opt_MDSR_03_02">
   <cd:Field name="starttime">
     <cd:Time timeformat="binary_envisat_datetime">
       <cd:Description>Start date and time of the ICA profile covered by the present DSR</cd:Description>
@@ -30,7 +30,7 @@
         <cd:Field name="backscatter">
           <cd:Float>
             <cd:Description>Particle backscatter of the bin</cd:Description>
-            <cd:Unit>10^-6 sr m^-1</cd:Unit>
+            <cd:Unit>10^-6 sr^-1 m^-1</cd:Unit>
             <cd:BitSize>64</cd:BitSize>
             <cd:NativeType>double</cd:NativeType>
           </cd:Float>
