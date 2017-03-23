@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="binary" last-modified="2015-12-09" name="Level_2A_SCA_Opt_MDSR_03_02">
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="binary" last-modified="2017-03-23" name="Level_2A_SCA_Opt_MDSR_03_02">
   <cd:Field name="starttime">
     <cd:Time timeformat="binary_envisat_datetime">
       <cd:Description>Start date and time of the SCA profile covered by the present DSR</cd:Description>
@@ -76,9 +76,6 @@
           <cd:Float>
             <cd:Description>Bottom altitude of the middle bin</cd:Description>
             <cd:Unit>m</cd:Unit>
-            <cd:Conversion denominator="1000000.000000" numerator="1.000000">
-              <cd:Unit>degrees_north</cd:Unit>
-            </cd:Conversion>
             <cd:BitSize>64</cd:BitSize>
             <cd:NativeType>double</cd:NativeType>
           </cd:Float>
