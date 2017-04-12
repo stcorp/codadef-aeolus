@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="xml" last-modified="2009-01-30" name="Auxiliary_Calibration_ZWC_03_07" namexml="Auxiliary_Calibration_ZWC">
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="xml" last-modified="2017-04-12" name="Auxiliary_Calibration_ZWC_03_07" namexml="Auxiliary_Calibration_ZWC">
   <cd:Description>Auxiliary Calibration ZWC</cd:Description>
   <cd:Field name="List_of_Data_Set_Records">
     <cd:Record namexml="List_of_Data_Set_Records">
@@ -16,7 +16,6 @@
                   <cd:Description>Start of observation time</cd:Description>
                   <cd:Mapping string="UTC=0000-00-00T00:00:00" value="-inf"/>
                   <cd:Mapping string="UTC=9999-99-99T99:99:99" value="+inf"/>
-                  <cd:Mapping string="" value="nan"/>
                 </cd:Time>
               </cd:Type>
             </cd:Field>

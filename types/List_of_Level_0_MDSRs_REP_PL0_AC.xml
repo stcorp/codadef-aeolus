@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="xml" last-modified="2008-07-01" name="List_of_Level_0_MDSRs_REP_PL0_AC" namexml="List_of_Level_0_MDSRs">
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="xml" last-modified="2017-04-12" name="List_of_Level_0_MDSRs_REP_PL0_AC" namexml="List_of_Level_0_MDSRs">
   <cd:Description>List_of_Level_0_MDSRs</cd:Description>
   <cd:Attribute name="count">
   </cd:Attribute>
@@ -13,7 +13,6 @@
             <cd:Time format="ascii" timeformat="ascii_ccsds_datetime_ymd2_with_ref">
               <cd:Mapping string="UTC=0000-00-00T00:00:00.000000" value="-inf"/>
               <cd:Mapping string="UTC=9999-99-99T99:99:99.999999" value="+inf"/>
-              <cd:Mapping string="" value="nan"/>
             </cd:Time>
           </cd:Type>
         </cd:Field>
@@ -22,7 +21,6 @@
             <cd:Time format="ascii" timeformat="ascii_ccsds_datetime_ymd2_with_ref">
               <cd:Mapping string="UTC=0000-00-00T00:00:00.000000" value="-inf"/>
               <cd:Mapping string="UTC=9999-99-99T99:99:99.999999" value="+inf"/>
-              <cd:Mapping string="" value="nan"/>
             </cd:Time>
           </cd:Type>
         </cd:Field>

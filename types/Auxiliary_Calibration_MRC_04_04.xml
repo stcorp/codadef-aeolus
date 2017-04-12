@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:Record format="xml" last-modified="2015-08-31" name="Auxiliary_Calibration_MRC_04_04" namexml="Auxiliary_Calibration_MRC" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+<cd:Record format="xml" last-modified="2017-04-12" name="Auxiliary_Calibration_MRC_04_04" namexml="Auxiliary_Calibration_MRC" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
   <cd:Description>Auxiliary Calibration MRC</cd:Description>
   <cd:Field name="List_of_Data_Set_Records">
     <cd:Record namexml="List_of_Data_Set_Records">
@@ -16,7 +16,6 @@
                   <cd:Description>Start of observation time of the first BRC</cd:Description>
                   <cd:Mapping string="UTC=0000-00-00T00:00:00" value="-inf"/>
                   <cd:Mapping string="UTC=9999-12-31T23:59:59" value="+inf"/>
-                  <cd:Mapping string="" value="nan"/>
                 </cd:Time>
               </cd:Type>
             </cd:Field>
@@ -26,7 +25,6 @@
                   <cd:Description>Start of observation time of the last BRC</cd:Description>
                   <cd:Mapping string="UTC=0000-00-00T00:00:00" value="-inf"/>
                   <cd:Mapping string="UTC=9999-12-31T23:59:59" value="+inf"/>
-                  <cd:Mapping string="" value="nan"/>
                 </cd:Time>
               </cd:Type>
             </cd:Field>
@@ -903,7 +901,6 @@ Measurement_Valid = TRUE, Measurement_Data_Present = TRUE, Spacecraft_Attitude_O
                             <cd:Description>Start time of the last observation with measurements contributing to this frequency step.</cd:Description>
                             <cd:Mapping string="UTC=0000-00-00T00:00:00" value="-inf"/>
                             <cd:Mapping string="UTC=9999-12-31T23:59:59" value="+inf"/>
-                            <cd:Mapping string="" value="nan"/>
                           </cd:Time>
                         </cd:Type>
                       </cd:Field>

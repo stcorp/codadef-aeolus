@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:ProductDefinition id="MPL_OBPL___02_03" format="xml" last-modified="2016-12-22" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+<cd:ProductDefinition id="MPL_OBPL___02_03" format="xml" last-modified="2017-04-12" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
   <cd:Record format="xml">
     <cd:Field name="Data_Block">
       <cd:Record namexml="Data_Block">
@@ -29,7 +29,6 @@
               <cd:Type namexml="PIF_End">
                 <cd:Time format="ascii" timeformat="ascii_ccsds_datetime_ymd1_with_ref">
                   <cd:Description>End of the planning period to which this Plan Increment File refers</cd:Description>
-                  <cd:Mapping string="" value="nan"/>
                 </cd:Time>
               </cd:Type>
             </cd:Field>

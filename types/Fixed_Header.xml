@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:Record name="Fixed_Header" format="xml" namexml="Fixed_Header" last-modified="2015-04-24" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+<cd:Record name="Fixed_Header" format="xml" namexml="Fixed_Header" last-modified="2017-04-12" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
   <cd:Description>Earth Explorer Fixed Header</cd:Description>
   <cd:Field name="File_Name">
     <cd:Text namexml="File_Name">
@@ -42,7 +42,6 @@
             <cd:Mapping string="UTC=0000-00-00T00:00:00" value="-inf"/>
             <cd:Mapping string="UTC=9999-12-31T23:59:59" value="+inf"/>
             <cd:Mapping string="UTC=9999-99-99T99:99:99" value="+inf"/>
-            <cd:Mapping string="" value="nan"/>
           </cd:Time>
         </cd:Type>
       </cd:Field>
@@ -53,7 +52,6 @@
             <cd:Mapping string="UTC=0000-00-00T00:00:00" value="-inf"/>
             <cd:Mapping string="UTC=9999-12-31T23:59:59" value="+inf"/>
             <cd:Mapping string="UTC=9999-99-99T99:99:99" value="+inf"/>
-            <cd:Mapping string="" value="nan"/>
           </cd:Time>
         </cd:Type>
       </cd:Field>
@@ -93,7 +91,6 @@
             <cd:Mapping string="UTC=0000-00-00T00:00:00" value="-inf"/>
             <cd:Mapping string="UTC=9999-12-31T23:59:59" value="+inf"/>
             <cd:Mapping string="UTC=9999-99-99T99:99:99" value="+inf"/>
-            <cd:Mapping string="" value="nan"/>
           </cd:Time>
         </cd:Type>
       </cd:Field>

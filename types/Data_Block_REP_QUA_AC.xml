@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:Record name="Data_Block_REP_QUA_AC" format="xml" namexml="Data_Block" last-modified="2015-11-23" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+<cd:Record name="Data_Block_REP_QUA_AC" format="xml" namexml="Data_Block" last-modified="2017-04-12" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
   <cd:Attribute name="type">
     <cd:Optional/>
     <cd:FixedValue>xml</cd:FixedValue>
@@ -37,7 +37,6 @@
                       <cd:Description>Time at which the polling mechanism has detected the file on the transfer directory Format: 'UTC=YYYY-MM-DDTHH:MM:SS'</cd:Description>
                       <cd:Mapping string="UTC=0000-00-00T00:00:00" value="-inf"/>
                       <cd:Mapping string="UTC=9999-99-99T99:99:99" value="+inf"/>
-                      <cd:Mapping string="" value="nan"/>
                     </cd:Time>
                   </cd:Type>
                 </cd:Field>
@@ -87,7 +86,6 @@
                       <cd:Description>Time at which the planned calibration activity has been executed</cd:Description>
                       <cd:Mapping string="UTC=0000-00-00T00:00:00" value="-inf"/>
                       <cd:Mapping string="UTC=9999-99-99T99:99:99" value="+inf"/>
-                      <cd:Mapping string="" value="nan"/>
                     </cd:Time>
                   </cd:Type>
                 </cd:Field>
@@ -112,7 +110,6 @@
                       <cd:Description>Time at which the output calibration file has been generated</cd:Description>
                       <cd:Mapping string="UTC=0000-00-00T00:00:00" value="-inf"/>
                       <cd:Mapping string="UTC=9999-99-99T99:99:99" value="+inf"/>
-                      <cd:Mapping string="" value="nan"/>
                     </cd:Time>
                   </cd:Type>
                 </cd:Field>
@@ -122,7 +119,6 @@
                       <cd:Description>Time at which the output file has been transferred to the last of the intended receivers. Field is empty if not all receivers have acquired the output file</cd:Description>
                       <cd:Mapping string="UTC=0000-00-00T00:00:00" value="-inf"/>
                       <cd:Mapping string="UTC=9999-99-99T99:99:99" value="+inf"/>
-                      <cd:Mapping string="" value="nan"/>
                     </cd:Time>
                   </cd:Type>
                 </cd:Field>
@@ -203,7 +199,6 @@
                       <cd:Description>Time at which the file has been generated</cd:Description>
                       <cd:Mapping string="UTC=0000-00-00T00:00:00" value="-inf"/>
                       <cd:Mapping string="UTC=9999-99-99T99:99:99" value="+inf"/>
-                      <cd:Mapping string="" value="nan"/>
                     </cd:Time>
                   </cd:Type>
                 </cd:Field>
@@ -213,7 +208,6 @@
                       <cd:Description>Time at which the file has been validated</cd:Description>
                       <cd:Mapping string="UTC=0000-00-00T00:00:00" value="-inf"/>
                       <cd:Mapping string="UTC=9999-99-99T99:99:99" value="+inf"/>
-                      <cd:Mapping string="" value="nan"/>
                     </cd:Time>
                   </cd:Type>
                 </cd:Field>
@@ -243,7 +237,6 @@
                                 <cd:Description>Time of the initial transfer action</cd:Description>
                                 <cd:Mapping string="UTC=0000-00-00T00:00:00" value="-inf"/>
                                 <cd:Mapping string="UTC=9999-99-99T99:99:99" value="+inf"/>
-                                <cd:Mapping string="" value="nan"/>
                               </cd:Time>
                             </cd:Type>
                           </cd:Field>
@@ -276,7 +269,6 @@
                                 <cd:Description>Time of successful end of transfer</cd:Description>
                                 <cd:Mapping string="UTC=0000-00-00T00:00:00" value="-inf"/>
                                 <cd:Mapping string="UTC=9999-99-99T99:99:99" value="+inf"/>
-                                <cd:Mapping string="" value="nan"/>
                               </cd:Time>
                             </cd:Type>
                           </cd:Field>

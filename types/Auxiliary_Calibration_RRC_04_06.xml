@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="xml" last-modified="2016-07-22" name="Auxiliary_Calibration_RRC_04_06" namexml="Auxiliary_Calibration_RRC">
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="xml" last-modified="2017-04-12" name="Auxiliary_Calibration_RRC_04_06" namexml="Auxiliary_Calibration_RRC">
   <cd:Description>Auxiliary Calibration RRC</cd:Description>
   <cd:Field name="List_of_Data_Set_Records">
     <cd:Record namexml="List_of_Data_Set_Records">
@@ -16,7 +16,6 @@
                   <cd:Description>Start of observation time of the first BRC</cd:Description>
                   <cd:Mapping string="UTC=0000-00-00T00:00:00" value="-inf"/>
                   <cd:Mapping string="UTC=9999-12-31T23:59:59" value="+inf"/>
-                  <cd:Mapping string="" value="nan"/>
                 </cd:Time>
               </cd:Type>
             </cd:Field>
@@ -26,7 +25,6 @@
                   <cd:Description>Start of observation time of the last BRC</cd:Description>
                   <cd:Mapping string="UTC=0000-00-00T00:00:00" value="-inf"/>
                   <cd:Mapping string="UTC=9999-12-31T23:59:59" value="+inf"/>
-                  <cd:Mapping string="" value="nan"/>
                 </cd:Time>
               </cd:Type>
             </cd:Field>
@@ -1333,7 +1331,6 @@
                             <cd:Description>Observation centroid time</cd:Description>
                             <cd:Mapping string="UTC=0000-00-00T00:00:00" value="-inf"/>
                             <cd:Mapping string="UTC=9999-12-31T23:59:59" value="+inf"/>
-                            <cd:Mapping string="" value="nan"/>
                           </cd:Time>
                         </cd:Type>
                       </cd:Field>

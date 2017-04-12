@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:Record name="List_of_Orbit_Changes" format="xml" namexml="List_of_Orbit_Changes" last-modified="2009-01-23" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+<cd:Record name="List_of_Orbit_Changes" format="xml" namexml="List_of_Orbit_Changes" last-modified="2017-04-12" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
   <cd:Description>List of Orbit Change</cd:Description>
   <cd:Attribute name="count"/>
   <cd:Field name="Orbit_Change">
@@ -104,7 +104,6 @@
                   <cd:Description>TAI date and time of ANX, in ASCII CCSDS time format, including time reference and microseconds</cd:Description>
                   <cd:Mapping string="UTC=0000-00-00T00:00:00.000000" value="-inf"/>
                   <cd:Mapping string="UTC=9999-99-99T99:99:99.999999" value="+inf"/>
-                  <cd:Mapping string="" value="nan"/>
                 </cd:Time>
               </cd:Type>
             </cd:Field>
@@ -114,7 +113,6 @@
                   <cd:Description>UTC date and time of ANX, in ASCII CCSDS time format, including time reference and microseconds</cd:Description>
                   <cd:Mapping string="UTC=0000-00-00T00:00:00.000000" value="-inf"/>
                   <cd:Mapping string="UTC=9999-99-99T99:99:99.999999" value="+inf"/>
-                  <cd:Mapping string="" value="nan"/>
                 </cd:Time>
               </cd:Type>
             </cd:Field>
@@ -124,7 +122,6 @@
                   <cd:Description>UT1 date and time of ANX, in ASCII CCSDS time format, including time reference and microseconds</cd:Description>
                   <cd:Mapping string="UTC=0000-00-00T00:00:00.000000" value="-inf"/>
                   <cd:Mapping string="UTC=9999-99-99T99:99:99.999999" value="+inf"/>
-                  <cd:Mapping string="" value="nan"/>
                 </cd:Time>
               </cd:Type>
             </cd:Field>

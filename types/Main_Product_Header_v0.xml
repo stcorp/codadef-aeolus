@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:Record name="Main_Product_Header_v0" format="xml" namexml="Main_Product_Header" last-modified="2010-08-26" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+<cd:Record name="Main_Product_Header_v0" format="xml" namexml="Main_Product_Header" last-modified="2017-04-12" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
   <cd:Description>Main Product Header</cd:Description>
   <cd:Field name="Product">
     <cd:Text namexml="Product">
@@ -36,7 +36,6 @@
         <cd:Description>Time of processing</cd:Description>
         <cd:Mapping string="UTC=0000-00-00T00:00:00" value="-inf"/>
         <cd:Mapping string="UTC=9999-99-99T99:99:99" value="+inf"/>
-        <cd:Mapping string="" value="nan"/>
       </cd:Time>
     </cd:Type>
   </cd:Field>
@@ -56,7 +55,6 @@
         <cd:Description>Start time of sensing</cd:Description>
         <cd:Mapping string="UTC=0000-00-00T00:00:00" value="-inf"/>
         <cd:Mapping string="UTC=9999-99-99T99:99:99" value="+inf"/>
-        <cd:Mapping string="" value="nan"/>
       </cd:Time>
     </cd:Type>
   </cd:Field>
@@ -66,7 +64,6 @@
         <cd:Description>Stop time of sensing</cd:Description>
         <cd:Mapping string="UTC=0000-00-00T00:00:00" value="-inf"/>
         <cd:Mapping string="UTC=9999-99-99T99:99:99" value="+inf"/>
-        <cd:Mapping string="" value="nan"/>
       </cd:Time>
     </cd:Type>
   </cd:Field>
@@ -109,7 +106,6 @@
         <cd:Description>Time of state vector</cd:Description>
         <cd:Mapping string="UTC=0000-00-00T00:00:00" value="-inf"/>
         <cd:Mapping string="UTC=9999-99-99T99:99:99" value="+inf"/>
-        <cd:Mapping string="" value="nan"/>
       </cd:Time>
     </cd:Type>
   </cd:Field>
@@ -220,7 +216,6 @@
         <cd:Description>Time corresponding to Sattelite Binary Time</cd:Description>
         <cd:Mapping string="UTC=0000-00-00T00:00:00" value="-inf"/>
         <cd:Mapping string="UTC=9999-99-99T99:99:99" value="+inf"/>
-        <cd:Mapping string="" value="nan"/>
       </cd:Time>
     </cd:Type>
   </cd:Field>
@@ -256,7 +251,6 @@
         <cd:Description>Time of occurence of the leap second</cd:Description>
         <cd:Mapping string="UTC=0000-00-00T00:00:00" value="-inf"/>
         <cd:Mapping string="UTC=9999-99-99T99:99:99" value="+inf"/>
-        <cd:Mapping string="" value="nan"/>
       </cd:Time>
     </cd:Type>
   </cd:Field>

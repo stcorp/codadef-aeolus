@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:Record name="Auxiliary_Calibration_DCC_03_06" format="xml" namexml="Auxiliary_Calibration_DCC" last-modified="2010-08-26" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+<cd:Record name="Auxiliary_Calibration_DCC_03_06" format="xml" namexml="Auxiliary_Calibration_DCC" last-modified="2017-04-12" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
   <cd:Description>Auxiliary Calibration DCC</cd:Description>
   <cd:Field name="List_of_Data_Set_Records">
     <cd:Record namexml="List_of_Data_Set_Records">
@@ -17,7 +17,6 @@
                   <cd:Description>Start of observation time of the first BRC</cd:Description>
                   <cd:Mapping string="UTC=0000-00-00T00:00:00" value="-inf"/>
                   <cd:Mapping string="UTC=9999-99-99T99:99:99" value="+inf"/>
-                  <cd:Mapping string="" value="nan"/>
                 </cd:Time>
               </cd:Type>
             </cd:Field>
@@ -27,7 +26,6 @@
                   <cd:Description>Start of observation time of the last BRC</cd:Description>
                   <cd:Mapping string="UTC=0000-00-00T00:00:00" value="-inf"/>
                   <cd:Mapping string="UTC=9999-99-99T99:99:99" value="+inf"/>
-                  <cd:Mapping string="" value="nan"/>
                 </cd:Time>
               </cd:Type>
             </cd:Field>

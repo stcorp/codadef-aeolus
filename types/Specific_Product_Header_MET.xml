@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:Record name="Specific_Product_Header_MET" format="xml" namexml="Specific_Product_Header" last-modified="2008-07-01" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+<cd:Record name="Specific_Product_Header_MET" format="xml" namexml="Specific_Product_Header" last-modified="2017-04-12" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
   <cd:Description>Specific Product Header for ALD RBC products</cd:Description>
   <cd:Field name="Sph_Descriptor">
     <cd:Text namexml="Sph_Descriptor">
@@ -22,7 +22,6 @@
         <cd:Description>Forecast initial date and time</cd:Description>
         <cd:Mapping string="UTC=0000-00-00T00:00:00.000000" value="-inf"/>
         <cd:Mapping string="UTC=9999-99-99T99:99:99.999999" value="+inf"/>
-        <cd:Mapping string="" value="nan"/>
       </cd:Time>
     </cd:Type>
   </cd:Field>
