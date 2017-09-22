@@ -1,5 +1,5 @@
 <?xml version="1.0"?>                                                                          
-<cd:Record name="Level_2A_Processing_Parameters_03_02" format="xml" namexml="Level_2A_Processing_Parameters" last-modified="2015-12-09" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+<cd:Record name="Level_2A_Processing_Parameters_03_05" format="xml" namexml="Level_2A_Processing_Parameters" last-modified="2015-12-09" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
   <cd:Field name="List_of_Data_Set_Records">
     <cd:Record namexml="List_of_Data_Set_Records">
       <cd:Description>List of Data Set Records</cd:Description>
@@ -322,8 +322,8 @@
                         </cd:Field>
                       </cd:Record>
                     </cd:Field>
-                    <cd:Field name="FeatureFinder">
-                      <cd:Record namexml="FeatureFinder">
+                    <cd:Field name="Feature_Finder">
+                      <cd:Record namexml="Feature_Finder">
                         <cd:Field name="Group_Energy_Threshold">
                           <cd:Type namexml="Group_Energy_Threshold">
                             <cd:Attribute name="unit"/>

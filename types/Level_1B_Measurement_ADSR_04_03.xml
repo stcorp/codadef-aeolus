@@ -121,7 +121,7 @@
         <cd:Description>Level 1B Measurement Validity Indicator</cd:Description>
         <cd:Field name="measurement_data_present">
           <cd:Integer>
-            <cd:Description>TRUE = Measurement data is present in BRC. SID (measurement index + 4) missing</cd:Description>
+            <cd:Description>TRUE = Measurement data is present in BRC. FALSE = SID (measurement index + 4) missing</cd:Description>
             <cd:BitSize>8</cd:BitSize>
             <cd:NativeType>uint8</cd:NativeType>
             <ct:NamedTest id="BooleanBinTest"/>

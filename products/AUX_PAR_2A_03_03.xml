@@ -1,14 +1,9 @@
 <?xml version="1.0"?>
-<cd:ProductDefinition id="MPL_ORBSCT_01_05" format="xml" last-modified="2008-07-01" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+<cd:ProductDefinition id="AUX_PAR_2A_03_03" format="xml" last-modified="2017-04-09" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
   <cd:Record format="xml">
     <cd:Field name="Earth_Explorer_File">
       <cd:Record namexml="Earth_Explorer_File">
-        <cd:Attribute name="schemaLocation">
-          <cd:Optional/>
-        </cd:Attribute>
-        <cd:Attribute name="schemaVersion">
-          <cd:Optional/>
-        </cd:Attribute>        
+        <cd:Attribute name="schemaversion"/>
         <cd:Description>Earth Explorer File</cd:Description>
         <cd:Field name="Earth_Explorer_Header">
           <cd:Record namexml="Earth_Explorer_Header">
@@ -19,14 +14,16 @@
             <cd:Field name="Variable_Header">
               <cd:Record namexml="Variable_Header">
                 <cd:Description>Variable Header Section</cd:Description>
-                  <cd:Field name="Time_Reference">
-                    <cd:Optional/>
-                    <cd:Text namexml="Time_Reference">
-                      <cd:Description>Reference time. For Orbit Scenario Files only the following value is allowed: UT1</cd:Description>
-                    </cd:Text>
-                  </cd:Field>                
+                <cd:Field name="Main_Product_Header">
+                  <cd:NamedType id="Main_Product_Header_v2"/>
+                </cd:Field>
+                <cd:Field name="Specific_Product_Header">
+                  <cd:NamedType id="Specific_Product_Header_Par2A"/>
+                </cd:Field>
               </cd:Record>
             </cd:Field>
+            <ct:NamedTest id="FileNameCheckEEF" path="Fixed_Header/File_Name"/>
+            <ct:NamedTest id="FileNameMatchFileVersionAt51" path="Fixed_Header/File_Name"/>
             <ct:NamedTest id="FileNameMatchValidityStart" path="Fixed_Header/File_Name"/>
           </cd:Record>
         </cd:Field>
@@ -36,8 +33,8 @@
               <cd:Optional/>
               <cd:FixedValue>xml</cd:FixedValue>
             </cd:Attribute>
-            <cd:Field name="List_of_Orbit_Changes">
-              <cd:NamedType id="List_of_Orbit_Changes"/>
+            <cd:Field name="Level_2A_Processing_Parameters">
+              <cd:NamedType id="Level_2A_Processing_Parameters_03_03"/>
             </cd:Field>
           </cd:Record>
         </cd:Field>

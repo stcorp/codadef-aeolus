@@ -1,0 +1,215 @@
+<?xml version="1.0"?>
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="binary" last-modified="2017-09-11" name="Level_1B_Mie_Core_Params_ADSR_04_08">
+  <cd:Field name="gaussian_width_a">
+    <cd:Float>
+      <cd:Description>Gaussian width a. This value should be approximately the fringe FWHM</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="peak_error_treshold">
+    <cd:Float>
+      <cd:Description>Peak error threshold</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="peak_error_threshold_reference_pulse">
+    <cd:Float>
+      <cd:Description>Peak error threshold for internal reference path signal</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="max_num_iterations">
+    <cd:Integer>
+      <cd:Description>Maximum number of gaussian iterations</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="snr_threshold">
+    <cd:Float>
+      <cd:Description>Threshold to switch Mie-Core processing on/off</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="start_fwhm">
+    <cd:Float>
+      <cd:Description>Starting value for FWHM</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="residual_error_threshold">
+    <cd:Float>
+      <cd:Description>Stop threshold for quadratic sum of differences between modeled and measured ACCD counts per pixel</cd:Description>
+      <cd:Unit>AU</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="max_iterations_lorentz_fit">
+    <cd:Integer>
+      <cd:Description>Maximum number of iterations in Lorentz fit-loop</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="fwhm_upper_threshold">
+    <cd:Float>
+      <cd:Description>Upper threshold for FWHM of Lorentz function for quality check</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="fwhm_lower_threshold">
+    <cd:Float>
+      <cd:Description>Lower threshold for FWHM of Lorentz function for quality check</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="peak_height_upper_threshold">
+    <cd:Float>
+      <cd:Description>Relative threshold for peak height of Lorentz function</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="peak_height_lower_threshold">
+    <cd:Float>
+      <cd:Description>Relative threshold for peak height of Lorentz function</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="peak_location_threshold">
+    <cd:Float>
+      <cd:Description>Peak location threshold</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="nonlinear_optimization_threshold">
+    <cd:Float>
+      <cd:Description>Stop threshold for Downhill Simplex algorithm merit function</cd:Description>
+      <cd:Unit>AU</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="max_iterations_nonlinear_optimization">
+    <cd:Integer>
+      <cd:Description>Maximum number of iterations of Downhill Simplex algorithm</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="num_spectral_sub_samples">
+    <cd:Integer>
+      <cd:Description>Number of functional evaluations of Lorentz fit function for one pixel</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="snr_threshold_reference_pulse">
+    <cd:Float>
+      <cd:Description>Threshold to switch Mie-Core processing on/off for internal reference path signal</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="start_fwhm_reference_pulse">
+    <cd:Float>
+      <cd:Description>Starting value for FWHM for internal reference path signal</cd:Description>
+      <cd:Unit>ACCD pixel</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="residual_error_threshold_reference_pulse">
+    <cd:Float>
+      <cd:Description>Stop threshold for change of quadratic sum of differences between modeled and measured ACCD counts per pixel: if the difference between the quadratic sum from the previous to the next iteration loop is below this threshold, the iteration is stopped for internal reference path signal.</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="max_iterations_lorentz_fit_reference_pulse">
+    <cd:Integer>
+      <cd:Description>Maximum number of iterations in Lorentz fit-loop for internal reference path signal</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="fwhm_upper_threshold_reference_pulse">
+    <cd:Float>
+      <cd:Description>Upper threshold for FWHM of Lorentz function for quality check for internal reference path signal</cd:Description>
+      <cd:Unit>ACCD pixel</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="fwhm_lower_threshold_reference_pulse">
+    <cd:Float>
+      <cd:Description>Lower threshold for FWHM of Lorentz function for quality check for internal reference path signal</cd:Description>
+      <cd:Unit>ACCD pixel</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="peak_height_upper_threshold_reference_pulse">
+    <cd:Float>
+      <cd:Description>Relative threshold for peak height of Lorentz function for internal reference path signal</cd:Description>
+      <cd:Unit>ACCD counts</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="peak_height_lower_threshold_reference_pulse">
+    <cd:Float>
+      <cd:Description>Relative threshold for peak height of Lorentz function for internal reference path signal</cd:Description>
+      <cd:Unit>ACCD counts</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="peak_location_threshold_reference_pulse">
+    <cd:Float>
+      <cd:Description>Peak location threshold for internal reference path signal</cd:Description>
+      <cd:Unit>ACCD pixel</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="nonlinear_optimization_threshold_reference_pulse">
+    <cd:Float>
+      <cd:Description>Stop threshold for Downhill Simplex algorithm merit function for internal reference path signal</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="max_iterations_nonlinear_optimization_reference_pulse">
+    <cd:Integer>
+      <cd:Description>Maximum number of iterations of Downhill Simplex algorithm for internal reference path signal</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="num_spectral_sub_samples_reference_pulse">
+    <cd:Integer>
+      <cd:Description>Number of functional evaluations of Lorentz fit function for one pixel for internal reference path signal</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>  
+  <cd:Field name="downhill_simplex_on">
+    <cd:Integer>
+      <cd:Description>Flag showing if the downhill simplex is on or off. If it is off (FALSE) a method using least squares minimization is used instead of DownHill Simplex</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+      <ct:NamedTest id="BooleanBinTest"/>
+    </cd:Integer>
+  </cd:Field>
+</cd:Record>

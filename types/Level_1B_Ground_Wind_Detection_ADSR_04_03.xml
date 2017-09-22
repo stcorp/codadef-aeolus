@@ -77,14 +77,14 @@
       <cd:Description>Level 1B ground Wind Direction Validation Criteria</cd:Description>
       <cd:Field name="min_num_mie_ground_echo_measurement_bins">
         <cd:Integer>
-          <cd:Description>Minimum number of Mie ground wind bins to validate ground correction factor</cd:Description>
+          <cd:Description>The minimum number of measurements with valid Mie ground bins detected in order to validate the new ground correction factor</cd:Description>
           <cd:BitSize>8</cd:BitSize>
           <cd:NativeType>uint8</cd:NativeType>
         </cd:Integer>
       </cd:Field>
       <cd:Field name="min_num_rayleigh_ground_echo_measurement_bins">
         <cd:Integer>
-          <cd:Description>Minimum number of Rayleigh ground wind bins to validate ground correction factor</cd:Description>
+          <cd:Description>The minimum number of measurements with valid Rayleigh ground bins detected in order to validate the new ground correction factor</cd:Description>
           <cd:BitSize>8</cd:BitSize>
           <cd:NativeType>uint8</cd:NativeType>
         </cd:Integer>

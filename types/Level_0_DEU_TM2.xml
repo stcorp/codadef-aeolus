@@ -1,0 +1,252 @@
+<?xml version="1.0"?>
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="binary" last-modified="2017-06-20" name="Level_0_DEU_TM2">
+  <cd:Description>DEU_TM2 Block</cd:Description>    
+  <cd:Field name="DEU_Sub_mode_setting">
+    <cd:Integer>
+      <cd:Description>DEU Sub-mode setting</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="DEU_Status">
+    <cd:Integer>
+      <cd:Description>DEU Status</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="On_Off_Status">
+    <cd:Integer>
+      <cd:Description>On/Off Status</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="H_W_Settings">
+    <cd:Integer>
+      <cd:Description>H/W Settings</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="MIE_temperature">
+    <cd:Integer>
+      <cd:Description>MIE temperature</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="MIE_TEC_current">
+    <cd:Integer>
+      <cd:Description>MIE TEC current</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="RAY_temperature">
+    <cd:Integer>
+      <cd:Description>RAY temperature</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="RAY_TEC_current">
+    <cd:Integer>
+      <cd:Description>RAY TEC current</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="MIE_TEC_thermal_control_result">
+    <cd:Integer>
+      <cd:Description>MIE TEC thermal control result</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="RAY_TEC_thermal_control_result">
+    <cd:Integer>
+      <cd:Description>RAY TEC thermal control result</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="DEU_temp_no_1_Video_Chains">
+    <cd:Integer>
+      <cd:Description>DEU temp no 1 (Video Chains)</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="DEU_temp_no_2_FPGA">
+    <cd:Integer>
+      <cd:Description>DEU temp no 2 (FPGA)</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="DEU_temp_no_3_DEU_DC_DC">
+    <cd:Integer>
+      <cd:Description>DEU temp no 3 (DEU DC/DC)</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="DEU_temp_no_4_TEC_DC_DC">
+    <cd:Integer>
+      <cd:Description>DEU temp no 4 (TEC DC/DC)</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="DEU_temp_no_5_MIE_DC_DC">
+    <cd:Integer>
+      <cd:Description>DEU temp no 5 (MIE DC/DC)</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="DEU_temp_no_6_RAY_DC_DC">
+    <cd:Integer>
+      <cd:Description>DEU temp no 6 (RAY (DC/DC)</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="DEU_Voltage_Vcore">
+    <cd:Integer>
+      <cd:Description>DEU Voltage (+ Vcore)</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="DEU_Voltage_Vdig">
+    <cd:Integer>
+      <cd:Description>DEU Voltage (+ Vdig)</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="DEU_Voltage_Vadc">
+    <cd:Integer>
+      <cd:Description>DEU Voltage (+ Vadc)</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="DEU_Voltage_Vana">
+    <cd:Integer>
+      <cd:Description>DEU Voltage (+ Vana)</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="DEU_Voltage_minus_Vana">
+    <cd:Integer>
+      <cd:Description>DEU Voltage (- Vana)</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="MIE_Voltage_Vdig_plus">
+    <cd:Integer>
+      <cd:Description>MIE Voltage (+ Vdig)</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="MIE_Voltage_Vbias">
+    <cd:Integer>
+      <cd:Description>MIE Voltage (+ Vbias)</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="MIE_Voltage_Vana">
+    <cd:Integer>
+      <cd:Description>MIE Voltage (+ Vana)</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="MIE_Voltage_minus_Vana">
+    <cd:Integer>
+      <cd:Description>MIE Voltage (- Vana)</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="RAY_Voltage_Vdig">
+    <cd:Integer>
+      <cd:Description>RAY Voltage (+ Vdig)</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="RAY_Voltage_Vbias">
+    <cd:Integer>
+      <cd:Description>RAY Voltage (+ Vbias)</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="RAY_Voltage_Vana">
+    <cd:Integer>
+      <cd:Description>RAY Voltage (+ Vana)</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="RAY_Voltage_minus_Vana">
+    <cd:Integer>
+      <cd:Description>RAY Voltage (- Vana)</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="ATM_Gain">
+    <cd:Integer>
+      <cd:Description>ATM Gain</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="ATM_Offset">
+    <cd:Integer>
+      <cd:Description>ATM Offset</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="spare_1">
+    <cd:Integer>
+      <cd:Description>Spare</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+    <cd:Hidden/>          
+  </cd:Field>
+  <cd:Field name="Executed_Command_Counter">
+    <cd:Integer>
+      <cd:Description>Executed Command Counter</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="Rejected_Command_Counter">
+    <cd:Integer>
+      <cd:Description>Rejected Command Counter</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="spare_2">
+    <cd:Integer>
+      <cd:Description>Spare</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+    <cd:Hidden/>
+  </cd:Field>
+</cd:Record> 
+  

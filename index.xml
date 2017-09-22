@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:ProductClass name="AEOLUS" last-modified="2016-12-22" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+<cd:ProductClass name="AEOLUS" last-modified="2017-09-13" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
   <cd:Description>AEOLUS products</cd:Description>
   <cd:ProductType name="ALD_U_N_0_">
     <cd:Description>Aeolus Level 0 Product (DBL)</cd:Description>
@@ -119,6 +119,19 @@
         <cd:MatchData offset="95">521666_IODD_4_06       </cd:MatchData>
       </cd:DetectionRule>      
     </cd:ProductDefinition>
+    <cd:ProductDefinition id="ALD_U_N_1A_04_07" format="binary" version="3">
+      <cd:Description>This definition is based on version 4/07 of IODD ADM-IC-52-1666</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT="AE_</cd:MatchData>
+        <cd:MatchData offset="17">ALD_U_N_1A</cd:MatchData>
+        <cd:MatchData offset="95">521666_IODD_4_07       </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT="AE_</cd:MatchData>
+        <cd:MatchData offset="17">ALD_U_N_1A</cd:MatchData>
+        <cd:MatchData offset="95">521666_IODD_4_08       </cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>    
   </cd:ProductType>
   <cd:ProductType name="ALD_U_N_1A_HDR">
     <cd:Description>Aeolus Level 1A Wind Measurement Product (HDR)</cd:Description>
@@ -141,6 +154,12 @@
       </cd:DetectionRule>
       <cd:DetectionRule>
         <cd:MatchData path="/{http://www.esa.int/schemas/ae/ALD_U_N_1A}Earth_Explorer_Header@schemaversion">04.06</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData path="/{http://www.esa.int/schemas/ae/ALD_U_N_1A}Earth_Explorer_Header@schemaversion">04.07</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData path="/{http://www.esa.int/schemas/ae/ALD_U_N_1A}Earth_Explorer_Header@schemaversion">04.08</cd:MatchData>
       </cd:DetectionRule>      
     </cd:ProductDefinition>
   </cd:ProductType>
@@ -180,6 +199,14 @@
         <cd:MatchData offset="95">521666_IODD_4_04       </cd:MatchData>
       </cd:DetectionRule>
     </cd:ProductDefinition>
+    <cd:ProductDefinition id="AUX_ISR_1A_04_07" format="binary" version="3">
+      <cd:Description>This definition is based on version 4/07 of IODD ADM-IC-52-1666</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT="AE_</cd:MatchData>
+        <cd:MatchData offset="17">AUX_ISR_1A</cd:MatchData>
+        <cd:MatchData offset="95">521666_IODD_4_07       </cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>    
   </cd:ProductType>
   <cd:ProductType name="AUX_ISR_1A_HDR">
     <cd:Description>Aeolus Level 1A Instrument Spectral Registration (HDR)</cd:Description>
@@ -199,6 +226,9 @@
       <cd:Description>This definition is based on version 4/4 of IODD ADM-IC-52-1666</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData path="/{http://www.esa.int/schemas/ae/AUX_ISR_1A}Earth_Explorer_Header@schemaversion">04.04</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData path="/{http://www.esa.int/schemas/ae/AUX_ISR_1A}Earth_Explorer_Header@schemaversion">04.07</cd:MatchData>
       </cd:DetectionRule>
     </cd:ProductDefinition>
   </cd:ProductType>
@@ -238,6 +268,14 @@
         <cd:MatchData offset="95">521666_IODD_4_04       </cd:MatchData>
       </cd:DetectionRule>
     </cd:ProductDefinition>
+    <cd:ProductDefinition id="AUX_IAT_1A_04_07" format="binary" version="3">
+      <cd:Description>This definition is based on version 4/07 of IODD ADM-IC-52-1666</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT="AE_</cd:MatchData>
+        <cd:MatchData offset="17">AUX_IAT_1A</cd:MatchData>
+        <cd:MatchData offset="95">521666_IODD_4_07       </cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>    
   </cd:ProductType>
   <cd:ProductType name="AUX_IAT_1A_HDR">
     <cd:Description>Aeolus Level 1A Instrument Auto Test (HDR)</cd:Description>
@@ -258,6 +296,9 @@
       <cd:DetectionRule>
         <cd:MatchData path="/{http://www.esa.int/schemas/ae/AUX_IAT_1A}Earth_Explorer_Header@schemaversion">04.04</cd:MatchData>
       </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData path="/{http://www.esa.int/schemas/ae/AUX_IAT_1A}Earth_Explorer_Header@schemaversion">04.07</cd:MatchData>
+      </cd:DetectionRule>      
     </cd:ProductDefinition>
   </cd:ProductType>
   <cd:ProductType name="AUX_DCC_1A">
@@ -286,7 +327,7 @@
         <cd:MatchData offset="0">PRODUCT="AE_</cd:MatchData>
         <cd:MatchData offset="17">AUX_DCC_1A</cd:MatchData>
         <cd:MatchData offset="95">521666_IODD_3_6        </cd:MatchData>
-      </cd:DetectionRule>
+      </cd:DetectionRule>      
     </cd:ProductDefinition>
     <cd:ProductDefinition id="AUX_DCC_1A_04_04" format="binary" version="2">
       <cd:Description>This definition is based on version 4/4 of IODD ADM-IC-52-1666</cd:Description>
@@ -296,6 +337,14 @@
         <cd:MatchData offset="95">521666_IODD_4_04       </cd:MatchData>
       </cd:DetectionRule>
     </cd:ProductDefinition>
+    <cd:ProductDefinition id="AUX_DCC_1A_04_07" format="binary" version="3">
+      <cd:Description>This definition is based on version 4/07 of IODD ADM-IC-52-1666</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT="AE_</cd:MatchData>
+        <cd:MatchData offset="17">AUX_DCC_1A</cd:MatchData>
+        <cd:MatchData offset="95">521666_IODD_4_07       </cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>    
   </cd:ProductType>
   <cd:ProductType name="AUX_DCC_1A_HDR">
     <cd:Description>Aeolus Level 1A Dark Current Calibration (HDR)</cd:Description>
@@ -316,6 +365,9 @@
       <cd:DetectionRule>
         <cd:MatchData path="/{http://www.esa.int/schemas/ae/AUX_DCC_1A}Earth_Explorer_Header@schemaversion">04.04</cd:MatchData>
       </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData path="/{http://www.esa.int/schemas/ae/AUX_DCC_1A}Earth_Explorer_Header@schemaversion">04.07</cd:MatchData>
+      </cd:DetectionRule>      
     </cd:ProductDefinition>
   </cd:ProductType>
   <cd:ProductType name="AUX_IDC_1A">
@@ -354,6 +406,14 @@
         <cd:MatchData offset="95">521666_IODD_4_04       </cd:MatchData>
       </cd:DetectionRule>
     </cd:ProductDefinition>
+    <cd:ProductDefinition id="AUX_IDC_1A_04_07" format="binary" version="3">
+      <cd:Description>This definition is based on version 4/07 of IODD ADM-IC-52-1666</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT="AE_</cd:MatchData>
+        <cd:MatchData offset="17">AUX_IDC_1A</cd:MatchData>
+        <cd:MatchData offset="95">521666_IODD_4_07       </cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>    
   </cd:ProductType>
   <cd:ProductType name="AUX_IDC_1A_HDR">
     <cd:Description>Aeolus Level 1A Instrument Defocus Calibration (HDR)</cd:Description>
@@ -374,6 +434,9 @@
       <cd:DetectionRule>
         <cd:MatchData path="/{http://www.esa.int/schemas/ae/AUX_IDC_1A}Earth_Explorer_Header@schemaversion">04.04</cd:MatchData>
       </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData path="/{http://www.esa.int/schemas/ae/AUX_IDC_1A}Earth_Explorer_Header@schemaversion">04.07</cd:MatchData>
+      </cd:DetectionRule>      
     </cd:ProductDefinition>
   </cd:ProductType>
   <cd:ProductType name="AUX_LCP_1A">
@@ -412,6 +475,14 @@
         <cd:MatchData offset="95">521666_IODD_4_04       </cd:MatchData>
       </cd:DetectionRule>
     </cd:ProductDefinition>
+    <cd:ProductDefinition id="AUX_LCP_1A_04_07" format="binary" version="3">
+      <cd:Description>This definition is based on version 4/07 of IODD ADM-IC-52-1666</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT="AE_</cd:MatchData>
+        <cd:MatchData offset="17">AUX_LCP_1A</cd:MatchData>
+        <cd:MatchData offset="95">521666_IODD_4_07       </cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>    
   </cd:ProductType>
   <cd:ProductType name="AUX_LCP_1A_HDR">
     <cd:Description>Aeolus Level 1A Laser Chopper Phase (HDR)</cd:Description>
@@ -432,6 +503,9 @@
       <cd:DetectionRule>
         <cd:MatchData path="/{http://www.esa.int/schemas/ae/AUX_LCP_1A}Earth_Explorer_Header@schemaversion">04.04</cd:MatchData>
       </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData path="/{http://www.esa.int/schemas/ae/AUX_LCP_1A}Earth_Explorer_Header@schemaversion">04.07</cd:MatchData>
+      </cd:DetectionRule>      
     </cd:ProductDefinition>
   </cd:ProductType>
   <cd:ProductType name="AUX_IRC_1A">
@@ -470,6 +544,14 @@
         <cd:MatchData offset="95">521666_IODD_4_04       </cd:MatchData>
       </cd:DetectionRule>
     </cd:ProductDefinition>
+    <cd:ProductDefinition id="AUX_IRC_1A_04_07" format="binary" version="3">
+      <cd:Description>This definition is based on version 4/07 of IODD ADM-IC-52-1666</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT="AE_</cd:MatchData>
+        <cd:MatchData offset="17">AUX_IRC_1A</cd:MatchData>
+        <cd:MatchData offset="95">521666_IODD_4_07       </cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>    
   </cd:ProductType>
   <cd:ProductType name="AUX_IRC_1A_HDR">
     <cd:Description>Aeolus Level 1A Instrument Response Calibration (HDR)</cd:Description>
@@ -490,6 +572,9 @@
       <cd:DetectionRule>
         <cd:MatchData path="/{http://www.esa.int/schemas/ae/AUX_IRC_1A}Earth_Explorer_Header@schemaversion">04.04</cd:MatchData>
       </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData path="/{http://www.esa.int/schemas/ae/AUX_IRC_1A}Earth_Explorer_Header@schemaversion">04.07</cd:MatchData>
+      </cd:DetectionRule>      
     </cd:ProductDefinition>
   </cd:ProductType>
   <cd:ProductType name="AUX_LDT_1A">
@@ -528,6 +613,14 @@
         <cd:MatchData offset="95">521666_IODD_4_04       </cd:MatchData>
       </cd:DetectionRule>
     </cd:ProductDefinition>
+    <cd:ProductDefinition id="AUX_LDT_1A_04_07" format="binary" version="3">
+      <cd:Description>This definition is based on version 4/07 of IODD ADM-IC-52-1666</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT="AE_</cd:MatchData>
+        <cd:MatchData offset="17">AUX_LDT_1A</cd:MatchData>
+        <cd:MatchData offset="95">521666_IODD_4_07       </cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>    
   </cd:ProductType>
   <cd:ProductType name="AUX_LDT_1A_HDR">
     <cd:Description>Aeolus Level 1A Laser Diode Temperature (HDR)</cd:Description>
@@ -548,6 +641,9 @@
       <cd:DetectionRule>
         <cd:MatchData path="/{http://www.esa.int/schemas/ae/AUX_LDT_1A}Earth_Explorer_Header@schemaverion">04.04</cd:MatchData>
       </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData path="/{http://www.esa.int/schemas/ae/AUX_LDT_1A}Earth_Explorer_Header@schemaverion">04.07</cd:MatchData>
+      </cd:DetectionRule>      
     </cd:ProductDefinition>
   </cd:ProductType>
   <cd:ProductType name="AUX_OWV_1A">
@@ -586,6 +682,14 @@
         <cd:MatchData offset="95">521666_IODD_4_04       </cd:MatchData>
       </cd:DetectionRule>
     </cd:ProductDefinition>
+    <cd:ProductDefinition id="AUX_OWV_1A_04_07" format="binary" version="3">
+      <cd:Description>This definition is based on version 4/07 of IODD ADM-IC-52-1666</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT="AE_</cd:MatchData>
+        <cd:MatchData offset="17">AUX_OWV_1A</cd:MatchData>
+        <cd:MatchData offset="95">521666_IODD_4_07       </cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>    
   </cd:ProductType>
   <cd:ProductType name="AUX_OWV_1A_HDR">
     <cd:Description>Aeolus Level 1A Offline Wind Velocity Measurement (HDR)</cd:Description>
@@ -606,6 +710,9 @@
       <cd:DetectionRule>
         <cd:MatchData path="/{http://www.esa.int/schemas/ae/AUX_OWV_1A}Earth_Explorer_Header@schemaversion">04.04</cd:MatchData>
       </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData path="/{http://www.esa.int/schemas/ae/AUX_OWV_1A}Earth_Explorer_Header@schemaversion">04.07</cd:MatchData>
+      </cd:DetectionRule>
     </cd:ProductDefinition>
   </cd:ProductType>
   <cd:ProductType name="AUX_DCMZ1A">
@@ -618,6 +725,14 @@
         <cd:MatchData offset="95">521666_IODD_4_04       </cd:MatchData>
       </cd:DetectionRule>
     </cd:ProductDefinition>
+    <cd:ProductDefinition id="AUX_DCMZ1A_04_07" format="binary" version="1">
+      <cd:Description>This definition is based on version 4/07 of IODD ADM-IC-52-1666</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT="AE_</cd:MatchData>
+        <cd:MatchData offset="17">AUX_DCMZ1A</cd:MatchData>
+        <cd:MatchData offset="95">521666_IODD_4_07       </cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>    
   </cd:ProductType>
   <cd:ProductType name="AUX_DCMZ1A_HDR">
     <cd:Description>Aeolus Level 1A Dark Current in Memory Zone Calibration Mode (HDR)</cd:Description>
@@ -626,6 +741,9 @@
       <cd:DetectionRule>
         <cd:MatchData path="/{http://www.esa.int/schemas/ae/AUX_DCMZ1A}Earth_Explorer_Header@schemaversion">04.04</cd:MatchData>
       </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData path="/{http://www.esa.int/schemas/ae/AUX_DCMZ1A}Earth_Explorer_Header@schemaversion">04.07</cd:MatchData>
+      </cd:DetectionRule>      
     </cd:ProductDefinition>
   </cd:ProductType>
   <cd:ProductType name="AUX_NOU_1A">
@@ -638,6 +756,14 @@
         <cd:MatchData offset="95">521666_IODD_4_04       </cd:MatchData>
       </cd:DetectionRule>
     </cd:ProductDefinition>
+    <cd:ProductDefinition id="AUX_NOU_1A_04_07" format="binary" version="1">
+      <cd:Description>This definition is based on version 4/07 of IODD ADM-IC-52-1666</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT="AE_</cd:MatchData>
+        <cd:MatchData offset="17">AUX_NOU_1A</cd:MatchData>
+        <cd:MatchData offset="95">521666_IODD_4_07       </cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>    
   </cd:ProductType>
   <cd:ProductType name="AUX_NOU_1A_HDR">
     <cd:Description>Aeolus Level 1A No Operation and User Defined (HDR)</cd:Description>
@@ -646,6 +772,9 @@
       <cd:DetectionRule>
         <cd:MatchData path="/{http://www.esa.int/schemas/ae/AUX_NOU_1A}Earth_Explorer_Header@schemaversion">04.04</cd:MatchData>
       </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData path="/{http://www.esa.int/schemas/ae/AUX_NOU_1A}Earth_Explorer_Header@schemaversion">04.07</cd:MatchData>
+      </cd:DetectionRule>      
     </cd:ProductDefinition>
   </cd:ProductType>  
   <cd:ProductType name="AUX_LBM_1A">
@@ -658,6 +787,14 @@
         <cd:MatchData offset="95">521666_IODD_4_06       </cd:MatchData>
       </cd:DetectionRule>
     </cd:ProductDefinition>
+    <cd:ProductDefinition id="AUX_LBM_1A_04_07" format="binary" version="1">
+      <cd:Description>This definition is based on version 4/07 of IODD ADM-IC-52-1666</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT="AE_</cd:MatchData>
+        <cd:MatchData offset="17">AUX_LBM_1A</cd:MatchData>
+        <cd:MatchData offset="95">521666_IODD_4_07       </cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>    
   </cd:ProductType>
   <cd:ProductType name="AUX_LBM_1A_HDR">
     <cd:Description>Aeolus Level 1A Laser Beam Monitoring Calibration Mode (HDR)</cd:Description>
@@ -666,6 +803,9 @@
       <cd:DetectionRule>
         <cd:MatchData path="/{http://www.esa.int/schemas/ae/AUX_LBM_1A}Earth_Explorer_Header@schemaversion">04.06</cd:MatchData>
       </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData path="/{http://www.esa.int/schemas/ae/AUX_LBM_1A}Earth_Explorer_Header@schemaversion">04.07</cd:MatchData>
+      </cd:DetectionRule>      
     </cd:ProductDefinition>
   </cd:ProductType>
   <cd:ProductType name="ALD_U_N_1B">
@@ -715,6 +855,19 @@
         <cd:MatchData offset="95">521666_IODD_4_06       </cd:MatchData>
       </cd:DetectionRule>      
     </cd:ProductDefinition>
+    <cd:ProductDefinition id="ALD_U_N_1B_04_08" format="binary" version="5">
+      <cd:Description>This definition is based on version 4/08 of IODD ADM-IC-52-1666</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT="AE_</cd:MatchData>
+        <cd:MatchData offset="17">ALD_U_N_1B</cd:MatchData>
+        <cd:MatchData offset="95">521666_IODD_4_07       </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT="AE_</cd:MatchData>
+        <cd:MatchData offset="17">ALD_U_N_1B</cd:MatchData>
+        <cd:MatchData offset="95">521666_IODD_4_08       </cd:MatchData>
+      </cd:DetectionRule>      
+    </cd:ProductDefinition>    
   </cd:ProductType>
   <cd:ProductType name="ALD_U_N_1B_HDR">
     <cd:Description>Aeolus Level 1B Wind Measurement Product (HDR)</cd:Description>
@@ -746,6 +899,12 @@
       </cd:DetectionRule>
       <cd:DetectionRule>
         <cd:MatchData path="/{http://www.esa.int/schemas/ae/ALD_U_N_1B}Earth_Explorer_Header@schemaversion">04.06</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData path="/{http://www.esa.int/schemas/ae/ALD_U_N_1B}Earth_Explorer_Header@schemaversion">04.07</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData path="/{http://www.esa.int/schemas/ae/ALD_U_N_1B}Earth_Explorer_Header@schemaversion">04.08</cd:MatchData>
       </cd:DetectionRule>      
     </cd:ProductDefinition>
   </cd:ProductType>
@@ -870,7 +1029,13 @@
       <cd:DetectionRule>
         <cd:MatchData path="/{http://www.esa.int/schemas/ae/AUX_IDC_1B}Earth_Explorer_File@schemaversion">04.06</cd:MatchData>
       </cd:DetectionRule>      
-    </cd:ProductDefinition>    
+    </cd:ProductDefinition>
+    <cd:ProductDefinition id="AUX_IDC_1B_04_07" format="xml" version="5">
+      <cd:Description>This definition is based on version 4/07 of IODD ADM-IC-52-1666</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchData path="/{http://www.esa.int/schemas/ae/AUX_IDC_1B}Earth_Explorer_File@schemaversion">04.07</cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>        
   </cd:ProductType>
   <cd:ProductType name="AUX_LCP_1B">
     <cd:Description>Aeolus Level 1B Laser Chopper Phase (EEF)</cd:Description>
@@ -1080,6 +1245,19 @@
         <cd:MatchData offset="95">521666_IODD_4_06       </cd:MatchData>
       </cd:DetectionRule>      
     </cd:ProductDefinition>
+    <cd:ProductDefinition id="AUX_OWV_1B_04_08" format="binary" version="4">
+      <cd:Description>This definition is based on version 4/08 of IODD ADM-IC-52-1666</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT="AE_</cd:MatchData>
+        <cd:MatchData offset="17">AUX_OWV_1B</cd:MatchData>
+        <cd:MatchData offset="95">521666_IODD_4_07       </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT="AE_</cd:MatchData>
+        <cd:MatchData offset="17">AUX_OWV_1B</cd:MatchData>
+        <cd:MatchData offset="95">521666_IODD_4_08       </cd:MatchData>
+      </cd:DetectionRule>      
+    </cd:ProductDefinition>    
   </cd:ProductType>
   <cd:ProductType name="AUX_OWV_1B_HDR">
     <cd:Description>Aeolus Level 1B Offline Wind Velocity Measurement (HDR)</cd:Description>
@@ -1105,7 +1283,13 @@
       </cd:DetectionRule>
       <cd:DetectionRule>
         <cd:MatchData path="/{http://www.esa.int/schemas/ae/AUX_OWV_1B}Earth_Explorer_Header@schemaversion">04.06</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData path="/{http://www.esa.int/schemas/ae/AUX_OWV_1B}Earth_Explorer_Header@schemaversion">04.07</cd:MatchData>
       </cd:DetectionRule>      
+      <cd:DetectionRule>
+        <cd:MatchData path="/{http://www.esa.int/schemas/ae/AUX_OWV_1B}Earth_Explorer_Header@schemaversion">04.08</cd:MatchData>
+      </cd:DetectionRule>            
     </cd:ProductDefinition>
   </cd:ProductType>
   <cd:ProductType name="AUX_ZWC_1B">
@@ -1167,6 +1351,15 @@
         <cd:MatchData path="/{http://www.esa.int/schemas/ae/AUX_LBM_1B}Earth_Explorer_File@schemaversion">04.06</cd:MatchData>
       </cd:DetectionRule>
     </cd:ProductDefinition>
+    <cd:ProductDefinition id="AUX_LBM_1B_04_08" format="xml" version="1">
+      <cd:Description>This definition is based on version 4/07 of IODD ADM-IC-52-1666</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchData path="/{http://www.esa.int/schemas/ae/AUX_LBM_1B}Earth_Explorer_File@schemaversion">04.07</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData path="/{http://www.esa.int/schemas/ae/AUX_LBM_1B}Earth_Explorer_File@schemaversion">04.08</cd:MatchData>
+      </cd:DetectionRule>                 
+    </cd:ProductDefinition>    
   </cd:ProductType>
   <cd:ProductType name="AUX_CSR_1B">
     <cd:Description>Aeolus Level 1B Calibrated Spectral Registration (EEF)</cd:Description>
@@ -1287,7 +1480,13 @@
         <cd:MatchData path="/{http://www.esa.int/schemas/ae/AUX_CHAR__}Earth_Explorer_File@schemaversion">04.06</cd:MatchData>
       </cd:DetectionRule>
     </cd:ProductDefinition>    
-  </cd:ProductType>
+    <cd:ProductDefinition id="AUX_CHAR___04_07" format="xml" version="3">
+      <cd:Description>This definition is based on version 4/07 of IODD ADM-IC-52-1666</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchData path="/{http://www.esa.int/schemas/ae/AUX_CHAR__}Earth_Explorer_File@schemaversion">04.07</cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>    
+  </cd:ProductType>  
   <cd:ProductType name="AUX_PAR_0_">
     <cd:Description>Level 0 Processing Parameters (EEF)</cd:Description>
     <cd:ProductDefinition id="AUX_PAR_0__03_05" format="xml" version="0">
@@ -1313,7 +1512,13 @@
       <cd:DetectionRule>
         <cd:MatchData path="/{http://www.esa.int/schemas/ae/AUX_PAR_0_}Earth_Explorer_File@schemaversion">04.06</cd:MatchData>
       </cd:DetectionRule>
-    </cd:ProductDefinition>    
+    </cd:ProductDefinition>
+    <cd:ProductDefinition id="AUX_PAR_0__04_07" format="xml" version="3">
+      <cd:Description>This definition is based on version 4/07 of IODD ADM-IC-52-1666</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchData path="/{http://www.esa.int/schemas/ae/AUX_PAR_0_}Earth_Explorer_File@schemaversion">04.07</cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>        
   </cd:ProductType>
   <cd:ProductType name="AUX_PAR_1A">
     <cd:Description>Level 1A Processing Parameters (EEF)</cd:Description>
@@ -1341,6 +1546,12 @@
         <cd:MatchData path="/{http://www.esa.int/schemas/ae/AUX_PAR_1A}Earth_Explorer_File@schemaversion">04.06</cd:MatchData>
       </cd:DetectionRule>
     </cd:ProductDefinition>
+    <cd:ProductDefinition id="AUX_PAR_1A_04_07" format="xml" version="3">
+      <cd:Description>This definition is based on version 4/07 of IODD ADM-IC-52-1666</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchData path="/{http://www.esa.int/schemas/ae/AUX_PAR_1A}Earth_Explorer_File@schemaversion">04.07</cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>    
   </cd:ProductType>
   <cd:ProductType name="AUX_PAR_1B">
     <cd:Description>Level 1B Processing Parameters (EEF)</cd:Description>
@@ -1371,6 +1582,12 @@
         <cd:MatchData path="/{http://www.esa.int/schemas/ae/AUX_PAR_1B}Earth_Explorer_File@schemaversion">04.06</cd:MatchData>
       </cd:DetectionRule>
     </cd:ProductDefinition>
+    <cd:ProductDefinition id="AUX_PAR_1B_04_07" format="xml" version="4">
+      <cd:Description>This definition is based on version 4/07 of IODD ADM-IC-52-1666</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchData path="/{http://www.esa.int/schemas/ae/AUX_PAR_1B}Earth_Explorer_File@schemaversion">04.07</cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>    
   </cd:ProductType>
   <cd:ProductType name="ALD_U_N_2A">
     <cd:Description>Aeolus Level 2A Product (DBL)</cd:Description>
@@ -1420,7 +1637,15 @@
         <cd:MatchData offset="17">ALD_U_N_2A</cd:MatchData>
         <cd:MatchData offset="95">AE-IF-DLR-L2A-004 03.04</cd:MatchData>
       </cd:DetectionRule>      
-    </cd:ProductDefinition>    
+    </cd:ProductDefinition>
+    <cd:ProductDefinition id="ALD_U_N_2A_03_05" format="binary" version="4">
+      <cd:Description>This definition is based on version 3.05 of IODD AE-IF-DLR-L2A-004</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT="AE_</cd:MatchData>
+        <cd:MatchData offset="17">ALD_U_N_2A</cd:MatchData>
+        <cd:MatchData offset="95">AE-IF-DLR-L2A-004 03.05</cd:MatchData>
+      </cd:DetectionRule>      
+    </cd:ProductDefinition>        
   </cd:ProductType>
   <cd:ProductType name="ALD_U_N_2A_HDR">
     <cd:Description>Aeolus Level 2A Product (HDR)</cd:Description>
@@ -1453,6 +1678,9 @@
       <cd:DetectionRule>
         <cd:MatchData path="/{http://www.esa.int/schemas/ae/ALD_U_N_2A}Earth_Explorer_Header@schemaversion">03.04</cd:MatchData>
       </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData path="/{http://www.esa.int/schemas/ae/ALD_U_N_2A}Earth_Explorer_Header@schemaversion">03.05</cd:MatchData>
+      </cd:DetectionRule>      
     </cd:ProductDefinition>
   </cd:ProductType>
   <cd:ProductType name="AUX_CAL_L2">
@@ -1541,13 +1769,22 @@
       <cd:DetectionRule>
         <cd:MatchData path="/{http://www.esa.int/schemas/ae/AUX_PAR_2A}Earth_Explorer_File@schemaversion">03.02</cd:MatchData>
       </cd:DetectionRule>
-      <cd:DetectionRule>
+    </cd:ProductDefinition>          
+    <cd:ProductDefinition id="AUX_PAR_2A_03_03" format="xml" version="3">
+      <cd:Description>This definition is based on a future version of IODD AE-IF-DLR-L2A-004</cd:Description>
+      <cd:DetectionRule>          
         <cd:MatchData path="/{http://www.esa.int/schemas/ae/AUX_PAR_2A}Earth_Explorer_File@schemaversion">03.03</cd:MatchData>
       </cd:DetectionRule>
       <cd:DetectionRule>
         <cd:MatchData path="/{http://www.esa.int/schemas/ae/AUX_PAR_2A}Earth_Explorer_File@schemaversion">03.04</cd:MatchData>
       </cd:DetectionRule>
     </cd:ProductDefinition>
+    <cd:ProductDefinition id="AUX_PAR_2A_03_05" format="xml" version="4">
+      <cd:Description>This definition is based on version 3.05 of IODD AE-IF-DLR-L2A-004</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchData path="/{http://www.esa.int/schemas/ae/AUX_PAR_2A}Earth_Explorer_File@schemaversion">03.05</cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>    
   </cd:ProductType>
   <cd:ProductType name="ALD_U_N_2B">
     <cd:Description>Aeolus Level 2B Product (DBL)</cd:Description>
@@ -1588,6 +1825,14 @@
         <cd:MatchData offset="95">L2B/L2C IODD Iss. 02.30</cd:MatchData>
       </cd:DetectionRule>
     </cd:ProductDefinition>
+    <cd:ProductDefinition id="ALD_U_N_2B_03_00" format="binary" version="4">
+      <cd:Description>This definition is based on version 3.00 of IODD AE-IF-ECMWF-L2BP-0001</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT="AE_</cd:MatchData>
+        <cd:MatchData offset="17">ALD_U_N_2B</cd:MatchData>
+        <cd:MatchData offset="95">L2B/L2C IODD Iss. 03.00</cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>    
   </cd:ProductType>
   <cd:ProductType name="ALD_U_N_2B_HDR">
     <cd:Description>Aeolus Level 2B Product (HDR)</cd:Description>
@@ -1615,6 +1860,12 @@
         <cd:MatchData path="/{http://www.esa.int/schemas/ae/ALD_U_N_2B}Earth_Explorer_Header@schemaversion">02.30</cd:MatchData>
       </cd:DetectionRule>
     </cd:ProductDefinition>
+    <cd:ProductDefinition id="ALD_U_N_2B_HDR_03_00" format="xml" version="3">
+      <cd:Description>This definition is based on version 3.00 of IODD AE-IF-ECMWF-L2BP-0001</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchData path="/{http://www.esa.int/schemas/ae/ALD_U_N_2B}Earth_Explorer_Header@schemaversion">03.00</cd:MatchData>
+      </cd:DetectionRule>                
+    </cd:ProductDefinition>    
   </cd:ProductType>
   <cd:ProductType name="ALD_U_N_2C">
     <cd:Description>Aeolus Level 2C Product (DBL)</cd:Description>
@@ -1812,6 +2063,12 @@
         <cd:MatchData path="/{http://www.esa.int/schemas/ae/AUX_PAR_2B}Earth_Explorer_File@schemaversion">02.30</cd:MatchData>
       </cd:DetectionRule>
     </cd:ProductDefinition>
+    <cd:ProductDefinition id="AUX_PAR_2B_03_00" format="xml" version="4">
+      <cd:Description>This definition is based on version 3.00 of IODD AE-IF-ECMWF-L2BP-0001</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchData path="/{http://www.esa.int/schemas/ae/AUX_PAR_2B}Earth_Explorer_File@schemaversion">03.00</cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>    
   </cd:ProductType>
   <cd:ProductType name="AUX_PAR_2C">
     <cd:Description>Level 2C Processing Parameters (EEF)</cd:Description>

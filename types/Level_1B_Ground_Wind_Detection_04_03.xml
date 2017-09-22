@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="binary" last-modified="2015-11-23" name="Level_1B_Ground_Wind_Detection_04_03">
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="binary" last-modified="2017-09-11" name="Level_1B_Ground_Wind_Detection_04_03">
   <cd:Description>Level 1B Measurement Ground Wind Detection</cd:Description>
   <cd:Field name="surface">
     <cd:Integer>
@@ -30,7 +30,7 @@
         </cd:Field>
         <cd:Field name="offset_dem_bin">
           <cd:Float>
-            <cd:Description>Offset of ground bin number to expected ground bin calculating DEM intersection</cd:Description>
+            <cd:Description>Offset of ground bin centre height to expected ground centre height calculating DEM intersection</cd:Description>
             <cd:Unit>m</cd:Unit>
             <cd:BitSize>64</cd:BitSize>
             <cd:NativeType>double</cd:NativeType>

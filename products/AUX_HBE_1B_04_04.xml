@@ -63,7 +63,7 @@
                                     <cd:Float format="ascii">
                                       <cd:Description>Coefficent A in the Harmonic Bias Estimation using Fourier transform based interpolation.</cd:Description>
                                       <cd:NativeType>double</cd:NativeType>
-                                      <ct:NamedTest id="Range0To100"/>
+                                      <ct:NamedTest id="RangeMinus50To50"/>
                                     </cd:Float>
                                   </cd:Type>
                                   <ct:NamedTest id="ValueOfCountAttributeForParent"/>
@@ -81,7 +81,7 @@
                                     <cd:Float format="ascii">
                                       <cd:Description>Coefficent B in the Harmonic Bias Estimation using Fourier transform based interpolation.</cd:Description>
                                       <cd:NativeType>double</cd:NativeType>
-                                      <ct:NamedTest id="Range0To100"/>
+                                      <ct:NamedTest id="RangeMinus50To50"/>
                                     </cd:Float>
                                   </cd:Type>
                                   <ct:NamedTest id="ValueOfCountAttributeForParent"/>
@@ -99,9 +99,9 @@
                                     <cd:Float format="ascii">
                                       <cd:Description>Coefficent A in the Harmonic Bias Estimation using Fourier transform based interpolation.</cd:Description>
                                       <cd:NativeType>double</cd:NativeType>
-                                      <ct:NamedTest id="Range0To100"/>
+                                      <ct:NamedTest id="RangeMinus50To50"/>
                                     </cd:Float>
-                                    <ct:NamedTest id="Range0To100"/>                                    
+                                    <ct:NamedTest id="RangeMinus50To50"/>                                    
                                   </cd:Type>
                                   <ct:NamedTest id="ValueOfCountAttributeForParent"/>
                                 </cd:Array>
@@ -118,7 +118,7 @@
                                     <cd:Float format="ascii">
                                       <cd:Description>Coefficent B in the Harmonic Bias Estimation using Fourier transform based interpolation.</cd:Description>
                                       <cd:NativeType>double</cd:NativeType>
-                                      <ct:NamedTest id="Range0To100"/>
+                                      <ct:NamedTest id="RangeMinus50To50"/>
                                     </cd:Float>
                                   </cd:Type>
                                   <ct:NamedTest id="ValueOfCountAttributeForParent"/>

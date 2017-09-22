@@ -34,7 +34,7 @@
   </cd:Field>
   <cd:Field name="amd_zg">
     <cd:Integer>
-      <cd:Description>Geoid height above WGS84 reference ellipsoid</cd:Description>
+      <cd:Description>Geoid height above WGS84 reference ellipsoid.  Note that this field is not used and filled with missing values</cd:Description>
       <cd:Unit>cm</cd:Unit>
       <cd:BitSize>32</cd:BitSize>
       <cd:NativeType>int32</cd:NativeType>

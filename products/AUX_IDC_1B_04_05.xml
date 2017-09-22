@@ -20,6 +20,7 @@
                 <cd:Field name="Specific_Product_Header">
                   <cd:NamedType id="Specific_Product_Header_Level1BAux_04_03"/>
                 </cd:Field>
+                <ct:NamedTest id="IntGreaterThanZero" path="Specific_Product_Header/num_of_rayleigh_measurements_used"/>                
               </cd:Record>
             </cd:Field>
             <ct:NamedTest id="FileNameCheckEEF" path="Fixed_Header/File_Name"/>

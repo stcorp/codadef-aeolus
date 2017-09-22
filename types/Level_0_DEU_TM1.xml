@@ -1,0 +1,504 @@
+<?xml version="1.0"?>
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="binary" last-modified="2017-06-20" name="Level_0_DEU_TM1">
+  <cd:Description>DEU_TM1 Block</cd:Description>    
+  <cd:Field name="DEU_Sub_mode_setting">
+    <cd:Integer>
+      <cd:Description>DEU Sub-mode setting</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="DEU_Measurement_Number">
+    <cd:Integer>
+      <cd:Description>DEU Measurement Number</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="DEU_SHOT_NUMBER">
+    <cd:Integer>
+      <cd:Description>DEU SHOT NUMBER</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="MIE_Vertical_Sampling_V1_V2">
+    <cd:Integer>
+      <cd:Description>MIE / Vertical Sampling / V1, V2</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="MIE_Vertical_Sampling_V3_V4">
+    <cd:Integer>
+      <cd:Description>MIE / Vertical Sampling / V3, V4</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="MIE_Vertical_Sampling_V5_V6">
+    <cd:Integer>
+      <cd:Description>MIE / Vertical Sampling / V5, V6</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="MIE_Vertical_Sampling_V7_V8">
+    <cd:Integer>
+      <cd:Description>MIE / Vertical Sampling / V7, V8</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="MIE_Vertical_Sampling_V9_V10">
+    <cd:Integer>
+      <cd:Description>MIE / Vertical Sampling / V9, V10</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="MIE_Vertical_Sampling_V11_V12">
+    <cd:Integer>
+      <cd:Description>MIE / Vertical Sampling / V11, V12</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="MIE_Vertical_Sampling_V13_V14">
+    <cd:Integer>
+      <cd:Description>MIE / Vertical Sampling / V13, V14</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="MIE_Vertical_Sampling_V15_V16">
+    <cd:Integer>
+      <cd:Description>MIE / Vertical Sampling / V15, V16</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="MIE_Vertical_Sampling_V17_V18">
+    <cd:Integer>
+      <cd:Description>MIE / Vertical Sampling / V17, V18</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="MIE_Vertical_Sampling_V19_V20">
+    <cd:Integer>
+      <cd:Description>MIE / Vertical Sampling / V19, V20</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="MIE_Vertical_Sampling_V21_V22">
+    <cd:Integer>
+      <cd:Description>MIE / Vertical Sampling / V21, V22</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="MIE_Vertical_Sampling_V23_V24">
+    <cd:Integer>
+      <cd:Description>MIE / Vertical Sampling / V23, V24</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="MIE_Background_Integration">
+    <cd:Integer>
+      <cd:Description>MIE / Background Integration</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="Ray_Vertical_Sampling_V1_V2">
+    <cd:Integer>
+      <cd:Description>Ray / Vertical Sampling / V1, V2</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="Ray_Vertical_Sampling_V3_V4">
+    <cd:Integer>
+      <cd:Description>Ray / Vertical Sampling / V3, V4</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="Ray_Vertical_Sampling_V5_V6">
+    <cd:Integer>
+      <cd:Description>Ray / Vertical Sampling / V5, V6</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="Ray_Vertical_Sampling_V7_V8">
+    <cd:Integer>
+      <cd:Description>Ray / Vertical Sampling / V7, V8</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="Ray_Vertical_Sampling_V9_V10">
+    <cd:Integer>
+      <cd:Description>Ray / Vertical Sampling / V9, V10</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="Ray_Vertical_Sampling_V11_V12">
+    <cd:Integer>
+      <cd:Description>Ray / Vertical Sampling / V11, V12</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="Ray_Vertical_Sampling_V13_V14">
+    <cd:Integer>
+      <cd:Description>Ray / Vertical Sampling / V13, V14</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="Ray_Vertical_Sampling_V15_V16">
+    <cd:Integer>
+      <cd:Description>Ray / Vertical Sampling / V15, V16</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="Ray_Vertical_Sampling_V17_V18">
+    <cd:Integer>
+      <cd:Description>Ray / Vertical Sampling / V17, V18</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="Ray_Vertical_Sampling_V19_V20">
+    <cd:Integer>
+      <cd:Description>Ray / Vertical Sampling / V19, V20</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="Ray_Vertical_Sampling_V21_V22">
+    <cd:Integer>
+      <cd:Description>Ray / Vertical Sampling / V21, V22</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="Ray_Vertical_Sampling_V23_V24">
+    <cd:Integer>
+      <cd:Description>Ray / Vertical Sampling / V23, V24</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="Ray_Background_Integration">
+    <cd:Integer>
+      <cd:Description>Ray / Background Integration</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="DEU_Imaging_Integration_Time">
+    <cd:Integer>
+      <cd:Description>DEU Imaging Integration Time</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="Delay_between_RAY_and_MIE">
+    <cd:Integer>
+      <cd:Description>Delay between RAY and MIE</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="date">
+    <cd:Integer>
+      <cd:Description>Date (4 words)</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>uint64</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="Mie_Clamp_Start">
+    <cd:Integer>
+      <cd:Description>Mie / Clamp Start</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="Mie_Clamp_Length">
+    <cd:Integer>
+      <cd:Description>Mie / Clamp Length</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="Mie_Encode_Start">
+    <cd:Integer>
+      <cd:Description>Mie / Encode Start</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="Ray_Clamp_Start">
+    <cd:Integer>
+      <cd:Description>Ray / Clamp Start</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="Ray_Clamp_Length">
+    <cd:Integer>
+      <cd:Description>Ray / Clamp Length</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="Ray_Encode_Start">
+    <cd:Integer>
+      <cd:Description>Ray / Encode Start</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="Mie_Test_Mode">
+    <cd:Integer>
+      <cd:Description>Mie / Test Mode</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="Mie_Test_Pattern">
+    <cd:Integer>
+      <cd:Description>Mie / Test Pattern</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="Ray_Test_Mode">
+    <cd:Integer>
+      <cd:Description>Ray / Test Mode</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="Ray_Test_Pattern">
+    <cd:Integer>
+      <cd:Description>Ray / Test Pattern</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="DEU_Test_Mode_Connector">
+    <cd:Integer>
+      <cd:Description>DEU Test Mode / Connector</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="DC_DC_Sync_Phase">
+    <cd:Integer>
+      <cd:Description>DC/DC Sync Phase</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="DC_DC_Sync_ON_OFF_Status">
+    <cd:Integer>
+      <cd:Description>DC/DC Sync ON-OFF Status</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="CDMU_Selection">
+    <cd:Integer>
+      <cd:Description>CDMU Selection</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="Mie_Thermal_Control_ON_OFF_Status">
+    <cd:Integer>
+      <cd:Description>Mie / Thermal Control / ON-OFF Status</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="Mie_Thermal_Control_Set_Point">
+    <cd:Integer>
+      <cd:Description>Mie Thermal Control Set Point</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="Mie_Thermal_Control_Gain_Kp">
+    <cd:Integer>
+      <cd:Description>Mie Thermal Control Gain (Kp)</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="Mie_Thermal_Control_Integr_Ki">
+    <cd:Integer>
+      <cd:Description>Mie Thermal Control Integr. (Ki)</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="Mie_Thermal_Control_Limiter">
+    <cd:Integer>
+      <cd:Description>Mie Thermal Control Limiter</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="Mie_Thermal_Control_Conv_Factor">
+    <cd:Integer>
+      <cd:Description>Mie Thermal Control Conv. Factor</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="Mie_ThC_Loop_Selection_Closed_Open">
+    <cd:Integer>
+      <cd:Description>Mie ThC Loop Selection / Closed - Open</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="Mie_TEC_Overcurr_Prot_ON_OFF_Status">
+    <cd:Integer>
+      <cd:Description>Mie TEC Overcurr. Prot. ON-OFF Status</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="Ray_Thermal_Control_ON_OFF_Status">
+    <cd:Integer>
+      <cd:Description>Ray / Thermal Control / ON-OFF Status</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="Ray_Thermal_Control_Set_Point">
+    <cd:Integer>
+      <cd:Description>Ray Thermal Control Set Point</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="Ray_Thermal_Control_Gain_Kp">
+    <cd:Integer>
+      <cd:Description>Ray Thermal Control Gain (Kp)</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="Ray_Thermal_Control_Integr_Ki">
+    <cd:Integer>
+      <cd:Description>Ray Thermal Control Integr. (Ki)</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="Ray_Thermal_Control_Limiter">
+    <cd:Integer>
+      <cd:Description>Ray Thermal Control Limiter</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="Ray_Thermal_Control_Conv_Factor">
+    <cd:Integer>
+      <cd:Description>Ray Thermal Control Conv. Factor</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="Ray_ThC_Loop_Selection_Closed_Open">
+    <cd:Integer>
+      <cd:Description>Ray ThC Loop Selection / Closed - Open</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="Ray_TEC_Overcurr_Prot_ON_OFF_Status">
+    <cd:Integer>
+      <cd:Description>Ray TEC Overcurr. Prot. ON-OFF Status</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="TEC_Power_Switch_ON_OFF_Status">
+    <cd:Integer>
+      <cd:Description>TEC Power Switch ON-OFF Status</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="Mie_Power_Switch_ON_OFF_Status">
+    <cd:Integer>
+      <cd:Description>Mie Power Switch ON-OFF Status</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="spare_1">
+    <cd:Integer>
+      <cd:Description>Spare</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="Ray_Power_Switch_ON_OFF_Status">
+    <cd:Integer>
+      <cd:Description>Ray Power Switch ON-OFF Status</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="spare_2">
+    <cd:Integer>
+      <cd:Description>Spare</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="ATM_test_channel">
+    <cd:Integer>
+      <cd:Description>ATM test channel</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="ATM_Test_ON_OFF_Status">
+    <cd:Integer>
+      <cd:Description>ATM Test ON-OFF Status</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="spare_3">
+    <cd:Integer>
+      <cd:Description>Spare</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+    <cd:Hidden/>    
+  </cd:Field>
+  <cd:Field name="spare_4">
+    <cd:Integer>
+      <cd:Description>Spare</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+    <cd:Hidden/>    
+  </cd:Field>
+</cd:Record>
+  

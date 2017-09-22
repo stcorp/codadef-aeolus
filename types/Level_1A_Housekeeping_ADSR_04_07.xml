@@ -1,0 +1,536 @@
+<?xml version="1.0"?>
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="binary" last-modified="2015-09-08" name="Level_1A_Housekeeping_ADSR_04_07">
+  <cd:Field name="start_of_observation_time">
+    <cd:Time timeformat="binary_envisat_datetime">
+      <cd:Description>Start time at start of BRC</cd:Description>
+      <ct:NamedTest id="RangeSecond" path="seconds"/>
+      <ct:NamedTest id="RangeMicroSecond" path="microseconds"/>
+      <ct:NamedTest id="TimeNotZero"/>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="instrument_mode">
+    <cd:Integer>
+      <cd:Description>Instrument mode. laser burst warm up, calibration slow, calibration fast 1, calibration fast 2</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="p">
+    <cd:Integer>
+      <cd:Description>Number of pulses per measurement</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="n">
+    <cd:Integer>
+      <cd:Description>Number of measurements per BRC</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="spare_1">
+    <cd:Raw>
+      <cd:Description>Spare</cd:Description>
+      <cd:BitSize>104</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="laser_pulse_attributes">
+    <cd:Record>
+      <cd:Description>Laser Pulse Attributes</cd:Description>
+      <cd:Field name="avg_laser_frequency_offset">
+        <cd:Float>
+          <cd:Description>Average laser frequency offset</cd:Description>
+          <cd:Unit>GHz</cd:Unit>
+          <cd:BitSize>64</cd:BitSize>
+          <cd:NativeType>double</cd:NativeType>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="avg_uv_energy">
+        <cd:Float>
+          <cd:Description>Average laser pulse UV energy of N * (P - 1) pulses, regardless of the UV_Energy_OK_Status</cd:Description>
+          <cd:Unit>mJ</cd:Unit>
+          <cd:BitSize>64</cd:BitSize>
+          <cd:NativeType>double</cd:NativeType>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="laser_freq_offset_std_dev">
+        <cd:Float>
+          <cd:Description>Laser frequency offset standard deviation</cd:Description>
+          <cd:Unit>GHz</cd:Unit>
+          <cd:BitSize>64</cd:BitSize>
+          <cd:NativeType>double</cd:NativeType>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="uv_energy_std_dev">
+        <cd:Float>
+          <cd:Description>Laser pulse UV energy standard deviation</cd:Description>
+          <cd:BitSize>64</cd:BitSize>
+          <cd:NativeType>double</cd:NativeType>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="pulse_attribute">
+        <cd:Array>
+          <cd:Dimension>600</cd:Dimension>
+          <cd:Record>
+            <cd:Description>Pulse Attribute</cd:Description>
+            <cd:Field name="laser_frequency_offset">
+              <cd:Float>
+                <cd:Description>Laser frequency offset at each laster shot</cd:Description>
+                <cd:Unit>GHz</cd:Unit>
+                <cd:BitSize>64</cd:BitSize>
+                <cd:NativeType>double</cd:NativeType>
+              </cd:Float>
+            </cd:Field>
+            <cd:Field name="uv_energy_per_pulse">
+              <cd:Float>
+                <cd:Description>UV energy at each pulse</cd:Description>
+                <cd:Unit>mJ</cd:Unit>
+                <cd:BitSize>64</cd:BitSize>
+                <cd:NativeType>double</cd:NativeType>
+              </cd:Float>
+            </cd:Field>
+            <cd:Field name="uv_energy_ok_status">
+              <cd:Integer>
+                <cd:Description>Flag showing the UV Energy OK Status</cd:Description>
+                <cd:BitSize>8</cd:BitSize>
+                <cd:NativeType>uint8</cd:NativeType>
+                <ct:NamedTest id="BooleanBinTest"/>
+              </cd:Integer>
+            </cd:Field>
+          </cd:Record>
+        </cd:Array>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="pulse_time_delays">
+    <cd:Record>
+      <cd:Description>Pulse Time Delays</cd:Description>
+      <cd:Field name="dt1">
+        <cd:Integer>
+          <cd:Description>dt1 pulse delay constant for BRC</cd:Description>
+          <cd:BitSize>32</cd:BitSize>
+          <cd:NativeType>uint32</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="dt2">
+        <cd:Integer>
+          <cd:Description>dt2 pulse delay constant for BRC</cd:Description>
+          <cd:BitSize>32</cd:BitSize>
+          <cd:NativeType>uint32</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="dt3_fixed">
+        <cd:Integer>
+          <cd:Description>Fixed dt3 pulse delay constant for BRC</cd:Description>
+          <cd:BitSize>32</cd:BitSize>
+          <cd:NativeType>uint32</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="dt4">
+        <cd:Integer>
+          <cd:Description>dt4 pulse delay constant for BRC</cd:Description>
+          <cd:BitSize>32</cd:BitSize>
+          <cd:NativeType>uint32</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="dt5">
+        <cd:Integer>
+          <cd:Description>dt5 pulse delay constant for BRC</cd:Description>
+          <cd:BitSize>32</cd:BitSize>
+          <cd:NativeType>uint32</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="deu_imaging_integration_time">
+        <cd:Integer>
+          <cd:Description>DEU Imaging Integration Time for the IDC mode</cd:Description>
+          <cd:BitSize>32</cd:BitSize>
+          <cd:NativeType>uint32</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="td_ray_mie">
+        <cd:Integer>
+          <cd:Description>Td_ray_mie</cd:Description>
+          <cd:BitSize>32</cd:BitSize>
+          <cd:NativeType>uint32</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="dt3_variable">
+        <cd:Array>
+          <cd:Dimension>30</cd:Dimension>
+          <cd:Integer>
+            <cd:Description>Time delays for each measurement. Variable time delay element for each measurement due to satellite height variations</cd:Description>
+            <cd:BitSize>32</cd:BitSize>
+            <cd:NativeType>uint32</cd:NativeType>
+          </cd:Integer>
+        </cd:Array>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="mie_time_delays">
+    <cd:Record>
+      <cd:Description>Mie Time Delays</cd:Description>
+      <cd:Field name="bin_layer_integration_time">
+        <cd:Array>
+          <cd:Dimension>24</cd:Dimension>
+          <cd:Integer>
+            <cd:Description>Individual time delay for each layer (bin)</cd:Description>
+            <cd:BitSize>32</cd:BitSize>
+            <cd:NativeType>int32</cd:NativeType>
+          </cd:Integer>
+        </cd:Array>
+      </cd:Field>
+      <cd:Field name="background_integration_time">
+        <cd:Integer>
+          <cd:Description>Duration of background integration time</cd:Description>
+          <cd:BitSize>32</cd:BitSize>
+          <cd:NativeType>int32</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="rayleigh_time_delays">
+    <cd:Record>
+      <cd:Description>Rayleigh Time Delays</cd:Description>
+      <cd:Field name="bin_layer_integration_time">
+        <cd:Array>
+          <cd:Dimension>24</cd:Dimension>
+          <cd:Integer>
+            <cd:Description>Individual time delay for each layer (bin)</cd:Description>
+            <cd:BitSize>32</cd:BitSize>
+            <cd:NativeType>int32</cd:NativeType>
+          </cd:Integer>
+        </cd:Array>
+      </cd:Field>
+      <cd:Field name="background_integration_time">
+        <cd:Integer>
+          <cd:Description>Duration of background integration time</cd:Description>
+          <cd:BitSize>32</cd:BitSize>
+          <cd:NativeType>int32</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="height_rayleigh_bin_1">
+    <cd:Integer>
+      <cd:Description>Commanded altitude to top of Rayleigh bin 1</cd:Description>
+      <cd:Unit>km</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="avg_mie_accd_die_temp">
+    <cd:Float>
+      <cd:Description>Average of 10 Mie ACCD die temoeratures</cd:Description>
+      <cd:Unit>degC</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="avg_rayleigh_accd_die_temp">
+    <cd:Float>
+      <cd:Description>Average of 10 Rayleigh ACCD die temoeratures</cd:Description>
+      <cd:Unit>degC</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="spare_2">
+    <cd:Raw>
+      <cd:Description>Spare</cd:Description>
+      <cd:BitSize>128</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="deu_temp">
+    <cd:Float>
+      <cd:Description>Average of DEU temperature</cd:Description>
+      <cd:Unit>degC</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="rsp_etalon_temp">
+    <cd:Float>
+      <cd:Description>Average of RSP Etalon temperature</cd:Description>
+      <cd:Unit>degC</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="mspa_etalon_temp">
+    <cd:Float>
+      <cd:Description>Average of MSPA Etalon temperature</cd:Description>
+      <cd:Unit>degC</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="m1_temp">
+    <cd:Float>
+      <cd:Description>Average of M1 temperature</cd:Description>
+      <cd:Unit>degC</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="m1_tc_temp">
+    <cd:Float>
+      <cd:Description>Average of M1 TC temperature</cd:Description>
+      <cd:Unit>degC</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="struts_temp_pxpy">
+    <cd:Float>
+      <cd:Description>Average of Struts temperature +X+Y</cd:Description>
+      <cd:Unit>degC</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="struts_temp_mxpy">
+    <cd:Float>
+      <cd:Description>Average of Struts temperature -X+Y</cd:Description>
+      <cd:Unit>degC</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="struts_temp_mpy">
+    <cd:Float>
+      <cd:Description>Average of Struts temperature -Y</cd:Description>
+      <cd:Unit>degC</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="m2_tc_temp">
+    <cd:Float>
+      <cd:Description>Average of M2 TC temperature</cd:Description>
+      <cd:Unit>degC</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="rlh_frequency">
+    <cd:Float>
+      <cd:Description>Average of 10 RLH Frequency</cd:Description>
+      <cd:Unit>GHz</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="plh_uv_energy">
+    <cd:Float>
+      <cd:Description>Average of 10 PLH UV Energy</cd:Description>
+      <cd:Unit>mJ</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="mo_ld1_temp">
+    <cd:Float>
+      <cd:Description>Average of 10 MO LD1 temperature</cd:Description>
+      <cd:Unit>degC</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="mo_ld2_temp">
+    <cd:Float>
+      <cd:Description>Average of 10 MO LD2 temperature</cd:Description>
+      <cd:Unit>degC</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="preamp_ld_sidea_temp">
+    <cd:Float>
+      <cd:Description>Average of 10 Preamp LD Side A temperature</cd:Description>
+      <cd:Unit>degC</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="preamp_ld_sideb_temp">
+    <cd:Float>
+      <cd:Description>Average of 10 Preamp LD Side B temperature</cd:Description>
+      <cd:Unit>degC</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="amp_ld_sidea_temp">
+    <cd:Float>
+      <cd:Description>Average of 10 Amp LD Side A temperature</cd:Description>
+      <cd:Unit>degC</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="amp_ld_sideb_temp">
+    <cd:Float>
+      <cd:Description>Average of 10 Amp LD Side B temperature</cd:Description>
+      <cd:Unit>degC</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="rlh_ule_cavity_temp">
+    <cd:Float>
+      <cd:Description>Average of 10 RLH ULE Cavity temperature</cd:Description>
+      <cd:Unit>degC</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="tle_lv_temp">
+    <cd:Float>
+      <cd:Description>Average of 10 TLE LV temperature</cd:Description>
+      <cd:Unit>degC</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="tle_hv_temp">
+    <cd:Float>
+      <cd:Description>Average of 10 TLE HV temperature</cd:Description>
+      <cd:Unit>degC</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="multimode_ratio">
+    <cd:Float>
+      <cd:Description>Average of 10 Multimode Ratio</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="etalon_temperatures">
+    <cd:Array>
+      <cd:Dimension>6</cd:Dimension>
+      <cd:Record>
+        <cd:Description>Etalon Temperatures</cd:Description>
+        <cd:Field name="aht_9_rsp_e">
+          <cd:Float>
+            <cd:Description>Sensor RSP etalon temperature</cd:Description>
+            <cd:Unit>degC</cd:Unit>
+            <cd:BitSize>64</cd:BitSize>
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Field>
+        <cd:Field name="aht_10_rsp_e">
+          <cd:Float>
+            <cd:Description>Sensor RSP etalon temperature</cd:Description>
+            <cd:Unit>degC</cd:Unit>
+            <cd:BitSize>64</cd:BitSize>
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Field>
+        <cd:Field name="aht_11_rsp_e">
+          <cd:Float>
+            <cd:Description>Sensor RSP etalon temperature</cd:Description>
+            <cd:Unit>degC</cd:Unit>
+            <cd:BitSize>64</cd:BitSize>
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Field>
+        <cd:Field name="spare_3">
+           <cd:Raw>
+           <cd:Description>Spare</cd:Description>
+           <cd:BitSize>64</cd:BitSize>
+           </cd:Raw>
+           <cd:Hidden/>
+        </cd:Field>        
+      </cd:Record>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="rspt_temperatures">
+    <cd:Array>
+      <cd:Dimension>6</cd:Dimension>
+      <cd:Record>
+        <cd:Description>RSPT temperatures for each sensor and each time sample in the BRC</cd:Description>
+        <cd:Field name="tc_8_rspt_1">
+          <cd:Float>
+            <cd:Description>Sensor RSPT temperature</cd:Description>
+            <cd:Unit>degC</cd:Unit>
+            <cd:BitSize>64</cd:BitSize>
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Field>
+        <cd:Field name="tc_9_rspt_2">
+          <cd:Float>
+            <cd:Description>Sensor RSPT temperature</cd:Description>
+            <cd:Unit>degC</cd:Unit>
+            <cd:BitSize>64</cd:BitSize>
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Field>
+        <cd:Field name="tc_10_rspt_3">
+          <cd:Float>
+            <cd:Description>Sensor RSPT temperature</cd:Description>
+            <cd:Unit>degC</cd:Unit>
+            <cd:BitSize>64</cd:BitSize>
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Field>
+        <cd:Field name="tc_11_rspt_4">
+          <cd:Float>
+            <cd:Description>Sensor RSPT temperature</cd:Description>
+            <cd:Unit>degC</cd:Unit>
+            <cd:BitSize>64</cd:BitSize>
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Field>
+      </cd:Record>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="oba_temperature">
+    <cd:Record>
+      <cd:Description>OBA RAY temperatures for sensors, AHT5, AHT6, AHT7, AHT8</cd:Description>
+      <cd:Field name="aht_5_obray">
+        <cd:Float>
+          <cd:Description>Sensor OBA Temperature</cd:Description>
+          <cd:Unit>degC</cd:Unit>
+          <cd:BitSize>64</cd:BitSize>
+          <cd:NativeType>double</cd:NativeType>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="aht_6_obray">
+        <cd:Float>
+          <cd:Description>Sensor OBA Temperature</cd:Description>
+          <cd:Unit>degC</cd:Unit>
+          <cd:BitSize>64</cd:BitSize>
+          <cd:NativeType>double</cd:NativeType>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="aht_7_obray">
+        <cd:Float>
+          <cd:Description>Sensor OBA Temperature</cd:Description>
+          <cd:Unit>degC</cd:Unit>
+          <cd:BitSize>64</cd:BitSize>
+          <cd:NativeType>double</cd:NativeType>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="aht_8_obray">
+        <cd:Float>
+          <cd:Description>Sensor OBA Temperature</cd:Description>
+          <cd:Unit>degC</cd:Unit>
+          <cd:BitSize>64</cd:BitSize>
+          <cd:NativeType>double</cd:NativeType>
+        </cd:Float>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="txa_frequency">
+    <cd:Float>
+      <cd:Description>TXA frequency</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+</cd:Record>

@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="binary" last-modified="2017-04-12" name="Level_1A_Data_Quality_ADSR_04_04">
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="binary" last-modified="2017-09-08" name="Level_1A_Data_Quality_ADSR_04_04">
   <cd:Field name="start_of_observation_time">
     <cd:Time timeformat="binary_envisat_datetime">
       <cd:Description>Start time at start of BRC</cd:Description>
@@ -22,7 +22,7 @@
         <cd:Description>Level 1A Measurement Validity Indicator</cd:Description>
         <cd:Field name="measurement_data_present">
           <cd:Integer>
-            <cd:Description>TRUE = Measurement data is present in BRC. SID (measurement index + 4) missing</cd:Description>
+            <cd:Description>TRUE = Measurement data is present in BRC. FALSE = SID (measurement index + 4) missing</cd:Description>
             <cd:BitSize>8</cd:BitSize>
             <cd:NativeType>uint8</cd:NativeType>
           </cd:Integer>
@@ -83,7 +83,7 @@
       <cd:Description>Reference Pulse Validity Indicator</cd:Description>
       <cd:Field name="mie_reference_pulses_present">
         <cd:Integer>
-          <cd:Description>TRUE = Mie Reference Pulses are present in BRC, SID3 is missing</cd:Description>
+          <cd:Description>TRUE = Mie Reference Pulses are present in BRC, FALSE=SID3 is missing</cd:Description>
           <cd:BitSize>8</cd:BitSize>
           <cd:NativeType>uint8</cd:NativeType>
         </cd:Integer>
@@ -91,7 +91,7 @@
       </cd:Field>
       <cd:Field name="rayleigh_reference_pulses_present">
         <cd:Integer>
-          <cd:Description>TRUE = Rayleigh Reference Pulses are present in BRC, SID4 is missing</cd:Description>
+          <cd:Description>TRUE = Rayleigh Reference Pulses are present in BRC, FALSE=SID4 is missing</cd:Description>
           <cd:BitSize>8</cd:BitSize>
           <cd:NativeType>uint8</cd:NativeType>
         </cd:Integer>

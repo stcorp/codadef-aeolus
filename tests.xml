@@ -126,6 +126,7 @@
   <ct:Test name="Range450To550" criticality="Error" description="The value should hold a number from 450 to 550"><![CDATA[float(.) >= 450 && float(.) <= 550]]></ct:Test>
   <ct:Test name="Range1400To1600" criticality="Error" description="The value should hold a number from 1400 to 1600"><![CDATA[float(.) >= 1400 && float(.) <= 1600]]></ct:Test>
   <ct:Test name="RangeMinus10000To82000000" criticality="Error" description="The value should hold a number from -10000 to 8200000"><![CDATA[float(.) >= -10000 && float(.) <= 8200000]]></ct:Test>
+  <ct:Test name="RangeMinus50To50" criticality="Error" description="The value should hold a number from -50 to 50"><![CDATA[float(.) >= -50 && float(.) <= 50]]></ct:Test>     
   <ct:Test name="Range5E12To5E13" criticality="Error" description="The value should hold a number from 5.0E12 to 5.0E13"><![CDATA[float(.) >= 5.0E12 && float(.) <= 5.0E13]]></ct:Test>     
   <ct:Test name="Range5E13To5E14" criticality="Error" description="The value should hold a number from 5.0E13 to 5.0E14"><![CDATA[float(.) >= 5.0E13 && float(.) <= 5.0E14]]></ct:Test>     
   <ct:Test name="RangeLatitude6" criticality="Error" description="The latitude (in 1E6 degrees) should be &gt;= -90E6 and &lt;= 90E6"><![CDATA[float(.) >= -90.0E6 && float(.) <= 90.0E6]]></ct:Test>

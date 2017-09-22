@@ -1,0 +1,315 @@
+<?xml version="1.0"?>
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="xml" last-modified="2017-09-11" name="Specific_Product_Header_Level2B_03_00" namexml="Specific_Product_Header">
+  <cd:Description>Specific Product Header for ALD Level 2B products</cd:Description>
+  <cd:Field name="Sph_Descriptor">
+    <cd:Text namexml="Sph_Descriptor">
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="Spare_1">
+    <cd:Hidden/>
+    <cd:Text namexml="Spare_1">
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="NumMeasurements">
+    <cd:Type namexml="NumMeasurements">
+      <cd:Integer format="ascii">
+        <cd:Description>Number of L1B measurements used in the product</cd:Description>
+        <cd:NativeType>uint32</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="NumMieGroups">
+    <cd:Type namexml="NumMieGroups">
+      <cd:Integer format="ascii">
+        <cd:Description>Number of measurement groups generated for the Mie channel</cd:Description>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="NumRayleighGroups">
+    <cd:Type namexml="NumRayleighGroups">
+      <cd:Integer format="ascii">
+        <cd:Description>Number of measurement groups generated for the Rayleigh channel</cd:Description>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="NumMieWindResults">
+    <cd:Type namexml="NumMieWindResults">
+      <cd:Integer format="ascii">
+        <cd:Description>Number of Mie channel wind retrievals performed on accumulated measurement data</cd:Description>
+        <cd:NativeType>uint32</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="NumRayleighWindResults">
+    <cd:Type namexml="NumRayleighWindResults">
+      <cd:Integer format="ascii">
+        <cd:Description>Number of Rayleigh channel wind retrievals performed on accumulated measurement data</cd:Description>
+        <cd:NativeType>uint32</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="NumMieProfiles">
+    <cd:Type namexml="NumMieProfiles">
+      <cd:Integer format="ascii">
+        <cd:Description>Number of Mie channel wind profiles generated from the individual wind retrievals</cd:Description>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="NumRayleighProfiles">
+    <cd:Type namexml="NumRayleighProfiles">
+      <cd:Integer format="ascii">
+        <cd:Description>Number of Rayleigh channel wind profiles generated from the individual wind retrievals</cd:Description>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="NumAMDprofiles">
+    <cd:Type namexml="NumAMDprofiles">
+      <cd:Integer format="ascii">
+        <cd:Description>Number of AMD profiles presented to the L2B processing stage</cd:Description>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Intersect_Start_Lat">
+    <cd:Type namexml="Intersect_Start_Lat">
+      <cd:Attribute name="unit">
+        <cd:Optional/>
+        <cd:FixedValue>10-6DegN</cd:FixedValue>
+      </cd:Attribute>
+      <cd:Integer format="ascii">
+        <cd:Description>Latitude of the intersection of WGS84 DEM and the satellite line-of-sight for the first measurement (first measurement centroid time of the first BRC)</cd:Description>
+        <cd:Unit>1e-6 degrees_north</cd:Unit>
+        <cd:Conversion denominator="1000000.000000" numerator="1.000000">
+          <cd:Unit>degrees_north</cd:Unit>
+        </cd:Conversion>
+        <cd:NativeType>int32</cd:NativeType>
+        <ct:NamedTest id="RangeLatitude6"/>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Intersect_Start_Long">
+    <cd:Type namexml="Intersect_Start_Long">
+      <cd:Attribute name="unit">
+        <cd:Optional/>
+        <cd:FixedValue>10-6DegE</cd:FixedValue>
+      </cd:Attribute>
+      <cd:Integer format="ascii">
+        <cd:Description>Longitude of the intersection of WGS84 DEM and the satellite line-of-sight for the first measurement (first measurement centroid time of the first BRC)</cd:Description>
+        <cd:Unit>1e-6 degrees_east</cd:Unit>
+        <cd:Conversion denominator="1000000.000000" numerator="1.000000">
+          <cd:Unit>degrees_east</cd:Unit>
+        </cd:Conversion>
+        <cd:NativeType>int32</cd:NativeType>
+        <ct:NamedTest id="RangeLongitude6"/>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Intersect_Stop_Lat">
+    <cd:Type namexml="Intersect_Stop_Lat">
+      <cd:Attribute name="unit">
+        <cd:Optional/>
+        <cd:FixedValue>10-6DegN</cd:FixedValue>
+      </cd:Attribute>
+      <cd:Integer format="ascii">
+        <cd:Description>Latitude of the intersection of WGS84 DEM and the satellite line-of-sight for the last measurement (last measurement centroid time of the last BRC)</cd:Description>
+        <cd:Unit>1e-6 degrees_north</cd:Unit>
+        <cd:Conversion denominator="1000000.000000" numerator="1.000000">
+          <cd:Unit>degrees_north</cd:Unit>
+        </cd:Conversion>
+        <cd:NativeType>int32</cd:NativeType>
+        <ct:NamedTest id="RangeLatitude6"/>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Intersect_Stop_Long">
+    <cd:Type namexml="Intersect_Stop_Long">
+      <cd:Attribute name="unit">
+        <cd:Optional/>
+        <cd:FixedValue>10-6DegE</cd:FixedValue>
+      </cd:Attribute>
+      <cd:Integer format="ascii">
+        <cd:Description>Longitude of the intersection of WGS84 DEM and the satellite line-of-sight for the last measurement (last measurement centroid time of the last BRC)</cd:Description>
+        <cd:Unit>1e-6 degrees_east</cd:Unit>
+        <cd:Conversion denominator="1000000.000000" numerator="1.000000">
+          <cd:Unit>degrees_east</cd:Unit>
+        </cd:Conversion>
+        <cd:NativeType>int32</cd:NativeType>
+        <ct:NamedTest id="RangeLongitude6"/>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Sat_Track">
+    <cd:Type namexml="Sat_Track">
+      <cd:Attribute name="unit">
+        <cd:Optional/>
+        <cd:FixedValue>deg</cd:FixedValue>
+      </cd:Attribute>
+      <cd:Float format="ascii">
+        <cd:Description>Sub-satellite heading at the sensing start time in the MPH</cd:Description>
+        <cd:Unit>degrees</cd:Unit>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Spare_2">
+    <cd:Hidden/>
+    <cd:Text namexml="Spare_2">
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="Num_Valid_Clear_Mie_Profiles">
+    <cd:Type namexml="Num_Valid_Clear_Mie_Profiles">
+      <cd:Integer format="ascii">
+        <cd:Description>number of profiles holding at least one valid clear Mie wind retrieval results</cd:Description>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Num_Valid_Clear_Rayleigh_Prof">
+    <cd:Type namexml="Num_Valid_Clear_Rayleigh_Prof">
+      <cd:Integer format="ascii">
+        <cd:Description>number of profiles holding at least one valid clear Rayleigh wind retrieval results</cd:Description>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Num_Valid_Cloud_Mie_Profiles">
+    <cd:Type namexml="Num_Valid_Cloud_Mie_Profiles">
+      <cd:Integer format="ascii">
+        <cd:Description>number of profiles holding at least one valid cloud Mie wind retrieval results</cd:Description>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Num_Valid_Cloud_Rayleigh_Prof">
+    <cd:Type namexml="Num_Valid_Cloud_Rayleigh_Prof">
+      <cd:Integer format="ascii">
+        <cd:Description>number of profiles holding at least one valid cloud Rayleigh wind retrieval results</cd:Description>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Num_Invalid_Clear_Mie_Profiles">
+    <cd:Type namexml="Num_Invalid_Clear_Mie_Profiles">
+      <cd:Integer format="ascii">
+        <cd:Description>number of profiles holding only invalid clear Mie wind retrieval results</cd:Description>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Num_Invalid_Clear_Rayleigh_Prof">
+    <cd:Type namexml="Num_Invalid_Clear_Rayleigh_Prof">
+      <cd:Integer format="ascii">
+        <cd:Description>number of profiles holding only invalid clear Rayleigh wind retrieval results</cd:Description>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Num_Invalid_Cloud_Mie_Profiles">
+    <cd:Type namexml="Num_Invalid_Cloud_Mie_Profiles">
+      <cd:Integer format="ascii">
+        <cd:Description>number of profiles holding only invalid cloud Mie wind retrieval results</cd:Description>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Num_Invalid_Cloud_Rayleigh_Prof">
+    <cd:Type namexml="Num_Invalid_Cloud_Rayleigh_Prof">
+      <cd:Integer format="ascii">
+        <cd:Description>number of profiles holding only invalid cloud Rayleigh wind retrieval results</cd:Description>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Num_Profiles_Surface_Mie">
+    <cd:Type namexml="Num_Profiles_Surface_Mie">
+      <cd:Integer format="ascii">
+        <cd:Description>Number of Mie profiles reported in L2B extending down to the surface</cd:Description>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Num_Profiles_Surface_Ray">
+    <cd:Type namexml="Num_Profiles_Surface_Ray">
+      <cd:Integer format="ascii">
+        <cd:Description>Number of Rayleigh profiles reported in L2B extending down to the surface</cd:Description>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Num_Valid_Clear_Winds_L2B_Mie">
+    <cd:Type namexml="Num_Valid_Clear_Winds_L2B_Mie">
+      <cd:Integer format="ascii">
+        <cd:Description>Number of valid clear Mie wind retrievals</cd:Description>
+        <cd:NativeType>uint32</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Num_Valid_Clear_Winds_L2B_Ray">
+    <cd:Type namexml="Num_Valid_Clear_Winds_L2B_Ray">
+      <cd:Integer format="ascii">
+        <cd:Description>Number of valid clear Rayleigh wind retrievals</cd:Description>
+        <cd:NativeType>uint32</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Num_Valid_Cloud_Winds_L2B_Mie">
+    <cd:Type namexml="Num_Valid_Cloud_Winds_L2B_Mie">
+      <cd:Integer format="ascii">
+        <cd:Description>Number of valid cloud Mie wind retrievals</cd:Description>
+        <cd:NativeType>uint32</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Num_Valid_Cloud_Winds_L2B_Ray">
+    <cd:Type namexml="Num_Valid_Cloud_Winds_L2B_Ray">
+      <cd:Integer format="ascii">
+        <cd:Description>Number of valid cloud Rayleigh wind retrievals</cd:Description>
+        <cd:NativeType>uint32</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Num_Invalid_Clear_Winds_L2B_Mie">
+    <cd:Type namexml="Num_Invalid_Clear_Winds_L2B_Mie">
+      <cd:Integer format="ascii">
+        <cd:Description>Number of invalid clear Mie wind retrievals</cd:Description>
+        <cd:NativeType>uint32</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Num_Invalid_Clear_Winds_L2B_Ray">
+    <cd:Type namexml="Num_Invalid_Clear_Winds_L2B_Ray">
+      <cd:Integer format="ascii">
+        <cd:Description>Number of invalid clear Rayleigh wind retrievals</cd:Description>
+        <cd:NativeType>uint32</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Num_Invalid_Cloud_Winds_L2B_Mie">
+    <cd:Type namexml="Num_Invalid_Cloud_Winds_L2B_Mie">
+      <cd:Integer format="ascii">
+        <cd:Description>Number of invalid cloud Mie wind retrievals</cd:Description>
+        <cd:NativeType>uint32</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Num_Invalid_Cloud_Winds_L2B_Ray">
+    <cd:Type namexml="Num_Invalid_Cloud_Winds_L2B_Ray">
+      <cd:Integer format="ascii">
+        <cd:Description>Number of invalid cloud Rayleigh wind retrievals</cd:Description>
+        <cd:NativeType>uint32</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Spare_3">
+    <cd:Hidden/>
+    <cd:Text namexml="Spare_3">
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="List_of_Dsds">
+    <cd:NamedType id="List_of_Dsds"/>
+  </cd:Field>
+</cd:Record>

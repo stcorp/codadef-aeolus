@@ -1,0 +1,145 @@
+<?xml version="1.0"?>
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="binary" last-modified="2017-09-11" name="Level_2A_Group_PCD_ADSR_03_05">
+  <cd:Field name="starttime">
+    <cd:Time timeformat="binary_envisat_datetime">
+      <cd:Description>Start date and time of the group profile covered by the present DSR. This is the centroid time of the first measurement of the profile.</cd:Description>
+      <ct:NamedTest id="RangeSecond" path="seconds"/>
+      <ct:NamedTest id="RangeMicroSecond" path="microseconds"/>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="brc_start">
+    <cd:Integer>
+      <cd:Description>Brc of the first measurement of the group.</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="measurement_start">
+    <cd:Integer>
+      <cd:Description>First measurement of the group.</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="brc_end">
+    <cd:Integer>
+      <cd:Description>Brc of the last measurement of the group.</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="measurement_end">
+    <cd:Integer>
+      <cd:Description>Last measurement of the group.</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="height_bin_index">
+    <cd:Integer>
+      <cd:Description>Index of the height level of the group in Rayleigh scale.</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="spare">
+    <cd:Integer>
+      <cd:Description>Spare</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="particle_extinction_variance">
+    <cd:Float>
+      <cd:Description>Variance of the particle extinction coefficient.</cd:Description>
+      <cd:Unit>m^-2</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="particle_backscatter_variance">
+    <cd:Float>
+      <cd:Description>Variance of the particle backscatter coefficient.</cd:Description>
+      <cd:Unit>m^-2 sr^-2</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="particle_lod_variance">
+    <cd:Float>
+      <cd:Description>Variance of the particle local optical depth.</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="qc_flag">
+    <cd:Integer>
+      <cd:Description>Bit packed quality field: Bit 0: Extinction; data valid 1, otherwise 0, Bit 1: Backscatter; data valid 1, otherwise 0, Bit 3: Mie SNR; data valid 1, otherwise 0, Bit 4: Rayleigh SNR; data valid 1, otherwise 0, Bit 5: Extinction error bar; data valid 1, otherwise 0, Bit 6: Backscatter error bar; data valid 1, otherwise 0, Bit 7: LOD; data valid 1, otherwise 0, Bit 8: Spare</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="mid_particle_extinction_variance_top">
+    <cd:Float>
+      <cd:Description>Variance of the particle extinction coefficient in this height top middle bin.</cd:Description>
+      <cd:Unit>m^-2</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="mid_particle_backscatter_variance_top">
+    <cd:Float>
+      <cd:Description>Variance of the particle backscatter coefficient in this height top middle bin.</cd:Description>
+      <cd:Unit>m^-2 sr^-2</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="mid_particle_lod_variance_top">
+    <cd:Float>
+      <cd:Description>Variance of the particle local optical depth in this height top middle bin.</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="mid_particle_ber_variance_top">
+    <cd:Float>
+      <cd:Description>Variance of the BER in this height top middle bin.</cd:Description>
+      <cd:Unit>sr^-2</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="mid_particle_extinction_variance_bot">
+    <cd:Float>
+      <cd:Description>Variance of the particle extinction coefficient in this height top middle bin.</cd:Description>
+      <cd:Unit>m^-2</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="mid_particle_backscatter_variance_bot">
+    <cd:Float>
+      <cd:Description>Variance of the particle backscatter coefficient in this height top middle bin.</cd:Description>
+      <cd:Unit>m^-2 sr^-2</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="mid_particle_lod_variance_bot">
+    <cd:Float>
+      <cd:Description>Variance of the particle local optical depth in this height top middle bin.</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="mid_particle_ber_variance_bot">
+    <cd:Float>
+      <cd:Description>Variance of the BER in this height top middle bin.</cd:Description>
+      <cd:Unit>sr^-2</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+</cd:Record>

@@ -19,7 +19,7 @@
       </cd:Field>
       <cd:Field name="l2b_amd_screening_qc_flags">
         <cd:Integer>
-          <cd:Description>Flags describing problems which prevent using this L2B AMD file.</cd:Description>
+          <cd:Description>Flags describing problems which prevent using this L2B AMD file. Bit 1: reserved, Bit 2: reserved, ..., Bit 8: reserved</cd:Description>
           <cd:BitSize>8</cd:BitSize>
           <cd:NativeType>uint8</cd:NativeType>
         </cd:Integer>
