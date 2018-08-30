@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="binary" last-modified="2017-03-22" name="Level_2A_SCA_PCD_ADSR_03_02">
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="binary" last-modified="2018-04-03" name="Level_2A_SCA_PCD_ADSR_03_02">
   <cd:Field name="starttime">
     <cd:Time timeformat="binary_envisat_datetime">
       <cd:Description>Start date and time of the SCA profile covered by the present DSR. This is the centroid time of the first measurement of the profile.</cd:Description>
@@ -51,7 +51,7 @@
         </cd:Field>
         <cd:Field name="processing_qc_flag">
           <cd:Integer>
-            <cd:Description>QC information about processing (=0)</cd:Description>
+            <cd:Description>QC information about processing (1=data valid, otherwise 0). Bit 1: Extinction, 2: Backscatter, 3: BER, 4: Mie SNR, 5: Rayleigh SNR, 6: Extinction error bar, 7: Backscatter error bar, 8: Cumulative LOD</cd:Description>
             <cd:BitSize>8</cd:BitSize>
             <cd:NativeType>int8</cd:NativeType>
           </cd:Integer>

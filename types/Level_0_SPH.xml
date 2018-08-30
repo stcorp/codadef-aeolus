@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:Record format="ascii" name="Level_0_SPH" last-modified="2017-03-01" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+<cd:Record format="ascii" name="Level_0_SPH" last-modified="2018-06-20" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
   <cd:Field name="sph_descriptor_title">
     <cd:Text>
       <cd:Description>SPH_DESCRIPTOR=</cd:Description>
@@ -257,7 +257,6 @@
       <cd:Description>'1' or '0'. Indicates if number of ISPs with CRC errors in Transfer Frames reported by FEP exceeds treshold</cd:Description>
       <cd:ByteSize>1</cd:ByteSize>
       <cd:NativeType>uint8</cd:NativeType>
-      <ct:NamedTest id="IntIsZero"/>
     </cd:Integer>
   </cd:Field>
   <cd:Field name="newline_char_8">
@@ -283,7 +282,6 @@
       <cd:Description>'1' or '0'. Indicates if number of missing ISPs exceeds treshold</cd:Description>
       <cd:ByteSize>1</cd:ByteSize>
       <cd:NativeType>uint8</cd:NativeType>
-      <ct:NamedTest id="IntIsZero"/>      
     </cd:Integer>
   </cd:Field>
   <cd:Field name="newline_char_9">
@@ -309,7 +307,6 @@
       <cd:Description>'1' or '0'. Indicates if number of ISPs with CRC errors in SP exceeds treshold</cd:Description>
       <cd:ByteSize>1</cd:ByteSize>
       <cd:NativeType>uint8</cd:NativeType>
-      <ct:NamedTest id="IntIsZero"/>      
     </cd:Integer>
   </cd:Field>
   <cd:Field name="newline_char_10">
@@ -335,7 +332,6 @@
       <cd:Description>'1' or '0'. Indicates if number of ISPs with Reed Solomon corrections exceeds treshold</cd:Description>
       <cd:ByteSize>1</cd:ByteSize>
       <cd:NativeType>uint8</cd:NativeType>
-      <ct:NamedTest id="IntIsZero"/>      
     </cd:Integer>
   </cd:Field>
   <cd:Field name="newline_char_11">

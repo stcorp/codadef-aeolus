@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:Record name="Product_Report" format="xml" namexml="Product_Report" last-modified="2016-07-25" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+<cd:Record name="Product_Report" format="xml" namexml="Product_Report" last-modified="2018-06-21" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
   <cd:Description>Dissemination Report Data Block</cd:Description>
   <cd:Field name="Processor_Name">
     <cd:Text namexml="Processor_Name">
@@ -41,18 +41,18 @@
             <cd:Field name="Date_Time_of_Operation">
               <cd:Record namexml="Date_Time_of_Operation">
                 <cd:Field name="Start">
-                  <cd:Type namexml="Start">
-                    <cd:Time format="ascii" timeformat="ascii_ccsds_datetime_ymd2">
-                      <cd:Description>Time stamp of Task start processing time in the format : YYYY-MM-DDTHH:MM:SS.uuuuuu</cd:Description>
-                    </cd:Time>
-                  </cd:Type>
+                  <cd:Time timeformat="time(str(.),&quot;yyyy-MM-dd'T'HH:mm:ss.SSSSSS|yyyy-MM-dd'T'HH:mm:ss&quot;)">
+                    <cd:Text namexml="Start">
+                      <cd:Description>Time stamp of Task start processing time in the format : YYYY-MM-DDTHH:MM:SS[.uuuuuu]</cd:Description>
+                    </cd:Text>
+                  </cd:Time>
                 </cd:Field>
                 <cd:Field name="Stop">
-                  <cd:Type namexml="Stop">
-                    <cd:Time format="ascii" timeformat="ascii_ccsds_datetime_ymd2">
-                      <cd:Description>Time stamp of Task start processing time in the format : YYYY-MM-DDTHH:MM:SS.uuuuuu</cd:Description>
-                    </cd:Time>
-                  </cd:Type>
+                  <cd:Time timeformat="time(str(.),&quot;yyyy-MM-dd'T'HH:mm:ss.SSSSSS|yyyy-MM-dd'T'HH:mm:ss&quot;)">
+                    <cd:Text namexml="Stop">
+                      <cd:Description>Time stamp of Task start processing time in the format : YYYY-MM-DDTHH:MM:SS[.uuuuuu]</cd:Description>
+                    </cd:Text>
+                  </cd:Time>
                 </cd:Field>
               </cd:Record>
             </cd:Field>

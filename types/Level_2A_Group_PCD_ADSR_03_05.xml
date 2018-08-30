@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="binary" last-modified="2017-09-11" name="Level_2A_Group_PCD_ADSR_03_05">
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="binary" last-modified="2018-04-03" name="Level_2A_Group_PCD_ADSR_03_05">
   <cd:Field name="starttime">
     <cd:Time timeformat="binary_envisat_datetime">
       <cd:Description>Start date and time of the group profile covered by the present DSR. This is the centroid time of the first measurement of the profile.</cd:Description>
@@ -75,7 +75,7 @@
   </cd:Field>
   <cd:Field name="qc_flag">
     <cd:Integer>
-      <cd:Description>Bit packed quality field: Bit 0: Extinction; data valid 1, otherwise 0, Bit 1: Backscatter; data valid 1, otherwise 0, Bit 3: Mie SNR; data valid 1, otherwise 0, Bit 4: Rayleigh SNR; data valid 1, otherwise 0, Bit 5: Extinction error bar; data valid 1, otherwise 0, Bit 6: Backscatter error bar; data valid 1, otherwise 0, Bit 7: LOD; data valid 1, otherwise 0, Bit 8: Spare</cd:Description>
+      <cd:Description>Bit packed quality field (data valid 1, otherwise 0): Bit 1: Extinction, Bit 2: Backscatter, Bit 3: Mie SNR, Bit 4: Rayleigh SNR, Bit 5: Extinction error bar, Bit 6: Backscatter error bar, Bit 7: Cumulative LOD, Bit 8: Spare</cd:Description>
       <cd:BitSize>8</cd:BitSize>
       <cd:NativeType>uint8</cd:NativeType>
     </cd:Integer>

@@ -1,8 +1,11 @@
 <?xml version="1.0"?>
-<cd:ProductDefinition id="ALD_REP_2B" format="xml" last-modified="2009-03-02" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+<cd:ProductDefinition id="ALD_REP_2B" format="xml" last-modified="2018-06-14" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
   <cd:Record format="xml">
     <cd:Field name="Earth_Explorer_File">
       <cd:Record namexml="Earth_Explorer_File">
+        <cd:Attribute name="schemaversion">
+          <cd:Optional/>
+        </cd:Attribute>
         <cd:Description>Earth Explorer File</cd:Description>
         <cd:Field name="Earth_Explorer_Header">
           <cd:Record namexml="Earth_Explorer_Header">

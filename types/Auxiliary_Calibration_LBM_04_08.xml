@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="xml" last-modified="2016-09-11" name="Auxiliary_Calibration_LBM_04_08" namexml="Auxiliary_Calibration_LBM">
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="xml" last-modified="2018-06-20" name="Auxiliary_Calibration_LBM_04_08" namexml="Auxiliary_Calibration_LBM">
   <cd:Description>Auxiliary Calibration LBM</cd:Description>
   <cd:Field name="List_of_Data_Set_Records">
     <cd:Record namexml="List_of_Data_Set_Records">
@@ -64,6 +64,7 @@
                 <cd:Float format="ascii">
                   <cd:Description>Barycentre column value of the direct channel spot</cd:Description>
                   <cd:NativeType>double</cd:NativeType>
+                  <ct:NamedTest id="Range4To5"/>
                 </cd:Float>
               </cd:Type>
             </cd:Field>
@@ -75,6 +76,7 @@
                 <cd:Float format="ascii">
                   <cd:Description>Barycentre row value of the direct channel spot</cd:Description>
                   <cd:NativeType>double</cd:NativeType>
+                  <ct:NamedTest id="Range8To9"/>
                 </cd:Float>
               </cd:Type>
             </cd:Field>
@@ -86,6 +88,7 @@
                 <cd:Float format="ascii">
                   <cd:Description>Barycentre column value of the reflected channel spot</cd:Description>
                   <cd:NativeType>double</cd:NativeType>
+                  <ct:NamedTest id="Range12To13"/>
                 </cd:Float>
               </cd:Type>
             </cd:Field>
@@ -97,6 +100,7 @@
                 <cd:Float format="ascii">
                   <cd:Description>Barycentre row value of the reflected channel spot</cd:Description>
                   <cd:NativeType>double</cd:NativeType>
+                  <ct:NamedTest id="Range8To9"/>
                 </cd:Float>
               </cd:Type>
             </cd:Field>
@@ -232,6 +236,7 @@
                 <cd:Float format="ascii">
                   <cd:Description>Ellipse center in x-direction</cd:Description>
                   <cd:NativeType>double</cd:NativeType>
+                  <ct:NamedTest id="Range8To9"/>
                 </cd:Float>
               </cd:Type>
             </cd:Field>
@@ -243,6 +248,7 @@
                 <cd:Float format="ascii">
                   <cd:Description>Ellipse center in y direction</cd:Description>
                   <cd:NativeType>double</cd:NativeType>
+                  <ct:NamedTest id="Range8To9"/>
                 </cd:Float>
               </cd:Type>
             </cd:Field>

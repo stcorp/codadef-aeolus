@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:Record format="binary" last-modified="2015-07-20" name="Level_0_MDSR_04_04" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+<cd:Record format="binary" last-modified="2018-04-03" name="Level_0_MDSR_04_04_LIDAR" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
   <cd:Field name="start_of_observation_time">
     <cd:Time timeformat="binary_envisat_datetime">
       <cd:Description>MJD of sensing time of start of observation as extracted from AISP</cd:Description>
@@ -185,14 +185,21 @@
       </cd:Field>
       <cd:Field name="gps_utc_diff">
         <cd:Integer>
-          <cd:Description>Future difference between GPS time and UTC</cd:Description>
-          <cd:BitSize>16</cd:BitSize>
-          <cd:NativeType>int16</cd:NativeType>
+          <cd:Description>Difference between GPS time and UTC</cd:Description>
+          <cd:BitSize>8</cd:BitSize>
+          <cd:NativeType>int8</cd:NativeType>
         </cd:Integer>
       </cd:Field>
       <cd:Field name="gps_utc_update_time">
         <cd:NamedType id="CCSDSOBT"/>
       </cd:Field>
+      <cd:Field name="gps_utc_diff_future">
+        <cd:Integer>
+          <cd:Description>Future difference between GPS time and UTC</cd:Description>
+          <cd:BitSize>8</cd:BitSize>
+          <cd:NativeType>int8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>      
       <cd:Field name="gyro_angle">
         <cd:Array>
           <cd:Description>4 Gyro Angles at AOCS time, AOCS time + 125ms, AOCS time + 250ms, etc.</cd:Description>

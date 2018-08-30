@@ -64,6 +64,7 @@
                 <cd:Float format="ascii">
                   <cd:Description>Barycentre column value of the direct channel spot</cd:Description>
                   <cd:NativeType>double</cd:NativeType>
+                  <ct:NamedTest id="Range4To5"/>
                 </cd:Float>
               </cd:Type>
             </cd:Field>
@@ -75,6 +76,7 @@
                 <cd:Float format="ascii">
                   <cd:Description>Barycentre row value of the direct channel spot</cd:Description>
                   <cd:NativeType>double</cd:NativeType>
+                  <ct:NamedTest id="Range8To9"/>
                 </cd:Float>
               </cd:Type>
             </cd:Field>
@@ -86,6 +88,7 @@
                 <cd:Float format="ascii">
                   <cd:Description>Barycentre column value of the reflected channel spot</cd:Description>
                   <cd:NativeType>double</cd:NativeType>
+                  <ct:NamedTest id="Range12To13"/>
                 </cd:Float>
               </cd:Type>
             </cd:Field>
@@ -97,6 +100,7 @@
                 <cd:Float format="ascii">
                   <cd:Description>Barycentre row value of the reflected channel spot</cd:Description>
                   <cd:NativeType>double</cd:NativeType>
+                  <ct:NamedTest id="Range8To9"/>
                 </cd:Float>
               </cd:Type>
             </cd:Field>

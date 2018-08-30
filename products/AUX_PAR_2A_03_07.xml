@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:ProductDefinition id="AUX_RRC_1B_04_04" format="xml" last-modified="2018-04-03" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+<cd:ProductDefinition id="AUX_PAR_2A_03_07" format="xml" last-modified="2018-04-03" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
   <cd:Record format="xml">
     <cd:Field name="Earth_Explorer_File">
       <cd:Record namexml="Earth_Explorer_File">
@@ -18,9 +18,8 @@
                   <cd:NamedType id="Main_Product_Header_v2"/>
                 </cd:Field>
                 <cd:Field name="Specific_Product_Header">
-                  <cd:NamedType id="Specific_Product_Header_Level1BAux_04_03"/>
+                  <cd:NamedType id="Specific_Product_Header_Par2A"/>
                 </cd:Field>
-                <ct:NamedTest id="RayCalibrationResultIs2" path="Specific_Product_Header/num_of_valid_rayleigh_calibration_results"/>
               </cd:Record>
             </cd:Field>
             <ct:NamedTest id="FileNameCheckEEF" path="Fixed_Header/File_Name"/>
@@ -34,8 +33,8 @@
               <cd:Optional/>
               <cd:FixedValue>xml</cd:FixedValue>
             </cd:Attribute>
-            <cd:Field name="Auxiliary_Calibration_RRC">
-              <cd:NamedType id="Auxiliary_Calibration_RRC_04_03"/>
+            <cd:Field name="Level_2A_Processing_Parameters">
+              <cd:NamedType id="Level_2A_Processing_Parameters_03_07"/>
             </cd:Field>
           </cd:Record>
         </cd:Field>

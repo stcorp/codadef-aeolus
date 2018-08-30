@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:ProductDefinition id="ALD_U_N_2C_02_20" format="binary" last-modified="2017-03-01" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+<cd:ProductDefinition id="ALD_U_N_2C_02_20" format="binary" last-modified="2018-04-03" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
   <cd:Record format="binary">
     <cd:Description>Level 2C Product</cd:Description>
     <cd:Field name="mph">
@@ -103,7 +103,7 @@
       </cd:Array>
       <cd:Available><![CDATA[$ds_available[9] != 0]]></cd:Available>
       <cd:BitOffset><![CDATA[$ds_offset[9]]]></cd:BitOffset>
-      <ct:NamedTest id="LessThan99PercentOfMieWindVelocityMissing"/>      
+      <ct:NamedTest id="LessThanOnePercentOfMieWindVelocityMissing"/>      
     </cd:Field>
     <cd:Field name="rayleigh_hloswind">
       <cd:Array>
@@ -113,7 +113,7 @@
       </cd:Array>
       <cd:Available><![CDATA[$ds_available[10] != 0]]></cd:Available>
       <cd:BitOffset><![CDATA[$ds_offset[10]]]></cd:BitOffset>
-      <ct:NamedTest id="LessThan99PercentOfRayleighWindVelocityMissing"/>
+      <ct:NamedTest id="LessThanOnePercentOfRayleighWindVelocityMissing"/>
     </cd:Field>
     <cd:Field name="mie_profile">
       <cd:Array>
@@ -159,10 +159,10 @@
       </cd:Array>      
       <cd:Available><![CDATA[$ds_available[15] != 0]]></cd:Available>
       <cd:BitOffset><![CDATA[$ds_offset[15]]]></cd:BitOffset>
-      <ct:NamedTest id="LessThan99PercentOfBackgroundZonalWindVelocityMissing"/>
-      <ct:NamedTest id="LessThan99PercentOfBackgroundMeridionalWindVelocityMissing"/>
-      <ct:NamedTest id="LessThan99PercentOfAnalysisZonalWindVelocityMissing"/>
-      <ct:NamedTest id="LessThan99PercentOfAnalysisMeridionalWindVelocityMissing"/>
+      <ct:NamedTest id="LessThanOnePercentOfBackgroundZonalWindVelocityMissing"/>
+      <ct:NamedTest id="LessThanOnePercentOfBackgroundMeridionalWindVelocityMissing"/>
+      <ct:NamedTest id="LessThanOnePercentOfAnalysisZonalWindVelocityMissing"/>
+      <ct:NamedTest id="LessThanOnePercentOfAnalysisMeridionalWindVelocityMissing"/>
     </cd:Field>
     <cd:Field name="rayleigh_vecwind">
       <cd:Array>
@@ -172,10 +172,10 @@
       </cd:Array>
       <cd:Available><![CDATA[$ds_available[16] != 0]]></cd:Available>
       <cd:BitOffset><![CDATA[$ds_offset[16]]]></cd:BitOffset>
-      <ct:NamedTest id="LessThan99PercentOfBackgroundZonalWindVelocityMissing"/>
-      <ct:NamedTest id="LessThan99PercentOfBackgroundMeridionalWindVelocityMissing"/>
-      <ct:NamedTest id="LessThan99PercentOfAnalysisZonalWindVelocityMissing"/>
-      <ct:NamedTest id="LessThan99PercentOfAnalysisMeridionalWindVelocityMissing"/>      
+      <ct:NamedTest id="LessThanOnePercentOfBackgroundZonalWindVelocityMissing"/>
+      <ct:NamedTest id="LessThanOnePercentOfBackgroundMeridionalWindVelocityMissing"/>
+      <ct:NamedTest id="LessThanOnePercentOfAnalysisZonalWindVelocityMissing"/>
+      <ct:NamedTest id="LessThanOnePercentOfAnalysisMeridionalWindVelocityMissing"/>      
     </cd:Field>
   </cd:Record>
   <cd:ProductVariable name="num_dsd">
