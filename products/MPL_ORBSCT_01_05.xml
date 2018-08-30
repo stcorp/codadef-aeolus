@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:ProductDefinition id="MPL_ORBSCT_01_05" format="xml" last-modified="2008-07-01" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+<cd:ProductDefinition xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" id="MPL_ORBSCT_01_05" format="xml" last-modified="2008-07-01">
   <cd:Record format="xml">
     <cd:Field name="Earth_Explorer_File">
       <cd:Record namexml="Earth_Explorer_File">
@@ -8,7 +8,7 @@
         </cd:Attribute>
         <cd:Attribute name="schemaVersion">
           <cd:Optional/>
-        </cd:Attribute>        
+        </cd:Attribute>
         <cd:Description>Earth Explorer File</cd:Description>
         <cd:Field name="Earth_Explorer_Header">
           <cd:Record namexml="Earth_Explorer_Header">
@@ -19,12 +19,12 @@
             <cd:Field name="Variable_Header">
               <cd:Record namexml="Variable_Header">
                 <cd:Description>Variable Header Section</cd:Description>
-                  <cd:Field name="Time_Reference">
-                    <cd:Optional/>
-                    <cd:Text namexml="Time_Reference">
-                      <cd:Description>Reference time. For Orbit Scenario Files only the following value is allowed: UT1</cd:Description>
-                    </cd:Text>
-                  </cd:Field>                
+                <cd:Field name="Time_Reference">
+                  <cd:Optional/>
+                  <cd:Text namexml="Time_Reference">
+                    <cd:Description>Reference time. For Orbit Scenario Files only the following value is allowed: UT1</cd:Description>
+                  </cd:Text>
+                </cd:Field>
               </cd:Record>
             </cd:Field>
             <ct:NamedTest id="FileNameMatchValidityStart" path="Fixed_Header/File_Name"/>

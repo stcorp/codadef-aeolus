@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:Record name="List_of_OB_Parameters_CTI" format="xml" namexml="List_of_OB_Parameters" last-modified="2008-08-03" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" name="List_of_OB_Parameters_CTI" format="xml" namexml="List_of_OB_Parameters" last-modified="2008-08-03">
   <cd:Description>List of onboard parameters. The parameters included in the list depend on file type</cd:Description>
   <cd:Attribute name="count">
   </cd:Attribute>
@@ -16,7 +16,7 @@
         </cd:Field>
         <cd:Field name="Value_Type">
           <cd:Text namexml="Value_Type">
-          <ct:NamedTest id="ValueTestRE"/>
+            <ct:NamedTest id="ValueTestRE"/>
           </cd:Text>
         </cd:Field>
         <cd:Field name="Parameter_Value">
@@ -32,7 +32,7 @@
         </cd:Field>
         <cd:Field name="Value_Radix">
           <cd:Text namexml="Value_Radix">
-          <ct:NamedTest id="ValueTestDHO"/>
+            <ct:NamedTest id="ValueTestDHO"/>
           </cd:Text>
         </cd:Field>
         <cd:Field name="Comments">

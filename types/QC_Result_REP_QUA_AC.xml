@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:Record name="QC_Result_REP_QUA_AC" format="xml" namexml="QC_Result" last-modified="2017-04-12" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" name="QC_Result_REP_QUA_AC" format="xml" namexml="QC_Result" last-modified="2017-04-12">
   <cd:Description>Generic quality control summary definition</cd:Description>
   <cd:Field name="Source_File_Name">
     <cd:Text namexml="Source_File_Name">
@@ -11,13 +11,13 @@
       <cd:Integer format="ascii">
         <cd:Description>True, if quality control check succeeded</cd:Description>
         <cd:NativeType>uint8</cd:NativeType>
-        <cd:Mapping string="FALSE" value="0"/>        
+        <cd:Mapping string="FALSE" value="0"/>
         <cd:Mapping string="False" value="0"/>
         <cd:Mapping string="false" value="0"/>
-        <cd:Mapping string="TRUE" value="1"/>        
+        <cd:Mapping string="TRUE" value="1"/>
         <cd:Mapping string="True" value="1"/>
         <cd:Mapping string="true" value="1"/>
-        <ct:NamedTest id="BooleanBinTest" />
+        <ct:NamedTest id="BooleanBinTest"/>
       </cd:Integer>
     </cd:Type>
   </cd:Field>

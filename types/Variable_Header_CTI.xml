@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:Record name="Variable_Header_CTI" format="xml" namexml="Variable_Header" last-modified="2008-07-01" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" name="Variable_Header_CTI" format="xml" namexml="Variable_Header" last-modified="2008-07-01">
   <cd:Description>Variable Header Section</cd:Description>
   <cd:Field name="Task_Name">
     <cd:Text namexml="Task_Name">

@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
-<ct:Tests last-modified="2018-06-20" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">   
+<ct:Tests xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" last-modified="2018-06-20">
   <ct:Test name="AbsValueIsOne" criticality="Error" description="The value should be: '1' or: '-1'"><![CDATA[int(.) == 1 || int(.)==-1]]></ct:Test>
   <ct:Test name="AllC1Range05To1p5" criticality="Error" description="All array values of C1 should range from 0.5 to 1.5"><![CDATA[count(.,float(./c1) < 0.5 || float(./c1) > 1.5) == 0]]></ct:Test>
   <ct:Test name="AllC2Range01To1" criticality="Error" description="All array values of C2 should range from 0.1 to 1.0"><![CDATA[count(.,float(./c2) < 0.1 || float(./c2) > 1.0) == 0]]></ct:Test>
   <ct:Test name="AllC3Range05To1p5" criticality="Error" description="All array values of C3 should range from 0.5 to 1.5"><![CDATA[count(.,float(./c3) < 0.5 || float(./c3) > 1.5) == 0]]></ct:Test>
-  <ct:Test name="AllC4Range09To1p1" criticality="Error" description="All array values of C4 should range from 0.9 to 1.1"><![CDATA[count(.,float(./c4) < 0.9 || float(./c4) > 1.1) == 0]]></ct:Test> 
+  <ct:Test name="AllC4Range09To1p1" criticality="Error" description="All array values of C4 should range from 0.9 to 1.1"><![CDATA[count(.,float(./c4) < 0.9 || float(./c4) > 1.1) == 0]]></ct:Test>
   <ct:Test name="AtLeastOneElement" criticality="Warning" description="There should be at least one element"><![CDATA[numelements(.) >= 1]]></ct:Test>
   <ct:Test name="BooleanBinTest" criticality="Error" description="The value should be True: '1' or False: '0'"><![CDATA[int(.) == 1 || int(.)==0]]></ct:Test>
   <ct:Test name="BooleanXmlTest" criticality="Error" description="The value should be 'true', 'false', 'True', 'False', 'TRUE', 'FALSE', '1', or '0'"><![CDATA[str(.) == "true" || str(.)=="false" || str(.) == "True" || str(.)=="False" || str(.) == "TRUE" || str(.)=="FALSE" || str(.) == "1" || str(.)=="0"]]></ct:Test>
@@ -52,27 +52,27 @@
   <ct:Test name="IntGreaterThanOrEqualTo150" criticality="Error" description="The value should be greater than or equal to 150"><![CDATA[int(.) >= 150]]></ct:Test>
   <ct:Test name="IntGreaterThanOrEqualTo330" criticality="Error" description="The value should be greater than or equal to 330"><![CDATA[int(.) >= 330]]></ct:Test>
   <ct:Test name="IntGreaterThanOrEqualTo350" criticality="Error" description="The value should be greater than or equal to 350"><![CDATA[int(.) >= 350]]></ct:Test>
-  <ct:Test name="IntGreaterThanOrEqualTo1050" criticality="Error" description="The value should be greater than or equal to 1050"><![CDATA[int(.) >= 1050]]></ct:Test>  
+  <ct:Test name="IntGreaterThanOrEqualTo1050" criticality="Error" description="The value should be greater than or equal to 1050"><![CDATA[int(.) >= 1050]]></ct:Test>
   <ct:Test name="IntGreaterThanOrEqualTo5000" criticality="Error" description="The value should be greater than or equal to 5000"><![CDATA[int(.) >= 5000]]></ct:Test>
   <ct:Test name="IntGreaterThanOrEqualTo30000" criticality="Error" description="The value should be greater than or equal to 30000"><![CDATA[int(.) >= 30000]]></ct:Test>
   <ct:Test name="IntIsZero" criticality="Error" description="The field should have a value of 0 indicating no errors"><![CDATA[int(.) == 0]]></ct:Test>
   <ct:Test name="IntIsOne" criticality="Error" description="The field should have a value of 1 indicating no errors"><![CDATA[int(.) == 1]]></ct:Test>
   <ct:Test name="IntIs2" criticality="Error" description="The field should have a value of 2 indicating no errors"><![CDATA[int(.) == 2]]></ct:Test>
-  <ct:Test name="IntLessThanOrEqualToZero" criticality="Error" description="The value should be less than or equal to 0"><![CDATA[int(.) <= 0]]></ct:Test>  
+  <ct:Test name="IntLessThanOrEqualToZero" criticality="Error" description="The value should be less than or equal to 0"><![CDATA[int(.) <= 0]]></ct:Test>
   <ct:Test name="IntLessThanOrEqualTo5" criticality="Error" description="The value should be less than or equal to 5"><![CDATA[int(.) <= 5]]></ct:Test>
   <ct:Test name="IntLessThanOrEqualTo10" criticality="Error" description="The value should be less than or equal to 10"><![CDATA[int(.) <= 10]]></ct:Test>
   <ct:Test name="IntLessThanOrEqualTo20" criticality="Error" description="The value should be less than or equal to 20"><![CDATA[int(.) <= 20]]></ct:Test>
   <ct:Test name="IntLessThanOrEqualTo25" criticality="Error" description="The value should be less than or equal to 25"><![CDATA[int(.) <= 25]]></ct:Test>
-  <ct:Test name="IntLessThanOrEqualTo60" criticality="Error" description="The value should be less than or equal to 60"><![CDATA[int(.) <= 60]]></ct:Test>  
-  <ct:Test name="IntLessThanOrEqualTo150" criticality="Error" description="The value should be less than or equal to 150"><![CDATA[int(.) <= 150]]></ct:Test>    
-  <ct:Test name="IntLessThanOrEqualTo200" criticality="Error" description="The value should be less than or equal to 200"><![CDATA[int(.) <= 200]]></ct:Test> 
+  <ct:Test name="IntLessThanOrEqualTo60" criticality="Error" description="The value should be less than or equal to 60"><![CDATA[int(.) <= 60]]></ct:Test>
+  <ct:Test name="IntLessThanOrEqualTo150" criticality="Error" description="The value should be less than or equal to 150"><![CDATA[int(.) <= 150]]></ct:Test>
+  <ct:Test name="IntLessThanOrEqualTo200" criticality="Error" description="The value should be less than or equal to 200"><![CDATA[int(.) <= 200]]></ct:Test>
   <ct:Test name="IspTfCrCErrorsSignificant" criticality="Error" description="Field should be zero"><![CDATA[int(.) == 0]]></ct:Test>
   <ct:Test name="IspCrCErrorsSignificant" criticality="Error" description="Field should be zero"><![CDATA[int(.) == 0]]></ct:Test>
   <ct:Test name="LessThan2PercentOfMeasurementsInValid" description="The number of invalid measurements should be less than 2 percent" criticality="Error"><![CDATA[int(./total_num_of_measurements) == 0 || float(./total_num_of_measurement_invalid)/float(./total_num_of_measurements) < 0.02]]></ct:Test>
   <ct:Test name="LessThan2PercentOfAmdUsMissing" description="Less than 2 percent of amd_us should be missing (equal to 32767)" criticality="Error"><![CDATA[numelements(.) == 0 || float(count(., int(./amd_us) == 32767)) / float(numelements(.)) < 0.02]]></ct:Test>
   <ct:Test name="LessThan2PercentOfAmdVsMissing" description="Less than 2 percent of amd_vs should be missing (equal to 32767)" criticality="Error"><![CDATA[numelements(.) == 0 || float(count(., int(./amd_vs) == 32767)) / float(numelements(.)) < 0.02]]></ct:Test>
   <ct:Test name="LessThan2PercentOfAmdPsMissing" description="Less than 2 percent of amd_ps should be missing (equal to 2147483647)" criticality="Error"><![CDATA[numelements(.) == 0 || float(count(., int(./amd_ps) == 2147483647)) / float(numelements(.)) < 0.02]]></ct:Test>
-  <ct:Test name="LessThan2PercentOfAmdErrPsMissing" description="Less than 2 percent of amd_err_ps should be missing (equal to > 1.683e38)" criticality="Error"><![CDATA[numelements(.) == 0 || float(count(., float(./amd_err_ps) > 1.683E38)) / float(numelements(.)) < 0.02]]></ct:Test>
+  <ct:Test name="LessThan2PercentOfAmdErrPsMissing" description="Less than 2 percent of amd_err_ps should be missing (equal to &gt; 1.683e38)" criticality="Error"><![CDATA[numelements(.) == 0 || float(count(., float(./amd_err_ps) > 1.683E38)) / float(numelements(.)) < 0.02]]></ct:Test>
   <ct:Test name="LessThan2PercentOfAmdZsMissing" description="Less than 2 percent of amd_zs should be missing (equal to 32767)" criticality="Error"><![CDATA[numelements(.) == 0 || float(count(., int(./amd_zs) == 32767)) / float(numelements(.)) < 0.02]]></ct:Test>
   <ct:Test name="LessThan2PercentOfAmdPbaseMissing" description="Less than 2 percent of amd_pbase should be missing (equal to 4294967295)" criticality="Error"><![CDATA[add(., numelements(./profile_data)) == 0 || float(add(., count(./profile_data, int(./amd_pbase) == 4294967295))) / float(add(., numelements(./profile_data))) < 0.02]]></ct:Test>
   <ct:Test name="LessThan2PercentOfAmdPtopMissing" description="Less than 2 percent of amd_ptop should be missing (equal to 4294967295)" criticality="Error"><![CDATA[add(., numelements(./profile_data)) == 0 || float(add(., count(./profile_data, int(./amd_ptop) == 4294967295))) / float(add(., numelements(./profile_data))) < 0.02]]></ct:Test>
@@ -85,18 +85,18 @@
   <ct:Test name="LessThan2PercentOfAmdUMissing" description="Less than 2 percent of amd_u should be missing (equal to 32767)" criticality="Error"><![CDATA[add(., numelements(./profile_data)) == 0 || float(add(., count(./profile_data, int(./amd_u) == 32767))) / float(add(., numelements(./profile_data))) < 0.02]]></ct:Test>
   <ct:Test name="LessThan2PercentOfAmdVMissing" description="Less than 2 percent of amd_v should be missing (equal to 32767)" criticality="Error"><![CDATA[add(., numelements(./profile_data)) == 0 || float(add(., count(./profile_data, int(./amd_v) == 32767))) / float(add(., numelements(./profile_data))) < 0.02]]></ct:Test>
   <ct:Test name="LessThan2PercentOfAmdRhMissing" description="Less than 2 percent of amd_rh should be missing (equal to 255)" criticality="Error"><![CDATA[add(., numelements(./profile_data)) == 0 || float(add(., count(./profile_data, int(./amd_rh) == 255))) / float(add(., numelements(./profile_data))) < 0.02]]></ct:Test>
-  <ct:Test name="LessThan2PercentOfAmdErrRhMissing" description="Less than 2 percent of amd_err_rh should be missing (equal to >1.683e38)" criticality="Error"><![CDATA[add(., numelements(./profile_data)) == 0 || float(add(., count(./profile_data, float(./amd_err_rh) > 1.683E38))) / float(add(., numelements(./profile_data))) < 0.02]]></ct:Test>
-  <ct:Test name="LessThan2PercentOfAmdQMissing" description="Less than 2 percent of amd_q should be missing (equal to >1.683e38)" criticality="Error"><![CDATA[add(., numelements(./profile_data)) == 0 || float(add(., count(./profile_data, float(./amd_q) == 32767))) / float(add(., numelements(./profile_data))) < 0.02]]></ct:Test>
+  <ct:Test name="LessThan2PercentOfAmdErrRhMissing" description="Less than 2 percent of amd_err_rh should be missing (equal to &gt;1.683e38)" criticality="Error"><![CDATA[add(., numelements(./profile_data)) == 0 || float(add(., count(./profile_data, float(./amd_err_rh) > 1.683E38))) / float(add(., numelements(./profile_data))) < 0.02]]></ct:Test>
+  <ct:Test name="LessThan2PercentOfAmdQMissing" description="Less than 2 percent of amd_q should be missing (equal to &gt;1.683e38)" criticality="Error"><![CDATA[add(., numelements(./profile_data)) == 0 || float(add(., count(./profile_data, float(./amd_q) == 32767))) / float(add(., numelements(./profile_data))) < 0.02]]></ct:Test>
   <ct:Test name="LessThan2PercentOfAmdCcMissing" description="Less than 2 percent of amd_cc should be missing (equal to 255)" criticality="Error"><![CDATA[add(., numelements(./profile_data)) == 0 || float(add(., count(./profile_data, int(./amd_cc) == 255))) / float(add(., numelements(./profile_data))) < 0.02]]></ct:Test>
-  <ct:Test name="LessThan2PercentOfAmdClwcMissing" description="Less than 2 percent of amd_clwc be missing (equal to >1.683e38)" criticality="Error"><![CDATA[add(., numelements(./profile_data)) == 0 || float(add(., count(./profile_data, float(./amd_clwc) > 1.683E38))) / float(add(., numelements(./profile_data))) < 0.02]]></ct:Test>
-  <ct:Test name="LessThan2PercentOfAmdCiwcMissing" description="Less than 2 percent of amd_ciwc be missing (equal to >1.683e38)" criticality="Error"><![CDATA[add(., numelements(./profile_data)) == 0 || float(add(., count(./profile_data, float(./amd_ciwc) > 1.683E38))) / float(add(., numelements(./profile_data))) < 0.02]]></ct:Test>     
+  <ct:Test name="LessThan2PercentOfAmdClwcMissing" description="Less than 2 percent of amd_clwc be missing (equal to &gt;1.683e38)" criticality="Error"><![CDATA[add(., numelements(./profile_data)) == 0 || float(add(., count(./profile_data, float(./amd_clwc) > 1.683E38))) / float(add(., numelements(./profile_data))) < 0.02]]></ct:Test>
+  <ct:Test name="LessThan2PercentOfAmdCiwcMissing" description="Less than 2 percent of amd_ciwc be missing (equal to &gt;1.683e38)" criticality="Error"><![CDATA[add(., numelements(./profile_data)) == 0 || float(add(., count(./profile_data, float(./amd_ciwc) > 1.683E38))) / float(add(., numelements(./profile_data))) < 0.02]]></ct:Test>
   <ct:Test name="LessThanOnePercentOfMieWindVelocityMissing" description="Less than 1 percent of mie_wind_velocity should be missing (value 32767)" criticality="Error"><![CDATA[numelements(.) == 0 || float(count(., int(./windresult/mie_wind_velocity) == 32767)) / float(numelements(.)) < 0.01]]></ct:Test>
   <ct:Test name="LessThanOnePercentOfRayleighWindVelocityMissing" description="Less than 1 percent of rayleigh_wind_velocity should be missing (value 32767)" criticality="Error"><![CDATA[numelements(.) == 0 || float(count(., int(./windresult/rayleigh_wind_velocity) == 32767)) / float(numelements(.)) < 0.01]]></ct:Test>
   <ct:Test name="LessThanOnePercentOfBackgroundZonalWindVelocityMissing" description="Less than 1 percent of background_zonal_wind_velocity should be missing (value 32767)" criticality="Error"><![CDATA[numelements(.) == 0 || float(count(., int(./height_bin_vecwind/background_zonal_wind_velocity) == 32767)) / float(numelements(.)) < 0.01]]></ct:Test>
   <ct:Test name="LessThanOnePercentOfBackgroundMeridionalWindVelocityMissing" description="Less than 1 percent of background_meridional_wind_velocity should be missing (value 32767)" criticality="Error"><![CDATA[numelements(.) == 0 || float(count(., int(./height_bin_vecwind/background_meridional_wind_velocity) == 32767)) / float(numelements(.)) < 0.01]]></ct:Test>
   <ct:Test name="LessThanOnePercentOfAnalysisZonalWindVelocityMissing" description="Less than 1 percent of analysis_zonal_wind_velocity should be missing (value 32767)" criticality="Error"><![CDATA[numelements(.) == 0 || float(count(., int(./height_bin_vecwind/analysis_zonal_wind_velocity) == 32767)) / float(numelements(.)) < 0.01]]></ct:Test>
   <ct:Test name="LessThanOnePercentOfAnalysisMeridionalWindVelocityMissing" description="Less than 1 percent of analysis_meridional_wind_velocity should be missing (value 32767)" criticality="Error"><![CDATA[numelements(.) == 0 || float(count(., int(./height_bin_vecwind/analysis_meridional_wind_velocity) == 32767)) / float(numelements(.)) < 0.01]]></ct:Test>
-  <ct:Test name="MissingIspSignificantCheck" criticality="Error" description="This flag should only be set if the error exceeds the treshold"><![CDATA[int(.) == if(int(../number_missing_isps) >= 34.0 * (if(exists(/wind_velocity), numelements(/wind_velocity), 0) + if(exists(/laser_diode_temperature), numelements(/laser_diode_temperature), 0) + if(exists(/instr_response_cal), numelements(/instr_response_cal), 0) + if(exists(/instr_spec_reg), numelements(/instr_spec_reg), 0) + if(exists(/instr_auto_test), numelements(/instr_auto_test), 0) + if(exists(/dark_current_cal), numelements(/dark_current_cal), 0) + if(exists(/instr_defocus_cal), numelements(/instr_defocus_cal), 0) + if(exists(/phase_adjustment), numelements(/phase_adjustment), 0) + if(exists(/offline_wind_velocity), numelements(/offline_wind_velocity), 0) + if(exists(/dark_current_mem_zone), numelements(/dark_current_mem_zone), 0) + if(exists(/nop_udm), numelements(/nop_udm), 0) + if(exists(/laser_beam_monitoring), numelements(/laser_beam_monitoring), 0)) * float(../missing_isps_thresh) * 0.01, 1, 0)]]></ct:Test>    
+  <ct:Test name="MissingIspSignificantCheck" criticality="Error" description="This flag should only be set if the error exceeds the treshold"><![CDATA[int(.) == if(int(../number_missing_isps) >= 34.0 * (if(exists(/wind_velocity), numelements(/wind_velocity), 0) + if(exists(/laser_diode_temperature), numelements(/laser_diode_temperature), 0) + if(exists(/instr_response_cal), numelements(/instr_response_cal), 0) + if(exists(/instr_spec_reg), numelements(/instr_spec_reg), 0) + if(exists(/instr_auto_test), numelements(/instr_auto_test), 0) + if(exists(/dark_current_cal), numelements(/dark_current_cal), 0) + if(exists(/instr_defocus_cal), numelements(/instr_defocus_cal), 0) + if(exists(/phase_adjustment), numelements(/phase_adjustment), 0) + if(exists(/offline_wind_velocity), numelements(/offline_wind_velocity), 0) + if(exists(/dark_current_mem_zone), numelements(/dark_current_mem_zone), 0) + if(exists(/nop_udm), numelements(/nop_udm), 0) + if(exists(/laser_beam_monitoring), numelements(/laser_beam_monitoring), 0)) * float(../missing_isps_thresh) * 0.01, 1, 0)]]></ct:Test>
   <ct:Test name="MissingIspSignificant" criticality="Error" description="Field should be zero"><![CDATA[int(.) == 0]]></ct:Test>
   <ct:Test name="MoreThan98PercentOfMeasurementsValid" description="More than 98 percent of measurements should be valid" criticality="Error"><![CDATA[int(./total_num_of_measurements) == 0 || float(./num_measurement_valid)/float(./total_num_of_measurements) > 0.98]]></ct:Test>
   <ct:Test name="MoreThan98PercentOfObservationsValid" description="More than 98 percent of observations should be valid" criticality="Error"><![CDATA[int(./total_num_of_observations) == 0 || float(./num_valid_observations)/float(./total_num_of_observations) > 0.98]]></ct:Test>
@@ -105,12 +105,12 @@
   <ct:Test name="NumDataSetsLevel1A" criticality="Error" description="num_data_sets in MPH should indicate the amount of data sets that are actually present in the product"><![CDATA[int(.) == if(exists(/geolocation), 1, 0) + if(exists(/data_quality), 1, 0) + if(exists(/reference_pulse), 1, 0) + if(exists(/house_keeping), 1, 0) + if(exists(/mie_measurement), 1, 0) + if(exists(/rayleigh_measurement), 1, 0)]]></ct:Test>
   <ct:Test name="NumDataSetsLevel1B_03_05" criticality="Error" description="num_data_sets in MPH should indicate the amount of data sets that are actually present in the product"><![CDATA[int(.) == if(exists(/geolocation), 1, 0) + if(exists(/product_confidence_data), 1, 0) + if(exists(/ground_wind_detection), 1, 0) + if(exists(/measurement), 1, 0) + if(exists(/calibration_characterization_data), 1, 0) + if(exists(/useful_signal), 1, 0) + if(exists(/wind_velocity), 1, 0)]]></ct:Test>
   <ct:Test name="NumDataSetsLevel1B_03_07" criticality="Error" description="num_data_sets in MPH should indicate the amount of data sets that are actually present in the product"><![CDATA[int(.) == if(exists(/geolocation), 1, 0) + if(exists(/product_confidence_data), 1, 0) + if(exists(/ground_wind_detection), 1, 0) + if(exists(/measurement), 1, 0) + if(exists(/mie_core_params), 1, 0) + if(exists(/calibration_characterization_data), 1, 0) + if(exists(/useful_signal), 1, 0) + if(exists(/wind_velocity), 1, 0)]]></ct:Test>
-  <ct:Test name="NumMeasurementsUsedGreaterThanZero" description="Either num_of_mie_measurements_used or num_of_rayleigh_measurements_used should be greater than 0" criticality="Error"><![CDATA[int(./num_of_mie_measurements_used) > 0 || int(./num_of_rayleigh_measurements_used) > 0]]></ct:Test>  
+  <ct:Test name="NumMeasurementsUsedGreaterThanZero" description="Either num_of_mie_measurements_used or num_of_rayleigh_measurements_used should be greater than 0" criticality="Error"><![CDATA[int(./num_of_mie_measurements_used) > 0 || int(./num_of_rayleigh_measurements_used) > 0]]></ct:Test>
   <ct:Test name="NumMeasurementSpValidGreaterThanZero" description="Either num_mie_measurement_sp_valid or num_rayleigh_measurement_sp_valid should be greater than 0" criticality="Error"><![CDATA[int(./num_mie_measurement_sp_valid) > 0 || int(./num_rayleigh_measurement_sp_valid) > 0]]></ct:Test>
-  <ct:Test name="NumObservationsUsedGreaterThanZero" description="Either num_of_mie_observations_used or num_of_rayleigh_observations_used should be greater than 0" criticality="Error"><![CDATA[int(./num_of_mie_observations_used) > 0 || int(./num_of_rayleigh_observations_used) > 0]]></ct:Test>      
+  <ct:Test name="NumObservationsUsedGreaterThanZero" description="Either num_of_mie_observations_used or num_of_rayleigh_observations_used should be greater than 0" criticality="Error"><![CDATA[int(./num_of_mie_observations_used) > 0 || int(./num_of_rayleigh_observations_used) > 0]]></ct:Test>
   <ct:Test name="NumReferencePulsesGreaterThanZero" description="Either num_mie_reference_pulses_present or num_rayleigh_reference_pulses_present should be greater than 0" criticality="Error"><![CDATA[int(./num_mie_reference_pulses_present) > 0 || int(./num_rayleigh_reference_pulses_present) > 0]]></ct:Test>
   <ct:Test name="NumReferencePulsesSpValidGreaterThanZero" description="Either num_mie_reference_pulse_sp_valid or num_rayleigh_reference_pulse_sp_valid should be greater than 0" criticality="Error"><![CDATA[int(./num_mie_reference_pulse_sp_valid) > 0 || int(./num_rayleigh_reference_pulse_sp_valid) > 0]]></ct:Test>
-  <ct:Test name="NumReferencePulsesUsedGreaterThanZero" description="Either num_of_mie_reference_pulses_used or num_of_rayleigh_reference_pulses_used should be greater than 0" criticality="Error"><![CDATA[int(./num_of_mie_reference_pulses_used) > 0 || int(./num_of_rayleigh_reference_pulses_used) > 0]]></ct:Test>  
+  <ct:Test name="NumReferencePulsesUsedGreaterThanZero" description="Either num_of_mie_reference_pulses_used or num_of_rayleigh_reference_pulses_used should be greater than 0" criticality="Error"><![CDATA[int(./num_of_mie_reference_pulses_used) > 0 || int(./num_of_rayleigh_reference_pulses_used) > 0]]></ct:Test>
   <ct:Test name="NumValidCalibrationResultsGreaterThanZero" description="Either num_of_valid_mie_calibration_results or num_of_valid_rayleigh_calibration_results should be greater than 0" criticality="Error"><![CDATA[int(./num_of_valid_mie_calibration_results) > 0 || int(./num_of_valid_rayleigh_calibration_results) > 0]]></ct:Test>
   <ct:Test name="NumScaIcaMcaTotGreaterThanZero" description="Either num_prof_sca, num_prof_ica, num_prof_mca or num_group_tot should be greater than zero" criticality="Error"><![CDATA[int(./num_prof_sca) > 0 || int(./num_prof_ica) > 0 || int(./num_prof_mca) > 0 || int(./num_group_tot) > 0]]></ct:Test>
   <ct:Test name="OptionalRangeLongitude" criticality="Error" description="The longitude (in degrees) should be &gt;= 0 and &lt;= 360 if a value is present"><![CDATA[isnan(float(.)) || (float(.) >= 0 && float(.) <= 360.0)]]></ct:Test>
@@ -119,26 +119,26 @@
   <ct:Test name="PIFStatusEnum" criticality="Error" description="The status should be one of the allowed enumeration values"><![CDATA[str(.) == "AUTOMATIC" || str(.) == "MANUAL" || str(.) == "VALIDATED" || str(.) == "GENERATED" || str(.) == "COMMITTED" || str(.) == "EXPORTED" || str(.) == "RE-PLANNED" || str(.) == "RE-VALIDATED" || str(.) == "RE-GENERATED" || str(.) == "RE-COMMITTED" || str(.) == "RE-EXPORTED"]]></ct:Test>
   <ct:Test name="QCFReportValueRangeTest_Mode" criticality="Error" description="The Test_Mode field should be one of the allowed enumeration values"><![CDATA[str(.) == "STRUCTURE_SIZE_AND_READ" || str(.) == "STRUCTURE_SIZE_AND_READ_HEADER" || str(.) == "EXPRESSION" || str(.) == "EXPRESSION_HEADER" || str(.) == "DATA_HEADER_CROSS_CHECK"]]></ct:Test>
   <ct:Test name="Range005To01" criticality="Error" description="The value should hold a number from 0.05 to 0.1"><![CDATA[float(.) >= 0.05 && float(.) <= 0.1]]></ct:Test>
-  <ct:Test name="Range10To109000" criticality="Error" description="The value should hold a number from 10 to 109000"><![CDATA[float(.) >= 10 && float(.) <= 109000]]></ct:Test>   
-  <ct:Test name="Range015To03" criticality="Error" description="The value should hold a number from 0.15 to 0.3"><![CDATA[float(.) >= 0.15 && float(.) <= 0.3]]></ct:Test>     
+  <ct:Test name="Range10To109000" criticality="Error" description="The value should hold a number from 10 to 109000"><![CDATA[float(.) >= 10 && float(.) <= 109000]]></ct:Test>
+  <ct:Test name="Range015To03" criticality="Error" description="The value should hold a number from 0.15 to 0.3"><![CDATA[float(.) >= 0.15 && float(.) <= 0.3]]></ct:Test>
   <ct:Test name="Range0To4" criticality="Error" description="The value should hold a number from 0 to 4"><![CDATA[int(.) >= 0 && int(.) <= 4]]></ct:Test>
-  <ct:Test name="Range0To100" criticality="Error" description="The value should hold a number from 0 to 100"><![CDATA[float(.) >= 0 && float(.) <= 100]]></ct:Test>  
+  <ct:Test name="Range0To100" criticality="Error" description="The value should hold a number from 0 to 100"><![CDATA[float(.) >= 0 && float(.) <= 100]]></ct:Test>
   <ct:Test name="Range3To600" criticality="Error" description="The value should hold a number from 3 to 600"><![CDATA[int(.) >= 3 && int(.) <= 600]]></ct:Test>
-  <ct:Test name="Range3To1003" criticality="Error" description="The value should hold a number from 3 to 1003"><![CDATA[int(.) >= 3 && int(.) <= 1003]]></ct:Test>    
+  <ct:Test name="Range3To1003" criticality="Error" description="The value should hold a number from 3 to 1003"><![CDATA[int(.) >= 3 && int(.) <= 1003]]></ct:Test>
   <ct:Test name="Range4To5" criticality="Error" description="The value should hold a number between 4 to 5"><![CDATA[float(.) > 4.0 && float(.) < 5.0]]></ct:Test>
   <ct:Test name="Range8To9" criticality="Error" description="The value should hold a number between 8 to 9"><![CDATA[float(.) > 8.0 && float(.) < 9.0]]></ct:Test>
   <ct:Test name="Range12To13" criticality="Error" description="The value should hold a number between 12 to 13"><![CDATA[float(.) > 12.0 && float(.) < 13.0]]></ct:Test>
-  <ct:Test name="Range17500To33100" criticality="Error" description="The value should hold a number from 17500 to 33100"><![CDATA[float(.) >= 17500 && float(.) <= 33100]]></ct:Test>     
-  <ct:Test name="Range350To450" criticality="Error" description="The value should hold a number from 350 to 450"><![CDATA[float(.) >= 350 && float(.) <= 450]]></ct:Test>         
+  <ct:Test name="Range17500To33100" criticality="Error" description="The value should hold a number from 17500 to 33100"><![CDATA[float(.) >= 17500 && float(.) <= 33100]]></ct:Test>
+  <ct:Test name="Range350To450" criticality="Error" description="The value should hold a number from 350 to 450"><![CDATA[float(.) >= 350 && float(.) <= 450]]></ct:Test>
   <ct:Test name="Range450To550" criticality="Error" description="The value should hold a number from 450 to 550"><![CDATA[float(.) >= 450 && float(.) <= 550]]></ct:Test>
   <ct:Test name="Range1400To1600" criticality="Error" description="The value should hold a number from 1400 to 1600"><![CDATA[float(.) >= 1400 && float(.) <= 1600]]></ct:Test>
   <ct:Test name="RangeMinus10000To82000000" criticality="Error" description="The value should hold a number from -10000 to 8200000"><![CDATA[float(.) >= -10000 && float(.) <= 8200000]]></ct:Test>
   <ct:Test name="Range095To1p05" criticality="Error" description="The value should hold a number from 0.95 to 1.05"><![CDATA[float(.) >= 0.95 && float(.) <= 1.05]]></ct:Test>
-  <ct:Test name="Range5E12To5E13" criticality="Error" description="The value should hold a number from 5.0E12 to 5.0E13"><![CDATA[float(.) >= 5.0E12 && float(.) <= 5.0E13]]></ct:Test>     
-  <ct:Test name="Range5E13To5E14" criticality="Error" description="The value should hold a number from 5.0E13 to 5.0E14"><![CDATA[float(.) >= 5.0E13 && float(.) <= 5.0E14]]></ct:Test>     
+  <ct:Test name="Range5E12To5E13" criticality="Error" description="The value should hold a number from 5.0E12 to 5.0E13"><![CDATA[float(.) >= 5.0E12 && float(.) <= 5.0E13]]></ct:Test>
+  <ct:Test name="Range5E13To5E14" criticality="Error" description="The value should hold a number from 5.0E13 to 5.0E14"><![CDATA[float(.) >= 5.0E13 && float(.) <= 5.0E14]]></ct:Test>
   <ct:Test name="RangeLatitude6" criticality="Error" description="The latitude (in 1E6 degrees) should be &gt;= -90E6 and &lt;= 90E6"><![CDATA[float(.) >= -90.0E6 && float(.) <= 90.0E6]]></ct:Test>
   <ct:Test name="RangeLongitude6" criticality="Error" description="The longitude (in 1E6 degrees) should be &gt;= 0 and &lt;= 360E6"><![CDATA[float(.) >= 0 && float(.) <= 360.0E6]]></ct:Test>
-  <ct:Test name="RangeLongitudeSigned6" criticality="Error" description="The longitude (in 1E6 degrees) should be &gt;= -180E6 and &lt;= 180E6"><![CDATA[float(.) >= -180.0E6 && float(.) <= 180.0E6]]></ct:Test>     
+  <ct:Test name="RangeLongitudeSigned6" criticality="Error" description="The longitude (in 1E6 degrees) should be &gt;= -180E6 and &lt;= 180E6"><![CDATA[float(.) >= -180.0E6 && float(.) <= 180.0E6]]></ct:Test>
   <ct:Test name="RangeMicroSecond" criticality="Error" description="This value should hold the number of microseconds since the start of the second, maximum value 999999"><![CDATA[int(.) >= 0 && int(.) <= 999999]]></ct:Test>
   <ct:Test name="RangePIFFileVersion" criticality="Error" description="The version number should be between 1 and 9999"><![CDATA[int(.) >= 1 && int(.) <= 9999]]></ct:Test>
   <ct:Test name="RangePIFSPFVersion" criticality="Error" description="The version number should be between 1 and 9999"><![CDATA[int(.) >= 1 && int(.) <= 9999]]></ct:Test>
@@ -149,21 +149,21 @@
   <ct:Test name="RQParameterRepresentationEnum" criticality="Error" description="The Request Parameter representation type should be one of the allowed enumeration values"><![CDATA[str(.) == "Raw" || str(.) == "Engineering" || str(.) == ""]]></ct:Test>
   <ct:Test name="RQSourceEnum" criticality="Error" description="The source should be one of the allowed enumeration values"><![CDATA[str(.) == "FDS" || str(.) == "MPS (automatic)" || str(.) == "MPS (manual)" || str(.) == "MMPF"]]></ct:Test>
   <ct:Test name="RQStatusEnum" criticality="Error" description="The request status should be one of the allowed enumeration values"><![CDATA[str(.) == "Enabled" || str(.) == "Disabled"]]></ct:Test>
-  <ct:Test name="RQTypeEnum" criticality="Error" description="The request type should be one of the allowed enumeration values"><![CDATA[str(.) == "Real-time Sequence" || str(.) == "Time-tagged Sequence" || str(.) == "Orbital Angle tagged Sequence" || str(.) == "Orbital Time tagged Sequence" || str(.) == "Ground Station Job" || str(.) == "MAES Event"]]></ct:Test>  
+  <ct:Test name="RQTypeEnum" criticality="Error" description="The request type should be one of the allowed enumeration values"><![CDATA[str(.) == "Real-time Sequence" || str(.) == "Time-tagged Sequence" || str(.) == "Orbital Angle tagged Sequence" || str(.) == "Orbital Time tagged Sequence" || str(.) == "Ground Station Job" || str(.) == "MAES Event"]]></ct:Test>
   <ct:Test name="RsCorrectionsSignificant" criticality="Error" description="Field should be zero"><![CDATA[int(.) == 0]]></ct:Test>
   <ct:Test name="TimeNotZero" description="Time shouldn't be zero" criticality="Warning"><![CDATA[float(.) != 0]]></ct:Test>
   <ct:Test name="TimeWithinMphSensingPeriod" description="The time stamp of a record should be within the product's MPH validity start and stop time" criticality="Error"><![CDATA[float(.) >= float(/mph/sensing_start) && float(.) <= float(/mph/sensing_stop)]]></ct:Test>
   <ct:Test name="UniqueInList" criticality="Error" description="Parameter name should not occur more than once"><![CDATA[count(../.., str(./Parameter_name) == str(:)) == 1]]></ct:Test>
   <ct:Test name="ValidityPeriodOrder" description="Validity start time should be before or equal to validity stop time" criticality="Error"><![CDATA[float(./Validity_Start) <= float(./Validity_Stop)]]></ct:Test>
   <ct:Test name="ValueGreaterThanOrEqualTo06" criticality="Error" description="The value should be greater than or equal to 0.6"><![CDATA[float(.) >= 0.6]]></ct:Test>
-  <ct:Test name="ValueLessThanOrEqualToMinus06" criticality="Error" description="The value should be less than or equal to -0.6"><![CDATA[float(.) <= (-0.6)]]></ct:Test>         
+  <ct:Test name="ValueLessThanOrEqualToMinus06" criticality="Error" description="The value should be less than or equal to -0.6"><![CDATA[float(.) <= (-0.6)]]></ct:Test>
   <ct:Test name="ValueLessThanOrEqualTo001" criticality="Error" description="The value should be less than or equal to 0.01"><![CDATA[float(.) <= 0.01]]></ct:Test>
   <ct:Test name="ValueLessThanOrEqualTo01" criticality="Error" description="The value should be less than or equal to 0.1"><![CDATA[float(.) <= 0.1]]></ct:Test>
-  <ct:Test name="ValueLessThanOrEqualTo1" criticality="Error" description="The value should be less than or equal to 1.0"><![CDATA[float(.) <= 1.0]]></ct:Test>    
-  <ct:Test name="ValueLessThanOrEqualTo1p5" criticality="Error" description="The value should be less than or equal to 1.5"><![CDATA[float(.) <= 1.5]]></ct:Test>  
+  <ct:Test name="ValueLessThanOrEqualTo1" criticality="Error" description="The value should be less than or equal to 1.0"><![CDATA[float(.) <= 1.0]]></ct:Test>
+  <ct:Test name="ValueLessThanOrEqualTo1p5" criticality="Error" description="The value should be less than or equal to 1.5"><![CDATA[float(.) <= 1.5]]></ct:Test>
   <ct:Test name="ValueLessThanOrEqualTo25" criticality="Error" description="The value should be less than or equal to 25.0"><![CDATA[float(.) <= 25.0]]></ct:Test>
   <ct:Test name="ValueLessThanOrEqualTo60" criticality="Error" description="The value should be less than or equal to 60.0"><![CDATA[float(.) <= 60.0]]></ct:Test>
-  <ct:Test name="ValueLessThanOrEqualTo200" criticality="Error" description="The value should be less than or equal to 200"><![CDATA[float(.) <= 200]]></ct:Test> 
+  <ct:Test name="ValueLessThanOrEqualTo200" criticality="Error" description="The value should be less than or equal to 200"><![CDATA[float(.) <= 200]]></ct:Test>
   <ct:Test name="ValueOfCountAttributeForParent" criticality="Error" description="The value for the count attribute of the parent List_of_... element should equal the number of occurences of this element"><![CDATA[int(str(..@count)) == numelements(.)]]></ct:Test>
   <ct:Test name="ValueRangeCriticality" criticality="Error" description=""><![CDATA[str(.) == "WARNING" || str(.) == "ERROR"]]></ct:Test>
   <ct:Test name="ValueRangeProduct_Quality" criticality="Error" description=""><![CDATA[str(.) == "VALID_PRODUCT" || str(.) == "PRODUCT_HAS_WARNINGS" || str(.) == "PRODUCT_HAS_ERRORS" || str(.) == "UNSUPPORTED_PRODUCT_TYPE" || str(.) == "UNSUPPORTED_PRODUCT_VERSION"]]></ct:Test>
@@ -172,7 +172,6 @@
   <ct:Test name="ValueTestRE" criticality="Error" description="The value should be 'R', 'E', 'r' or 'e'"><![CDATA[str(.) == "R" || str(.)=="r" || str(.) == "E" || str(.)=="e"]]></ct:Test>
   <ct:Test name="ZmaxGreaterThanZminPlus5000" criticality="Error" description="The value of Z_max should be greater than Z_min+5000"><![CDATA[int(./z_max) > (int(./z_min) + 5000)]]></ct:Test>
   <ct:Test name="ZrefmaxGreaterThanorEqualToZmax" criticality="Error" description="The value of Zref_max should be greater or equal to Z_max"><![CDATA[int(./ref_grid/zref_max) >= int(./thresholds/z_max)]]></ct:Test>
-  
   <ct:CrossFileTest name="MPH_Product" criticality="Error" description="Product mismatch">
     <ct:ValueExpressionDbl><![CDATA[rtrim(str(/mph/product))]]></ct:ValueExpressionDbl>
     <ct:ValueExpressionHdr><![CDATA[str(/Earth_Explorer_Header/Variable_Header/Main_Product_Header/Product)]]></ct:ValueExpressionHdr>
@@ -204,7 +203,7 @@
   <ct:CrossFileTest name="MPH_Baseline" criticality="Error" description="Baseline mismatch">
     <ct:ValueExpressionDbl><![CDATA[rtrim(str(/mph/baseline))]]></ct:ValueExpressionDbl>
     <ct:ValueExpressionHdr><![CDATA[str(/Earth_Explorer_Header/Variable_Header/Main_Product_Header/Baseline)]]></ct:ValueExpressionHdr>
-  </ct:CrossFileTest>  
+  </ct:CrossFileTest>
   <ct:CrossFileTest name="MPH_Sensing_Start" criticality="Error" description="Sensing_Start mismatch">
     <ct:ValueExpressionDbl><![CDATA[float(/mph/sensing_start)]]></ct:ValueExpressionDbl>
     <ct:ValueExpressionHdr><![CDATA[float(/Earth_Explorer_Header/Variable_Header/Main_Product_Header/Sensing_Start)]]></ct:ValueExpressionHdr>
@@ -372,7 +371,7 @@
   <ct:CrossFileTest name="SPH_Num_Measurement_Valid" criticality="Error" description="Num_Measurement_Valid mismatch">
     <ct:ValueExpressionDbl><![CDATA[int(/sph/num_measurement_valid)]]></ct:ValueExpressionDbl>
     <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/Num_Measurement_Valid)]]></ct:ValueExpressionHdr>
-  </ct:CrossFileTest>  
+  </ct:CrossFileTest>
   <ct:CrossFileTest name="SPH_Num_Measurement_Sat_on_Target" criticality="Error" description="Num_Measurement_Sat_on_Target mismatch">
     <ct:ValueExpressionDbl><![CDATA[int(/sph/num_measurement_sat_on_target)]]></ct:ValueExpressionDbl>
     <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/Num_Measurement_Sat_on_Target)]]></ct:ValueExpressionHdr>
@@ -525,7 +524,6 @@
     <ct:ValueExpressionDbl><![CDATA[int(/sph/total_num_of_pulse_validity_status_flag_false)]]></ct:ValueExpressionDbl>
     <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/Total_Num_of_Pulse_Validity_Status_Flag_False)]]></ct:ValueExpressionHdr>
   </ct:CrossFileTest>
-  
   <ct:CrossFileTest name="SPH_Total_Num_of_Measurement_Laser_Freq_Unlocked" criticality="Error" description="Total_Num_of_Measurement_Laser_Freq_Unlocked mismatch">
     <ct:ValueExpressionDbl><![CDATA[int(/sph/total_num_of_measurement_laser_freq_unlocked)]]></ct:ValueExpressionDbl>
     <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/Total_Num_of_Measurement_Laser_Freq_Unlocked)]]></ct:ValueExpressionHdr>
@@ -562,7 +560,6 @@
     <ct:ValueExpressionDbl><![CDATA[int(/sph/total_num_of_corrupt_rayleigh_measurement_bins)]]></ct:ValueExpressionDbl>
     <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/Total_Num_of_Corrupt_Rayleigh_Measurement_Bins)]]></ct:ValueExpressionHdr>
   </ct:CrossFileTest>
-  
   <ct:CrossFileTest name="SPH_NF_Order" criticality="Error" description="NF_Order mismatch">
     <ct:ValueExpressionDbl><![CDATA[int(/sph/nf_order)]]></ct:ValueExpressionDbl>
     <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/NF_Order)]]></ct:ValueExpressionHdr>
@@ -1014,5 +1011,5 @@
   <ct:CrossFileTest name="SPH_Num_Invalid_Cloud_Winds_L2C_Ray" criticality="Error" description="Num_Num_Invalid_Cloud_Winds_L2C_Ray mismatch">
     <ct:ValueExpressionDbl><![CDATA[int(/sph/Num_Invalid_Cloud_Winds_L2C_Ray)]]></ct:ValueExpressionDbl>
     <ct:ValueExpressionHdr><![CDATA[int(/Earth_Explorer_Header/Variable_Header/Specific_Product_Header/Num_Invalid_Cloud_Winds_L2C_Ray)]]></ct:ValueExpressionHdr>
-  </ct:CrossFileTest>  
+  </ct:CrossFileTest>
 </ct:Tests>

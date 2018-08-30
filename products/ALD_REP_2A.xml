@@ -1,11 +1,11 @@
 <?xml version="1.0"?>
-<cd:ProductDefinition id="ALD_REP_2A" format="xml" last-modified="2016-12-12" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+<cd:ProductDefinition xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" id="ALD_REP_2A" format="xml" last-modified="2016-12-12">
   <cd:Record format="xml">
     <cd:Field name="Earth_Explorer_File">
       <cd:Record namexml="Earth_Explorer_File">
         <cd:Attribute name="schemaversion">
           <cd:Optional/>
-        </cd:Attribute>         
+        </cd:Attribute>
         <cd:Description>Earth Explorer File</cd:Description>
         <cd:Field name="Earth_Explorer_Header">
           <cd:Record namexml="Earth_Explorer_Header">
@@ -19,7 +19,7 @@
               </cd:Record>
             </cd:Field>
             <ct:NamedTest id="FileNameCheckEEF" path="Fixed_Header/File_Name"/>
-            <ct:NamedTest id="FileNameMatchFileVersionAt51" path="Fixed_Header/File_Name"/>            
+            <ct:NamedTest id="FileNameMatchFileVersionAt51" path="Fixed_Header/File_Name"/>
             <ct:NamedTest id="FileNameMatchValidityStart" path="Fixed_Header/File_Name"/>
             <ct:NamedTest id="FileNameMatchValidityStop" path="Fixed_Header/File_Name"/>
           </cd:Record>

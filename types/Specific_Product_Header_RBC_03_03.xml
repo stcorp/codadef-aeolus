@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:Record name="Specific_Product_Header_RBC_03_03" format="xml" namexml="Specific_Product_Header" last-modified="2016-12-02" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" name="Specific_Product_Header_RBC_03_03" format="xml" namexml="Specific_Product_Header" last-modified="2016-12-02">
   <cd:Description>Specific Product Header for ALD RBC products</cd:Description>
   <cd:Field name="Sph_Descriptor">
     <cd:Text namexml="Sph_Descriptor">
@@ -165,7 +165,7 @@
         <cd:NativeType>uint16</cd:NativeType>
       </cd:Integer>
     </cd:Type>
-  </cd:Field>  
+  </cd:Field>
   <cd:Field name="Laser_Freq_Offset_Start">
     <cd:Type namexml="Laser_Freq_Offset_Start">
       <cd:Attribute name="unit">

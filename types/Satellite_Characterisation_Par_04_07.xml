@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:Record name="Satellite_Characterisation_Par_04_07" format="xml" namexml="Satellite_Characterisation" last-modified="2017-09-12" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" name="Satellite_Characterisation_Par_04_07" format="xml" namexml="Satellite_Characterisation" last-modified="2017-09-12">
   <cd:Description>Satellite Characterisation GADS DSR</cd:Description>
   <cd:Field name="List_of_Data_Set_Records">
     <cd:Record namexml="List_of_Data_Set_Records">
@@ -31,7 +31,7 @@
                       </cd:Array>
                     </cd:Field>
                   </cd:Record>
-                </cd:Field>                
+                </cd:Field>
                 <cd:Field name="List_of_TM_8230_PhysVals">
                   <cd:Record namexml="List_of_TM_8230_PhysVals">
                     <cd:Description>List of physical values for transfer curve 8230</cd:Description>
@@ -69,9 +69,9 @@
                       </cd:Array>
                     </cd:Field>
                   </cd:Record>
-                </cd:Field>                                
+                </cd:Field>
               </cd:Record>
-            </cd:Field>           
+            </cd:Field>
             <cd:Field name="DEU_B">
               <cd:Record namexml="DEU_B">
                 <cd:Field name="List_of_TM_1_StandardTelVals">
@@ -92,7 +92,7 @@
                       </cd:Array>
                     </cd:Field>
                   </cd:Record>
-                </cd:Field>                
+                </cd:Field>
                 <cd:Field name="List_of_TM_8310_PhysVals">
                   <cd:Record namexml="List_of_TM_8310_PhysVals">
                     <cd:Description>List of physical values for transfer curve 8310</cd:Description>
@@ -130,9 +130,9 @@
                       </cd:Array>
                     </cd:Field>
                   </cd:Record>
-                </cd:Field>                                
+                </cd:Field>
               </cd:Record>
-            </cd:Field>            
+            </cd:Field>
             <cd:Field name="DEU_Common">
               <cd:Record namexml="DEU_Common">
                 <cd:Field name="List_of_TM_1_StandardTelVals">
@@ -153,7 +153,7 @@
                       </cd:Array>
                     </cd:Field>
                   </cd:Record>
-                </cd:Field>                
+                </cd:Field>
                 <cd:Field name="List_of_TM_8235_PhysVals">
                   <cd:Record namexml="List_of_TM_8235_PhysVals">
                     <cd:Description>List of physical values for transfer curve 8235</cd:Description>
@@ -267,7 +267,7 @@
                       </cd:Array>
                     </cd:Field>
                   </cd:Record>
-                </cd:Field>                
+                </cd:Field>
               </cd:Record>
             </cd:Field>
             <cd:Field name="TLE_1">
@@ -309,7 +309,7 @@
                       </cd:Array>
                     </cd:Field>
                   </cd:Record>
-                </cd:Field>                
+                </cd:Field>
                 <cd:Field name="List_of_TM_8419_PhysVals">
                   <cd:Record namexml="List_of_TM_8419_PhysVals">
                     <cd:Description>List of physical values for transfer curve 8419</cd:Description>
@@ -520,7 +520,7 @@
                   </cd:Record>
                 </cd:Field>
               </cd:Record>
-            </cd:Field>            
+            </cd:Field>
             <cd:Field name="TLE_2">
               <cd:Record namexml="TLE_2">
                 <cd:Field name="List_of_TM_1_StandardTelVals">
@@ -769,10 +769,9 @@
                       </cd:Array>
                     </cd:Field>
                   </cd:Record>
-                </cd:Field>                
+                </cd:Field>
               </cd:Record>
             </cd:Field>
-
             <cd:Field name="ACDM_A">
               <cd:Record namexml="ACDM_A">
                 <cd:Field name="List_of_TM_1_StandardTelVals">
@@ -793,7 +792,7 @@
                       </cd:Array>
                     </cd:Field>
                   </cd:Record>
-                </cd:Field>                
+                </cd:Field>
                 <cd:Field name="List_of_TM_2_StandardTelVals">
                   <cd:Record namexml="List_of_TM_2_StandardTelVals">
                     <cd:Description>List of standard telemetry values for ACDM_A used for transfer curves 8104, 8105, 8106, 8107, 8108, 8109, 8138, 8139, 8140, and 8141</cd:Description>
@@ -812,7 +811,7 @@
                       </cd:Array>
                     </cd:Field>
                   </cd:Record>
-                </cd:Field>                
+                </cd:Field>
                 <cd:Field name="List_of_TM_3_StandardTelVals">
                   <cd:Record namexml="List_of_TM_3_StandardTelVals">
                     <cd:Description>List of standard telemetry values for ACDM_A used for transfer curves 8130, 8131, 8132, and 8133</cd:Description>
@@ -831,7 +830,7 @@
                       </cd:Array>
                     </cd:Field>
                   </cd:Record>
-                </cd:Field>                
+                </cd:Field>
                 <cd:Field name="List_of_TM_8104_PhysVals">
                   <cd:Record namexml="List_of_TM_8104_PhysVals">
                     <cd:Description>List of physical values for transfer curve 8104</cd:Description>
@@ -1232,7 +1231,7 @@
                   </cd:Record>
                 </cd:Field>
               </cd:Record>
-            </cd:Field>            
+            </cd:Field>
             <cd:Field name="ACDM_Common">
               <cd:Record namexml="ACDM_Common">
                 <cd:Field name="List_of_TM_1_StandardTelVals">
@@ -1253,7 +1252,7 @@
                       </cd:Array>
                     </cd:Field>
                   </cd:Record>
-                </cd:Field>                
+                </cd:Field>
                 <cd:Field name="List_of_TM_8101_PhysVals">
                   <cd:Record namexml="List_of_TM_8101_PhysVals">
                     <cd:Description>List of physical values for transfer curve 8101</cd:Description>
@@ -1295,7 +1294,7 @@
                       </cd:Array>
                     </cd:Field>
                   </cd:Record>
-                </cd:Field>                
+                </cd:Field>
                 <cd:Field name="List_of_TM_2_StandardTelVals">
                   <cd:Record namexml="List_of_TM_2_StandardTelVals">
                     <cd:Description>List of standard telemetry values for ACDM_B used for transfer curves 8110, 8111, 8112, 8113, 8114, 8115, 8142, 8143, 8144, and 8145</cd:Description>
@@ -1314,7 +1313,7 @@
                       </cd:Array>
                     </cd:Field>
                   </cd:Record>
-                </cd:Field>                
+                </cd:Field>
                 <cd:Field name="List_of_TM_3_StandardTelVals">
                   <cd:Record namexml="List_of_TM_3_StandardTelVals">
                     <cd:Description>List of standard telemetry values for ACDM_B used for transfer curves 8134, 8135, 8136, and 8137</cd:Description>
@@ -1333,7 +1332,7 @@
                       </cd:Array>
                     </cd:Field>
                   </cd:Record>
-                </cd:Field>                
+                </cd:Field>
                 <cd:Field name="List_of_TM_8110_PhysVals">
                   <cd:Record namexml="List_of_TM_8110_PhysVals">
                     <cd:Description>List of physical values for transfer curve 8110</cd:Description>
@@ -1734,7 +1733,7 @@
                   </cd:Record>
                 </cd:Field>
               </cd:Record>
-            </cd:Field>            
+            </cd:Field>
             <cd:Field name="Laser_Transmit_Frequency">
               <cd:Record namexml="Laser_Transmit_Frequency">
                 <cd:Description>Laser Transmit Frequency</cd:Description>
@@ -2347,7 +2346,7 @@
                 </cd:Attribute>
                 <cd:Float format="ascii">
                   <cd:Description>Radiometric gain factor for the Rayleigh signal.</cd:Description>
-                  <cd:Unit>ACCD counts/electron</cd:Unit>                  
+                  <cd:Unit>ACCD counts/electron</cd:Unit>
                   <cd:NativeType>double</cd:NativeType>
                 </cd:Float>
               </cd:Type>

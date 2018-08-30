@@ -440,12 +440,12 @@
           </cd:Float>
         </cd:Field>
         <cd:Field name="spare_3">
-           <cd:Raw>
-           <cd:Description>Spare</cd:Description>
-           <cd:BitSize>64</cd:BitSize>
-           </cd:Raw>
-           <cd:Hidden/>
-        </cd:Field>        
+          <cd:Raw>
+            <cd:Description>Spare</cd:Description>
+            <cd:BitSize>64</cd:BitSize>
+          </cd:Raw>
+          <cd:Hidden/>
+        </cd:Field>
       </cd:Record>
     </cd:Array>
   </cd:Field>

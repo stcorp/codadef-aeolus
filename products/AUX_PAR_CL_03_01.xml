@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
-<cd:ProductDefinition id="AUX_PAR_CL_03_01" format="xml" last-modified="2015-07-06" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+<cd:ProductDefinition xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" id="AUX_PAR_CL_03_01" format="xml" last-modified="2015-07-06">
   <cd:Record format="xml">
     <cd:Field name="Earth_Explorer_File">
       <cd:Record namexml="Earth_Explorer_File">
         <cd:Attribute name="schemaversion"/>
-         <cd:Description>Earth Explorer File</cd:Description>
+        <cd:Description>Earth Explorer File</cd:Description>
         <cd:Field name="Earth_Explorer_Header">
           <cd:Record namexml="Earth_Explorer_Header">
             <cd:Description>Earth Explorer Header File</cd:Description>
@@ -30,7 +30,7 @@
             <cd:Attribute name="type">
               <cd:Optional/>
               <cd:FixedValue>xml</cd:FixedValue>
-            </cd:Attribute>                          
+            </cd:Attribute>
             <cd:Field name="CAL_Parameters">
               <cd:Record namexml="CAL_Parameters">
                 <cd:Field name="List_of_Data_Set_Records">
@@ -217,12 +217,12 @@
                             </cd:Record>
                           </cd:Field>
                           <cd:Field name="RBC_Spec_Model">
-                             <cd:Type namexml="RBC_Spec_Model">
-                                <cd:Integer format="ascii">
+                            <cd:Type namexml="RBC_Spec_Model">
+                              <cd:Integer format="ascii">
                                 <cd:Description>Spectra Model to use in the calculation (1 for Tenti model, 2 for Rayleigh)</cd:Description>
                                 <cd:NativeType>uint8</cd:NativeType>
-                                </cd:Integer>
-                             </cd:Type>
+                              </cd:Integer>
+                            </cd:Type>
                           </cd:Field>
                           <cd:Field name="Thresholds">
                             <cd:Record namexml="Thresholds">

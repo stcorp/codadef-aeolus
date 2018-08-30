@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:Record format="binary" name="CCSDSOBT" last-modified="2008-07-01" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" format="binary" name="CCSDSOBT" last-modified="2008-07-01">
   <cd:Description>CSSDS On Board Time</cd:Description>
   <cd:Field name="seconds">
     <cd:Integer>

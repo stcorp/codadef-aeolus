@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:Record name="Level_2B_Proc_Params_02_20" format="xml" namexml="Level_2B_Proc_Params" last-modified="2015-07-31" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" name="Level_2B_Proc_Params_02_20" format="xml" namexml="Level_2B_Proc_Params" last-modified="2015-07-31">
   <cd:Description>Level 2B Processing Parameters GADS DSR</cd:Description>
   <cd:Field name="FH_Default_Fields">
     <cd:Record namexml="FH_Default_Fields">
@@ -110,7 +110,7 @@
             <cd:Mapping string="false" value="0"/>
             <cd:Mapping string="TRUE" value="1"/>
             <cd:Mapping string="True" value="1"/>
-            <cd:Mapping string="true" value="1"/>            
+            <cd:Mapping string="true" value="1"/>
           </cd:Integer>
         </cd:Type>
       </cd:Field>
@@ -548,12 +548,12 @@
               <cd:Integer format="ascii">
                 <cd:Description>Switch to select whether L1B Mie Core Al- gorithm Parameters should be copied/used in the L2BP</cd:Description>
                 <cd:NativeType>uint8</cd:NativeType>
-                  <cd:Mapping string="FALSE" value="0"/>
-                  <cd:Mapping string="False" value="0"/>
-                  <cd:Mapping string="false" value="0"/>
-                  <cd:Mapping string="TRUE" value="1"/>
-                  <cd:Mapping string="True" value="1"/>
-                  <cd:Mapping string="true" value="1"/>            
+                <cd:Mapping string="FALSE" value="0"/>
+                <cd:Mapping string="False" value="0"/>
+                <cd:Mapping string="false" value="0"/>
+                <cd:Mapping string="TRUE" value="1"/>
+                <cd:Mapping string="True" value="1"/>
+                <cd:Mapping string="true" value="1"/>
               </cd:Integer>
             </cd:Type>
           </cd:Field>
@@ -575,12 +575,12 @@
               <cd:Integer format="ascii">
                 <cd:Description>Switch to select whether Mie Nonlinearity Correction should be skipped in the L2BP or not</cd:Description>
                 <cd:NativeType>uint8</cd:NativeType>
-                  <cd:Mapping string="FALSE" value="0"/>
-                  <cd:Mapping string="False" value="0"/>
-                  <cd:Mapping string="false" value="0"/>
-                  <cd:Mapping string="TRUE" value="1"/>
-                  <cd:Mapping string="True" value="1"/>
-                  <cd:Mapping string="true" value="1"/>            
+                <cd:Mapping string="FALSE" value="0"/>
+                <cd:Mapping string="False" value="0"/>
+                <cd:Mapping string="false" value="0"/>
+                <cd:Mapping string="TRUE" value="1"/>
+                <cd:Mapping string="True" value="1"/>
+                <cd:Mapping string="true" value="1"/>
               </cd:Integer>
             </cd:Type>
           </cd:Field>
@@ -589,12 +589,12 @@
               <cd:Integer format="ascii">
                 <cd:Description>Switch to select whether Mie Nonlinearity Correction (calibration data) should be extrapolated in the L2BP or not</cd:Description>
                 <cd:NativeType>uint8</cd:NativeType>
-                  <cd:Mapping string="FALSE" value="0"/>
-                  <cd:Mapping string="False" value="0"/>
-                  <cd:Mapping string="false" value="0"/>
-                  <cd:Mapping string="TRUE" value="1"/>
-                  <cd:Mapping string="True" value="1"/>
-                  <cd:Mapping string="true" value="1"/>            
+                <cd:Mapping string="FALSE" value="0"/>
+                <cd:Mapping string="False" value="0"/>
+                <cd:Mapping string="false" value="0"/>
+                <cd:Mapping string="TRUE" value="1"/>
+                <cd:Mapping string="True" value="1"/>
+                <cd:Mapping string="true" value="1"/>
               </cd:Integer>
             </cd:Type>
           </cd:Field>
@@ -603,12 +603,12 @@
               <cd:Integer format="ascii">
                 <cd:Description>Switch to select whether (Mie) Reference Pulse Zero Frequency should be used in the L2BP or not</cd:Description>
                 <cd:NativeType>uint8</cd:NativeType>
-                  <cd:Mapping string="FALSE" value="0"/>
-                  <cd:Mapping string="False" value="0"/>
-                  <cd:Mapping string="false" value="0"/>
-                  <cd:Mapping string="TRUE" value="1"/>
-                  <cd:Mapping string="True" value="1"/>
-                  <cd:Mapping string="true" value="1"/>            
+                <cd:Mapping string="FALSE" value="0"/>
+                <cd:Mapping string="False" value="0"/>
+                <cd:Mapping string="false" value="0"/>
+                <cd:Mapping string="TRUE" value="1"/>
+                <cd:Mapping string="True" value="1"/>
+                <cd:Mapping string="true" value="1"/>
               </cd:Integer>
             </cd:Type>
           </cd:Field>
@@ -617,12 +617,12 @@
               <cd:Integer format="ascii">
                 <cd:Description>Switch to select whether (Mie) Measurement Channel Zero Frequency should be used in the L2BP or not</cd:Description>
                 <cd:NativeType>uint8</cd:NativeType>
-                  <cd:Mapping string="FALSE" value="0"/>
-                  <cd:Mapping string="False" value="0"/>
-                  <cd:Mapping string="false" value="0"/>
-                  <cd:Mapping string="TRUE" value="1"/>
-                  <cd:Mapping string="True" value="1"/>
-                  <cd:Mapping string="true" value="1"/>            
+                <cd:Mapping string="FALSE" value="0"/>
+                <cd:Mapping string="False" value="0"/>
+                <cd:Mapping string="false" value="0"/>
+                <cd:Mapping string="TRUE" value="1"/>
+                <cd:Mapping string="True" value="1"/>
+                <cd:Mapping string="true" value="1"/>
               </cd:Integer>
             </cd:Type>
           </cd:Field>
@@ -705,12 +705,12 @@
               <cd:Integer format="ascii">
                 <cd:Description>Switch to select whether Mie_Decontamination should be done in the L2BP or not</cd:Description>
                 <cd:NativeType>uint8</cd:NativeType>
-                  <cd:Mapping string="FALSE" value="0"/>
-                  <cd:Mapping string="False" value="0"/>
-                  <cd:Mapping string="false" value="0"/>
-                  <cd:Mapping string="TRUE" value="1"/>
-                  <cd:Mapping string="True" value="1"/>
-                  <cd:Mapping string="true" value="1"/>            
+                <cd:Mapping string="FALSE" value="0"/>
+                <cd:Mapping string="False" value="0"/>
+                <cd:Mapping string="false" value="0"/>
+                <cd:Mapping string="TRUE" value="1"/>
+                <cd:Mapping string="True" value="1"/>
+                <cd:Mapping string="true" value="1"/>
               </cd:Integer>
             </cd:Type>
           </cd:Field>
@@ -762,7 +762,7 @@
                 <cd:NativeType>uint32</cd:NativeType>
               </cd:Integer>
             </cd:Type>
-          </cd:Field>          
+          </cd:Field>
         </cd:Record>
       </cd:Field>
       <cd:Field name="CLM_Matchup_Params">
@@ -1448,12 +1448,12 @@
                   <cd:Integer format="ascii">
                     <cd:Description>Switch to select whether the L1B flag indicating an Invalid Mie Measurement should be ignored in the L2BP or not</cd:Description>
                     <cd:NativeType>uint8</cd:NativeType>
-                      <cd:Mapping string="FALSE" value="0"/>
-                      <cd:Mapping string="False" value="0"/>
-                      <cd:Mapping string="false" value="0"/>
-                      <cd:Mapping string="TRUE" value="1"/>
-                      <cd:Mapping string="True" value="1"/>
-                      <cd:Mapping string="true" value="1"/>            
+                    <cd:Mapping string="FALSE" value="0"/>
+                    <cd:Mapping string="False" value="0"/>
+                    <cd:Mapping string="false" value="0"/>
+                    <cd:Mapping string="TRUE" value="1"/>
+                    <cd:Mapping string="True" value="1"/>
+                    <cd:Mapping string="true" value="1"/>
                   </cd:Integer>
                 </cd:Type>
               </cd:Field>
@@ -1641,12 +1641,12 @@
                   <cd:Integer format="ascii">
                     <cd:Description>Switch to select whether the L1B flag indicating an Invalid Rayleigh Measurement should be ignored in the L2BP or not</cd:Description>
                     <cd:NativeType>uint8</cd:NativeType>
-                      <cd:Mapping string="FALSE" value="0"/>
-                      <cd:Mapping string="False" value="0"/>
-                      <cd:Mapping string="false" value="0"/>
-                      <cd:Mapping string="TRUE" value="1"/>
-                      <cd:Mapping string="True" value="1"/>
-                      <cd:Mapping string="true" value="1"/>            
+                    <cd:Mapping string="FALSE" value="0"/>
+                    <cd:Mapping string="False" value="0"/>
+                    <cd:Mapping string="false" value="0"/>
+                    <cd:Mapping string="TRUE" value="1"/>
+                    <cd:Mapping string="True" value="1"/>
+                    <cd:Mapping string="true" value="1"/>
                   </cd:Integer>
                 </cd:Type>
               </cd:Field>

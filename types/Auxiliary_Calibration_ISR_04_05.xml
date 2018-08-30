@@ -62,7 +62,7 @@
                             <cd:Mapping string="false" value="0"/>
                             <cd:Mapping string="TRUE" value="1"/>
                             <cd:Mapping string="True" value="1"/>
-                            <cd:Mapping string="true" value="1"/>                      
+                            <cd:Mapping string="true" value="1"/>
                             <ct:NamedTest id="BooleanXmlTest"/>
                           </cd:Integer>
                         </cd:Type>
@@ -77,7 +77,7 @@
                             <cd:Mapping string="false" value="0"/>
                             <cd:Mapping string="TRUE" value="1"/>
                             <cd:Mapping string="True" value="1"/>
-                            <cd:Mapping string="true" value="1"/>                      
+                            <cd:Mapping string="true" value="1"/>
                             <ct:NamedTest id="BooleanXmlTest"/>
                           </cd:Integer>
                         </cd:Type>
@@ -291,7 +291,7 @@
                                   <cd:Attribute name="unit">
                                     <cd:Optional/>
                                     <cd:FixedValue>ACCD pixel</cd:FixedValue>
-                                  </cd:Attribute>                                   
+                                  </cd:Attribute>
                                   <cd:Float format="ascii">
                                     <cd:Description>Difference of peaks between last and last but one detected by Gaussian iteration.</cd:Description>
                                     <cd:Unit>ACCD pixel</cd:Unit>
@@ -321,7 +321,7 @@
                                   <cd:Attribute name="unit">
                                     <cd:Optional/>
                                     <cd:FixedValue>ACCD counts</cd:FixedValue>
-                                  </cd:Attribute>                                   
+                                  </cd:Attribute>
                                   <cd:Float format="ascii">
                                     <cd:Description>Resulting offset.</cd:Description>
                                     <cd:Unit>ACCD counts</cd:Unit>
@@ -347,7 +347,7 @@
                                   <cd:Attribute name="unit">
                                     <cd:Optional/>
                                     <cd:FixedValue>ACCD pixel index</cd:FixedValue>
-                                  </cd:Attribute>                                                                      
+                                  </cd:Attribute>
                                   <cd:Float format="ascii">
                                     <cd:Description>Resulting peak location.</cd:Description>
                                     <cd:Unit>ACCD pixel index</cd:Unit>

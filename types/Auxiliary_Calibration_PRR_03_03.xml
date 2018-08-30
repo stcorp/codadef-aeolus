@@ -35,10 +35,10 @@
                   <cd:NativeType>uint8</cd:NativeType>
                   <cd:Mapping string="FALSE" value="0"/>
                   <cd:Mapping string="False" value="0"/>
-                  <cd:Mapping string="false" value="0"/>                  
+                  <cd:Mapping string="false" value="0"/>
                   <cd:Mapping string="TRUE" value="1"/>
                   <cd:Mapping string="True" value="1"/>
-                  <cd:Mapping string="true" value="1"/>                  
+                  <cd:Mapping string="true" value="1"/>
                   <ct:NamedTest id="BooleanXmlTest"/>
                 </cd:Integer>
               </cd:Type>
@@ -50,10 +50,10 @@
                   <cd:NativeType>uint8</cd:NativeType>
                   <cd:Mapping string="FALSE" value="0"/>
                   <cd:Mapping string="False" value="0"/>
-                  <cd:Mapping string="false" value="0"/>                  
+                  <cd:Mapping string="false" value="0"/>
                   <cd:Mapping string="TRUE" value="1"/>
                   <cd:Mapping string="True" value="1"/>
-                  <cd:Mapping string="true" value="1"/>                  
+                  <cd:Mapping string="true" value="1"/>
                   <ct:NamedTest id="BooleanXmlTest"/>
                 </cd:Integer>
               </cd:Type>
@@ -87,10 +87,10 @@
                             <cd:NativeType>uint8</cd:NativeType>
                             <cd:Mapping string="FALSE" value="0"/>
                             <cd:Mapping string="False" value="0"/>
-                            <cd:Mapping string="false" value="0"/>                  
+                            <cd:Mapping string="false" value="0"/>
                             <cd:Mapping string="TRUE" value="1"/>
                             <cd:Mapping string="True" value="1"/>
-                            <cd:Mapping string="true" value="1"/>                  
+                            <cd:Mapping string="true" value="1"/>
                             <ct:NamedTest id="BooleanXmlTest"/>
                           </cd:Integer>
                         </cd:Type>
@@ -102,10 +102,10 @@
                             <cd:NativeType>uint8</cd:NativeType>
                             <cd:Mapping string="FALSE" value="0"/>
                             <cd:Mapping string="False" value="0"/>
-                            <cd:Mapping string="false" value="0"/>                  
+                            <cd:Mapping string="false" value="0"/>
                             <cd:Mapping string="TRUE" value="1"/>
                             <cd:Mapping string="True" value="1"/>
-                            <cd:Mapping string="true" value="1"/>                  
+                            <cd:Mapping string="true" value="1"/>
                             <ct:NamedTest id="BooleanXmlTest"/>
                           </cd:Integer>
                         </cd:Type>
@@ -117,10 +117,10 @@
                             <cd:NativeType>uint8</cd:NativeType>
                             <cd:Mapping string="FALSE" value="0"/>
                             <cd:Mapping string="False" value="0"/>
-                            <cd:Mapping string="false" value="0"/>                  
+                            <cd:Mapping string="false" value="0"/>
                             <cd:Mapping string="TRUE" value="1"/>
                             <cd:Mapping string="True" value="1"/>
-                            <cd:Mapping string="true" value="1"/>                  
+                            <cd:Mapping string="true" value="1"/>
                             <ct:NamedTest id="BooleanXmlTest"/>
                           </cd:Integer>
                         </cd:Type>
@@ -132,10 +132,10 @@
                             <cd:NativeType>uint8</cd:NativeType>
                             <cd:Mapping string="FALSE" value="0"/>
                             <cd:Mapping string="False" value="0"/>
-                            <cd:Mapping string="false" value="0"/>                  
+                            <cd:Mapping string="false" value="0"/>
                             <cd:Mapping string="TRUE" value="1"/>
                             <cd:Mapping string="True" value="1"/>
-                            <cd:Mapping string="true" value="1"/>                  
+                            <cd:Mapping string="true" value="1"/>
                             <ct:NamedTest id="BooleanXmlTest"/>
                           </cd:Integer>
                         </cd:Type>
@@ -147,10 +147,10 @@
                             <cd:NativeType>uint8</cd:NativeType>
                             <cd:Mapping string="FALSE" value="0"/>
                             <cd:Mapping string="False" value="0"/>
-                            <cd:Mapping string="false" value="0"/>                  
+                            <cd:Mapping string="false" value="0"/>
                             <cd:Mapping string="TRUE" value="1"/>
                             <cd:Mapping string="True" value="1"/>
-                            <cd:Mapping string="true" value="1"/>                  
+                            <cd:Mapping string="true" value="1"/>
                             <ct:NamedTest id="BooleanXmlTest"/>
                           </cd:Integer>
                         </cd:Type>
@@ -649,7 +649,7 @@
                 <cd:Field name="List_of_Reference_Pulse_Error_Fit_Coefficients">
                   <cd:Record namexml="List_of_Reference_Pulse_Error_Fit_Coefficients">
                     <cd:Description>List of 6 coefficients</cd:Description>
-                    <cd:Attribute name="count"></cd:Attribute>
+                    <cd:Attribute name="count"/>
                     <cd:Field name="Reference_Pulse_Error_Fit_Coefficient">
                       <cd:Array>
                         <cd:Dimension/>
@@ -675,10 +675,10 @@
                       <cd:NativeType>uint8</cd:NativeType>
                       <cd:Mapping string="FALSE" value="0"/>
                       <cd:Mapping string="False" value="0"/>
-                      <cd:Mapping string="false" value="0"/>                  
+                      <cd:Mapping string="false" value="0"/>
                       <cd:Mapping string="TRUE" value="1"/>
                       <cd:Mapping string="True" value="1"/>
-                      <cd:Mapping string="true" value="1"/>                  
+                      <cd:Mapping string="true" value="1"/>
                       <ct:NamedTest id="BooleanXmlTest"/>
                     </cd:Integer>
                   </cd:Type>
@@ -690,10 +690,10 @@
                       <cd:NativeType>uint8</cd:NativeType>
                       <cd:Mapping string="FALSE" value="0"/>
                       <cd:Mapping string="False" value="0"/>
-                      <cd:Mapping string="false" value="0"/>                  
+                      <cd:Mapping string="false" value="0"/>
                       <cd:Mapping string="TRUE" value="1"/>
                       <cd:Mapping string="True" value="1"/>
-                      <cd:Mapping string="true" value="1"/>                  
+                      <cd:Mapping string="true" value="1"/>
                       <ct:NamedTest id="BooleanXmlTest"/>
                     </cd:Integer>
                   </cd:Type>
@@ -705,10 +705,10 @@
                       <cd:NativeType>uint8</cd:NativeType>
                       <cd:Mapping string="FALSE" value="0"/>
                       <cd:Mapping string="False" value="0"/>
-                      <cd:Mapping string="false" value="0"/>                  
+                      <cd:Mapping string="false" value="0"/>
                       <cd:Mapping string="TRUE" value="1"/>
                       <cd:Mapping string="True" value="1"/>
-                      <cd:Mapping string="true" value="1"/>                  
+                      <cd:Mapping string="true" value="1"/>
                       <ct:NamedTest id="BooleanXmlTest"/>
                     </cd:Integer>
                   </cd:Type>
@@ -739,10 +739,10 @@
                           <cd:NativeType>uint8</cd:NativeType>
                           <cd:Mapping string="FALSE" value="0"/>
                           <cd:Mapping string="False" value="0"/>
-                          <cd:Mapping string="false" value="0"/>                  
+                          <cd:Mapping string="false" value="0"/>
                           <cd:Mapping string="TRUE" value="1"/>
                           <cd:Mapping string="True" value="1"/>
-                          <cd:Mapping string="true" value="1"/>                  
+                          <cd:Mapping string="true" value="1"/>
                           <ct:NamedTest id="BooleanXmlTest"/>
                         </cd:Integer>
                       </cd:Type>
@@ -754,10 +754,10 @@
                           <cd:NativeType>uint8</cd:NativeType>
                           <cd:Mapping string="FALSE" value="0"/>
                           <cd:Mapping string="False" value="0"/>
-                          <cd:Mapping string="false" value="0"/>                  
+                          <cd:Mapping string="false" value="0"/>
                           <cd:Mapping string="TRUE" value="1"/>
                           <cd:Mapping string="True" value="1"/>
-                          <cd:Mapping string="true" value="1"/>                  
+                          <cd:Mapping string="true" value="1"/>
                           <ct:NamedTest id="BooleanXmlTest"/>
                         </cd:Integer>
                       </cd:Type>
@@ -769,10 +769,10 @@
                           <cd:NativeType>uint8</cd:NativeType>
                           <cd:Mapping string="FALSE" value="0"/>
                           <cd:Mapping string="False" value="0"/>
-                          <cd:Mapping string="false" value="0"/>                  
+                          <cd:Mapping string="false" value="0"/>
                           <cd:Mapping string="TRUE" value="1"/>
                           <cd:Mapping string="True" value="1"/>
-                          <cd:Mapping string="true" value="1"/>                  
+                          <cd:Mapping string="true" value="1"/>
                           <ct:NamedTest id="BooleanXmlTest"/>
                         </cd:Integer>
                       </cd:Type>
@@ -784,10 +784,10 @@
                           <cd:NativeType>uint8</cd:NativeType>
                           <cd:Mapping string="FALSE" value="0"/>
                           <cd:Mapping string="False" value="0"/>
-                          <cd:Mapping string="false" value="0"/>                  
+                          <cd:Mapping string="false" value="0"/>
                           <cd:Mapping string="TRUE" value="1"/>
                           <cd:Mapping string="True" value="1"/>
-                          <cd:Mapping string="true" value="1"/>                  
+                          <cd:Mapping string="true" value="1"/>
                           <ct:NamedTest id="BooleanXmlTest"/>
                         </cd:Integer>
                       </cd:Type>
@@ -804,10 +804,10 @@
                           <cd:NativeType>uint8</cd:NativeType>
                           <cd:Mapping string="FALSE" value="0"/>
                           <cd:Mapping string="False" value="0"/>
-                          <cd:Mapping string="false" value="0"/>                  
+                          <cd:Mapping string="false" value="0"/>
                           <cd:Mapping string="TRUE" value="1"/>
                           <cd:Mapping string="True" value="1"/>
-                          <cd:Mapping string="true" value="1"/>                  
+                          <cd:Mapping string="true" value="1"/>
                           <ct:NamedTest id="BooleanXmlTest"/>
                         </cd:Integer>
                       </cd:Type>
@@ -819,10 +819,10 @@
                           <cd:NativeType>uint8</cd:NativeType>
                           <cd:Mapping string="FALSE" value="0"/>
                           <cd:Mapping string="False" value="0"/>
-                          <cd:Mapping string="false" value="0"/>                  
+                          <cd:Mapping string="false" value="0"/>
                           <cd:Mapping string="TRUE" value="1"/>
                           <cd:Mapping string="True" value="1"/>
-                          <cd:Mapping string="true" value="1"/>                  
+                          <cd:Mapping string="true" value="1"/>
                           <ct:NamedTest id="BooleanXmlTest"/>
                         </cd:Integer>
                       </cd:Type>
@@ -834,10 +834,10 @@
                           <cd:NativeType>uint8</cd:NativeType>
                           <cd:Mapping string="FALSE" value="0"/>
                           <cd:Mapping string="False" value="0"/>
-                          <cd:Mapping string="false" value="0"/>                  
+                          <cd:Mapping string="false" value="0"/>
                           <cd:Mapping string="TRUE" value="1"/>
                           <cd:Mapping string="True" value="1"/>
-                          <cd:Mapping string="true" value="1"/>                  
+                          <cd:Mapping string="true" value="1"/>
                           <ct:NamedTest id="BooleanXmlTest"/>
                         </cd:Integer>
                       </cd:Type>
@@ -849,10 +849,10 @@
                           <cd:NativeType>uint8</cd:NativeType>
                           <cd:Mapping string="FALSE" value="0"/>
                           <cd:Mapping string="False" value="0"/>
-                          <cd:Mapping string="false" value="0"/>                  
+                          <cd:Mapping string="false" value="0"/>
                           <cd:Mapping string="TRUE" value="1"/>
                           <cd:Mapping string="True" value="1"/>
-                          <cd:Mapping string="true" value="1"/>                  
+                          <cd:Mapping string="true" value="1"/>
                           <ct:NamedTest id="BooleanXmlTest"/>
                         </cd:Integer>
                       </cd:Type>
@@ -869,10 +869,10 @@
                           <cd:NativeType>uint8</cd:NativeType>
                           <cd:Mapping string="FALSE" value="0"/>
                           <cd:Mapping string="False" value="0"/>
-                          <cd:Mapping string="false" value="0"/>                  
+                          <cd:Mapping string="false" value="0"/>
                           <cd:Mapping string="TRUE" value="1"/>
                           <cd:Mapping string="True" value="1"/>
-                          <cd:Mapping string="true" value="1"/>                  
+                          <cd:Mapping string="true" value="1"/>
                           <ct:NamedTest id="BooleanXmlTest"/>
                         </cd:Integer>
                       </cd:Type>
@@ -884,10 +884,10 @@
                           <cd:NativeType>uint8</cd:NativeType>
                           <cd:Mapping string="FALSE" value="0"/>
                           <cd:Mapping string="False" value="0"/>
-                          <cd:Mapping string="false" value="0"/>                  
+                          <cd:Mapping string="false" value="0"/>
                           <cd:Mapping string="TRUE" value="1"/>
                           <cd:Mapping string="True" value="1"/>
-                          <cd:Mapping string="true" value="1"/>                  
+                          <cd:Mapping string="true" value="1"/>
                           <ct:NamedTest id="BooleanXmlTest"/>
                         </cd:Integer>
                       </cd:Type>
@@ -899,10 +899,10 @@
                           <cd:NativeType>uint8</cd:NativeType>
                           <cd:Mapping string="FALSE" value="0"/>
                           <cd:Mapping string="False" value="0"/>
-                          <cd:Mapping string="false" value="0"/>                  
+                          <cd:Mapping string="false" value="0"/>
                           <cd:Mapping string="TRUE" value="1"/>
                           <cd:Mapping string="True" value="1"/>
-                          <cd:Mapping string="true" value="1"/>                  
+                          <cd:Mapping string="true" value="1"/>
                           <ct:NamedTest id="BooleanXmlTest"/>
                         </cd:Integer>
                       </cd:Type>
@@ -914,10 +914,10 @@
                           <cd:NativeType>uint8</cd:NativeType>
                           <cd:Mapping string="FALSE" value="0"/>
                           <cd:Mapping string="False" value="0"/>
-                          <cd:Mapping string="false" value="0"/>                  
+                          <cd:Mapping string="false" value="0"/>
                           <cd:Mapping string="TRUE" value="1"/>
                           <cd:Mapping string="True" value="1"/>
-                          <cd:Mapping string="true" value="1"/>                  
+                          <cd:Mapping string="true" value="1"/>
                           <ct:NamedTest id="BooleanXmlTest"/>
                         </cd:Integer>
                       </cd:Type>
@@ -1207,7 +1207,7 @@
                       <cd:NativeType>double</cd:NativeType>
                     </cd:Float>
                   </cd:Type>
-                </cd:Field>                                  
+                </cd:Field>
                 <cd:Field name="Maximum_Lower_DEM_Offset">
                   <cd:Type namexml="Maximum_Lower_DEM_Offset">
                     <cd:Attribute name="unit">
@@ -1220,7 +1220,7 @@
                       <cd:NativeType>double</cd:NativeType>
                     </cd:Float>
                   </cd:Type>
-                </cd:Field>                  
+                </cd:Field>
                 <cd:Field name="Min_Rayleigh_Ground_Detection_Signal_Derivative">
                   <cd:Type namexml="Min_Rayleigh_Ground_Detection_Signal_Derivative">
                     <cd:Attribute name="unit">
@@ -1231,7 +1231,7 @@
                       <cd:NativeType>double</cd:NativeType>
                     </cd:Float>
                   </cd:Type>
-                </cd:Field>                  
+                </cd:Field>
                 <cd:Field name="Max_Rayleigh_Ground_Detection_Response_Shift">
                   <cd:Type namexml="Max_Rayleigh_Ground_Detection_Response_Shift">
                     <cd:Attribute name="unit">
@@ -1242,7 +1242,7 @@
                       <cd:NativeType>double</cd:NativeType>
                     </cd:Float>
                   </cd:Type>
-                </cd:Field>                  
+                </cd:Field>
                 <cd:Field name="Etalon_Temp_Range_Threshold">
                   <cd:Type namexml="Etalon_Temp_Range_Threshold">
                     <cd:Attribute name="unit">
@@ -1255,7 +1255,7 @@
                       <cd:NativeType>double</cd:NativeType>
                     </cd:Float>
                   </cd:Type>
-                </cd:Field>                  
+                </cd:Field>
                 <cd:Field name="Scattering_Ratio_Threshold">
                   <cd:Type namexml="Scattering_Ratio_Threshold">
                     <cd:Attribute name="unit">
@@ -1266,15 +1266,15 @@
                       <cd:NativeType>double</cd:NativeType>
                     </cd:Float>
                   </cd:Type>
-                </cd:Field>                  
+                </cd:Field>
               </cd:Record>
             </cd:Field>
-            <cd:Field name="Diff_Offset_Freq_Ref_Meas">               
+            <cd:Field name="Diff_Offset_Freq_Ref_Meas">
               <cd:Type namexml="Diff_Offset_Freq_Ref_Meas">
                 <cd:Attribute name="unit">
                   <cd:Optional/>
                   <cd:FixedValue>GHz</cd:FixedValue>
-                </cd:Attribute>                 
+                </cd:Attribute>
                 <cd:Float format="ascii">
                   <cd:Description>NA. Set to 0</cd:Description>
                   <cd:Unit>GHz</cd:Unit>
@@ -1287,14 +1287,14 @@
                 <cd:Attribute name="unit">
                   <cd:Optional/>
                   <cd:FixedValue>GHz</cd:FixedValue>
-                </cd:Attribute>                                  
+                </cd:Attribute>
                 <cd:Float format="ascii">
                   <cd:Description>NA. Set to 0</cd:Description>
                   <cd:Unit>GHz</cd:Unit>
                   <cd:NativeType>double</cd:NativeType>
                 </cd:Float>
               </cd:Type>
-            </cd:Field>            
+            </cd:Field>
             <cd:Field name="Min_Aht_9_Rsp_Etalon">
               <cd:Type namexml="Min_Aht_9_Rsp_Etalon">
                 <cd:Attribute name="unit">
@@ -1326,7 +1326,7 @@
                 <cd:Attribute name="unit">
                   <cd:Optional/>
                   <cd:FixedValue>C</cd:FixedValue>
-                </cd:Attribute>                 
+                </cd:Attribute>
                 <cd:Float format="ascii">
                   <cd:Description>Minimum Etalon temperature for current sensor, over all BRCs and all 10 time samples per BRC</cd:Description>
                   <cd:Unit>degC</cd:Unit>
@@ -1339,7 +1339,7 @@
                 <cd:Attribute name="unit">
                   <cd:Optional/>
                   <cd:FixedValue>C</cd:FixedValue>
-                </cd:Attribute>                 
+                </cd:Attribute>
                 <cd:Float format="ascii">
                   <cd:Description>Maximum Etalon temperature for current sensor, over all BRCs and all 10 time samples per BRC</cd:Description>
                   <cd:Unit>degC</cd:Unit>
@@ -1352,7 +1352,7 @@
                 <cd:Attribute name="unit">
                   <cd:Optional/>
                   <cd:FixedValue>C</cd:FixedValue>
-                </cd:Attribute>                 
+                </cd:Attribute>
                 <cd:Float format="ascii">
                   <cd:Description>Minimum Etalon temperature for current sensor, over all BRCs and all 10 time samples per BRC</cd:Description>
                   <cd:Unit>degC</cd:Unit>
@@ -1406,10 +1406,10 @@
                   <cd:NativeType>uint8</cd:NativeType>
                   <cd:Mapping string="FALSE" value="0"/>
                   <cd:Mapping string="False" value="0"/>
-                  <cd:Mapping string="false" value="0"/>                  
+                  <cd:Mapping string="false" value="0"/>
                   <cd:Mapping string="TRUE" value="1"/>
                   <cd:Mapping string="True" value="1"/>
-                  <cd:Mapping string="true" value="1"/>                  
+                  <cd:Mapping string="true" value="1"/>
                 </cd:Integer>
               </cd:Type>
             </cd:Field>
@@ -1501,7 +1501,7 @@
                                 <cd:Attribute name="unit">
                                   <cd:Optional/>
                                   <cd:FixedValue>m</cd:FixedValue>
-                                </cd:Attribute>                                 
+                                </cd:Attribute>
                                 <cd:Float format="ascii">
                                   <cd:Description>Height of Geoid above WGS84</cd:Description>
                                   <cd:NativeType>double</cd:NativeType>

@@ -243,7 +243,7 @@
                   </cd:Text>
                 </cd:Field>
               </cd:Record>
-            </cd:Field>            
+            </cd:Field>
             <cd:Field name="LBM_Params">
               <cd:Record namexml="LBM_Params">
                 <cd:Description>Processing parameters for Laser Beam Monitoring Calibration</cd:Description>
@@ -258,7 +258,7 @@
                   </cd:Text>
                 </cd:Field>
               </cd:Record>
-            </cd:Field>            
+            </cd:Field>
             <cd:Field name="Data_Quality">
               <cd:Record namexml="Data_Quality">
                 <cd:Description>Data Quality Thresholds</cd:Description>
@@ -267,7 +267,7 @@
                     <cd:Attribute name="unit">
                       <cd:Optional/>
                       <cd:FixedValue>%</cd:FixedValue>
-                    </cd:Attribute>                     
+                    </cd:Attribute>
                     <cd:Float format="ascii">
                       <cd:Description>Threshold value of internal reference FWHM for quality check</cd:Description>
                       <cd:NativeType>double</cd:NativeType>
@@ -296,7 +296,7 @@
                       <cd:Mapping string="false" value="0"/>
                       <cd:Mapping string="TRUE" value="1"/>
                       <cd:Mapping string="True" value="1"/>
-                      <cd:Mapping string="true" value="1"/>                      
+                      <cd:Mapping string="true" value="1"/>
                       <ct:NamedTest id="BooleanXmlTest"/>
                     </cd:Integer>
                   </cd:Type>
@@ -311,7 +311,7 @@
                       <cd:Mapping string="false" value="0"/>
                       <cd:Mapping string="TRUE" value="1"/>
                       <cd:Mapping string="True" value="1"/>
-                      <cd:Mapping string="true" value="1"/>                      
+                      <cd:Mapping string="true" value="1"/>
                       <ct:NamedTest id="BooleanXmlTest"/>
                     </cd:Integer>
                   </cd:Type>
@@ -321,7 +321,7 @@
                     <cd:Attribute name="unit">
                       <cd:Optional/>
                       <cd:FixedValue>%</cd:FixedValue>
-                    </cd:Attribute>                                                               
+                    </cd:Attribute>
                     <cd:Float format="ascii">
                       <cd:Description>Maximum allowable occurance of cavity lock status for measurement</cd:Description>
                       <cd:NativeType>double</cd:NativeType>
@@ -333,7 +333,7 @@
                     <cd:Attribute name="unit">
                       <cd:Optional/>
                       <cd:FixedValue>%</cd:FixedValue>
-                    </cd:Attribute>                                                               
+                    </cd:Attribute>
                     <cd:Float format="ascii">
                       <cd:Description>Maximum allowable occurance of cavity lock status for image</cd:Description>
                       <cd:NativeType>double</cd:NativeType>
@@ -360,7 +360,7 @@
                   </cd:Text>
                 </cd:Field>
               </cd:Record>
-            </cd:Field>            
+            </cd:Field>
           </cd:Record>
           <ct:NamedTest id="ValueOfCountAttributeForParent"/>
         </cd:Array>

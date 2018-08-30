@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:Record format="ascii" name="Level_0_SPH" last-modified="2018-06-20" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="ascii" name="Level_0_SPH" last-modified="2018-06-20">
   <cd:Field name="sph_descriptor_title">
     <cd:Text>
       <cd:Description>SPH_DESCRIPTOR=</cd:Description>
@@ -298,7 +298,7 @@
       <cd:Description>ISP_CRC_ERRORS_SIGNIFICANT=</cd:Description>
       <cd:FixedValue>ISP_CRC_ERRORS_SIGNIFICANT=</cd:FixedValue>
       <cd:ByteSize>27</cd:ByteSize>
-      <cd:NativeType>string</cd:NativeType>      
+      <cd:NativeType>string</cd:NativeType>
     </cd:Text>
     <cd:Hidden/>
   </cd:Field>

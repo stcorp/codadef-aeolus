@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:Record name="Satellite_Characterisation_Par_04_05" format="xml" namexml="Satellite_Characterisation" last-modified="2016-11-29" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" name="Satellite_Characterisation_Par_04_05" format="xml" namexml="Satellite_Characterisation" last-modified="2016-11-29">
   <cd:Description>Satellite Characterisation GADS DSR</cd:Description>
   <cd:Field name="List_of_Data_Set_Records">
     <cd:Record namexml="List_of_Data_Set_Records">
@@ -685,7 +685,7 @@
                 </cd:Attribute>
                 <cd:Float format="ascii">
                   <cd:Description>Radiometric gain factor for the Rayleigh signal.</cd:Description>
-                  <cd:Unit>ACCD counts/electron</cd:Unit>                  
+                  <cd:Unit>ACCD counts/electron</cd:Unit>
                   <cd:NativeType>double</cd:NativeType>
                 </cd:Float>
               </cd:Type>

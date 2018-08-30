@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:Record name="Auxiliary_Calibration_LCP_04_04" format="xml" namexml="Auxiliary_Calibration_LCP" last-modified="2017-04-12" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" name="Auxiliary_Calibration_LCP_04_04" format="xml" namexml="Auxiliary_Calibration_LCP" last-modified="2017-04-12">
   <cd:Description>Auxiliary Calibration LCP</cd:Description>
   <cd:Field name="List_of_Data_Set_Records">
     <cd:Record namexml="List_of_Data_Set_Records">

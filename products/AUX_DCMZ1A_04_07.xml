@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:ProductDefinition id="AUX_DCMZ1A_04_07" format="binary" last-modified="2017-09-08" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+<cd:ProductDefinition xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" id="AUX_DCMZ1A_04_07" format="binary" last-modified="2017-09-08">
   <cd:NamedType id="Level_1A_Product_04_07"/>
   <cd:ProductVariable name="num_dsd">
     <cd:Init><![CDATA[$num_dsd = int(/mph/num_dsd)]]></cd:Init>
@@ -23,7 +23,6 @@
     <cd:Dimension><![CDATA[$num_ds]]></cd:Dimension>
     <cd:Init><![CDATA[for i = 0 to $num_ds - 1 do $num_dsr[i] = int(/dsd[$ds_to_dsd_index[i]]/num_dsr)]]></cd:Init>
   </cd:ProductVariable>
-
   <!-- MPH Cross File Tests -->
   <ct:NamedCrossFileTest id="MPH_Product"/>
   <ct:NamedCrossFileTest id="MPH_Proc_Stage"/>
@@ -59,7 +58,6 @@
   <ct:NamedCrossFileTest id="MPH_Num_Dsd"/>
   <ct:NamedCrossFileTest id="MPH_Dsd_Size"/>
   <ct:NamedCrossFileTest id="MPH_Num_Data_Sets"/>
-
   <!-- SPH Cross File Tests -->
   <ct:NamedCrossFileTest id="SPH_Sph_Descriptor"/>
   <ct:NamedCrossFileTest id="SPH_Intersect_Start_Lat"/>
@@ -82,5 +80,4 @@
   <ct:NamedCrossFileTest id="SPH_Num_Rayleigh_Reference_Pulses_Present"/>
   <ct:NamedCrossFileTest id="SPH_Num_Mie_Reference_Pulse_Sp_Valid"/>
   <ct:NamedCrossFileTest id="SPH_Num_Rayleigh_Reference_Pulse_Sp_Valid"/>
-
 </cd:ProductDefinition>

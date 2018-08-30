@@ -38,7 +38,7 @@
                   <cd:Mapping string="false" value="0"/>
                   <cd:Mapping string="TRUE" value="1"/>
                   <cd:Mapping string="True" value="1"/>
-                  <cd:Mapping string="true" value="1"/>                  
+                  <cd:Mapping string="true" value="1"/>
                   <ct:NamedTest id="BooleanXmlTest"/>
                 </cd:Integer>
               </cd:Type>
@@ -53,7 +53,7 @@
                   <cd:Mapping string="false" value="0"/>
                   <cd:Mapping string="TRUE" value="1"/>
                   <cd:Mapping string="True" value="1"/>
-                  <cd:Mapping string="true" value="1"/>                  
+                  <cd:Mapping string="true" value="1"/>
                   <ct:NamedTest id="BooleanXmlTest"/>
                 </cd:Integer>
               </cd:Type>
@@ -89,7 +89,7 @@
                             <cd:Mapping string="false" value="0"/>
                             <cd:Mapping string="TRUE" value="1"/>
                             <cd:Mapping string="True" value="1"/>
-                            <cd:Mapping string="true" value="1"/>                  
+                            <cd:Mapping string="true" value="1"/>
                             <ct:NamedTest id="BooleanXmlTest"/>
                           </cd:Integer>
                         </cd:Type>
@@ -104,7 +104,7 @@
                             <cd:Mapping string="false" value="0"/>
                             <cd:Mapping string="TRUE" value="1"/>
                             <cd:Mapping string="True" value="1"/>
-                            <cd:Mapping string="true" value="1"/>                  
+                            <cd:Mapping string="true" value="1"/>
                             <ct:NamedTest id="BooleanXmlTest"/>
                           </cd:Integer>
                         </cd:Type>
@@ -119,7 +119,7 @@
                             <cd:Mapping string="false" value="0"/>
                             <cd:Mapping string="TRUE" value="1"/>
                             <cd:Mapping string="True" value="1"/>
-                            <cd:Mapping string="true" value="1"/>                  
+                            <cd:Mapping string="true" value="1"/>
                             <ct:NamedTest id="BooleanXmlTest"/>
                           </cd:Integer>
                         </cd:Type>
@@ -134,7 +134,7 @@
                             <cd:Mapping string="false" value="0"/>
                             <cd:Mapping string="TRUE" value="1"/>
                             <cd:Mapping string="True" value="1"/>
-                            <cd:Mapping string="true" value="1"/>                  
+                            <cd:Mapping string="true" value="1"/>
                             <ct:NamedTest id="BooleanXmlTest"/>
                           </cd:Integer>
                         </cd:Type>
@@ -149,7 +149,7 @@
                             <cd:Mapping string="false" value="0"/>
                             <cd:Mapping string="TRUE" value="1"/>
                             <cd:Mapping string="True" value="1"/>
-                            <cd:Mapping string="true" value="1"/>                  
+                            <cd:Mapping string="true" value="1"/>
                             <ct:NamedTest id="BooleanXmlTest"/>
                           </cd:Integer>
                         </cd:Type>
@@ -635,7 +635,7 @@
                       <cd:Mapping string="false" value="0"/>
                       <cd:Mapping string="TRUE" value="1"/>
                       <cd:Mapping string="True" value="1"/>
-                      <cd:Mapping string="true" value="1"/>                  
+                      <cd:Mapping string="true" value="1"/>
                       <ct:NamedTest id="BooleanXmlTest"/>
                     </cd:Integer>
                   </cd:Type>
@@ -650,7 +650,7 @@
                       <cd:Mapping string="false" value="0"/>
                       <cd:Mapping string="TRUE" value="1"/>
                       <cd:Mapping string="True" value="1"/>
-                      <cd:Mapping string="true" value="1"/>                  
+                      <cd:Mapping string="true" value="1"/>
                       <ct:NamedTest id="BooleanXmlTest"/>
                     </cd:Integer>
                   </cd:Type>
@@ -665,7 +665,7 @@
                       <cd:Mapping string="false" value="0"/>
                       <cd:Mapping string="TRUE" value="1"/>
                       <cd:Mapping string="True" value="1"/>
-                      <cd:Mapping string="true" value="1"/>                  
+                      <cd:Mapping string="true" value="1"/>
                       <ct:NamedTest id="BooleanXmlTest"/>
                     </cd:Integer>
                   </cd:Type>
@@ -699,7 +699,7 @@
                           <cd:Mapping string="false" value="0"/>
                           <cd:Mapping string="TRUE" value="1"/>
                           <cd:Mapping string="True" value="1"/>
-                          <cd:Mapping string="true" value="1"/>                  
+                          <cd:Mapping string="true" value="1"/>
                           <ct:NamedTest id="BooleanXmlTest"/>
                         </cd:Integer>
                       </cd:Type>
@@ -714,7 +714,7 @@
                           <cd:Mapping string="false" value="0"/>
                           <cd:Mapping string="TRUE" value="1"/>
                           <cd:Mapping string="True" value="1"/>
-                          <cd:Mapping string="true" value="1"/>                  
+                          <cd:Mapping string="true" value="1"/>
                           <ct:NamedTest id="BooleanXmlTest"/>
                         </cd:Integer>
                       </cd:Type>
@@ -729,7 +729,7 @@
                           <cd:Mapping string="false" value="0"/>
                           <cd:Mapping string="TRUE" value="1"/>
                           <cd:Mapping string="True" value="1"/>
-                          <cd:Mapping string="true" value="1"/>                  
+                          <cd:Mapping string="true" value="1"/>
                           <ct:NamedTest id="BooleanXmlTest"/>
                         </cd:Integer>
                       </cd:Type>
@@ -744,7 +744,7 @@
                           <cd:Mapping string="false" value="0"/>
                           <cd:Mapping string="TRUE" value="1"/>
                           <cd:Mapping string="True" value="1"/>
-                          <cd:Mapping string="true" value="1"/>                  
+                          <cd:Mapping string="true" value="1"/>
                           <ct:NamedTest id="BooleanXmlTest"/>
                         </cd:Integer>
                       </cd:Type>
@@ -764,7 +764,7 @@
                           <cd:Mapping string="false" value="0"/>
                           <cd:Mapping string="TRUE" value="1"/>
                           <cd:Mapping string="True" value="1"/>
-                          <cd:Mapping string="true" value="1"/>                  
+                          <cd:Mapping string="true" value="1"/>
                           <ct:NamedTest id="BooleanXmlTest"/>
                         </cd:Integer>
                       </cd:Type>
@@ -779,7 +779,7 @@
                           <cd:Mapping string="false" value="0"/>
                           <cd:Mapping string="TRUE" value="1"/>
                           <cd:Mapping string="True" value="1"/>
-                          <cd:Mapping string="true" value="1"/>                  
+                          <cd:Mapping string="true" value="1"/>
                           <ct:NamedTest id="BooleanXmlTest"/>
                         </cd:Integer>
                       </cd:Type>
@@ -794,7 +794,7 @@
                           <cd:Mapping string="false" value="0"/>
                           <cd:Mapping string="TRUE" value="1"/>
                           <cd:Mapping string="True" value="1"/>
-                          <cd:Mapping string="true" value="1"/>                  
+                          <cd:Mapping string="true" value="1"/>
                           <ct:NamedTest id="BooleanXmlTest"/>
                         </cd:Integer>
                       </cd:Type>
@@ -809,7 +809,7 @@
                           <cd:Mapping string="false" value="0"/>
                           <cd:Mapping string="TRUE" value="1"/>
                           <cd:Mapping string="True" value="1"/>
-                          <cd:Mapping string="true" value="1"/>                  
+                          <cd:Mapping string="true" value="1"/>
                           <ct:NamedTest id="BooleanXmlTest"/>
                         </cd:Integer>
                       </cd:Type>
@@ -829,7 +829,7 @@
                           <cd:Mapping string="false" value="0"/>
                           <cd:Mapping string="TRUE" value="1"/>
                           <cd:Mapping string="True" value="1"/>
-                          <cd:Mapping string="true" value="1"/>                  
+                          <cd:Mapping string="true" value="1"/>
                           <ct:NamedTest id="BooleanXmlTest"/>
                         </cd:Integer>
                       </cd:Type>
@@ -844,7 +844,7 @@
                           <cd:Mapping string="false" value="0"/>
                           <cd:Mapping string="TRUE" value="1"/>
                           <cd:Mapping string="True" value="1"/>
-                          <cd:Mapping string="true" value="1"/>                  
+                          <cd:Mapping string="true" value="1"/>
                           <ct:NamedTest id="BooleanXmlTest"/>
                         </cd:Integer>
                       </cd:Type>
@@ -859,7 +859,7 @@
                           <cd:Mapping string="false" value="0"/>
                           <cd:Mapping string="TRUE" value="1"/>
                           <cd:Mapping string="True" value="1"/>
-                          <cd:Mapping string="true" value="1"/>                  
+                          <cd:Mapping string="true" value="1"/>
                           <ct:NamedTest id="BooleanXmlTest"/>
                         </cd:Integer>
                       </cd:Type>
@@ -874,7 +874,7 @@
                           <cd:Mapping string="false" value="0"/>
                           <cd:Mapping string="TRUE" value="1"/>
                           <cd:Mapping string="True" value="1"/>
-                          <cd:Mapping string="true" value="1"/>                  
+                          <cd:Mapping string="true" value="1"/>
                           <ct:NamedTest id="BooleanXmlTest"/>
                         </cd:Integer>
                       </cd:Type>
@@ -1313,7 +1313,7 @@
                   <cd:Mapping string="false" value="0"/>
                   <cd:Mapping string="TRUE" value="1"/>
                   <cd:Mapping string="True" value="1"/>
-                  <cd:Mapping string="true" value="1"/>                  
+                  <cd:Mapping string="true" value="1"/>
                 </cd:Integer>
               </cd:Type>
             </cd:Field>

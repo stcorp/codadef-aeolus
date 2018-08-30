@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:Record format="binary" name="Rayleigh_Brillouin_ADS" last-modified="2008-07-01" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" format="binary" name="Rayleigh_Brillouin_ADS" last-modified="2008-07-01">
   <cd:Field name="p_grid">
     <cd:Array>
       <cd:Dimension><![CDATA[int(/sph/num_p)]]></cd:Dimension>

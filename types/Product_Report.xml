@@ -1,14 +1,14 @@
 <?xml version="1.0"?>
-<cd:Record name="Product_Report" format="xml" namexml="Product_Report" last-modified="2018-06-21" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" name="Product_Report" format="xml" namexml="Product_Report" last-modified="2018-06-21">
   <cd:Description>Dissemination Report Data Block</cd:Description>
   <cd:Field name="Processor_Name">
     <cd:Text namexml="Processor_Name">
-       <cd:Description>String equal to Processor_Name tag in the Job Order</cd:Description>
+      <cd:Description>String equal to Processor_Name tag in the Job Order</cd:Description>
     </cd:Text>
   </cd:Field>
   <cd:Field name="Processor_Version">
     <cd:Text namexml="Processor_Version">
-       <cd:Description>String equal to Version tag in the Job Order</cd:Description>
+      <cd:Description>String equal to Version tag in the Job Order</cd:Description>
     </cd:Text>
   </cd:Field>
   <cd:Field name="List_of_Ipf_Procs">

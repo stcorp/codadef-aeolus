@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:Record format="ascii" name="AUX_CAL_SPH_02_02" last-modified="2008-07-01" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" format="ascii" name="AUX_CAL_SPH_02_02" last-modified="2008-07-01">
   <cd:Field name="sph_descriptor_title">
     <cd:Text>
       <cd:Description>SPH_DESCRIPTOR=</cd:Description>

@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:Record name="Specific_Product_Header_AUX_PAR_RB_01_02" format="xml" namexml="Specific_Product_Header" last-modified="2008-07-01" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" name="Specific_Product_Header_AUX_PAR_RB_01_02" format="xml" namexml="Specific_Product_Header" last-modified="2008-07-01">
   <cd:Description>Specific Product Header for RBC Processing Parameters products</cd:Description>
   <cd:Field name="Sph_Descriptor">
     <cd:Text namexml="Sph_Descriptor">

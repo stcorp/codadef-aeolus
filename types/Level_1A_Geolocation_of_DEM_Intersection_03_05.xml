@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:Record format="binary" name="Level_1A_Geolocation_of_DEM_Intersection_03_05" last-modified="2010-08-26" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" format="binary" name="Level_1A_Geolocation_of_DEM_Intersection_03_05" last-modified="2010-08-26">
   <cd:Field name="latitude_of_dem_intersection">
     <cd:Integer>
       <cd:Description>Latitude of the intersection of DEM and the line-of-sight</cd:Description>

@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="binary" last-modified="2017-06-20" name="Level_0_Reference_Pulse_Packet">
-  <cd:Description>Reference Pulse Packet</cd:Description>    
+  <cd:Description>Reference Pulse Packet</cd:Description>
   <cd:Field name="packet_header">
     <cd:NamedType id="CCSDS_packet_header"/>
   </cd:Field>
@@ -40,22 +40,22 @@
   </cd:Field>
   <cd:Field name="DEU_TM1">
     <cd:NamedType id="Level_0_DEU_TM1"/>
-  </cd:Field>             
+  </cd:Field>
   <cd:Field name="DEU_TM2">
     <cd:NamedType id="Level_0_DEU_TM2"/>
   </cd:Field>
   <cd:Field name="spare_3">
     <cd:Raw>
-    <cd:Description>Spare</cd:Description>    
+      <cd:Description>Spare</cd:Description>
       <cd:BitSize>3936</cd:BitSize>
     </cd:Raw>
-    <cd:Hidden/>    
-  </cd:Field>        
+    <cd:Hidden/>
+  </cd:Field>
   <cd:Field name="data">
     <cd:Array>
       <cd:Description>600 x 20 columns reference pulses data. Only N*(P-1) of the 600 shots contain actual data</cd:Description>
       <cd:Dimension>600</cd:Dimension>
-      <cd:Dimension>20</cd:Dimension>            
+      <cd:Dimension>20</cd:Dimension>
       <cd:Integer>
         <cd:BitSize>16</cd:BitSize>
         <cd:NativeType>uint16</cd:NativeType>
@@ -69,6 +69,3 @@
     </cd:Integer>
   </cd:Field>
 </cd:Record>
-
-
-  

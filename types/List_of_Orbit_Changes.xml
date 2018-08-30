@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:Record name="List_of_Orbit_Changes" format="xml" namexml="List_of_Orbit_Changes" last-modified="2017-09-11" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" name="List_of_Orbit_Changes" format="xml" namexml="List_of_Orbit_Changes" last-modified="2017-09-11">
   <cd:Description>List of Orbit Change</cd:Description>
   <cd:Attribute name="count"/>
   <cd:Field name="Orbit_Change">
@@ -119,8 +119,8 @@
                       <cd:NativeType>double</cd:NativeType>
                     </cd:Float>
                   </cd:Type>
-                </cd:Field> 
-                <cd:Field name="Harmonics_Terms">                
+                </cd:Field>
+                <cd:Field name="Harmonics_Terms">
                   <cd:Array>
                     <cd:Dimension/>
                     <cd:Record namexml="Harmonics_Terms">
@@ -129,14 +129,14 @@
                       <cd:Field name="Harmonics_Term">
                         <cd:Optional/>
                         <cd:Record namexml="Harmonics_Term">
-                          <cd:Attribute name="seq">  
+                          <cd:Attribute name="seq">
                             <cd:Optional/>
-                          </cd:Attribute>  
+                          </cd:Attribute>
                           <cd:Field name="Reference_Time">
                             <cd:Type namexml="Reference_Time">
-                              <cd:Attribute name="time_ref">  
+                              <cd:Attribute name="time_ref">
                                 <cd:FixedValue>UT1</cd:FixedValue>
-                              </cd:Attribute>  
+                              </cd:Attribute>
                               <cd:Time format="ascii" timeformat="ascii_ccsds_datetime_ymd2">
                                 <cd:Description> Reference time of harmonic</cd:Description>
                                 <cd:Mapping string="0000-00-00T00:00:00.000000" value="-inf"/>
@@ -155,7 +155,7 @@
                                 <cd:NativeType>double</cd:NativeType>
                               </cd:Float>
                             </cd:Type>
-                          </cd:Field> 
+                          </cd:Field>
                           <cd:Field name="Amplitude_Sin">
                             <cd:Type namexml="Amplitude_Sin">
                               <cd:Attribute name="unit">
@@ -167,7 +167,7 @@
                                 <cd:NativeType>double</cd:NativeType>
                               </cd:Float>
                             </cd:Type>
-                          </cd:Field> 
+                          </cd:Field>
                           <cd:Field name="Amplitude_Cos">
                             <cd:Type namexml="Amplitude_Cos">
                               <cd:Attribute name="unit">
@@ -179,14 +179,14 @@
                                 <cd:NativeType>double</cd:NativeType>
                               </cd:Float>
                             </cd:Type>
-                          </cd:Field> 
+                          </cd:Field>
                         </cd:Record>
                       </cd:Field>
                     </cd:Record>
                   </cd:Array>
                 </cd:Field>
               </cd:Record>
-            </cd:Field>            
+            </cd:Field>
           </cd:Record>
         </cd:Field>
         <cd:Field name="Time_of_ANX">

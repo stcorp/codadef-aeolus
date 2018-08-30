@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
-<cd:ProductDefinition id="AUX_PAR_CS_03_01" format="xml" last-modified="2015-07-06" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+<cd:ProductDefinition xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" id="AUX_PAR_CS_03_01" format="xml" last-modified="2015-07-06">
   <cd:Record format="xml">
     <cd:Field name="Earth_Explorer_File">
       <cd:Record namexml="Earth_Explorer_File">
         <cd:Attribute name="schemaversion"/>
-         <cd:Description>Earth Explorer File</cd:Description>
+        <cd:Description>Earth Explorer File</cd:Description>
         <cd:Field name="Earth_Explorer_Header">
           <cd:Record namexml="Earth_Explorer_Header">
             <cd:Description>Earth Explorer Header File</cd:Description>
@@ -30,7 +30,7 @@
             <cd:Attribute name="type">
               <cd:Optional/>
               <cd:FixedValue>xml</cd:FixedValue>
-            </cd:Attribute>             
+            </cd:Attribute>
             <cd:Field name="CSR_Parameters">
               <cd:Record namexml="CSR_Parameters">
                 <cd:Field name="List_of_Data_Set_Records">
@@ -165,12 +165,12 @@
                             </cd:Record>
                           </cd:Field>
                           <cd:Field name="RBC_Spec_Model">
-                             <cd:Type namexml="RBC_Spec_Model">
-                                <cd:Integer format="ascii">
+                            <cd:Type namexml="RBC_Spec_Model">
+                              <cd:Integer format="ascii">
                                 <cd:Description>Spectra Model to use in the calculation (1 for Tenti model, 2 for Rayleigh)</cd:Description>
                                 <cd:NativeType>uint8</cd:NativeType>
-                                </cd:Integer>
-                             </cd:Type>
+                              </cd:Integer>
+                            </cd:Type>
                           </cd:Field>
                           <cd:Field name="Simplex_Fit">
                             <cd:Record namexml="Simplex_Fit">
@@ -193,13 +193,13 @@
                             </cd:Record>
                           </cd:Field>
                           <cd:Field name="Max_TopHat_Tilt_Range">
-                             <cd:Type namexml="Max_TopHat_Tilt_Range">
-                                <cd:Float format="ascii">
+                            <cd:Type namexml="Max_TopHat_Tilt_Range">
+                              <cd:Float format="ascii">
                                 <cd:Description>Maximum tilt range for top hat function.</cd:Description>
                                 <cd:NativeType>double</cd:NativeType>
-                                </cd:Float>
-                             </cd:Type>
-                          </cd:Field>                          
+                              </cd:Float>
+                            </cd:Type>
+                          </cd:Field>
                           <cd:Field name="Thresholds">
                             <cd:Record namexml="Thresholds">
                               <cd:Field name="Min_Freq_Steps_Valid">
@@ -215,7 +215,7 @@
                                   <cd:Attribute name="unit">
                                     <cd:Optional/>
                                     <cd:FixedValue>%</cd:FixedValue>
-                                  </cd:Attribute>                                   
+                                  </cd:Attribute>
                                   <cd:Integer format="ascii">
                                     <cd:Description>Fraction of RRC frequency steps closest to CSR-based Rayleigh response prediction considered for validating the CSR.</cd:Description>
                                     <cd:Unit>%</cd:Unit>

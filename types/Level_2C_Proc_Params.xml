@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:Record name="Level_2C_Proc_Params" format="xml" namexml="Level_2C_Proc_Params" last-modified="2010-08-26" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" name="Level_2C_Proc_Params" format="xml" namexml="Level_2C_Proc_Params" last-modified="2010-08-26">
   <cd:Description>Level 2C Processing Parameters GADS DSR</cd:Description>
   <cd:Field name="L2C_FH_Default_Fields">
     <cd:Record namexml="L2C_FH_Default_Fields">

@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:Record name="Auxiliary_Calibration_CSR_01_03" format="xml" last-modified="2009-01-23" namexml="List_of_CSR_Frequency_Steps" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" name="Auxiliary_Calibration_CSR_01_03" format="xml" last-modified="2009-01-23" namexml="List_of_CSR_Frequency_Steps">
   <cd:Description>List of frequency step results</cd:Description>
   <cd:Attribute name="count"> </cd:Attribute>
   <cd:Field name="CSR_Frequency_Step">

@@ -59,7 +59,7 @@
             </cd:Conversion>
             <cd:BitSize>32</cd:BitSize>
             <cd:NativeType>int32</cd:NativeType>
-         </cd:Integer>
+          </cd:Integer>
         </cd:Field>
         <cd:Field name="latitude">
           <cd:Integer>

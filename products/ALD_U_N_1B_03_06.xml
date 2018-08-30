@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:ProductDefinition id="ALD_U_N_1B_03_06" format="binary" last-modified="2008-09-18" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+<cd:ProductDefinition xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" id="ALD_U_N_1B_03_06" format="binary" last-modified="2008-09-18">
   <cd:NamedType id="Level_1B_Product_03_06"/>
   <cd:ProductVariable name="num_dsd">
     <cd:Init><![CDATA[$num_dsd = int(/mph/num_dsd)]]></cd:Init>

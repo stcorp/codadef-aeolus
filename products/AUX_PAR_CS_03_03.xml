@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
-<cd:ProductDefinition id="AUX_PAR_CS_03_03" format="xml" last-modified="2016-12-02" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+<cd:ProductDefinition xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" id="AUX_PAR_CS_03_03" format="xml" last-modified="2018-08-30">
   <cd:Record format="xml">
     <cd:Field name="Earth_Explorer_File">
       <cd:Record namexml="Earth_Explorer_File">
         <cd:Attribute name="schemaversion"/>
-         <cd:Description>Earth Explorer File</cd:Description>
+        <cd:Description>Earth Explorer File</cd:Description>
         <cd:Field name="Earth_Explorer_Header">
           <cd:Record namexml="Earth_Explorer_Header">
             <cd:Description>Earth Explorer Header File</cd:Description>
@@ -32,7 +32,7 @@
             <cd:Attribute name="type">
               <cd:Optional/>
               <cd:FixedValue>xml</cd:FixedValue>
-            </cd:Attribute>             
+            </cd:Attribute>
             <cd:Field name="CSR_Parameters">
               <cd:Record namexml="CSR_Parameters">
                 <cd:Field name="List_of_Data_Set_Records">
@@ -86,7 +86,7 @@
                               </cd:Field>
                               <cd:Field name="Fiz_Reflec_Model">
                                 <cd:Text namexml="Fiz_Reflec_Model">
-                                  <cd:Description>Takes the value “E2S” or “DLR”. Sets the model used for the reflection on the Fizeau in the ISR fitting procedure</cd:Description>
+                                  <cd:Description>Takes the value 'E2S' or 'DLR'. Sets the model used for the reflection on the Fizeau in the ISR fitting procedure</cd:Description>
                                 </cd:Text>
                               </cd:Field>
                             </cd:Record>
@@ -209,7 +209,7 @@
                                     </cd:Type>
                                   </cd:Field>
                                 </cd:Record>
-                              </cd:Field>                                  
+                              </cd:Field>
                               <cd:Field name="Update">
                                 <cd:Record namexml="Update">
                                   <cd:Field name="Max_Iterations">
@@ -229,17 +229,17 @@
                                     </cd:Type>
                                   </cd:Field>
                                 </cd:Record>
-                              </cd:Field>                                  
+                              </cd:Field>
                             </cd:Record>
                           </cd:Field>
                           <cd:Field name="Max_TopHat_Tilt_Range">
-                             <cd:Type namexml="Max_TopHat_Tilt_Range">
-                                <cd:Float format="ascii">
+                            <cd:Type namexml="Max_TopHat_Tilt_Range">
+                              <cd:Float format="ascii">
                                 <cd:Description>Maximum of the absolute value of the tilt parameter of the top-hat used for simulating the beam etendue effect on the transmission of the Fabry-Perot interferometers</cd:Description>
                                 <cd:NativeType>double</cd:NativeType>
-                                </cd:Float>
-                             </cd:Type>
-                          </cd:Field>                          
+                              </cd:Float>
+                            </cd:Type>
+                          </cd:Field>
                           <cd:Field name="Thresholds">
                             <cd:Record namexml="Thresholds">
                               <cd:Field name="Min_Freq_Steps_Valid">
@@ -256,7 +256,7 @@
                                   <cd:Attribute name="unit">
                                     <cd:Optional/>
                                     <cd:FixedValue>%</cd:FixedValue>
-                                  </cd:Attribute>                                   
+                                  </cd:Attribute>
                                   <cd:Integer format="ascii">
                                     <cd:Description>Fraction of RRC frequency steps closest to CSR-based Rayleigh response prediction considered for validating the CSR.</cd:Description>
                                     <cd:Unit>%</cd:Unit>
@@ -294,7 +294,7 @@
                                     <cd:NativeType>double</cd:NativeType>
                                   </cd:Float>
                                 </cd:Type>
-                              </cd:Field>                              
+                              </cd:Field>
                             </cd:Record>
                           </cd:Field>
                           <cd:Field name="Ref_Profile">

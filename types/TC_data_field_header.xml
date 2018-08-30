@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:Record format="binary" name="TC_data_field_header" last-modified="2008-07-01" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" format="binary" name="TC_data_field_header" last-modified="2008-07-01">
   <cd:Field name="sec_header_flg">
     <cd:Integer>
       <cd:BitSize>1</cd:BitSize>

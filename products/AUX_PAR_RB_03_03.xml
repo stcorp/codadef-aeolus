@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:ProductDefinition id="AUX_PAR_RB_03_03" format="xml" last-modified="2015-12-02" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+<cd:ProductDefinition xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" id="AUX_PAR_RB_03_03" format="xml" last-modified="2018-08-30">
   <cd:Record format="xml">
     <cd:Field name="Earth_Explorer_File">
       <cd:Record namexml="Earth_Explorer_File">
@@ -81,12 +81,12 @@
                 <cd:Field name="RB_Params">
                   <cd:Record namexml="RB_Params">
                     <cd:Field name="RBC_Spec_Model">
-                       <cd:Text namexml="RBC_Spec_Model">
+                      <cd:Text namexml="RBC_Spec_Model">
                         <cd:Description>Spectra Model to use in the calculation</cd:Description>
-                       </cd:Text>
+                      </cd:Text>
                     </cd:Field>
                     <cd:Field name="RB_Grid">
-                      <cd:Record namexml="RB_Grid">                    
+                      <cd:Record namexml="RB_Grid">
                         <cd:Field name="Pmin">
                           <cd:Type namexml="Pmin">
                             <cd:Attribute name="unit"/>
@@ -192,7 +192,7 @@
                       </cd:Record>
                     </cd:Field>
                     <cd:Field name="Fabry_Perot">
-                      <cd:Record namexml="Fabry_Perot">                   
+                      <cd:Record namexml="Fabry_Perot">
                         <cd:Field name="FSR">
                           <cd:Type namexml="FSR">
                             <cd:Attribute name="unit">
@@ -222,7 +222,7 @@
                       </cd:Record>
                     </cd:Field>
                     <cd:Field name="Fizeau">
-                      <cd:Record namexml="Fizeau">                   
+                      <cd:Record namexml="Fizeau">
                         <cd:Field name="FSR">
                           <cd:Type namexml="FSR">
                             <cd:Attribute name="unit">
@@ -238,16 +238,16 @@
                         </cd:Field>
                         <cd:Field name="Fiz_Reflec_Model">
                           <cd:Text namexml="Fiz_Reflec_Model">
-                              <cd:Description>Either “E2S” or “DLR”. Sets which model shall be used for the reflection on the Fizeau</cd:Description>
+                            <cd:Description>Either 'E2S' or 'DLR'. Sets which model shall be used for the reflection on the Fizeau</cd:Description>
                           </cd:Text>
                         </cd:Field>
                       </cd:Record>
-                    </cd:Field>                    
+                    </cd:Field>
                     <cd:Field name="flagGen">
                       <cd:Type namexml="flagGen">
                         <cd:Attribute name="unit">
                           <cd:Optional/>
-                        </cd:Attribute>                         
+                        </cd:Attribute>
                         <cd:Integer format="ascii">
                           <cd:NativeType>uint8</cd:NativeType>
                           <cd:Mapping string="FALSE" value="0"/>
@@ -285,7 +285,7 @@
                           </cd:Type>
                         </cd:Field>
                       </cd:Record>
-                    </cd:Field>                                        
+                    </cd:Field>
                     <cd:Field name="USR">
                       <cd:Type namexml="USR">
                         <cd:Attribute name="unit">

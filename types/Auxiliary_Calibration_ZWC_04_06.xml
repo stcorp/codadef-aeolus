@@ -115,30 +115,30 @@
                   <cd:Type namexml="Mie_Satellite_Range_to_Target">
                     <cd:Description>List of satellite range to target values for all Mie height bins of the observation</cd:Description>
                     <cd:Attribute name="unit">
-                       <cd:Optional/>
-                       <cd:FixedValue>m</cd:FixedValue>
-                    </cd:Attribute>                    
+                      <cd:Optional/>
+                      <cd:FixedValue>m</cd:FixedValue>
+                    </cd:Attribute>
                     <cd:Array format="ascii">
-                       <cd:Dimension>25</cd:Dimension>
-                       <cd:Float format="ascii">
-                       <cd:NativeType>double</cd:NativeType>
-                       </cd:Float>
-                    </cd:Array>                   
+                      <cd:Dimension>25</cd:Dimension>
+                      <cd:Float format="ascii">
+                        <cd:NativeType>double</cd:NativeType>
+                      </cd:Float>
+                    </cd:Array>
                   </cd:Type>
                 </cd:Field>
                 <cd:Field name="Rayleigh_Satellite_Range_to_Target">
                   <cd:Type namexml="Rayleigh_Satellite_Range_to_Target">
                     <cd:Description>List of satellite range to target values for all Rayleigh height bins of the observation</cd:Description>
                     <cd:Attribute name="unit">
-                       <cd:Optional/>
-                       <cd:FixedValue>m</cd:FixedValue>
-                    </cd:Attribute>                                        
+                      <cd:Optional/>
+                      <cd:FixedValue>m</cd:FixedValue>
+                    </cd:Attribute>
                     <cd:Array format="ascii">
-                       <cd:Dimension>25</cd:Dimension>
-                       <cd:Float format="ascii">
-                       <cd:NativeType>double</cd:NativeType>
-                       </cd:Float>
-                    </cd:Array>                                       
+                      <cd:Dimension>25</cd:Dimension>
+                      <cd:Float format="ascii">
+                        <cd:NativeType>double</cd:NativeType>
+                      </cd:Float>
+                    </cd:Array>
                   </cd:Type>
                 </cd:Field>
               </cd:Record>
@@ -590,9 +590,9 @@
                 <cd:Field name="DEM_Height">
                   <cd:Type namexml="DEM_Height">
                     <cd:Attribute name="unit">
-                       <cd:Optional/>
-                       <cd:FixedValue>m</cd:FixedValue>
-                    </cd:Attribute>                     
+                      <cd:Optional/>
+                      <cd:FixedValue>m</cd:FixedValue>
+                    </cd:Attribute>
                     <cd:Array format="ascii">
                       <cd:Description>This list contains N_Meas values separated by blanks. The items in this list refer to the altitude of the DEM intersection of the measurements 1 .. N_Meas of the observation.</cd:Description>
                       <cd:Dimension>int(str(../../Validity_Indicators/List_of_Mie_Measurement_Validity_Indicators@count))</cd:Dimension>
@@ -606,9 +606,9 @@
                 <cd:Field name="Surface_Type">
                   <cd:Type namexml="Surface_Type">
                     <cd:Attribute name="unit">
-                       <cd:Optional/>
-                       <cd:FixedValue>m</cd:FixedValue>
-                    </cd:Attribute>                     
+                      <cd:Optional/>
+                      <cd:FixedValue>m</cd:FixedValue>
+                    </cd:Attribute>
                     <cd:Array format="ascii">
                       <cd:Description>This list contains N_Meas values separated by blanks. The items in this list refer to the altitude of the DEM intersection of the measurements 1 .. N_Meas of the observation.</cd:Description>
                       <cd:Dimension>int(str(../../Validity_Indicators/List_of_Mie_Measurement_Validity_Indicators@count))</cd:Dimension>

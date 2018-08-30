@@ -100,7 +100,7 @@
       <cd:Field name="laser_frequency_offset_std_dev">
         <cd:Float>
           <cd:Description>Laser frequency offset standard deviation</cd:Description>
-          <cd:Unit>GHz</cd:Unit>          
+          <cd:Unit>GHz</cd:Unit>
           <cd:BitSize>64</cd:BitSize>
           <cd:NativeType>double</cd:NativeType>
         </cd:Float>
@@ -108,7 +108,7 @@
       <cd:Field name="uv_energy_std_dev">
         <cd:Float>
           <cd:Description>Laser pulse UV energy standard deviation</cd:Description>
-          <cd:Unit>mJ</cd:Unit>          
+          <cd:Unit>mJ</cd:Unit>
           <cd:BitSize>64</cd:BitSize>
           <cd:NativeType>double</cd:NativeType>
         </cd:Float>
@@ -274,7 +274,7 @@
       <cd:Field name="mie_emitted_frequency_std_dev">
         <cd:Float>
           <cd:Description>Emitted frequencies standard deviation</cd:Description>
-          <cd:Unit>GHz</cd:Unit>          
+          <cd:Unit>GHz</cd:Unit>
           <cd:BitSize>64</cd:BitSize>
           <cd:NativeType>double</cd:NativeType>
         </cd:Float>
@@ -282,7 +282,7 @@
       <cd:Field name="rayleigh_mean_emitted_frequency">
         <cd:Float>
           <cd:Description>Emitted responses calculated using : eqn 58 from R-2 for the reference pulse of the observation : eqn 60 from R-2 for the reference pulse of a measuremen : emitted responses are then converted to emitted frequencies</cd:Description>
-          <cd:Unit>GHz</cd:Unit>          
+          <cd:Unit>GHz</cd:Unit>
           <cd:BitSize>64</cd:BitSize>
           <cd:NativeType>double</cd:NativeType>
         </cd:Float>
@@ -290,7 +290,7 @@
       <cd:Field name="rayleigh_emitted_frequency_std_dev">
         <cd:Float>
           <cd:Description>Emitted frequencies standard deviation</cd:Description>
-          <cd:Unit>GHz</cd:Unit>          
+          <cd:Unit>GHz</cd:Unit>
           <cd:BitSize>64</cd:BitSize>
           <cd:NativeType>double</cd:NativeType>
         </cd:Float>
@@ -358,7 +358,7 @@
         <cd:Field name="uv_energy_std_dev">
           <cd:Float>
             <cd:Description>Laser pulse UV energy standard deviation</cd:Description>
-            <cd:Unit>mJ</cd:Unit>            
+            <cd:Unit>mJ</cd:Unit>
             <cd:BitSize>64</cd:BitSize>
             <cd:NativeType>double</cd:NativeType>
           </cd:Float>
@@ -441,7 +441,7 @@
         <cd:Field name="mie_mean_emitted_frequency">
           <cd:Float>
             <cd:Description>emitted responses calculated using ...</cd:Description>
-            <cd:Unit>GHz</cd:Unit>            
+            <cd:Unit>GHz</cd:Unit>
             <cd:BitSize>64</cd:BitSize>
             <cd:NativeType>double</cd:NativeType>
           </cd:Float>
@@ -449,7 +449,7 @@
         <cd:Field name="mie_emitted_frequency_std_dev">
           <cd:Float>
             <cd:Description>Emitted frequency standard deviation</cd:Description>
-            <cd:Unit>GHz</cd:Unit>            
+            <cd:Unit>GHz</cd:Unit>
             <cd:BitSize>64</cd:BitSize>
             <cd:NativeType>double</cd:NativeType>
           </cd:Float>
@@ -465,7 +465,7 @@
         <cd:Field name="rayleigh_mean_emitted_frequency">
           <cd:Float>
             <cd:Description>emitted responses calculated using ...</cd:Description>
-            <cd:Unit>GHz</cd:Unit>            
+            <cd:Unit>GHz</cd:Unit>
             <cd:BitSize>64</cd:BitSize>
             <cd:NativeType>double</cd:NativeType>
           </cd:Float>
@@ -473,7 +473,7 @@
         <cd:Field name="rayleigh_emitted_frequency_std_dev">
           <cd:Float>
             <cd:Description>Rayleigh emitted frequency standard deviation</cd:Description>
-            <cd:Unit>GHz</cd:Unit>            
+            <cd:Unit>GHz</cd:Unit>
             <cd:BitSize>64</cd:BitSize>
             <cd:NativeType>double</cd:NativeType>
           </cd:Float>

@@ -1,116 +1,116 @@
 <?xml version="1.0"?>
 <cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="binary" last-modified="2010-04-14" name="TXA_Status">
-  <cd:Description>TXA status</cd:Description>        
+  <cd:Description>TXA status</cd:Description>
   <cd:Field name="UV_Energy_OK">
     <cd:Integer>
-        <cd:Description>UV Energy OK</cd:Description>
-        <cd:BitSize>1</cd:BitSize>
-        <cd:NativeType>uint8</cd:NativeType>
+      <cd:Description>UV Energy OK</cd:Description>
+      <cd:BitSize>1</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
     </cd:Integer>
   </cd:Field>
   <cd:Field name="Pulse_Validityed_status">
     <cd:Integer>
-        <cd:Description>Pulse Validityed status</cd:Description>
-        <cd:BitSize>1</cd:BitSize>
-        <cd:NativeType>uint8</cd:NativeType>
+      <cd:Description>Pulse Validityed status</cd:Description>
+      <cd:BitSize>1</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
     </cd:Integer>
   </cd:Field>
   <cd:Field name="RLH_tuned">
     <cd:Integer>
-        <cd:Description>RLH tuned</cd:Description>
-        <cd:BitSize>1</cd:BitSize>
-        <cd:NativeType>uint8</cd:NativeType>
+      <cd:Description>RLH tuned</cd:Description>
+      <cd:BitSize>1</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
     </cd:Integer>
   </cd:Field>
   <cd:Field name="MO_Energy_OK">
     <cd:Integer>
-        <cd:Description>MO Energy OK</cd:Description>
-        <cd:BitSize>1</cd:BitSize>
-        <cd:NativeType>uint8</cd:NativeType>
+      <cd:Description>MO Energy OK</cd:Description>
+      <cd:BitSize>1</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
     </cd:Integer>
   </cd:Field>
   <cd:Field name="MMR_OK">
     <cd:Integer>
-        <cd:Description>MMR_OK</cd:Description>
-        <cd:BitSize>1</cd:BitSize>
-        <cd:NativeType>uint8</cd:NativeType>
+      <cd:Description>MMR_OK</cd:Description>
+      <cd:BitSize>1</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
     </cd:Integer>
   </cd:Field>
   <cd:Field name="Amp_Energy_OK">
     <cd:Integer>
-        <cd:Description>Amp Energy OK</cd:Description>
-        <cd:BitSize>1</cd:BitSize>
-        <cd:NativeType>uint8</cd:NativeType>
+      <cd:Description>Amp Energy OK</cd:Description>
+      <cd:BitSize>1</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
     </cd:Integer>
   </cd:Field>
   <cd:Field name="PLH_Temp_Prot_ON">
     <cd:Integer>
-        <cd:Description>PLH Temp Prot ON</cd:Description>
-        <cd:BitSize>1</cd:BitSize>
-        <cd:NativeType>uint8</cd:NativeType>
+      <cd:Description>PLH Temp Prot ON</cd:Description>
+      <cd:BitSize>1</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
     </cd:Integer>
   </cd:Field>
   <cd:Field name="MO_Active_LD_Temp_OK">
     <cd:Integer>
-        <cd:Description>MO_Active_LD_Temp_OK</cd:Description>
-        <cd:BitSize>1</cd:BitSize>
-        <cd:NativeType>uint8</cd:NativeType>
+      <cd:Description>MO_Active_LD_Temp_OK</cd:Description>
+      <cd:BitSize>1</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
     </cd:Integer>
   </cd:Field>
   <cd:Field name="PreAmp_LD_Temp_OK">
     <cd:Integer>
-        <cd:Description>PreAmp LD Temp OK</cd:Description>
-        <cd:BitSize>1</cd:BitSize>
-        <cd:NativeType>uint8</cd:NativeType>
+      <cd:Description>PreAmp LD Temp OK</cd:Description>
+      <cd:BitSize>1</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
     </cd:Integer>
   </cd:Field>
   <cd:Field name="Amp_LD_Temp_OK">
     <cd:Integer>
-        <cd:Description>Amp LD Temp OK</cd:Description>
-        <cd:BitSize>1</cd:BitSize>
-        <cd:NativeType>uint8</cd:NativeType>
+      <cd:Description>Amp LD Temp OK</cd:Description>
+      <cd:BitSize>1</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
     </cd:Integer>
   </cd:Field>
   <cd:Field name="Active_Materials_Temp_OK">
     <cd:Integer>
-        <cd:Description>Active Materials Temp OK</cd:Description>
-        <cd:BitSize>1</cd:BitSize>
-        <cd:NativeType>uint8</cd:NativeType>
+      <cd:Description>Active Materials Temp OK</cd:Description>
+      <cd:BitSize>1</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
     </cd:Integer>
   </cd:Field>
   <cd:Field name="HC_Temp_OK">
     <cd:Integer>
-        <cd:Description>HC Temp OK</cd:Description>
-        <cd:BitSize>1</cd:BitSize>
-        <cd:NativeType>uint8</cd:NativeType>
+      <cd:Description>HC Temp OK</cd:Description>
+      <cd:BitSize>1</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
     </cd:Integer>
   </cd:Field>
   <cd:Field name="Q_S_PSU_ON">
     <cd:Integer>
-        <cd:Description>Q/S PSU ON</cd:Description>
-        <cd:BitSize>1</cd:BitSize>
-        <cd:NativeType>uint8</cd:NativeType>
+      <cd:Description>Q/S PSU ON</cd:Description>
+      <cd:BitSize>1</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
     </cd:Integer>
   </cd:Field>
   <cd:Field name="BNR_LDPSM_ON_OFF">
     <cd:Integer>
-        <cd:Description>BNR LDPSM ON/OFF</cd:Description>
-        <cd:BitSize>1</cd:BitSize>
-        <cd:NativeType>uint8</cd:NativeType>
+      <cd:Description>BNR LDPSM ON/OFF</cd:Description>
+      <cd:BitSize>1</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
     </cd:Integer>
   </cd:Field>
   <cd:Field name="RLH_ON_OFF">
     <cd:Integer>
-        <cd:Description>RLH_ON/OFF</cd:Description>
-        <cd:BitSize>1</cd:BitSize>
-        <cd:NativeType>uint8</cd:NativeType>
+      <cd:Description>RLH_ON/OFF</cd:Description>
+      <cd:BitSize>1</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
     </cd:Integer>
   </cd:Field>
   <cd:Field name="PLH_HTR_ON_OFF">
     <cd:Integer>
-        <cd:Description>PLH HTR ON/OFF</cd:Description>
-        <cd:BitSize>1</cd:BitSize>
-        <cd:NativeType>uint8</cd:NativeType>
+      <cd:Description>PLH HTR ON/OFF</cd:Description>
+      <cd:BitSize>1</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
     </cd:Integer>
   </cd:Field>
 </cd:Record>

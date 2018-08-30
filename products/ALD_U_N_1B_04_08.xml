@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:ProductDefinition id="ALD_U_N_1B_04_08" format="binary" last-modified="2017-09-11" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+<cd:ProductDefinition xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" id="ALD_U_N_1B_04_08" format="binary" last-modified="2017-09-11">
   <cd:NamedType id="Level_1B_Product_04_08"/>
   <cd:ProductVariable name="num_dsd">
     <cd:Init><![CDATA[$num_dsd = int(/mph/num_dsd)]]></cd:Init>
@@ -23,7 +23,6 @@
     <cd:Dimension><![CDATA[$num_ds]]></cd:Dimension>
     <cd:Init><![CDATA[for i = 0 to $num_ds - 1 do $num_dsr[i] = int(/dsd[$ds_to_dsd_index[i]]/num_dsr)]]></cd:Init>
   </cd:ProductVariable>
-
   <!-- MPH Cross File Tests -->
   <ct:NamedCrossFileTest id="MPH_Product"/>
   <ct:NamedCrossFileTest id="MPH_Proc_Stage"/>
@@ -59,7 +58,6 @@
   <ct:NamedCrossFileTest id="MPH_Num_Dsd"/>
   <ct:NamedCrossFileTest id="MPH_Dsd_Size"/>
   <ct:NamedCrossFileTest id="MPH_Num_Data_Sets"/>
-
   <!-- SPH Cross File Tests -->
   <ct:NamedCrossFileTest id="SPH_Sph_Descriptor"/>
   <ct:NamedCrossFileTest id="SPH_Intersect_Start_Lat"/>
@@ -69,10 +67,10 @@
   <ct:NamedCrossFileTest id="SPH_Sat_Track"/>
   <ct:NamedCrossFileTest id="SPH_Base_Laser_Frequency"/>
   <ct:NamedCrossFileTest id="SPH_N_Max"/>
-  <ct:NamedCrossFileTest id="SPH_N_Max_Actual"/>  
+  <ct:NamedCrossFileTest id="SPH_N_Max_Actual"/>
   <ct:NamedCrossFileTest id="SPH_Total_Num_of_Observations"/>
   <ct:NamedCrossFileTest id="SPH_Total_Num_of_Measurements"/>
-  <ct:NamedCrossFileTest id="SPH_Total_Num_of_Reference_Pulses"/>  
+  <ct:NamedCrossFileTest id="SPH_Total_Num_of_Reference_Pulses"/>
   <ct:NamedCrossFileTest id="SPH_Num_Mie_Observations_Used"/>
   <ct:NamedCrossFileTest id="SPH_Num_Rayleigh_Observations_Used"/>
   <ct:NamedCrossFileTest id="SPH_Num_Mie_Measurements_Used"/>
@@ -91,5 +89,4 @@
   <ct:NamedCrossFileTest id="SPH_Total_Num_of_Corrupt_Mie_Reference_Pulses"/>
   <ct:NamedCrossFileTest id="SPH_Total_Num_of_Corrupt_Rayleigh_Reference_Pulses"/>
   <ct:NamedCrossFileTest id="SPH_NF_Order"/>
-
 </cd:ProductDefinition>

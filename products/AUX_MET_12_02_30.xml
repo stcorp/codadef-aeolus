@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:ProductDefinition id="AUX_MET_12_02_30" format="binary" last-modified="2018-04-03" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+<cd:ProductDefinition xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" id="AUX_MET_12_02_30" format="binary" last-modified="2018-04-03">
   <cd:Record format="binary">
     <cd:Description>ADM-Aeolus Auxiliary Meteorological Data</cd:Description>
     <cd:Field name="mph">
@@ -32,7 +32,7 @@
       <cd:Array>
         <cd:Description>Metereological data (off-nadir, for reprocessing etc, one DSR / profile)</cd:Description>
         <cd:Dimension><![CDATA[$num_dsr[2]]]></cd:Dimension>
-        <cd:NamedType id="AUX_MET_METDS_02_30"/>        
+        <cd:NamedType id="AUX_MET_METDS_02_30"/>
       </cd:Array>
       <ct:NamedTest id="LessThan2PercentOfAmdUsMissing"/>
       <ct:NamedTest id="LessThan2PercentOfAmdVsMissing"/>
@@ -107,7 +107,6 @@
     <cd:Dimension><![CDATA[$num_ds]]></cd:Dimension>
     <cd:Init><![CDATA[for i = 0 to $num_ds - 1 do $num_dsr[i] = int(/dsd[$ds_to_dsd_index[i]]/num_dsr)]]></cd:Init>
   </cd:ProductVariable>
-  
   <!-- MPH Cross File Tests -->
   <ct:NamedCrossFileTest id="MPH_Product"/>
   <ct:NamedCrossFileTest id="MPH_Proc_Stage"/>
@@ -143,7 +142,6 @@
   <ct:NamedCrossFileTest id="MPH_Num_Dsd"/>
   <ct:NamedCrossFileTest id="MPH_Dsd_Size"/>
   <ct:NamedCrossFileTest id="MPH_Num_Data_Sets"/>
-
   <!-- SPH Cross File Tests -->
   <ct:NamedCrossFileTest id="SPH_Sph_Descriptor"/>
   <ct:NamedCrossFileTest id="SPH_Ref_NWP_Suite"/>
@@ -159,5 +157,4 @@
   <ct:NamedCrossFileTest id="SPH_Num_Computed_Locations"/>
   <ct:NamedCrossFileTest id="SPH_Num_Input_Files"/>
   <ct:NamedCrossFileTest id="SPH_Num_Files_Predict_Orbit"/>
-
 </cd:ProductDefinition>

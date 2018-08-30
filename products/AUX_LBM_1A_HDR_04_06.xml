@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:ProductDefinition id="AUX_LBM_1A_HDR_04_06" format="xml" last-modified="2016-07-22" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+<cd:ProductDefinition xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" id="AUX_LBM_1A_HDR_04_06" format="xml" last-modified="2016-07-22">
   <cd:Record format="xml">
     <cd:Field name="Earth_Explorer_Header">
       <cd:Record namexml="Earth_Explorer_Header">

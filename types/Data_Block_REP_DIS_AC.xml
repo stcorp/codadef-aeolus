@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:Record name="Data_Block_REP_DIS_AC" format="xml" namexml="Data_Block" last-modified="2017-04-12" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" name="Data_Block_REP_DIS_AC" format="xml" namexml="Data_Block" last-modified="2017-04-12">
   <cd:Description>Dissemination Report Data Block</cd:Description>
   <cd:Attribute name="type">
     <cd:Optional/>
@@ -29,7 +29,7 @@
             <cd:Mapping string="false" value="0"/>
             <cd:Mapping string="True" value="1"/>
             <cd:Mapping string="true" value="1"/>
-	    <ct:NamedTest id="BooleanBinTest" />
+            <ct:NamedTest id="BooleanBinTest"/>
           </cd:Integer>
         </cd:Type>
       </cd:Field>

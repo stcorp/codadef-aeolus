@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:Record name="Data_Block_REP_QUA_AC" format="xml" namexml="Data_Block" last-modified="2017-04-12" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" name="Data_Block_REP_QUA_AC" format="xml" namexml="Data_Block" last-modified="2018-08-30">
   <cd:Attribute name="type">
     <cd:Optional/>
     <cd:FixedValue>xml</cd:FixedValue>
@@ -45,13 +45,13 @@
                     <cd:Integer format="ascii">
                       <cd:Description>True if the file has been accepted by the ACMF for further processing</cd:Description>
                       <cd:NativeType>uint8</cd:NativeType>
-                      <cd:Mapping string="FALSE" value="0"/>                      
+                      <cd:Mapping string="FALSE" value="0"/>
                       <cd:Mapping string="False" value="0"/>
                       <cd:Mapping string="false" value="0"/>
                       <cd:Mapping string="TRUE" value="1"/>
                       <cd:Mapping string="True" value="1"/>
                       <cd:Mapping string="true" value="1"/>
-                      <ct:NamedTest id="BooleanBinTest" />
+                      <ct:NamedTest id="BooleanBinTest"/>
                     </cd:Integer>
                   </cd:Type>
                 </cd:Field>
@@ -101,7 +101,7 @@
                 </cd:Field>
                 <cd:Field name="Output_File_Baseline">
                   <cd:Text namexml="Output_File_Baseline">
-                    <cd:Description>Baseline associated to the output calibration file (only applicable for ADFs, if not applicable set to ‘N/A’)</cd:Description>
+                    <cd:Description>Baseline associated to the output calibration file (only applicable for ADFs, if not applicable set to 'N/A')</cd:Description>
                   </cd:Text>
                 </cd:Field>
                 <cd:Field name="Output_File_Generation_Time">
@@ -253,13 +253,13 @@
                               <cd:Integer format="ascii">
                                 <cd:Description>True if transfer has been successfully completed</cd:Description>
                                 <cd:NativeType>uint8</cd:NativeType>
-                                <cd:Mapping string="FALSE" value="0"/>                      
+                                <cd:Mapping string="FALSE" value="0"/>
                                 <cd:Mapping string="False" value="0"/>
                                 <cd:Mapping string="false" value="0"/>
                                 <cd:Mapping string="TRUE" value="1"/>
                                 <cd:Mapping string="True" value="1"/>
                                 <cd:Mapping string="true" value="1"/>
-                                <ct:NamedTest id="BooleanBinTest" />
+                                <ct:NamedTest id="BooleanBinTest"/>
                               </cd:Integer>
                             </cd:Type>
                           </cd:Field>

@@ -103,11 +103,11 @@
                       <cd:Description>Flag indicating whether horizontal or line-of-sight wind should be used. This flag can be set to either "true" or "false". A "true" value indicates that the line of sight wind velocity is computed, and a "false" value indicates that horizontal wind velocity is computed</cd:Description>
                       <cd:NativeType>uint8</cd:NativeType>
                       <cd:Mapping string="FALSE" value="0"/>
-                      <cd:Mapping string="False" value="0"/>                      
-                      <cd:Mapping string="false" value="0"/>                      
+                      <cd:Mapping string="False" value="0"/>
+                      <cd:Mapping string="false" value="0"/>
                       <cd:Mapping string="TRUE" value="1"/>
                       <cd:Mapping string="True" value="1"/>
-                      <cd:Mapping string="true" value="1"/>                      
+                      <cd:Mapping string="true" value="1"/>
                       <ct:NamedTest id="BooleanXmlTest"/>
                     </cd:Integer>
                   </cd:Type>
@@ -154,11 +154,11 @@
                       <cd:Description>Flag indicating wether the Rayleigh response correction shall be performed using the array of response errors of the AUX_RRC file or the polynomial fit of the response errors. A 'TRUE' value indicates that the polynomial fit parameters are used.</cd:Description>
                       <cd:NativeType>uint8</cd:NativeType>
                       <cd:Mapping string="FALSE" value="0"/>
-                      <cd:Mapping string="False" value="0"/>                      
-                      <cd:Mapping string="false" value="0"/>                      
+                      <cd:Mapping string="False" value="0"/>
+                      <cd:Mapping string="false" value="0"/>
                       <cd:Mapping string="TRUE" value="1"/>
                       <cd:Mapping string="True" value="1"/>
-                      <cd:Mapping string="true" value="1"/>                      
+                      <cd:Mapping string="true" value="1"/>
                       <ct:NamedTest id="BooleanXmlTest"/>
                     </cd:Integer>
                   </cd:Type>
@@ -329,11 +329,11 @@
                       <cd:Description>Flag indicating whether horizontal or line-of-sight wind should be used. This flag can be set to either "true" or "false". A "true" value indicates that the line of sight wind velocity is computed, and a "false" value indicates that horizontal wind velocity is computed</cd:Description>
                       <cd:NativeType>uint8</cd:NativeType>
                       <cd:Mapping string="FALSE" value="0"/>
-                      <cd:Mapping string="False" value="0"/>                      
-                      <cd:Mapping string="false" value="0"/>                      
+                      <cd:Mapping string="False" value="0"/>
+                      <cd:Mapping string="false" value="0"/>
                       <cd:Mapping string="TRUE" value="1"/>
                       <cd:Mapping string="True" value="1"/>
-                      <cd:Mapping string="true" value="1"/>                      
+                      <cd:Mapping string="true" value="1"/>
                       <ct:NamedTest id="BooleanXmlTest"/>
                     </cd:Integer>
                   </cd:Type>
@@ -380,11 +380,11 @@
                       <cd:Description>Flag indicating wether the Rayleigh response correction shall be performed using the array of response errors of the AUX_RRC file or the polynomial fit of the response errors. A 'TRUE' value indicates that the polynomial fit parameters are used.</cd:Description>
                       <cd:NativeType>uint8</cd:NativeType>
                       <cd:Mapping string="FALSE" value="0"/>
-                      <cd:Mapping string="False" value="0"/>                      
-                      <cd:Mapping string="false" value="0"/>                      
+                      <cd:Mapping string="False" value="0"/>
+                      <cd:Mapping string="false" value="0"/>
                       <cd:Mapping string="TRUE" value="1"/>
                       <cd:Mapping string="True" value="1"/>
-                      <cd:Mapping string="true" value="1"/>                      
+                      <cd:Mapping string="true" value="1"/>
                       <ct:NamedTest id="BooleanXmlTest"/>
                     </cd:Integer>
                   </cd:Type>
@@ -564,13 +564,13 @@
                   <cd:Type namexml="Mid_Mie_Response_Pixel">
                     <cd:Attribute name="unit">
                       <cd:FixedValue>ACCD pixel index</cd:FixedValue>
-                    </cd:Attribute>                      
+                    </cd:Attribute>
                     <cd:Float format="ascii">
                       <cd:Description>ACCD pixel position expected to be in the middle of the Mie USR</cd:Description>
                       <cd:NativeType>double</cd:NativeType>
                     </cd:Float>
                   </cd:Type>
-                </cd:Field>                
+                </cd:Field>
               </cd:Record>
             </cd:Field>
             <cd:Field name="IAT_Params">
@@ -622,7 +622,7 @@
                   <cd:Type namexml="Mid_Frequency_Range_Lower_Limit">
                     <cd:Attribute name="unit">
                       <cd:FixedValue>GHz</cd:FixedValue>
-                    </cd:Attribute>                      
+                    </cd:Attribute>
                     <cd:Float format="ascii">
                       <cd:Description>Lower frequency limit that defines the Mie fit range</cd:Description>
                       <cd:NativeType>double</cd:NativeType>
@@ -633,13 +633,13 @@
                   <cd:Type namexml="Mid_Frequency_Range_Upper_Limit">
                     <cd:Attribute name="unit">
                       <cd:FixedValue>GHz</cd:FixedValue>
-                    </cd:Attribute>                      
+                    </cd:Attribute>
                     <cd:Float format="ascii">
                       <cd:Description>Upper frequency limit that defines the Mie fit range</cd:Description>
                       <cd:NativeType>double</cd:NativeType>
                     </cd:Float>
                   </cd:Type>
-                </cd:Field>                
+                </cd:Field>
               </cd:Record>
             </cd:Field>
             <cd:Field name="DCC_Params">
@@ -757,7 +757,7 @@
                       <cd:NativeType>double</cd:NativeType>
                     </cd:Float>
                   </cd:Type>
-                </cd:Field>                
+                </cd:Field>
               </cd:Record>
             </cd:Field>
             <cd:Field name="LCP_Params">
@@ -1310,11 +1310,11 @@
                       <cd:Description>Apply outlier detection algorithm on response TRUE/FALSE.</cd:Description>
                       <cd:NativeType>uint8</cd:NativeType>
                       <cd:Mapping string="FALSE" value="0"/>
-                      <cd:Mapping string="False" value="0"/>                      
-                      <cd:Mapping string="false" value="0"/>                      
+                      <cd:Mapping string="False" value="0"/>
+                      <cd:Mapping string="false" value="0"/>
                       <cd:Mapping string="TRUE" value="1"/>
                       <cd:Mapping string="True" value="1"/>
-                      <cd:Mapping string="true" value="1"/>                      
+                      <cd:Mapping string="true" value="1"/>
                       <ct:NamedTest id="BooleanXmlTest"/>
                     </cd:Integer>
                   </cd:Type>
@@ -1349,11 +1349,11 @@
                       <cd:Description>Apply scattering ratio quality control to atmospheric data TRUE/FALSE.</cd:Description>
                       <cd:NativeType>uint8</cd:NativeType>
                       <cd:Mapping string="FALSE" value="0"/>
-                      <cd:Mapping string="False" value="0"/>                      
-                      <cd:Mapping string="false" value="0"/>                      
+                      <cd:Mapping string="False" value="0"/>
+                      <cd:Mapping string="false" value="0"/>
                       <cd:Mapping string="TRUE" value="1"/>
                       <cd:Mapping string="True" value="1"/>
-                      <cd:Mapping string="true" value="1"/>                      
+                      <cd:Mapping string="true" value="1"/>
                       <ct:NamedTest id="BooleanXmlTest"/>
                     </cd:Integer>
                   </cd:Type>
@@ -1392,11 +1392,11 @@
                       <cd:Description>Flag indicating whether horizontal or line-of-sight wind should be used. This flag can be set to either "true" or "false". A "true" value indicates that the line of sight wind velocity is computed, and a "false" value indicates that horizontal wind velocity is computed</cd:Description>
                       <cd:NativeType>uint8</cd:NativeType>
                       <cd:Mapping string="FALSE" value="0"/>
-                      <cd:Mapping string="False" value="0"/>                      
-                      <cd:Mapping string="false" value="0"/>                      
+                      <cd:Mapping string="False" value="0"/>
+                      <cd:Mapping string="false" value="0"/>
                       <cd:Mapping string="TRUE" value="1"/>
                       <cd:Mapping string="True" value="1"/>
-                      <cd:Mapping string="true" value="1"/>                      
+                      <cd:Mapping string="true" value="1"/>
                       <ct:NamedTest id="BooleanXmlTest"/>
                     </cd:Integer>
                   </cd:Type>
@@ -1443,11 +1443,11 @@
                       <cd:Description>Flag indicating wether the Rayleigh response correction shall be performed using the array of response errors of the AUX_RRC file or the polynomial fit of the response errors. A 'TRUE' value indicates that the polynomial fit parameters are used.</cd:Description>
                       <cd:NativeType>uint8</cd:NativeType>
                       <cd:Mapping string="FALSE" value="0"/>
-                      <cd:Mapping string="False" value="0"/>                      
-                      <cd:Mapping string="false" value="0"/>                      
+                      <cd:Mapping string="False" value="0"/>
+                      <cd:Mapping string="false" value="0"/>
                       <cd:Mapping string="TRUE" value="1"/>
                       <cd:Mapping string="True" value="1"/>
-                      <cd:Mapping string="true" value="1"/>                      
+                      <cd:Mapping string="true" value="1"/>
                       <ct:NamedTest id="BooleanXmlTest"/>
                     </cd:Integer>
                   </cd:Type>
@@ -1660,7 +1660,7 @@
                       <cd:NativeType>double</cd:NativeType>
                     </cd:Float>
                   </cd:Type>
-                </cd:Field>                
+                </cd:Field>
                 <cd:Field name="Max_Step_Factor">
                   <cd:Type namexml="Max_Step_Factor">
                     <cd:Float format="ascii">
@@ -1676,7 +1676,7 @@
                       <cd:NativeType>double</cd:NativeType>
                     </cd:Float>
                   </cd:Type>
-                </cd:Field>                
+                </cd:Field>
                 <cd:Field name="Stop_Tolerance">
                   <cd:Type namexml="Stop_Tolerance">
                     <cd:Float format="ascii">
@@ -1684,7 +1684,7 @@
                       <cd:NativeType>double</cd:NativeType>
                     </cd:Float>
                   </cd:Type>
-                </cd:Field>                
+                </cd:Field>
               </cd:Record>
             </cd:Field>
             <cd:Field name="Common_Processing_Params">
@@ -1737,7 +1737,7 @@
                           <cd:NativeType>double</cd:NativeType>
                         </cd:Float>
                       </cd:Type>
-                    </cd:Field>                    
+                    </cd:Field>
                     <cd:Field name="Max_Num_Iterations">
                       <cd:Type namexml="Max_Num_Iterations">
                         <cd:Integer format="ascii">
@@ -1980,11 +1980,11 @@
                           <cd:Description>Flag showing if the downhill simplex is on or off. If it is off (FALSE) a method using least squares minimization is used instead of DownHill Simplex</cd:Description>
                           <cd:NativeType>uint8</cd:NativeType>
                           <cd:Mapping string="FALSE" value="0"/>
-                          <cd:Mapping string="False" value="0"/>                      
-                          <cd:Mapping string="false" value="0"/>                      
+                          <cd:Mapping string="False" value="0"/>
+                          <cd:Mapping string="false" value="0"/>
                           <cd:Mapping string="TRUE" value="1"/>
                           <cd:Mapping string="True" value="1"/>
-                          <cd:Mapping string="true" value="1"/>                      
+                          <cd:Mapping string="true" value="1"/>
                           <ct:NamedTest id="BooleanXmlTest"/>
                         </cd:Integer>
                       </cd:Type>
@@ -2045,7 +2045,7 @@
                           <cd:NativeType>double</cd:NativeType>
                         </cd:Float>
                       </cd:Type>
-                    </cd:Field>                    
+                    </cd:Field>
                   </cd:Record>
                 </cd:Field>
                 <cd:Field name="Corrupt_Data_Detection_Params">
@@ -2084,11 +2084,11 @@
                           <cd:Description>Flag that switches the DCO correction algorithm. If set to 'false', every ACCD row will be corrected using for the Mie the mean of pixel 19 and 20 and for Rayleigh only pixel 20 of that row. If set to true, a measurement mean DCO value will be calculated.</cd:Description>
                           <cd:NativeType>uint8</cd:NativeType>
                           <cd:Mapping string="FALSE" value="0"/>
-                          <cd:Mapping string="False" value="0"/>                      
-                          <cd:Mapping string="false" value="0"/>                      
+                          <cd:Mapping string="False" value="0"/>
+                          <cd:Mapping string="false" value="0"/>
                           <cd:Mapping string="TRUE" value="1"/>
                           <cd:Mapping string="True" value="1"/>
-                          <cd:Mapping string="true" value="1"/>                      
+                          <cd:Mapping string="true" value="1"/>
                           <ct:NamedTest id="BooleanXmlTest"/>
                         </cd:Integer>
                       </cd:Type>
@@ -2117,11 +2117,11 @@
                       <cd:Description>Correct Nadir mode measured data for satellite velocity using ideal RRC/MRC response slopes.</cd:Description>
                       <cd:NativeType>uint8</cd:NativeType>
                       <cd:Mapping string="FALSE" value="0"/>
-                      <cd:Mapping string="False" value="0"/>                      
-                      <cd:Mapping string="false" value="0"/>                      
+                      <cd:Mapping string="False" value="0"/>
+                      <cd:Mapping string="false" value="0"/>
                       <cd:Mapping string="TRUE" value="1"/>
                       <cd:Mapping string="True" value="1"/>
-                      <cd:Mapping string="true" value="1"/>                      
+                      <cd:Mapping string="true" value="1"/>
                       <ct:NamedTest id="BooleanXmlTest"/>
                     </cd:Integer>
                   </cd:Type>

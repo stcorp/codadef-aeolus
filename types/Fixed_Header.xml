@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:Record name="Fixed_Header" format="xml" namexml="Fixed_Header" last-modified="2017-04-12" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" name="Fixed_Header" format="xml" namexml="Fixed_Header" last-modified="2017-04-12">
   <cd:Description>Earth Explorer Fixed Header</cd:Description>
   <cd:Field name="File_Name">
     <cd:Text namexml="File_Name">

@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:Record format="binary" name="Level_2C_Assim_PCD_ADSR_01_32" last-modified="2008-07-01" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" format="binary" name="Level_2C_Assim_PCD_ADSR_01_32" last-modified="2008-07-01">
   <cd:Field name="n_meas">
     <cd:Integer>
       <cd:Description>Number of L1 measurements reported in the L1B product for this BRC. Note this figure may vary from one BRC to the other</cd:Description>

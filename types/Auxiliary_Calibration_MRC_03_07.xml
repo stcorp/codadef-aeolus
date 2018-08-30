@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:Record format="xml" last-modified="2017-04-12" name="Auxiliary_Calibration_MRC_03_07" namexml="Auxiliary_Calibration_MRC" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="xml" last-modified="2017-04-12" name="Auxiliary_Calibration_MRC_03_07" namexml="Auxiliary_Calibration_MRC">
   <cd:Description>Auxiliary Calibration MRC</cd:Description>
   <cd:Field name="List_of_Data_Set_Records">
     <cd:Record namexml="List_of_Data_Set_Records">

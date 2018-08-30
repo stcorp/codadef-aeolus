@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:Record format="binary" last-modified="2011-02-11" name="Level_0_MDSR_03_05" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="binary" last-modified="2011-02-11" name="Level_0_MDSR_03_05">
   <cd:Field name="start_of_observation_time">
     <cd:Time timeformat="binary_envisat_datetime">
       <cd:Description>MJD of sensing time of start of observation as extracted from AISP</cd:Description>
@@ -385,7 +385,7 @@
                 <cd:BitSize>16</cd:BitSize>
                 <cd:NativeType>uint16</cd:NativeType>
               </cd:Integer>
-            </cd:Array>      
+            </cd:Array>
           </cd:Field>
           <cd:Field name="spare_1">
             <cd:Raw>
@@ -399,49 +399,49 @@
               <cd:Description>BRC_DEU Parameters</cd:Description>
               <cd:Field name="CM_1_DEU">
                 <cd:Integer>
-                  <cd:Description>Detection mode : LIDAR,IMAGING,LIDAR_GROUND</cd:Description>    
+                  <cd:Description>Detection mode : LIDAR,IMAGING,LIDAR_GROUND</cd:Description>
                   <cd:BitSize>16</cd:BitSize>
                   <cd:NativeType>uint16</cd:NativeType>
                 </cd:Integer>
               </cd:Field>
               <cd:Field name="CM_2_DEU">
                 <cd:Integer>
-                  <cd:Description>N parameter</cd:Description>    
+                  <cd:Description>N parameter</cd:Description>
                   <cd:BitSize>16</cd:BitSize>
                   <cd:NativeType>uint16</cd:NativeType>
                 </cd:Integer>
               </cd:Field>
               <cd:Field name="CM_3_DEU">
                 <cd:Integer>
-                  <cd:Description>P parameter</cd:Description>    
+                  <cd:Description>P parameter</cd:Description>
                   <cd:BitSize>16</cd:BitSize>
                   <cd:NativeType>uint16</cd:NativeType>
                 </cd:Integer>
               </cd:Field>
               <cd:Field name="CM_4_DEU">
                 <cd:Integer>
-                  <cd:Description>Mie Integ. times 1 to 2 ( integ 1 , integ 2 )</cd:Description>    
+                  <cd:Description>Mie Integ. times 1 to 2 ( integ 1 , integ 2 )</cd:Description>
                   <cd:BitSize>16</cd:BitSize>
                   <cd:NativeType>uint16</cd:NativeType>
                 </cd:Integer>
               </cd:Field>
               <cd:Field name="CM_5_DEU">
                 <cd:Integer>
-                  <cd:Description>Mie Integ. times 3 to 4</cd:Description>    
+                  <cd:Description>Mie Integ. times 3 to 4</cd:Description>
                   <cd:BitSize>16</cd:BitSize>
                   <cd:NativeType>uint16</cd:NativeType>
                 </cd:Integer>
               </cd:Field>
               <cd:Field name="CM_6_DEU">
                 <cd:Integer>
-                  <cd:Description>Mie Integ. times 5 to 6</cd:Description>    
+                  <cd:Description>Mie Integ. times 5 to 6</cd:Description>
                   <cd:BitSize>16</cd:BitSize>
                   <cd:NativeType>uint16</cd:NativeType>
                 </cd:Integer>
               </cd:Field>
               <cd:Field name="CM_7_DEU">
                 <cd:Integer>
-                  <cd:Description>Mie Integ. times 7 to 8</cd:Description>    
+                  <cd:Description>Mie Integ. times 7 to 8</cd:Description>
                   <cd:BitSize>16</cd:BitSize>
                   <cd:NativeType>uint16</cd:NativeType>
                 </cd:Integer>
@@ -455,28 +455,28 @@
               </cd:Field>
               <cd:Field name="CM_9_DEU">
                 <cd:Integer>
-                  <cd:Description>Mie Integ. times 11 to 12</cd:Description>    
+                  <cd:Description>Mie Integ. times 11 to 12</cd:Description>
                   <cd:BitSize>16</cd:BitSize>
                   <cd:NativeType>uint16</cd:NativeType>
                 </cd:Integer>
               </cd:Field>
               <cd:Field name="CM_10_DEU">
                 <cd:Integer>
-                  <cd:Description>Mie Integ. times 13 to 14</cd:Description>    
+                  <cd:Description>Mie Integ. times 13 to 14</cd:Description>
                   <cd:BitSize>16</cd:BitSize>
                   <cd:NativeType>uint16</cd:NativeType>
                 </cd:Integer>
               </cd:Field>
               <cd:Field name="CM_11_DEU">
                 <cd:Integer>
-                  <cd:Description>Mie Integ. times 15 to 16</cd:Description>    
+                  <cd:Description>Mie Integ. times 15 to 16</cd:Description>
                   <cd:BitSize>16</cd:BitSize>
                   <cd:NativeType>uint16</cd:NativeType>
                 </cd:Integer>
               </cd:Field>
               <cd:Field name="CM_12_DEU">
                 <cd:Integer>
-                  <cd:Description>Mie Integ. times 17 to 18</cd:Description>    
+                  <cd:Description>Mie Integ. times 17 to 18</cd:Description>
                   <cd:BitSize>16</cd:BitSize>
                   <cd:NativeType>uint16</cd:NativeType>
                 </cd:Integer>
@@ -490,98 +490,98 @@
               </cd:Field>
               <cd:Field name="CM_14_DEU">
                 <cd:Integer>
-                  <cd:Description>Mie Integ. times 21 to 22</cd:Description>    
+                  <cd:Description>Mie Integ. times 21 to 22</cd:Description>
                   <cd:BitSize>16</cd:BitSize>
                   <cd:NativeType>uint16</cd:NativeType>
                 </cd:Integer>
               </cd:Field>
               <cd:Field name="CM_15_DEU">
                 <cd:Integer>
-                  <cd:Description>Mie Integ. times 23 to 24</cd:Description>    
+                  <cd:Description>Mie Integ. times 23 to 24</cd:Description>
                   <cd:BitSize>16</cd:BitSize>
                   <cd:NativeType>uint16</cd:NativeType>
                 </cd:Integer>
               </cd:Field>
               <cd:Field name="CM_16_DEU">
                 <cd:Integer>
-                  <cd:Description>Mie Integ. times 25 ( Bkg )</cd:Description>    
+                  <cd:Description>Mie Integ. times 25 ( Bkg )</cd:Description>
                   <cd:BitSize>16</cd:BitSize>
                   <cd:NativeType>uint16</cd:NativeType>
                 </cd:Integer>
               </cd:Field>
               <cd:Field name="CM_17_DEU">
                 <cd:Integer>
-                  <cd:Description>Ray Integ. times 1 to 2 ( integ 1, integ 2 )</cd:Description>    
+                  <cd:Description>Ray Integ. times 1 to 2 ( integ 1, integ 2 )</cd:Description>
                   <cd:BitSize>16</cd:BitSize>
                   <cd:NativeType>uint16</cd:NativeType>
                 </cd:Integer>
               </cd:Field>
               <cd:Field name="CM_18_DEU">
                 <cd:Integer>
-                  <cd:Description>Ray Integ. times 3 to 4</cd:Description>    
+                  <cd:Description>Ray Integ. times 3 to 4</cd:Description>
                   <cd:BitSize>16</cd:BitSize>
                   <cd:NativeType>uint16</cd:NativeType>
                 </cd:Integer>
               </cd:Field>
               <cd:Field name="CM_19_DEU">
                 <cd:Integer>
-                  <cd:Description>Ray Integ. times 5 to 6</cd:Description>    
+                  <cd:Description>Ray Integ. times 5 to 6</cd:Description>
                   <cd:BitSize>16</cd:BitSize>
                   <cd:NativeType>uint16</cd:NativeType>
                 </cd:Integer>
               </cd:Field>
               <cd:Field name="CM_20_DEU">
                 <cd:Integer>
-                  <cd:Description>Ray Integ. times 7 to 8</cd:Description>    
+                  <cd:Description>Ray Integ. times 7 to 8</cd:Description>
                   <cd:BitSize>16</cd:BitSize>
                   <cd:NativeType>uint16</cd:NativeType>
                 </cd:Integer>
               </cd:Field>
               <cd:Field name="CM_21_DEU">
                 <cd:Integer>
-                  <cd:Description>Ray Integ. times 9 to 10</cd:Description>    
+                  <cd:Description>Ray Integ. times 9 to 10</cd:Description>
                   <cd:BitSize>16</cd:BitSize>
                   <cd:NativeType>uint16</cd:NativeType>
                 </cd:Integer>
               </cd:Field>
               <cd:Field name="CM_22_DEU">
                 <cd:Integer>
-                  <cd:Description>Ray Integ. times 11 to 12</cd:Description>    
+                  <cd:Description>Ray Integ. times 11 to 12</cd:Description>
                   <cd:BitSize>16</cd:BitSize>
                   <cd:NativeType>uint16</cd:NativeType>
                 </cd:Integer>
               </cd:Field>
               <cd:Field name="CM_23_DEU">
                 <cd:Integer>
-                  <cd:Description>Ray Integ. times 13 to 14</cd:Description>    
+                  <cd:Description>Ray Integ. times 13 to 14</cd:Description>
                   <cd:BitSize>16</cd:BitSize>
                   <cd:NativeType>uint16</cd:NativeType>
                 </cd:Integer>
               </cd:Field>
               <cd:Field name="CM_24_DEU">
                 <cd:Integer>
-                  <cd:Description>Ray Integ. times 15 to 16</cd:Description>    
+                  <cd:Description>Ray Integ. times 15 to 16</cd:Description>
                   <cd:BitSize>16</cd:BitSize>
                   <cd:NativeType>uint16</cd:NativeType>
                 </cd:Integer>
               </cd:Field>
               <cd:Field name="CM_25_DEU">
                 <cd:Integer>
-                  <cd:Description>Ray Integ. times 17 to 18</cd:Description>    
+                  <cd:Description>Ray Integ. times 17 to 18</cd:Description>
                   <cd:BitSize>16</cd:BitSize>
                   <cd:NativeType>uint16</cd:NativeType>
                 </cd:Integer>
               </cd:Field>
               <cd:Field name="CM_26_DEU">
                 <cd:Integer>
-                  <cd:Description>Ray Integ. times 19 to 20</cd:Description>    
+                  <cd:Description>Ray Integ. times 19 to 20</cd:Description>
                   <cd:BitSize>16</cd:BitSize>
                   <cd:NativeType>uint16</cd:NativeType>
                 </cd:Integer>
               </cd:Field>
               <cd:Field name="CM_27_DEU">
                 <cd:Integer>
-                  <cd:Description>Ray Integ. times 21 to 22</cd:Description>    
+                  <cd:Description>Ray Integ. times 21 to 22</cd:Description>
                   <cd:BitSize>16</cd:BitSize>
                   <cd:NativeType>uint16</cd:NativeType>
                 </cd:Integer>
@@ -609,20 +609,20 @@
               </cd:Field>
               <cd:Field name="CM_31_DEU">
                 <cd:Integer>
-                  <cd:Description>Td_ray-mie</cd:Description>    
+                  <cd:Description>Td_ray-mie</cd:Description>
                   <cd:BitSize>16</cd:BitSize>
                   <cd:NativeType>uint16</cd:NativeType>
                 </cd:Integer>
               </cd:Field>
               <cd:Field name="CM_32_DEU">
                 <cd:Integer>
-                  <cd:Description>Spare</cd:Description>    
+                  <cd:Description>Spare</cd:Description>
                   <cd:BitSize>16</cd:BitSize>
                   <cd:NativeType>uint16</cd:NativeType>
                 </cd:Integer>
               </cd:Field>
             </cd:Record>
-          </cd:Field>  
+          </cd:Field>
           <cd:Field name="BRC_SYN_Parameters">
             <cd:Record>
               <cd:Description>BRC_SYN Parameters</cd:Description>
@@ -632,56 +632,56 @@
                   <cd:BitSize>16</cd:BitSize>
                   <cd:NativeType>uint16</cd:NativeType>
                 </cd:Integer>
-              </cd:Field>      
+              </cd:Field>
               <cd:Field name="CM_dt1_2">
                 <cd:Integer>
                   <cd:Description>Accurate timing dt1 LSB</cd:Description>
                   <cd:BitSize>16</cd:BitSize>
                   <cd:NativeType>uint16</cd:NativeType>
                 </cd:Integer>
-              </cd:Field>      
+              </cd:Field>
               <cd:Field name="CM_dt2_1">
                 <cd:Integer>
                   <cd:Description>Accurate timing dt2 MSB</cd:Description>
                   <cd:BitSize>16</cd:BitSize>
                   <cd:NativeType>uint16</cd:NativeType>
                 </cd:Integer>
-              </cd:Field>      
+              </cd:Field>
               <cd:Field name="CM_dt2_2">
                 <cd:Integer>
                   <cd:Description>Accurate timing dt2 LSB</cd:Description>
                   <cd:BitSize>16</cd:BitSize>
                   <cd:NativeType>uint16</cd:NativeType>
                 </cd:Integer>
-              </cd:Field>      
+              </cd:Field>
               <cd:Field name="CM_dt3_F1">
                 <cd:Integer>
                   <cd:Description>Accurate timing dt3_Fixed_1 MSB</cd:Description>
                   <cd:BitSize>16</cd:BitSize>
                   <cd:NativeType>uint16</cd:NativeType>
                 </cd:Integer>
-              </cd:Field>      
+              </cd:Field>
               <cd:Field name="CM_dt3_F2">
                 <cd:Integer>
                   <cd:Description>Accurate timing dt3_Fixed_2 LSB</cd:Description>
                   <cd:BitSize>16</cd:BitSize>
                   <cd:NativeType>uint16</cd:NativeType>
                 </cd:Integer>
-              </cd:Field>      
+              </cd:Field>
               <cd:Field name="CM_dt3_V">
                 <cd:Integer>
                   <cd:Description>Accurate timing dt3_Variable</cd:Description>
                   <cd:BitSize>16</cd:BitSize>
                   <cd:NativeType>uint16</cd:NativeType>
                 </cd:Integer>
-              </cd:Field>      
+              </cd:Field>
               <cd:Field name="CM_dt4_1">
                 <cd:Integer>
                   <cd:Description>Accurate timing dt4 MSB</cd:Description>
                   <cd:BitSize>16</cd:BitSize>
                   <cd:NativeType>uint16</cd:NativeType>
                 </cd:Integer>
-              </cd:Field>      
+              </cd:Field>
               <cd:Field name="CM_dt4_2">
                 <cd:Integer>
                   <cd:Description>Accurate timing dt4 LSB</cd:Description>
@@ -702,35 +702,35 @@
                   <cd:BitSize>16</cd:BitSize>
                   <cd:NativeType>uint16</cd:NativeType>
                 </cd:Integer>
-              </cd:Field>      
+              </cd:Field>
               <cd:Field name="CM_Allowed">
                 <cd:Integer>
                   <cd:Description>Synchro Enable (DEU,TXA,LCA,OGSE)</cd:Description>
                   <cd:BitSize>16</cd:BitSize>
                   <cd:NativeType>uint16</cd:NativeType>
                 </cd:Integer>
-              </cd:Field>      
+              </cd:Field>
               <cd:Field name="CM_Burst">
                 <cd:Integer>
                   <cd:Description>Burst Duration (unit: LclkP)</cd:Description>
                   <cd:BitSize>16</cd:BitSize>
                   <cd:NativeType>uint16</cd:NativeType>
                 </cd:Integer>
-              </cd:Field>      
+              </cd:Field>
               <cd:Field name="CM_Lw">
                 <cd:Integer>
                   <cd:Description>Laser Warming Duration (unit: LclkP)</cd:Description>
                   <cd:BitSize>16</cd:BitSize>
                   <cd:NativeType>uint16</cd:NativeType>
                 </cd:Integer>
-              </cd:Field>      
+              </cd:Field>
               <cd:Field name="spare_1">
                 <cd:Integer>
                   <cd:Description>TBD</cd:Description>
                   <cd:BitSize>16</cd:BitSize>
                   <cd:NativeType>uint16</cd:NativeType>
                 </cd:Integer>
-                <cd:Hidden/>    
+                <cd:Hidden/>
               </cd:Field>
             </cd:Record>
           </cd:Field>
@@ -773,15 +773,15 @@
             <cd:Array>
               <cd:Description>67 values of DT3 variable delay parameter (unit: MCLK cycle)</cd:Description>
               <cd:Dimension>67</cd:Dimension>
-              <cd:Integer>          
+              <cd:Integer>
                 <cd:BitSize>16</cd:BitSize>
                 <cd:NativeType>uint16</cd:NativeType>
-              </cd:Integer>            
+              </cd:Integer>
             </cd:Array>
           </cd:Field>
           <cd:Field name="DEU_TM1">
             <cd:Record>
-              <cd:Description>DEU_TM1 Block</cd:Description>    
+              <cd:Description>DEU_TM1 Block</cd:Description>
               <cd:Field name="DEU_Sub_mode_setting">
                 <cd:Integer>
                   <cd:Description>DEU Sub-mode setting</cd:Description>
@@ -1271,7 +1271,7 @@
                   <cd:BitSize>16</cd:BitSize>
                   <cd:NativeType>uint16</cd:NativeType>
                 </cd:Integer>
-                <cd:Hidden/>    
+                <cd:Hidden/>
               </cd:Field>
               <cd:Field name="spare_4">
                 <cd:Integer>
@@ -1279,7 +1279,7 @@
                   <cd:BitSize>16</cd:BitSize>
                   <cd:NativeType>uint16</cd:NativeType>
                 </cd:Integer>
-                <cd:Hidden/>    
+                <cd:Hidden/>
               </cd:Field>
             </cd:Record>
           </cd:Field>
@@ -1287,7 +1287,7 @@
             <cd:Array>
               <cd:Dimension>10</cd:Dimension>
               <cd:Record>
-                <cd:Description>DEU_TM2 Block</cd:Description>        
+                <cd:Description>DEU_TM2 Block</cd:Description>
                 <cd:Field name="DEU_Sub_mode_setting">
                   <cd:Integer>
                     <cd:Description>DEU Sub-mode setting</cd:Description>
@@ -1511,7 +1511,7 @@
                     <cd:BitSize>16</cd:BitSize>
                     <cd:NativeType>uint16</cd:NativeType>
                   </cd:Integer>
-                  <cd:Hidden/>          
+                  <cd:Hidden/>
                 </cd:Field>
                 <cd:Field name="Executed_Command_Counter">
                   <cd:Integer>
@@ -1536,7 +1536,7 @@
                   <cd:Hidden/>
                 </cd:Field>
               </cd:Record>
-            </cd:Array>            
+            </cd:Array>
           </cd:Field>
           <cd:Field name="ACDM_Temperatures">
             <cd:Array>
@@ -1863,15 +1863,15 @@
                     <cd:BitSize>16</cd:BitSize>
                     <cd:NativeType>uint16</cd:NativeType>
                   </cd:Integer>
-                </cd:Field>      
+                </cd:Field>
               </cd:Record>
-            </cd:Array>      
+            </cd:Array>
           </cd:Field>
           <cd:Field name="TLE_TM1">
             <cd:Array>
               <cd:Dimension>10</cd:Dimension>
               <cd:Record>
-                <cd:Description>TLE_TM1 Block</cd:Description>        
+                <cd:Description>TLE_TM1 Block</cd:Description>
                 <cd:Field name="RLH_Frequency">
                   <cd:Integer>
                     <cd:Description>RLH Frequency</cd:Description>
@@ -1891,9 +1891,9 @@
                 </cd:Field>
                 <cd:Field name="TLE_Status">
                   <cd:NamedType id="TLE_Status"/>
-                </cd:Field>                
+                </cd:Field>
                 <cd:Field name="RLH_Status">
-                  <cd:NamedType id="RLH_Status"/>                
+                  <cd:NamedType id="RLH_Status"/>
                 </cd:Field>
                 <cd:Field name="PD_En_MO">
                   <cd:Integer>
@@ -2141,13 +2141,13 @@
                   </cd:Integer>
                 </cd:Field>
               </cd:Record>
-            </cd:Array>      
+            </cd:Array>
           </cd:Field>
           <cd:Field name="TLE_TM2">
             <cd:Array>
               <cd:Dimension>10</cd:Dimension>
               <cd:Record>
-                <cd:Description>TLE_TM2 Block</cd:Description>        
+                <cd:Description>TLE_TM2 Block</cd:Description>
                 <cd:Field name="MO_LD_Power_Supply_Temperature_A">
                   <cd:Integer>
                     <cd:Description>MO LD Power Supply Temperature A</cd:Description>
@@ -2429,8 +2429,8 @@
                   </cd:Integer>
                 </cd:Field>
               </cd:Record>
-            </cd:Array>      
-          </cd:Field> 
+            </cd:Array>
+          </cd:Field>
           <cd:Field name="CS_Frequency_obs">
             <cd:Integer>
               <cd:Description>CS Frequency for this observation</cd:Description>
@@ -2517,71 +2517,71 @@
           </cd:Field>
           <cd:Field name="CF_Frequencies">
             <cd:Array>
-              <cd:Dimension>30</cd:Dimension>      
-              <cd:Description>CF Frequencies</cd:Description>    
+              <cd:Dimension>30</cd:Dimension>
+              <cd:Description>CF Frequencies</cd:Description>
               <cd:Integer>
                 <cd:BitSize>16</cd:BitSize>
                 <cd:NativeType>uint16</cd:NativeType>
               </cd:Integer>
-            </cd:Array>  
-          </cd:Field>      
+            </cd:Array>
+          </cd:Field>
           <cd:Field name="TLE_TM5_1st_6_wds">
             <cd:Array>
               <cd:Dimension>1005</cd:Dimension>
               <cd:Record>
-                <cd:Description>First 6 words of the TLE_TM5 Block</cd:Description>        
+                <cd:Description>First 6 words of the TLE_TM5 Block</cd:Description>
                 <cd:Field name="RLH_Frequency">
                   <cd:Integer>
-                      <cd:Description>RLH_Frequency</cd:Description>
-                      <cd:BitSize>16</cd:BitSize>
-                      <cd:NativeType>uint16</cd:NativeType>
+                    <cd:Description>RLH_Frequency</cd:Description>
+                    <cd:BitSize>16</cd:BitSize>
+                    <cd:NativeType>uint16</cd:NativeType>
                   </cd:Integer>
                 </cd:Field>
                 <cd:Field name="TXA_Status">
-                  <cd:NamedType id="TXA_Status"/>                
+                  <cd:NamedType id="TXA_Status"/>
                 </cd:Field>
                 <cd:Field name="PD_En_UV">
                   <cd:Integer>
-                      <cd:Description>PD_En_UV</cd:Description>
-                      <cd:BitSize>16</cd:BitSize>
-                      <cd:NativeType>uint16</cd:NativeType>
+                    <cd:Description>PD_En_UV</cd:Description>
+                    <cd:BitSize>16</cd:BitSize>
+                    <cd:NativeType>uint16</cd:NativeType>
                   </cd:Integer>
                 </cd:Field>
                 <cd:Field name="TLE_Status">
                   <cd:NamedType id="TLE_Status"/>
-                </cd:Field>                
+                </cd:Field>
                 <cd:Field name="RLH_Status">
                   <cd:NamedType id="RLH_Status"/>
                 </cd:Field>
                 <cd:Field name="PD_En_Amp">
                   <cd:Integer>
-                      <cd:Description>PD_En_Amp</cd:Description>
-                      <cd:BitSize>16</cd:BitSize>
-                      <cd:NativeType>uint16</cd:NativeType>
+                    <cd:Description>PD_En_Amp</cd:Description>
+                    <cd:BitSize>16</cd:BitSize>
+                    <cd:NativeType>uint16</cd:NativeType>
                   </cd:Integer>
                 </cd:Field>
               </cd:Record>
-            </cd:Array>      
-          </cd:Field>   
+            </cd:Array>
+          </cd:Field>
           <cd:Field name="POS_CHOP_status">
             <cd:Raw>
-            <cd:Description>1205 values of POS_CHOP status</cd:Description>    
+              <cd:Description>1205 values of POS_CHOP status</cd:Description>
               <cd:BitSize>1216</cd:BitSize>
             </cd:Raw>
           </cd:Field>
           <cd:Field name="TLE_Sync_FBK">
             <cd:Raw>
-            <cd:Description>1205 values of TLE_Sync_FBK</cd:Description>    
+              <cd:Description>1205 values of TLE_Sync_FBK</cd:Description>
               <cd:BitSize>1216</cd:BitSize>
             </cd:Raw>
-          </cd:Field>      
+          </cd:Field>
           <cd:Field name="spare_2">
             <cd:Raw>
-            <cd:Description>Spare</cd:Description>    
+              <cd:Description>Spare</cd:Description>
               <cd:BitSize>96</cd:BitSize>
             </cd:Raw>
-            <cd:Hidden/>    
-          </cd:Field>        
+            <cd:Hidden/>
+          </cd:Field>
         </cd:Record>
       </cd:Field>
       <cd:Field name="crc">
@@ -2674,28 +2674,28 @@
             <cd:NativeType>int16</cd:NativeType>
           </cd:Integer>
         </cd:Field>
-        <cd:Field name="mie_measurement_data">          
+        <cd:Field name="mie_measurement_data">
           <cd:Array>
             <cd:Description>25 layers x 20 column counts per measurement for the Mie Channel. Background layer is item 1 of 25, columns are OE3,OE4,2,4..,32,CO1,CO2.</cd:Description>
             <cd:Dimension>25</cd:Dimension>
-            <cd:Dimension>20</cd:Dimension>            
+            <cd:Dimension>20</cd:Dimension>
             <cd:Integer>
               <cd:BitSize>16</cd:BitSize>
               <cd:NativeType>uint16</cd:NativeType>
             </cd:Integer>
           </cd:Array>
         </cd:Field>
-        <cd:Field name="rayleigh_measurement_data">          
+        <cd:Field name="rayleigh_measurement_data">
           <cd:Array>
             <cd:Description>25 layers x 20 column counts per measurement for the Rayleigh Channel. Background layer is item 1 of 25, columns are OE3,OE4,2,4..,32,CO1,CO2.</cd:Description>
             <cd:Dimension>25</cd:Dimension>
-            <cd:Dimension>20</cd:Dimension>            
+            <cd:Dimension>20</cd:Dimension>
             <cd:Integer>
               <cd:BitSize>16</cd:BitSize>
               <cd:NativeType>uint16</cd:NativeType>
             </cd:Integer>
           </cd:Array>
-        </cd:Field>          
+        </cd:Field>
         <cd:Field name="crc">
           <cd:Integer>
             <cd:BitSize>16</cd:BitSize>

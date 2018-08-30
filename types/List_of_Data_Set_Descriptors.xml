@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:Record name="List_of_Data_Set_Descriptors" format="xml" namexml="List_of_Data_Set_Descriptors" last-modified="2010-08-26" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" name="List_of_Data_Set_Descriptors" format="xml" namexml="List_of_Data_Set_Descriptors" last-modified="2010-08-26">
   <cd:Description>List of Data Set Descriptors</cd:Description>
   <cd:Attribute name="count">
   </cd:Attribute>

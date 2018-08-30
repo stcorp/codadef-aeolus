@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:ProductDefinition id="ALD_U_N_2A_03_00" format="binary" last-modified="2014-12-08" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+<cd:ProductDefinition xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" id="ALD_U_N_2A_03_00" format="binary" last-modified="2014-12-08">
   <cd:Record format="binary">
     <cd:Description>Level 2A Product</cd:Description>
     <cd:Field name="mph">
@@ -157,7 +157,6 @@
   <cd:ProductVariable name="num_meas_max_brc">
     <cd:Init><![CDATA[$num_meas_max_brc = int(/sph/num_meas_max_brc)]]></cd:Init>
   </cd:ProductVariable>
-
   <!-- MPH Cross File Tests -->
   <ct:NamedCrossFileTest id="MPH_Product"/>
   <ct:NamedCrossFileTest id="MPH_Proc_Stage"/>
@@ -192,7 +191,6 @@
   <ct:NamedCrossFileTest id="MPH_Num_Dsd"/>
   <ct:NamedCrossFileTest id="MPH_Dsd_Size"/>
   <ct:NamedCrossFileTest id="MPH_Num_Data_Sets"/>
-
   <!-- SPH Cross File Tests -->
   <ct:NamedCrossFileTest id="SPH_Sph_Descriptor"/>
   <ct:NamedCrossFileTest id="SPH_Num_BRC"/>
@@ -201,5 +199,4 @@
   <ct:NamedCrossFileTest id="SPH_Intersect_Stop_Lat"/>
   <ct:NamedCrossFileTest id="SPH_Intersect_Stop_Long"/>
   <ct:NamedCrossFileTest id="SPH_Sat_Track"/>
-
 </cd:ProductDefinition>

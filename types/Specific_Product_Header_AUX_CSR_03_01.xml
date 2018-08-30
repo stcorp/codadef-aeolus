@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:Record name="Specific_Product_Header_AUX_CSR_03_01" format="xml" namexml="Specific_Product_Header" last-modified="2015-08-31" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" name="Specific_Product_Header_AUX_CSR_03_01" format="xml" namexml="Specific_Product_Header" last-modified="2015-08-31">
   <cd:Description>Specific Product Header for AUX_CSR products</cd:Description>
   <cd:Field name="Sph_Descriptor">
     <cd:Text namexml="Sph_Descriptor">
@@ -47,10 +47,10 @@
         <cd:NativeType>uint8</cd:NativeType>
         <cd:Mapping string="FALSE" value="0"/>
         <cd:Mapping string="False" value="0"/>
-        <cd:Mapping string="false" value="0"/>                  
+        <cd:Mapping string="false" value="0"/>
         <cd:Mapping string="TRUE" value="1"/>
         <cd:Mapping string="True" value="1"/>
-        <cd:Mapping string="true" value="1"/>                  
+        <cd:Mapping string="true" value="1"/>
         <ct:NamedTest id="BooleanXmlTest"/>
       </cd:Integer>
     </cd:Type>

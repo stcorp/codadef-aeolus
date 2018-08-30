@@ -179,15 +179,15 @@
                       <cd:NativeType>uint8</cd:NativeType>
                       <cd:Mapping string="FALSE" value="0"/>
                       <cd:Mapping string="False" value="0"/>
-                      <cd:Mapping string="false" value="0"/>                  
+                      <cd:Mapping string="false" value="0"/>
                       <cd:Mapping string="TRUE" value="1"/>
                       <cd:Mapping string="True" value="1"/>
-                      <cd:Mapping string="true" value="1"/>                  
+                      <cd:Mapping string="true" value="1"/>
                       <ct:NamedTest id="BooleanXmlTest"/>
                       <ct:NamedTest id="BooleanXmlTrueTest"/>
                     </cd:Integer>
                   </cd:Type>
-                </cd:Field>                
+                </cd:Field>
               </cd:Record>
             </cd:Field>
             <cd:Field name="Channel_2_Energetic_Centroid">
@@ -296,15 +296,15 @@
                       <cd:NativeType>uint8</cd:NativeType>
                       <cd:Mapping string="FALSE" value="0"/>
                       <cd:Mapping string="False" value="0"/>
-                      <cd:Mapping string="false" value="0"/>                  
+                      <cd:Mapping string="false" value="0"/>
                       <cd:Mapping string="TRUE" value="1"/>
                       <cd:Mapping string="True" value="1"/>
-                      <cd:Mapping string="true" value="1"/>                  
+                      <cd:Mapping string="true" value="1"/>
                       <ct:NamedTest id="BooleanXmlTest"/>
                       <ct:NamedTest id="BooleanXmlTrueTest"/>
                     </cd:Integer>
                   </cd:Type>
-                </cd:Field>                
+                </cd:Field>
               </cd:Record>
             </cd:Field>
             <cd:Field name="Imaging_Integration_Time_Valid">
@@ -314,10 +314,10 @@
                   <cd:NativeType>uint8</cd:NativeType>
                   <cd:Mapping string="FALSE" value="0"/>
                   <cd:Mapping string="False" value="0"/>
-                  <cd:Mapping string="false" value="0"/>                  
+                  <cd:Mapping string="false" value="0"/>
                   <cd:Mapping string="TRUE" value="1"/>
                   <cd:Mapping string="True" value="1"/>
-                  <cd:Mapping string="true" value="1"/>                  
+                  <cd:Mapping string="true" value="1"/>
                   <ct:NamedTest id="BooleanXmlTest"/>
                 </cd:Integer>
               </cd:Type>

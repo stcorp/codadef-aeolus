@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:Record name="Main_Product_Header_v1" format="xml" namexml="Main_Product_Header" last-modified="2017-04-12" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" name="Main_Product_Header_v1" format="xml" namexml="Main_Product_Header" last-modified="2017-04-12">
   <cd:Description>Main Product Header</cd:Description>
   <cd:Field name="Product">
     <cd:Text namexml="Product">
@@ -267,10 +267,10 @@
       <cd:Integer format="ascii">
         <cd:Description>Leap second error. 'true' if leap second error occurs during processing segment, 'false' otherwise</cd:Description>
         <cd:NativeType>uint8</cd:NativeType>
-        <cd:Mapping string="FALSE" value="0"/>        
+        <cd:Mapping string="FALSE" value="0"/>
         <cd:Mapping string="False" value="0"/>
         <cd:Mapping string="false" value="0"/>
-        <cd:Mapping string="TRUE" value="1"/>        
+        <cd:Mapping string="TRUE" value="1"/>
         <cd:Mapping string="True" value="1"/>
         <cd:Mapping string="true" value="1"/>
       </cd:Integer>
@@ -286,10 +286,10 @@
       <cd:Integer format="ascii">
         <cd:Description>'true' or 'false'. If 'true', errors have been reported in the product. User should then refer to the SPH or summary quality ADS of the product for details of the error condition</cd:Description>
         <cd:NativeType>uint8</cd:NativeType>
-        <cd:Mapping string="FALSE" value="0"/>        
+        <cd:Mapping string="FALSE" value="0"/>
         <cd:Mapping string="False" value="0"/>
         <cd:Mapping string="false" value="0"/>
-        <cd:Mapping string="TRUE" value="1"/>        
+        <cd:Mapping string="TRUE" value="1"/>
         <cd:Mapping string="True" value="1"/>
         <cd:Mapping string="true" value="1"/>
       </cd:Integer>

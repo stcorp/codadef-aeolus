@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:Record name="Level_0_Processing_Parameters_04_06" format="xml" namexml="Level_0_Processing_Parameters" last-modified="2016-11-29" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" name="Level_0_Processing_Parameters_04_06" format="xml" namexml="Level_0_Processing_Parameters" last-modified="2016-11-29">
   <cd:Description>Level 0 Processing Parameters GADS DSR</cd:Description>
   <cd:Field name="List_of_Data_Set_Records">
     <cd:Record namexml="List_of_Data_Set_Records">
@@ -97,7 +97,7 @@
                     <cd:Attribute name="unit">
                       <cd:Optional/>
                       <cd:FixedValue>%</cd:FixedValue>
-                    </cd:Attribute>                     
+                    </cd:Attribute>
                     <cd:Float format="ascii">
                       <cd:Description>Threshold at which the number of ISPs containing CRC errors is considered significant (in percent)</cd:Description>
                       <cd:Unit>%</cd:Unit>
@@ -113,7 +113,7 @@
                     </cd:Attribute>
                     <cd:Float format="ascii">
                       <cd:Description>Threshold at which number of missing ISPs is considered significant</cd:Description>
-                      <cd:Unit>%</cd:Unit>                      
+                      <cd:Unit>%</cd:Unit>
                       <cd:NativeType>double</cd:NativeType>
                     </cd:Float>
                   </cd:Type>
@@ -123,10 +123,10 @@
                     <cd:Attribute name="unit">
                       <cd:Optional/>
                       <cd:FixedValue>%</cd:FixedValue>
-                    </cd:Attribute>                     
+                    </cd:Attribute>
                     <cd:Float format="ascii">
                       <cd:Description>Threshold at which number of ISPs with Reed Solomon corrections is considered significant</cd:Description>
-                      <cd:Unit>%</cd:Unit>                      
+                      <cd:Unit>%</cd:Unit>
                       <cd:NativeType>double</cd:NativeType>
                     </cd:Float>
                   </cd:Type>
@@ -136,10 +136,10 @@
                     <cd:Attribute name="unit">
                       <cd:Optional/>
                       <cd:FixedValue>%</cd:FixedValue>
-                    </cd:Attribute>                    
+                    </cd:Attribute>
                     <cd:Float format="ascii">
                       <cd:Description>Threshold at which number of ISPs containing Transfer Frame CRC errors is considered significant</cd:Description>
-                      <cd:Unit>%</cd:Unit>                      
+                      <cd:Unit>%</cd:Unit>
                       <cd:NativeType>double</cd:NativeType>
                     </cd:Float>
                   </cd:Type>

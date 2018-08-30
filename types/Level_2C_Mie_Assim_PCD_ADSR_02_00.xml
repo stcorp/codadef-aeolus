@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:Record format="binary" name="Level_2C_Mie_Assim_PCD_ADSR_02_00" last-modified="2014-12-04" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" format="binary" name="Level_2C_Mie_Assim_PCD_ADSR_02_00" last-modified="2014-12-04">
   <cd:Field name="wind_result_id">
     <cd:Integer>
       <cd:Description>unique L2B wind result identification number for this L2C file</cd:Description>

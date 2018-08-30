@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
-<cd:ProductDefinition id="AUX_PAR_HB_02_03" format="xml" last-modified="2017-02-22" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+<cd:ProductDefinition xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" id="AUX_PAR_HB_02_03" format="xml" last-modified="2017-02-22">
   <cd:Record format="xml">
     <cd:Field name="Earth_Explorer_File">
       <cd:Record namexml="Earth_Explorer_File">
         <cd:Attribute name="schemaversion"/>
-         <cd:Description>Earth Explorer File</cd:Description>
+        <cd:Description>Earth Explorer File</cd:Description>
         <cd:Field name="Earth_Explorer_Header">
           <cd:Record namexml="Earth_Explorer_Header">
             <cd:Description>Earth Explorer Header File</cd:Description>
@@ -30,7 +30,7 @@
             <cd:Attribute name="type">
               <cd:Optional/>
               <cd:FixedValue>xml</cd:FixedValue>
-            </cd:Attribute>                          
+            </cd:Attribute>
             <cd:Field name="HBE_Params">
               <cd:Record namexml="HBE_Params">
                 <cd:Field name="List_of_Data_Set_Records">
@@ -61,7 +61,7 @@
                                 <cd:NativeType>double</cd:NativeType>
                               </cd:Float>
                             </cd:Type>
-                          </cd:Field>                          
+                          </cd:Field>
                           <cd:Field name="Mie_Min_Pole_Latitude">
                             <cd:Type namexml="Mie_Min_Pole_Latitude">
                               <cd:Attribute name="unit">
@@ -101,13 +101,13 @@
                               <cd:Integer format="ascii">
                                 <cd:Description>Flag set to true to ignore Mie measurement above sea, otherwise set to false</cd:Description>
                                 <cd:NativeType>uint8</cd:NativeType>
-                                <cd:Mapping string="FALSE" value="0"/>                                
+                                <cd:Mapping string="FALSE" value="0"/>
                                 <cd:Mapping string="False" value="0"/>
                                 <cd:Mapping string="false" value="0"/>
                                 <cd:Mapping string="TRUE" value="1"/>
                                 <cd:Mapping string="True" value="1"/>
                                 <cd:Mapping string="true" value="1"/>
-                                <ct:NamedTest id="BooleanBinTest" />
+                                <ct:NamedTest id="BooleanBinTest"/>
                               </cd:Integer>
                             </cd:Type>
                           </cd:Field>
@@ -116,13 +116,13 @@
                               <cd:Integer format="ascii">
                                 <cd:Description>Flag set to true to ignore Rayleigh measurement above sea, otherwise set to false</cd:Description>
                                 <cd:NativeType>uint8</cd:NativeType>
-                                <cd:Mapping string="FALSE" value="0"/>                                                                
+                                <cd:Mapping string="FALSE" value="0"/>
                                 <cd:Mapping string="False" value="0"/>
                                 <cd:Mapping string="false" value="0"/>
-                                <cd:Mapping string="TRUE" value="1"/>                                
+                                <cd:Mapping string="TRUE" value="1"/>
                                 <cd:Mapping string="True" value="1"/>
                                 <cd:Mapping string="true" value="1"/>
-                                <ct:NamedTest id="BooleanBinTest" />
+                                <ct:NamedTest id="BooleanBinTest"/>
                               </cd:Integer>
                             </cd:Type>
                           </cd:Field>
@@ -134,13 +134,13 @@
                                 <cd:Mapping string="FALSE" value="0"/>
                                 <cd:Mapping string="False" value="0"/>
                                 <cd:Mapping string="false" value="0"/>
-                                <cd:Mapping string="TRUE" value="1"/>                                
+                                <cd:Mapping string="TRUE" value="1"/>
                                 <cd:Mapping string="True" value="1"/>
                                 <cd:Mapping string="true" value="1"/>
-                                <ct:NamedTest id="BooleanBinTest" />
+                                <ct:NamedTest id="BooleanBinTest"/>
                               </cd:Integer>
                             </cd:Type>
-                          </cd:Field>                          
+                          </cd:Field>
                           <cd:Field name="Mie_Min_Range">
                             <cd:Type namexml="Mie_Min_Range">
                               <cd:Attribute name="unit">
@@ -172,16 +172,16 @@
                               <cd:Integer format="ascii">
                                 <cd:Description>Flag set to true to check the calculated range against Rayleigh_Min_Range and Rayleigh_Max_Range otherwise set to false</cd:Description>
                                 <cd:NativeType>uint8</cd:NativeType>
-                                <cd:Mapping string="FALSE" value="0"/>                                                                
+                                <cd:Mapping string="FALSE" value="0"/>
                                 <cd:Mapping string="False" value="0"/>
                                 <cd:Mapping string="false" value="0"/>
-                                <cd:Mapping string="TRUE" value="1"/>                                
+                                <cd:Mapping string="TRUE" value="1"/>
                                 <cd:Mapping string="True" value="1"/>
                                 <cd:Mapping string="true" value="1"/>
-                                <ct:NamedTest id="BooleanBinTest" />
+                                <ct:NamedTest id="BooleanBinTest"/>
                               </cd:Integer>
                             </cd:Type>
-                          </cd:Field>                          
+                          </cd:Field>
                           <cd:Field name="Rayleigh_Min_Range">
                             <cd:Type namexml="Rayleigh_Min_Range">
                               <cd:Attribute name="unit">
@@ -213,13 +213,13 @@
                               <cd:Integer format="ascii">
                                 <cd:Description>Flag set to true to remove Mie outliers, otherwise set to false</cd:Description>
                                 <cd:NativeType>uint8</cd:NativeType>
-                                <cd:Mapping string="FALSE" value="0"/>                                
+                                <cd:Mapping string="FALSE" value="0"/>
                                 <cd:Mapping string="False" value="0"/>
                                 <cd:Mapping string="false" value="0"/>
-                                <cd:Mapping string="TRUE" value="1"/>                                
+                                <cd:Mapping string="TRUE" value="1"/>
                                 <cd:Mapping string="True" value="1"/>
                                 <cd:Mapping string="true" value="1"/>
-                                <ct:NamedTest id="BooleanBinTest" />
+                                <ct:NamedTest id="BooleanBinTest"/>
                               </cd:Integer>
                             </cd:Type>
                           </cd:Field>
@@ -253,28 +253,28 @@
                               <cd:Integer format="ascii">
                                 <cd:Description>Flag set to true to correct for RDB, otherwise set to false</cd:Description>
                                 <cd:NativeType>uint8</cd:NativeType>
-                                <cd:Mapping string="FALSE" value="0"/>                                
+                                <cd:Mapping string="FALSE" value="0"/>
                                 <cd:Mapping string="False" value="0"/>
                                 <cd:Mapping string="false" value="0"/>
                                 <cd:Mapping string="TRUE" value="1"/>
                                 <cd:Mapping string="True" value="1"/>
                                 <cd:Mapping string="true" value="1"/>
-                                <ct:NamedTest id="BooleanBinTest" />
+                                <ct:NamedTest id="BooleanBinTest"/>
                               </cd:Integer>
                             </cd:Type>
-                          </cd:Field>                          
+                          </cd:Field>
                           <cd:Field name="Rayleigh_Remove_Outlier">
                             <cd:Type namexml="Rayleigh_Remove_Outlier">
                               <cd:Integer format="ascii">
                                 <cd:Description>Flag set to true to remove Rayleigh outliers, otherwise set to false</cd:Description>
                                 <cd:NativeType>uint8</cd:NativeType>
-                                <cd:Mapping string="FALSE" value="0"/>                                
+                                <cd:Mapping string="FALSE" value="0"/>
                                 <cd:Mapping string="False" value="0"/>
                                 <cd:Mapping string="false" value="0"/>
-                                <cd:Mapping string="TRUE" value="1"/>                                
+                                <cd:Mapping string="TRUE" value="1"/>
                                 <cd:Mapping string="True" value="1"/>
                                 <cd:Mapping string="true" value="1"/>
-                                <ct:NamedTest id="BooleanBinTest" />
+                                <ct:NamedTest id="BooleanBinTest"/>
                               </cd:Integer>
                             </cd:Type>
                           </cd:Field>
@@ -301,24 +301,24 @@
                                 <cd:NativeType>double</cd:NativeType>
                               </cd:Float>
                             </cd:Type>
-                          </cd:Field>                          
+                          </cd:Field>
                           <cd:Field name="Rayleigh_Correct_for_RDB">
                             <cd:Optional/>
                             <cd:Type namexml="Rayleigh_Correct_for_RDB">
                               <cd:Integer format="ascii">
                                 <cd:Description>Flag set to true to correct for RDB, otherwise set to false</cd:Description>
                                 <cd:NativeType>uint8</cd:NativeType>
-                                <cd:Mapping string="FALSE" value="0"/>                                
+                                <cd:Mapping string="FALSE" value="0"/>
                                 <cd:Mapping string="False" value="0"/>
                                 <cd:Mapping string="false" value="0"/>
                                 <cd:Mapping string="TRUE" value="1"/>
                                 <cd:Mapping string="True" value="1"/>
                                 <cd:Mapping string="true" value="1"/>
-                                <ct:NamedTest id="BooleanBinTest" />
+                                <ct:NamedTest id="BooleanBinTest"/>
                               </cd:Integer>
                             </cd:Type>
-                          </cd:Field>                          
-                        </cd:Record>                          
+                          </cd:Field>
+                        </cd:Record>
                         <ct:NamedTest id="ValueOfCountAttributeForParent"/>
                       </cd:Array>
                     </cd:Field>

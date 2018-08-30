@@ -203,7 +203,7 @@
       <cd:BitSize>32</cd:BitSize>
       <cd:NativeType>uint32</cd:NativeType>
     </cd:Integer>
-  </cd:Field>  
+  </cd:Field>
   <cd:Field name="downhill_simplex_on">
     <cd:Integer>
       <cd:Description>Flag showing if the downhill simplex is on or off. If it is off (FALSE) a method using least squares minimization is used instead of DownHill Simplex</cd:Description>

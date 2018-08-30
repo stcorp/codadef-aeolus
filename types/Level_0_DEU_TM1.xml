@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="binary" last-modified="2017-06-20" name="Level_0_DEU_TM1">
-  <cd:Description>DEU_TM1 Block</cd:Description>    
+  <cd:Description>DEU_TM1 Block</cd:Description>
   <cd:Field name="DEU_Sub_mode_setting">
     <cd:Integer>
       <cd:Description>DEU Sub-mode setting</cd:Description>
@@ -490,7 +490,7 @@
       <cd:BitSize>16</cd:BitSize>
       <cd:NativeType>uint16</cd:NativeType>
     </cd:Integer>
-    <cd:Hidden/>    
+    <cd:Hidden/>
   </cd:Field>
   <cd:Field name="spare_4">
     <cd:Integer>
@@ -498,7 +498,6 @@
       <cd:BitSize>16</cd:BitSize>
       <cd:NativeType>uint16</cd:NativeType>
     </cd:Integer>
-    <cd:Hidden/>    
+    <cd:Hidden/>
   </cd:Field>
 </cd:Record>
-  
