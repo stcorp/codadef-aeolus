@@ -1,0 +1,1147 @@
+<?xml version="1.0"?>
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" format="ascii" name="Level_2C_SPH_03_00" last-modified="2018-09-05">
+  <cd:Field name="sph_descriptor_title">
+    <cd:Text>
+      <cd:Description>SPH_DESCRIPTOR=</cd:Description>
+      <cd:FixedValue>SPH_DESCRIPTOR=</cd:FixedValue>
+      <cd:ByteSize>15</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="quote_1">
+    <cd:Text>
+      <cd:Description>quotation mark</cd:Description>
+      <cd:FixedValue>"</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="sph_descriptor">
+    <cd:Text>
+      <cd:Description>"AEOLUS_L2C_SPECIFIC_HEADER" (SPH descriptor ASCII string describing the product.)</cd:Description>
+      <cd:FixedValue>AEOLUS_L2C_SPECIFIC_HEADER  </cd:FixedValue>
+      <cd:ByteSize>28</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="quote_2">
+    <cd:Text>
+      <cd:Description>quotation mark</cd:Description>
+      <cd:FixedValue>"</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="newline_char_1">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="spare_1">
+    <cd:Text>
+      <cd:Description>Spare</cd:Description>
+      <cd:ByteSize>40</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="newline_char_2">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="NumMeasurements_title">
+    <cd:Text>
+      <cd:Description>NUMMEASUREMENTS=</cd:Description>
+      <cd:FixedValue>NUMMEASUREMENTS=</cd:FixedValue>
+      <cd:ByteSize>16</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="NumMeasurements">
+    <cd:Integer>
+      <cd:Description>Number of L1B measurements used in the product</cd:Description>
+      <cd:ByteSize>11</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_char_3">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="NumMieGroups_title">
+    <cd:Text>
+      <cd:Description>NUMMIEGROUPS=</cd:Description>
+      <cd:FixedValue>NUMMIEGROUPS=</cd:FixedValue>
+      <cd:ByteSize>13</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="NumMieGroups">
+    <cd:Integer>
+      <cd:Description>Number of measurement groups generated for the Mie channel</cd:Description>
+      <cd:ByteSize>6</cd:ByteSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_char_4">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="NumRayleighGroups_title">
+    <cd:Text>
+      <cd:Description>NUMRAYLEIGHGROUPS=</cd:Description>
+      <cd:FixedValue>NUMRAYLEIGHGROUPS=</cd:FixedValue>
+      <cd:ByteSize>18</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="NumRayleighGroups">
+    <cd:Integer>
+      <cd:Description>Number of measurement groups generated for the Rayleigh channel</cd:Description>
+      <cd:ByteSize>6</cd:ByteSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_char_5">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="NumMieWindResults_title">
+    <cd:Text>
+      <cd:Description>NUMMIEWINDRESULTS=</cd:Description>
+      <cd:FixedValue>NUMMIEWINDRESULTS=</cd:FixedValue>
+      <cd:ByteSize>18</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="NumMieWindResults">
+    <cd:Integer>
+      <cd:Description>Number of Mie channel wind retrievals performed on accumulated measurement data</cd:Description>
+      <cd:ByteSize>11</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_char_6">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="NumRayleighWindResults_title">
+    <cd:Text>
+      <cd:Description>NUMRAYLEIGHWINDRESULTS=</cd:Description>
+      <cd:FixedValue>NUMRAYLEIGHWINDRESULTS=</cd:FixedValue>
+      <cd:ByteSize>23</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="NumRayleighWindResults">
+    <cd:Integer>
+      <cd:Description>Number of Rayleigh channel wind retrievals performed on accumulated measurement data</cd:Description>
+      <cd:ByteSize>11</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_char_7">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="NumMieProfiles_title">
+    <cd:Text>
+      <cd:Description>NUMMIEPROFILES=</cd:Description>
+      <cd:FixedValue>NUMMIEPROFILES=</cd:FixedValue>
+      <cd:ByteSize>15</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="NumMieProfiles">
+    <cd:Integer>
+      <cd:Description>Number of Mie channel wind profiles generated from the individual wind retrievals</cd:Description>
+      <cd:ByteSize>6</cd:ByteSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_char_8">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="NumRayleighProfiles_title">
+    <cd:Text>
+      <cd:Description>NUMRAYLEIGHPROFILES=</cd:Description>
+      <cd:FixedValue>NUMRAYLEIGHPROFILES=</cd:FixedValue>
+      <cd:ByteSize>20</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="NumRayleighProfiles">
+    <cd:Integer>
+      <cd:Description>Number of Rayleigh channel wind profiles generated from the individual wind retrievals</cd:Description>
+      <cd:ByteSize>6</cd:ByteSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_char_9">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="NumAMDprofiles_title">
+    <cd:Text>
+      <cd:Description>NUMAMDPROFILES=</cd:Description>
+      <cd:FixedValue>NUMAMDPROFILES=</cd:FixedValue>
+      <cd:ByteSize>15</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="NumAMDprofiles">
+    <cd:Integer>
+      <cd:Description>Number of AMD profiles presented to the L2B processing stage</cd:Description>
+      <cd:ByteSize>6</cd:ByteSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_char_10">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="intersect_start_lat_title">
+    <cd:Text>
+      <cd:Description>INTERSECT_START_LAT=</cd:Description>
+      <cd:FixedValue>INTERSECT_START_LAT=</cd:FixedValue>
+      <cd:ByteSize>20</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="intersect_start_lat">
+    <cd:Integer>
+      <cd:Description>Latitude of the intersection of WGS84 DEM and the satellite line-of-sight for the first measurement (first measurement centroid time of the first BRC)</cd:Description>
+      <cd:Unit>1e-6 degrees_north</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+        <cd:Unit>degrees_north</cd:Unit>
+      </cd:Conversion>
+      <cd:ByteSize>11</cd:ByteSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="intersect_start_lat_units">
+    <cd:Text>
+      <cd:FixedValue>\07410-6DegN\076</cd:FixedValue>
+      <cd:ByteSize>10</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="newline_char_11">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="intersect_start_long_title">
+    <cd:Text>
+      <cd:Description>INTERSECT_START_LONG=</cd:Description>
+      <cd:FixedValue>INTERSECT_START_LONG=</cd:FixedValue>
+      <cd:ByteSize>21</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="intersect_start_long">
+    <cd:Integer>
+      <cd:Description>Latitude of the intersection of WGS84 DEM and the satellite line-of-sight for the first measurement (first measurement centroid time of the first BRC)</cd:Description>
+      <cd:Unit>1e-6 degrees_east</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+        <cd:Unit>degrees_east</cd:Unit>
+      </cd:Conversion>
+      <cd:ByteSize>11</cd:ByteSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="intersect_start_long_units">
+    <cd:Text>
+      <cd:FixedValue>\07410-6DegE\076</cd:FixedValue>
+      <cd:ByteSize>10</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="newline_char_12">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="intersect_stop_lat_title">
+    <cd:Text>
+      <cd:Description>INTERSECT_STOP_LAT=</cd:Description>
+      <cd:FixedValue>INTERSECT_STOP_LAT=</cd:FixedValue>
+      <cd:ByteSize>19</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="intersect_stop_lat">
+    <cd:Integer>
+      <cd:Description>Latitude of the intersection of WGS84 DEM and the satellite line-of-sight for the last measurement (last measurement centroid time of the last BRC)</cd:Description>
+      <cd:Unit>1e-6 degrees_north</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+        <cd:Unit>degrees_north</cd:Unit>
+      </cd:Conversion>
+      <cd:ByteSize>11</cd:ByteSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="intersect_stop_lat_units">
+    <cd:Text>
+      <cd:FixedValue>\07410-6DegN\076</cd:FixedValue>
+      <cd:ByteSize>10</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="newline_char_13">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="intersect_stop_long_title">
+    <cd:Text>
+      <cd:Description>INTERSECT_STOP_LONG=</cd:Description>
+      <cd:FixedValue>INTERSECT_STOP_LONG=</cd:FixedValue>
+      <cd:ByteSize>20</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="intersect_stop_long">
+    <cd:Integer>
+      <cd:Description>Latitude of the intersection of WGS84 DEM and the satellite line-of-sight for the last measurement (last measurement centroid time of the last BRC)</cd:Description>
+      <cd:Unit>1e-6 degrees_east</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+        <cd:Unit>degrees_east</cd:Unit>
+      </cd:Conversion>
+      <cd:ByteSize>11</cd:ByteSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="stop_long_units">
+    <cd:Text>
+      <cd:FixedValue>\07410-6DegE\076</cd:FixedValue>
+      <cd:ByteSize>10</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="newline_char_14">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="sat_track_title">
+    <cd:Text>
+      <cd:Description>SAT_TRACK=</cd:Description>
+      <cd:FixedValue>SAT_TRACK=</cd:FixedValue>
+      <cd:ByteSize>10</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="sat_track">
+    <cd:Float>
+      <cd:Description>Sub-satellite track heading at the Sensing Start time in the MPH</cd:Description>
+      <cd:Unit>degrees</cd:Unit>
+      <cd:ByteSize>11</cd:ByteSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="sat_track_units">
+    <cd:Text>
+      <cd:FixedValue>\074deg\076</cd:FixedValue>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="newline_char_15">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="spare_2">
+    <cd:Text>
+      <cd:Description>Spare</cd:Description>
+      <cd:ByteSize>40</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="newline_char_16">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="Num_Valid_Clear_Mie_Profiles_title">
+    <cd:Text>
+      <cd:Description>NUM_VALID_CLEAR_MIE_PROFILES=</cd:Description>
+      <cd:FixedValue>NUM_VALID_CLEAR_MIE_PROFILES=</cd:FixedValue>
+      <cd:ByteSize>29</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="Num_Valid_Clear_Mie_Profiles">
+    <cd:Integer>
+      <cd:Description>number of profiles holding at least one valid clear Mie wind retrieval results</cd:Description>
+      <cd:ByteSize>6</cd:ByteSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_char_17">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="Num_Valid_Clear_Rayleigh_Prof_title">
+    <cd:Text>
+      <cd:Description>NUM_VALID_CLEAR_RAYLEIGH_PROF=</cd:Description>
+      <cd:FixedValue>NUM_VALID_CLEAR_RAYLEIGH_PROF=</cd:FixedValue>
+      <cd:ByteSize>30</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="Num_Valid_Clear_Rayleigh_Prof">
+    <cd:Integer>
+      <cd:Description>number of profiles holding at least one valid clear Mie wind retrieval results</cd:Description>
+      <cd:ByteSize>6</cd:ByteSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_char_18">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="Num_Valid_Cloud_Mie_Profiles_title">
+    <cd:Text>
+      <cd:Description>NUM_VALID_CLOUD_MIE_PROFILES=</cd:Description>
+      <cd:FixedValue>NUM_VALID_CLOUD_MIE_PROFILES=</cd:FixedValue>
+      <cd:ByteSize>29</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="Num_Valid_Cloud_Mie_Profiles">
+    <cd:Integer>
+      <cd:Description>number of profiles holding at least one valid cloud Mie wind retrieval results</cd:Description>
+      <cd:ByteSize>6</cd:ByteSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_char_19">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="Num_Valid_Cloud_Rayleigh_Prof_title">
+    <cd:Text>
+      <cd:Description>NUM_VALID_CLOUD_RAYLEIGH_PROF=</cd:Description>
+      <cd:FixedValue>NUM_VALID_CLOUD_RAYLEIGH_PROF=</cd:FixedValue>
+      <cd:ByteSize>30</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="Num_Valid_Cloud_Rayleigh_Prof">
+    <cd:Integer>
+      <cd:Description>number of profiles holding at least one valid cloud Rayleigh wind retrieval results</cd:Description>
+      <cd:ByteSize>6</cd:ByteSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_char_20">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="Num_Invalid_Clear_Mie_Profiles_title">
+    <cd:Text>
+      <cd:Description>NUM_INVALID_CLEAR_MIE_PROFILES=</cd:Description>
+      <cd:FixedValue>NUM_INVALID_CLEAR_MIE_PROFILES=</cd:FixedValue>
+      <cd:ByteSize>31</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="Num_Invalid_Clear_Mie_Profiles">
+    <cd:Integer>
+      <cd:Description>number of profiles holding only invalid clear Mie wind retrieval results</cd:Description>
+      <cd:ByteSize>6</cd:ByteSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_char_21">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="Num_Invalid_Clear_Rayleigh_Prof_title">
+    <cd:Text>
+      <cd:Description>NUM_INVALID_CLEAR_RAYLEIGH_PROF=</cd:Description>
+      <cd:FixedValue>NUM_INVALID_CLEAR_RAYLEIGH_PROF=</cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="Num_Invalid_Clear_Rayleigh_Prof">
+    <cd:Integer>
+      <cd:Description>number of profiles holding only invalid clear Mie wind retrieval results</cd:Description>
+      <cd:ByteSize>6</cd:ByteSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_char_22">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="Num_Invalid_Cloud_Mie_Profiles_title">
+    <cd:Text>
+      <cd:Description>NUM_INVALID_CLOUD_MIE_PROFILES=</cd:Description>
+      <cd:FixedValue>NUM_INVALID_CLOUD_MIE_PROFILES=</cd:FixedValue>
+      <cd:ByteSize>31</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="Num_Invalid_Cloud_Mie_Profiles">
+    <cd:Integer>
+      <cd:Description>number of profiles holding only invalid cloud Mie wind retrieval results</cd:Description>
+      <cd:ByteSize>6</cd:ByteSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_char_23">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="Num_Invalid_Cloud_Rayleigh_Prof_title">
+    <cd:Text>
+      <cd:Description>NUM_INVALID_CLOUD_RAYLEIGH_PROF=</cd:Description>
+      <cd:FixedValue>NUM_INVALID_CLOUD_RAYLEIGH_PROF=</cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="Num_Invalid_Cloud_Rayleigh_Prof">
+    <cd:Integer>
+      <cd:Description>number of profiles holding only invalid cloud Rayleigh wind retrieval results</cd:Description>
+      <cd:ByteSize>6</cd:ByteSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_char_24">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="Num_Profiles_Surface_Mie_title">
+    <cd:Text>
+      <cd:Description>NUM_PROFILES_SURFACE_MIE=</cd:Description>
+      <cd:FixedValue>NUM_PROFILES_SURFACE_MIE=</cd:FixedValue>
+      <cd:ByteSize>25</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="Num_Profiles_Surface_Mie">
+    <cd:Integer>
+      <cd:Description>Number of Mie profiles reported in L2B extending down to the surface</cd:Description>
+      <cd:ByteSize>6</cd:ByteSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_char_25">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="Num_Profiles_Surface_Ray_title">
+    <cd:Text>
+      <cd:Description>NUM_PROFILES_SURFACE_RAY=</cd:Description>
+      <cd:FixedValue>NUM_PROFILES_SURFACE_RAY=</cd:FixedValue>
+      <cd:ByteSize>25</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="Num_Profiles_Surface_Ray">
+    <cd:Integer>
+      <cd:Description>Number of Rayleigh profiles reported in L2B extending down to the surface</cd:Description>
+      <cd:ByteSize>6</cd:ByteSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_char_26">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="Num_Valid_Clear_Winds_L2B_Mie_title">
+    <cd:Text>
+      <cd:Description>NUM_VALID_CLEAR_WINDS_L2B_MIE=</cd:Description>
+      <cd:FixedValue>NUM_VALID_CLEAR_WINDS_L2B_MIE=</cd:FixedValue>
+      <cd:ByteSize>30</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="Num_Valid_Clear_Winds_L2B_Mie">
+    <cd:Integer>
+      <cd:Description>Number of valid clear Mie wind retrievals</cd:Description>
+      <cd:ByteSize>11</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_char_27">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="Num_Valid_Clear_Winds_L2B_Ray_title">
+    <cd:Text>
+      <cd:Description>NUM_VALID_CLEAR_WINDS_L2B_RAY=</cd:Description>
+      <cd:FixedValue>NUM_VALID_CLEAR_WINDS_L2B_RAY=</cd:FixedValue>
+      <cd:ByteSize>30</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="Num_Valid_Clear_Winds_L2B_Ray">
+    <cd:Integer>
+      <cd:Description>Number of valid clear Ray wind retrievals</cd:Description>
+      <cd:ByteSize>11</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_char_28">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="Num_Valid_Cloud_Winds_L2B_Mie_title">
+    <cd:Text>
+      <cd:Description>NUM_VALID_CLOUD_WINDS_L2B_MIE=</cd:Description>
+      <cd:FixedValue>NUM_VALID_CLOUD_WINDS_L2B_MIE=</cd:FixedValue>
+      <cd:ByteSize>30</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="Num_Valid_Cloud_Winds_L2B_Mie">
+    <cd:Integer>
+      <cd:Description>Number of valid cloud Mie wind retrievals</cd:Description>
+      <cd:ByteSize>11</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_char_29">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="Num_Valid_Cloud_Winds_L2B_Ray_title">
+    <cd:Text>
+      <cd:Description>NUM_VALID_CLOUD_WINDS_L2B_RAY=</cd:Description>
+      <cd:FixedValue>NUM_VALID_CLOUD_WINDS_L2B_RAY=</cd:FixedValue>
+      <cd:ByteSize>30</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="Num_Valid_Cloud_Winds_L2B_Ray">
+    <cd:Integer>
+      <cd:Description>Number of valid cloud Ray wind retrievals</cd:Description>
+      <cd:ByteSize>11</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_char_30">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="Num_Invalid_Clear_Winds_L2B_Mie_title">
+    <cd:Text>
+      <cd:Description>NUM_INVALID_CLEAR_WINDS_L2B_MIE=</cd:Description>
+      <cd:FixedValue>NUM_INVALID_CLEAR_WINDS_L2B_MIE=</cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="Num_Invalid_Clear_Winds_L2B_Mie">
+    <cd:Integer>
+      <cd:Description>Number of invalid clear Mie wind retrievals</cd:Description>
+      <cd:ByteSize>11</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_char_31">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="Num_Invalid_Clear_Winds_L2B_Ray_title">
+    <cd:Text>
+      <cd:Description>NUM_INVALID_CLEAR_WINDS_L2B_RAY=</cd:Description>
+      <cd:FixedValue>NUM_INVALID_CLEAR_WINDS_L2B_RAY=</cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="Num_Invalid_Clear_Winds_L2B_Ray">
+    <cd:Integer>
+      <cd:Description>Number of invalid clear Ray wind retrievals</cd:Description>
+      <cd:ByteSize>11</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_char_32">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="Num_Invalid_Cloud_Winds_L2B_Mie_title">
+    <cd:Text>
+      <cd:Description>NUM_INVALID_CLOUD_WINDS_L2B_MIE=</cd:Description>
+      <cd:FixedValue>NUM_INVALID_CLOUD_WINDS_L2B_MIE=</cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="Num_Invalid_Cloud_Winds_L2B_Mie">
+    <cd:Integer>
+      <cd:Description>Number of invalid cloud Mie wind retrievals</cd:Description>
+      <cd:ByteSize>11</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_char_33">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="Num_Invalid_Cloud_Winds_L2B_Ray_title">
+    <cd:Text>
+      <cd:Description>NUM_INVALID_CLOUD_WINDS_L2B_RAY=</cd:Description>
+      <cd:FixedValue>NUM_INVALID_CLOUD_WINDS_L2B_RAY=</cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="Num_Invalid_Cloud_Winds_L2B_Ray">
+    <cd:Integer>
+      <cd:Description>Number of invalid cloud Ray wind retrievals</cd:Description>
+      <cd:ByteSize>11</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_char_34">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="spare_3">
+    <cd:Text>
+      <cd:Description>Spare</cd:Description>
+      <cd:ByteSize>40</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="newline_char_35">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="Num_Valid_Clear_Winds_L2C_Mie_title">
+    <cd:Text>
+      <cd:Description>NUM_VALID_CLEAR_WINDS_L2C_MIE=</cd:Description>
+      <cd:FixedValue>NUM_VALID_CLEAR_WINDS_L2C_MIE=</cd:FixedValue>
+      <cd:ByteSize>30</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="Num_Valid_Clear_Winds_L2C_Mie">
+    <cd:Integer>
+      <cd:Description>Number of valid clear assimilated Mie wind retrievals (only present in L2C products)</cd:Description>
+      <cd:ByteSize>11</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_char_36">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="Num_Valid_Clear_Winds_L2C_Ray_title">
+    <cd:Text>
+      <cd:Description>NUM_VALID_CLEAR_WINDS_L2C_RAY=</cd:Description>
+      <cd:FixedValue>NUM_VALID_CLEAR_WINDS_L2C_RAY=</cd:FixedValue>
+      <cd:ByteSize>30</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="Num_Valid_Clear_Winds_L2C_Ray">
+    <cd:Integer>
+      <cd:Description>Number of valid clear assimilated Rayleigh wind retrievals (only present in L2C products)</cd:Description>
+      <cd:ByteSize>11</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_char_37">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="Num_Valid_Cloud_Winds_L2C_Mie_title">
+    <cd:Text>
+      <cd:Description>NUM_VALID_CLOUD_WINDS_L2C_MIE=</cd:Description>
+      <cd:FixedValue>NUM_VALID_CLOUD_WINDS_L2C_MIE=</cd:FixedValue>
+      <cd:ByteSize>30</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="Num_Valid_Cloud_Winds_L2C_Mie">
+    <cd:Integer>
+      <cd:Description>Number of valid cloud assimilated Mie wind retrievals (only present in L2C products)</cd:Description>
+      <cd:ByteSize>11</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_char_38">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="Num_Valid_Cloud_Winds_L2C_Ray_title">
+    <cd:Text>
+      <cd:Description>NUM_VALID_CLOUD_WINDS_L2C_RAY=</cd:Description>
+      <cd:FixedValue>NUM_VALID_CLOUD_WINDS_L2C_RAY=</cd:FixedValue>
+      <cd:ByteSize>30</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="Num_Valid_Cloud_Winds_L2C_Ray">
+    <cd:Integer>
+      <cd:Description>Number of valid cloud assimilated Rayleigh wind retrievals (only present in L2C products)</cd:Description>
+      <cd:ByteSize>11</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_char_39">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="Num_Invalid_Clear_Winds_L2C_Mie_title">
+    <cd:Text>
+      <cd:Description>NUM_INVALID_CLEAR_WINDS_L2C_MIE=</cd:Description>
+      <cd:FixedValue>NUM_INVALID_CLEAR_WINDS_L2C_MIE=</cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="Num_Invalid_Clear_Winds_L2C_Mie">
+    <cd:Integer>
+      <cd:Description>Number of invalid clear assimilated Mie wind retrievals (only present in L2C products)</cd:Description>
+      <cd:ByteSize>11</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_char_40">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="Num_Invalid_Clear_Winds_L2C_Ray_title">
+    <cd:Text>
+      <cd:Description>NUM_INVALID_CLEAR_WINDS_L2C_RAY=</cd:Description>
+      <cd:FixedValue>NUM_INVALID_CLEAR_WINDS_L2C_RAY=</cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="Num_Invalid_Clear_Winds_L2C_Ray">
+    <cd:Integer>
+      <cd:Description>Number of invalid clear assimilated Rayleigh wind retrievals (only present in L2C products)</cd:Description>
+      <cd:ByteSize>11</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_char_41">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="Num_Invalid_Cloud_Winds_L2C_Mie_title">
+    <cd:Text>
+      <cd:Description>NUM_INVALID_CLOUD_WINDS_L2C_MIE=</cd:Description>
+      <cd:FixedValue>NUM_INVALID_CLOUD_WINDS_L2C_MIE=</cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="Num_Invalid_Cloud_Winds_L2C_Mie">
+    <cd:Integer>
+      <cd:Description>Number of invalid cloud assimilated Mie wind retrievals (only present in L2C products)</cd:Description>
+      <cd:ByteSize>11</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_char_42">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="Num_Invalid_Cloud_Winds_L2C_Ray_title">
+    <cd:Text>
+      <cd:Description>NUM_INVALID_CLOUD_WINDS_L2C_RAY=</cd:Description>
+      <cd:FixedValue>NUM_INVALID_CLOUD_WINDS_L2C_RAY=</cd:FixedValue>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="Num_Invalid_Cloud_Winds_L2C_Ray">
+    <cd:Integer>
+      <cd:Description>Number of invalid cloud assimilated Rayleigh wind retrievals (only present in L2C products)</cd:Description>
+      <cd:ByteSize>11</cd:ByteSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_char_43">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="spare_4">
+    <cd:Text>
+      <cd:Description>Spare</cd:Description>
+      <cd:ByteSize>40</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="newline_char_44">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+</cd:Record>
