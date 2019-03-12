@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="binary" last-modified="2010-08-26" name="Level_1B_Geolocation_ADSR_03_06">
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="binary" last-modified="2019-03-07" name="Level_1A_Geolocation_ADSR_04_09">
   <cd:Field name="start_of_observation_time">
     <cd:Time timeformat="binary_envisat_datetime">
       <cd:Description>Start time at start of BRC</cd:Description>
@@ -16,7 +16,7 @@
   </cd:Field>
   <cd:Field name="observation_aocs">
     <cd:Record>
-      <cd:Description>Level 1B Observation AOCS</cd:Description>
+      <cd:Description>Level 1A Observation AOCS</cd:Description>
       <cd:Field name="observation_centroid_time">
         <cd:Time timeformat="binary_envisat_datetime">
           <cd:Description>Observation Centroid Time</cd:Description>
@@ -107,9 +107,9 @@
   </cd:Field>
   <cd:Field name="measurement_aocs">
     <cd:Array>
-      <cd:Dimension><![CDATA[int(/sph/n_max)]]></cd:Dimension>
+      <cd:Dimension>30</cd:Dimension>
       <cd:Record>
-        <cd:Description>Level 1B Measurement AOCS</cd:Description>
+        <cd:Description>Level 1A Measurement AOCS</cd:Description>
         <cd:Field name="measurement_centroid_time">
           <cd:Time timeformat="binary_envisat_datetime">
             <cd:Description>Measurement Centroid Time</cd:Description>
@@ -201,7 +201,7 @@
   </cd:Field>
   <cd:Field name="observation_geolocation">
     <cd:Record>
-      <cd:Description>Level 1B Observation Geolocation</cd:Description>
+      <cd:Description>Level 1A Observation Geolocation</cd:Description>
       <cd:Field name="observation_mie_geolocation">
         <cd:Array>
           <cd:Dimension>25</cd:Dimension>
@@ -244,19 +244,19 @@
   </cd:Field>
   <cd:Field name="measurement_geolocation">
     <cd:Array>
-      <cd:Dimension><![CDATA[int(/sph/n_max)]]></cd:Dimension>
+      <cd:Dimension>30</cd:Dimension>
       <cd:Record>
         <cd:Description>Level 1A Measurement Geolocation</cd:Description>
         <cd:Field name="mie_geolocation">
           <cd:Array>
             <cd:Dimension>25</cd:Dimension>
-            <cd:NamedType id="Level_1A_Geolocation_of_Height_Bin_03_05"/>
+            <cd:NamedType id="Level_1A_Geolocation_of_Height_Bin_04_09"/>
           </cd:Array>
         </cd:Field>
         <cd:Field name="rayleigh_geolocation">
           <cd:Array>
             <cd:Dimension>25</cd:Dimension>
-            <cd:NamedType id="Level_1A_Geolocation_of_Height_Bin_03_05"/>
+            <cd:NamedType id="Level_1A_Geolocation_of_Height_Bin_04_09"/>
           </cd:Array>
         </cd:Field>
         <cd:Field name="geolocation_of_dem_intersection">

@@ -243,13 +243,13 @@
         <cd:Field name="mie_geolocation">
           <cd:Array>
             <cd:Dimension>25</cd:Dimension>
-            <cd:NamedType id="Level_1A_Geolocation_of_Height_Bin"/>
+            <cd:NamedType id="Level_1A_Geolocation_of_Height_Bin_03_05"/>
           </cd:Array>
         </cd:Field>
         <cd:Field name="rayleigh_geolocation">
           <cd:Array>
             <cd:Dimension>25</cd:Dimension>
-            <cd:NamedType id="Level_1A_Geolocation_of_Height_Bin"/>
+            <cd:NamedType id="Level_1A_Geolocation_of_Height_Bin_03_05"/>
           </cd:Array>
         </cd:Field>
         <cd:Field name="geolocation_of_dem_intersection">

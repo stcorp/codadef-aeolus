@@ -1,0 +1,141 @@
+<?xml version="1.0"?>
+<cd:ProductDefinition xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" id="AUX_HBE_1B_04_09" format="xml" last-modified="2019-03-07">
+  <cd:Record format="xml">
+    <cd:Field name="Earth_Explorer_File">
+      <cd:Record namexml="Earth_Explorer_File">
+        <cd:Attribute name="schemaversion"/>
+        <cd:Description>Earth Explorer File</cd:Description>
+        <cd:Field name="Earth_Explorer_Header">
+          <cd:Record namexml="Earth_Explorer_Header">
+            <cd:Description>Earth Explorer Header File</cd:Description>
+            <cd:Field name="Fixed_Header">
+              <cd:NamedType id="Fixed_Header"/>
+            </cd:Field>
+            <cd:Field name="Variable_Header">
+              <cd:Record namexml="Variable_Header">
+                <cd:Description>Variable Header Section</cd:Description>
+                <cd:Field name="Main_Product_Header">
+                  <cd:NamedType id="Main_Product_Header_v3"/>
+                </cd:Field>
+                <cd:Field name="Specific_Product_Header">
+                  <cd:NamedType id="Specific_Product_Header_Par"/>
+                </cd:Field>
+              </cd:Record>
+            </cd:Field>
+            <ct:NamedTest id="FileNameCheckEEF" path="Fixed_Header/File_Name"/>
+            <ct:NamedTest id="FileNameMatchFileVersionAt51" path="Fixed_Header/File_Name"/>
+            <ct:NamedTest id="FileNameMatchValidityStart" path="Fixed_Header/File_Name"/>
+          </cd:Record>
+        </cd:Field>
+        <cd:Field name="Data_Block">
+          <cd:Record namexml="Data_Block">
+            <cd:Attribute name="type">
+              <cd:Optional/>
+              <cd:FixedValue>xml</cd:FixedValue>
+            </cd:Attribute>
+            <cd:Field name="Harmonic_Bias_Characterisation">
+              <cd:Record namexml="Harmonic_Bias_Characterisation">
+                <cd:Description>Harmonic Bias Estimation Parameters</cd:Description>
+                <cd:Field name="List_of_Data_Set_Records">
+                  <cd:Record namexml="List_of_Data_Set_Records">
+                    <cd:Description>List of Data Set Records</cd:Description>
+                    <cd:Attribute name="count"/>
+                    <cd:Field name="Data_Set_Record">
+                      <cd:Array>
+                        <cd:Dimension/>
+                        <cd:Record namexml="Data_Set_Record">
+                          <cd:Description>Data Set Record</cd:Description>
+                          <cd:Field name="NF_Order">
+                            <cd:Type namexml="NF_Order">
+                              <cd:Integer format="ascii">
+                                <cd:Description>Number of Fourier terms used in the Harmonic Bias Estimation (NF). The A and B coefficient lists for both Mie and Rayleigh below must be NF_Order+1 elements in size.</cd:Description>
+                                <cd:NativeType>uint32</cd:NativeType>
+                              </cd:Integer>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="List_of_Mie_Harmonic_Bias_Coefficient_As">
+                            <cd:Record namexml="List_of_Mie_Harmonic_Bias_Coefficient_As">
+                              <cd:Attribute name="count"/>
+                              <cd:Field name="Mie_Harmonic_Bias_Coefficient_A">
+                                <cd:Array>
+                                  <cd:Dimension/>
+                                  <cd:Type namexml="Mie_Harmonic_Bias_Coefficient_A">
+                                    <cd:Float format="ascii">
+                                      <cd:Description>Coefficent A in the Harmonic Bias Estimation using Fourier transform based interpolation.</cd:Description>
+                                      <cd:NativeType>double</cd:NativeType>
+                                      <ct:NamedTest id="Range095To1p05"/>
+                                    </cd:Float>
+                                  </cd:Type>
+                                  <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                                </cd:Array>
+                              </cd:Field>
+                            </cd:Record>
+                          </cd:Field>
+                          <cd:Field name="List_of_Mie_Harmonic_Bias_Coefficient_Bs">
+                            <cd:Record namexml="List_of_Mie_Harmonic_Bias_Coefficient_Bs">
+                              <cd:Attribute name="count"/>
+                              <cd:Field name="Mie_Harmonic_Bias_Coefficient_B">
+                                <cd:Array>
+                                  <cd:Dimension/>
+                                  <cd:Type namexml="Mie_Harmonic_Bias_Coefficient_B">
+                                    <cd:Float format="ascii">
+                                      <cd:Description>Coefficent B in the Harmonic Bias Estimation using Fourier transform based interpolation.</cd:Description>
+                                      <cd:NativeType>double</cd:NativeType>
+                                      <ct:NamedTest id="Range095To1p05"/>
+                                    </cd:Float>
+                                  </cd:Type>
+                                  <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                                </cd:Array>
+                              </cd:Field>
+                            </cd:Record>
+                          </cd:Field>
+                          <cd:Field name="List_of_Ray_Harmonic_Bias_Coefficient_As">
+                            <cd:Record namexml="List_of_Ray_Harmonic_Bias_Coefficient_As">
+                              <cd:Attribute name="count"/>
+                              <cd:Field name="Ray_Harmonic_Bias_Coefficient_A">
+                                <cd:Array>
+                                  <cd:Dimension/>
+                                  <cd:Type namexml="Ray_Harmonic_Bias_Coefficient_A">
+                                    <cd:Float format="ascii">
+                                      <cd:Description>Coefficent A in the Harmonic Bias Estimation using Fourier transform based interpolation.</cd:Description>
+                                      <cd:NativeType>double</cd:NativeType>
+                                      <ct:NamedTest id="Range095To1p05"/>
+                                    </cd:Float>
+                                  </cd:Type>
+                                  <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                                </cd:Array>
+                              </cd:Field>
+                            </cd:Record>
+                          </cd:Field>
+                          <cd:Field name="List_of_Ray_Harmonic_Bias_Coefficient_Bs">
+                            <cd:Record namexml="List_of_Ray_Harmonic_Bias_Coefficient_Bs">
+                              <cd:Attribute name="count"/>
+                              <cd:Field name="Ray_Harmonic_Bias_Coefficient_B">
+                                <cd:Array>
+                                  <cd:Dimension/>
+                                  <cd:Type namexml="Ray_Harmonic_Bias_Coefficient_B">
+                                    <cd:Float format="ascii">
+                                      <cd:Description>Coefficent B in the Harmonic Bias Estimation using Fourier transform based interpolation.</cd:Description>
+                                      <cd:NativeType>double</cd:NativeType>
+                                      <ct:NamedTest id="Range095To1p05"/>
+                                    </cd:Float>
+                                  </cd:Type>
+                                  <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                                </cd:Array>
+                              </cd:Field>
+                            </cd:Record>
+                          </cd:Field>
+                        </cd:Record>
+                        <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                      </cd:Array>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+              </cd:Record>
+            </cd:Field>
+          </cd:Record>
+        </cd:Field>
+      </cd:Record>
+    </cd:Field>
+  </cd:Record>
+</cd:ProductDefinition>

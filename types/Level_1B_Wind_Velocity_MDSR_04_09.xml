@@ -1,0 +1,182 @@
+<?xml version="1.0"?>
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="binary" last-modified="2019-03-07" name="Level_1B_Wind_Velocity_MDSR_04_09">
+  <cd:Field name="start_of_observation_time">
+    <cd:Time timeformat="binary_envisat_datetime">
+      <cd:Description>Satellite time at start of BRC</cd:Description>
+      <ct:NamedTest id="RangeSecond" path="seconds"/>
+      <ct:NamedTest id="RangeMicroSecond" path="microseconds"/>
+      <ct:NamedTest id="TimeNotZero"/>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="line_of_sight_wind_flag">
+    <cd:Integer>
+      <cd:Description>Flag indicating whether horizontal or line-of-sight wind is used. This flag can be set to either "true" or "false". A "true" value indicates that the line of sight wind velocity is computed, and a "false" value indicates that horizontal wind velocity is computed</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+      <ct:NamedTest id="BooleanBinTest"/>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="observation_wind_profile">
+    <cd:Record>
+      <cd:Description>Observation Wind Profile</cd:Description>
+      <cd:Field name="mie_reference_pulse_quality_flag">
+        <cd:Integer>
+          <cd:Description>Mie internal reference quality flag. This field is a 8-bit long, bit-packed field, of reference pulse validity information. When the data is valid, this field will be 0. Bit 1: Overall validity. Data invalid 1, otherwise 0; Bit 2: For Mie, peak not found 1, otherwise 0. For Rayleigh, this is always 0; Bit 3: All reference pulses corresponding to the current measurement eliminated (source packet invalid, data corruption, or laser frequency unlocked) 1, otherwise 0; Bit 4: Default 0; Bit 5: Default 0; Bit 6: Default 0; Bit 7: Default 0; Bit 8: Default 0</cd:Description>
+          <cd:BitSize>8</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="rayleigh_reference_pulse_quality_flag">
+        <cd:Integer>
+          <cd:Description>Rayleigh internal reference quality flag. This field is a 8-bit long, bit-packed field, of reference pulse validity information. When the data is valid, this field will be 0. Bit 1: Overall validity. Data invalid 1, otherwise 0; Bit 2: For Rayleigh, Rayleigh response not found 1, otherwise 0; Bit 3: All reference pulses corresponding to the current measurement eliminated (source packet invalid, data corruption, or laser frequency unlocked) 1, otherwise 0; Bit 4: Default 0; Bit 5: Default 0; Bit 6: Default 0; Bit 7: Default 0; Bit 8: Default 0</cd:Description>
+          <cd:BitSize>8</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="mie_altitude_bin_wind_info">
+        <cd:Array>
+          <cd:Dimension>24</cd:Dimension>
+          <cd:Record>
+            <cd:Description>Mie altitude bin wind velocity information for each altitude</cd:Description>
+            <cd:Field name="bin_quality_flag">
+              <cd:Integer>
+                <cd:Description>This field is a 2 byte, bit-packed field, where the first 4 bits represent contain the bin-level validity information, the next 4 bits are measurement-level validity information, and bits 9 to 16 provide bin signal processing validity flags. When the data is valid, this field will be 0. Bit 1: Overall validity. Data invalid 1, otherwise 0; Bit 2: Set to 1 if signal-to-noise below SNR_Threshold, default 0; Bit 3: Data saturation found 1, otherwise 0; Bit 4: Data spike found 1, otherwise 0; Bit 5: Reference pulse invalid 1, otherwise 0; Bit 6: Source packet invalid 1, otherwise 0; Bit 7: Number of corresponding valid pulses is below Meas_Cavity_Lock_Status_Thresh 1, otherwise 0; Bit 8: Spacecraft attitude not on target 1, otherwise 0; Bit 9: For Mie, peak not found 1, otherwise 0. For Rayleigh, rayleigh response not found 1, otherwise 0; Bit 10: Set to 1 if the absolute wind velocity above Wind_Velocity_Threshold, default 0; Bit 13: Bin was ground bin canidate but the thickness above DEM threshold was not met; Bit 14: Bin was ground bin candidate but useful signal threshold on sum of all ground bin candidates was not met; Bit 15: Bin was ground bin candidate but peak shift threshold on output peak location of MieCore applied to signal sum of all ground bin candidates was not met; Bit 16: Bin was ground bin candidate but FWHM threshold on output FWHM of MieCore applied to signal sum of all ground bin candidates was not met.</cd:Description>
+                <cd:BitSize>16</cd:BitSize>
+                <cd:NativeType>uint16</cd:NativeType>
+              </cd:Integer>
+            </cd:Field>
+            <cd:Field name="wind_velocity">
+              <cd:Float>
+                <cd:Description>Wind velocity at the altitude bin. Value will be positive for a wind direction away from the spacecraft and negative for a wind toward the spacecraft.</cd:Description>
+                <cd:Unit>m/s</cd:Unit>
+                <cd:BitSize>64</cd:BitSize>
+                <cd:NativeType>double</cd:NativeType>
+              </cd:Float>
+            </cd:Field>
+          </cd:Record>
+        </cd:Array>
+      </cd:Field>
+      <cd:Field name="rayleigh_altitude_bin_wind_info">
+        <cd:Array>
+          <cd:Dimension>24</cd:Dimension>
+          <cd:Record>
+            <cd:Description>Rayleigh altitude bin wind velocity information for each altitude</cd:Description>
+            <cd:Field name="bin_quality_flag">
+              <cd:Integer>
+                <cd:Description>This field is a 2 byte, bit-packed field, where the first 4 bits represent contain the bin-level validity information, the next 4 bits are measurement-level validity information, and bits 9 to 16 provide bin signal processing validity flags. When the data is valid, this field will be 0. Bit 1: Overall validity. Data invalid 1, otherwise 0; Bit 2: Set to 1 if signal-to-noise below SNR_Threshold, default 0; Bit 3: Data saturation found 1, otherwise 0; Bit 4: Data spike found 1, otherwise 0; Bit 5: Reference pulse invalid 1, otherwise 0; Bit 6: Source packet invalid 1, otherwise 0; Bit 7: Number of corresponding valid pulses is below Meas_Cavity_Lock_Status_Thresh 1, otherwise 0; Bit 8: Spacecraft attitude not on target 1, otherwise 0; Bit 9: For Mie, peak not found 1, otherwise 0. For Rayleigh, rayleigh response not found 1, otherwise 0; Bit 10: Set to 1 if the absolute wind velocity above Wind_Velocity_Threshold, default 0; Bit 11: Set to 1 if polynomial fit of error responses was used but no valid root of the polynomial was found, otherwise 0; Bit 12: Bin was detected as ground bin, otherwise 0. Bit 13: Bin was ground bin canidate but the thickness above DEM threshold was not met; Bit 14: Bin was ground bin candidate but useful signal threshold on sum of all ground bin candidates was not met; Bit 15: Bin was ground bin candidate but response shift threshold on output response calculated for signal sum of all ground bin candidates was not met; Bit 16: Spare, set to 0.</cd:Description>
+                <cd:BitSize>16</cd:BitSize>
+                <cd:NativeType>uint16</cd:NativeType>
+              </cd:Integer>
+            </cd:Field>
+            <cd:Field name="wind_velocity">
+              <cd:Float>
+                <cd:Description>Wind velocity at the altitude bin. Value will be positive for a wind direction away from the spacecraft and negative for a wind toward the spacecraft.</cd:Description>
+                <cd:Unit>m/s</cd:Unit>
+                <cd:BitSize>64</cd:BitSize>
+                <cd:NativeType>double</cd:NativeType>
+              </cd:Float>
+            </cd:Field>
+          </cd:Record>
+        </cd:Array>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="measurement_wind_profile">
+    <cd:Array>
+      <cd:Dimension><![CDATA[int(/sph/n_max)]]></cd:Dimension>
+      <cd:Record>
+        <cd:Description>List of measurement wind profiles</cd:Description>
+        <cd:Field name="mie_reference_pulse_quality_flag">
+          <cd:Integer>
+            <cd:Description>Mie internal reference quality flag. This field is a 8-bit long, bit-packed field, of reference pulse validity information. When the data is valid, this field will be 0. Bit 1: Overall validity. Data invalid 1, otherwise 0; Bit 2: For Mie, peak not found 1, otherwise 0. For Rayleigh, this is always 0; Bit 3: All reference pulses corresponding to the current measurement eliminated (source packet invalid, data corruption, or laser frequency unlocked) 1, otherwise 0; Bit 4: Default 0; Bit 5: Default 0; Bit 6: Default 0; Bit 7: Default 0; Bit 8: Default 0</cd:Description>
+            <cd:BitSize>8</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="rayleigh_reference_pulse_quality_flag">
+          <cd:Integer>
+            <cd:Description>Rayleigh internal reference quality flag. This field is a 8-bit long, bit-packed field, of reference pulse validity information. When the data is valid, this field will be 0. Bit 1: Overall validity. Data invalid 1, otherwise 0; Bit 2: For Rayleigh, Rayleigh response not found 1, otherwise 0; Bit 3: All reference pulses corresponding to the current measurement eliminated (source packet invalid, data corruption, or laser frequency unlocked) 1, otherwise 0; Bit 4: Default 0; Bit 5: Default 0; Bit 6: Default 0; Bit 7: Default 0; Bit 8: Default 0</cd:Description>
+            <cd:BitSize>8</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="mie_altitude_bin_wind_info">
+          <cd:Array>
+            <cd:Dimension>24</cd:Dimension>
+            <cd:Record>
+              <cd:Description>Mie altitude bin wind velocity information for each altitude</cd:Description>
+              <cd:Field name="bin_quality_flag">
+                <cd:Integer>
+                  <cd:Description>This field is a 2 byte, bit-packed field, where the first 4 bits represent contain the bin-level validity information, the next 4 bits are measurement-level validity information, and bits 9 to 16 provide bin signal processing validity flags. When the data is valid, this field will be 0. Bit 1: Overall validity. Data invalid 1, otherwise 0; Bit 2: Set to 1 if signal-to-noise below SNR_Threshold, default 0; Bit 3: Data saturation found 1, otherwise 0; Bit 4: Data spike found 1, otherwise 0; Bit 5: Reference pulse invalid 1, otherwise 0; Bit 6: Source packet invalid 1, otherwise 0; Bit 7: Number of corresponding valid pulses is below Meas_Cavity_Lock_Status_Thresh 1, otherwise 0; Bit 8: Spacecraft attitude not on target 1, otherwise 0; Bit 9: For Mie, peak not found 1, otherwise 0. For Rayleigh, rayleigh response not found 1, otherwise 0; Bit 10: Set to 1 if the absolute wind velocity above Wind_Velocity_Threshold, default 0; Bit 11: Spare, set to 0; Bit 12: Bin was detected as ground bin, otherwise 0; Bit 13 to Bit 16: Spare, set to 0.</cd:Description>
+                  <cd:BitSize>16</cd:BitSize>
+                  <cd:NativeType>uint16</cd:NativeType>
+                </cd:Integer>
+              </cd:Field>
+              <cd:Field name="wind_velocity">
+                <cd:Float>
+                  <cd:Description>Wind velocity at the altitude bin. If the Bin_Quality_Flag is non-zero (invalid), this value will be set to 0</cd:Description>
+                  <cd:Unit>m/s</cd:Unit>
+                  <cd:BitSize>64</cd:BitSize>
+                  <cd:NativeType>double</cd:NativeType>
+                </cd:Float>
+              </cd:Field>
+            </cd:Record>
+          </cd:Array>
+        </cd:Field>
+        <cd:Field name="mie_ground_quality_flag">
+          <cd:Integer>
+            <cd:Description>This field is a 2 byte, bit-packed field, where the first 4 bits contain bin-level validity information, and the next 4 bits measurement-level validity information, where bits 1 to 4 and 6 to 8 are a logical OR of copies of the useful signal Data_Quality_Flag of all ground bins. Bit 9 to 12 provide bin signal processing validity flags. When the data is valid, this field will be 0. Bit 1: Overall validity. Data invalid 1, otherwise 0; Bit 2: Set to 1 if signal-to-noise below SNR_Threshold, default 0; Bit 3: Data saturation found 1, otherwise 0; Bit 4: Data spike found 1, otherwise 0; Bit 5: Reference pulse invalid 1, otherwise 0; Bit 6: Source packet invalid 1, otherwise 0; Bit 7: Number of corresponding valid pulses is below Meas_Cavity_Lock_Status_Thresh 1, otherwise 0; Bit 8: Spacecraft attitude not on target 1, otherwise 0; Bit 9: For Mie, peak not found 1, otherwise 0. For Rayleigh, rayleigh response not found 1, otherwise 0; Bit 10: Set to 1 if the absolute wind velocity above Wind_Velocity_Threshold, default 0; Bit 11: For Rayleigh set to 1 if polynomial fit of errors responses was used but no valid root of the polynomial was found, otherwise 0. For Mie: spare, set to 0; Bit 12: No ground bin was detected in measurement , otherwise 0; Bit 13 to Bit 16: spare, set to 0</cd:Description>
+            <cd:BitSize>16</cd:BitSize>
+            <cd:NativeType>uint16</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="mie_ground_wind_velocity">
+          <cd:Float>
+            <cd:Description>LOS wind velocity for the accumulated signal of all ground bins. LOS value will be positive for a wind direction away from the spacecraft and negative for a wind toward the spacecraft.</cd:Description>
+            <cd:Unit>m/s</cd:Unit>
+            <cd:BitSize>64</cd:BitSize>
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Field>
+        <cd:Field name="rayleigh_altitude_bin_wind_info">
+          <cd:Array>
+            <cd:Dimension>24</cd:Dimension>
+            <cd:Record>
+              <cd:Description>Rayleigh altitude bin wind velocity information for each altitude</cd:Description>
+              <cd:Field name="bin_quality_flag">
+                <cd:Integer>
+                  <cd:Description>This field is a 2 byte, bit-packed field, where the first 4 bits represent contain the bin-level validity information, the next 4 bits are measurement-level validity information, and bits 9 to 16 provide bin signal processing validity flags. When the data is valid, this field will be 0. Bit 1: Overall validity. Data invalid 1, otherwise 0; Bit 2: Set to 1 if signal-to-noise below SNR_Threshold, default 0; Bit 3: Data saturation found 1, otherwise 0; Bit 4: Data spike found 1, otherwise 0; Bit 5: Reference pulse invalid 1, otherwise 0; Bit 6: Source packet invalid 1, otherwise 0; Bit 7: Number of corresponding valid pulses is below Meas_Cavity_Lock_Status_Thresh 1, otherwise 0; Bit 8: Spacecraft attitude not on target 1, otherwise 0; Bit 9: For Mie, peak not found 1, otherwise 0. For Rayleigh, rayleigh response not found 1, otherwise 0; Bit 10: Set to 1 if the absolute wind velocity above Wind_Velocity_Threshold, default 0; Bit 11: Spare, set to 0; Bit 12: Bin was detected as ground bin, otherwise 0; Bit 13 to Bit 16: Spare, set to 0.</cd:Description>
+                  <cd:BitSize>16</cd:BitSize>
+                  <cd:NativeType>uint16</cd:NativeType>
+                </cd:Integer>
+              </cd:Field>
+              <cd:Field name="wind_velocity">
+                <cd:Float>
+                  <cd:Description>Wind velocity at the altitude bin. If the Bin_Quality_Flag is non-zero (invalid), this value will be set to 0</cd:Description>
+                  <cd:Unit>m/s</cd:Unit>
+                  <cd:BitSize>64</cd:BitSize>
+                  <cd:NativeType>double</cd:NativeType>
+                </cd:Float>
+              </cd:Field>
+            </cd:Record>
+          </cd:Array>
+        </cd:Field>
+        <cd:Field name="rayleigh_ground_quality_flag">
+          <cd:Integer>
+            <cd:Description>This field is a 2 byte, bit-packed field, where the first 4 bits contain bin-level validity information, and the next 4 bits measurement-level validity information, where bits 1 to 4 and 6 to 8 are a logical OR of copies of the useful signal Data_Quality_Flag of all ground bins. Bit 9 to 12 provide bin signal processing validity flags. When the data is valid, this field will be 0. Bit 1: Overall validity. Data invalid 1, otherwise 0; Bit 2: Set to 1 if signal-to-noise below SNR_Threshold, default 0; Bit 3: Data saturation found 1, otherwise 0; Bit 4: Data spike found 1, otherwise 0; Bit 5: Reference pulse invalid 1, otherwise 0; Bit 6: Source packet invalid 1, otherwise 0; Bit 7: Number of corresponding valid pulses is below Meas_Cavity_Lock_Status_Thresh 1, otherwise 0; Bit 8: Spacecraft attitude not on target 1, otherwise 0; Bit 9: For Mie, peak not found 1, otherwise 0. For Rayleigh, rayleigh response not found 1, otherwise 0; Bit 10: Set to 1 if the absolute wind velocity above Wind_Velocity_Threshold, default 0; Bit 11: For Rayleigh set to 1 if polynomial fit of errors responses was used but no valid root of the polynomial was found, otherwise 0. For Mie: spare, set to 0; Bit 12: No ground bin was detected in measurement , otherwise 0; Bit 13 to Bit 16: spare, set to 0</cd:Description>
+            <cd:BitSize>16</cd:BitSize>
+            <cd:NativeType>uint16</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="rayleigh_ground_wind_velocity">
+          <cd:Float>
+            <cd:Description>LOS wind velocity for the accumulated signal of all ground bins. LOS value will be positive for a wind direction away from the spacecraft and negative for a wind toward the spacecraft.</cd:Description>
+            <cd:Unit>m/s</cd:Unit>
+            <cd:BitSize>64</cd:BitSize>
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Field>
+      </cd:Record>
+    </cd:Array>
+  </cd:Field>
+</cd:Record>
