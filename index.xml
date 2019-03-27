@@ -2053,6 +2053,14 @@
         <cd:MatchData offset="95">AE-TN-MFG-CAL-004 3.3.1</cd:MatchData>
       </cd:DetectionRule>
     </cd:ProductDefinition>
+    <cd:ProductDefinition id="AUX_CAL_L2_04_01" format="binary" version="3">
+      <cd:Description>This definition is based on version 4.1 of AUX_CAL IODD AE-TN-MFG-L2P-CAL-004</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT="AE_</cd:MatchData>
+        <cd:MatchData offset="17">AUX_CAL_L2</cd:MatchData>
+        <cd:MatchData offset="95">AE-TN-MFG-CAL-004 4.1  </cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
   </cd:ProductType>
   <cd:ProductType name="AUX_CAL_L2_HDR">
     <cd:Description>Auxiliary calibration parameters and functions (HDR)</cd:Description>
@@ -2078,6 +2086,12 @@
       <cd:Description>This definition is based on version 3.3.1 of AUX_CAL IODD AE-TN-MFG-L2P-CAL-004</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData path="/{http://www.esa.int/schemas/ae/AUX_CAL_L2}Earth_Explorer_Header@schemaversion">03.03</cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+    <cd:ProductDefinition id="AUX_CAL_L2_HDR_04_01" format="xml" version="3">
+      <cd:Description>This definition is based on version 4.1 of AUX_CAL IODD AE-TN-MFG-L2P-CAL-004</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchData path="/{http://www.esa.int/schemas/ae/AUX_CAL_L2}Earth_Explorer_Header@schemaversion">4.1</cd:MatchData>
       </cd:DetectionRule>
     </cd:ProductDefinition>
   </cd:ProductType>
@@ -2534,6 +2548,14 @@
         <cd:MatchData offset="95">RBC IODD 3.3           </cd:MatchData>
       </cd:DetectionRule>
     </cd:ProductDefinition>
+    <cd:ProductDefinition id="AUX_RBC_L2_04_01" format="binary" version="3">
+      <cd:Description>This definition is based on version 4.1 of IODD AE-TN-MFG-GS-0003</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT="AE_</cd:MatchData>
+        <cd:MatchData offset="17">AUX_RBC_L2</cd:MatchData>
+        <cd:MatchData offset="95">RBC IODD 4.1           </cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
   </cd:ProductType>
   <cd:ProductType name="AUX_RBC_L2_HDR">
     <cd:Description>RBC Generator Product File (HDR)</cd:Description>
@@ -2553,6 +2575,12 @@
       <cd:Description>This definition is based on version 3.3 of IODD AE-TN-MFG-GS-0003</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData path="/{http://www.esa.int/schemas/ae/AUX_RBC_L2}Earth_Explorer_Header@schemaversion">03.03</cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+    <cd:ProductDefinition id="AUX_RBC_L2_HDR_04_01" format="xml" version="3">
+      <cd:Description>This definition is based on version 4.1 of IODD AE-TN-MFG-GS-0003</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchData path="/{http://www.esa.int/schemas/ae/AUX_RBC_L2}Earth_Explorer_Header@schemaversion">4.1</cd:MatchData>
       </cd:DetectionRule>
     </cd:ProductDefinition>
   </cd:ProductType>
