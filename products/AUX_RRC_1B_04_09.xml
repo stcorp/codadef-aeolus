@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:ProductDefinition xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" id="AUX_RRC_1B_04_09" format="xml" last-modified="2019-03-07">
+<cd:ProductDefinition xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" id="AUX_RRC_1B_04_09" format="xml" last-modified="2019-05-03">
   <cd:Record format="xml">
     <cd:Field name="Earth_Explorer_File">
       <cd:Record namexml="Earth_Explorer_File">
@@ -26,6 +26,7 @@
             <ct:NamedTest id="FileNameCheckEEF" path="Fixed_Header/File_Name"/>
             <ct:NamedTest id="FileNameMatchFileVersionAt51" path="Fixed_Header/File_Name"/>
             <ct:NamedTest id="FileNameMatchValidityStart" path="Fixed_Header/File_Name"/>
+            <ct:NamedTest id="CheckForCommissioningApproval" path="Fixed_Header/Notes"/>
           </cd:Record>
         </cd:Field>
         <cd:Field name="Data_Block">

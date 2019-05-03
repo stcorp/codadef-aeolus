@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:ProductDefinition xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" id="AUX_DCC_1B_04_04" format="xml" last-modified="2017-03-01">
+<cd:ProductDefinition xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" id="AUX_DCC_1B_04_04" format="xml" last-modified="2019-05-03">
   <cd:Record format="xml">
     <cd:Field name="Earth_Explorer_File">
       <cd:Record namexml="Earth_Explorer_File">
@@ -20,8 +20,6 @@
                 <cd:Field name="Specific_Product_Header">
                   <cd:NamedType id="Specific_Product_Header_Level1BAux_04_03"/>
                 </cd:Field>
-                <ct:NamedTest id="IntGreaterThanZero" path="Specific_Product_Header/num_of_mie_reference_pulses_used"/>
-                <ct:NamedTest id="IntGreaterThanZero" path="Specific_Product_Header/num_of_rayleigh_reference_pulses_used"/>
                 <ct:NamedTest id="NumMeasurementsUsedGreaterThanZero" path="Specific_Product_Header"/>
               </cd:Record>
             </cd:Field>
