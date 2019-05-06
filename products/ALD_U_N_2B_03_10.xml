@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:ProductDefinition xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" id="ALD_U_N_2B_03_10" format="binary" last-modified="2019-03-27">
+<cd:ProductDefinition xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" id="ALD_U_N_2B_03_10" format="binary" last-modified="2019-05-03">
   <cd:Record format="binary">
     <cd:Description>Level 2B Product</cd:Description>
     <cd:Field name="mph">
@@ -206,22 +206,6 @@
   <ct:NamedCrossFileTest id="SPH_intersect_stop_lat"/>
   <ct:NamedCrossFileTest id="SPH_intersect_stop_long"/>
   <ct:NamedCrossFileTest id="SPH_Sat_Track"/>
-  <ct:NamedCrossFileTest id="SPH_Num_Valid_Clear_Mie_Profiles"/>
-  <ct:NamedCrossFileTest id="SPH_Num_Valid_Clear_Rayleigh_Prof"/>
-  <ct:NamedCrossFileTest id="SPH_Num_Valid_Cloud_Mie_Profiles"/>
-  <ct:NamedCrossFileTest id="SPH_Num_Valid_Cloud_Rayleigh_Prof"/>
-  <ct:NamedCrossFileTest id="SPH_Num_Invalid_Clear_Mie_Profiles"/>
-  <ct:NamedCrossFileTest id="SPH_Num_Invalid_Clear_Rayleigh_Prof"/>
-  <ct:NamedCrossFileTest id="SPH_Num_Invalid_Cloud_Mie_Profiles"/>
-  <ct:NamedCrossFileTest id="SPH_Num_Invalid_Cloud_Rayleigh_Prof"/>
   <ct:NamedCrossFileTest id="SPH_Num_Profiles_Surface_Mie"/>
   <ct:NamedCrossFileTest id="SPH_Num_Profiles_Surface_Ray"/>
-  <ct:NamedCrossFileTest id="SPH_Num_Valid_Clear_Winds_L2B_Mie"/>
-  <ct:NamedCrossFileTest id="SPH_Num_Valid_Clear_Winds_L2B_Ray"/>
-  <ct:NamedCrossFileTest id="SPH_Num_Valid_Cloud_Winds_L2B_Mie"/>
-  <ct:NamedCrossFileTest id="SPH_Num_Valid_Cloud_Winds_L2B_Ray"/>
-  <ct:NamedCrossFileTest id="SPH_Num_Invalid_Clear_Winds_L2B_Mie"/>
-  <ct:NamedCrossFileTest id="SPH_Num_Invalid_Clear_Winds_L2B_Ray"/>
-  <ct:NamedCrossFileTest id="SPH_Num_Invalid_Cloud_Winds_L2B_Mie"/>
-  <ct:NamedCrossFileTest id="SPH_Num_Invalid_Cloud_Winds_L2B_Ray"/>
 </cd:ProductDefinition>

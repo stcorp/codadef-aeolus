@@ -1,4 +1,4 @@
-<cd:Array xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="ascii" last-modified="2019-03-26" name="Level_2BC_Count_Type_KVT">
+<cd:Array xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="ascii" last-modified="2019-05-03" name="Level_2BC_Count_Type_KVT">
   <cd:Dimension>5</cd:Dimension>
   <cd:Record>
     <cd:Field name="classification_type_title">
@@ -52,5 +52,4 @@
       <cd:Hidden/>
     </cd:Field>
   </cd:Record>
-  <ct:NamedTest id="ValueOfCountAttributeForParent"/>
 </cd:Array>

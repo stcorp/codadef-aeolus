@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="xml" last-modified="2019-03-12" name="Auxiliary_Calibration_ZWC_04_09" namexml="Auxiliary_Calibration_ZWC">
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="xml" last-modified="2019-05-03" name="Auxiliary_Calibration_ZWC_04_09" namexml="Auxiliary_Calibration_ZWC">
   <cd:Description>Auxiliary Calibration ZWC</cd:Description>
   <cd:Field name="List_of_Data_Set_Records">
     <cd:Record namexml="List_of_Data_Set_Records">
@@ -449,7 +449,7 @@
                             <cd:Mapping string="TRUE" value="1"/>
                             <cd:Mapping string="True" value="1"/>
                             <cd:Mapping string="true" value="1"/>
-                            <ct:NamedTest id="BooleanXmlTest"/>
+                            <ct:NamedTest id="IntIsZeroOrOne"/>
                           </cd:Integer>
                         </cd:Array>
                       </cd:Type>
@@ -617,7 +617,7 @@
                             <cd:Mapping string="TRUE" value="1"/>
                             <cd:Mapping string="True" value="1"/>
                             <cd:Mapping string="true" value="1"/>
-                            <ct:NamedTest id="BooleanXmlTest"/>
+                            <ct:NamedTest id="IntIsZeroOrOne"/>
                           </cd:Integer>
                         </cd:Array>
                       </cd:Type>

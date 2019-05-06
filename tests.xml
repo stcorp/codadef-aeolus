@@ -58,6 +58,7 @@
   <ct:Test name="IntGreaterThanOrEqualTo5000" criticality="Error" description="The value should be greater than or equal to 5000"><![CDATA[int(.) >= 5000]]></ct:Test>
   <ct:Test name="IntGreaterThanOrEqualTo30000" criticality="Error" description="The value should be greater than or equal to 30000"><![CDATA[int(.) >= 30000]]></ct:Test>
   <ct:Test name="IntIsZero" criticality="Error" description="The field should have a value of 0 indicating no errors"><![CDATA[int(.) == 0]]></ct:Test>
+  <ct:Test name="IntIsZeroOrOne" criticality="Error" description="The field should have a value of 0 or 1 indicating a boolean value"><![CDATA[int(.) == 0 || int(.) == 1]]></ct:Test>
   <ct:Test name="IntIsOne" criticality="Error" description="The field should have a value of 1 indicating no errors"><![CDATA[int(.) == 1]]></ct:Test>
   <ct:Test name="IntIs2" criticality="Error" description="The field should have a value of 2 indicating no errors"><![CDATA[int(.) == 2]]></ct:Test>
   <ct:Test name="IntLessThanOrEqualToZero" criticality="Error" description="The value should be less than or equal to 0"><![CDATA[int(.) <= 0]]></ct:Test>
