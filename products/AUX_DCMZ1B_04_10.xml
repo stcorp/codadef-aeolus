@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:ProductDefinition xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" id="AUX_DCMZ1B_04_10" format="xml" last-modified="2019-05-03">
+<cd:ProductDefinition xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" id="AUX_DCMZ1B_04_10" format="xml" last-modified="2019-06-11">
   <cd:Record format="xml">
     <cd:Field name="Earth_Explorer_File">
       <cd:Record namexml="Earth_Explorer_File">
@@ -112,11 +112,14 @@
                                     <cd:Attribute name="unit">
                                       <cd:FixedValue>ACCD counts/(ACCD pixel*s)</cd:FixedValue>
                                     </cd:Attribute>
-                                    <cd:Float format="ascii">
-                                      <cd:Description>Bias for the Rayleigh measurements.</cd:Description>
-                                      <cd:Unit>ACCD counts/(ACCD pixel*s)</cd:Unit>
-                                      <cd:NativeType>double</cd:NativeType>
-                                    </cd:Float>
+                                    <cd:Array format="ascii">
+                                      <cd:Dimension>16</cd:Dimension>
+                                      <cd:Float format="ascii">
+                                        <cd:Description>Bias for the Rayleigh measurements.</cd:Description>
+                                        <cd:Unit>ACCD counts/(ACCD pixel*s)</cd:Unit>
+                                        <cd:NativeType>double</cd:NativeType>
+                                      </cd:Float>
+                                    </cd:Array>
                                   </cd:Type>
                                 </cd:Array>
                               </cd:Field>
@@ -132,11 +135,14 @@
                                     <cd:Attribute name="unit">
                                       <cd:FixedValue>ACCD counts/(ACCD pixel*s)</cd:FixedValue>
                                     </cd:Attribute>
-                                    <cd:Float format="ascii">
-                                      <cd:Description>Bias for the Rayleigh measurements.</cd:Description>
-                                      <cd:Unit>ACCD counts/(ACCD pixel*s)</cd:Unit>
-                                      <cd:NativeType>double</cd:NativeType>
-                                    </cd:Float>
+                                    <cd:Array format="ascii">
+                                      <cd:Dimension>16</cd:Dimension>
+                                      <cd:Float>
+                                        <cd:Description>Bias for the Rayleigh measurements.</cd:Description>
+                                        <cd:Unit>ACCD counts/(ACCD pixel*s)</cd:Unit>
+                                        <cd:NativeType>double</cd:NativeType>
+                                      </cd:Float>
+                                    </cd:Array>
                                   </cd:Type>
                                 </cd:Array>
                               </cd:Field>
