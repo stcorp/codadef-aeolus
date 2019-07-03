@@ -1,0 +1,445 @@
+<?xml version="1.0"?>
+<cd:ProductDefinition xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" id="AUX_PAR_CS_04_01" format="xml" last-modified="2019-07-03">
+  <cd:Record format="xml">
+    <cd:Field name="Earth_Explorer_File">
+      <cd:Record namexml="Earth_Explorer_File">
+        <cd:Attribute name="schemaversion"/>
+        <cd:Description>Earth Explorer File</cd:Description>
+        <cd:Field name="Earth_Explorer_Header">
+          <cd:Record namexml="Earth_Explorer_Header">
+            <cd:Description>Earth Explorer Header File</cd:Description>
+            <cd:Field name="Fixed_Header">
+              <cd:NamedType id="Fixed_Header"/>
+            </cd:Field>
+            <cd:Field name="Variable_Header">
+              <cd:Record namexml="Variable_Header">
+                <cd:Description>Variable Header Section</cd:Description>
+                <cd:Field name="Main_Product_Header">
+                  <cd:NamedType id="Main_Product_Header_v3"/>
+                </cd:Field>
+                <cd:Field name="Specific_Product_Header">
+                  <cd:NamedType id="Specific_Product_Header_AUX_PAR_CS"/>
+                </cd:Field>
+              </cd:Record>
+            </cd:Field>
+            <ct:NamedTest id="FileNameCheckEEF" path="Fixed_Header/File_Name"/>
+            <ct:NamedTest id="FileNameMatchFileVersionAt51" path="Fixed_Header/File_Name"/>
+            <ct:NamedTest id="FileNameMatchValidityStart" path="Fixed_Header/File_Name"/>
+          </cd:Record>
+        </cd:Field>
+        <cd:Field name="Data_Block">
+          <cd:Record namexml="Data_Block">
+            <cd:Attribute name="type">
+              <cd:Optional/>
+              <cd:FixedValue>xml</cd:FixedValue>
+            </cd:Attribute>
+            <cd:Field name="CSR_Parameters">
+              <cd:Record namexml="CSR_Parameters">
+                <cd:Field name="List_of_Data_Set_Records">
+                  <cd:Record namexml="List_of_Data_Set_Records">
+                    <cd:Attribute name="count"> </cd:Attribute>
+                    <cd:Field name="Data_Set_Record">
+                      <cd:Array>
+                        <cd:Dimension/>
+                        <cd:Record namexml="Data_Set_Record">
+                          <cd:Field name="Frequency_Drift_Reference">
+                            <cd:Text namexml="Frequency_Drift_Reference">
+                              <cd:Description>Indicates which internal reference is considered for estimating the laser frequency drift. Can be either RRC or MRC</cd:Description>
+                            </cd:Text>
+                          </cd:Field>
+                          <cd:Field name="Fabry_Perot">
+                            <cd:Record namexml="Fabry_Perot">
+                              <cd:Field name="FSR">
+                                <cd:Type namexml="FSR">
+                                  <cd:Attribute name="unit"/>
+                                  <cd:Float format="ascii">
+                                    <cd:Description>Free Spectral Range FSR of the two Fabry-Perot interferometers forming the Rayleigh receiver. The FSR will be characterized at ground and shall remain stable throughout the mission lifetime.</cd:Description>
+                                    <cd:Unit>GHz</cd:Unit>
+                                    <cd:NativeType>double</cd:NativeType>
+                                  </cd:Float>
+                                </cd:Type>
+                              </cd:Field>
+                              <cd:Field name="FWHM">
+                                <cd:Type namexml="FWHM">
+                                  <cd:Attribute name="unit"/>
+                                  <cd:Float format="ascii">
+                                    <cd:Description>Initial value for the estimation of the Full-Width-Half-Max of the T_A and T_B</cd:Description>
+                                    <cd:Unit>MHz</cd:Unit>
+                                    <cd:NativeType>double</cd:NativeType>
+                                    <ct:NamedTest id="Range1400To1600"/>
+                                  </cd:Float>
+                                </cd:Type>
+                              </cd:Field>
+                              <cd:Field name="Delta_F_Int_Atm">
+                                <cd:Type namexml="Delta_F_Int_Atm">
+                                  <cd:Attribute name="unit"/>
+                                  <cd:Float format="ascii">
+                                    <cd:Description>TBD</cd:Description>
+                                    <cd:Unit>MHz</cd:Unit>
+                                    <cd:NativeType>double</cd:NativeType>
+                                    <!-- TODO tests needed? -->
+                                  </cd:Float>
+                                </cd:Type>
+                              </cd:Field>
+                            </cd:Record>
+                          </cd:Field>
+                          <cd:Field name="Fizeau">
+                            <cd:Record namexml="Fizeau">
+                              <cd:Field name="FSR">
+                                <cd:Type namexml="FSR">
+                                  <cd:Attribute name="unit"/>
+                                  <cd:Float format="ascii">
+                                    <cd:Description>Initial value for the estimation of the FSR of the Fizeau.</cd:Description>
+                                    <cd:Unit>GHz</cd:Unit>
+                                    <cd:NativeType>double</cd:NativeType>
+                                  </cd:Float>
+                                </cd:Type>
+                              </cd:Field>
+                              <cd:Field name="Fiz_Reflec_Model">
+                                <cd:Text namexml="Fiz_Reflec_Model">
+                                  <cd:Description>Takes the value 'E2S' or 'DLR'. Sets the model used for the reflection on the Fizeau in the ISR fitting procedure</cd:Description>
+                                </cd:Text>
+                              </cd:Field>
+                            </cd:Record>
+                          </cd:Field>
+                          <cd:Field name="Df">
+                            <cd:Type namexml="Df">
+                              <cd:Attribute name="unit">
+                                <cd:Optional/>
+                                <cd:FixedValue>MHz</cd:FixedValue>
+                              </cd:Attribute>
+                              <cd:Float format="ascii">
+                                <cd:Description>Frequency resolution of CSR computation</cd:Description>
+                                <cd:Unit>MHz</cd:Unit>
+                                <cd:NativeType>double</cd:NativeType>
+                                <ct:NamedTest id="ValueLessThanOrEqualTo25"/>
+                              </cd:Float>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="Ref_Grid">
+                            <cd:Record namexml="Ref_Grid">
+                              <cd:Field name="Dz_Ref">
+                                <cd:Type namexml="Dz_Ref">
+                                  <cd:Attribute name="unit">
+                                    <cd:Optional/>
+                                    <cd:FixedValue>m</cd:FixedValue>
+                                  </cd:Attribute>
+                                  <cd:Integer format="ascii">
+                                    <cd:Description>Vertical resolution</cd:Description>
+                                    <cd:Unit>m</cd:Unit>
+                                    <cd:NativeType>uint16</cd:NativeType>
+                                    <ct:NamedTest id="IntLessThanOrEqualTo25"/>
+                                  </cd:Integer>
+                                </cd:Type>
+                              </cd:Field>
+                              <cd:Field name="Zref_Min">
+                                <cd:Type namexml="Zref_Min">
+                                  <cd:Attribute name="unit">
+                                    <cd:Optional/>
+                                    <cd:FixedValue>m</cd:FixedValue>
+                                  </cd:Attribute>
+                                  <cd:Integer format="ascii">
+                                    <cd:Description>Minimum altitude (above WGS84 geoid)</cd:Description>
+                                    <cd:Unit>m</cd:Unit>
+                                    <cd:NativeType>uint16</cd:NativeType>
+                                    <ct:NamedTest id="IntLessThanOrEqualToZero"/>
+                                  </cd:Integer>
+                                </cd:Type>
+                              </cd:Field>
+                              <cd:Field name="Zref_Max">
+                                <cd:Type namexml="Zref_Max">
+                                  <cd:Attribute name="unit">
+                                    <cd:Optional/>
+                                    <cd:FixedValue>m</cd:FixedValue>
+                                  </cd:Attribute>
+                                  <cd:Integer format="ascii">
+                                    <cd:Description>Maximum altitude (above WGS84 geoid)</cd:Description>
+                                    <cd:Unit>m</cd:Unit>
+                                    <cd:NativeType>uint16</cd:NativeType>
+                                    <ct:NamedTest id="IntGreaterThanOrEqualTo30000"/>
+                                  </cd:Integer>
+                                </cd:Type>
+                              </cd:Field>
+                            </cd:Record>
+                          </cd:Field>
+                          <cd:Field name="Matchup">
+                            <cd:Record namexml="Matchup">
+                              <cd:Field name="Range_Max">
+                                <cd:Type namexml="Range_Max">
+                                  <cd:Attribute name="unit">
+                                    <cd:Optional/>
+                                    <cd:FixedValue>km</cd:FixedValue>
+                                  </cd:Attribute>
+                                  <cd:Float format="ascii">
+                                    <cd:Description>Maximum distance between an AUX_MET profile and a RRC observation.</cd:Description>
+                                    <cd:Unit>km</cd:Unit>
+                                    <cd:NativeType>double</cd:NativeType>
+                                    <ct:NamedTest id="ValueLessThanOrEqualTo200"/>
+                                  </cd:Float>
+                                </cd:Type>
+                              </cd:Field>
+                              <cd:Field name="Time_Max">
+                                <cd:Type namexml="Time_Max">
+                                  <cd:Attribute name="unit">
+                                    <cd:Optional/>
+                                    <cd:FixedValue>s</cd:FixedValue>
+                                  </cd:Attribute>
+                                  <cd:Float format="ascii">
+                                    <cd:Description>Maximum time difference between an AUX_MET profile and a RRC observation.</cd:Description>
+                                    <cd:Unit>s</cd:Unit>
+                                    <cd:NativeType>double</cd:NativeType>
+                                    <ct:NamedTest id="ValueLessThanOrEqualTo60"/>
+                                  </cd:Float>
+                                </cd:Type>
+                              </cd:Field>
+                            </cd:Record>
+                          </cd:Field>
+                          <cd:Field name="RBC_Spec_Model">
+                            <cd:Text namexml="RBC_Spec_Model">
+                              <cd:Description>Name of the spectral model for molecular return. Can take the value TENTI or GAUSS</cd:Description>
+                            </cd:Text>
+                          </cd:Field>
+                          <cd:Field name="Simplex_Fit">
+                            <cd:Record namexml="Simplex_Fit">
+                              <cd:Field name="Generate">
+                                <cd:Record namexml="Generate">
+                                  <cd:Field name="Max_Iterations">
+                                    <cd:Type namexml="Max_Iterations">
+                                      <cd:Integer format="ascii">
+                                        <cd:Description>Maximum number of iterations for Simplex Fit.</cd:Description>
+                                        <cd:NativeType>uint32</cd:NativeType>
+                                      </cd:Integer>
+                                    </cd:Type>
+                                  </cd:Field>
+                                  <cd:Field name="Tolerance">
+                                    <cd:Type namexml="Tolerance">
+                                      <cd:Float format="ascii">
+                                        <cd:Description>Tolerance for Simplex Fit.</cd:Description>
+                                        <cd:NativeType>double</cd:NativeType>
+                                      </cd:Float>
+                                    </cd:Type>
+                                  </cd:Field>
+                                </cd:Record>
+                              </cd:Field>
+                              <cd:Field name="Update">
+                                <cd:Record namexml="Update">
+                                  <cd:Field name="Max_Iterations">
+                                    <cd:Type namexml="Max_Iterations">
+                                      <cd:Integer format="ascii">
+                                        <cd:Description>Maximum number of iterations for Simplex Fit.</cd:Description>
+                                        <cd:NativeType>uint32</cd:NativeType>
+                                      </cd:Integer>
+                                    </cd:Type>
+                                  </cd:Field>
+                                  <cd:Field name="Tolerance">
+                                    <cd:Type namexml="Tolerance">
+                                      <cd:Float format="ascii">
+                                        <cd:Description>Tolerance for Simplex Fit.</cd:Description>
+                                        <cd:NativeType>double</cd:NativeType>
+                                      </cd:Float>
+                                    </cd:Type>
+                                  </cd:Field>
+                                </cd:Record>
+                              </cd:Field>
+                            </cd:Record>
+                          </cd:Field>
+                          <cd:Field name="Max_TopHat_Tilt_Range">
+                            <cd:Type namexml="Max_TopHat_Tilt_Range">
+                              <cd:Float format="ascii">
+                                <cd:Description>Maximum of the absolute value of the tilt parameter of the top-hat used for simulating the beam etendue effect on the transmission of the Fabry-Perot interferometers</cd:Description>
+                                <cd:NativeType>double</cd:NativeType>
+                              </cd:Float>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="Thresholds">
+                            <cd:Record namexml="Thresholds">
+                              <cd:Field name="Min_Freq_Steps_Valid">
+                                <cd:Type namexml="Min_Freq_Steps_Valid">
+                                  <cd:Integer format="ascii">
+                                    <cd:Description>Minimum number of valid frequency steps (valid RRC data and valid AUX_MET profile) required for the update of the CSR to be carried out</cd:Description>
+                                    <cd:NativeType>uint8</cd:NativeType>
+                                    <ct:NamedTest id="IntGreaterThanOrEqualTo35"/>
+                                  </cd:Integer>
+                                </cd:Type>
+                              </cd:Field>
+                              <cd:Field name="Fraction_Valid_CSR">
+                                <cd:Type namexml="Fraction_Valid_CSR">
+                                  <cd:Attribute name="unit">
+                                    <cd:Optional/>
+                                    <cd:FixedValue>%</cd:FixedValue>
+                                  </cd:Attribute>
+                                  <cd:Integer format="ascii">
+                                    <cd:Description>Fraction of RRC frequency steps closest to CSR-based Rayleigh response prediction considered for validating the CSR.</cd:Description>
+                                    <cd:Unit>%</cd:Unit>
+                                    <cd:NativeType>uint8</cd:NativeType>
+                                  </cd:Integer>
+                                </cd:Type>
+                              </cd:Field>
+                              <cd:Field name="Offset">
+                                <cd:Type namexml="Offset">
+                                  <cd:Attribute name="unit">
+                                    <cd:Optional/>
+                                    <cd:FixedValue>m/s</cd:FixedValue>
+                                  </cd:Attribute>
+                                  <cd:Float format="ascii">
+                                    <cd:Description>Parameter setting the max difference between the offsets of the predicted and observed Rayleigh response.</cd:Description>
+                                    <cd:Unit>m/s</cd:Unit>
+                                    <cd:NativeType>double</cd:NativeType>
+                                    <ct:NamedTest id="ValueLessThanOrEqualTo1"/>
+                                  </cd:Float>
+                                </cd:Type>
+                              </cd:Field>
+                              <cd:Field name="Slope">
+                                <cd:Type namexml="Slope">
+                                  <cd:Float format="ascii">
+                                    <cd:Description>Maximum of the relative error on the Rayleigh response slope</cd:Description>
+                                    <cd:NativeType>double</cd:NativeType>
+                                    <ct:NamedTest id="ValueLessThanOrEqualTo001"/>
+                                  </cd:Float>
+                                </cd:Type>
+                              </cd:Field>
+                              <cd:Field name="Min_Useful_Signal">
+                                <cd:Type namexml="Min_Useful_Signal">
+                                  <cd:Float format="ascii">
+                                    <cd:Description>Value the height-bin useful signals of a RRC frequency step must exceed in order to keep this frequency step in the CSR updating procedure</cd:Description>
+                                    <cd:NativeType>double</cd:NativeType>
+                                  </cd:Float>
+                                </cd:Type>
+                              </cd:Field>
+                            </cd:Record>
+                          </cd:Field>
+                          <cd:Field name="Ref_Profile">
+                            <cd:Record namexml="Ref_Profile">
+                              <cd:Field name="List_of_Atm_Profiles">
+                                <cd:Record namexml="List_of_Atm_Profiles">
+                                  <cd:Attribute name="count"> </cd:Attribute>
+                                  <cd:Field name="Atm_Profile">
+                                    <cd:Array>
+                                      <cd:Dimension/>
+                                      <cd:Record namexml="Atm_Profile">
+                                        <cd:Field name="Altitude">
+                                          <cd:Type namexml="Altitude">
+                                            <cd:Attribute name="unit">
+                                              <cd:Optional/>
+                                              <cd:FixedValue>m</cd:FixedValue>
+                                            </cd:Attribute>
+                                            <cd:Float format="ascii">
+                                              <cd:Description>Altitude (WGS84)</cd:Description>
+                                              <cd:Unit>m</cd:Unit>
+                                              <cd:NativeType>double</cd:NativeType>
+                                            </cd:Float>
+                                          </cd:Type>
+                                        </cd:Field>
+                                        <cd:Field name="Pressure">
+                                          <cd:Type namexml="Pressure">
+                                            <cd:Attribute name="unit">
+                                              <cd:Optional/>
+                                              <cd:FixedValue>Pa</cd:FixedValue>
+                                            </cd:Attribute>
+                                            <cd:Float format="ascii">
+                                              <cd:Description>Pressure</cd:Description>
+                                              <cd:Unit>Pa</cd:Unit>
+                                              <cd:NativeType>double</cd:NativeType>
+                                            </cd:Float>
+                                          </cd:Type>
+                                        </cd:Field>
+                                        <cd:Field name="Temperature">
+                                          <cd:Type namexml="Temperature">
+                                            <cd:Attribute name="unit">
+                                              <cd:Optional/>
+                                              <cd:FixedValue>C</cd:FixedValue>
+                                            </cd:Attribute>
+                                            <cd:Float format="ascii">
+                                              <cd:Description>Temperature</cd:Description>
+                                              <cd:Unit>C</cd:Unit>
+                                              <cd:NativeType>double</cd:NativeType>
+                                            </cd:Float>
+                                          </cd:Type>
+                                        </cd:Field>
+                                      </cd:Record>
+                                      <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                                    </cd:Array>
+                                  </cd:Field>
+                                </cd:Record>
+                              </cd:Field>
+                            </cd:Record>
+                          </cd:Field>
+                          <cd:Field name="PRR_Params">
+                            <cd:Record namexml="PRR_Params">
+                              <cd:Field name="Sat_Alt">
+                                <cd:Type namexml="Sat_Alt">
+                                  <cd:Attribute name="unit">
+                                    <cd:Optional/>
+                                    <cd:FixedValue>m</cd:FixedValue>
+                                  </cd:Attribute>
+                                  <cd:Integer format="ascii">
+                                    <cd:Description>Satellite altitude</cd:Description>
+                                    <cd:Unit>m</cd:Unit>
+                                    <cd:NativeType>uint32</cd:NativeType>
+                                  </cd:Integer>
+                                </cd:Type>
+                              </cd:Field>
+                              <cd:Field name="Zmin">
+                                <cd:Type namexml="Zmin">
+                                  <cd:Attribute name="unit">
+                                    <cd:Optional/>
+                                    <cd:FixedValue>m</cd:FixedValue>
+                                  </cd:Attribute>
+                                  <cd:Integer format="ascii">
+                                    <cd:Description>Minimum altitude of PRR computation</cd:Description>
+                                    <cd:Unit>m</cd:Unit>
+                                    <cd:NativeType>int32</cd:NativeType>
+                                  </cd:Integer>
+                                </cd:Type>
+                              </cd:Field>
+                              <cd:Field name="Zmax">
+                                <cd:Type namexml="Zmax">
+                                  <cd:Attribute name="unit">
+                                    <cd:Optional/>
+                                    <cd:FixedValue>m</cd:FixedValue>
+                                  </cd:Attribute>
+                                  <cd:Integer format="ascii">
+                                    <cd:Description>Maximum altitude of PRR computation</cd:Description>
+                                    <cd:Unit>m</cd:Unit>
+                                    <cd:NativeType>int32</cd:NativeType>
+                                  </cd:Integer>
+                                </cd:Type>
+                              </cd:Field>
+                              <cd:Field name="List_of_Freq_Offsets">
+                                <cd:Record namexml="List_of_Freq_Offsets">
+                                  <cd:Attribute name="count"/>
+                                  <cd:Field name="Freq_Offset">
+                                    <cd:Array>
+                                      <cd:Dimension/>
+                                      <cd:Type namexml="Freq_Offset">
+                                        <cd:Attribute name="unit">
+                                          <cd:Optional/>
+                                          <cd:FixedValue>GHz</cd:FixedValue>
+                                        </cd:Attribute>
+                                        <cd:Float format="ascii">
+                                          <cd:Description>Frequency Offset</cd:Description>
+                                          <cd:Unit>GHz</cd:Unit>
+                                          <cd:NativeType>double</cd:NativeType>
+                                        </cd:Float>
+                                      </cd:Type>
+                                      <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                                    </cd:Array>
+                                  </cd:Field>
+                                </cd:Record>
+                              </cd:Field>
+                            </cd:Record>
+                          </cd:Field>
+                        </cd:Record>
+                        <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                      </cd:Array>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+              </cd:Record>
+            </cd:Field>
+          </cd:Record>
+        </cd:Field>
+      </cd:Record>
+    </cd:Field>
+  </cd:Record>
+</cd:ProductDefinition>
