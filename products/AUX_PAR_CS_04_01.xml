@@ -74,7 +74,7 @@
                                 <cd:Type namexml="Delta_F_Int_Atm">
                                   <cd:Attribute name="unit"/>
                                   <cd:Float format="ascii">
-                                    <cd:Description>TBD</cd:Description>
+                                    <cd:Description>Frequency shift between the internal and atmospheric paths caused by a potential misalignment of the illuminating beams on the two channels of the receiver. (TBC)</cd:Description>
                                     <cd:Unit>MHz</cd:Unit>
                                     <cd:NativeType>double</cd:NativeType>
                                     <!-- TODO tests needed? -->

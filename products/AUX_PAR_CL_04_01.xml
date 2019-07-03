@@ -90,10 +90,9 @@
                                 <cd:Type namexml="Nominal_Laser_Freq_Offset">
                                   <cd:Attribute name="unit"/>
                                   <cd:Integer format="ascii">
-                                    <cd:Description>TBD</cd:Description>
+                                    <cd:Description>Laser frequency offset</cd:Description>
                                     <cd:Unit>MHz</cd:Unit>
-                                    <cd:NativeType>uint16</cd:NativeType> <!-- TODO confirm -->
-                                    <!--ct:NamedTest id="IntLessThanOrEqualTo25"/-->
+                                    <cd:NativeType>uint32</cd:NativeType>
                                   </cd:Integer>
                                 </cd:Type>
                               </cd:Field>
