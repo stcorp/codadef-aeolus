@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" name="Specific_Product_Header_AUX_CSR_04_01" format="xml" namexml="Specific_Product_Header" last-modified="2019-07-03">
+  <cd:Description>Specific Product Header for AUX_CSR products</cd:Description>
+  <cd:Field name="Sph_Descriptor">
+    <cd:Text namexml="Sph_Descriptor">
+      <cd:Description>SPH descriptor: ASCII string describing the product</cd:Description>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="Spare_1">
+    <cd:Hidden/>
+    <cd:Text namexml="Spare_1">
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="Base_Laser_Frequency">
+    <cd:Type namexml="Base_Laser_Frequency">
+      <cd:Attribute name="unit">
+        <cd:Optional/>
+        <cd:FixedValue>GHz</cd:FixedValue>
+      </cd:Attribute>
+      <cd:Float format="ascii">
+        <cd:Description>Base Laser Transmit Frequency</cd:Description>
+        <cd:Unit>GHz</cd:Unit>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Num_Freq_ISR">
+    <cd:Type namexml="Num_Freq_ISR">
+      <cd:Integer format="ascii">
+        <cd:Description>Number of frequency steps reported in the ISR GADS of the file.</cd:Description>
+        <cd:NativeType>uint32</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Num_Freq_CSR">
+    <cd:Type namexml="Num_Freq_CSR">
+      <cd:Integer format="ascii">
+        <cd:Description>Number of frequency steps for which the transmission of FPs A and B are characterized in the CSR GADS. The number depends on the frequency resolution and the value of the Free Spectral Range. With FSR = 10950MHz and Df=25MHz we have Num_Freq=877.</cd:Description>
+        <cd:NativeType>uint32</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Checked_Against_RRC">
+    <cd:Type namexml="Checked_Against_RRC">
+      <cd:Integer format="ascii">
+        <cd:Description>This field is true or false. It is false if the current AUX_CSR has been obtained  direclty from the AUX_ISR without comparison to an RRC. It is true if a comparison with an RRC has been made.</cd:Description>
+        <cd:NativeType>uint8</cd:NativeType>
+        <cd:Mapping string="FALSE" value="0"/>
+        <cd:Mapping string="False" value="0"/>
+        <cd:Mapping string="false" value="0"/>
+        <cd:Mapping string="TRUE" value="1"/>
+        <cd:Mapping string="True" value="1"/>
+        <cd:Mapping string="true" value="1"/>
+        <ct:NamedTest id="BooleanXmlTest"/>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Width">
+    <cd:Type namexml="Width">
+      <cd:Attribute name="unit">
+        <cd:Optional/>
+        <cd:FixedValue>MHz</cd:FixedValue>
+      </cd:Attribute>
+      <cd:Float format="ascii">
+        <cd:Description>Width in MHz of the top-hat function that has been applied to the currently valid ISR in order to modify the transmission curves TA and TB of FPs A and B. If no correction has been applied (that is the case when the AUX_CSR is computed directly from the ISR, or if a comparison has been carried nout with a RRC that has shown no modification is necessary), it is equal to 0.</cd:Description>
+        <cd:Unit>MHz</cd:Unit>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Tilt">
+    <cd:Type namexml="Tilt">
+      <cd:Float format="ascii">
+        <cd:Description>Tilt of the top-hat function hat has been applied to the currently valid ISR in order to modify the transmission curves TA and TB of FPs A and B. If no correction has been applied (that is the case when the AUX_CSR is computed directly from the ISR, or if a comparison has been carried out with a RRC that has shown no modification is necessary), it is equal to 0.</cd:Description>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Delta_F_Int_Atm">
+    <cd:Type namexml="Delta_F_Int_Atm">
+      <cd:Float format="ascii">
+        <cd:Description>Frequency shift between the internal and atmospheric paths caused by a potential misalignment of the illuminating beams on the two channels of the receiver. (TBC)</cd:Description>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="List_of_Dsds">
+    <cd:NamedType id="List_of_Dsds"/>
+  </cd:Field>
+</cd:Record>

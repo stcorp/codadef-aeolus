@@ -1671,6 +1671,12 @@
         <cd:MatchData path="/{http://www.esa.int/schemas/ae/AUX_CSR_1B}Earth_Explorer_File@schemaversion">03.03</cd:MatchData>
       </cd:DetectionRule>
     </cd:ProductDefinition>
+    <cd:ProductDefinition id="AUX_CSR_1B_04_01" format="xml" version="3">
+      <cd:Description>This definition is based on version 4.1.1 (TBC) of 'Generation of AUX_CSR' AE-TN-MFG-L2P-CAL-003</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchData path="/{http://www.esa.int/schemas/ae/AUX_CSR_1B}Earth_Explorer_File@schemaversion">4.1</cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
   </cd:ProductType>
   <cd:ProductType name="AUX_PARCSR">
     <cd:Description>AUX_CSR processor settings (EEF)</cd:Description>
@@ -1720,6 +1726,12 @@
       <cd:Description>This definition is based on version 3.3 of 'Generation of AUX_CSR' AE-TN-MFG-L2P-CAL-003</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData path="/{http://www.esa.int/schemas/ae/AUX_PRR_1B}Earth_Explorer_File@schemaversion">03.03</cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+    <cd:ProductDefinition id="AUX_PRR_1B_04_01" format="xml" version="3">
+      <cd:Description>This definition is based on version 4.1 of 'Generation of AUX_CSR' AE-TN-MFG-L2P-CAL-003</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchData path="/{http://www.esa.int/schemas/ae/AUX_PRR_1B}Earth_Explorer_File@schemaversion">4.1</cd:MatchData>
       </cd:DetectionRule>
     </cd:ProductDefinition>
   </cd:ProductType>
