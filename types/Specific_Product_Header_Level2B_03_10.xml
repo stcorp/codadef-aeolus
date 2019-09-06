@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="xml" last-modified="2019-03-26" name="Specific_Product_Header_Level2B_03_10" namexml="Specific_Product_Header">
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="xml" last-modified="2019-09-06" name="Specific_Product_Header_Level2B_03_10" namexml="Specific_Product_Header">
   <cd:Description>Specific Product Header for ALD Level 2B products</cd:Description>
   <cd:Field name="Sph_Descriptor">
     <cd:Text namexml="Sph_Descriptor">
@@ -185,7 +185,7 @@
       </cd:Field>
     </cd:Record>
   </cd:Field>
-  <cd:Field name="List_of_valid_Rayleigh_profiles">
+  <cd:Field name="List_of_valid_Rayleigh_profile_counts">
     <cd:Record namexml="List_of_valid_Rayleigh_profile_counts">
       <cd:Attribute name="count"/>
       <cd:Field name="valid_Rayleight_profile_count">
