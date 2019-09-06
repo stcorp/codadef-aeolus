@@ -1,0 +1,18 @@
+<cd:Array xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="xml" last-modified="2019-09-06" name="Level_2BC_Count_Type_XML_03_20">
+  <cd:Dimension>5</cd:Dimension>
+  <cd:Record>
+    <cd:Field name="Classification_Type">
+      <cd:Integer format="ascii">
+        <cd:Description>Classification type for which the current counts are reported</cd:Description>
+        <cd:NativeType>uint8</cd:NativeType>
+      </cd:Integer>
+    </cd:Field>
+    <cd:Field name="Count">
+      <cd:Integer format="ascii">
+        <cd:Description>Count of the amount of winds or profiles reported for the current classification type</cd:Description>
+        <cd:NativeType>uint32</cd:NativeType>
+      </cd:Integer>
+    </cd:Field>
+  </cd:Record>
+  <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+</cd:Array>
