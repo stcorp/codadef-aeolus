@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="xml" last-modified="2019-03-26" name="Specific_Product_Header_Level2C_03_10" namexml="Specific_Product_Header">
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="xml" last-modified="2019-09-06" name="Specific_Product_Header_Level2C_03_10" namexml="Specific_Product_Header">
   <cd:Description>Specific Product Header for ALD Level 2C products</cd:Description>
   <cd:Field name="Sph_Descriptor">
     <cd:Text namexml="Sph_Descriptor">
@@ -164,7 +164,7 @@
     <cd:Record namexml="List_of_valid_Mie_profile_counts">
       <cd:Attribute name="count"/>
       <cd:Field name="valid_Mie_profile_count">
-        <cd:NamedType id="Level_2BC_Count_Type_XML"/>
+        <cd:NamedType id="Level_2BC_Count_Type_XML_03_10"/>
       </cd:Field>
     </cd:Record>
   </cd:Field>
@@ -172,7 +172,7 @@
     <cd:Record namexml="List_of_valid_Rayleigh_profile_counts">
       <cd:Attribute name="count"/>
       <cd:Field name="valid_Rayleigh_profile_count">
-        <cd:NamedType id="Level_2BC_Count_Type_XML"/>
+        <cd:NamedType id="Level_2BC_Count_Type_XML_03_10"/>
       </cd:Field>
     </cd:Record>
   </cd:Field>
@@ -180,7 +180,7 @@
     <cd:Record namexml="List_of_invalid_Mie_profile_counts">
       <cd:Attribute name="count"/>
       <cd:Field name="invalid_Mie_profile_count">
-        <cd:NamedType id="Level_2BC_Count_Type_XML"/>
+        <cd:NamedType id="Level_2BC_Count_Type_XML_03_10"/>
       </cd:Field>
     </cd:Record>
   </cd:Field>
@@ -188,7 +188,7 @@
     <cd:Record namexml="List_of_invalid_Rayleigh_profile_counts">
       <cd:Attribute name="count"/>
       <cd:Field name="invalid_Rayleigh_profile_count">
-        <cd:NamedType id="Level_2BC_Count_Type_XML"/>
+        <cd:NamedType id="Level_2BC_Count_Type_XML_03_10"/>
       </cd:Field>
     </cd:Record>
   </cd:Field>
@@ -212,7 +212,7 @@
     <cd:Record namexml="List_of_valid_L2B_Mie_Wind_counts">
       <cd:Attribute name="count"/>
       <cd:Field name="valid_L2B_Mie_Wind_count">
-        <cd:NamedType id="Level_2BC_Count_Type_XML"/>
+        <cd:NamedType id="Level_2BC_Count_Type_XML_03_10"/>
       </cd:Field>
     </cd:Record>
   </cd:Field>
@@ -220,7 +220,7 @@
     <cd:Record namexml="List_of_valid_L2B_Rayleigh_Wind_counts">
       <cd:Attribute name="count"/>
       <cd:Field name="valid_L2B_Rayleigh_Wind_count">
-        <cd:NamedType id="Level_2BC_Count_Type_XML"/>
+        <cd:NamedType id="Level_2BC_Count_Type_XML_03_10"/>
       </cd:Field>
     </cd:Record>
   </cd:Field>
@@ -228,7 +228,7 @@
     <cd:Record namexml="List_of_invalid_L2B_Mie_Wind_counts">
       <cd:Attribute name="count"/>
       <cd:Field name="invalid_L2B_Mie_Wind_count">
-        <cd:NamedType id="Level_2BC_Count_Type_XML"/>
+        <cd:NamedType id="Level_2BC_Count_Type_XML_03_10"/>
       </cd:Field>
     </cd:Record>
   </cd:Field>
@@ -236,7 +236,7 @@
     <cd:Record namexml="List_of_invalid_L2B_Rayleigh_Wind_counts">
       <cd:Attribute name="count"/>
       <cd:Field name="invalid_L2B_Rayleigh_Wind_count">
-        <cd:NamedType id="Level_2BC_Count_Type_XML"/>
+        <cd:NamedType id="Level_2BC_Count_Type_XML_03_10"/>
       </cd:Field>
     </cd:Record>
   </cd:Field>
@@ -249,7 +249,7 @@
     <cd:Record namexml="List_of_valid_L2C_Mie_Wind_counts">
       <cd:Attribute name="count"/>
       <cd:Field name="valid_L2C_Mie_Wind_count">
-        <cd:NamedType id="Level_2BC_Count_Type_XML"/>
+        <cd:NamedType id="Level_2BC_Count_Type_XML_03_10"/>
       </cd:Field>
     </cd:Record>
   </cd:Field>
@@ -257,7 +257,7 @@
     <cd:Record namexml="List_of_valid_L2C_Rayleigh_Wind_counts">
       <cd:Attribute name="count"/>
       <cd:Field name="valid_L2C_Rayleigh_Wind_count">
-        <cd:NamedType id="Level_2BC_Count_Type_XML"/>
+        <cd:NamedType id="Level_2BC_Count_Type_XML_03_10"/>
       </cd:Field>
     </cd:Record>
   </cd:Field>
@@ -265,7 +265,7 @@
     <cd:Record namexml="List_of_invalid_L2C_Mie_Wind_counts">
       <cd:Attribute name="count"/>
       <cd:Field name="invalid_L2C_Mie_Wind_count">
-        <cd:NamedType id="Level_2BC_Count_Type_XML"/>
+        <cd:NamedType id="Level_2BC_Count_Type_XML_03_10"/>
       </cd:Field>
     </cd:Record>
   </cd:Field>
@@ -273,7 +273,7 @@
     <cd:Record namexml="List_of_invalid_L2C_Rayleigh_Wind_counts">
       <cd:Attribute name="count"/>
       <cd:Field name="invalid_L2C_Rayleigh_Wind_count">
-        <cd:NamedType id="Level_2BC_Count_Type_XML"/>
+        <cd:NamedType id="Level_2BC_Count_Type_XML_03_10"/>
       </cd:Field>
     </cd:Record>
   </cd:Field>

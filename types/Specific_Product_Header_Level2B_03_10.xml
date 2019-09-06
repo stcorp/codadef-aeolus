@@ -164,49 +164,15 @@
     <cd:Record namexml="List_of_valid_Mie_profile_counts">
       <cd:Attribute name="count"/>
       <cd:Field name="valid_Mie_profile_count">
-        <cd:Array>
-          <cd:Dimension>5</cd:Dimension>
-          <cd:Record namexml="valid_Mie_profile_count">
-            <cd:Field name="classification_type">
-              <cd:Integer format="ascii">
-                <cd:Description>Classification type for which the current counts are reported</cd:Description>
-                <cd:NativeType>uint8</cd:NativeType>
-              </cd:Integer>
-            </cd:Field>
-            <cd:Field name="count">
-              <cd:Integer format="ascii">
-                <cd:Description>Count of the amount of winds or profiles reported for the current classification type</cd:Description>
-                <cd:NativeType>uint32</cd:NativeType>
-              </cd:Integer>
-            </cd:Field>
-          </cd:Record>
-          <ct:NamedTest id="ValueOfCountAttributeForParent"/>
-        </cd:Array>
+        <cd:NamedType id="Level_2BC_Count_Type_XML_03_10"/>
       </cd:Field>
     </cd:Record>
   </cd:Field>
   <cd:Field name="List_of_valid_Rayleigh_profile_counts">
     <cd:Record namexml="List_of_valid_Rayleigh_profile_counts">
       <cd:Attribute name="count"/>
-      <cd:Field name="valid_Rayleight_profile_count">
-        <cd:Array>
-          <cd:Dimension>5</cd:Dimension>
-          <cd:Record namexml="valid_Rayleigh_profile_count">
-            <cd:Field name="classification_type">
-              <cd:Integer format="ascii">
-                <cd:Description>Classification type for which the current counts are reported</cd:Description>
-                <cd:NativeType>uint8</cd:NativeType>
-              </cd:Integer>
-            </cd:Field>
-            <cd:Field name="count">
-              <cd:Integer format="ascii">
-                <cd:Description>Count of the amount of winds or profiles reported for the current classification type</cd:Description>
-                <cd:NativeType>uint32</cd:NativeType>
-              </cd:Integer>
-            </cd:Field>
-          </cd:Record>
-          <ct:NamedTest id="ValueOfCountAttributeForParent"/>
-        </cd:Array>
+      <cd:Field name="valid_Rayleigh_profile_count">
+        <cd:NamedType id="Level_2BC_Count_Type_XML_03_10"/>
       </cd:Field>
     </cd:Record>
   </cd:Field>
@@ -214,49 +180,15 @@
     <cd:Record namexml="List_of_invalid_Mie_profile_counts">
       <cd:Attribute name="count"/>
       <cd:Field name="invalid_Mie_profile_count">
-        <cd:Array>
-          <cd:Dimension>5</cd:Dimension>
-          <cd:Record namexml="invalid_Mie_profile_count">
-            <cd:Field name="classification_type">
-              <cd:Integer format="ascii">
-                <cd:Description>Classification type for which the current counts are reported</cd:Description>
-                <cd:NativeType>uint8</cd:NativeType>
-              </cd:Integer>
-            </cd:Field>
-            <cd:Field name="count">
-              <cd:Integer format="ascii">
-                <cd:Description>Count of the amount of winds or profiles reported for the current classification type</cd:Description>
-                <cd:NativeType>uint32</cd:NativeType>
-              </cd:Integer>
-            </cd:Field>
-          </cd:Record>
-          <ct:NamedTest id="ValueOfCountAttributeForParent"/>
-        </cd:Array>
+        <cd:NamedType id="Level_2BC_Count_Type_XML_03_10"/>
       </cd:Field>
     </cd:Record>
   </cd:Field>
   <cd:Field name="List_of_invalid_Rayleigh_profile_counts">
     <cd:Record namexml="List_of_invalid_Rayleigh_profile_counts">
       <cd:Attribute name="count"/>
-      <cd:Field name="invalid_Rayleight_profile_count">
-        <cd:Array>
-          <cd:Dimension>5</cd:Dimension>
-          <cd:Record namexml="invalid_Rayleigh_profile_count">
-            <cd:Field name="classification_type">
-              <cd:Integer format="ascii">
-                <cd:Description>Classification type for which the current counts are reported</cd:Description>
-                <cd:NativeType>uint8</cd:NativeType>
-              </cd:Integer>
-            </cd:Field>
-            <cd:Field name="count">
-              <cd:Integer format="ascii">
-                <cd:Description>Count of the amount of winds or profiles reported for the current classification type</cd:Description>
-                <cd:NativeType>uint32</cd:NativeType>
-              </cd:Integer>
-            </cd:Field>
-          </cd:Record>
-          <ct:NamedTest id="ValueOfCountAttributeForParent"/>
-        </cd:Array>
+      <cd:Field name="invalid_Rayleigh_profile_count">
+        <cd:NamedType id="Level_2BC_Count_Type_XML_03_10"/>
       </cd:Field>
     </cd:Record>
   </cd:Field>
@@ -280,24 +212,7 @@
     <cd:Record namexml="List_of_valid_L2B_Mie_Wind_counts">
       <cd:Attribute name="count"/>
       <cd:Field name="valid_L2B_Mie_Wind_count">
-        <cd:Array>
-          <cd:Dimension>5</cd:Dimension>
-          <cd:Record namexml="valid_L2B_Mie_Wind_count">
-            <cd:Field name="classification_type">
-              <cd:Integer format="ascii">
-                <cd:Description>Classification type for which the current counts are reported</cd:Description>
-                <cd:NativeType>uint8</cd:NativeType>
-              </cd:Integer>
-            </cd:Field>
-            <cd:Field name="count">
-              <cd:Integer format="ascii">
-                <cd:Description>Count of the amount of winds or profiles reported for the current classification type</cd:Description>
-                <cd:NativeType>uint32</cd:NativeType>
-              </cd:Integer>
-            </cd:Field>
-          </cd:Record>
-          <ct:NamedTest id="ValueOfCountAttributeForParent"/>
-        </cd:Array>
+        <cd:NamedType id="Level_2BC_Count_Type_XML_03_10"/>
       </cd:Field>
     </cd:Record>
   </cd:Field>
@@ -305,24 +220,7 @@
     <cd:Record namexml="List_of_valid_L2B_Rayleigh_Wind_counts">
       <cd:Attribute name="count"/>
       <cd:Field name="valid_L2B_Rayleigh_Wind_count">
-        <cd:Array>
-          <cd:Dimension>5</cd:Dimension>
-          <cd:Record namexml="valid_L2B_Rayleigh_Wind_count">
-            <cd:Field name="classification_type">
-              <cd:Integer format="ascii">
-                <cd:Description>Classification type for which the current counts are reported</cd:Description>
-                <cd:NativeType>uint8</cd:NativeType>
-              </cd:Integer>
-            </cd:Field>
-            <cd:Field name="count">
-              <cd:Integer format="ascii">
-                <cd:Description>Count of the amount of winds or profiles reported for the current classification type</cd:Description>
-                <cd:NativeType>uint32</cd:NativeType>
-              </cd:Integer>
-            </cd:Field>
-          </cd:Record>
-          <ct:NamedTest id="ValueOfCountAttributeForParent"/>
-        </cd:Array>
+        <cd:NamedType id="Level_2BC_Count_Type_XML_03_10"/>
       </cd:Field>
     </cd:Record>
   </cd:Field>
@@ -330,24 +228,7 @@
     <cd:Record namexml="List_of_invalid_L2B_Mie_Wind_counts">
       <cd:Attribute name="count"/>
       <cd:Field name="invalid_L2B_Mie_Wind_count">
-        <cd:Array>
-          <cd:Dimension>5</cd:Dimension>
-          <cd:Record namexml="invalid_L2B_Mie_Wind_count">
-            <cd:Field name="classification_type">
-              <cd:Integer format="ascii">
-                <cd:Description>Classification type for which the current counts are reported</cd:Description>
-                <cd:NativeType>uint8</cd:NativeType>
-              </cd:Integer>
-            </cd:Field>
-            <cd:Field name="count">
-              <cd:Integer format="ascii">
-                <cd:Description>Count of the amount of winds or profiles reported for the current classification type</cd:Description>
-                <cd:NativeType>uint32</cd:NativeType>
-              </cd:Integer>
-            </cd:Field>
-          </cd:Record>
-          <ct:NamedTest id="ValueOfCountAttributeForParent"/>
-        </cd:Array>
+        <cd:NamedType id="Level_2BC_Count_Type_XML_03_10"/>
       </cd:Field>
     </cd:Record>
   </cd:Field>
@@ -355,24 +236,7 @@
     <cd:Record namexml="List_of_invalid_L2B_Rayleigh_Wind_counts">
       <cd:Attribute name="count"/>
       <cd:Field name="invalid_L2B_Rayleigh_Wind_count">
-        <cd:Array>
-          <cd:Dimension>5</cd:Dimension>
-          <cd:Record namexml="invalid_L2B_Rayleigh_Wind_count">
-            <cd:Field name="classification_type">
-              <cd:Integer format="ascii">
-                <cd:Description>Classification type for which the current counts are reported</cd:Description>
-                <cd:NativeType>uint8</cd:NativeType>
-              </cd:Integer>
-            </cd:Field>
-            <cd:Field name="count">
-              <cd:Integer format="ascii">
-                <cd:Description>Count of the amount of winds or profiles reported for the current classification type</cd:Description>
-                <cd:NativeType>uint32</cd:NativeType>
-              </cd:Integer>
-            </cd:Field>
-          </cd:Record>
-          <ct:NamedTest id="ValueOfCountAttributeForParent"/>
-        </cd:Array>
+        <cd:NamedType id="Level_2BC_Count_Type_XML_03_10"/>
       </cd:Field>
     </cd:Record>
   </cd:Field>

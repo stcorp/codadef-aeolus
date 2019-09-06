@@ -1,4 +1,4 @@
-<cd:Array xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="xml" last-modified="2019-03-26" name="Level_2BC_Count_Type_XML">
+<cd:Array xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="xml" last-modified="2019-09-06" name="Level_2BC_Count_Type_XML_03_10">
   <cd:Dimension>5</cd:Dimension>
   <cd:Record>
     <cd:Field name="classification_type">
@@ -14,4 +14,5 @@
       </cd:Integer>
     </cd:Field>
   </cd:Record>
+  <ct:NamedTest id="ValueOfCountAttributeForParent"/>
 </cd:Array>
