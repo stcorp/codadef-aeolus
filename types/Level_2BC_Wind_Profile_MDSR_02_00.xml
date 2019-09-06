@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="binary" last-modified="2015-07-22" name="Level_2BC_Wind_Profile_MDSR_02_00">
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="binary" last-modified="2019-09-06" name="Level_2BC_Wind_Profile_MDSR_02_00">
   <cd:Field name="start_of_obs_datetime">
     <cd:Time timeformat="binary_envisat_datetime">
       <cd:Description>Date and time of the first measurement used to compose the accumulated signals pointed at by this wind profile MDS</cd:Description>
@@ -96,7 +96,7 @@
   </cd:Field>
   <cd:Field name="l2b_wind_profiles">
     <cd:Record>
-      <cd:Description>structure containing reference id numbers of wind retrieval results associated with the cur- rent profile for a given group and classification.</cd:Description>
+      <cd:Description>structure containing reference id numbers of wind retrieval results associated with the current profile for a given group and classification.</cd:Description>
       <cd:Field name="channel">
         <cd:Integer>
           <cd:Description>Switch indicating to which channel this profile refers.</cd:Description>

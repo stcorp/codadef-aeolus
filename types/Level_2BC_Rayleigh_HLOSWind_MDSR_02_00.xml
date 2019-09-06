@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="binary" last-modified="2014-10-14" name="Level_2BC_Rayleigh_HLOSWind_MDSR_02_00">
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="binary" last-modified="2019-09-06" name="Level_2BC_Rayleigh_HLOSWind_MDSR_02_00">
   <cd:Field name="wind_result_id">
     <cd:Integer>
       <cd:Description>unique L2B Mie wind result identification number for this L2B file</cd:Description>
@@ -72,7 +72,7 @@
       </cd:Field>
       <cd:Field name="reference_pressure">
         <cd:Integer>
-          <cd:Description>Reference pressure used for inverting the Rayleigh response into an HLOS wind. This pressure information is taken from the numer- ical weather prediction model.</cd:Description>
+          <cd:Description>Reference pressure used for inverting the Rayleigh response into an HLOS wind. This pressure information is taken from the numerical weather prediction model.</cd:Description>
           <cd:Unit>Pa</cd:Unit>
           <cd:BitSize>32</cd:BitSize>
           <cd:NativeType>uint32</cd:NativeType>

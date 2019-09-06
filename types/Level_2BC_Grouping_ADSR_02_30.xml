@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="binary" last-modified="2014-10-13" name="Level_2BC_Grouping_ADSR_02_30">
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="binary" last-modified="2019-09-06" name="Level_2BC_Grouping_ADSR_02_30">
   <cd:Field name="grouping_result_id">
     <cd:Integer>
       <cd:Description>a unique id for this group in this L2B file. Each channel has its own sequence of id numbers and both start counting at 1</cd:Description>
@@ -44,7 +44,7 @@
   </cd:Field>
   <cd:Field name="reason_to_end_this_group">
     <cd:Integer>
-      <cd:Description>What criterium was used to end this group? 0: only used for internal initialisations, 1: grouping ended because end of L1B file was reached, 2: grouping ended because the vertical misalignment of rangebins between first and last measurement in the group passed the threshold defined in the L2B AuxPar file, 3: grouping ended because the horizontal distance between first and last measurement in the group passed the threshold defined in the L2B AuxPar file, 4: grouping ended because the distance between the first and last missing measurement passed the threshold de- fined in the L2B AuxPar file</cd:Description>
+      <cd:Description>What criterium was used to end this group? 0: only used for internal initialisations, 1: grouping ended because end of L1B file was reached, 2: grouping ended because the vertical misalignment of rangebins between first and last measurement in the group passed the threshold defined in the L2B AuxPar file, 3: grouping ended because the horizontal distance between first and last measurement in the group passed the threshold defined in the L2B AuxPar file, 4: grouping ended because the distance between the first and last missing measurement passed the threshold defined in the L2B AuxPar file</cd:Description>
       <cd:BitSize>8</cd:BitSize>
       <cd:NativeType>uint8</cd:NativeType>
     </cd:Integer>

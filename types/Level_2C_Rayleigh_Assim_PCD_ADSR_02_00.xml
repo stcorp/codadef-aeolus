@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" format="binary" name="Level_2C_Rayleigh_Assim_PCD_ADSR_02_00" last-modified="2014-12-04">
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" format="binary" name="Level_2C_Rayleigh_Assim_PCD_ADSR_02_00" last-modified="2019-09-06">
   <cd:Field name="wind_result_id">
     <cd:Integer>
       <cd:Description>unique L2B wind result identification number for this L2C file</cd:Description>
@@ -58,7 +58,7 @@
           </cd:Field>
           <cd:Field name="assimilation_model_pcd">
             <cd:Record>
-              <cd:Description>Structure describing product confidence for as- similation model parameters associated with the current Rayleigh wind result</cd:Description>
+              <cd:Description>Structure describing product confidence for assimilation model parameters associated with the current Rayleigh wind result</cd:Description>
               <cd:Field name="hlos_observation_errors">
                 <cd:Record>
                   <cd:Description>Structure containing error estimates assumed during L2C processing, for the current L2B HLOS observation</cd:Description>

@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="binary" name="Level_2BC_Mie_Wind_PCD_ADSR_03_10" last-modified="2019-03-27">
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="binary" name="Level_2BC_Mie_Wind_PCD_ADSR_03_10" last-modified="2019-09-06">
   <cd:Field name="wind_result_id">
     <cd:Integer>
       <cd:Description>unique L2B wind result identification number for this L2B file</cd:Description>
@@ -48,7 +48,7 @@
       </cd:Field>
       <cd:Field name="intref_fitting_amplitude">
         <cd:Float>
-          <cd:Description>Amplitude of the curve used for fitting the in- ternal reference spectrum</cd:Description>
+          <cd:Description>Amplitude of the curve used for fitting the internal reference spectrum</cd:Description>
           <cd:BitSize>64</cd:BitSize>
           <cd:NativeType>double</cd:NativeType>
         </cd:Float>
@@ -155,7 +155,7 @@
       </cd:Field>
       <cd:Field name="fitting_mie_snr">
         <cd:Float>
-          <cd:Description>SNR of the measured atmospheric Mie spec- trum</cd:Description>
+          <cd:Description>SNR of the measured atmospheric Mie spectrum</cd:Description>
           <cd:BitSize>64</cd:BitSize>
           <cd:NativeType>double</cd:NativeType>
         </cd:Float>

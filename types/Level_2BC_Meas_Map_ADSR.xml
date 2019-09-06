@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="binary" last-modified="2014-10-13" name="Level_2BC_Meas_Map_ADSR">
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="binary" last-modified="2019-09-06" name="Level_2BC_Meas_Map_ADSR">
   <cd:Field name="start_of_obs_datetime">
     <cd:Time timeformat="binary_envisat_datetime">
       <cd:Description>Start date and time of Measurement</cd:Description>
@@ -21,7 +21,7 @@
         </cd:Field>
         <cd:Field name="weight">
           <cd:Integer>
-            <cd:Description>Weight used for this L1B range bin while accu- mulating the signals used to produce the L2B wind result to which this L1B range bin con- tributed. The valid range is 0-1000</cd:Description>
+            <cd:Description>Weight used for this L1B range bin while accumulating the signals used to produce the L2B wind result to which this L1B range bin contributed. The valid range is 0-1000</cd:Description>
             <cd:BitSize>16</cd:BitSize>
             <cd:NativeType>uint16</cd:NativeType>
           </cd:Integer>
@@ -43,7 +43,7 @@
         </cd:Field>
         <cd:Field name="weight">
           <cd:Integer>
-            <cd:Description>Weight used for this L1B range bin while accu- mulating the signals used to produce the L2B wind result to which this L1B range bin con- tributed. The valid range is 0-1000</cd:Description>
+            <cd:Description>Weight used for this L1B range bin while accumulating the signals used to produce the L2B wind result to which this L1B range bin contributed. The valid range is 0-1000</cd:Description>
             <cd:BitSize>16</cd:BitSize>
             <cd:NativeType>uint16</cd:NativeType>
           </cd:Integer>
