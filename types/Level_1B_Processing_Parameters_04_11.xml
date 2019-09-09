@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="xml" last-modified="2019-09-05" name="Level_1B_Processing_Parameters_04_11" namexml="Level_1B_Processing_Parameters">
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="xml" last-modified="2019-09-09" name="Level_1B_Processing_Parameters_04_11" namexml="Level_1B_Processing_Parameters">
   <cd:Description>Level 1B Processing Parameters GADS DSR</cd:Description>
   <cd:Field name="List_of_Data_Set_Records">
     <cd:Record namexml="List_of_Data_Set_Records">
@@ -2407,6 +2407,21 @@
                   <cd:Type namexml="LOS_Velocity_Correct_Nadir">
                     <cd:Integer format="ascii">
                       <cd:Description>Correct Nadir mode measured data for satellite velocity using ideal RRC/MRC response slopes.</cd:Description>
+                      <cd:NativeType>uint8</cd:NativeType>
+                      <cd:Mapping string="FALSE" value="0"/>
+                      <cd:Mapping string="False" value="0"/>
+                      <cd:Mapping string="false" value="0"/>
+                      <cd:Mapping string="TRUE" value="1"/>
+                      <cd:Mapping string="True" value="1"/>
+                      <cd:Mapping string="true" value="1"/>
+                      <ct:NamedTest id="BooleanXmlTest"/>
+                    </cd:Integer>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="LOS_Velocity_Correct_Off_Nadir">
+                  <cd:Type namexml="LOS_Velocity_Correct_Off_Nadir">
+                    <cd:Integer format="ascii">
+                      <cd:Description>Correct Off-Nadir mode measured data for satellite velocity</cd:Description>
                       <cd:NativeType>uint8</cd:NativeType>
                       <cd:Mapping string="FALSE" value="0"/>
                       <cd:Mapping string="False" value="0"/>
