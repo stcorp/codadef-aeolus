@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:ProductClass xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" name="AEOLUS" last-modified="2019-09-06">
+<cd:ProductClass xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" name="AEOLUS" last-modified="2019-10-08">
   <cd:Description>AEOLUS products</cd:Description>
   <cd:ProductType name="ALD_U_N_0_">
     <cd:Description>Aeolus Level 0 Product (DBL)</cd:Description>
@@ -58,14 +58,6 @@
         <cd:MatchData offset="95">521666_IODD_4_09       </cd:MatchData>
       </cd:DetectionRule>
     </cd:ProductDefinition>
-    <cd:ProductDefinition id="ALD_U_N_0__04_11" format="binary" version="5">
-      <cd:Description>This definition is based on version 4/11 of IODD ADM-IC-52-1666</cd:Description>
-      <cd:DetectionRule>
-        <cd:MatchData offset="0">PRODUCT="AE_</cd:MatchData>
-        <cd:MatchData offset="17">ALD_U_N_0_</cd:MatchData>
-        <cd:MatchData offset="95">521666_IODD_4_11       </cd:MatchData>
-      </cd:DetectionRule>
-    </cd:ProductDefinition>
   </cd:ProductType>
   <cd:ProductType name="ALD_U_N_0__HDR">
     <cd:Description>Aeolus Level 0 Product (HDR)</cd:Description>
@@ -97,9 +89,6 @@
       <cd:Description>This definition is based on version 4/09 of IODD ADM-IC-52-1666</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData path="/{http://www.esa.int/schemas/ae/ALD_U_N_0_}Earth_Explorer_Header@schemaversion">04.09</cd:MatchData>
-      </cd:DetectionRule>
-      <cd:DetectionRule>
-        <cd:MatchData path="/{http://www.esa.int/schemas/ae/ALD_U_N_0_}Earth_Explorer_Header@schemaversion">04.11</cd:MatchData>
       </cd:DetectionRule>
     </cd:ProductDefinition>
   </cd:ProductType>
