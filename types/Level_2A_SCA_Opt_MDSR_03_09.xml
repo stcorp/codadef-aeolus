@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="binary" last-modified="2019-09-06" name="Level_2A_SCA_Opt_MDSR_03_09">
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="binary" last-modified="2019-10-15" name="Level_2A_SCA_Opt_MDSR_03_09">
   <cd:Field name="starttime">
     <cd:Time timeformat="binary_envisat_datetime">
       <cd:Description>Start date and time of the SCA profile covered by the present DSR</cd:Description>
@@ -121,15 +121,16 @@
       </cd:Record>
     </cd:Array>
   </cd:Field>
-  <cd:Field name="cross_talk_corrected_signals">
+  <cd:Field name="attenuated_backscatter_values">
     <cd:Array>
       <cd:Dimension>30</cd:Dimension>
       <cd:Dimension>24</cd:Dimension>
       <cd:Record>
-        <cd:Description>Structure containing containing cross-talk corrected attenuated molecular and particulate backscatter on Rayleigh height bins; missing values are indicated by -1</cd:Description>
+        <cd:Description>Structure containing containing cross-talk corrected attenuated molecular and particulate backscatter on Rayleigh height bins; missing values are indicated by 0</cd:Description>
         <cd:Field name="attenuated_molecular_backscatter">
           <cd:Float>
             <cd:Description>Attenuated molecular backscatter on Rayleigh height bin</cd:Description>
+            <cd:Unit>sr^-1 m^-1</cd:Unit>
             <cd:BitSize>64</cd:BitSize>
             <cd:NativeType>double</cd:NativeType>
           </cd:Float>
@@ -137,6 +138,7 @@
         <cd:Field name="attenuated_particulate_backscatter">
           <cd:Float>
             <cd:Description>Attenuated particulate backscatter on Rayleigh height bin</cd:Description>
+            <cd:Unit>sr^-1 m^-1</cd:Unit>
             <cd:BitSize>64</cd:BitSize>
             <cd:NativeType>double</cd:NativeType>
           </cd:Float>
