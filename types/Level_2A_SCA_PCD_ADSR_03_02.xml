@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="binary" last-modified="2018-04-03" name="Level_2A_SCA_PCD_ADSR_03_02">
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="binary" last-modified="2019-10-31" name="Level_2A_SCA_PCD_ADSR_03_02">
   <cd:Field name="starttime">
     <cd:Time timeformat="binary_envisat_datetime">
       <cd:Description>Start date and time of the SCA profile covered by the present DSR. This is the centroid time of the first measurement of the profile.</cd:Description>
@@ -32,6 +32,7 @@
             <cd:Unit>m^-2</cd:Unit>
             <cd:BitSize>64</cd:BitSize>
             <cd:NativeType>double</cd:NativeType>
+            <ct:NamedTest id="FloatIsFinite"/>
           </cd:Float>
         </cd:Field>
         <cd:Field name="backscatter_variance">
@@ -40,6 +41,7 @@
             <cd:Unit>m^-2 sr^-2</cd:Unit>
             <cd:BitSize>64</cd:BitSize>
             <cd:NativeType>double</cd:NativeType>
+            <ct:NamedTest id="FloatIsFinite"/>
           </cd:Float>
         </cd:Field>
         <cd:Field name="lod_variance">
@@ -47,6 +49,7 @@
             <cd:Description>Variance of the LOD retrieved by the SCA in this bin.</cd:Description>
             <cd:BitSize>64</cd:BitSize>
             <cd:NativeType>double</cd:NativeType>
+            <ct:NamedTest id="FloatIsFinite"/>
           </cd:Float>
         </cd:Field>
         <cd:Field name="processing_qc_flag">
@@ -70,6 +73,7 @@
             <cd:Unit>m^-2</cd:Unit>
             <cd:BitSize>64</cd:BitSize>
             <cd:NativeType>double</cd:NativeType>
+            <ct:NamedTest id="FloatIsFinite"/>
           </cd:Float>
         </cd:Field>
         <cd:Field name="backscatter_variance">
@@ -78,6 +82,7 @@
             <cd:Unit>m^-2 sr^-2</cd:Unit>
             <cd:BitSize>64</cd:BitSize>
             <cd:NativeType>double</cd:NativeType>
+            <ct:NamedTest id="FloatIsFinite"/>
           </cd:Float>
         </cd:Field>
         <cd:Field name="lod_variance">
@@ -85,6 +90,7 @@
             <cd:Description>Variance of the LOD retrieved by the SCA in these two neighbouring bins</cd:Description>
             <cd:BitSize>64</cd:BitSize>
             <cd:NativeType>double</cd:NativeType>
+            <ct:NamedTest id="FloatIsFinite"/>
           </cd:Float>
         </cd:Field>
         <cd:Field name="ber_variance">
@@ -92,6 +98,7 @@
             <cd:Description>Variance of the BER retrieved by the SCA in these two neighbouring bins</cd:Description>
             <cd:BitSize>64</cd:BitSize>
             <cd:NativeType>double</cd:NativeType>
+            <ct:NamedTest id="FloatIsFinite"/>
           </cd:Float>
         </cd:Field>
         <cd:Field name="processing_qc_flag">

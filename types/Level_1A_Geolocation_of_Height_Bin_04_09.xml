@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="binary" last-modified="2019-03-07" name="Level_1A_Geolocation_of_Height_Bin_04_09">
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="binary" last-modified="2019-10-31" name="Level_1A_Geolocation_of_Height_Bin_04_09">
   <cd:Field name="longitude_of_height_bin">
     <cd:Integer>
       <cd:Description>Longitude of the lower edge of the height bin along the line-of-sight</cd:Description>
@@ -30,6 +30,7 @@
       <cd:Unit>m</cd:Unit>
       <cd:BitSize>64</cd:BitSize>
       <cd:NativeType>double</cd:NativeType>
+      <ct:NamedTest id="FloatIsFinite"/>
     </cd:Float>
   </cd:Field>
   <cd:Field name="sattelite_range_of_height_bin">
@@ -38,6 +39,7 @@
       <cd:Unit>m</cd:Unit>
       <cd:BitSize>64</cd:BitSize>
       <cd:NativeType>double</cd:NativeType>
+      <ct:NamedTest id="FloatIsFinite"/>
     </cd:Float>
   </cd:Field>
 </cd:Record>

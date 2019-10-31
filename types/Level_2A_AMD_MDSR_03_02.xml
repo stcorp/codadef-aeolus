@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="binary" last-modified="2015-12-07" name="Level_2A_AMD_MDSR_03_02">
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="binary" last-modified="2019-10-31" name="Level_2A_AMD_MDSR_03_02">
   <cd:Field name="starttime">
     <cd:Time timeformat="binary_envisat_datetime">
       <cd:Description>BRC start time</cd:Description>
@@ -37,6 +37,7 @@
             <cd:Unit>MHz</cd:Unit>
             <cd:BitSize>64</cd:BitSize>
             <cd:NativeType>double</cd:NativeType>
+            <ct:NamedTest id="FloatIsFinite"/>
           </cd:Float>
         </cd:Field>
         <cd:Field name="relativehumidity_fp">
@@ -44,6 +45,7 @@
             <cd:Description>NWP relative humidity in current Rayleigh bin</cd:Description>
             <cd:BitSize>64</cd:BitSize>
             <cd:NativeType>double</cd:NativeType>
+            <ct:NamedTest id="FloatIsFinite"/>
           </cd:Float>
         </cd:Field>
         <cd:Field name="molecularlod_fp">
@@ -51,6 +53,7 @@
             <cd:Description>NWP-derived molecular local optical depth in current Rayleigh bin</cd:Description>
             <cd:BitSize>64</cd:BitSize>
             <cd:NativeType>double</cd:NativeType>
+            <ct:NamedTest id="FloatIsFinite"/>
           </cd:Float>
         </cd:Field>
         <cd:Field name="molecularbackscatter_fp">
@@ -59,6 +62,7 @@
             <cd:Unit>10^-6 m^-1 sr^-1</cd:Unit>
             <cd:BitSize>64</cd:BitSize>
             <cd:NativeType>double</cd:NativeType>
+            <ct:NamedTest id="FloatIsFinite"/>
           </cd:Float>
         </cd:Field>
         <cd:Field name="pressure_fiz">
@@ -86,6 +90,7 @@
             <cd:Unit>MHz</cd:Unit>
             <cd:BitSize>64</cd:BitSize>
             <cd:NativeType>double</cd:NativeType>
+            <ct:NamedTest id="FloatIsFinite"/>
           </cd:Float>
         </cd:Field>
         <cd:Field name="relativehumidity_fiz">
@@ -93,6 +98,7 @@
             <cd:Description>NWP relative humidity in current Mie bin</cd:Description>
             <cd:BitSize>64</cd:BitSize>
             <cd:NativeType>double</cd:NativeType>
+            <ct:NamedTest id="FloatIsFinite"/>
           </cd:Float>
         </cd:Field>
         <cd:Field name="molecularlod_fiz">
@@ -100,6 +106,7 @@
             <cd:Description>NWP-derived molecular local optical depth in current Mie bin</cd:Description>
             <cd:BitSize>64</cd:BitSize>
             <cd:NativeType>double</cd:NativeType>
+            <ct:NamedTest id="FloatIsFinite"/>
           </cd:Float>
         </cd:Field>
         <cd:Field name="molecularbackscatter_fiz">
@@ -108,6 +115,7 @@
             <cd:Unit>10^-6 m^-1 sr^-1</cd:Unit>
             <cd:BitSize>64</cd:BitSize>
             <cd:NativeType>double</cd:NativeType>
+            <ct:NamedTest id="FloatIsFinite"/>
           </cd:Float>
         </cd:Field>
       </cd:Record>

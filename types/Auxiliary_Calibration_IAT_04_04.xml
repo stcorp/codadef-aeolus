@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="xml" last-modified="2017-04-12" name="Auxiliary_Calibration_IAT_04_04" namexml="Auxiliary_Calibration_IAT">
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="xml" last-modified="2019-10-31" name="Auxiliary_Calibration_IAT_04_04" namexml="Auxiliary_Calibration_IAT">
   <cd:Description>Auxiliary Calibration IAT</cd:Description>
   <cd:Field name="List_of_Data_Set_Records">
     <cd:Record namexml="List_of_Data_Set_Records">
@@ -94,6 +94,7 @@
                             <cd:Description>Laser frequency offset</cd:Description>
                             <cd:Unit>GHz</cd:Unit>
                             <cd:NativeType>double</cd:NativeType>
+                            <ct:NamedTest id="FloatIsFinite"/>
                           </cd:Float>
                         </cd:Type>
                       </cd:Field>
@@ -106,6 +107,7 @@
                             <cd:Description>Mie Channel FWHM</cd:Description>
                             <cd:Unit>pixel</cd:Unit>
                             <cd:NativeType>double</cd:NativeType>
+                            <ct:NamedTest id="FloatIsFinite"/>
                           </cd:Float>
                         </cd:Type>
                       </cd:Field>
@@ -116,6 +118,7 @@
                             <cd:Description>Mie channel spectral response</cd:Description>
                             <cd:Unit>pixel</cd:Unit>
                             <cd:NativeType>double</cd:NativeType>
+                            <ct:NamedTest id="FloatIsFinite"/>
                           </cd:Float>
                         </cd:Type>
                       </cd:Field>
@@ -129,6 +132,7 @@
                             <cd:Description>Rayleigh Channel A Spectral Transmission</cd:Description>
                             <cd:Unit>AU</cd:Unit>
                             <cd:NativeType>double</cd:NativeType>
+                            <ct:NamedTest id="FloatIsFinite"/>
                           </cd:Float>
                         </cd:Type>
                       </cd:Field>
@@ -142,6 +146,7 @@
                             <cd:Description>Rayleigh Channel B Spectral Transmission</cd:Description>
                             <cd:Unit>AU</cd:Unit>
                             <cd:NativeType>double</cd:NativeType>
+                            <ct:NamedTest id="FloatIsFinite"/>
                           </cd:Float>
                         </cd:Type>
                       </cd:Field>
@@ -210,6 +215,7 @@
                                 <cd:Description>Accumulated laser energy of all valid Rayleigh pulses</cd:Description>
                                 <cd:Unit>mJ</cd:Unit>
                                 <cd:NativeType>double</cd:NativeType>
+                                <ct:NamedTest id="FloatIsFinite"/>
                               </cd:Float>
                             </cd:Type>
                           </cd:Field>
@@ -223,6 +229,7 @@
                                 <cd:Description>Accumulated_Laser_Energy_Rayleigh / Num_Rayleigh_Used</cd:Description>
                                 <cd:Unit>mJ</cd:Unit>
                                 <cd:NativeType>double</cd:NativeType>
+                                <ct:NamedTest id="FloatIsFinite"/>
                               </cd:Float>
                             </cd:Type>
                           </cd:Field>
@@ -231,6 +238,7 @@
                               <cd:Float format="ascii">
                                 <cd:Description>Ratio of Mean_Laser_Energy_Rayleigh of first frequency step to Mean_Laser_Energy_Rayleigh of current frequency step.</cd:Description>
                                 <cd:NativeType>double</cd:NativeType>
+                                <ct:NamedTest id="FloatIsFinite"/>
                               </cd:Float>
                             </cd:Type>
                           </cd:Field>
@@ -298,6 +306,7 @@
                                   <cd:Float format="ascii">
                                     <cd:Description>Difference of peaks between last and last but one detected by Gaussian iteration.</cd:Description>
                                     <cd:NativeType>double</cd:NativeType>
+                                    <ct:NamedTest id="FloatIsFinite"/>
                                   </cd:Float>
                                 </cd:Type>
                               </cd:Field>
@@ -314,6 +323,7 @@
                                   <cd:Float format="ascii">
                                     <cd:Description>Resulting offset</cd:Description>
                                     <cd:NativeType>double</cd:NativeType>
+                                    <ct:NamedTest id="FloatIsFinite"/>
                                   </cd:Float>
                                 </cd:Type>
                               </cd:Field>
@@ -326,6 +336,7 @@
                                   <cd:Float format="ascii">
                                     <cd:Description>Resulting peak position</cd:Description>
                                     <cd:NativeType>double</cd:NativeType>
+                                    <ct:NamedTest id="FloatIsFinite"/>
                                   </cd:Float>
                                 </cd:Type>
                               </cd:Field>
@@ -338,6 +349,7 @@
                                   <cd:Float format="ascii">
                                     <cd:Description>Resulting offset</cd:Description>
                                     <cd:NativeType>double</cd:NativeType>
+                                    <ct:NamedTest id="FloatIsFinite"/>
                                   </cd:Float>
                                 </cd:Type>
                               </cd:Field>
@@ -350,6 +362,7 @@
                                   <cd:Float format="ascii">
                                     <cd:Description>Resulting FWHM</cd:Description>
                                     <cd:NativeType>double</cd:NativeType>
+                                    <ct:NamedTest id="FloatIsFinite"/>
                                   </cd:Float>
                                 </cd:Type>
                               </cd:Field>
@@ -366,6 +379,7 @@
                                   <cd:Float format="ascii">
                                     <cd:Description>Resulting FWHM.</cd:Description>
                                     <cd:NativeType>double</cd:NativeType>
+                                    <ct:NamedTest id="FloatIsFinite"/>
                                   </cd:Float>
                                 </cd:Type>
                               </cd:Field>
@@ -378,6 +392,7 @@
                                   <cd:Float format="ascii">
                                     <cd:Description>Resulting offset.</cd:Description>
                                     <cd:NativeType>double</cd:NativeType>
+                                    <ct:NamedTest id="FloatIsFinite"/>
                                   </cd:Float>
                                 </cd:Type>
                               </cd:Field>
@@ -390,6 +405,7 @@
                                   <cd:Float format="ascii">
                                     <cd:Description>Resulting peak height.</cd:Description>
                                     <cd:NativeType>double</cd:NativeType>
+                                    <ct:NamedTest id="FloatIsFinite"/>
                                   </cd:Float>
                                 </cd:Type>
                               </cd:Field>
@@ -402,6 +418,7 @@
                                   <cd:Float format="ascii">
                                     <cd:Description>Resulting peak location.</cd:Description>
                                     <cd:NativeType>double</cd:NativeType>
+                                    <ct:NamedTest id="FloatIsFinite"/>
                                   </cd:Float>
                                 </cd:Type>
                               </cd:Field>
@@ -410,6 +427,7 @@
                                   <cd:Float format="ascii">
                                     <cd:Description>Difference of residual errors between last and last but one detected by iteration.</cd:Description>
                                     <cd:NativeType>double</cd:NativeType>
+                                    <ct:NamedTest id="FloatIsFinite"/>
                                   </cd:Float>
                                 </cd:Type>
                               </cd:Field>
@@ -445,6 +463,7 @@
                                 <cd:Description>Sensor RSP etalon temperature</cd:Description>
                                 <cd:Unit>degC</cd:Unit>
                                 <cd:NativeType>double</cd:NativeType>
+                                <ct:NamedTest id="FloatIsFinite"/>
                               </cd:Float>
                             </cd:Type>
                           </cd:Field>
@@ -458,6 +477,7 @@
                                 <cd:Description>Sensor RSP etalon temperature</cd:Description>
                                 <cd:Unit>degC</cd:Unit>
                                 <cd:NativeType>double</cd:NativeType>
+                                <ct:NamedTest id="FloatIsFinite"/>
                               </cd:Float>
                             </cd:Type>
                           </cd:Field>
@@ -471,6 +491,7 @@
                                 <cd:Description>Sensor RSP etalon temperature</cd:Description>
                                 <cd:Unit>degC</cd:Unit>
                                 <cd:NativeType>double</cd:NativeType>
+                                <ct:NamedTest id="FloatIsFinite"/>
                               </cd:Float>
                             </cd:Type>
                           </cd:Field>
@@ -484,6 +505,7 @@
                                 <cd:Description>Sensor RSP etalon temperature</cd:Description>
                                 <cd:Unit>degC</cd:Unit>
                                 <cd:NativeType>double</cd:NativeType>
+                                <ct:NamedTest id="FloatIsFinite"/>
                               </cd:Float>
                             </cd:Type>
                           </cd:Field>
@@ -501,6 +523,7 @@
                                 <cd:Description>Sensor RSPT etalon temperature</cd:Description>
                                 <cd:Unit>degC</cd:Unit>
                                 <cd:NativeType>double</cd:NativeType>
+                                <ct:NamedTest id="FloatIsFinite"/>
                               </cd:Float>
                             </cd:Type>
                           </cd:Field>
@@ -514,6 +537,7 @@
                                 <cd:Description>Sensor RSPT etalon temperature</cd:Description>
                                 <cd:Unit>degC</cd:Unit>
                                 <cd:NativeType>double</cd:NativeType>
+                                <ct:NamedTest id="FloatIsFinite"/>
                               </cd:Float>
                             </cd:Type>
                           </cd:Field>
@@ -527,6 +551,7 @@
                                 <cd:Description>Sensor RSPT etalon temperature</cd:Description>
                                 <cd:Unit>degC</cd:Unit>
                                 <cd:NativeType>double</cd:NativeType>
+                                <ct:NamedTest id="FloatIsFinite"/>
                               </cd:Float>
                             </cd:Type>
                           </cd:Field>
@@ -540,6 +565,7 @@
                                 <cd:Description>Sensor RSPT etalon temperature</cd:Description>
                                 <cd:Unit>degC</cd:Unit>
                                 <cd:NativeType>double</cd:NativeType>
+                                <ct:NamedTest id="FloatIsFinite"/>
                               </cd:Float>
                             </cd:Type>
                           </cd:Field>
@@ -555,6 +581,7 @@
                             <cd:Description>Sensor OB Ray average temperature of 5,6,7,8</cd:Description>
                             <cd:Unit>degC</cd:Unit>
                             <cd:NativeType>double</cd:NativeType>
+                            <ct:NamedTest id="FloatIsFinite"/>
                           </cd:Float>
                         </cd:Type>
                       </cd:Field>
@@ -574,6 +601,7 @@
                   <cd:Description>Rayleigh Channel A FWHM Airy fit result</cd:Description>
                   <cd:Unit>GHz</cd:Unit>
                   <cd:NativeType>double</cd:NativeType>
+                  <ct:NamedTest id="FloatIsFinite"/>
                 </cd:Float>
               </cd:Type>
             </cd:Field>
@@ -587,6 +615,7 @@
                   <cd:Description>Rayleigh Channel A FSR Airy fit result</cd:Description>
                   <cd:Unit>GHz</cd:Unit>
                   <cd:NativeType>double</cd:NativeType>
+                  <ct:NamedTest id="FloatIsFinite"/>
                 </cd:Float>
               </cd:Type>
             </cd:Field>
@@ -600,6 +629,7 @@
                   <cd:Description>Rayleigh Channel A peak position Airy fit result</cd:Description>
                   <cd:Unit>GHz</cd:Unit>
                   <cd:NativeType>double</cd:NativeType>
+                  <ct:NamedTest id="FloatIsFinite"/>
                 </cd:Float>
               </cd:Type>
             </cd:Field>
@@ -613,6 +643,7 @@
                   <cd:Description>Rayleigh Channel A amplitude Airy fit result</cd:Description>
                   <cd:Unit>AU</cd:Unit>
                   <cd:NativeType>double</cd:NativeType>
+                  <ct:NamedTest id="FloatIsFinite"/>
                 </cd:Float>
               </cd:Type>
             </cd:Field>
@@ -626,6 +657,7 @@
                   <cd:Description>Rayleigh Channel B FWHM Airy fit result</cd:Description>
                   <cd:Unit>GHz</cd:Unit>
                   <cd:NativeType>double</cd:NativeType>
+                  <ct:NamedTest id="FloatIsFinite"/>
                 </cd:Float>
               </cd:Type>
             </cd:Field>
@@ -639,6 +671,7 @@
                   <cd:Description>Rayleigh Channel B FSR Airy fit result</cd:Description>
                   <cd:Unit>GHz</cd:Unit>
                   <cd:NativeType>double</cd:NativeType>
+                  <ct:NamedTest id="FloatIsFinite"/>
                 </cd:Float>
               </cd:Type>
             </cd:Field>
@@ -652,6 +685,7 @@
                   <cd:Description>Rayleigh Channel B peak position Airy fit result</cd:Description>
                   <cd:Unit>GHz</cd:Unit>
                   <cd:NativeType>double</cd:NativeType>
+                  <ct:NamedTest id="FloatIsFinite"/>
                 </cd:Float>
               </cd:Type>
             </cd:Field>
@@ -665,6 +699,7 @@
                   <cd:Description>Rayleigh Channel B amplitude Airy fit result</cd:Description>
                   <cd:Unit>AU</cd:Unit>
                   <cd:NativeType>double</cd:NativeType>
+                  <ct:NamedTest id="FloatIsFinite"/>
                 </cd:Float>
               </cd:Type>
             </cd:Field>
@@ -678,6 +713,7 @@
                   <cd:Description>Rayleigh Channel Separation</cd:Description>
                   <cd:Unit>GHz</cd:Unit>
                   <cd:NativeType>double</cd:NativeType>
+                  <ct:NamedTest id="FloatIsFinite"/>
                 </cd:Float>
               </cd:Type>
             </cd:Field>
@@ -688,6 +724,7 @@
                   <cd:Description>Mean Slope of Mie Channel Response calculated using the valid Freq_In_Centre_Subrange = TRUE results</cd:Description>
                   <cd:Unit>GHz / pixel</cd:Unit>
                   <cd:NativeType>double</cd:NativeType>
+                  <ct:NamedTest id="FloatIsFinite"/>
                 </cd:Float>
               </cd:Type>
             </cd:Field>
@@ -721,6 +758,7 @@
                 <cd:Float format="ascii">
                   <cd:Description>Mie rms fit error</cd:Description>
                   <cd:NativeType>double</cd:NativeType>
+                  <ct:NamedTest id="FloatIsFinite"/>
                 </cd:Float>
               </cd:Type>
             </cd:Field>
@@ -729,6 +767,7 @@
                 <cd:Float format="ascii">
                   <cd:Description>Mie standard deviation of the fit error</cd:Description>
                   <cd:NativeType>double</cd:NativeType>
+                  <ct:NamedTest id="FloatIsFinite"/>
                 </cd:Float>
               </cd:Type>
             </cd:Field>
@@ -737,6 +776,7 @@
                 <cd:Float format="ascii">
                   <cd:Description>Rayleigh channel A rms fit error</cd:Description>
                   <cd:NativeType>double</cd:NativeType>
+                  <ct:NamedTest id="FloatIsFinite"/>
                 </cd:Float>
               </cd:Type>
             </cd:Field>
@@ -745,6 +785,7 @@
                 <cd:Float format="ascii">
                   <cd:Description>Rayleigh channel B rms fit error</cd:Description>
                   <cd:NativeType>double</cd:NativeType>
+                  <ct:NamedTest id="FloatIsFinite"/>
                 </cd:Float>
               </cd:Type>
             </cd:Field>

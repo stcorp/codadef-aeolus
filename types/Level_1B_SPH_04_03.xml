@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="ascii" name="Level_1B_SPH_04_03" last-modified="2018-04-03">
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="ascii" name="Level_1B_SPH_04_03" last-modified="2019-10-31">
   <cd:Field name="sph_descriptor_title">
     <cd:Text>
       <cd:Description>SPH_DESCRIPTOR=</cd:Description>
@@ -206,6 +206,7 @@
       <cd:Unit>degrees</cd:Unit>
       <cd:ByteSize>15</cd:ByteSize>
       <cd:NativeType>double</cd:NativeType>
+      <ct:NamedTest id="FloatIsFinite"/>
     </cd:Float>
   </cd:Field>
   <cd:Field name="sat_track_units">
@@ -257,6 +258,7 @@
       <cd:Unit>GigaHertz</cd:Unit>
       <cd:ByteSize>15</cd:ByteSize>
       <cd:NativeType>double</cd:NativeType>
+      <ct:NamedTest id="FloatIsFinite"/>
     </cd:Float>
   </cd:Field>
   <cd:Field name="base_laser_frequency_units">

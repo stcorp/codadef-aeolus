@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="binary" last-modified="2019-09-06" name="Level_2BC_Geolocation_ADSR_03_10">
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="binary" last-modified="2019-10-31" name="Level_2BC_Geolocation_ADSR_03_10">
   <cd:Field name="wind_result_id">
     <cd:Integer>
       <cd:Description>A unique id for this wind for this channel in this L2B file. Each channel has its own sequence of id numbers and both start counting at 1</cd:Description>
@@ -158,6 +158,7 @@
           <cd:Unit>degrees</cd:Unit>
           <cd:BitSize>64</cd:BitSize>
           <cd:NativeType>double</cd:NativeType>
+          <ct:NamedTest id="FloatIsFinite"/>
         </cd:Float>
       </cd:Field>
       <cd:Field name="los_elevation_bottom">
@@ -166,6 +167,7 @@
           <cd:Unit>degrees</cd:Unit>
           <cd:BitSize>64</cd:BitSize>
           <cd:NativeType>double</cd:NativeType>
+          <ct:NamedTest id="FloatIsFinite"/>
         </cd:Float>
       </cd:Field>
       <cd:Field name="los_elevation_vcog">
@@ -174,6 +176,7 @@
           <cd:Unit>degrees</cd:Unit>
           <cd:BitSize>64</cd:BitSize>
           <cd:NativeType>double</cd:NativeType>
+          <ct:NamedTest id="FloatIsFinite"/>
         </cd:Float>
       </cd:Field>
       <cd:Field name="los_elevation_top">
@@ -182,6 +185,7 @@
           <cd:Unit>degrees</cd:Unit>
           <cd:BitSize>64</cd:BitSize>
           <cd:NativeType>double</cd:NativeType>
+          <ct:NamedTest id="FloatIsFinite"/>
         </cd:Float>
       </cd:Field>
       <cd:Field name="los_satellite_velocity">
@@ -190,6 +194,7 @@
           <cd:Unit>m/s</cd:Unit>
           <cd:BitSize>64</cd:BitSize>
           <cd:NativeType>double</cd:NativeType>
+          <ct:NamedTest id="FloatIsFinite"/>
         </cd:Float>
       </cd:Field>
       <cd:Field name="lat_of_dem_intersection">

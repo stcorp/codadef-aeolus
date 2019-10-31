@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="binary" name="AUX_MET_METDS_02_30" last-modified="2017-03-01">
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="binary" name="AUX_MET_METDS_02_30" last-modified="2019-10-31">
   <cd:Field name="spare_1">
     <cd:Raw>
       <cd:Description>Spare</cd:Description>
@@ -38,6 +38,7 @@
       <cd:Unit>Pa</cd:Unit>
       <cd:BitSize>64</cd:BitSize>
       <cd:NativeType>double</cd:NativeType>
+      <ct:NamedTest id="FloatIsFinite"/>
     </cd:Float>
   </cd:Field>
   <cd:Field name="amd_zs">
@@ -183,6 +184,7 @@
             <cd:Unit>%</cd:Unit>
             <cd:BitSize>64</cd:BitSize>
             <cd:NativeType>double</cd:NativeType>
+            <ct:NamedTest id="FloatIsFinite"/>
           </cd:Float>
         </cd:Field>
         <cd:Field name="amd_q">
@@ -191,6 +193,7 @@
             <cd:Unit>kg/kg</cd:Unit>
             <cd:BitSize>64</cd:BitSize>
             <cd:NativeType>double</cd:NativeType>
+            <ct:NamedTest id="FloatIsFinite"/>
           </cd:Float>
         </cd:Field>
         <cd:Field name="amd_cc">
@@ -207,6 +210,7 @@
             <cd:Unit>kg/kg</cd:Unit>
             <cd:BitSize>64</cd:BitSize>
             <cd:NativeType>double</cd:NativeType>
+            <ct:NamedTest id="FloatIsFinite"/>
           </cd:Float>
         </cd:Field>
         <cd:Field name="amd_ciwc">
@@ -215,6 +219,7 @@
             <cd:Unit>kg/kg</cd:Unit>
             <cd:BitSize>64</cd:BitSize>
             <cd:NativeType>double</cd:NativeType>
+            <ct:NamedTest id="FloatIsFinite"/>
           </cd:Float>
         </cd:Field>
       </cd:Record>

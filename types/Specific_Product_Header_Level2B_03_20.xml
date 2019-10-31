@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="xml" last-modified="2019-09-06" name="Specific_Product_Header_Level2B_03_20" namexml="Specific_Product_Header">
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="xml" last-modified="2019-10-31" name="Specific_Product_Header_Level2B_03_20" namexml="Specific_Product_Header">
   <cd:Description>Specific Product Header for ALD Level 2B products</cd:Description>
   <cd:Field name="Sph_Descriptor">
     <cd:Text namexml="Sph_Descriptor">
@@ -152,6 +152,7 @@
         <cd:Description>Sub-satellite heading at the sensing start time in the MPH</cd:Description>
         <cd:Unit>degrees</cd:Unit>
         <cd:NativeType>double</cd:NativeType>
+        <ct:NamedTest id="FloatIsFinite"/>
       </cd:Float>
     </cd:Type>
   </cd:Field>

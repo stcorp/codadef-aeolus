@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" name="Auxiliary_Calibration_LCP_04_05" format="xml" namexml="Auxiliary_Calibration_LCP" last-modified="2017-04-12">
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" name="Auxiliary_Calibration_LCP_04_05" format="xml" namexml="Auxiliary_Calibration_LCP" last-modified="2019-10-31">
   <cd:Description>Auxiliary Calibration LCP</cd:Description>
   <cd:Field name="List_of_Data_Set_Records">
     <cd:Record namexml="List_of_Data_Set_Records">
@@ -48,6 +48,7 @@
                           <cd:Float format="ascii">
                             <cd:Description>Laser chopper phase delay</cd:Description>
                             <cd:NativeType>double</cd:NativeType>
+                            <ct:NamedTest id="FloatIsFinite"/>
                           </cd:Float>
                         </cd:Type>
                       </cd:Field>
@@ -60,6 +61,7 @@
                           <cd:Float format="ascii">
                             <cd:Description>Mie maximum flux: maximum column value of array of mean over all Mie measurments and atmospheric height bins</cd:Description>
                             <cd:NativeType>double</cd:NativeType>
+                            <ct:NamedTest id="FloatIsFinite"/>
                           </cd:Float>
                         </cd:Type>
                       </cd:Field>
@@ -72,6 +74,7 @@
                           <cd:Float format="ascii">
                             <cd:Description>Mie mean background: mean value of first and last value of array of mean over all Mie measurements and atmospheric height bins.</cd:Description>
                             <cd:NativeType>double</cd:NativeType>
+                            <ct:NamedTest id="FloatIsFinite"/>
                           </cd:Float>
                         </cd:Type>
                       </cd:Field>
@@ -84,6 +87,7 @@
                           <cd:Float format="ascii">
                             <cd:Description>Mie mean flux: mean value of array of mean over all Mie measurements and atmospheric height bins of all 16 usable ACCD columns</cd:Description>
                             <cd:NativeType>double</cd:NativeType>
+                            <ct:NamedTest id="FloatIsFinite"/>
                           </cd:Float>
                         </cd:Type>
                       </cd:Field>
@@ -96,6 +100,7 @@
                           <cd:Float format="ascii">
                             <cd:Description>First value of array of mean over all Mie measurements and atmospheric height bins of 16 usable ACCD columns</cd:Description>
                             <cd:NativeType>double</cd:NativeType>
+                            <ct:NamedTest id="FloatIsFinite"/>
                           </cd:Float>
                         </cd:Type>
                       </cd:Field>
@@ -108,6 +113,7 @@
                           <cd:Float format="ascii">
                             <cd:Description>Last value of array of mean over all Mie measurements and atmospheric height bins of 16 usable ACCD columns</cd:Description>
                             <cd:NativeType>double</cd:NativeType>
+                            <ct:NamedTest id="FloatIsFinite"/>
                           </cd:Float>
                         </cd:Type>
                       </cd:Field>
@@ -120,6 +126,7 @@
                           <cd:Float format="ascii">
                             <cd:Description>Mie maximum reference pulse flux: maximum column value of mean reference pulse array of phase step</cd:Description>
                             <cd:NativeType>double</cd:NativeType>
+                            <ct:NamedTest id="FloatIsFinite"/>
                           </cd:Float>
                         </cd:Type>
                       </cd:Field>
@@ -132,6 +139,7 @@
                           <cd:Float format="ascii">
                             <cd:Description>Mie mean reference pulse background: mean value of first and last useful pixel of mean reference pulse array of phase step</cd:Description>
                             <cd:NativeType>double</cd:NativeType>
+                            <ct:NamedTest id="FloatIsFinite"/>
                           </cd:Float>
                         </cd:Type>
                       </cd:Field>
@@ -144,6 +152,7 @@
                           <cd:Float format="ascii">
                             <cd:Description>Mie mean reference pulse flux: mean value of all 16 usable ACCD columns of mean reference pulse array</cd:Description>
                             <cd:NativeType>double</cd:NativeType>
+                            <ct:NamedTest id="FloatIsFinite"/>
                           </cd:Float>
                         </cd:Type>
                       </cd:Field>
@@ -156,6 +165,7 @@
                           <cd:Float format="ascii">
                             <cd:Description>Mie mean reference pulse flux:value of first of 16 usable ACCD columns of mean reference pulse</cd:Description>
                             <cd:NativeType>double</cd:NativeType>
+                            <ct:NamedTest id="FloatIsFinite"/>
                           </cd:Float>
                         </cd:Type>
                       </cd:Field>
@@ -168,6 +178,7 @@
                           <cd:Float format="ascii">
                             <cd:Description>Mie mean reference pulse flux: value of last of 16 usable ACCD columns of mean reference pulse</cd:Description>
                             <cd:NativeType>double</cd:NativeType>
+                            <ct:NamedTest id="FloatIsFinite"/>
                           </cd:Float>
                         </cd:Type>
                       </cd:Field>
@@ -180,6 +191,7 @@
                           <cd:Float format="ascii">
                             <cd:Description>Rayleigh maximum flux: mean value of first and last value of array of mean over all Rayleigh measurements and atmospheric height bins.</cd:Description>
                             <cd:NativeType>double</cd:NativeType>
+                            <ct:NamedTest id="FloatIsFinite"/>
                           </cd:Float>
                         </cd:Type>
                       </cd:Field>
@@ -192,6 +204,7 @@
                           <cd:Float format="ascii">
                             <cd:Description>Rayleigh mean background: mean value of first and last value of array of mean over all Rayleigh measurements and atmospheric height bins.</cd:Description>
                             <cd:NativeType>double</cd:NativeType>
+                            <ct:NamedTest id="FloatIsFinite"/>
                           </cd:Float>
                         </cd:Type>
                       </cd:Field>
@@ -204,6 +217,7 @@
                           <cd:Float format="ascii">
                             <cd:Description>Rayleigh mean flux: mean value of array of mean over all Rayleigh measurements and atmospheric height bins of 8 ACCD columns of channel A</cd:Description>
                             <cd:NativeType>double</cd:NativeType>
+                            <ct:NamedTest id="FloatIsFinite"/>
                           </cd:Float>
                         </cd:Type>
                       </cd:Field>
@@ -216,6 +230,7 @@
                           <cd:Float format="ascii">
                             <cd:Description>Rayleigh mean flux: mean value of array of mean over all Rayleigh measurements and atmospheric height bins of 8 ACCD columns of channel B</cd:Description>
                             <cd:NativeType>double</cd:NativeType>
+                            <ct:NamedTest id="FloatIsFinite"/>
                           </cd:Float>
                         </cd:Type>
                       </cd:Field>
@@ -228,6 +243,7 @@
                           <cd:Float format="ascii">
                             <cd:Description>Rayleigh reference pulse maximum flux:: maximum column value of mean reference pulse array of phase step</cd:Description>
                             <cd:NativeType>double</cd:NativeType>
+                            <ct:NamedTest id="FloatIsFinite"/>
                           </cd:Float>
                         </cd:Type>
                       </cd:Field>
@@ -240,6 +256,7 @@
                           <cd:Float format="ascii">
                             <cd:Description>Rayleigh reference pulse mean background: mean value of first and last useful pixel of mean reference pulse array of phase step</cd:Description>
                             <cd:NativeType>double</cd:NativeType>
+                            <ct:NamedTest id="FloatIsFinite"/>
                           </cd:Float>
                         </cd:Type>
                       </cd:Field>
@@ -252,6 +269,7 @@
                           <cd:Float format="ascii">
                             <cd:Description>Rayleigh reference pulse mean flux:mean value of 8 ACCD columns of channel A mean reference pulse</cd:Description>
                             <cd:NativeType>double</cd:NativeType>
+                            <ct:NamedTest id="FloatIsFinite"/>
                           </cd:Float>
                         </cd:Type>
                       </cd:Field>
@@ -264,6 +282,7 @@
                           <cd:Float format="ascii">
                             <cd:Description>Rayleigh reference pulse mean flux:mean value of 8 ACCD columns of channel B mean reference pulse</cd:Description>
                             <cd:NativeType>double</cd:NativeType>
+                            <ct:NamedTest id="FloatIsFinite"/>
                           </cd:Float>
                         </cd:Type>
                       </cd:Field>

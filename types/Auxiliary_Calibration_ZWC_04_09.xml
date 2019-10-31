@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="xml" last-modified="2019-05-03" name="Auxiliary_Calibration_ZWC_04_09" namexml="Auxiliary_Calibration_ZWC">
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="xml" last-modified="2019-10-31" name="Auxiliary_Calibration_ZWC_04_09" namexml="Auxiliary_Calibration_ZWC">
   <cd:Description>Auxiliary Calibration ZWC</cd:Description>
   <cd:Field name="List_of_Data_Set_Records">
     <cd:Record namexml="List_of_Data_Set_Records">
@@ -36,6 +36,7 @@
                       </cd:Conversion>
                       <cd:NativeType>double</cd:NativeType>
                       <ct:NamedTest id="RangeLatitude6"/>
+                      <ct:NamedTest id="FloatIsFinite"/>
                     </cd:Float>
                   </cd:Type>
                 </cd:Field>
@@ -53,6 +54,7 @@
                       </cd:Conversion>
                       <cd:NativeType>double</cd:NativeType>
                       <ct:NamedTest id="RangeLongitude6"/>
+                      <ct:NamedTest id="FloatIsFinite"/>
                     </cd:Float>
                   </cd:Type>
                 </cd:Field>
@@ -69,6 +71,7 @@
                         <cd:Unit>degrees_north</cd:Unit>
                       </cd:Conversion>
                       <cd:NativeType>double</cd:NativeType>
+                      <ct:NamedTest id="FloatIsFinite"/>
                     </cd:Float>
                   </cd:Type>
                 </cd:Field>
@@ -82,6 +85,7 @@
                       <cd:Description>Instrument roll angle in ECEF frame at the centre of the observation</cd:Description>
                       <cd:Unit>degrees</cd:Unit>
                       <cd:NativeType>double</cd:NativeType>
+                      <ct:NamedTest id="FloatIsFinite"/>
                     </cd:Float>
                   </cd:Type>
                 </cd:Field>
@@ -95,6 +99,7 @@
                       <cd:Description>Instrument pitch angle in ECEF frame at the centre of the observation</cd:Description>
                       <cd:Unit>degrees</cd:Unit>
                       <cd:NativeType>double</cd:NativeType>
+                      <ct:NamedTest id="FloatIsFinite"/>
                     </cd:Float>
                   </cd:Type>
                 </cd:Field>
@@ -108,6 +113,7 @@
                       <cd:Description>Instrument yaw angle in ECEF frame at the centre of the observation</cd:Description>
                       <cd:Unit>deg</cd:Unit>
                       <cd:NativeType>double</cd:NativeType>
+                      <ct:NamedTest id="FloatIsFinite"/>
                     </cd:Float>
                   </cd:Type>
                 </cd:Field>
@@ -122,6 +128,7 @@
                       <cd:Dimension>25</cd:Dimension>
                       <cd:Float format="ascii">
                         <cd:NativeType>double</cd:NativeType>
+                        <ct:NamedTest id="FloatIsFinite"/>
                       </cd:Float>
                     </cd:Array>
                   </cd:Type>
@@ -137,6 +144,7 @@
                       <cd:Dimension>25</cd:Dimension>
                       <cd:Float format="ascii">
                         <cd:NativeType>double</cd:NativeType>
+                        <ct:NamedTest id="FloatIsFinite"/>
                       </cd:Float>
                     </cd:Array>
                   </cd:Type>
@@ -158,6 +166,7 @@
                   <cd:Description>Mie ground correction velocityr. This value is filled in when ZWC_Result_Type is set to ZWC_Mie or ZWC_Both</cd:Description>
                   <cd:Unit>m/s</cd:Unit>
                   <cd:NativeType>double</cd:NativeType>
+                  <ct:NamedTest id="FloatIsFinite"/>
                 </cd:Float>
               </cd:Type>
             </cd:Field>
@@ -171,6 +180,7 @@
                   <cd:Description>Rayleigh ground correction factor. This value is filled in when ZWC_Result_Type is set to ZWC_Rayleigh or ZWC_Both</cd:Description>
                   <cd:Unit>m/s</cd:Unit>
                   <cd:NativeType>double</cd:NativeType>
+                  <ct:NamedTest id="FloatIsFinite"/>
                 </cd:Float>
               </cd:Type>
             </cd:Field>
@@ -195,6 +205,7 @@
                       <cd:Description>Threshold applied to coadded gound signal of a measurement if the surface indicates land surface. If the threshold is met, the signal is added to the sum of the ground signal on observation level</cd:Description>
                       <cd:Unit>ACCD counts</cd:Unit>
                       <cd:NativeType>double</cd:NativeType>
+                      <ct:NamedTest id="FloatIsFinite"/>
                     </cd:Float>
                   </cd:Type>
                 </cd:Field>
@@ -208,6 +219,7 @@
                       <cd:Description>Threshold applied to coadded gound signal of a measurement if the surface indicates water/sea ice surface. If the threshold is met, the signal is added to the sum of the ground signal on observation level</cd:Description>
                       <cd:Unit>ACCD counts</cd:Unit>
                       <cd:NativeType>double</cd:NativeType>
+                      <ct:NamedTest id="FloatIsFinite"/>
                     </cd:Float>
                   </cd:Type>
                 </cd:Field>
@@ -221,6 +233,7 @@
                       <cd:Description>Threshold applied to a bin identified as ground bin candidate. If the threshold is not met, the signal of the bin is not added to the sum of the ground signal on observation level</cd:Description>
                       <cd:Unit>meters</cd:Unit>
                       <cd:NativeType>double</cd:NativeType>
+                      <ct:NamedTest id="FloatIsFinite"/>
                     </cd:Float>
                   </cd:Type>
                 </cd:Field>
@@ -242,6 +255,7 @@
                       <cd:Description>Threshold applied to coadded gound signal of a measurement if the surface indicates land surface. If the threshold is met, the signal is added to the sum of the ground signal on observation level</cd:Description>
                       <cd:Unit>ACCD counts</cd:Unit>
                       <cd:NativeType>double</cd:NativeType>
+                      <ct:NamedTest id="FloatIsFinite"/>
                     </cd:Float>
                   </cd:Type>
                 </cd:Field>
@@ -255,6 +269,7 @@
                       <cd:Description>Threshold applied to coadded gound signal of a measurement if the surface indicates water/sea ice surface. If the threshold is met, the signal is added to the sum of the ground signal on observation level</cd:Description>
                       <cd:Unit>ACCD counts</cd:Unit>
                       <cd:NativeType>double</cd:NativeType>
+                      <ct:NamedTest id="FloatIsFinite"/>
                     </cd:Float>
                   </cd:Type>
                 </cd:Field>
@@ -268,6 +283,7 @@
                       <cd:Description>Threshold applied to a bin identified as ground bin candidate. If the threshold is not met, the signal of the bin is not added to the sum of the ground signal on observation level</cd:Description>
                       <cd:Unit>meters</cd:Unit>
                       <cd:NativeType>double</cd:NativeType>
+                      <ct:NamedTest id="FloatIsFinite"/>
                     </cd:Float>
                   </cd:Type>
                 </cd:Field>
@@ -297,6 +313,7 @@
                       <cd:Description>Average of measurement ground wind bin altitudes for Mie</cd:Description>
                       <cd:Unit>meters</cd:Unit>
                       <cd:NativeType>double</cd:NativeType>
+                      <ct:NamedTest id="FloatIsFinite"/>
                     </cd:Float>
                   </cd:Type>
                 </cd:Field>
@@ -310,6 +327,7 @@
                       <cd:Description>Average of measurement ground wind bin altitudes for Rayleigh</cd:Description>
                       <cd:Unit>meters</cd:Unit>
                       <cd:NativeType>double</cd:NativeType>
+                      <ct:NamedTest id="FloatIsFinite"/>
                     </cd:Float>
                   </cd:Type>
                 </cd:Field>
@@ -323,6 +341,7 @@
                       <cd:Description>Average ground wind bin thickness (air column height) for Mie</cd:Description>
                       <cd:Unit>meters</cd:Unit>
                       <cd:NativeType>double</cd:NativeType>
+                      <ct:NamedTest id="FloatIsFinite"/>
                     </cd:Float>
                   </cd:Type>
                 </cd:Field>
@@ -336,6 +355,7 @@
                       <cd:Description>Average ground wind bin thickness (air column height) for Rayleigh</cd:Description>
                       <cd:Unit>meters</cd:Unit>
                       <cd:NativeType>double</cd:NativeType>
+                      <ct:NamedTest id="FloatIsFinite"/>
                     </cd:Float>
                   </cd:Type>
                 </cd:Field>
@@ -381,6 +401,7 @@
                       <cd:Description>Mie Core 2 output FWHM when applied to observation level Mie ground signal. This value is filled in when ZWC_Result_Type is set to ZWC_Mie or ZWC_Both and the Mie Core 2 algorithm has been applied. In all other cases the value is set to 0.0</cd:Description>
                       <cd:Unit>ACCD pixel</cd:Unit>
                       <cd:NativeType>double</cd:NativeType>
+                      <ct:NamedTest id="FloatIsFinite"/>
                     </cd:Float>
                   </cd:Type>
                 </cd:Field>
@@ -394,6 +415,7 @@
                       <cd:Description>Useful signal of observation level Mie ground signal. This value is filled in when ZWC_Result_Type is set to ZWC_Mie or ZWC_Both. In all other cases the value is set to 0.0</cd:Description>
                       <cd:Unit>ACCD counts</cd:Unit>
                       <cd:NativeType>double</cd:NativeType>
+                      <ct:NamedTest id="FloatIsFinite"/>
                     </cd:Float>
                   </cd:Type>
                 </cd:Field>
@@ -402,6 +424,7 @@
                     <cd:Float format="ascii">
                       <cd:Description>Signal to noise ratio of observation level Mie ground signal. This value is filled in when ZWC_Result_Type is set to ZWC_Mie or ZWC_Both. In all other cases the value is set to 0.0</cd:Description>
                       <cd:NativeType>double</cd:NativeType>
+                      <ct:NamedTest id="FloatIsFinite"/>
                     </cd:Float>
                   </cd:Type>
                 </cd:Field>
@@ -410,6 +433,7 @@
                     <cd:Float format="ascii">
                       <cd:Description>Refined signal to noise ratio of observation level Mie ground signal. This value is filled in when ZWC_Result_Type is set to ZWC_Mie or ZWC_Both. In all other cases the value is set to 0.0</cd:Description>
                       <cd:NativeType>double</cd:NativeType>
+                      <ct:NamedTest id="FloatIsFinite"/>
                     </cd:Float>
                   </cd:Type>
                 </cd:Field>
@@ -423,6 +447,7 @@
                       <cd:Description>Useful signal of observation level Rayleigh ground signal. This value is filled in when ZWC_Result_Type is set to ZWC_Rayleigh or ZWC_Both. In all other cases the value is set to 0.0</cd:Description>
                       <cd:Unit>ACCD counts</cd:Unit>
                       <cd:NativeType>double</cd:NativeType>
+                      <ct:NamedTest id="FloatIsFinite"/>
                     </cd:Float>
                   </cd:Type>
                 </cd:Field>
@@ -431,6 +456,7 @@
                     <cd:Float format="ascii">
                       <cd:Description>Signal to noise ratio of observation level Rayleigh ground signal. This value is filled in when ZWC_Result_Type is set to ZWC_Rayleigh or ZWC_Both. In all other cases the value is set to 0.0</cd:Description>
                       <cd:NativeType>double</cd:NativeType>
+                      <ct:NamedTest id="FloatIsFinite"/>
                     </cd:Float>
                   </cd:Type>
                 </cd:Field>
@@ -477,6 +503,7 @@
                             <cd:Description>Topocentric elevation of the expected ground bin</cd:Description>
                             <cd:Unit>degrees</cd:Unit>
                             <cd:NativeType>double</cd:NativeType>
+                            <ct:NamedTest id="FloatIsFinite"/>
                           </cd:Float>
                         </cd:Array>
                       </cd:Type>
@@ -504,6 +531,7 @@
                             <cd:Description>Topocentric elevation of the highest detected ground bin</cd:Description>
                             <cd:Unit>degrees</cd:Unit>
                             <cd:NativeType>double</cd:NativeType>
+                            <ct:NamedTest id="FloatIsFinite"/>
                           </cd:Float>
                         </cd:Array>
                       </cd:Type>
@@ -531,6 +559,7 @@
                             <cd:Description>Topocentric elevation of the lowest detected ground bin</cd:Description>
                             <cd:Unit>degrees</cd:Unit>
                             <cd:NativeType>double</cd:NativeType>
+                            <ct:NamedTest id="FloatIsFinite"/>
                           </cd:Float>
                         </cd:Array>
                       </cd:Type>
@@ -547,6 +576,7 @@
                             <cd:Description>Height difference between detected top ground bin and expected ground bin, with reference to centre altitude of bins</cd:Description>
                             <cd:Unit>meters</cd:Unit>
                             <cd:NativeType>double</cd:NativeType>
+                            <ct:NamedTest id="FloatIsFinite"/>
                           </cd:Float>
                         </cd:Array>
                       </cd:Type>
@@ -563,6 +593,7 @@
                             <cd:Description>Height difference between detected bottom ground bin and expected ground bin, with reference to centre altitude of bins</cd:Description>
                             <cd:Unit>meters</cd:Unit>
                             <cd:NativeType>double</cd:NativeType>
+                            <ct:NamedTest id="FloatIsFinite"/>
                           </cd:Float>
                         </cd:Array>
                       </cd:Type>
@@ -574,6 +605,7 @@
                           <cd:Float format="ascii">
                             <cd:Description>Mean SNR over SNR values of detected ground bins</cd:Description>
                             <cd:NativeType>double</cd:NativeType>
+                            <ct:NamedTest id="FloatIsFinite"/>
                           </cd:Float>
                         </cd:Array>
                       </cd:Type>
@@ -645,6 +677,7 @@
                             <cd:Description>Topocentric elevation of the expected ground bin</cd:Description>
                             <cd:Unit>degrees</cd:Unit>
                             <cd:NativeType>double</cd:NativeType>
+                            <ct:NamedTest id="FloatIsFinite"/>
                           </cd:Float>
                         </cd:Array>
                       </cd:Type>
@@ -672,6 +705,7 @@
                             <cd:Description>Topocentric elevation of the highest detected ground bin</cd:Description>
                             <cd:Unit>degrees</cd:Unit>
                             <cd:NativeType>double</cd:NativeType>
+                            <ct:NamedTest id="FloatIsFinite"/>
                           </cd:Float>
                         </cd:Array>
                       </cd:Type>
@@ -699,6 +733,7 @@
                             <cd:Description>Topocentric elevation of the lowest detected ground bin</cd:Description>
                             <cd:Unit>degrees</cd:Unit>
                             <cd:NativeType>double</cd:NativeType>
+                            <ct:NamedTest id="FloatIsFinite"/>
                           </cd:Float>
                         </cd:Array>
                       </cd:Type>
@@ -715,6 +750,7 @@
                             <cd:Description>Height difference between detected top ground bin and expected ground bin, with reference to centre altitude of bins</cd:Description>
                             <cd:Unit>meters</cd:Unit>
                             <cd:NativeType>double</cd:NativeType>
+                            <ct:NamedTest id="FloatIsFinite"/>
                           </cd:Float>
                         </cd:Array>
                       </cd:Type>
@@ -731,6 +767,7 @@
                             <cd:Description>Height difference between detected bottom ground bin and expected ground bin, with reference to centre altitude of bins</cd:Description>
                             <cd:Unit>meters</cd:Unit>
                             <cd:NativeType>double</cd:NativeType>
+                            <ct:NamedTest id="FloatIsFinite"/>
                           </cd:Float>
                         </cd:Array>
                       </cd:Type>
@@ -742,6 +779,7 @@
                           <cd:Float format="ascii">
                             <cd:Description>Mean SNR over SNR values of detected ground bins</cd:Description>
                             <cd:NativeType>double</cd:NativeType>
+                            <ct:NamedTest id="FloatIsFinite"/>
                           </cd:Float>
                         </cd:Array>
                       </cd:Type>
@@ -753,6 +791,7 @@
                           <cd:Float format="ascii">
                             <cd:Description>Mean SNR over SNR values of detected ground bins</cd:Description>
                             <cd:NativeType>double</cd:NativeType>
+                            <ct:NamedTest id="FloatIsFinite"/>
                           </cd:Float>
                         </cd:Array>
                       </cd:Type>
@@ -797,6 +836,7 @@
                       <cd:Float>
                         <cd:Unit>m</cd:Unit>
                         <cd:NativeType>double</cd:NativeType>
+                        <ct:NamedTest id="FloatIsFinite"/>
                       </cd:Float>
                     </cd:Array>
                   </cd:Type>

@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="xml" last-modified="2018-06-20" name="Auxiliary_Calibration_LBM_04_08" namexml="Auxiliary_Calibration_LBM">
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="xml" last-modified="2019-10-31" name="Auxiliary_Calibration_LBM_04_08" namexml="Auxiliary_Calibration_LBM">
   <cd:Description>Auxiliary Calibration LBM</cd:Description>
   <cd:Field name="List_of_Data_Set_Records">
     <cd:Record namexml="List_of_Data_Set_Records">
@@ -38,6 +38,7 @@
                       <cd:Float format="ascii">
                         <cd:Description>Mean image pixel intensity above minimum</cd:Description>
                         <cd:NativeType>double</cd:NativeType>
+                        <ct:NamedTest id="FloatIsFinite"/>
                       </cd:Float>
                     </cd:Type>
                     <ct:NamedTest id="ValueOfCountAttributeForParent"/>
@@ -53,6 +54,7 @@
                 <cd:Float format="ascii">
                   <cd:Description>Minimum pixel value of averaged Rayleigh images</cd:Description>
                   <cd:NativeType>double</cd:NativeType>
+                  <ct:NamedTest id="FloatIsFinite"/>
                 </cd:Float>
               </cd:Type>
             </cd:Field>
@@ -65,6 +67,7 @@
                   <cd:Description>Barycentre column value of the direct channel spot</cd:Description>
                   <cd:NativeType>double</cd:NativeType>
                   <ct:NamedTest id="Range4To5"/>
+                  <ct:NamedTest id="FloatIsFinite"/>
                 </cd:Float>
               </cd:Type>
             </cd:Field>
@@ -77,6 +80,7 @@
                   <cd:Description>Barycentre row value of the direct channel spot</cd:Description>
                   <cd:NativeType>double</cd:NativeType>
                   <ct:NamedTest id="Range8To9"/>
+                  <ct:NamedTest id="FloatIsFinite"/>
                 </cd:Float>
               </cd:Type>
             </cd:Field>
@@ -89,6 +93,7 @@
                   <cd:Description>Barycentre column value of the reflected channel spot</cd:Description>
                   <cd:NativeType>double</cd:NativeType>
                   <ct:NamedTest id="Range12To13"/>
+                  <ct:NamedTest id="FloatIsFinite"/>
                 </cd:Float>
               </cd:Type>
             </cd:Field>
@@ -101,6 +106,7 @@
                   <cd:Description>Barycentre row value of the reflected channel spot</cd:Description>
                   <cd:NativeType>double</cd:NativeType>
                   <ct:NamedTest id="Range8To9"/>
+                  <ct:NamedTest id="FloatIsFinite"/>
                 </cd:Float>
               </cd:Type>
             </cd:Field>
@@ -118,6 +124,7 @@
                       <cd:Float format="ascii">
                         <cd:Description>Mean image pixel intensity above minimum</cd:Description>
                         <cd:NativeType>double</cd:NativeType>
+                        <ct:NamedTest id="FloatIsFinite"/>
                       </cd:Float>
                     </cd:Type>
                     <ct:NamedTest id="ValueOfCountAttributeForParent"/>
@@ -133,6 +140,7 @@
                 <cd:Float format="ascii">
                   <cd:Description>Minimum pixel value of averaged Mie images</cd:Description>
                   <cd:NativeType>double</cd:NativeType>
+                  <ct:NamedTest id="FloatIsFinite"/>
                 </cd:Float>
               </cd:Type>
             </cd:Field>
@@ -144,6 +152,7 @@
                 <cd:Float format="ascii">
                   <cd:Description>Mean value of pixel intensities in List_of_Average_Mie_Image_Rows</cd:Description>
                   <cd:NativeType>double</cd:NativeType>
+                  <ct:NamedTest id="FloatIsFinite"/>
                 </cd:Float>
               </cd:Type>
             </cd:Field>
@@ -152,6 +161,7 @@
                 <cd:Float format="ascii">
                   <cd:Description>Standard deviation over values in List_of_Average_Mie_Image_Rows</cd:Description>
                   <cd:NativeType>double</cd:NativeType>
+                  <ct:NamedTest id="FloatIsFinite"/>
                 </cd:Float>
               </cd:Type>
             </cd:Field>
@@ -181,6 +191,7 @@
                 <cd:Float format="ascii">
                   <cd:Description>Ellipse center in x-direction</cd:Description>
                   <cd:NativeType>double</cd:NativeType>
+                  <ct:NamedTest id="FloatIsFinite"/>
                 </cd:Float>
               </cd:Type>
             </cd:Field>
@@ -192,6 +203,7 @@
                 <cd:Float format="ascii">
                   <cd:Description>Ellipse center in y-direction</cd:Description>
                   <cd:NativeType>double</cd:NativeType>
+                  <ct:NamedTest id="FloatIsFinite"/>
                 </cd:Float>
               </cd:Type>
             </cd:Field>
@@ -203,6 +215,7 @@
                 <cd:Float format="ascii">
                   <cd:Description>Length of semi major axes</cd:Description>
                   <cd:NativeType>double</cd:NativeType>
+                  <ct:NamedTest id="FloatIsFinite"/>
                 </cd:Float>
               </cd:Type>
             </cd:Field>
@@ -214,6 +227,7 @@
                 <cd:Float format="ascii">
                   <cd:Description>Length of semi minor axes</cd:Description>
                   <cd:NativeType>double</cd:NativeType>
+                  <ct:NamedTest id="FloatIsFinite"/>
                 </cd:Float>
               </cd:Type>
             </cd:Field>
@@ -225,6 +239,7 @@
                 <cd:Float format="ascii">
                   <cd:Description>Angle of major axis to x-axes</cd:Description>
                   <cd:NativeType>double</cd:NativeType>
+                  <ct:NamedTest id="FloatIsFinite"/>
                 </cd:Float>
               </cd:Type>
             </cd:Field>
@@ -237,6 +252,7 @@
                   <cd:Description>Ellipse center in x-direction</cd:Description>
                   <cd:NativeType>double</cd:NativeType>
                   <ct:NamedTest id="Range8To9"/>
+                  <ct:NamedTest id="FloatIsFinite"/>
                 </cd:Float>
               </cd:Type>
             </cd:Field>
@@ -249,6 +265,7 @@
                   <cd:Description>Ellipse center in y direction</cd:Description>
                   <cd:NativeType>double</cd:NativeType>
                   <ct:NamedTest id="Range8To9"/>
+                  <ct:NamedTest id="FloatIsFinite"/>
                 </cd:Float>
               </cd:Type>
             </cd:Field>
@@ -260,6 +277,7 @@
                 <cd:Float format="ascii">
                   <cd:Description>Length of semi major axes</cd:Description>
                   <cd:NativeType>double</cd:NativeType>
+                  <ct:NamedTest id="FloatIsFinite"/>
                 </cd:Float>
               </cd:Type>
             </cd:Field>
@@ -271,6 +289,7 @@
                 <cd:Float format="ascii">
                   <cd:Description>Length of semi minor axes</cd:Description>
                   <cd:NativeType>double</cd:NativeType>
+                  <ct:NamedTest id="FloatIsFinite"/>
                 </cd:Float>
               </cd:Type>
             </cd:Field>
@@ -282,6 +301,7 @@
                 <cd:Float format="ascii">
                   <cd:Description>Angle of major axis to x-axes</cd:Description>
                   <cd:NativeType>double</cd:NativeType>
+                  <ct:NamedTest id="FloatIsFinite"/>
                 </cd:Float>
               </cd:Type>
             </cd:Field>

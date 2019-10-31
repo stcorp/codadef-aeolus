@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="binary" last-modified="2015-04-20" name="Level_1B_Calibration_Characterization_Data_GADSR_04_04">
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="binary" last-modified="2019-10-31" name="Level_1B_Calibration_Characterization_Data_GADSR_04_04">
   <cd:Field name="mrc_first_start_of_observation_time">
     <cd:Time timeformat="binary_envisat_datetime">
       <cd:Description>Start of observation time for the first BRC in processed Mie calibration data</cd:Description>
@@ -44,6 +44,7 @@
               <cd:Unit>nm</cd:Unit>
               <cd:BitSize>64</cd:BitSize>
               <cd:NativeType>double</cd:NativeType>
+              <ct:NamedTest id="FloatIsFinite"/>
             </cd:Float>
           </cd:Field>
           <cd:Field name="error_quantifiers">
@@ -54,6 +55,7 @@
                   <cd:Description>Mie error quantifier K1</cd:Description>
                   <cd:BitSize>64</cd:BitSize>
                   <cd:NativeType>double</cd:NativeType>
+                  <ct:NamedTest id="FloatIsFinite"/>
                 </cd:Float>
               </cd:Field>
               <cd:Field name="mie_error_quantifier_k2">
@@ -61,6 +63,7 @@
                   <cd:Description>Mie error quantifier K2</cd:Description>
                   <cd:BitSize>64</cd:BitSize>
                   <cd:NativeType>double</cd:NativeType>
+                  <ct:NamedTest id="FloatIsFinite"/>
                 </cd:Float>
               </cd:Field>
               <cd:Field name="mie_error_quantifier_k3">
@@ -68,6 +71,7 @@
                   <cd:Description>Mie error quantifier K3</cd:Description>
                   <cd:BitSize>64</cd:BitSize>
                   <cd:NativeType>double</cd:NativeType>
+                  <ct:NamedTest id="FloatIsFinite"/>
                 </cd:Float>
               </cd:Field>
               <cd:Field name="rayleigh_error_quantifier_ka2">
@@ -75,6 +79,7 @@
                   <cd:Description>Rayleigh error quantifier Ka2</cd:Description>
                   <cd:BitSize>64</cd:BitSize>
                   <cd:NativeType>double</cd:NativeType>
+                  <ct:NamedTest id="FloatIsFinite"/>
                 </cd:Float>
               </cd:Field>
               <cd:Field name="rayleigh_error_quantifier_ka3">
@@ -82,6 +87,7 @@
                   <cd:Description>Rayleigh error quantifier Ka3</cd:Description>
                   <cd:BitSize>64</cd:BitSize>
                   <cd:NativeType>double</cd:NativeType>
+                  <ct:NamedTest id="FloatIsFinite"/>
                 </cd:Float>
               </cd:Field>
               <cd:Field name="rayleigh_error_quantifier_kb2">
@@ -89,6 +95,7 @@
                   <cd:Description>Rayleigh error quantifier Kb2</cd:Description>
                   <cd:BitSize>64</cd:BitSize>
                   <cd:NativeType>double</cd:NativeType>
+                  <ct:NamedTest id="FloatIsFinite"/>
                 </cd:Float>
               </cd:Field>
               <cd:Field name="rayleigh_error_quantifier_kb3">
@@ -96,6 +103,7 @@
                   <cd:Description>Rayleigh error quantifier Kb3</cd:Description>
                   <cd:BitSize>64</cd:BitSize>
                   <cd:NativeType>double</cd:NativeType>
+                  <ct:NamedTest id="FloatIsFinite"/>
                 </cd:Float>
               </cd:Field>
             </cd:Record>
@@ -107,6 +115,7 @@
                 <cd:Description>Telescope Tripod Obscuration correction for one column</cd:Description>
                 <cd:BitSize>64</cd:BitSize>
                 <cd:NativeType>double</cd:NativeType>
+                <ct:NamedTest id="FloatIsFinite"/>
               </cd:Float>
             </cd:Array>
           </cd:Field>
@@ -115,6 +124,7 @@
               <cd:Description>Radiometric gain factor for the Mie signal</cd:Description>
               <cd:BitSize>64</cd:BitSize>
               <cd:NativeType>double</cd:NativeType>
+              <ct:NamedTest id="FloatIsFinite"/>
             </cd:Float>
           </cd:Field>
           <cd:Field name="radiometric_gain_rayleigh">
@@ -122,6 +132,7 @@
               <cd:Description>Radiometric gain factor for the Rayleigh signal</cd:Description>
               <cd:BitSize>64</cd:BitSize>
               <cd:NativeType>double</cd:NativeType>
+              <ct:NamedTest id="FloatIsFinite"/>
             </cd:Float>
           </cd:Field>
           <cd:Field name="mie_time_in_memory_zone">
@@ -130,6 +141,7 @@
               <cd:Unit>s</cd:Unit>
               <cd:BitSize>64</cd:BitSize>
               <cd:NativeType>double</cd:NativeType>
+              <ct:NamedTest id="FloatIsFinite"/>
             </cd:Float>
           </cd:Field>
           <cd:Field name="rayleigh_time_in_memory_zone">
@@ -138,6 +150,7 @@
               <cd:Unit>s</cd:Unit>
               <cd:BitSize>64</cd:BitSize>
               <cd:NativeType>double</cd:NativeType>
+              <ct:NamedTest id="FloatIsFinite"/>
             </cd:Float>
           </cd:Field>
         </cd:Record>
@@ -159,6 +172,7 @@
                 <cd:Description>One element of vector A</cd:Description>
                 <cd:BitSize>64</cd:BitSize>
                 <cd:NativeType>double</cd:NativeType>
+                <ct:NamedTest id="FloatIsFinite"/>
               </cd:Float>
             </cd:Array>
           </cd:Field>
@@ -170,6 +184,7 @@
                 <cd:Description>One element of vector B</cd:Description>
                 <cd:BitSize>64</cd:BitSize>
                 <cd:NativeType>double</cd:NativeType>
+                <ct:NamedTest id="FloatIsFinite"/>
               </cd:Float>
             </cd:Array>
           </cd:Field>
@@ -181,6 +196,7 @@
                 <cd:Description>One element of vector A</cd:Description>
                 <cd:BitSize>64</cd:BitSize>
                 <cd:NativeType>double</cd:NativeType>
+                <ct:NamedTest id="FloatIsFinite"/>
               </cd:Float>
             </cd:Array>
           </cd:Field>
@@ -192,6 +208,7 @@
                 <cd:Description>One element of vector B</cd:Description>
                 <cd:BitSize>64</cd:BitSize>
                 <cd:NativeType>double</cd:NativeType>
+                <ct:NamedTest id="FloatIsFinite"/>
               </cd:Float>
             </cd:Array>
           </cd:Field>
@@ -205,6 +222,7 @@
               <cd:Unit>MHz/km</cd:Unit>
               <cd:BitSize>64</cd:BitSize>
               <cd:NativeType>double</cd:NativeType>
+              <ct:NamedTest id="FloatIsFinite"/>
             </cd:Float>
           </cd:Field>
           <cd:Field name="mie_slope_offnadir">
@@ -213,6 +231,7 @@
               <cd:Unit>MHz/km</cd:Unit>
               <cd:BitSize>64</cd:BitSize>
               <cd:NativeType>double</cd:NativeType>
+              <ct:NamedTest id="FloatIsFinite"/>
             </cd:Float>
           </cd:Field>
           <cd:Field name="rayleigh_slope_nadir">
@@ -221,6 +240,7 @@
               <cd:Unit>MHz/km</cd:Unit>
               <cd:BitSize>64</cd:BitSize>
               <cd:NativeType>double</cd:NativeType>
+              <ct:NamedTest id="FloatIsFinite"/>
             </cd:Float>
           </cd:Field>
           <cd:Field name="mie_slope_nadir">
@@ -229,6 +249,7 @@
               <cd:Unit>MHz/km</cd:Unit>
               <cd:BitSize>64</cd:BitSize>
               <cd:NativeType>double</cd:NativeType>
+              <ct:NamedTest id="FloatIsFinite"/>
             </cd:Float>
           </cd:Field>
           <cd:Field name="zero_reference_range_offnadir">
@@ -237,6 +258,7 @@
               <cd:Unit>km</cd:Unit>
               <cd:BitSize>64</cd:BitSize>
               <cd:NativeType>double</cd:NativeType>
+              <ct:NamedTest id="FloatIsFinite"/>
             </cd:Float>
           </cd:Field>
           <cd:Field name="zero_reference_range_nadir">
@@ -245,6 +267,7 @@
               <cd:Unit>km</cd:Unit>
               <cd:BitSize>64</cd:BitSize>
               <cd:NativeType>double</cd:NativeType>
+              <ct:NamedTest id="FloatIsFinite"/>
             </cd:Float>
           </cd:Field>
         </cd:Record>
@@ -278,6 +301,7 @@
                     <cd:Unit>GHz</cd:Unit>
                     <cd:BitSize>64</cd:BitSize>
                     <cd:NativeType>double</cd:NativeType>
+                    <ct:NamedTest id="FloatIsFinite"/>
                   </cd:Float>
                 </cd:Field>
                 <cd:Field name="frequency_valid">
@@ -310,6 +334,7 @@
                     <cd:Unit>pixel</cd:Unit>
                     <cd:BitSize>64</cd:BitSize>
                     <cd:NativeType>double</cd:NativeType>
+                    <ct:NamedTest id="FloatIsFinite"/>
                   </cd:Float>
                 </cd:Field>
                 <cd:Field name="measurement_error_mie_response">
@@ -318,6 +343,7 @@
                     <cd:Unit>pixel</cd:Unit>
                     <cd:BitSize>64</cd:BitSize>
                     <cd:NativeType>double</cd:NativeType>
+                    <ct:NamedTest id="FloatIsFinite"/>
                   </cd:Float>
                 </cd:Field>
                 <cd:Field name="reference_pulse_response">
@@ -326,6 +352,7 @@
                     <cd:Unit>pixel</cd:Unit>
                     <cd:BitSize>64</cd:BitSize>
                     <cd:NativeType>double</cd:NativeType>
+                    <ct:NamedTest id="FloatIsFinite"/>
                   </cd:Float>
                 </cd:Field>
                 <cd:Field name="reference_pulse_error_mie_response">
@@ -334,6 +361,7 @@
                     <cd:Unit>pixel</cd:Unit>
                     <cd:BitSize>64</cd:BitSize>
                     <cd:NativeType>double</cd:NativeType>
+                    <ct:NamedTest id="FloatIsFinite"/>
                   </cd:Float>
                 </cd:Field>
                 <cd:Field name="mie_frequency_step_data_statistics">
@@ -351,6 +379,7 @@
                   <cd:Unit>pixel/GHz</cd:Unit>
                   <cd:BitSize>64</cd:BitSize>
                   <cd:NativeType>double</cd:NativeType>
+                  <ct:NamedTest id="FloatIsFinite"/>
                 </cd:Float>
               </cd:Field>
               <cd:Field name="measurement_zero_frequency">
@@ -359,6 +388,7 @@
                   <cd:Unit>pixel</cd:Unit>
                   <cd:BitSize>64</cd:BitSize>
                   <cd:NativeType>double</cd:NativeType>
+                  <ct:NamedTest id="FloatIsFinite"/>
                 </cd:Float>
               </cd:Field>
               <cd:Field name="measurement_error_mie_response_std_dev">
@@ -366,6 +396,7 @@
                   <cd:Description>Measurement Error_Mie_Response standard deviation</cd:Description>
                   <cd:BitSize>64</cd:BitSize>
                   <cd:NativeType>double</cd:NativeType>
+                  <ct:NamedTest id="FloatIsFinite"/>
                 </cd:Float>
               </cd:Field>
               <cd:Field name="measurement_offset_frequency">
@@ -374,6 +405,7 @@
                   <cd:Unit>GHz</cd:Unit>
                   <cd:BitSize>64</cd:BitSize>
                   <cd:NativeType>double</cd:NativeType>
+                  <ct:NamedTest id="FloatIsFinite"/>
                 </cd:Float>
               </cd:Field>
             </cd:Record>
@@ -387,6 +419,7 @@
                   <cd:Unit>pixel/GHz</cd:Unit>
                   <cd:BitSize>64</cd:BitSize>
                   <cd:NativeType>double</cd:NativeType>
+                  <ct:NamedTest id="FloatIsFinite"/>
                 </cd:Float>
               </cd:Field>
               <cd:Field name="reference_pulse_zero_frequency">
@@ -395,6 +428,7 @@
                   <cd:Unit>pixel</cd:Unit>
                   <cd:BitSize>64</cd:BitSize>
                   <cd:NativeType>double</cd:NativeType>
+                  <ct:NamedTest id="FloatIsFinite"/>
                 </cd:Float>
               </cd:Field>
               <cd:Field name="reference_pulse_error_mie_response_std_dev">
@@ -402,6 +436,7 @@
                   <cd:Description>Reference pulse Eror_Mie_Response standard deviation</cd:Description>
                   <cd:BitSize>64</cd:BitSize>
                   <cd:NativeType>double</cd:NativeType>
+                  <ct:NamedTest id="FloatIsFinite"/>
                 </cd:Float>
               </cd:Field>
               <cd:Field name="reference_pulse_offset_frequency">
@@ -410,6 +445,7 @@
                   <cd:Unit>GHz</cd:Unit>
                   <cd:BitSize>64</cd:BitSize>
                   <cd:NativeType>double</cd:NativeType>
+                  <ct:NamedTest id="FloatIsFinite"/>
                 </cd:Float>
               </cd:Field>
             </cd:Record>
@@ -534,6 +570,7 @@
                     <cd:Unit>GHz</cd:Unit>
                     <cd:BitSize>64</cd:BitSize>
                     <cd:NativeType>double</cd:NativeType>
+                    <ct:NamedTest id="FloatIsFinite"/>
                   </cd:Float>
                 </cd:Field>
                 <cd:Field name="frequency_valid">
@@ -582,6 +619,7 @@
                     <cd:Unit>pixel</cd:Unit>
                     <cd:BitSize>64</cd:BitSize>
                     <cd:NativeType>double</cd:NativeType>
+                    <ct:NamedTest id="FloatIsFinite"/>
                   </cd:Float>
                 </cd:Field>
                 <cd:Field name="measurement_error_rayleigh_response">
@@ -590,6 +628,7 @@
                     <cd:Unit>pixel</cd:Unit>
                     <cd:BitSize>64</cd:BitSize>
                     <cd:NativeType>double</cd:NativeType>
+                    <ct:NamedTest id="FloatIsFinite"/>
                   </cd:Float>
                 </cd:Field>
                 <cd:Field name="ground_measurement_response">
@@ -598,6 +637,7 @@
                     <cd:Unit>pixel</cd:Unit>
                     <cd:BitSize>64</cd:BitSize>
                     <cd:NativeType>double</cd:NativeType>
+                    <ct:NamedTest id="FloatIsFinite"/>
                   </cd:Float>
                 </cd:Field>
                 <cd:Field name="ground_measurement_error_rayleigh_response">
@@ -606,6 +646,7 @@
                     <cd:Unit>pixel</cd:Unit>
                     <cd:BitSize>64</cd:BitSize>
                     <cd:NativeType>double</cd:NativeType>
+                    <ct:NamedTest id="FloatIsFinite"/>
                   </cd:Float>
                 </cd:Field>
                 <cd:Field name="reference_pulse_response">
@@ -614,6 +655,7 @@
                     <cd:Unit>pixel</cd:Unit>
                     <cd:BitSize>64</cd:BitSize>
                     <cd:NativeType>double</cd:NativeType>
+                    <ct:NamedTest id="FloatIsFinite"/>
                   </cd:Float>
                 </cd:Field>
                 <cd:Field name="reference_pulse_error_rayleigh_response">
@@ -622,6 +664,7 @@
                     <cd:Unit>pixel</cd:Unit>
                     <cd:BitSize>64</cd:BitSize>
                     <cd:NativeType>double</cd:NativeType>
+                    <ct:NamedTest id="FloatIsFinite"/>
                   </cd:Float>
                 </cd:Field>
                 <cd:Field name="rayleigh_frequency_step_data_statistics">
@@ -646,6 +689,7 @@
                   <cd:Unit>pixel/GHz</cd:Unit>
                   <cd:BitSize>64</cd:BitSize>
                   <cd:NativeType>double</cd:NativeType>
+                  <ct:NamedTest id="FloatIsFinite"/>
                 </cd:Float>
               </cd:Field>
               <cd:Field name="measurement_zero_frequency">
@@ -654,6 +698,7 @@
                   <cd:Unit>pixel</cd:Unit>
                   <cd:BitSize>64</cd:BitSize>
                   <cd:NativeType>double</cd:NativeType>
+                  <ct:NamedTest id="FloatIsFinite"/>
                 </cd:Float>
               </cd:Field>
               <cd:Field name="measurement_error_rayleigh_response_std_dev">
@@ -661,6 +706,7 @@
                   <cd:Description>Measurement Error_Rayleigh_Response standard deviation</cd:Description>
                   <cd:BitSize>64</cd:BitSize>
                   <cd:NativeType>double</cd:NativeType>
+                  <ct:NamedTest id="FloatIsFinite"/>
                 </cd:Float>
               </cd:Field>
               <cd:Field name="measurement_offset_frequency">
@@ -669,6 +715,7 @@
                   <cd:Unit>GHz</cd:Unit>
                   <cd:BitSize>64</cd:BitSize>
                   <cd:NativeType>double</cd:NativeType>
+                  <ct:NamedTest id="FloatIsFinite"/>
                 </cd:Float>
               </cd:Field>
               <cd:Field name="measurement_error_fit_coefficients">
@@ -678,6 +725,7 @@
                     <cd:Description>One fit coefficient of the polynomial fit of the measurement response errors</cd:Description>
                     <cd:BitSize>64</cd:BitSize>
                     <cd:NativeType>double</cd:NativeType>
+                    <ct:NamedTest id="FloatIsFinite"/>
                   </cd:Float>
                 </cd:Array>
               </cd:Field>
@@ -692,6 +740,7 @@
                   <cd:Unit>pixel/GHz</cd:Unit>
                   <cd:BitSize>64</cd:BitSize>
                   <cd:NativeType>double</cd:NativeType>
+                  <ct:NamedTest id="FloatIsFinite"/>
                 </cd:Float>
               </cd:Field>
               <cd:Field name="ground_measurement_zero_frequency">
@@ -700,6 +749,7 @@
                   <cd:Unit>pixel</cd:Unit>
                   <cd:BitSize>64</cd:BitSize>
                   <cd:NativeType>double</cd:NativeType>
+                  <ct:NamedTest id="FloatIsFinite"/>
                 </cd:Float>
               </cd:Field>
               <cd:Field name="ground_measurement_error_rayleigh_response_std_dev">
@@ -707,6 +757,7 @@
                   <cd:Description>Ground measurement Error_Rayleigh_Response standard deviation</cd:Description>
                   <cd:BitSize>64</cd:BitSize>
                   <cd:NativeType>double</cd:NativeType>
+                  <ct:NamedTest id="FloatIsFinite"/>
                 </cd:Float>
               </cd:Field>
               <cd:Field name="ground_measurement_offset_frequency">
@@ -715,6 +766,7 @@
                   <cd:Unit>GHz</cd:Unit>
                   <cd:BitSize>64</cd:BitSize>
                   <cd:NativeType>double</cd:NativeType>
+                  <ct:NamedTest id="FloatIsFinite"/>
                 </cd:Float>
               </cd:Field>
               <cd:Field name="ground_measurement_error_fit_coefficients">
@@ -724,6 +776,7 @@
                     <cd:Description>One fit coefficient of the polynomial fit of the ground measurement response errors</cd:Description>
                     <cd:BitSize>64</cd:BitSize>
                     <cd:NativeType>double</cd:NativeType>
+                    <ct:NamedTest id="FloatIsFinite"/>
                   </cd:Float>
                 </cd:Array>
               </cd:Field>
@@ -738,6 +791,7 @@
                   <cd:Unit>pixel/GHz</cd:Unit>
                   <cd:BitSize>64</cd:BitSize>
                   <cd:NativeType>double</cd:NativeType>
+                  <ct:NamedTest id="FloatIsFinite"/>
                 </cd:Float>
               </cd:Field>
               <cd:Field name="reference_pulse_zero_frequency">
@@ -746,6 +800,7 @@
                   <cd:Unit>pixel</cd:Unit>
                   <cd:BitSize>64</cd:BitSize>
                   <cd:NativeType>double</cd:NativeType>
+                  <ct:NamedTest id="FloatIsFinite"/>
                 </cd:Float>
               </cd:Field>
               <cd:Field name="reference_pulse_error_rayleigh_response_std_dev">
@@ -753,6 +808,7 @@
                   <cd:Description>Reference pulse Eror_Rayleigh_ Response standard deviation</cd:Description>
                   <cd:BitSize>64</cd:BitSize>
                   <cd:NativeType>double</cd:NativeType>
+                  <ct:NamedTest id="FloatIsFinite"/>
                 </cd:Float>
               </cd:Field>
               <cd:Field name="reference_pulse_offset_frequency">
@@ -761,6 +817,7 @@
                   <cd:Unit>GHz</cd:Unit>
                   <cd:BitSize>64</cd:BitSize>
                   <cd:NativeType>double</cd:NativeType>
+                  <ct:NamedTest id="FloatIsFinite"/>
                 </cd:Float>
               </cd:Field>
               <cd:Field name="reference_pulse_error_fit_coefficients">
@@ -770,6 +827,7 @@
                     <cd:Description>One fit coefficient of the polynomial fit of the reference pulse response errors</cd:Description>
                     <cd:BitSize>64</cd:BitSize>
                     <cd:NativeType>double</cd:NativeType>
+                    <ct:NamedTest id="FloatIsFinite"/>
                   </cd:Float>
                 </cd:Array>
               </cd:Field>

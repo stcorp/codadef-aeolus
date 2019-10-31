@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="binary" last-modified="2017-09-11" name="Level_1B_Ground_Wind_Detection_04_03">
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="binary" last-modified="2019-10-31" name="Level_1B_Ground_Wind_Detection_04_03">
   <cd:Description>Level 1B Measurement Ground Wind Detection</cd:Description>
   <cd:Field name="surface">
     <cd:Integer>
@@ -34,6 +34,7 @@
             <cd:Unit>m</cd:Unit>
             <cd:BitSize>64</cd:BitSize>
             <cd:NativeType>double</cd:NativeType>
+            <ct:NamedTest id="FloatIsFinite"/>
           </cd:Float>
         </cd:Field>
         <cd:Field name="dem_weight">
@@ -41,6 +42,7 @@
             <cd:Description>Weight assigned to signal of this ground bin, based on offset to DEM. Value between 0 and 1</cd:Description>
             <cd:BitSize>64</cd:BitSize>
             <cd:NativeType>double</cd:NativeType>
+            <ct:NamedTest id="FloatIsFinite"/>
           </cd:Float>
         </cd:Field>
         <cd:Field name="snr_weight">
@@ -48,6 +50,7 @@
             <cd:Description>Weight assigned to signal of this ground bin based on the SNR. Value between 0 and 1</cd:Description>
             <cd:BitSize>64</cd:BitSize>
             <cd:NativeType>double</cd:NativeType>
+            <ct:NamedTest id="FloatIsFinite"/>
           </cd:Float>
         </cd:Field>
         <cd:Field name="fwhm_weight">
@@ -55,6 +58,7 @@
             <cd:Description>Weight assigned to signal of this ground bin based on the FWHM. Value between 0 and 1</cd:Description>
             <cd:BitSize>64</cd:BitSize>
             <cd:NativeType>double</cd:NativeType>
+            <ct:NamedTest id="FloatIsFinite"/>
           </cd:Float>
         </cd:Field>
       </cd:Record>
@@ -65,6 +69,7 @@
       <cd:Description>Ground wind thickness (air column height) above DEM intersection (= difference between the upper edgeof the ground bin and DEM height). When there is no expected ground bin, this is set to -9999. For the average ground wind bin thickness calculation, only the values with corresponding flag ground_wind_detected=TRUE are used</cd:Description>
       <cd:BitSize>64</cd:BitSize>
       <cd:NativeType>double</cd:NativeType>
+      <ct:NamedTest id="FloatIsFinite"/>
     </cd:Float>
   </cd:Field>
 </cd:Record>

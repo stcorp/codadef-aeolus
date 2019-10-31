@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="binary" last-modified="2017-09-11" name="Level_1B_Product_Confidence_Data_ADSR_04_08">
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="binary" last-modified="2019-10-31" name="Level_1B_Product_Confidence_Data_ADSR_04_08">
   <cd:Field name="start_of_observation_time">
     <cd:Time timeformat="binary_envisat_datetime">
       <cd:Description>Start time at start of BRC</cd:Description>
@@ -87,6 +87,7 @@
           <cd:Unit>GHz</cd:Unit>
           <cd:BitSize>64</cd:BitSize>
           <cd:NativeType>double</cd:NativeType>
+          <ct:NamedTest id="FloatIsFinite"/>
         </cd:Float>
       </cd:Field>
       <cd:Field name="avg_uv_energy">
@@ -95,6 +96,7 @@
           <cd:Unit>mJ</cd:Unit>
           <cd:BitSize>64</cd:BitSize>
           <cd:NativeType>double</cd:NativeType>
+          <ct:NamedTest id="FloatIsFinite"/>
         </cd:Float>
       </cd:Field>
       <cd:Field name="laser_frequency_offset_std_dev">
@@ -103,6 +105,7 @@
           <cd:Unit>GHz</cd:Unit>
           <cd:BitSize>64</cd:BitSize>
           <cd:NativeType>double</cd:NativeType>
+          <ct:NamedTest id="FloatIsFinite"/>
         </cd:Float>
       </cd:Field>
       <cd:Field name="uv_energy_std_dev">
@@ -111,6 +114,7 @@
           <cd:Unit>mJ</cd:Unit>
           <cd:BitSize>64</cd:BitSize>
           <cd:NativeType>double</cd:NativeType>
+          <ct:NamedTest id="FloatIsFinite"/>
         </cd:Float>
       </cd:Field>
       <cd:Field name="mie_ref_pulse_signal_to_noise_ratio">
@@ -118,6 +122,7 @@
           <cd:Description>Mie signal to noise ratio for coadded valid pulses of the observation</cd:Description>
           <cd:BitSize>64</cd:BitSize>
           <cd:NativeType>double</cd:NativeType>
+          <ct:NamedTest id="FloatIsFinite"/>
         </cd:Float>
       </cd:Field>
       <cd:Field name="mie_ref_pulse_refined_signal_to_noise_ratio">
@@ -125,6 +130,7 @@
           <cd:Description>Refined Mie signal to noise ratio for coadded valid pulses of the observation</cd:Description>
           <cd:BitSize>64</cd:BitSize>
           <cd:NativeType>double</cd:NativeType>
+          <ct:NamedTest id="FloatIsFinite"/>
         </cd:Float>
       </cd:Field>
       <cd:Field name="rayleigh_ref_pulse_signal_to_noise_ratio_channel_a">
@@ -132,6 +138,7 @@
           <cd:Description>Rayleigh signal to noise ratio of channel A for the coadded valid pulses of the observation</cd:Description>
           <cd:BitSize>64</cd:BitSize>
           <cd:NativeType>double</cd:NativeType>
+          <ct:NamedTest id="FloatIsFinite"/>
         </cd:Float>
       </cd:Field>
       <cd:Field name="rayleigh_ref_pulse_signal_to_noise_ratio_channel_b">
@@ -139,6 +146,7 @@
           <cd:Description>Rayleigh signal to noise ratio of channel B for the coadded valid pulses of the observation</cd:Description>
           <cd:BitSize>64</cd:BitSize>
           <cd:NativeType>double</cd:NativeType>
+          <ct:NamedTest id="FloatIsFinite"/>
         </cd:Float>
       </cd:Field>
       <cd:Field name="num_mie_peak_invalid">
@@ -161,6 +169,7 @@
           <cd:Description>In case the Polynomial_Fit_Data_Used flag is set to 0, this field reports the corrected response of the accumulated Mie reference pulses. Otherwise parameter set to 0.0</cd:Description>
           <cd:BitSize>64</cd:BitSize>
           <cd:NativeType>double</cd:NativeType>
+          <ct:NamedTest id="FloatIsFinite"/>
         </cd:Float>
       </cd:Field>
       <cd:Field name="corrected_rayleigh_reference_pulse_response">
@@ -168,6 +177,7 @@
           <cd:Description>In case the Polynomial_Fit_Data_Used flag is set to 0, this field reports the corrected response of the accumulated Rayleigh reference pulses. Otherwise parameter set to 0.0</cd:Description>
           <cd:BitSize>64</cd:BitSize>
           <cd:NativeType>double</cd:NativeType>
+          <ct:NamedTest id="FloatIsFinite"/>
         </cd:Float>
       </cd:Field>
       <cd:Field name="observation_alt_bin_pcd">
@@ -181,6 +191,7 @@
                 <cd:Unit>m/s</cd:Unit>
                 <cd:BitSize>64</cd:BitSize>
                 <cd:NativeType>double</cd:NativeType>
+                <ct:NamedTest id="FloatIsFinite"/>
               </cd:Float>
             </cd:Field>
             <cd:Field name="error_quantifier_rayleigh">
@@ -189,6 +200,7 @@
                 <cd:Unit>m/s</cd:Unit>
                 <cd:BitSize>64</cd:BitSize>
                 <cd:NativeType>double</cd:NativeType>
+                <ct:NamedTest id="FloatIsFinite"/>
               </cd:Float>
             </cd:Field>
             <cd:Field name="error_quantifier_rayleigh_channel_a">
@@ -197,6 +209,7 @@
                 <cd:Unit>AU</cd:Unit>
                 <cd:BitSize>64</cd:BitSize>
                 <cd:NativeType>double</cd:NativeType>
+                <ct:NamedTest id="FloatIsFinite"/>
               </cd:Float>
             </cd:Field>
             <cd:Field name="error_quantifier_rayleigh_channel_b">
@@ -205,6 +218,7 @@
                 <cd:Unit>AU</cd:Unit>
                 <cd:BitSize>64</cd:BitSize>
                 <cd:NativeType>double</cd:NativeType>
+                <ct:NamedTest id="FloatIsFinite"/>
               </cd:Float>
             </cd:Field>
             <cd:Field name="mie_wind_velocity_std_dev">
@@ -213,6 +227,7 @@
                 <cd:Unit>m/s</cd:Unit>
                 <cd:BitSize>64</cd:BitSize>
                 <cd:NativeType>double</cd:NativeType>
+                <ct:NamedTest id="FloatIsFinite"/>
               </cd:Float>
             </cd:Field>
             <cd:Field name="rayleigh_wind_velocity_std_dev">
@@ -221,6 +236,7 @@
                 <cd:Unit>m/s</cd:Unit>
                 <cd:BitSize>64</cd:BitSize>
                 <cd:NativeType>double</cd:NativeType>
+                <ct:NamedTest id="FloatIsFinite"/>
               </cd:Float>
             </cd:Field>
             <cd:Field name="mie_useful_signal_std_dev">
@@ -229,6 +245,7 @@
                 <cd:Unit>AU</cd:Unit>
                 <cd:BitSize>64</cd:BitSize>
                 <cd:NativeType>double</cd:NativeType>
+                <ct:NamedTest id="FloatIsFinite"/>
               </cd:Float>
             </cd:Field>
             <cd:Field name="rayleigh_useful_signal_channel_a_std_dev">
@@ -237,6 +254,7 @@
                 <cd:Unit>AU</cd:Unit>
                 <cd:BitSize>64</cd:BitSize>
                 <cd:NativeType>double</cd:NativeType>
+                <ct:NamedTest id="FloatIsFinite"/>
               </cd:Float>
             </cd:Field>
             <cd:Field name="rayleigh_useful_signal_channel_b_std_dev">
@@ -245,6 +263,7 @@
                 <cd:Unit>AU</cd:Unit>
                 <cd:BitSize>64</cd:BitSize>
                 <cd:NativeType>double</cd:NativeType>
+                <ct:NamedTest id="FloatIsFinite"/>
               </cd:Float>
             </cd:Field>
             <cd:Field name="mie_core_characteristic">
@@ -256,6 +275,7 @@
                 <cd:Unit>AU</cd:Unit>
                 <cd:BitSize>64</cd:BitSize>
                 <cd:NativeType>double</cd:NativeType>
+                <ct:NamedTest id="FloatIsFinite"/>
               </cd:Float>
             </cd:Field>
             <cd:Field name="refined_scattering_ratio_mie">
@@ -264,6 +284,7 @@
                 <cd:Unit>AU</cd:Unit>
                 <cd:BitSize>64</cd:BitSize>
                 <cd:NativeType>double</cd:NativeType>
+                <ct:NamedTest id="FloatIsFinite"/>
               </cd:Float>
             </cd:Field>
             <cd:Field name="mie_signal_to_noise_ratio">
@@ -272,6 +293,7 @@
                 <cd:Unit>AU</cd:Unit>
                 <cd:BitSize>64</cd:BitSize>
                 <cd:NativeType>double</cd:NativeType>
+                <ct:NamedTest id="FloatIsFinite"/>
               </cd:Float>
             </cd:Field>
             <cd:Field name="refined_mie_signal_to_noise_ratio">
@@ -280,6 +302,7 @@
                 <cd:Unit>AU</cd:Unit>
                 <cd:BitSize>64</cd:BitSize>
                 <cd:NativeType>double</cd:NativeType>
+                <ct:NamedTest id="FloatIsFinite"/>
               </cd:Float>
             </cd:Field>
             <cd:Field name="rayleigh_signal_to_noise_ratio_channel_a">
@@ -288,6 +311,7 @@
                 <cd:Unit>AU</cd:Unit>
                 <cd:BitSize>64</cd:BitSize>
                 <cd:NativeType>double</cd:NativeType>
+                <ct:NamedTest id="FloatIsFinite"/>
               </cd:Float>
             </cd:Field>
             <cd:Field name="rayleigh_signal_to_noise_ratio_channel_b">
@@ -296,6 +320,7 @@
                 <cd:Unit>AU</cd:Unit>
                 <cd:BitSize>64</cd:BitSize>
                 <cd:NativeType>double</cd:NativeType>
+                <ct:NamedTest id="FloatIsFinite"/>
               </cd:Float>
             </cd:Field>
           </cd:Record>
@@ -335,6 +360,7 @@
           <cd:Unit>GHz</cd:Unit>
           <cd:BitSize>64</cd:BitSize>
           <cd:NativeType>double</cd:NativeType>
+          <ct:NamedTest id="FloatIsFinite"/>
         </cd:Float>
       </cd:Field>
       <cd:Field name="mie_emitted_frequency_std_dev">
@@ -343,6 +369,7 @@
           <cd:Unit>GHz</cd:Unit>
           <cd:BitSize>64</cd:BitSize>
           <cd:NativeType>double</cd:NativeType>
+          <ct:NamedTest id="FloatIsFinite"/>
         </cd:Float>
       </cd:Field>
       <cd:Field name="rayleigh_mean_emitted_frequency">
@@ -351,6 +378,7 @@
           <cd:Unit>GHz</cd:Unit>
           <cd:BitSize>64</cd:BitSize>
           <cd:NativeType>double</cd:NativeType>
+          <ct:NamedTest id="FloatIsFinite"/>
         </cd:Float>
       </cd:Field>
       <cd:Field name="rayleigh_emitted_frequency_std_dev">
@@ -359,6 +387,7 @@
           <cd:Unit>GHz</cd:Unit>
           <cd:BitSize>64</cd:BitSize>
           <cd:NativeType>double</cd:NativeType>
+          <ct:NamedTest id="FloatIsFinite"/>
         </cd:Float>
       </cd:Field>
       <cd:Field name="multimode_ratio_quality_flag">
@@ -374,6 +403,7 @@
           <cd:Description>Mean of up to N*P values of the TXA frequency of valid pulses</cd:Description>
           <cd:BitSize>64</cd:BitSize>
           <cd:NativeType>double</cd:NativeType>
+          <ct:NamedTest id="FloatIsFinite"/>
         </cd:Float>
       </cd:Field>
       <cd:Field name="RSPT_Temperatures">
@@ -386,6 +416,7 @@
                 <cd:Description>Sensor RSPT temperature</cd:Description>
                 <cd:BitSize>64</cd:BitSize>
                 <cd:NativeType>double</cd:NativeType>
+                <ct:NamedTest id="FloatIsFinite"/>
               </cd:Float>
             </cd:Field>
             <cd:Field name="tc_9_rspt_2">
@@ -393,6 +424,7 @@
                 <cd:Description>Sensor RSPT temperature</cd:Description>
                 <cd:BitSize>64</cd:BitSize>
                 <cd:NativeType>double</cd:NativeType>
+                <ct:NamedTest id="FloatIsFinite"/>
               </cd:Float>
             </cd:Field>
             <cd:Field name="tc_10_rspt_3">
@@ -400,6 +432,7 @@
                 <cd:Description>Sensor RSPT temperature</cd:Description>
                 <cd:BitSize>64</cd:BitSize>
                 <cd:NativeType>double</cd:NativeType>
+                <ct:NamedTest id="FloatIsFinite"/>
               </cd:Float>
             </cd:Field>
             <cd:Field name="tc_11_rspt_4">
@@ -407,6 +440,7 @@
                 <cd:Description>Sensor RSPT temperature</cd:Description>
                 <cd:BitSize>64</cd:BitSize>
                 <cd:NativeType>double</cd:NativeType>
+                <ct:NamedTest id="FloatIsFinite"/>
               </cd:Float>
             </cd:Field>
           </cd:Record>
@@ -445,6 +479,7 @@
             <cd:Description>Calculated mean DCO value for all valid Mie reference pulses, which is used for DCO correction. Value set to zero in case DCO_Pre_Processing flag is set to 'false'</cd:Description>
             <cd:BitSize>64</cd:BitSize>
             <cd:NativeType>double</cd:NativeType>
+            <ct:NamedTest id="FloatIsFinite"/>
           </cd:Float>
         </cd:Field>
         <cd:Field name="rayleigh_reference_pulse_dco">
@@ -452,6 +487,7 @@
             <cd:Description>Calculated mean DCO value for all valid Rayleigh reference pulses, which is used for DCO correction. Value set to zero in case DCO_Pre_Processing flag is set to 'false'</cd:Description>
             <cd:BitSize>64</cd:BitSize>
             <cd:NativeType>double</cd:NativeType>
+            <ct:NamedTest id="FloatIsFinite"/>
           </cd:Float>
         </cd:Field>
         <cd:Field name="mie_measurement_dco">
@@ -459,6 +495,7 @@
             <cd:Description>Calculated mean DCO value for all Mie height bins, which is used for DCO correction. Value set to zero in case DCO_Pre_Processing flag is set to 'false'</cd:Description>
             <cd:BitSize>64</cd:BitSize>
             <cd:NativeType>double</cd:NativeType>
+            <ct:NamedTest id="FloatIsFinite"/>
           </cd:Float>
         </cd:Field>
         <cd:Field name="rayleigh_measurement_dco">
@@ -466,6 +503,7 @@
             <cd:Description>Calculated mean DCO value for all Rayleigh height bins, which is used for DCO correction. Value set to zero in case DCO_Pre_Processing flag is set to 'false'</cd:Description>
             <cd:BitSize>64</cd:BitSize>
             <cd:NativeType>double</cd:NativeType>
+            <ct:NamedTest id="FloatIsFinite"/>
           </cd:Float>
         </cd:Field>
         <cd:Field name="avg_laser_frequency_offset">
@@ -474,6 +512,7 @@
             <cd:Unit>GHz</cd:Unit>
             <cd:BitSize>64</cd:BitSize>
             <cd:NativeType>double</cd:NativeType>
+            <ct:NamedTest id="FloatIsFinite"/>
           </cd:Float>
         </cd:Field>
         <cd:Field name="avg_uv_energy">
@@ -482,6 +521,7 @@
             <cd:Unit>mJ</cd:Unit>
             <cd:BitSize>64</cd:BitSize>
             <cd:NativeType>double</cd:NativeType>
+            <ct:NamedTest id="FloatIsFinite"/>
           </cd:Float>
         </cd:Field>
         <cd:Field name="laser_frequency_offset_std_dev">
@@ -490,6 +530,7 @@
             <cd:Unit>GHz</cd:Unit>
             <cd:BitSize>64</cd:BitSize>
             <cd:NativeType>double</cd:NativeType>
+            <ct:NamedTest id="FloatIsFinite"/>
           </cd:Float>
         </cd:Field>
         <cd:Field name="uv_energy_std_dev">
@@ -498,6 +539,7 @@
             <cd:Unit>mJ</cd:Unit>
             <cd:BitSize>64</cd:BitSize>
             <cd:NativeType>double</cd:NativeType>
+            <ct:NamedTest id="FloatIsFinite"/>
           </cd:Float>
         </cd:Field>
         <cd:Field name="mie_ref_pulse_signal_to_noise_ratio">
@@ -505,6 +547,7 @@
             <cd:Description>Mie signal to noise ratio for coadded valid pulses of the measurement</cd:Description>
             <cd:BitSize>64</cd:BitSize>
             <cd:NativeType>double</cd:NativeType>
+            <ct:NamedTest id="FloatIsFinite"/>
           </cd:Float>
         </cd:Field>
         <cd:Field name="mie_ref_pulse_refined_signal_to_noise_ratio">
@@ -512,6 +555,7 @@
             <cd:Description>Refined Mie signal to noise ratio for coadded valid pulses of the measurement</cd:Description>
             <cd:BitSize>64</cd:BitSize>
             <cd:NativeType>double</cd:NativeType>
+            <ct:NamedTest id="FloatIsFinite"/>
           </cd:Float>
         </cd:Field>
         <cd:Field name="rayleigh_ref_pulse_signal_to_noise_ratio_channel_a">
@@ -519,6 +563,7 @@
             <cd:Description>Rayleigh signal to noise ratio of channel A for the coadded valid pulses of the measurement.</cd:Description>
             <cd:BitSize>64</cd:BitSize>
             <cd:NativeType>double</cd:NativeType>
+            <ct:NamedTest id="FloatIsFinite"/>
           </cd:Float>
         </cd:Field>
         <cd:Field name="rayleigh_ref_pulse_signal_to_noise_ratio_channel_b">
@@ -526,6 +571,7 @@
             <cd:Description>Rayleigh signal to noise ratio of channel B for the coadded valid pulses of the measurement.</cd:Description>
             <cd:BitSize>64</cd:BitSize>
             <cd:NativeType>double</cd:NativeType>
+            <ct:NamedTest id="FloatIsFinite"/>
           </cd:Float>
         </cd:Field>
         <cd:Field name="meas_alt_bin_pcd">
@@ -566,6 +612,7 @@
                   <cd:Unit>AU</cd:Unit>
                   <cd:BitSize>64</cd:BitSize>
                   <cd:NativeType>double</cd:NativeType>
+                  <ct:NamedTest id="FloatIsFinite"/>
                 </cd:Float>
               </cd:Field>
               <cd:Field name="refined_scattering_ratio_mie">
@@ -574,6 +621,7 @@
                   <cd:Unit>AU</cd:Unit>
                   <cd:BitSize>64</cd:BitSize>
                   <cd:NativeType>double</cd:NativeType>
+                  <ct:NamedTest id="FloatIsFinite"/>
                 </cd:Float>
               </cd:Field>
               <cd:Field name="mie_signal_to_noise_ratio">
@@ -582,6 +630,7 @@
                   <cd:Unit>AU</cd:Unit>
                   <cd:BitSize>64</cd:BitSize>
                   <cd:NativeType>double</cd:NativeType>
+                  <ct:NamedTest id="FloatIsFinite"/>
                 </cd:Float>
               </cd:Field>
               <cd:Field name="refined_mie_signal_to_noise_ratio">
@@ -590,6 +639,7 @@
                   <cd:Unit>AU</cd:Unit>
                   <cd:BitSize>64</cd:BitSize>
                   <cd:NativeType>double</cd:NativeType>
+                  <ct:NamedTest id="FloatIsFinite"/>
                 </cd:Float>
               </cd:Field>
               <cd:Field name="rayleigh_signal_to_noise_ratio_channel_a">
@@ -598,6 +648,7 @@
                   <cd:Unit>AU</cd:Unit>
                   <cd:BitSize>64</cd:BitSize>
                   <cd:NativeType>double</cd:NativeType>
+                  <ct:NamedTest id="FloatIsFinite"/>
                 </cd:Float>
               </cd:Field>
               <cd:Field name="rayleigh_signal_to_noise_ratio_channel_b">
@@ -606,6 +657,7 @@
                   <cd:Unit>AU</cd:Unit>
                   <cd:BitSize>64</cd:BitSize>
                   <cd:NativeType>double</cd:NativeType>
+                  <ct:NamedTest id="FloatIsFinite"/>
                 </cd:Float>
               </cd:Field>
             </cd:Record>
@@ -617,6 +669,7 @@
             <cd:Unit>m/s</cd:Unit>
             <cd:BitSize>64</cd:BitSize>
             <cd:NativeType>double</cd:NativeType>
+            <ct:NamedTest id="FloatIsFinite"/>
           </cd:Float>
         </cd:Field>
         <cd:Field name="mie_mean_emitted_frequency">
@@ -625,6 +678,7 @@
             <cd:Unit>GHz</cd:Unit>
             <cd:BitSize>64</cd:BitSize>
             <cd:NativeType>double</cd:NativeType>
+            <ct:NamedTest id="FloatIsFinite"/>
           </cd:Float>
         </cd:Field>
         <cd:Field name="mie_emitted_frequency_std_dev">
@@ -633,6 +687,7 @@
             <cd:Unit>GHz</cd:Unit>
             <cd:BitSize>64</cd:BitSize>
             <cd:NativeType>double</cd:NativeType>
+            <ct:NamedTest id="FloatIsFinite"/>
           </cd:Float>
         </cd:Field>
         <cd:Field name="reference_pulse_fwhm">
@@ -641,6 +696,7 @@
             <cd:Unit>pixel</cd:Unit>
             <cd:BitSize>64</cd:BitSize>
             <cd:NativeType>double</cd:NativeType>
+            <ct:NamedTest id="FloatIsFinite"/>
           </cd:Float>
         </cd:Field>
         <cd:Field name="rayleigh_mean_emitted_frequency">
@@ -649,6 +705,7 @@
             <cd:Unit>GHz</cd:Unit>
             <cd:BitSize>64</cd:BitSize>
             <cd:NativeType>double</cd:NativeType>
+            <ct:NamedTest id="FloatIsFinite"/>
           </cd:Float>
         </cd:Field>
         <cd:Field name="rayleigh_emitted_frequency_std_dev">
@@ -657,6 +714,7 @@
             <cd:Unit>GHz</cd:Unit>
             <cd:BitSize>64</cd:BitSize>
             <cd:NativeType>double</cd:NativeType>
+            <ct:NamedTest id="FloatIsFinite"/>
           </cd:Float>
         </cd:Field>
         <cd:Field name="uv_energy_quality_flag">

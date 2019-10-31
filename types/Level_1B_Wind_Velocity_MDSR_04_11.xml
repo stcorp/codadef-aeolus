@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="binary" last-modified="2019-09-05" name="Level_1B_Wind_Velocity_MDSR_04_11">
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="binary" last-modified="2019-10-31" name="Level_1B_Wind_Velocity_MDSR_04_11">
   <cd:Field name="start_of_observation_time">
     <cd:Time timeformat="binary_envisat_datetime">
       <cd:Description>Satellite time at start of BRC</cd:Description>
@@ -51,6 +51,7 @@
                 <cd:Unit>m/s</cd:Unit>
                 <cd:BitSize>64</cd:BitSize>
                 <cd:NativeType>double</cd:NativeType>
+                <ct:NamedTest id="FloatIsFinite"/>
               </cd:Float>
             </cd:Field>
           </cd:Record>
@@ -74,6 +75,7 @@
                 <cd:Unit>m/s</cd:Unit>
                 <cd:BitSize>64</cd:BitSize>
                 <cd:NativeType>double</cd:NativeType>
+                <ct:NamedTest id="FloatIsFinite"/>
               </cd:Float>
             </cd:Field>
           </cd:Record>
@@ -118,6 +120,7 @@
                   <cd:Unit>m/s</cd:Unit>
                   <cd:BitSize>64</cd:BitSize>
                   <cd:NativeType>double</cd:NativeType>
+                  <ct:NamedTest id="FloatIsFinite"/>
                 </cd:Float>
               </cd:Field>
             </cd:Record>
@@ -136,6 +139,7 @@
             <cd:Unit>m/s</cd:Unit>
             <cd:BitSize>64</cd:BitSize>
             <cd:NativeType>double</cd:NativeType>
+            <ct:NamedTest id="FloatIsFinite"/>
           </cd:Float>
         </cd:Field>
         <cd:Field name="rayleigh_altitude_bin_wind_info">
@@ -156,6 +160,7 @@
                   <cd:Unit>m/s</cd:Unit>
                   <cd:BitSize>64</cd:BitSize>
                   <cd:NativeType>double</cd:NativeType>
+                  <ct:NamedTest id="FloatIsFinite"/>
                 </cd:Float>
               </cd:Field>
             </cd:Record>
@@ -174,6 +179,7 @@
             <cd:Unit>m/s</cd:Unit>
             <cd:BitSize>64</cd:BitSize>
             <cd:NativeType>double</cd:NativeType>
+            <ct:NamedTest id="FloatIsFinite"/>
           </cd:Float>
         </cd:Field>
       </cd:Record>

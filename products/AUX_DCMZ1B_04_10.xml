@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:ProductDefinition xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" id="AUX_DCMZ1B_04_10" format="xml" last-modified="2019-06-11">
+<cd:ProductDefinition xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" id="AUX_DCMZ1B_04_10" format="xml" last-modified="2019-10-31">
   <cd:Record format="xml">
     <cd:Field name="Earth_Explorer_File">
       <cd:Record namexml="Earth_Explorer_File">
@@ -118,6 +118,7 @@
                                         <cd:Description>Bias for the Rayleigh measurements.</cd:Description>
                                         <cd:Unit>ACCD counts/(ACCD pixel*s)</cd:Unit>
                                         <cd:NativeType>double</cd:NativeType>
+                                        <ct:NamedTest id="FloatIsFinite"/>
                                       </cd:Float>
                                     </cd:Array>
                                   </cd:Type>
@@ -141,6 +142,7 @@
                                         <cd:Description>Bias for the Rayleigh measurements.</cd:Description>
                                         <cd:Unit>ACCD counts/(ACCD pixel*s)</cd:Unit>
                                         <cd:NativeType>double</cd:NativeType>
+                                        <ct:NamedTest id="FloatIsFinite"/>
                                       </cd:Float>
                                     </cd:Array>
                                   </cd:Type>

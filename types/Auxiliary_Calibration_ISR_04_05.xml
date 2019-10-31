@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="xml" last-modified="2017-09-11" name="Auxiliary_Calibration_ISR_04_05" namexml="Auxiliary_Calibration_ISR">
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="xml" last-modified="2019-10-31" name="Auxiliary_Calibration_ISR_04_05" namexml="Auxiliary_Calibration_ISR">
   <cd:Description>Auxiliary Calibration ISR</cd:Description>
   <cd:Field name="List_of_Data_Set_Records">
     <cd:Record namexml="List_of_Data_Set_Records">
@@ -49,6 +49,7 @@
                             <cd:Description>Laser frequency offset</cd:Description>
                             <cd:Unit>GHz</cd:Unit>
                             <cd:NativeType>double</cd:NativeType>
+                            <ct:NamedTest id="FloatIsFinite"/>
                           </cd:Float>
                         </cd:Type>
                       </cd:Field>
@@ -87,6 +88,7 @@
                           <cd:Float format="ascii">
                             <cd:Description>Sum of signal over all pulses and columns on the internal Mie reference scaled with laser energy.</cd:Description>
                             <cd:NativeType>double</cd:NativeType>
+                            <ct:NamedTest id="FloatIsFinite"/>
                           </cd:Float>
                         </cd:Type>
                       </cd:Field>
@@ -97,6 +99,7 @@
                             <cd:Description>Mie channel spectral response</cd:Description>
                             <cd:Unit>ACCD pixel index</cd:Unit>
                             <cd:NativeType>double</cd:NativeType>
+                            <ct:NamedTest id="FloatIsFinite"/>
                           </cd:Float>
                         </cd:Type>
                       </cd:Field>
@@ -105,6 +108,7 @@
                           <cd:Float format="ascii">
                             <cd:Description>Rayleigh channel A spectral response</cd:Description>
                             <cd:NativeType>double</cd:NativeType>
+                            <ct:NamedTest id="FloatIsFinite"/>
                           </cd:Float>
                         </cd:Type>
                       </cd:Field>
@@ -113,6 +117,7 @@
                           <cd:Float format="ascii">
                             <cd:Description>Rayleigh channel B spectral response</cd:Description>
                             <cd:NativeType>double</cd:NativeType>
+                            <ct:NamedTest id="FloatIsFinite"/>
                           </cd:Float>
                         </cd:Type>
                       </cd:Field>
@@ -181,6 +186,7 @@
                                 <cd:Description>Accumulated laser energy of all valid Mie pulses</cd:Description>
                                 <cd:Unit>mJ</cd:Unit>
                                 <cd:NativeType>double</cd:NativeType>
+                                <ct:NamedTest id="FloatIsFinite"/>
                               </cd:Float>
                             </cd:Type>
                           </cd:Field>
@@ -194,6 +200,7 @@
                                 <cd:Description>Accumulated_Laser_Energy_Mie / Num_Mie_Used</cd:Description>
                                 <cd:Unit>mJ</cd:Unit>
                                 <cd:NativeType>double</cd:NativeType>
+                                <ct:NamedTest id="FloatIsFinite"/>
                               </cd:Float>
                             </cd:Type>
                           </cd:Field>
@@ -207,6 +214,7 @@
                                 <cd:Description>Accumulated laser energy of all valid Rayleigh pulses</cd:Description>
                                 <cd:Unit>mJ</cd:Unit>
                                 <cd:NativeType>double</cd:NativeType>
+                                <ct:NamedTest id="FloatIsFinite"/>
                               </cd:Float>
                             </cd:Type>
                           </cd:Field>
@@ -220,6 +228,7 @@
                                 <cd:Description>Accumulated_Laser_Energy_Rayleigh / Num_Rayleigh_Used</cd:Description>
                                 <cd:Unit>mJ</cd:Unit>
                                 <cd:NativeType>double</cd:NativeType>
+                                <ct:NamedTest id="FloatIsFinite"/>
                               </cd:Float>
                             </cd:Type>
                           </cd:Field>
@@ -228,6 +237,7 @@
                               <cd:Float format="ascii">
                                 <cd:Description>Ratio of Mean_Laser_Energy_Rayleigh of first frequency step to Mean_Laser_Energy_Rayleigh of current frequency step.</cd:Description>
                                 <cd:NativeType>double</cd:NativeType>
+                                <ct:NamedTest id="FloatIsFinite"/>
                               </cd:Float>
                             </cd:Type>
                           </cd:Field>
@@ -296,6 +306,7 @@
                                     <cd:Description>Difference of peaks between last and last but one detected by Gaussian iteration.</cd:Description>
                                     <cd:Unit>ACCD pixel</cd:Unit>
                                     <cd:NativeType>double</cd:NativeType>
+                                    <ct:NamedTest id="FloatIsFinite"/>
                                   </cd:Float>
                                 </cd:Type>
                               </cd:Field>
@@ -313,6 +324,7 @@
                                     <cd:Description>Resulting FWHM.</cd:Description>
                                     <cd:Unit>ACCD pixel</cd:Unit>
                                     <cd:NativeType>double</cd:NativeType>
+                                    <ct:NamedTest id="FloatIsFinite"/>
                                   </cd:Float>
                                 </cd:Type>
                               </cd:Field>
@@ -326,6 +338,7 @@
                                     <cd:Description>Resulting offset.</cd:Description>
                                     <cd:Unit>ACCD counts</cd:Unit>
                                     <cd:NativeType>double</cd:NativeType>
+                                    <ct:NamedTest id="FloatIsFinite"/>
                                   </cd:Float>
                                 </cd:Type>
                               </cd:Field>
@@ -339,6 +352,7 @@
                                     <cd:Description>Resulting peak height.</cd:Description>
                                     <cd:Unit>ACCD counts</cd:Unit>
                                     <cd:NativeType>double</cd:NativeType>
+                                    <ct:NamedTest id="FloatIsFinite"/>
                                   </cd:Float>
                                 </cd:Type>
                               </cd:Field>
@@ -352,6 +366,7 @@
                                     <cd:Description>Resulting peak location.</cd:Description>
                                     <cd:Unit>ACCD pixel index</cd:Unit>
                                     <cd:NativeType>double</cd:NativeType>
+                                    <ct:NamedTest id="FloatIsFinite"/>
                                   </cd:Float>
                                 </cd:Type>
                               </cd:Field>
@@ -360,6 +375,7 @@
                                   <cd:Float format="ascii">
                                     <cd:Description>Difference of residual errors between last and last but one detected by iteration.</cd:Description>
                                     <cd:NativeType>double</cd:NativeType>
+                                    <ct:NamedTest id="FloatIsFinite"/>
                                   </cd:Float>
                                 </cd:Type>
                               </cd:Field>
@@ -395,6 +411,7 @@
                                 <cd:Description>Sensor RSP etalon temperature</cd:Description>
                                 <cd:Unit>degC</cd:Unit>
                                 <cd:NativeType>double</cd:NativeType>
+                                <ct:NamedTest id="FloatIsFinite"/>
                               </cd:Float>
                             </cd:Type>
                           </cd:Field>
@@ -408,6 +425,7 @@
                                 <cd:Description>Sensor RSP etalon temperature</cd:Description>
                                 <cd:Unit>degC</cd:Unit>
                                 <cd:NativeType>double</cd:NativeType>
+                                <ct:NamedTest id="FloatIsFinite"/>
                               </cd:Float>
                             </cd:Type>
                           </cd:Field>
@@ -421,6 +439,7 @@
                                 <cd:Description>Sensor RSP etalon temperature</cd:Description>
                                 <cd:Unit>degC</cd:Unit>
                                 <cd:NativeType>double</cd:NativeType>
+                                <ct:NamedTest id="FloatIsFinite"/>
                               </cd:Float>
                             </cd:Type>
                           </cd:Field>
@@ -434,6 +453,7 @@
                                 <cd:Description>Field set fixed to zero</cd:Description>
                                 <cd:Unit>degC</cd:Unit>
                                 <cd:NativeType>double</cd:NativeType>
+                                <ct:NamedTest id="FloatIsFinite"/>
                               </cd:Float>
                             </cd:Type>
                           </cd:Field>
@@ -451,6 +471,7 @@
                                 <cd:Description>Sensor RSPT etalon temperature</cd:Description>
                                 <cd:Unit>degC</cd:Unit>
                                 <cd:NativeType>double</cd:NativeType>
+                                <ct:NamedTest id="FloatIsFinite"/>
                               </cd:Float>
                             </cd:Type>
                           </cd:Field>
@@ -464,6 +485,7 @@
                                 <cd:Description>Sensor RSPT etalon temperature</cd:Description>
                                 <cd:Unit>degC</cd:Unit>
                                 <cd:NativeType>double</cd:NativeType>
+                                <ct:NamedTest id="FloatIsFinite"/>
                               </cd:Float>
                             </cd:Type>
                           </cd:Field>
@@ -477,6 +499,7 @@
                                 <cd:Description>Sensor RSPT etalon temperature</cd:Description>
                                 <cd:Unit>degC</cd:Unit>
                                 <cd:NativeType>double</cd:NativeType>
+                                <ct:NamedTest id="FloatIsFinite"/>
                               </cd:Float>
                             </cd:Type>
                           </cd:Field>
@@ -490,6 +513,7 @@
                                 <cd:Description>Sensor RSPT etalon temperature</cd:Description>
                                 <cd:Unit>degC</cd:Unit>
                                 <cd:NativeType>double</cd:NativeType>
+                                <ct:NamedTest id="FloatIsFinite"/>
                               </cd:Float>
                             </cd:Type>
                           </cd:Field>
@@ -505,6 +529,7 @@
                             <cd:Description>Sensor OB Ray average temperature of 5,6,7,8</cd:Description>
                             <cd:Unit>degC</cd:Unit>
                             <cd:NativeType>double</cd:NativeType>
+                            <ct:NamedTest id="FloatIsFinite"/>
                           </cd:Float>
                         </cd:Type>
                       </cd:Field>
@@ -524,6 +549,7 @@
                   <cd:Description>Frequency offset of Rayleigh filter centre</cd:Description>
                   <cd:Unit>GHz</cd:Unit>
                   <cd:NativeType>double</cd:NativeType>
+                  <ct:NamedTest id="FloatIsFinite"/>
                 </cd:Float>
               </cd:Type>
             </cd:Field>
@@ -537,6 +563,7 @@
                   <cd:Description>Frequency offset of the Mie Channel USR (pixel = 8.5) closest to the Rayleigh filter centre</cd:Description>
                   <cd:Unit>GHz</cd:Unit>
                   <cd:NativeType>double</cd:NativeType>
+                  <ct:NamedTest id="FloatIsFinite"/>
                 </cd:Float>
               </cd:Type>
             </cd:Field>

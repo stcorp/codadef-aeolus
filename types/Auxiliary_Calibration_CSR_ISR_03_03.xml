@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" name="Auxiliary_Calibration_CSR_ISR_03_03" format="xml" last-modified="2016-12-02" namexml="Internal_Spectral_Registration">
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" name="Auxiliary_Calibration_CSR_ISR_03_03" format="xml" last-modified="2019-10-31" namexml="Internal_Spectral_Registration">
   <cd:Description>ISR GADS</cd:Description>
   <cd:Field name="List_of_Data_Set_Records">
     <cd:Record namexml="List_of_Data_Set_Records">
@@ -30,6 +30,7 @@
                             <cd:Description>Laser frequency offset</cd:Description>
                             <cd:Unit>GHz</cd:Unit>
                             <cd:NativeType>double</cd:NativeType>
+                            <ct:NamedTest id="FloatIsFinite"/>
                           </cd:Float>
                         </cd:Type>
                       </cd:Field>
@@ -38,6 +39,7 @@
                           <cd:Float format="ascii">
                             <cd:Description>Transmission through the Fizeau</cd:Description>
                             <cd:NativeType>double</cd:NativeType>
+                            <ct:NamedTest id="FloatIsFinite"/>
                           </cd:Float>
                         </cd:Type>
                       </cd:Field>
@@ -46,6 +48,7 @@
                           <cd:Float format="ascii">
                             <cd:Description>Response of FPA</cd:Description>
                             <cd:NativeType>double</cd:NativeType>
+                            <ct:NamedTest id="FloatIsFinite"/>
                           </cd:Float>
                         </cd:Type>
                       </cd:Field>
@@ -54,6 +57,7 @@
                           <cd:Float format="ascii">
                             <cd:Description>Response of FPB</cd:Description>
                             <cd:NativeType>double</cd:NativeType>
+                            <ct:NamedTest id="FloatIsFinite"/>
                           </cd:Float>
                         </cd:Type>
                       </cd:Field>
@@ -67,6 +71,7 @@
                             <cd:Description>Response of the Fizeau</cd:Description>
                             <cd:Unit>Pixelindex</cd:Unit>
                             <cd:NativeType>double</cd:NativeType>
+                            <ct:NamedTest id="FloatIsFinite"/>
                           </cd:Float>
                         </cd:Type>
                       </cd:Field>

@@ -1,10 +1,11 @@
 <?xml version="1.0"?>
-<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="binary" last-modified="2017-09-11" name="Level_1B_Mie_Core_Params_ADSR_04_08">
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="binary" last-modified="2019-10-31" name="Level_1B_Mie_Core_Params_ADSR_04_08">
   <cd:Field name="gaussian_width_a">
     <cd:Float>
       <cd:Description>Gaussian width a. This value should be approximately the fringe FWHM</cd:Description>
       <cd:BitSize>64</cd:BitSize>
       <cd:NativeType>double</cd:NativeType>
+      <ct:NamedTest id="FloatIsFinite"/>
     </cd:Float>
   </cd:Field>
   <cd:Field name="peak_error_treshold">
@@ -12,6 +13,7 @@
       <cd:Description>Peak error threshold</cd:Description>
       <cd:BitSize>64</cd:BitSize>
       <cd:NativeType>double</cd:NativeType>
+      <ct:NamedTest id="FloatIsFinite"/>
     </cd:Float>
   </cd:Field>
   <cd:Field name="peak_error_threshold_reference_pulse">
@@ -19,6 +21,7 @@
       <cd:Description>Peak error threshold for internal reference path signal</cd:Description>
       <cd:BitSize>64</cd:BitSize>
       <cd:NativeType>double</cd:NativeType>
+      <ct:NamedTest id="FloatIsFinite"/>
     </cd:Float>
   </cd:Field>
   <cd:Field name="max_num_iterations">
@@ -33,6 +36,7 @@
       <cd:Description>Threshold to switch Mie-Core processing on/off</cd:Description>
       <cd:BitSize>64</cd:BitSize>
       <cd:NativeType>double</cd:NativeType>
+      <ct:NamedTest id="FloatIsFinite"/>
     </cd:Float>
   </cd:Field>
   <cd:Field name="start_fwhm">
@@ -40,6 +44,7 @@
       <cd:Description>Starting value for FWHM</cd:Description>
       <cd:BitSize>64</cd:BitSize>
       <cd:NativeType>double</cd:NativeType>
+      <ct:NamedTest id="FloatIsFinite"/>
     </cd:Float>
   </cd:Field>
   <cd:Field name="residual_error_threshold">
@@ -48,6 +53,7 @@
       <cd:Unit>AU</cd:Unit>
       <cd:BitSize>64</cd:BitSize>
       <cd:NativeType>double</cd:NativeType>
+      <ct:NamedTest id="FloatIsFinite"/>
     </cd:Float>
   </cd:Field>
   <cd:Field name="max_iterations_lorentz_fit">
@@ -62,6 +68,7 @@
       <cd:Description>Upper threshold for FWHM of Lorentz function for quality check</cd:Description>
       <cd:BitSize>64</cd:BitSize>
       <cd:NativeType>double</cd:NativeType>
+      <ct:NamedTest id="FloatIsFinite"/>
     </cd:Float>
   </cd:Field>
   <cd:Field name="fwhm_lower_threshold">
@@ -69,6 +76,7 @@
       <cd:Description>Lower threshold for FWHM of Lorentz function for quality check</cd:Description>
       <cd:BitSize>64</cd:BitSize>
       <cd:NativeType>double</cd:NativeType>
+      <ct:NamedTest id="FloatIsFinite"/>
     </cd:Float>
   </cd:Field>
   <cd:Field name="peak_height_upper_threshold">
@@ -76,6 +84,7 @@
       <cd:Description>Relative threshold for peak height of Lorentz function</cd:Description>
       <cd:BitSize>64</cd:BitSize>
       <cd:NativeType>double</cd:NativeType>
+      <ct:NamedTest id="FloatIsFinite"/>
     </cd:Float>
   </cd:Field>
   <cd:Field name="peak_height_lower_threshold">
@@ -83,6 +92,7 @@
       <cd:Description>Relative threshold for peak height of Lorentz function</cd:Description>
       <cd:BitSize>64</cd:BitSize>
       <cd:NativeType>double</cd:NativeType>
+      <ct:NamedTest id="FloatIsFinite"/>
     </cd:Float>
   </cd:Field>
   <cd:Field name="peak_location_threshold">
@@ -90,6 +100,7 @@
       <cd:Description>Peak location threshold</cd:Description>
       <cd:BitSize>64</cd:BitSize>
       <cd:NativeType>double</cd:NativeType>
+      <ct:NamedTest id="FloatIsFinite"/>
     </cd:Float>
   </cd:Field>
   <cd:Field name="nonlinear_optimization_threshold">
@@ -98,6 +109,7 @@
       <cd:Unit>AU</cd:Unit>
       <cd:BitSize>64</cd:BitSize>
       <cd:NativeType>double</cd:NativeType>
+      <ct:NamedTest id="FloatIsFinite"/>
     </cd:Float>
   </cd:Field>
   <cd:Field name="max_iterations_nonlinear_optimization">
@@ -119,6 +131,7 @@
       <cd:Description>Threshold to switch Mie-Core processing on/off for internal reference path signal</cd:Description>
       <cd:BitSize>64</cd:BitSize>
       <cd:NativeType>double</cd:NativeType>
+      <ct:NamedTest id="FloatIsFinite"/>
     </cd:Float>
   </cd:Field>
   <cd:Field name="start_fwhm_reference_pulse">
@@ -127,6 +140,7 @@
       <cd:Unit>ACCD pixel</cd:Unit>
       <cd:BitSize>64</cd:BitSize>
       <cd:NativeType>double</cd:NativeType>
+      <ct:NamedTest id="FloatIsFinite"/>
     </cd:Float>
   </cd:Field>
   <cd:Field name="residual_error_threshold_reference_pulse">
@@ -134,6 +148,7 @@
       <cd:Description>Stop threshold for change of quadratic sum of differences between modeled and measured ACCD counts per pixel: if the difference between the quadratic sum from the previous to the next iteration loop is below this threshold, the iteration is stopped for internal reference path signal.</cd:Description>
       <cd:BitSize>64</cd:BitSize>
       <cd:NativeType>double</cd:NativeType>
+      <ct:NamedTest id="FloatIsFinite"/>
     </cd:Float>
   </cd:Field>
   <cd:Field name="max_iterations_lorentz_fit_reference_pulse">
@@ -149,6 +164,7 @@
       <cd:Unit>ACCD pixel</cd:Unit>
       <cd:BitSize>64</cd:BitSize>
       <cd:NativeType>double</cd:NativeType>
+      <ct:NamedTest id="FloatIsFinite"/>
     </cd:Float>
   </cd:Field>
   <cd:Field name="fwhm_lower_threshold_reference_pulse">
@@ -157,6 +173,7 @@
       <cd:Unit>ACCD pixel</cd:Unit>
       <cd:BitSize>64</cd:BitSize>
       <cd:NativeType>double</cd:NativeType>
+      <ct:NamedTest id="FloatIsFinite"/>
     </cd:Float>
   </cd:Field>
   <cd:Field name="peak_height_upper_threshold_reference_pulse">
@@ -165,6 +182,7 @@
       <cd:Unit>ACCD counts</cd:Unit>
       <cd:BitSize>64</cd:BitSize>
       <cd:NativeType>double</cd:NativeType>
+      <ct:NamedTest id="FloatIsFinite"/>
     </cd:Float>
   </cd:Field>
   <cd:Field name="peak_height_lower_threshold_reference_pulse">
@@ -173,6 +191,7 @@
       <cd:Unit>ACCD counts</cd:Unit>
       <cd:BitSize>64</cd:BitSize>
       <cd:NativeType>double</cd:NativeType>
+      <ct:NamedTest id="FloatIsFinite"/>
     </cd:Float>
   </cd:Field>
   <cd:Field name="peak_location_threshold_reference_pulse">
@@ -181,6 +200,7 @@
       <cd:Unit>ACCD pixel</cd:Unit>
       <cd:BitSize>64</cd:BitSize>
       <cd:NativeType>double</cd:NativeType>
+      <ct:NamedTest id="FloatIsFinite"/>
     </cd:Float>
   </cd:Field>
   <cd:Field name="nonlinear_optimization_threshold_reference_pulse">
@@ -188,6 +208,7 @@
       <cd:Description>Stop threshold for Downhill Simplex algorithm merit function for internal reference path signal</cd:Description>
       <cd:BitSize>64</cd:BitSize>
       <cd:NativeType>double</cd:NativeType>
+      <ct:NamedTest id="FloatIsFinite"/>
     </cd:Float>
   </cd:Field>
   <cd:Field name="max_iterations_nonlinear_optimization_reference_pulse">

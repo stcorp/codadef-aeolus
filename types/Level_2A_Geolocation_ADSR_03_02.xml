@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="binary" last-modified="2015-12-04" name="Level_2A_Geolocation_ADSR_03_02">
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="binary" last-modified="2019-10-31" name="Level_2A_Geolocation_ADSR_03_02">
   <cd:Field name="start_of_obs_time">
     <cd:Time timeformat="binary_envisat_datetime">
       <cd:Description>Start date and time of Observation (or BRC)</cd:Description>
@@ -59,6 +59,7 @@
                   <cd:Unit>m</cd:Unit>
                   <cd:BitSize>64</cd:BitSize>
                   <cd:NativeType>double</cd:NativeType>
+                  <ct:NamedTest id="FloatIsFinite"/>
                 </cd:Float>
               </cd:Field>
             </cd:Record>
@@ -97,6 +98,7 @@
                   <cd:Unit>m</cd:Unit>
                   <cd:BitSize>64</cd:BitSize>
                   <cd:NativeType>double</cd:NativeType>
+                  <ct:NamedTest id="FloatIsFinite"/>
                 </cd:Float>
               </cd:Field>
             </cd:Record>
@@ -130,6 +132,7 @@
             <cd:Unit>m</cd:Unit>
             <cd:BitSize>64</cd:BitSize>
             <cd:NativeType>double</cd:NativeType>
+            <ct:NamedTest id="FloatIsFinite"/>
           </cd:Float>
         </cd:Field>
       </cd:Record>
@@ -141,6 +144,7 @@
       <cd:Unit>m</cd:Unit>
       <cd:BitSize>64</cd:BitSize>
       <cd:NativeType>double</cd:NativeType>
+      <ct:NamedTest id="FloatIsFinite"/>
     </cd:Float>
   </cd:Field>
 </cd:Record>

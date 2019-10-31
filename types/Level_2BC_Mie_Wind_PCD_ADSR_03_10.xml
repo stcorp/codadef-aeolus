@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="binary" name="Level_2BC_Mie_Wind_PCD_ADSR_03_10" last-modified="2019-09-06">
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="binary" name="Level_2BC_Mie_Wind_PCD_ADSR_03_10" last-modified="2019-10-31">
   <cd:Field name="wind_result_id">
     <cd:Integer>
       <cd:Description>unique L2B wind result identification number for this L2B file</cd:Description>
@@ -23,6 +23,7 @@
           <cd:Unit>m/s</cd:Unit>
           <cd:BitSize>64</cd:BitSize>
           <cd:NativeType>double</cd:NativeType>
+          <ct:NamedTest id="FloatIsFinite"/>
         </cd:Float>
       </cd:Field>
       <cd:Field name="flags1">
@@ -51,6 +52,7 @@
           <cd:Description>Amplitude of the curve used for fitting the internal reference spectrum</cd:Description>
           <cd:BitSize>64</cd:BitSize>
           <cd:NativeType>double</cd:NativeType>
+          <ct:NamedTest id="FloatIsFinite"/>
         </cd:Float>
       </cd:Field>
       <cd:Field name="intref_fitting_residual">
@@ -58,6 +60,7 @@
           <cd:Description>Residual after the fit to the internal reference spectrum is performed (should also give an idea of the reliability of the fit)</cd:Description>
           <cd:BitSize>64</cd:BitSize>
           <cd:NativeType>double</cd:NativeType>
+          <ct:NamedTest id="FloatIsFinite"/>
         </cd:Float>
       </cd:Field>
       <cd:Field name="intref_fitting_offset">
@@ -65,6 +68,7 @@
           <cd:Description>Offset of the curve used for fitting the internal reference spectrum</cd:Description>
           <cd:BitSize>64</cd:BitSize>
           <cd:NativeType>double</cd:NativeType>
+          <ct:NamedTest id="FloatIsFinite"/>
         </cd:Float>
       </cd:Field>
       <cd:Field name="intref_fitting_fwhm">
@@ -72,6 +76,7 @@
           <cd:Description>FWHM of the curve used for fitting internal reference the spectrum.</cd:Description>
           <cd:BitSize>64</cd:BitSize>
           <cd:NativeType>double</cd:NativeType>
+          <ct:NamedTest id="FloatIsFinite"/>
         </cd:Float>
       </cd:Field>
       <cd:Field name="intref_fitting_peakloc">
@@ -79,6 +84,7 @@
           <cd:Description>Peak location result from fitting the internal reference spectrum.</cd:Description>
           <cd:BitSize>64</cd:BitSize>
           <cd:NativeType>double</cd:NativeType>
+          <ct:NamedTest id="FloatIsFinite"/>
         </cd:Float>
       </cd:Field>
       <cd:Field name="intref_fitting_offsetsub">
@@ -86,6 +92,7 @@
           <cd:Description>Offset subtraction as applied to the fit result of the internal reference spectrum.</cd:Description>
           <cd:BitSize>64</cd:BitSize>
           <cd:NativeType>double</cd:NativeType>
+          <ct:NamedTest id="FloatIsFinite"/>
         </cd:Float>
       </cd:Field>
       <cd:Field name="intref_fitting_valflag">
@@ -101,6 +108,7 @@
           <cd:Description>Refined SNR value derived by fitting the internal reference spectrum.</cd:Description>
           <cd:BitSize>64</cd:BitSize>
           <cd:NativeType>double</cd:NativeType>
+          <ct:NamedTest id="FloatIsFinite"/>
         </cd:Float>
       </cd:Field>
       <cd:Field name="fitting_amplitude">
@@ -108,6 +116,7 @@
           <cd:Description>Amplitude of the curve used for fitting the Mie spectrum</cd:Description>
           <cd:BitSize>64</cd:BitSize>
           <cd:NativeType>double</cd:NativeType>
+          <ct:NamedTest id="FloatIsFinite"/>
         </cd:Float>
       </cd:Field>
       <cd:Field name="fitting_residual">
@@ -115,6 +124,7 @@
           <cd:Description>Residual after the fit to the Mie spectrum is performed (should also give an idea of the reliability of the fit)</cd:Description>
           <cd:BitSize>64</cd:BitSize>
           <cd:NativeType>double</cd:NativeType>
+          <ct:NamedTest id="FloatIsFinite"/>
         </cd:Float>
       </cd:Field>
       <cd:Field name="fitting_offset">
@@ -122,6 +132,7 @@
           <cd:Description>Offset of the curve used for fitting the Mie spectrum</cd:Description>
           <cd:BitSize>64</cd:BitSize>
           <cd:NativeType>double</cd:NativeType>
+          <ct:NamedTest id="FloatIsFinite"/>
         </cd:Float>
       </cd:Field>
       <cd:Field name="fitting_fwhm">
@@ -129,6 +140,7 @@
           <cd:Description>FWHM of the curve used for fitting the Mie spectrum. This gives a measure of the wind variability in this rangebin</cd:Description>
           <cd:BitSize>64</cd:BitSize>
           <cd:NativeType>double</cd:NativeType>
+          <ct:NamedTest id="FloatIsFinite"/>
         </cd:Float>
       </cd:Field>
       <cd:Field name="fitting_peakloc">
@@ -136,6 +148,7 @@
           <cd:Description>Peak location result from fitting the measured atmospheric Mie spectrum.</cd:Description>
           <cd:BitSize>64</cd:BitSize>
           <cd:NativeType>double</cd:NativeType>
+          <ct:NamedTest id="FloatIsFinite"/>
         </cd:Float>
       </cd:Field>
       <cd:Field name="fitting_offsetsub">
@@ -143,6 +156,7 @@
           <cd:Description>Offset subtraction as applied to the fit result of the measured atmospheric Mie spectrum.</cd:Description>
           <cd:BitSize>64</cd:BitSize>
           <cd:NativeType>double</cd:NativeType>
+          <ct:NamedTest id="FloatIsFinite"/>
         </cd:Float>
       </cd:Field>
       <cd:Field name="fitting_valflag">
@@ -158,6 +172,7 @@
           <cd:Description>SNR of the measured atmospheric Mie spectrum</cd:Description>
           <cd:BitSize>64</cd:BitSize>
           <cd:NativeType>double</cd:NativeType>
+          <ct:NamedTest id="FloatIsFinite"/>
         </cd:Float>
       </cd:Field>
       <cd:Field name="extinction">
@@ -166,6 +181,7 @@
           <cd:Unit>1/m</cd:Unit>
           <cd:BitSize>64</cd:BitSize>
           <cd:NativeType>double</cd:NativeType>
+          <ct:NamedTest id="FloatIsFinite"/>
         </cd:Float>
       </cd:Field>
       <cd:Field name="scattering_ratio">
@@ -173,6 +189,7 @@
           <cd:Description>Scattering Ratio used to estimate the extinction for this wind result</cd:Description>
           <cd:BitSize>64</cd:BitSize>
           <cd:NativeType>double</cd:NativeType>
+          <ct:NamedTest id="FloatIsFinite"/>
         </cd:Float>
       </cd:Field>
       <cd:Field name="mie_background_high">

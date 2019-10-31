@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="binary" last-modified="2008-07-01" name="Level_1B_Useful_Signal_MDSR">
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="binary" last-modified="2019-10-31" name="Level_1B_Useful_Signal_MDSR">
   <cd:Field name="start_of_observation_time">
     <cd:Time timeformat="binary_envisat_datetime">
       <cd:Description>Satellite time at start of BRC</cd:Description>
@@ -28,6 +28,7 @@
                 <cd:Description>Useful signal strength for a Rayleigh altitude bin. If the Data_Quality_Flag is non-zero (data invalid), the useful signal value is set to 0</cd:Description>
                 <cd:BitSize>64</cd:BitSize>
                 <cd:NativeType>double</cd:NativeType>
+                <ct:NamedTest id="FloatIsFinite"/>
               </cd:Float>
             </cd:Field>
           </cd:Record>
@@ -50,6 +51,7 @@
                 <cd:Description>Useful signal strength for a Rayleigh altitude bin. If the Data_Quality_Flag is non-zero (data invalid), the useful signal value is set to 0</cd:Description>
                 <cd:BitSize>64</cd:BitSize>
                 <cd:NativeType>double</cd:NativeType>
+                <ct:NamedTest id="FloatIsFinite"/>
               </cd:Float>
             </cd:Field>
             <cd:Field name="useful_signal_channel_b">
@@ -57,6 +59,7 @@
                 <cd:Description>Useful signal strength for a Rayleigh altitude bin. If the Data_Quality_Flag is non-zero (data invalid), the useful signal value is set to 0</cd:Description>
                 <cd:BitSize>64</cd:BitSize>
                 <cd:NativeType>double</cd:NativeType>
+                <ct:NamedTest id="FloatIsFinite"/>
               </cd:Float>
             </cd:Field>
           </cd:Record>
@@ -86,6 +89,7 @@
                   <cd:Description>Useful signal strength for a Rayleigh altitude bin. If the Data_Quality_Flag is non-zero (data invalid), the useful signal value is set to 0</cd:Description>
                   <cd:BitSize>64</cd:BitSize>
                   <cd:NativeType>double</cd:NativeType>
+                  <ct:NamedTest id="FloatIsFinite"/>
                 </cd:Float>
               </cd:Field>
             </cd:Record>
@@ -108,6 +112,7 @@
                   <cd:Description>Useful signal strength for a Rayleigh altitude bin. If the Data_Quality_Flag is non-zero (data invalid), the useful signal value is set to 0</cd:Description>
                   <cd:BitSize>64</cd:BitSize>
                   <cd:NativeType>double</cd:NativeType>
+                  <ct:NamedTest id="FloatIsFinite"/>
                 </cd:Float>
               </cd:Field>
               <cd:Field name="useful_signal_channel_b">
@@ -115,6 +120,7 @@
                   <cd:Description>Useful signal strength for a Rayleigh altitude bin. If the Data_Quality_Flag is non-zero (data invalid), the useful signal value is set to 0</cd:Description>
                   <cd:BitSize>64</cd:BitSize>
                   <cd:NativeType>double</cd:NativeType>
+                  <ct:NamedTest id="FloatIsFinite"/>
                 </cd:Float>
               </cd:Field>
             </cd:Record>

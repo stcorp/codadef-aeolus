@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" format="binary" name="Level_2C_Rayleigh_Assim_PCD_ADSR_02_00" last-modified="2019-09-06">
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="binary" name="Level_2C_Rayleigh_Assim_PCD_ADSR_02_00" last-modified="2019-10-31">
   <cd:Field name="wind_result_id">
     <cd:Integer>
       <cd:Description>unique L2B wind result identification number for this L2C file</cd:Description>
@@ -124,6 +124,7 @@
                   <cd:Description>An L2C-derived measure of the reliability of the current L2B HLOS observation</cd:Description>
                   <cd:BitSize>64</cd:BitSize>
                   <cd:NativeType>double</cd:NativeType>
+                  <ct:NamedTest id="FloatIsFinite"/>
                 </cd:Float>
               </cd:Field>
               <cd:Field name="Analysis_hlos">

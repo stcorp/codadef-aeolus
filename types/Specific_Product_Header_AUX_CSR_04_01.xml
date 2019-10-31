@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" name="Specific_Product_Header_AUX_CSR_04_01" format="xml" namexml="Specific_Product_Header" last-modified="2019-07-03">
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" name="Specific_Product_Header_AUX_CSR_04_01" format="xml" namexml="Specific_Product_Header" last-modified="2019-10-31">
   <cd:Description>Specific Product Header for AUX_CSR products</cd:Description>
   <cd:Field name="Sph_Descriptor">
     <cd:Text namexml="Sph_Descriptor">
@@ -21,6 +21,7 @@
         <cd:Description>Base Laser Transmit Frequency</cd:Description>
         <cd:Unit>GHz</cd:Unit>
         <cd:NativeType>double</cd:NativeType>
+        <ct:NamedTest id="FloatIsFinite"/>
       </cd:Float>
     </cd:Type>
   </cd:Field>
@@ -65,6 +66,7 @@
         <cd:Description>Width in MHz of the top-hat function that has been applied to the currently valid ISR in order to modify the transmission curves TA and TB of FPs A and B. If no correction has been applied (that is the case when the AUX_CSR is computed directly from the ISR, or if a comparison has been carried nout with a RRC that has shown no modification is necessary), it is equal to 0.</cd:Description>
         <cd:Unit>MHz</cd:Unit>
         <cd:NativeType>double</cd:NativeType>
+        <ct:NamedTest id="FloatIsFinite"/>
       </cd:Float>
     </cd:Type>
   </cd:Field>
@@ -73,6 +75,7 @@
       <cd:Float format="ascii">
         <cd:Description>Tilt of the top-hat function hat has been applied to the currently valid ISR in order to modify the transmission curves TA and TB of FPs A and B. If no correction has been applied (that is the case when the AUX_CSR is computed directly from the ISR, or if a comparison has been carried out with a RRC that has shown no modification is necessary), it is equal to 0.</cd:Description>
         <cd:NativeType>double</cd:NativeType>
+        <ct:NamedTest id="FloatIsFinite"/>
       </cd:Float>
     </cd:Type>
   </cd:Field>
@@ -81,6 +84,7 @@
       <cd:Float format="ascii">
         <cd:Description>Frequency shift between the internal and atmospheric paths caused by a potential misalignment of the illuminating beams on the two channels of the receiver. (TBC)</cd:Description>
         <cd:NativeType>double</cd:NativeType>
+        <ct:NamedTest id="FloatIsFinite"/>
       </cd:Float>
     </cd:Type>
   </cd:Field>

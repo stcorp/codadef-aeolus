@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="xml" last-modified="2018-06-20" name="Auxiliary_Calibration_IDC_04_07" namexml="Auxiliary_Calibration_IDC">
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="xml" last-modified="2019-10-31" name="Auxiliary_Calibration_IDC_04_07" namexml="Auxiliary_Calibration_IDC">
   <cd:Description>Auxiliary Calibration IDC</cd:Description>
   <cd:Field name="List_of_Data_Set_Records">
     <cd:Record namexml="List_of_Data_Set_Records">
@@ -46,6 +46,7 @@
                         <cd:Description>Mean image pixel intensity</cd:Description>
                         <cd:Unit>ACCD counts</cd:Unit>
                         <cd:NativeType>double</cd:NativeType>
+                        <ct:NamedTest id="FloatIsFinite"/>
                       </cd:Float>
                     </cd:Type>
                     <ct:NamedTest id="ValueOfCountAttributeForParent"/>
@@ -82,6 +83,7 @@
                       <cd:Description>Row value closest to the energetic centroid</cd:Description>
                       <cd:Unit>ACCD pixel index</cd:Unit>
                       <cd:NativeType>double</cd:NativeType>
+                      <ct:NamedTest id="FloatIsFinite"/>
                     </cd:Float>
                   </cd:Type>
                 </cd:Field>
@@ -95,6 +97,7 @@
                       <cd:Description>Column value closest to the energetic centroid</cd:Description>
                       <cd:Unit>ACCD pixel index</cd:Unit>
                       <cd:NativeType>double</cd:NativeType>
+                      <ct:NamedTest id="FloatIsFinite"/>
                     </cd:Float>
                   </cd:Type>
                 </cd:Field>
@@ -115,6 +118,7 @@
                             <cd:Description>Energetic centroid row cross section pixel value. Image pixel intensity along the ENC_Row</cd:Description>
                             <cd:Unit>ACCD counts</cd:Unit>
                             <cd:NativeType>double</cd:NativeType>
+                            <ct:NamedTest id="FloatIsFinite"/>
                           </cd:Float>
                         </cd:Type>
                         <ct:NamedTest id="ValueOfCountAttributeForParent"/>
@@ -139,6 +143,7 @@
                             <cd:Description>Energetic centroid column cross section pixel value. Image pixel intensity along the ENC_Col</cd:Description>
                             <cd:Unit>ACCD counts</cd:Unit>
                             <cd:NativeType>double</cd:NativeType>
+                            <ct:NamedTest id="FloatIsFinite"/>
                           </cd:Float>
                         </cd:Type>
                         <ct:NamedTest id="ValueOfCountAttributeForParent"/>
@@ -156,6 +161,7 @@
                       <cd:Description>Energetic centroid row standard deviation</cd:Description>
                       <cd:Unit>AU</cd:Unit>
                       <cd:NativeType>double</cd:NativeType>
+                      <ct:NamedTest id="FloatIsFinite"/>
                     </cd:Float>
                   </cd:Type>
                 </cd:Field>
@@ -169,6 +175,7 @@
                       <cd:Description>Energetic centroid column standard deviation</cd:Description>
                       <cd:Unit>AU</cd:Unit>
                       <cd:NativeType>double</cd:NativeType>
+                      <ct:NamedTest id="FloatIsFinite"/>
                     </cd:Float>
                   </cd:Type>
                 </cd:Field>
@@ -203,6 +210,7 @@
                       <cd:Description>Row value closest to the energetic centroid</cd:Description>
                       <cd:Unit>ACCD pixel index</cd:Unit>
                       <cd:NativeType>double</cd:NativeType>
+                      <ct:NamedTest id="FloatIsFinite"/>
                     </cd:Float>
                   </cd:Type>
                 </cd:Field>
@@ -216,6 +224,7 @@
                       <cd:Description>Column value closest to the energetic centroid</cd:Description>
                       <cd:Unit>ACCD pixel index</cd:Unit>
                       <cd:NativeType>double</cd:NativeType>
+                      <ct:NamedTest id="FloatIsFinite"/>
                     </cd:Float>
                   </cd:Type>
                 </cd:Field>
@@ -236,6 +245,7 @@
                             <cd:Description>Energetic centroid row cross section pixel value. Image pixel intensity along the ENC_Row</cd:Description>
                             <cd:Unit>ACCD counts</cd:Unit>
                             <cd:NativeType>double</cd:NativeType>
+                            <ct:NamedTest id="FloatIsFinite"/>
                           </cd:Float>
                         </cd:Type>
                         <ct:NamedTest id="ValueOfCountAttributeForParent"/>
@@ -260,6 +270,7 @@
                             <cd:Description>Energetic centroid column cross section pixel value. Image pixel intensity along the ENC_Col</cd:Description>
                             <cd:Unit>ACCD counts</cd:Unit>
                             <cd:NativeType>double</cd:NativeType>
+                            <ct:NamedTest id="FloatIsFinite"/>
                           </cd:Float>
                         </cd:Type>
                         <ct:NamedTest id="ValueOfCountAttributeForParent"/>
@@ -275,6 +286,7 @@
                     <cd:Float format="ascii">
                       <cd:Description>Energetic centroid row standard deviation</cd:Description>
                       <cd:NativeType>double</cd:NativeType>
+                      <ct:NamedTest id="FloatIsFinite"/>
                     </cd:Float>
                   </cd:Type>
                 </cd:Field>
@@ -286,6 +298,7 @@
                     <cd:Float format="ascii">
                       <cd:Description>Energetic centroid column standard deviation</cd:Description>
                       <cd:NativeType>double</cd:NativeType>
+                      <ct:NamedTest id="FloatIsFinite"/>
                     </cd:Float>
                   </cd:Type>
                 </cd:Field>
@@ -332,6 +345,7 @@
                   <cd:Description>Average of M1 TC temperature</cd:Description>
                   <cd:Unit>degC</cd:Unit>
                   <cd:NativeType>double</cd:NativeType>
+                  <ct:NamedTest id="FloatIsFinite"/>
                 </cd:Float>
               </cd:Type>
             </cd:Field>
@@ -345,6 +359,7 @@
                   <cd:Description>Average of M2 TC temperature</cd:Description>
                   <cd:Unit>degC</cd:Unit>
                   <cd:NativeType>double</cd:NativeType>
+                  <ct:NamedTest id="FloatIsFinite"/>
                 </cd:Float>
               </cd:Type>
             </cd:Field>
@@ -358,6 +373,7 @@
                   <cd:Description>Average of Struts temperature +X+Y</cd:Description>
                   <cd:Unit>degC</cd:Unit>
                   <cd:NativeType>double</cd:NativeType>
+                  <ct:NamedTest id="FloatIsFinite"/>
                 </cd:Float>
               </cd:Type>
             </cd:Field>
@@ -371,6 +387,7 @@
                   <cd:Description>Average of Struts temperature -X+Y</cd:Description>
                   <cd:Unit>degC</cd:Unit>
                   <cd:NativeType>double</cd:NativeType>
+                  <ct:NamedTest id="FloatIsFinite"/>
                 </cd:Float>
               </cd:Type>
             </cd:Field>
@@ -384,6 +401,7 @@
                   <cd:Description>Average of Struts temperature -Y</cd:Description>
                   <cd:Unit>degC</cd:Unit>
                   <cd:NativeType>double</cd:NativeType>
+                  <ct:NamedTest id="FloatIsFinite"/>
                 </cd:Float>
               </cd:Type>
             </cd:Field>

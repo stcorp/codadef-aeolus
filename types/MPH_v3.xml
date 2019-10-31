@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="ascii" last-modified="2019-03-07" name="MPH_v3">
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="ascii" last-modified="2019-10-31" name="MPH_v3">
   <cd:Field name="product_name_title">
     <cd:Text>
       <cd:Description>PRODUCT=</cd:Description>
@@ -601,6 +601,7 @@
       <cd:Unit>s</cd:Unit>
       <cd:ByteSize>8</cd:ByteSize>
       <cd:NativeType>double</cd:NativeType>
+      <ct:NamedTest id="FloatIsFinite"/>
     </cd:Float>
   </cd:Field>
   <cd:Field name="delta_ut1_units">
@@ -635,6 +636,7 @@
       <cd:Unit>m</cd:Unit>
       <cd:ByteSize>12</cd:ByteSize>
       <cd:NativeType>double</cd:NativeType>
+      <ct:NamedTest id="FloatIsFinite"/>
     </cd:Float>
   </cd:Field>
   <cd:Field name="x_position_units">
@@ -669,6 +671,7 @@
       <cd:Unit>m</cd:Unit>
       <cd:ByteSize>12</cd:ByteSize>
       <cd:NativeType>double</cd:NativeType>
+      <ct:NamedTest id="FloatIsFinite"/>
     </cd:Float>
   </cd:Field>
   <cd:Field name="y_position_units">
@@ -703,6 +706,7 @@
       <cd:Unit>m</cd:Unit>
       <cd:ByteSize>12</cd:ByteSize>
       <cd:NativeType>double</cd:NativeType>
+      <ct:NamedTest id="FloatIsFinite"/>
     </cd:Float>
   </cd:Field>
   <cd:Field name="z_position_units">
@@ -737,6 +741,7 @@
       <cd:Unit>m/s</cd:Unit>
       <cd:ByteSize>12</cd:ByteSize>
       <cd:NativeType>double</cd:NativeType>
+      <ct:NamedTest id="FloatIsFinite"/>
     </cd:Float>
   </cd:Field>
   <cd:Field name="x_velocity_units">
@@ -771,6 +776,7 @@
       <cd:Unit>m/s</cd:Unit>
       <cd:ByteSize>12</cd:ByteSize>
       <cd:NativeType>double</cd:NativeType>
+      <ct:NamedTest id="FloatIsFinite"/>
     </cd:Float>
   </cd:Field>
   <cd:Field name="y_velocity_units">
@@ -805,6 +811,7 @@
       <cd:Unit>m/s</cd:Unit>
       <cd:ByteSize>12</cd:ByteSize>
       <cd:NativeType>double</cd:NativeType>
+      <ct:NamedTest id="FloatIsFinite"/>
     </cd:Float>
   </cd:Field>
   <cd:Field name="z_velocity_units">

@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="xml" last-modified="2017-04-12" name="Auxiliary_Calibration_PRR_03_03" namexml="Auxiliary_Calibration_PRR">
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="xml" last-modified="2019-10-31" name="Auxiliary_Calibration_PRR_03_03" namexml="Auxiliary_Calibration_PRR">
   <cd:Description>Auxiliary Calibration PRR</cd:Description>
   <cd:Field name="List_of_Data_Set_Records">
     <cd:Record namexml="List_of_Data_Set_Records">
@@ -77,6 +77,7 @@
                             <cd:Description>Frequency offset</cd:Description>
                             <cd:Unit>GHz</cd:Unit>
                             <cd:NativeType>double</cd:NativeType>
+                            <ct:NamedTest id="FloatIsFinite"/>
                           </cd:Float>
                         </cd:Type>
                       </cd:Field>
@@ -163,6 +164,7 @@
                           <cd:Float format="ascii">
                             <cd:Description>Measurement channel response</cd:Description>
                             <cd:NativeType>double</cd:NativeType>
+                            <ct:NamedTest id="FloatIsFinite"/>
                           </cd:Float>
                         </cd:Type>
                       </cd:Field>
@@ -174,6 +176,7 @@
                           <cd:Float format="ascii">
                             <cd:Description>Measurement Error_Rayleigh_Response</cd:Description>
                             <cd:NativeType>double</cd:NativeType>
+                            <ct:NamedTest id="FloatIsFinite"/>
                           </cd:Float>
                         </cd:Type>
                       </cd:Field>
@@ -185,6 +188,7 @@
                           <cd:Float format="ascii">
                             <cd:Description>Ground Measurement channel response</cd:Description>
                             <cd:NativeType>double</cd:NativeType>
+                            <ct:NamedTest id="FloatIsFinite"/>
                           </cd:Float>
                         </cd:Type>
                       </cd:Field>
@@ -196,6 +200,7 @@
                           <cd:Float format="ascii">
                             <cd:Description>Ground Measurement Error_Rayleigh_Response</cd:Description>
                             <cd:NativeType>double</cd:NativeType>
+                            <ct:NamedTest id="FloatIsFinite"/>
                           </cd:Float>
                         </cd:Type>
                       </cd:Field>
@@ -207,6 +212,7 @@
                           <cd:Float format="ascii">
                             <cd:Description>Reference pulse channel response</cd:Description>
                             <cd:NativeType>double</cd:NativeType>
+                            <ct:NamedTest id="FloatIsFinite"/>
                           </cd:Float>
                         </cd:Type>
                       </cd:Field>
@@ -218,6 +224,7 @@
                           <cd:Float format="ascii">
                             <cd:Description>Reference pulse Error_Rayleigh_Response</cd:Description>
                             <cd:NativeType>double</cd:NativeType>
+                            <ct:NamedTest id="FloatIsFinite"/>
                           </cd:Float>
                         </cd:Type>
                       </cd:Field>
@@ -228,6 +235,7 @@
                             <cd:Float>
                               <cd:Description>NA. 24 times the value 0.0000000</cd:Description>
                               <cd:NativeType>double</cd:NativeType>
+                              <ct:NamedTest id="FloatIsFinite"/>
                             </cd:Float>
                           </cd:Array>
                         </cd:Type>
@@ -336,6 +344,7 @@
                                 <cd:Description>Sensor RSP etalon temperature</cd:Description>
                                 <cd:Unit>degC</cd:Unit>
                                 <cd:NativeType>double</cd:NativeType>
+                                <ct:NamedTest id="FloatIsFinite"/>
                               </cd:Float>
                             </cd:Type>
                           </cd:Field>
@@ -349,6 +358,7 @@
                                 <cd:Description>Sensor RSP etalon temperature</cd:Description>
                                 <cd:Unit>degC</cd:Unit>
                                 <cd:NativeType>double</cd:NativeType>
+                                <ct:NamedTest id="FloatIsFinite"/>
                               </cd:Float>
                             </cd:Type>
                           </cd:Field>
@@ -362,6 +372,7 @@
                                 <cd:Description>Sensor RSP etalon temperature</cd:Description>
                                 <cd:Unit>degC</cd:Unit>
                                 <cd:NativeType>double</cd:NativeType>
+                                <ct:NamedTest id="FloatIsFinite"/>
                               </cd:Float>
                             </cd:Type>
                           </cd:Field>
@@ -375,6 +386,7 @@
                                 <cd:Description>Sensor RSP etalon temperature</cd:Description>
                                 <cd:Unit>degC</cd:Unit>
                                 <cd:NativeType>double</cd:NativeType>
+                                <ct:NamedTest id="FloatIsFinite"/>
                               </cd:Float>
                             </cd:Type>
                           </cd:Field>
@@ -392,6 +404,7 @@
                                 <cd:Description>Sensor RSPT etalon temperature</cd:Description>
                                 <cd:Unit>degC</cd:Unit>
                                 <cd:NativeType>double</cd:NativeType>
+                                <ct:NamedTest id="FloatIsFinite"/>
                               </cd:Float>
                             </cd:Type>
                           </cd:Field>
@@ -405,6 +418,7 @@
                                 <cd:Description>Sensor RSPT etalon temperature</cd:Description>
                                 <cd:Unit>degC</cd:Unit>
                                 <cd:NativeType>double</cd:NativeType>
+                                <ct:NamedTest id="FloatIsFinite"/>
                               </cd:Float>
                             </cd:Type>
                           </cd:Field>
@@ -418,6 +432,7 @@
                                 <cd:Description>Sensor RSPT etalon temperature</cd:Description>
                                 <cd:Unit>degC</cd:Unit>
                                 <cd:NativeType>double</cd:NativeType>
+                                <ct:NamedTest id="FloatIsFinite"/>
                               </cd:Float>
                             </cd:Type>
                           </cd:Field>
@@ -431,6 +446,7 @@
                                 <cd:Description>Sensor RSPT etalon temperature</cd:Description>
                                 <cd:Unit>degC</cd:Unit>
                                 <cd:NativeType>double</cd:NativeType>
+                                <ct:NamedTest id="FloatIsFinite"/>
                               </cd:Float>
                             </cd:Type>
                           </cd:Field>
@@ -446,6 +462,7 @@
                             <cd:Description>Sensor OB Ray average temperature of 5,6,7,8</cd:Description>
                             <cd:Unit>degC</cd:Unit>
                             <cd:NativeType>double</cd:NativeType>
+                            <ct:NamedTest id="FloatIsFinite"/>
                           </cd:Float>
                         </cd:Type>
                       </cd:Field>
@@ -468,6 +485,7 @@
                       <cd:Description>Measurement mean sensitivity (slope of the best straight line of channelresponse)</cd:Description>
                       <cd:Unit>1/GHz</cd:Unit>
                       <cd:NativeType>double</cd:NativeType>
+                      <ct:NamedTest id="FloatIsFinite"/>
                     </cd:Float>
                   </cd:Type>
                 </cd:Field>
@@ -479,6 +497,7 @@
                     <cd:Float format="ascii">
                       <cd:Description>Measurement zero frequency response (intercept of the best straight line of channel response)</cd:Description>
                       <cd:NativeType>double</cd:NativeType>
+                      <ct:NamedTest id="FloatIsFinite"/>
                     </cd:Float>
                   </cd:Type>
                 </cd:Field>
@@ -490,6 +509,7 @@
                     <cd:Float format="ascii">
                       <cd:Description>Measurement Error_Rayleigh_Response standard deviation</cd:Description>
                       <cd:NativeType>double</cd:NativeType>
+                      <ct:NamedTest id="FloatIsFinite"/>
                     </cd:Float>
                   </cd:Type>
                 </cd:Field>
@@ -503,6 +523,7 @@
                       <cd:Description>Measurement offset frequency</cd:Description>
                       <cd:Unit>GHz</cd:Unit>
                       <cd:NativeType>double</cd:NativeType>
+                      <ct:NamedTest id="FloatIsFinite"/>
                     </cd:Float>
                   </cd:Type>
                 </cd:Field>
@@ -517,6 +538,7 @@
                           <cd:Float format="ascii">
                             <cd:Description>NA, set to 0</cd:Description>
                             <cd:NativeType>double</cd:NativeType>
+                            <ct:NamedTest id="FloatIsFinite"/>
                           </cd:Float>
                         </cd:Type>
                       </cd:Array>
@@ -538,6 +560,7 @@
                       <cd:Description>Measurement mean sensitivity</cd:Description>
                       <cd:Unit>1/GHz</cd:Unit>
                       <cd:NativeType>double</cd:NativeType>
+                      <ct:NamedTest id="FloatIsFinite"/>
                     </cd:Float>
                   </cd:Type>
                 </cd:Field>
@@ -549,6 +572,7 @@
                     <cd:Float format="ascii">
                       <cd:Description>Measurement zero frequency response (intercept of the best straight line of channel response)</cd:Description>
                       <cd:NativeType>double</cd:NativeType>
+                      <ct:NamedTest id="FloatIsFinite"/>
                     </cd:Float>
                   </cd:Type>
                 </cd:Field>
@@ -560,6 +584,7 @@
                     <cd:Float format="ascii">
                       <cd:Description>Measurement Error_Rayleigh_Response standard deviation</cd:Description>
                       <cd:NativeType>double</cd:NativeType>
+                      <ct:NamedTest id="FloatIsFinite"/>
                     </cd:Float>
                   </cd:Type>
                 </cd:Field>
@@ -573,6 +598,7 @@
                       <cd:Description>Measurement offset frequency</cd:Description>
                       <cd:Unit>GHz</cd:Unit>
                       <cd:NativeType>double</cd:NativeType>
+                      <ct:NamedTest id="FloatIsFinite"/>
                     </cd:Float>
                   </cd:Type>
                 </cd:Field>
@@ -587,6 +613,7 @@
                           <cd:Float format="ascii">
                             <cd:Description>NA, set to 0</cd:Description>
                             <cd:NativeType>double</cd:NativeType>
+                            <ct:NamedTest id="FloatIsFinite"/>
                           </cd:Float>
                         </cd:Type>
                       </cd:Array>
@@ -608,6 +635,7 @@
                       <cd:Description>Reference pulse mean sensitivity</cd:Description>
                       <cd:Unit>1/GHz</cd:Unit>
                       <cd:NativeType>double</cd:NativeType>
+                      <ct:NamedTest id="FloatIsFinite"/>
                     </cd:Float>
                   </cd:Type>
                 </cd:Field>
@@ -619,6 +647,7 @@
                     <cd:Float format="ascii">
                       <cd:Description>Reference pulse zero frequency response</cd:Description>
                       <cd:NativeType>double</cd:NativeType>
+                      <ct:NamedTest id="FloatIsFinite"/>
                     </cd:Float>
                   </cd:Type>
                 </cd:Field>
@@ -630,6 +659,7 @@
                     <cd:Float format="ascii">
                       <cd:Description>Reference pulse Error_Rayleigh_Response standard deviation</cd:Description>
                       <cd:NativeType>double</cd:NativeType>
+                      <ct:NamedTest id="FloatIsFinite"/>
                     </cd:Float>
                   </cd:Type>
                 </cd:Field>
@@ -643,6 +673,7 @@
                       <cd:Description>Frequency of the intersect between the best blinear fit ot the reference pulse response and the x-axis.</cd:Description>
                       <cd:Unit>GHz</cd:Unit>
                       <cd:NativeType>double</cd:NativeType>
+                      <ct:NamedTest id="FloatIsFinite"/>
                     </cd:Float>
                   </cd:Type>
                 </cd:Field>
@@ -657,6 +688,7 @@
                           <cd:Float format="ascii">
                             <cd:Description>Coefficient of best polynomial fit to fit errors. NA, set to 0</cd:Description>
                             <cd:NativeType>double</cd:NativeType>
+                            <ct:NamedTest id="FloatIsFinite"/>
                           </cd:Float>
                         </cd:Type>
                       </cd:Array>
@@ -974,6 +1006,7 @@
                           <cd:Description>Minimum mean sensitivity of atmosperic echo</cd:Description>
                           <cd:Unit>1/GHz</cd:Unit>
                           <cd:NativeType>double</cd:NativeType>
+                          <ct:NamedTest id="FloatIsFinite"/>
                         </cd:Float>
                       </cd:Type>
                     </cd:Field>
@@ -985,6 +1018,7 @@
                         <cd:Float format="ascii">
                           <cd:Description>Minimum zero frequency reponse of atmospheric echo</cd:Description>
                           <cd:NativeType>double</cd:NativeType>
+                          <ct:NamedTest id="FloatIsFinite"/>
                         </cd:Float>
                       </cd:Type>
                     </cd:Field>
@@ -998,6 +1032,7 @@
                           <cd:Description>Maximum mean sensitivity of atmosperic echo</cd:Description>
                           <cd:Unit>1/GHz</cd:Unit>
                           <cd:NativeType>double</cd:NativeType>
+                          <ct:NamedTest id="FloatIsFinite"/>
                         </cd:Float>
                       </cd:Type>
                     </cd:Field>
@@ -1009,6 +1044,7 @@
                         <cd:Float format="ascii">
                           <cd:Description>Maximum zero frequency reponse of atmosperic echo</cd:Description>
                           <cd:NativeType>double</cd:NativeType>
+                          <ct:NamedTest id="FloatIsFinite"/>
                         </cd:Float>
                       </cd:Type>
                     </cd:Field>
@@ -1020,6 +1056,7 @@
                         <cd:Float format="ascii">
                           <cd:Description>Maximum error response standard deviation of atmosperic echo</cd:Description>
                           <cd:NativeType>double</cd:NativeType>
+                          <ct:NamedTest id="FloatIsFinite"/>
                         </cd:Float>
                       </cd:Type>
                     </cd:Field>
@@ -1033,6 +1070,7 @@
                           <cd:Description>Minimum mean sensitivity of atmosperic echo</cd:Description>
                           <cd:Unit>1/GHz</cd:Unit>
                           <cd:NativeType>double</cd:NativeType>
+                          <ct:NamedTest id="FloatIsFinite"/>
                         </cd:Float>
                       </cd:Type>
                     </cd:Field>
@@ -1044,6 +1082,7 @@
                         <cd:Float format="ascii">
                           <cd:Description>Minimum zero frequency reponse of atmospheric echo</cd:Description>
                           <cd:NativeType>double</cd:NativeType>
+                          <ct:NamedTest id="FloatIsFinite"/>
                         </cd:Float>
                       </cd:Type>
                     </cd:Field>
@@ -1057,6 +1096,7 @@
                           <cd:Description>Maximum mean sensitivity of atmosperic echo</cd:Description>
                           <cd:Unit>1/GHz</cd:Unit>
                           <cd:NativeType>double</cd:NativeType>
+                          <ct:NamedTest id="FloatIsFinite"/>
                         </cd:Float>
                       </cd:Type>
                     </cd:Field>
@@ -1068,6 +1108,7 @@
                         <cd:Float format="ascii">
                           <cd:Description>Maximum zero frequency reponse of atmosperic echo</cd:Description>
                           <cd:NativeType>double</cd:NativeType>
+                          <ct:NamedTest id="FloatIsFinite"/>
                         </cd:Float>
                       </cd:Type>
                     </cd:Field>
@@ -1079,6 +1120,7 @@
                         <cd:Float format="ascii">
                           <cd:Description>Maximum error response standard deviation of atmosperic echo</cd:Description>
                           <cd:NativeType>double</cd:NativeType>
+                          <ct:NamedTest id="FloatIsFinite"/>
                         </cd:Float>
                       </cd:Type>
                     </cd:Field>
@@ -1092,6 +1134,7 @@
                           <cd:Description>Minimum mean sensitivity of internal calibration</cd:Description>
                           <cd:Unit>1/GHz</cd:Unit>
                           <cd:NativeType>double</cd:NativeType>
+                          <ct:NamedTest id="FloatIsFinite"/>
                         </cd:Float>
                       </cd:Type>
                     </cd:Field>
@@ -1103,6 +1146,7 @@
                         <cd:Float format="ascii">
                           <cd:Description>Minimum zero frequency reponse of internal calibration</cd:Description>
                           <cd:NativeType>double</cd:NativeType>
+                          <ct:NamedTest id="FloatIsFinite"/>
                         </cd:Float>
                       </cd:Type>
                     </cd:Field>
@@ -1116,6 +1160,7 @@
                           <cd:Description>Maximum mean sensitivity of internal calibration</cd:Description>
                           <cd:Unit>1/GHz</cd:Unit>
                           <cd:NativeType>double</cd:NativeType>
+                          <ct:NamedTest id="FloatIsFinite"/>
                         </cd:Float>
                       </cd:Type>
                     </cd:Field>
@@ -1127,6 +1172,7 @@
                         <cd:Float format="ascii">
                           <cd:Description>Maximum zero frequency reponse of internal calibration</cd:Description>
                           <cd:NativeType>double</cd:NativeType>
+                          <ct:NamedTest id="FloatIsFinite"/>
                         </cd:Float>
                       </cd:Type>
                     </cd:Field>
@@ -1138,6 +1184,7 @@
                         <cd:Float format="ascii">
                           <cd:Description>Maximum error response standard deviation of internal calibration</cd:Description>
                           <cd:NativeType>double</cd:NativeType>
+                          <ct:NamedTest id="FloatIsFinite"/>
                         </cd:Float>
                       </cd:Type>
                     </cd:Field>
@@ -1151,6 +1198,7 @@
                           <cd:Description>Upper frequency range when computing the best fit</cd:Description>
                           <cd:Unit>GHz</cd:Unit>
                           <cd:NativeType>double</cd:NativeType>
+                          <ct:NamedTest id="FloatIsFinite"/>
                         </cd:Float>
                       </cd:Type>
                     </cd:Field>
@@ -1164,6 +1212,7 @@
                           <cd:Description>Upper frequency range when computing the best fit</cd:Description>
                           <cd:Unit>GHz</cd:Unit>
                           <cd:NativeType>double</cd:NativeType>
+                          <ct:NamedTest id="FloatIsFinite"/>
                         </cd:Float>
                       </cd:Type>
                     </cd:Field>
@@ -1179,6 +1228,7 @@
                       <cd:Description>RRC lower altitude limit</cd:Description>
                       <cd:Unit>m</cd:Unit>
                       <cd:NativeType>double</cd:NativeType>
+                      <ct:NamedTest id="FloatIsFinite"/>
                     </cd:Float>
                   </cd:Type>
                 </cd:Field>
@@ -1192,6 +1242,7 @@
                       <cd:Description>RRC upper altitude limit</cd:Description>
                       <cd:Unit>m</cd:Unit>
                       <cd:NativeType>double</cd:NativeType>
+                      <ct:NamedTest id="FloatIsFinite"/>
                     </cd:Float>
                   </cd:Type>
                 </cd:Field>
@@ -1205,6 +1256,7 @@
                       <cd:Description>For compatibility purposes with the RRC</cd:Description>
                       <cd:Unit>m</cd:Unit>
                       <cd:NativeType>double</cd:NativeType>
+                      <ct:NamedTest id="FloatIsFinite"/>
                     </cd:Float>
                   </cd:Type>
                 </cd:Field>
@@ -1218,6 +1270,7 @@
                       <cd:Description>For compatibility purposes with the RRC</cd:Description>
                       <cd:Unit>m</cd:Unit>
                       <cd:NativeType>double</cd:NativeType>
+                      <ct:NamedTest id="FloatIsFinite"/>
                     </cd:Float>
                   </cd:Type>
                 </cd:Field>
@@ -1229,6 +1282,7 @@
                     <cd:Float format="ascii">
                       <cd:Description>For compatibility purposes with the RRC</cd:Description>
                       <cd:NativeType>double</cd:NativeType>
+                      <ct:NamedTest id="FloatIsFinite"/>
                     </cd:Float>
                   </cd:Type>
                 </cd:Field>
@@ -1240,6 +1294,7 @@
                     <cd:Float format="ascii">
                       <cd:Description>For compatibility purposes with the RRC</cd:Description>
                       <cd:NativeType>double</cd:NativeType>
+                      <ct:NamedTest id="FloatIsFinite"/>
                     </cd:Float>
                   </cd:Type>
                 </cd:Field>
@@ -1253,6 +1308,7 @@
                       <cd:Description>For compatibility purposes with the RRC</cd:Description>
                       <cd:Unit>degC</cd:Unit>
                       <cd:NativeType>double</cd:NativeType>
+                      <ct:NamedTest id="FloatIsFinite"/>
                     </cd:Float>
                   </cd:Type>
                 </cd:Field>
@@ -1264,6 +1320,7 @@
                     <cd:Float format="ascii">
                       <cd:Description>For compatibility purposes with the RRC</cd:Description>
                       <cd:NativeType>double</cd:NativeType>
+                      <ct:NamedTest id="FloatIsFinite"/>
                     </cd:Float>
                   </cd:Type>
                 </cd:Field>
@@ -1279,6 +1336,7 @@
                   <cd:Description>NA. Set to 0</cd:Description>
                   <cd:Unit>GHz</cd:Unit>
                   <cd:NativeType>double</cd:NativeType>
+                  <ct:NamedTest id="FloatIsFinite"/>
                 </cd:Float>
               </cd:Type>
             </cd:Field>
@@ -1292,6 +1350,7 @@
                   <cd:Description>NA. Set to 0</cd:Description>
                   <cd:Unit>GHz</cd:Unit>
                   <cd:NativeType>double</cd:NativeType>
+                  <ct:NamedTest id="FloatIsFinite"/>
                 </cd:Float>
               </cd:Type>
             </cd:Field>
@@ -1305,6 +1364,7 @@
                   <cd:Description>Minimum Etalon temperature for current sensor, over all BRCs and all 10 time samples per BRC</cd:Description>
                   <cd:Unit>degC</cd:Unit>
                   <cd:NativeType>double</cd:NativeType>
+                  <ct:NamedTest id="FloatIsFinite"/>
                 </cd:Float>
               </cd:Type>
             </cd:Field>
@@ -1318,6 +1378,7 @@
                   <cd:Description>Maximum Etalon temperature for current sensor, over all BRCs and all 10 time samples per BRC</cd:Description>
                   <cd:Unit>degC</cd:Unit>
                   <cd:NativeType>double</cd:NativeType>
+                  <ct:NamedTest id="FloatIsFinite"/>
                 </cd:Float>
               </cd:Type>
             </cd:Field>
@@ -1331,6 +1392,7 @@
                   <cd:Description>Minimum Etalon temperature for current sensor, over all BRCs and all 10 time samples per BRC</cd:Description>
                   <cd:Unit>degC</cd:Unit>
                   <cd:NativeType>double</cd:NativeType>
+                  <ct:NamedTest id="FloatIsFinite"/>
                 </cd:Float>
               </cd:Type>
             </cd:Field>
@@ -1344,6 +1406,7 @@
                   <cd:Description>Maximum Etalon temperature for current sensor, over all BRCs and all 10 time samples per BRC</cd:Description>
                   <cd:Unit>degC</cd:Unit>
                   <cd:NativeType>double</cd:NativeType>
+                  <ct:NamedTest id="FloatIsFinite"/>
                 </cd:Float>
               </cd:Type>
             </cd:Field>
@@ -1357,6 +1420,7 @@
                   <cd:Description>Minimum Etalon temperature for current sensor, over all BRCs and all 10 time samples per BRC</cd:Description>
                   <cd:Unit>degC</cd:Unit>
                   <cd:NativeType>double</cd:NativeType>
+                  <ct:NamedTest id="FloatIsFinite"/>
                 </cd:Float>
               </cd:Type>
             </cd:Field>
@@ -1370,6 +1434,7 @@
                   <cd:Description>Maximum Etalon temperature for current sensor, over all BRCs and all 10 time samples per BRC</cd:Description>
                   <cd:Unit>degC</cd:Unit>
                   <cd:NativeType>double</cd:NativeType>
+                  <ct:NamedTest id="FloatIsFinite"/>
                 </cd:Float>
               </cd:Type>
             </cd:Field>
@@ -1383,6 +1448,7 @@
                   <cd:Description>Minimum Etalon temperature for current sensor, over all BRCs and all 10 time samples per BRC</cd:Description>
                   <cd:Unit>degC</cd:Unit>
                   <cd:NativeType>double</cd:NativeType>
+                  <ct:NamedTest id="FloatIsFinite"/>
                 </cd:Float>
               </cd:Type>
             </cd:Field>
@@ -1396,6 +1462,7 @@
                   <cd:Description>Maximum Etalon temperature for current sensor, over all BRCs and all 10 time samples per BRC</cd:Description>
                   <cd:Unit>degC</cd:Unit>
                   <cd:NativeType>double</cd:NativeType>
+                  <ct:NamedTest id="FloatIsFinite"/>
                 </cd:Float>
               </cd:Type>
             </cd:Field>
@@ -1470,6 +1537,7 @@
                             <cd:Float>
                               <cd:Unit>m</cd:Unit>
                               <cd:NativeType>double</cd:NativeType>
+                              <ct:NamedTest id="FloatIsFinite"/>
                             </cd:Float>
                           </cd:Array>
                         </cd:Type>
@@ -1486,6 +1554,7 @@
                             <cd:Float>
                               <cd:Unit>m</cd:Unit>
                               <cd:NativeType>double</cd:NativeType>
+                              <ct:NamedTest id="FloatIsFinite"/>
                             </cd:Float>
                           </cd:Array>
                         </cd:Type>
@@ -1505,6 +1574,7 @@
                                 <cd:Float format="ascii">
                                   <cd:Description>Height of Geoid above WGS84</cd:Description>
                                   <cd:NativeType>double</cd:NativeType>
+                                  <ct:NamedTest id="FloatIsFinite"/>
                                 </cd:Float>
                               </cd:Type>
                             </cd:Array>
