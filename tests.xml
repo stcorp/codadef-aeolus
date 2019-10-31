@@ -43,6 +43,7 @@
   <ct:Test name="FixedValue401" criticality="Error" description="The value should be 401"><![CDATA[int(.) == 401]]></ct:Test>
   <ct:Test name="FixedValue611" criticality="Error" description="The value should be 611"><![CDATA[int(.) == 611]]></ct:Test>
   <ct:Test name="FixedValueAeolus" criticality="Error" description="The value should be 'Aeolus'"><![CDATA[str(.) == "Aeolus"]]></ct:Test>
+  <ct:Test name="FloatIsFinite" criticality="Error" description="The value should be finite, i.e. not Not-a-Number or +/-Infinity">!(isnan(float(.)) || isinf(float(.)))</ct:Test>
   <ct:Test name="FixedValueAUX_PAR_QC" criticality="Error" description="The value should be 'AUX_PAR_QC'"><![CDATA[str(.) == "AUX_PAR_QC"]]></ct:Test>
   <ct:Test name="FixedValueAUX_REP_QC" criticality="Error" description=""><![CDATA[str(.) == "AUX_REP_QC"]]></ct:Test>
   <ct:Test name="IntGreaterThanZero" description="The value should be greater than 0" criticality="Error"><![CDATA[int(.) > 0]]></ct:Test>
