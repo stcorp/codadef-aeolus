@@ -258,7 +258,7 @@
                                   <cd:Integer format="ascii">
                                     <cd:Description>Minimum number of valid frequency steps (valid RRC data and valid AUX_MET profile) required for the update of the CSR to be carried out</cd:Description>
                                     <cd:NativeType>uint8</cd:NativeType>
-                                    <ct:NamedTest id="IntGreaterThanOrEqualTo35"/>
+                                    <ct:NamedTest id="IntGreaterThanOrEqualTo30"/>
                                   </cd:Integer>
                                 </cd:Type>
                               </cd:Field>

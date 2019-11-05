@@ -1,9 +1,11 @@
 <?xml version="1.0"?>
-<ct:Tests xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" last-modified="2019-05-03">
+<ct:Tests xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" last-modified="2019-11-05">
   <ct:Test name="AbsValueIsOne" criticality="Error" description="The value should be: '1' or: '-1'"><![CDATA[int(.) == 1 || int(.)==-1]]></ct:Test>
   <ct:Test name="AllC1Range05To1p5" criticality="Error" description="All array values of C1 should range from 0.5 to 1.5"><![CDATA[count(.,float(./c1) < 0.5 || float(./c1) > 1.5) == 0]]></ct:Test>
+  <ct:Test name="AllC1Range03To1p7" criticality="Error" description="All array values of C1 should range from 0.3 to 1.7"><![CDATA[count(.,float(./c1) < 0.3 || float(./c1) > 1.7) == 0]]></ct:Test>
   <ct:Test name="AllC2Range01To1" criticality="Error" description="All array values of C2 should range from 0.1 to 1.0"><![CDATA[count(.,float(./c2) < 0.1 || float(./c2) > 1.0) == 0]]></ct:Test>
   <ct:Test name="AllC3Range05To1p5" criticality="Error" description="All array values of C3 should range from 0.5 to 1.5"><![CDATA[count(.,float(./c3) < 0.5 || float(./c3) > 1.5) == 0]]></ct:Test>
+  <ct:Test name="AllC3Range0To1p5" criticality="Error" description="All array values of C3 should range from 0.0 to 1.5"><![CDATA[count(.,float(./c3) < 0.0 || float(./c3) > 1.5) == 0]]></ct:Test>    
   <ct:Test name="AllC4Range09To1p1" criticality="Error" description="All array values of C4 should range from 0.9 to 1.1"><![CDATA[count(.,float(./c4) < 0.9 || float(./c4) > 1.1) == 0]]></ct:Test>
   <ct:Test name="AtLeastOneElement" criticality="Warning" description="There should be at least one element"><![CDATA[numelements(.) >= 1]]></ct:Test>
   <ct:Test name="BooleanBinTest" criticality="Error" description="The value should be True: '1' or False: '0'"><![CDATA[int(.) == 1 || int(.)==0]]></ct:Test>
@@ -123,22 +125,31 @@
   <ct:Test name="PIFStatusEnum" criticality="Error" description="The status should be one of the allowed enumeration values"><![CDATA[str(.) == "AUTOMATIC" || str(.) == "MANUAL" || str(.) == "VALIDATED" || str(.) == "GENERATED" || str(.) == "COMMITTED" || str(.) == "EXPORTED" || str(.) == "RE-PLANNED" || str(.) == "RE-VALIDATED" || str(.) == "RE-GENERATED" || str(.) == "RE-COMMITTED" || str(.) == "RE-EXPORTED"]]></ct:Test>
   <ct:Test name="QCFReportValueRangeTest_Mode" criticality="Error" description="The Test_Mode field should be one of the allowed enumeration values"><![CDATA[str(.) == "STRUCTURE_SIZE_AND_READ" || str(.) == "STRUCTURE_SIZE_AND_READ_HEADER" || str(.) == "EXPRESSION" || str(.) == "EXPRESSION_HEADER" || str(.) == "DATA_HEADER_CROSS_CHECK"]]></ct:Test>
   <ct:Test name="Range005To01" criticality="Error" description="The value should hold a number from 0.05 to 0.1"><![CDATA[float(.) >= 0.05 && float(.) <= 0.1]]></ct:Test>
+  <ct:Test name="RangeMinus05To05" criticality="Error" description="The value should hold a number from -0.5 to 0.5"><![CDATA[float(.) >= -0.5 && float(.) <= 0.5]]></ct:Test>
   <ct:Test name="Range10To109000" criticality="Error" description="The value should hold a number from 10 to 109000"><![CDATA[float(.) >= 10 && float(.) <= 109000]]></ct:Test>
   <ct:Test name="Range015To03" criticality="Error" description="The value should hold a number from 0.15 to 0.3"><![CDATA[float(.) >= 0.15 && float(.) <= 0.3]]></ct:Test>
   <ct:Test name="Range0To4" criticality="Error" description="The value should hold a number from 0 to 4"><![CDATA[int(.) >= 0 && int(.) <= 4]]></ct:Test>
   <ct:Test name="Range0To100" criticality="Error" description="The value should hold a number from 0 to 100"><![CDATA[float(.) >= 0 && float(.) <= 100]]></ct:Test>
   <ct:Test name="Range3To600" criticality="Error" description="The value should hold a number from 3 to 600"><![CDATA[int(.) >= 3 && int(.) <= 600]]></ct:Test>
   <ct:Test name="Range3To1003" criticality="Error" description="The value should hold a number from 3 to 1003"><![CDATA[int(.) >= 3 && int(.) <= 1003]]></ct:Test>
+  <ct:Test name="Range3To5" criticality="Error" description="The value should hold a number between 3 to 5"><![CDATA[float(.) > 3.0 && float(.) < 5.0]]></ct:Test>
   <ct:Test name="Range4To5" criticality="Error" description="The value should hold a number between 4 to 5"><![CDATA[float(.) > 4.0 && float(.) < 5.0]]></ct:Test>
+  <ct:Test name="Range7To9" criticality="Error" description="The value should hold a number between 7 to 9"><![CDATA[float(.) > 7.0 && float(.) < 9.0]]></ct:Test>
   <ct:Test name="Range8To9" criticality="Error" description="The value should hold a number between 8 to 9"><![CDATA[float(.) > 8.0 && float(.) < 9.0]]></ct:Test>
+  <ct:Test name="Range8To10" criticality="Error" description="The value should hold a number between 8 to 10"><![CDATA[float(.) > 8.0 && float(.) < 10.0]]></ct:Test>    
+  <ct:Test name="RangeMinus10To10" criticality="Error" description="The value should hold a number between -10 to 10"><![CDATA[float(.) > -10.0 && float(.) < 10.0]]></ct:Test>
   <ct:Test name="Range12To13" criticality="Error" description="The value should hold a number between 12 to 13"><![CDATA[float(.) > 12.0 && float(.) < 13.0]]></ct:Test>
+  <ct:Test name="Range12To14" criticality="Error" description="The value should hold a number between 12 to 14"><![CDATA[float(.) > 12.0 && float(.) < 14.0]]></ct:Test>
   <ct:Test name="Range17500To33100" criticality="Error" description="The value should hold a number from 17500 to 33100"><![CDATA[float(.) >= 17500 && float(.) <= 33100]]></ct:Test>
+  <ct:Test name="Range250To350" criticality="Error" description="The value should hold a number from 250 to 350"><![CDATA[float(.) >= 250 && float(.) <= 350]]></ct:Test>
   <ct:Test name="Range350To450" criticality="Error" description="The value should hold a number from 350 to 450"><![CDATA[float(.) >= 350 && float(.) <= 450]]></ct:Test>
   <ct:Test name="Range450To550" criticality="Error" description="The value should hold a number from 450 to 550"><![CDATA[float(.) >= 450 && float(.) <= 550]]></ct:Test>
   <ct:Test name="Range1400To1600" criticality="Error" description="The value should hold a number from 1400 to 1600"><![CDATA[float(.) >= 1400 && float(.) <= 1600]]></ct:Test>
   <ct:Test name="RangeMinus10000To82000000" criticality="Error" description="The value should hold a number from -10000 to 8200000"><![CDATA[float(.) >= -10000 && float(.) <= 8200000]]></ct:Test>
   <ct:Test name="Range095To1p05" criticality="Error" description="The value should hold a number from 0.95 to 1.05"><![CDATA[float(.) >= 0.95 && float(.) <= 1.05]]></ct:Test>
+  <ct:Test name="Range5E12To1E13" criticality="Error" description="The value should hold a number from 5.0E12 to 1.0E13"><![CDATA[float(.) >= 5.0E12 && float(.) <= 1.0E13]]></ct:Test>
   <ct:Test name="Range5E12To5E13" criticality="Error" description="The value should hold a number from 5.0E12 to 5.0E13"><![CDATA[float(.) >= 5.0E12 && float(.) <= 5.0E13]]></ct:Test>
+  <ct:Test name="Range2p5E13To3p5E14" criticality="Error" description="The value should hold a number from 2.5E13 to 3.5E14"><![CDATA[float(.) >= 2.5E13 && float(.) <= 3.5E14]]></ct:Test>
   <ct:Test name="Range5E13To5E14" criticality="Error" description="The value should hold a number from 5.0E13 to 5.0E14"><![CDATA[float(.) >= 5.0E13 && float(.) <= 5.0E14]]></ct:Test>
   <ct:Test name="RangeLatitude6" criticality="Error" description="The latitude (in 1E6 degrees) should be &gt;= -90E6 and &lt;= 90E6"><![CDATA[float(.) >= -90.0E6 && float(.) <= 90.0E6]]></ct:Test>
   <ct:Test name="RangeLongitude6" criticality="Error" description="The longitude (in 1E6 degrees) should be &gt;= 0 and &lt;= 360E6"><![CDATA[float(.) >= 0 && float(.) <= 360.0E6]]></ct:Test>
@@ -163,8 +174,9 @@
   <ct:Test name="ValueLessThanOrEqualToMinus06" criticality="Error" description="The value should be less than or equal to -0.6"><![CDATA[float(.) <= (-0.6)]]></ct:Test>
   <ct:Test name="ValueLessThanOrEqualTo001" criticality="Error" description="The value should be less than or equal to 0.01"><![CDATA[float(.) <= 0.01]]></ct:Test>
   <ct:Test name="ValueLessThanOrEqualTo01" criticality="Error" description="The value should be less than or equal to 0.1"><![CDATA[float(.) <= 0.1]]></ct:Test>
-  <ct:Test name="ValueLessThanOrEqualTo1" criticality="Error" description="The value should be less than or equal to 1.0"><![CDATA[float(.) <= 1.0]]></ct:Test>
+  <ct:Test name="ValueLessThanOrEqualTo1" criticality="Error" description="The value should be less than or equal to 1.0"><![CDATA[float(.) <= 1.0]]></ct:Test>    
   <ct:Test name="ValueLessThanOrEqualTo1p5" criticality="Error" description="The value should be less than or equal to 1.5"><![CDATA[float(.) <= 1.5]]></ct:Test>
+  <ct:Test name="ValueGreaterThanOrEqualTo4" criticality="Error" description="The value should be greater than or equal to 4"><![CDATA[float(.) >= 4.0]]></ct:Test>
   <ct:Test name="ValueLessThanOrEqualTo25" criticality="Error" description="The value should be less than or equal to 25.0"><![CDATA[float(.) <= 25.0]]></ct:Test>
   <ct:Test name="ValueLessThanOrEqualTo60" criticality="Error" description="The value should be less than or equal to 60.0"><![CDATA[float(.) <= 60.0]]></ct:Test>
   <ct:Test name="ValueLessThanOrEqualTo200" criticality="Error" description="The value should be less than or equal to 200"><![CDATA[float(.) <= 200]]></ct:Test>

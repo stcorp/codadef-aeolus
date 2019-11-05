@@ -52,6 +52,7 @@
                                     <cd:Description>Useful Spectral Range</cd:Description>
                                     <cd:Unit>GHz</cd:Unit>
                                     <cd:NativeType>double</cd:NativeType>
+                                    <ct:NamedTest id="ValueGreaterThanOrEqualTo4"/>
                                   </cd:Float>
                                 </cd:Type>
                               </cd:Field>

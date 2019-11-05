@@ -63,7 +63,7 @@
                                     <cd:Float format="ascii">
                                       <cd:Description>Coefficent A in the Harmonic Bias Estimation using Fourier transform based interpolation.</cd:Description>
                                       <cd:NativeType>double</cd:NativeType>
-                                      <ct:NamedTest id="Range095To1p05"/>
+                                      <ct:NamedTest id="RangeMinus10To10"/>
                                       <ct:NamedTest id="FloatIsFinite"/>
                                     </cd:Float>
                                   </cd:Type>
@@ -82,7 +82,7 @@
                                     <cd:Float format="ascii">
                                       <cd:Description>Coefficent B in the Harmonic Bias Estimation using Fourier transform based interpolation.</cd:Description>
                                       <cd:NativeType>double</cd:NativeType>
-                                      <ct:NamedTest id="Range095To1p05"/>
+                                      <ct:NamedTest id="RangeMinus10To10"/>
                                       <ct:NamedTest id="FloatIsFinite"/>
                                     </cd:Float>
                                   </cd:Type>
@@ -101,7 +101,7 @@
                                     <cd:Float format="ascii">
                                       <cd:Description>Coefficent A in the Harmonic Bias Estimation using Fourier transform based interpolation.</cd:Description>
                                       <cd:NativeType>double</cd:NativeType>
-                                      <ct:NamedTest id="Range095To1p05"/>
+                                      <ct:NamedTest id="RangeMinus10To10"/>
                                       <ct:NamedTest id="FloatIsFinite"/>
                                     </cd:Float>
                                   </cd:Type>
@@ -120,7 +120,7 @@
                                     <cd:Float format="ascii">
                                       <cd:Description>Coefficent B in the Harmonic Bias Estimation using Fourier transform based interpolation.</cd:Description>
                                       <cd:NativeType>double</cd:NativeType>
-                                      <ct:NamedTest id="Range095To1p05"/>
+                                      <ct:NamedTest id="RangeMinus10To10"/>
                                       <ct:NamedTest id="FloatIsFinite"/>
                                     </cd:Float>
                                   </cd:Type>
