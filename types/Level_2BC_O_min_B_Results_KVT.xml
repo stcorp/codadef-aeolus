@@ -1,0 +1,57 @@
+<cd:Array xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="ascii" last-modified="2020-01-03" name="Level_2BC_O_min_B_Results_KVT">
+  <cd:Dimension>5</cd:Dimension>
+  <cd:Record>
+    <cd:Field name="Comment_title">
+      <cd:Text>
+        <cd:Description>COMMENT=</cd:Description>
+        <cd:FixedValue>COMMENT=</cd:FixedValue>
+        <cd:ByteSize>8</cd:ByteSize>
+        <cd:NativeType>string</cd:NativeType>
+      </cd:Text>
+      <cd:Hidden/>
+    </cd:Field>
+    <cd:Field name="quote_1">
+      <cd:Text>
+        <cd:Description>quotation mark</cd:Description>
+        <cd:FixedValue>"</cd:FixedValue>
+        <cd:ByteSize>1</cd:ByteSize>
+        <cd:NativeType>char</cd:NativeType>
+      </cd:Text>
+      <cd:Hidden/>
+    </cd:Field>
+    <cd:Field name="Comment">
+      <cd:Text>
+        <cd:Description>Comment describing what data Comment (channel, classification) was used for deriving this O-B result</cd:Description>
+        <cd:ByteSize>50</cd:ByteSize>
+        <cd:NativeType>string</cd:NativeType>
+      </cd:Text>
+    </cd:Field>
+    <cd:Field name="quote_2">
+      <cd:Text>
+        <cd:Description>quotation mark</cd:Description>
+        <cd:FixedValue>"</cd:FixedValue>
+        <cd:ByteSize>1</cd:ByteSize>
+        <cd:NativeType>char</cd:NativeType>
+      </cd:Text>
+      <cd:Hidden/>
+    </cd:Field>
+    <cd:Field name="newline_char_1">
+      <cd:Text>
+        <cd:Description>newline</cd:Description>
+        <cd:FixedValue>\n</cd:FixedValue>
+        <cd:ByteSize>1</cd:ByteSize>
+        <cd:NativeType>char</cd:NativeType>
+      </cd:Text>
+      <cd:Hidden/>
+    </cd:Field>
+    <cd:Field name="All">
+      <cd:NamedType id="Level_2BC_O_min_B_Result_KVT"/>
+    </cd:Field>
+    <cd:Field name="Bin">
+      <cd:Array>
+        <cd:Dimension>24</cd:Dimension>
+        <cd:NamedType id="Level_2BC_O_min_B_Result_KVT"/>
+      </cd:Array>
+    </cd:Field>
+  </cd:Record>
+</cd:Array>

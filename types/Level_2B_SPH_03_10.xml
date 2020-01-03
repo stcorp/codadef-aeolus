@@ -462,16 +462,16 @@
     <cd:Hidden/>
   </cd:Field>
   <cd:Field name="valid_Mie_profile_count">
-    <cd:NamedType id="Level_2BC_Count_Type_KVT"/>
+    <cd:NamedType id="Level_2BC_Count_Type_KVT_03_10"/>
   </cd:Field>
   <cd:Field name="valid_Rayleigh_profile_count">
-    <cd:NamedType id="Level_2BC_Count_Type_KVT"/>
+    <cd:NamedType id="Level_2BC_Count_Type_KVT_03_10"/>
   </cd:Field>
   <cd:Field name="invalid_Mie_profile_count">
-    <cd:NamedType id="Level_2BC_Count_Type_KVT"/>
+    <cd:NamedType id="Level_2BC_Count_Type_KVT_03_10"/>
   </cd:Field>
   <cd:Field name="invalid_Rayleigh_profile_count">
-    <cd:NamedType id="Level_2BC_Count_Type_KVT"/>
+    <cd:NamedType id="Level_2BC_Count_Type_KVT_03_10"/>
   </cd:Field>
   <cd:Field name="Num_Profiles_Surface_Mie_title">
     <cd:Text>
@@ -524,16 +524,16 @@
     <cd:Hidden/>
   </cd:Field>
   <cd:Field name="valid_L2B_Mie_Wind_count">
-    <cd:NamedType id="Level_2BC_Count_Type_KVT"/>
+    <cd:NamedType id="Level_2BC_Count_Type_KVT_03_10"/>
   </cd:Field>
   <cd:Field name="valid_L2B_Rayleigh_Wind_count">
-    <cd:NamedType id="Level_2BC_Count_Type_KVT"/>
+    <cd:NamedType id="Level_2BC_Count_Type_KVT_03_10"/>
   </cd:Field>
   <cd:Field name="invalid_L2B_Mie_Wind_count">
-    <cd:NamedType id="Level_2BC_Count_Type_KVT"/>
+    <cd:NamedType id="Level_2BC_Count_Type_KVT_03_10"/>
   </cd:Field>
   <cd:Field name="invalid_L2B_Rayleigh_Wind_count">
-    <cd:NamedType id="Level_2BC_Count_Type_KVT"/>
+    <cd:NamedType id="Level_2BC_Count_Type_KVT_03_10"/>
   </cd:Field>
   <cd:Field name="spare_3">
     <cd:Text>

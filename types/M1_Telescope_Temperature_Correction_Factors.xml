@@ -1,0 +1,117 @@
+<?xml version="1.0"?>
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" name="M1_Telescope_Temperature_Correction_Factors" format="xml" last-modified="2020-01-03">
+  <cd:Field name="M1_Telescope_Temperature_Correction_Factors">
+    <cd:Record>
+      <cd:Field name="Temperature_Difference_to_HLOS_Bias">
+        <cd:Float format="ascii">
+          <cd:Attribute name="unit">
+            <cd:FixedValue>m/s/C</cd:FixedValue>
+          </cd:Attribute>       
+          <cd:Description>slope of the linear fit to the HLOS bias versus telescope temperature data.</cd:Description>
+          <cd:Unit>m/s/C</cd:Unit>
+          <cd:NativeType>double</cd:NativeType>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="Temperature_Offset">
+        <cd:Float format="ascii">
+          <cd:Attribute name="unit">
+            <cd:FixedValue>C</cd:FixedValue>
+          </cd:Attribute>       
+          <cd:Description>offset of the linear fit to the HLOS bias versus telescope temperature data.</cd:Description>
+          <cd:Unit>C</cd:Unit>
+          <cd:NativeType>double</cd:NativeType>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="AHT_22_factor">
+        <cd:Float format="ascii">
+          <cd:Description>multiplicative factor used to include temperature sensor AHT_22 in the temperature average.</cd:Description>
+          <cd:NativeType>double</cd:NativeType>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="AHT_23_factor">
+        <cd:Float format="ascii">
+          <cd:Description>multiplicative factor used to include temperature sensor AHT_23 in the temperature average.</cd:Description>
+          <cd:NativeType>double</cd:NativeType>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="AHT_24_factor">
+        <cd:Float format="ascii">
+          <cd:Description>multiplicative factor used to include temperature sensor AHT_24 in the temperature average.</cd:Description>
+          <cd:NativeType>double</cd:NativeType>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="AHT_25_factor">
+        <cd:Float format="ascii">
+          <cd:Description>multiplicative factor used to include temperature sensor AHT_25 in the temperature average.</cd:Description>
+          <cd:NativeType>double</cd:NativeType>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="AHT_26_factor">
+        <cd:Float format="ascii">
+          <cd:Description>multiplicative factor used to include temperature sensor AHT_26 in the temperature average.</cd:Description>
+          <cd:NativeType>double</cd:NativeType>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="AHT_27_factor">
+        <cd:Float format="ascii">
+          <cd:Description>multiplicative factor used to include temperature sensor AHT_27 in the temperature average.</cd:Description>
+          <cd:NativeType>double</cd:NativeType>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="TC_18_factor">
+        <cd:Float format="ascii">
+          <cd:Description>multiplicative factor used to include temperature sensor TC_18 in the temperature average.</cd:Description>
+          <cd:NativeType>double</cd:NativeType>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="TC_19_factor">
+        <cd:Float format="ascii">
+          <cd:Description>multiplicative factor used to include temperature sensor TC_19 in the temperature average.</cd:Description>
+          <cd:NativeType>double</cd:NativeType>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="TC_20_factor">
+        <cd:Float format="ascii">
+          <cd:Description>multiplicative factor used to include temperature sensor TC_20 in the temperature average.</cd:Description>
+          <cd:NativeType>double</cd:NativeType>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="TC_21_factor">
+        <cd:Float format="ascii">
+          <cd:Description>multiplicative factor used to include temperature sensor TC_21 in the temperature average.</cd:Description>
+          <cd:NativeType>double</cd:NativeType>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="TC_23_factor">
+        <cd:Float format="ascii">
+          <cd:Description>multiplicative factor used to include temperature sensor TC_23 in the temperature average.</cd:Description>
+          <cd:NativeType>double</cd:NativeType>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="TC_25_factor">
+        <cd:Float format="ascii">
+          <cd:Description>multiplicative factor used to include temperature sensor TC_25 in the temperature average.</cd:Description>
+          <cd:NativeType>double</cd:NativeType>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="TC_27_factor">
+        <cd:Float format="ascii">
+          <cd:Description>multiplicative factor used to include temperature sensor TC_27 in the temperature average.</cd:Description>
+          <cd:NativeType>double</cd:NativeType>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="TC_29_factor">
+        <cd:Float format="ascii">
+          <cd:Description>multiplicative factor used to include temperature sensor TC_29 in the temperature average.</cd:Description>
+          <cd:NativeType>double</cd:NativeType>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="TC_32_factor">
+        <cd:Float format="ascii">
+          <cd:Description>multiplicative factor used to include temperature sensor TC_32 in the temperature average.</cd:Description>
+          <cd:NativeType>double</cd:NativeType>
+        </cd:Float>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+</cd:Record>

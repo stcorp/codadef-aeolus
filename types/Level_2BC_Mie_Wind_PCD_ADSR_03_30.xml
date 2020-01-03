@@ -1,0 +1,240 @@
+<?xml version="1.0"?>
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="binary" name="Level_2BC_Mie_Wind_PCD_ADSR_03_30" last-modified="2020-01-03">
+  <cd:Field name="wind_result_id">
+    <cd:Integer>
+      <cd:Description>unique L2B wind result identification number for this L2B file</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="start_of_obs_datetime">
+    <cd:Time timeformat="binary_envisat_datetime">
+      <cd:Description>Start date and time of Measurement</cd:Description>
+      <ct:NamedTest id="RangeSecond" path="seconds"/>
+      <ct:NamedTest id="RangeMicroSecond" path="microseconds"/>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="mie_wind_qc">
+    <cd:Record>
+      <cd:Description>Structure in which the wind retrieval output QC parameters for the Mie channel are collected</cd:Description>
+      <cd:Field name="hlos_error_estimate">
+        <cd:Integer>
+          <cd:Description>Error estimate reported by the Mie processing algorithm, given in cm/s and rounded to the nearest integer</cd:Description>
+          <cd:Unit>cm/s</cd:Unit>
+          <cd:BitSize>16</cd:BitSize>
+          <cd:NativeType>uint16</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="reference_hlos">
+        <cd:Integer>
+          <cd:Description>Reference HLOS wind taken from the matching profile in the AUX_MET file that was used for processing (and as is used for calculating O-B statistics), given in cm/s and rounded to the nearest integer.</cd:Description>
+          <cd:Unit>cm/s</cd:Unit>
+          <cd:BitSize>16</cd:BitSize>
+          <cd:NativeType>int16</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="flags1">
+        <cd:Integer>
+          <cd:Description>First flag describing Mie processing results for the current wind result.</cd:Description>
+          <cd:BitSize>8</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="flags2">
+        <cd:Integer>
+          <cd:Description>Second flag describing Mie processing results for the current wind result.</cd:Description>
+          <cd:BitSize>8</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="flags3">
+        <cd:Integer>
+          <cd:Description>Third flag describing Mie processing results for the current wind result.</cd:Description>
+          <cd:BitSize>8</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="flags4">
+        <cd:Integer>
+          <cd:Description>Fourth flag describing Mie processing results for the current wind result.</cd:Description>
+          <cd:BitSize>8</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="intref_fitting_amplitude">
+        <cd:Float>
+          <cd:Description>Amplitude of the curve used for fitting the internal reference spectrum</cd:Description>
+          <cd:BitSize>64</cd:BitSize>
+          <cd:NativeType>double</cd:NativeType>
+          <ct:NamedTest id="FloatIsFinite"/>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="intref_fitting_residual">
+        <cd:Float>
+          <cd:Description>Residual after the fit to the internal reference spectrum is performed (should also give an idea of the reliability of the fit)</cd:Description>
+          <cd:BitSize>64</cd:BitSize>
+          <cd:NativeType>double</cd:NativeType>
+          <ct:NamedTest id="FloatIsFinite"/>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="intref_fitting_offset">
+        <cd:Float>
+          <cd:Description>Offset of the curve used for fitting the internal reference spectrum</cd:Description>
+          <cd:BitSize>64</cd:BitSize>
+          <cd:NativeType>double</cd:NativeType>
+          <ct:NamedTest id="FloatIsFinite"/>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="intref_fitting_fwhm">
+        <cd:Float>
+          <cd:Description>FWHM of the curve used for fitting internal reference the spectrum.</cd:Description>
+          <cd:BitSize>64</cd:BitSize>
+          <cd:NativeType>double</cd:NativeType>
+          <ct:NamedTest id="FloatIsFinite"/>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="intref_fitting_peakloc">
+        <cd:Float>
+          <cd:Description>Peak location result from fitting the internal reference spectrum.</cd:Description>
+          <cd:BitSize>64</cd:BitSize>
+          <cd:NativeType>double</cd:NativeType>
+          <ct:NamedTest id="FloatIsFinite"/>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="intref_fitting_offsetsub">
+        <cd:Float>
+          <cd:Description>Offset subtraction as applied to the fit result of the internal reference spectrum.</cd:Description>
+          <cd:BitSize>64</cd:BitSize>
+          <cd:NativeType>double</cd:NativeType>
+          <ct:NamedTest id="FloatIsFinite"/>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="intref_fitting_valflag">
+        <cd:Integer>
+          <cd:Description>Validity flag indicating the succes of fitting the internal reference spectrum.</cd:Description>
+          <cd:BitSize>8</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+          <ct:NamedTest id="BooleanBinTest"/>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="intref_fitting_mie_snr">
+        <cd:Float>
+          <cd:Description>Refined SNR value derived by fitting the internal reference spectrum.</cd:Description>
+          <cd:BitSize>64</cd:BitSize>
+          <cd:NativeType>double</cd:NativeType>
+          <ct:NamedTest id="FloatIsFinite"/>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="intref_fitting_mie_sr">
+        <cd:Float>
+          <cd:Description>Refined Scattering Ratio value derived by fitting the internal reference spectrum.</cd:Description>
+          <cd:BitSize>64</cd:BitSize>
+          <cd:NativeType>double</cd:NativeType>
+          <ct:NamedTest id="FloatIsFinite"/>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="fitting_amplitude">
+        <cd:Float>
+          <cd:Description>Amplitude of the curve used for fitting the Mie spectrum</cd:Description>
+          <cd:BitSize>64</cd:BitSize>
+          <cd:NativeType>double</cd:NativeType>
+          <ct:NamedTest id="FloatIsFinite"/>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="fitting_residual">
+        <cd:Float>
+          <cd:Description>Residual after the fit to the Mie spectrum is performed (should also give an idea of the reliability of the fit)</cd:Description>
+          <cd:BitSize>64</cd:BitSize>
+          <cd:NativeType>double</cd:NativeType>
+          <ct:NamedTest id="FloatIsFinite"/>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="fitting_offset">
+        <cd:Float>
+          <cd:Description>Offset of the curve used for fitting the Mie spectrum</cd:Description>
+          <cd:BitSize>64</cd:BitSize>
+          <cd:NativeType>double</cd:NativeType>
+          <ct:NamedTest id="FloatIsFinite"/>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="fitting_fwhm">
+        <cd:Float>
+          <cd:Description>FWHM of the curve used for fitting the Mie spectrum. This gives a measure of the wind variability in this rangebin</cd:Description>
+          <cd:BitSize>64</cd:BitSize>
+          <cd:NativeType>double</cd:NativeType>
+          <ct:NamedTest id="FloatIsFinite"/>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="fitting_peakloc">
+        <cd:Float>
+          <cd:Description>Peak location result from fitting the measured atmospheric Mie spectrum.</cd:Description>
+          <cd:BitSize>64</cd:BitSize>
+          <cd:NativeType>double</cd:NativeType>
+          <ct:NamedTest id="FloatIsFinite"/>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="fitting_offsetsub">
+        <cd:Float>
+          <cd:Description>Offset subtraction as applied to the fit result of the measured atmospheric Mie spectrum.</cd:Description>
+          <cd:BitSize>64</cd:BitSize>
+          <cd:NativeType>double</cd:NativeType>
+          <ct:NamedTest id="FloatIsFinite"/>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="fitting_valflag">
+        <cd:Integer>
+          <cd:Description>Validity flag indicating the succes of fitting the measured atmospheric Mie spectrum.</cd:Description>
+          <cd:BitSize>8</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+          <ct:NamedTest id="BooleanBinTest"/>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="fitting_mie_snr">
+        <cd:Float>
+          <cd:Description>SNR of the measured atmospheric Mie spectrum</cd:Description>
+          <cd:BitSize>64</cd:BitSize>
+          <cd:NativeType>double</cd:NativeType>
+          <ct:NamedTest id="FloatIsFinite"/>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="fitting_mie_sr">
+        <cd:Float>
+          <cd:Description>Refined Scattering ratio value derived by fitting the accumulated measured atmospheric Mie spectrum</cd:Description>
+          <cd:BitSize>64</cd:BitSize>
+          <cd:NativeType>double</cd:NativeType>
+          <ct:NamedTest id="FloatIsFinite"/>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="extinction">
+        <cd:Float>
+          <cd:Description>Extinction</cd:Description>
+          <cd:Unit>1/m</cd:Unit>
+          <cd:BitSize>64</cd:BitSize>
+          <cd:NativeType>double</cd:NativeType>
+          <ct:NamedTest id="FloatIsFinite"/>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="mie_background_high">
+        <cd:Integer>
+          <cd:Description>A value of 1 indicates that this data was taken during daylight, so possibly the background radiation level is high.</cd:Description>
+          <cd:BitSize>8</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="spare">
+        <cd:Raw>
+          <cd:Description>Spare</cd:Description>
+          <cd:BitSize>8</cd:BitSize>
+        </cd:Raw>
+        <cd:Hidden/>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="spare">
+    <cd:Raw>
+      <cd:Description>Spare</cd:Description>
+      <cd:BitSize>160</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+</cd:Record>

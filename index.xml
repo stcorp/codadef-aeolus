@@ -2288,6 +2288,14 @@
         <cd:MatchData offset="95">L2B/L2C IODD Iss. 03.20</cd:MatchData>
       </cd:DetectionRule>
     </cd:ProductDefinition>
+    <cd:ProductDefinition id="ALD_U_N_2B_03_30" format="binary" version="7">
+      <cd:Description>This definition is based on version 3.30 of IODD AE-IF-ECMWF-L2BP-0001</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT="AE_</cd:MatchData>
+        <cd:MatchData offset="17">ALD_U_N_2B</cd:MatchData>
+        <cd:MatchData offset="95">L2B/L2C IODD Iss. 03.30</cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
   </cd:ProductType>
   <cd:ProductType name="ALD_U_N_2B_HDR">
     <cd:Description>Aeolus Level 2B Product (HDR)</cd:Description>
@@ -2331,6 +2339,12 @@
       <cd:Description>This definition is based on version 3.20 of IODD AE-IF-ECMWF-L2BP-0001</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData path="/{http://www.esa.int/schemas/ae/ALD_U_N_2B}Earth_Explorer_Header@schemaversion">03.20</cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+    <cd:ProductDefinition id="ALD_U_N_2B_HDR_03_30" format="xml" version="6">
+      <cd:Description>This definition is based on version 3.30 of IODD AE-IF-ECMWF-L2BP-0001</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchData path="/{http://www.esa.int/schemas/ae/ALD_U_N_2B}Earth_Explorer_Header@schemaversion">03.30</cd:MatchData>
       </cd:DetectionRule>
     </cd:ProductDefinition>
   </cd:ProductType>
@@ -2397,6 +2411,14 @@
         <cd:MatchData offset="95">L2B/L2C IODD Iss. 03.20</cd:MatchData>
       </cd:DetectionRule>
     </cd:ProductDefinition>
+    <cd:ProductDefinition id="ALD_U_N_2C_03_30" format="binary" version="7">
+      <cd:Description>This definition is based on version 3.30 of IODD AE-IF-ECMWF-L2BP-0001</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT="AE_</cd:MatchData>
+        <cd:MatchData offset="17">ALD_U_N_2C</cd:MatchData>
+        <cd:MatchData offset="95">L2B/L2C IODD Iss. 03.30</cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
   </cd:ProductType>
   <cd:ProductType name="ALD_U_N_2C_HDR">
     <cd:Description>Aeolus Level 2C Product (HDR)</cd:Description>
@@ -2440,6 +2462,12 @@
       <cd:Description>This definition is based on version 3.20 of IODD AE-IF-ECMWF-L2BP-0001</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData path="/{http://www.esa.int/schemas/ae/ALD_U_N_2C}Earth_Explorer_Header@schemaversion">03.20</cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+    <cd:ProductDefinition id="ALD_U_N_2C_HDR_03_30" format="xml" version="6">
+      <cd:Description>This definition is based on version 3.30 of IODD AE-IF-ECMWF-L2BP-0001</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchData path="/{http://www.esa.int/schemas/ae/ALD_U_N_2C}Earth_Explorer_Header@schemaversion">03.30</cd:MatchData>
       </cd:DetectionRule>
     </cd:ProductDefinition>
   </cd:ProductType>
@@ -2582,6 +2610,15 @@
       </cd:DetectionRule>
     </cd:ProductDefinition>
   </cd:ProductType>
+  <cd:ProductType name="AUX_TEL_12">
+    <cd:Description>Level 12 Telescope Temperature Correction Parameters (EEF)</cd:Description>
+    <cd:ProductDefinition id="AUX_TEL_12_03_30" format="xml" version="0">
+      <cd:Description>This definition is based on version 3.30 of IODD AE-IF-ECMWF-L2BP-0001</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchData path="/{http://www.esa.int/schemas/ae/AUX_TEL_12}Earth_Explorer_File@schemaversion">03.30</cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+  </cd:ProductType>
   <cd:ProductType name="AUX_PAR_2B">
     <cd:Description>Level 2B Processing Parameters (EEF)</cd:Description>
     <cd:ProductDefinition id="AUX_PAR_2B_01_32" format="xml" version="0">
@@ -2624,6 +2661,12 @@
       <cd:Description>This definition is based on version 3.20 of IODD AE-IF-ECMWF-L2BP-0001</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData path="/{http://www.esa.int/schemas/ae/AUX_PAR_2B}Earth_Explorer_File@schemaversion">03.20</cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+    <cd:ProductDefinition id="AUX_PAR_2B_03_30" format="xml" version="7">
+      <cd:Description>This definition is based on version 3.30 of IODD AE-IF-ECMWF-L2BP-0001</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchData path="/{http://www.esa.int/schemas/ae/AUX_PAR_2B}Earth_Explorer_File@schemaversion">03.30</cd:MatchData>
       </cd:DetectionRule>
     </cd:ProductDefinition>
   </cd:ProductType>

@@ -1,0 +1,34 @@
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="xml" last-modified="2020-01-03" name="Level_2BC_O_min_B_Result_XML">
+  <cd:Field name="Bin_Index">
+    <cd:Integer format="ascii">
+      <cd:Description>Range bin index used for selecting the data for this O-B result. In case all range bins are combined, this index value is set to zero</cd:Description>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="Hlos_Diff_Std">
+    <cd:Integer format="ascii">
+      <cd:Attribute name="unit">
+        <cd:FixedValue>cm/s</cd:FixedValue>
+      </cd:Attribute>
+      <cd:Description>Standard deviation of O-B difference for the selected range bin wind data</cd:Description>
+      <cd:Unit>cm/s</cd:Unit>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="Mean_Hlos_Bias">
+    <cd:Integer format="ascii">
+      <cd:Attribute name="unit">
+        <cd:FixedValue>cm/s</cd:FixedValue>
+      </cd:Attribute>
+      <cd:Description>Mean of O-B difference for the selected range bin wind data</cd:Description>
+      <cd:Unit>cm/s</cd:Unit>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="Num_Incl_Wind_Results">
+    <cd:Integer format="ascii">
+      <cd:Description>Number of wind results included in the reported O-B statistics</cd:Description>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+</cd:Record>
