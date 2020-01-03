@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="xml" last-modified="2019-09-05" name="Level_1A_Processing_Parameters_04_11" namexml="Level_1A_Processing_Parameters">
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="xml" last-modified="2020-01-03" name="Level_1A_Processing_Parameters_04_11" namexml="Level_1A_Processing_Parameters">
   <cd:Description>Level 1A Processing Parameters GADS DSR</cd:Description>
   <cd:Field name="List_of_Data_Set_Records">
     <cd:Record namexml="List_of_Data_Set_Records">
@@ -208,7 +208,7 @@
                 <cd:Field name="Dude_Instrument_Mode">
                   <cd:Type namexml="Dude_Instrument_Mode">
                     <cd:Integer format="ascii">
-                      <cd:Description>Instrument mode setting used to distinguish between NOU and DUDE data.</cd:Description>
+                      <cd:Description>Instrument mode setting used to identify valid DUDE measurements.</cd:Description>
                       <cd:NativeType>uint8</cd:NativeType>
                     </cd:Integer>
                   </cd:Type>
