@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
-<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" name="M1_Telescope_Temperature_Correction_Factors" format="xml" last-modified="2020-01-03">
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" name="M1_Telescope_Temperature_Correction_Factors" format="xml" last-modified="2020-01-09">
   <cd:Field name="M1_Telescope_Temperature_Correction_Factors">
     <cd:Record>
-      <cd:Field name="Temperature_Difference_to_HLOS_Bias">
+      <cd:Field name="HLOS_Bias_to_Temperature_Difference">
         <cd:Float format="ascii">
           <cd:Attribute name="unit">
             <cd:FixedValue>m/s/C</cd:FixedValue>
@@ -12,10 +12,10 @@
           <cd:NativeType>double</cd:NativeType>
         </cd:Float>
       </cd:Field>
-      <cd:Field name="Temperature_Offset">
+      <cd:Field name="HLOS_Bias_Offset">
         <cd:Float format="ascii">
           <cd:Attribute name="unit">
-            <cd:FixedValue>C</cd:FixedValue>
+            <cd:FixedValue>m/s</cd:FixedValue>
           </cd:Attribute>       
           <cd:Description>offset of the linear fit to the HLOS bias versus telescope temperature data.</cd:Description>
           <cd:Unit>C</cd:Unit>
