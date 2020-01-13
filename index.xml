@@ -2200,6 +2200,14 @@
         <cd:MatchData offset="95">AE-IF-DLR-L2A-004 03.09</cd:MatchData>
       </cd:DetectionRule>
     </cd:ProductDefinition>
+    <cd:ProductDefinition id="ALD_U_N_2A_03_10" format="binary" version="7">
+      <cd:Description>This definition is based on version 3.10 of IODD AE-IF-DLR-L2A-004</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT="AE_</cd:MatchData>
+        <cd:MatchData offset="17">ALD_U_N_2A</cd:MatchData>
+        <cd:MatchData offset="95">AE-IF-DLR-L2A-004 03.10</cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
   </cd:ProductType>
   <cd:ProductType name="ALD_U_N_2A_HDR">
     <cd:Description>Aeolus Level 2A Product (HDR)</cd:Description>
@@ -2243,6 +2251,9 @@
       </cd:DetectionRule>
       <cd:DetectionRule>
         <cd:MatchData path="/{http://www.esa.int/schemas/ae/ALD_U_N_2A}Earth_Explorer_Header@schemaversion">03.09</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData path="/{http://www.esa.int/schemas/ae/ALD_U_N_2A}Earth_Explorer_Header@schemaversion">03.10</cd:MatchData>
       </cd:DetectionRule>
     </cd:ProductDefinition>
   </cd:ProductType>
@@ -2372,6 +2383,12 @@
       <cd:Description>This definition is based on version 3.08 of IODD AE-IF-DLR-L2A-004</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData path="/{http://www.esa.int/schemas/ae/AUX_PAR_2A}Earth_Explorer_File@schemaversion">03.08</cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+    <cd:ProductDefinition id="AUX_PAR_2A_03_10" format="xml" version="7">
+      <cd:Description>This definition is based on version 3.10 of IODD AE-IF-DLR-L2A-004</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchData path="/{http://www.esa.int/schemas/ae/AUX_PAR_2A}Earth_Explorer_File@schemaversion">03.10</cd:MatchData>
       </cd:DetectionRule>
     </cd:ProductDefinition>
   </cd:ProductType>
