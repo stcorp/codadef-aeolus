@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" name="HBE_Specific_Params" format="xml" last-modified="2020-01-23">
+  <cd:Field name="NF_Order">
+    <cd:Type namexml="NF_Order">
+      <cd:Integer format="ascii">
+        <cd:Description>Number of Fourier terms.</cd:Description>
+        <cd:NativeType>uint32</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Min_Num_of_Ground_Bins">
+    <cd:Type namexml="Min_Num_of_Ground_Bins">
+      <cd:Integer format="ascii">
+        <cd:Description>Number of Fourier terms.</cd:Description>
+        <cd:NativeType>uint32</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Min_SNR">
+    <cd:Type namexml="Min_SNR">
+      <cd:Integer format="ascii">
+        <cd:Description>Number of Fourier terms.</cd:Description>
+        <cd:NativeType>uint32</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Min_Useful_Signal">
+    <cd:Type namexml="Min_Useful_Signal">
+      <cd:Attribute name="unit">
+        <cd:Optional/>
+        <cd:FixedValue>LSB</cd:FixedValue>
+      </cd:Attribute>
+      <cd:Integer format="ascii">
+        <cd:Description>Minimum Latitude threshold to check if Mie measurement will be considered</cd:Description>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Num_of_UsefulSignal_StdDev_Pairs">
+    <cd:Type namexml="Num_of_UsefulSignal_StdDev_Pairs">
+      <cd:Integer format="ascii">
+        <cd:Description>Minimum Latitude threshold to check if Mie measurement will be considered</cd:Description>
+        <cd:NativeType>int16</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Useful_Signal">
+    <cd:Type namexml="Useful_Signal">
+      <cd:Array format="ascii">
+        <cd:Dimension><![CDATA[int(../Num_of_UsefulSignal_StdDev_Pairs)]]></cd:Dimension>
+        <cd:Integer>
+          <cd:Description>Minimum Latitude threshold to check if Mie measurement will be considered</cd:Description>
+          <cd:NativeType>int32</cd:NativeType>
+        </cd:Integer>
+      </cd:Array>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Standard_Deviation">
+    <cd:Type namexml="Standard_Deviation">
+      <cd:Array format="ascii">
+        <cd:Dimension><![CDATA[int(../Num_of_UsefulSignal_StdDev_Pairs)]]></cd:Dimension>
+        <cd:Float>
+          <cd:Description>Minimum Latitude threshold to check if Mie measurement will be considered</cd:Description>
+          <cd:NativeType>double</cd:NativeType>
+        </cd:Float>
+      </cd:Array>
+    </cd:Type>
+  </cd:Field>
+</cd:Record>

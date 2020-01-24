@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<cd:ProductDefinition xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" id="AUX_PAR_HB_04_01" format="xml" last-modified="2020-01-23">
+  <cd:Record format="xml">
+    <cd:Field name="Earth_Explorer_File">
+      <cd:Record namexml="Earth_Explorer_File">
+        <cd:Attribute name="schemaversion"/>
+        <cd:Description>Earth Explorer File</cd:Description>
+        <cd:Field name="Earth_Explorer_Header">
+          <cd:Record namexml="Earth_Explorer_Header">
+            <cd:Description>Earth Explorer Header File</cd:Description>
+            <cd:Field name="Fixed_Header">
+              <cd:NamedType id="Fixed_Header"/>
+            </cd:Field>
+            <cd:Field name="Variable_Header">
+              <cd:Record namexml="Variable_Header">
+                <cd:Description>Variable Header Section</cd:Description>
+                <cd:Field name="Main_Product_Header">
+                  <cd:NamedType id="Main_Product_Header_v3"/>
+                </cd:Field>
+                <cd:Field name="Specific_Product_Header">
+                  <cd:NamedType id="Specific_Product_Header_AUX_PAR_HB_02_02"/>
+                </cd:Field>
+              </cd:Record>
+            </cd:Field>
+            <ct:NamedTest id="FileNameMatchValidityStart" path="Fixed_Header/File_Name"/>
+          </cd:Record>
+        </cd:Field>
+        <cd:Field name="Data_Block">
+          <cd:Record namexml="Data_Block">
+            <cd:Attribute name="type">
+              <cd:Optional/>
+              <cd:FixedValue>xml</cd:FixedValue>
+            </cd:Attribute>
+            <cd:Field name="HBE_Params">
+              <cd:Record namexml="HBE_Params">
+                <cd:Field name="List_of_Data_Set_Records">
+                  <cd:Record namexml="List_of_Data_Set_Records">
+                    <cd:Attribute name="count">
+                    </cd:Attribute>
+                    <cd:Field name="Data_Set_Record">
+                      <cd:Array>
+                        <cd:Dimension/>
+                        <cd:Record namexml="Data_Set_Record">
+                          <cd:Field name="Max_Num_of_Iterations">
+                            <cd:Type namexml="Max_Num_of_Iterations">
+                              <cd:Integer format="ascii">
+                                <cd:Description>Maximum number of iterations allowed in the computation of the singular value decomposition. To be meaningfully defined by user. 100 = hardcoded and empirically chosen number. Actual number of iterations rarely becomes double-digit.</cd:Description>
+                                <cd:NativeType>uint8</cd:NativeType>
+                              </cd:Integer>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="Use_Land_Surface_Only">
+                            <cd:Type namexml="Use_Land_Surface_Only">
+                              <cd:Integer format="ascii">
+                                <cd:Description>TRUE: HBE considers only GCVs that are completely, i.e. for all measurements, derived from land surface returns; FALSE: HBE considers all GCVs, i.e. also observations that completely or partly located over sea surface</cd:Description>
+                                <cd:NativeType>uint8</cd:NativeType>
+                                <cd:Mapping string="FALSE" value="0"/>
+                                <cd:Mapping string="TRUE" value="1"/>
+                                <ct:NamedTest id="BooleanBinTest"/>
+                              </cd:Integer>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="Weight_Signals_Method">
+                            <cd:Text>
+                              <cd:Description>NONE: No weighting applied to the GCVs during harmonic fitting procedure; SNR: Leftover from the development phase; STD: Weights applied to valid GCVs during fitting procedure according to the relation between Useful Signal and random error of GCVs</cd:Description>
+                            </cd:Text>
+                          </cd:Field>
+                          <cd:Field name="Mie_Specific_Params">
+                            <cd:NamedType id="HBE_Specific_Params"/>
+                          </cd:Field>
+                          <cd:Field name="Ray_Specific_Params">
+                            <cd:NamedType id="HBE_Specific_Params"/>
+                          </cd:Field>
+                        </cd:Record>
+                        <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                      </cd:Array>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+              </cd:Record>
+            </cd:Field>
+          </cd:Record>
+        </cd:Field>
+      </cd:Record>
+    </cd:Field>
+  </cd:Record>
+</cd:ProductDefinition>
