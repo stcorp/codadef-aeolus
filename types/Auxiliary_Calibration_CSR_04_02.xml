@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" name="Auxiliary_Calibration_CSR_04_02" format="xml" last-modified="2020-01-24" namexml="Corrected_Spectral_Registration">
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" name="Auxiliary_Calibration_CSR_04_02" format="xml" last-modified="2020-01-29" namexml="Corrected_Spectral_Registration">
   <cd:Description>CSR GADS</cd:Description>
   <cd:Field name="List_of_Data_Set_Records">
     <cd:Record namexml="List_of_Data_Set_Records">
@@ -192,6 +192,15 @@
                           </cd:Float>
                         </cd:Type>
                       </cd:Field>
+                      <cd:Field name="Fizeau_Transmission">
+                        <cd:Type namexml="Fizeau_Transmission">
+                          <cd:Float format="ascii">
+                            <cd:Description>Transmission through the Fizeau</cd:Description>
+                            <cd:NativeType>double</cd:NativeType>
+                            <ct:NamedTest id="FloatIsFinite"/>
+                          </cd:Float>
+                        </cd:Type>
+                      </cd:Field>
                     </cd:Record>
                     <ct:NamedTest id="ValueOfCountAttributeForParent"/>
                   </cd:Array>
@@ -234,6 +243,15 @@
                         <cd:Type namexml="Rayleigh_B_Response">
                           <cd:Float format="ascii">
                             <cd:Description>Response of FPB</cd:Description>
+                            <cd:NativeType>double</cd:NativeType>
+                            <ct:NamedTest id="FloatIsFinite"/>
+                          </cd:Float>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="Fizeau_Transmission">
+                        <cd:Type namexml="Fizeau_Transmission">
+                          <cd:Float format="ascii">
+                            <cd:Description>Transmission through the Fizeau</cd:Description>
                             <cd:NativeType>double</cd:NativeType>
                             <ct:NamedTest id="FloatIsFinite"/>
                           </cd:Float>
