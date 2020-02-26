@@ -143,7 +143,6 @@
     <ct:NamedTest id="RsCorrectionsSignificant" path="sph/rs_corrections_significant"/>
     <ct:NamedTest id="CrcCountCheckTransferFrames" path="sph/num_tf_crc_error_isps"/>
     <ct:NamedTest id="CrcCountSPMissing" path="sph/number_missing_isps"/>
-    <ct:NamedTest id="CrcCountSPInvalid" path="sph/num_isp_crc_errors"/>
     <ct:NamedTest id="CrcCountCheckRS" path="sph/num_rs_isps"/>
   </cd:Record>
   <cd:ProductVariable name="num_dsd">
