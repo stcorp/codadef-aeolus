@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:ProductDefinition xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" id="AUX_PAR_CL_04_01" format="xml" last-modified="2019-07-03">
+<cd:ProductDefinition xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" id="AUX_PAR_CL_04_01" format="xml" last-modified="2020-02-27">
   <cd:Record format="xml">
     <cd:Field name="Earth_Explorer_File">
       <cd:Record namexml="Earth_Explorer_File">
@@ -52,7 +52,7 @@
                                     <cd:Description>Useful Spectral Range</cd:Description>
                                     <cd:Unit>GHz</cd:Unit>
                                     <cd:NativeType>double</cd:NativeType>
-                                    <ct:NamedTest id="ValueGreaterThanOrEqualTo4"/>
+                                    <ct:NamedTest id="ValueGreaterThanOrEqualTo1"/>
                                   </cd:Float>
                                 </cd:Type>
                               </cd:Field>
@@ -235,7 +235,7 @@
                                     <cd:Description>Maximum time difference tolerated between a L1B and an AUX_MET profile.</cd:Description>
                                     <cd:Unit>s</cd:Unit>
                                     <cd:NativeType>uint32</cd:NativeType>
-                                    <ct:NamedTest id="IntLessThanOrEqualTo60"/>
+                                    <ct:NamedTest id="IntLessThanOrEqualTo1000"/>
                                   </cd:Integer>
                                 </cd:Type>
                               </cd:Field>

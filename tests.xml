@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<ct:Tests xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" last-modified="2019-11-05">
+<ct:Tests xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" last-modified="2020-02-27">
   <ct:Test name="AbsValueIsOne" criticality="Error" description="The value should be: '1' or: '-1'"><![CDATA[int(.) == 1 || int(.)==-1]]></ct:Test>
   <ct:Test name="AllC1Range05To1p5" criticality="Error" description="All array values of C1 should range from 0.5 to 1.5"><![CDATA[count(.,float(./c1) < 0.5 || float(./c1) > 1.5) == 0]]></ct:Test>
   <ct:Test name="AllC1Range03To1p7" criticality="Error" description="All array values of C1 should range from 0.3 to 1.7"><![CDATA[count(.,float(./c1) < 0.3 || float(./c1) > 1.7) == 0]]></ct:Test>
@@ -70,8 +70,10 @@
   <ct:Test name="IntLessThanOrEqualTo20" criticality="Error" description="The value should be less than or equal to 20"><![CDATA[int(.) <= 20]]></ct:Test>
   <ct:Test name="IntLessThanOrEqualTo25" criticality="Error" description="The value should be less than or equal to 25"><![CDATA[int(.) <= 25]]></ct:Test>
   <ct:Test name="IntLessThanOrEqualTo60" criticality="Error" description="The value should be less than or equal to 60"><![CDATA[int(.) <= 60]]></ct:Test>
+  <ct:Test name="IntLessThanOrEqualTo100" criticality="Error" description="The value should be less than or equal to 100"><![CDATA[int(.) <= 100]]></ct:Test>
   <ct:Test name="IntLessThanOrEqualTo150" criticality="Error" description="The value should be less than or equal to 150"><![CDATA[int(.) <= 150]]></ct:Test>
   <ct:Test name="IntLessThanOrEqualTo200" criticality="Error" description="The value should be less than or equal to 200"><![CDATA[int(.) <= 200]]></ct:Test>
+  <ct:Test name="IntLessThanOrEqualTo1000" criticality="Error" description="The value should be less than or equal to 1000"><![CDATA[int(.) <= 1000]]></ct:Test>
   <ct:Test name="IspTfCrCErrorsSignificant" criticality="Error" description="Field should be zero"><![CDATA[int(.) == 0]]></ct:Test>
   <ct:Test name="IspCrCErrorsSignificant" criticality="Error" description="Field should be zero"><![CDATA[int(.) == 0]]></ct:Test>
   <ct:Test name="LessThan2PercentOfMeasurementsInValid" description="The number of invalid measurements should be less than 2 percent" criticality="Error"><![CDATA[int(./total_num_of_measurements) == 0 || float(./total_num_of_measurement_invalid)/float(./total_num_of_measurements) < 0.02]]></ct:Test>
@@ -171,6 +173,7 @@
   <ct:Test name="UniqueInList" criticality="Error" description="Parameter name should not occur more than once"><![CDATA[count(../.., str(./Parameter_name) == str(:)) == 1]]></ct:Test>
   <ct:Test name="ValidityPeriodOrder" description="Validity start time should be before or equal to validity stop time" criticality="Error"><![CDATA[float(./Validity_Start) <= float(./Validity_Stop)]]></ct:Test>
   <ct:Test name="ValueGreaterThanOrEqualTo06" criticality="Error" description="The value should be greater than or equal to 0.6"><![CDATA[float(.) >= 0.6]]></ct:Test>
+  <ct:Test name="ValueGreaterThanOrEqualTo1" criticality="Error" description="The value should be greater than or equal to 1"><![CDATA[float(.) >= 1.0]]></ct:Test>
   <ct:Test name="ValueLessThanOrEqualToMinus06" criticality="Error" description="The value should be less than or equal to -0.6"><![CDATA[float(.) <= (-0.6)]]></ct:Test>
   <ct:Test name="ValueLessThanOrEqualTo001" criticality="Error" description="The value should be less than or equal to 0.01"><![CDATA[float(.) <= 0.01]]></ct:Test>
   <ct:Test name="ValueLessThanOrEqualTo01" criticality="Error" description="The value should be less than or equal to 0.1"><![CDATA[float(.) <= 0.1]]></ct:Test>
