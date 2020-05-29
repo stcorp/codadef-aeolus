@@ -1,0 +1,163 @@
+<?xml version="1.0"?>
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="binary" name="CAL_DSR_04_03" last-modified="2020-05-29">
+  <cd:Field name="p_grid">
+    <cd:Array>
+      <cd:Dimension><![CDATA[int(/sph/num_p)]]></cd:Dimension>
+      <cd:Integer>
+        <cd:Description>Vector of size Num_P of the pressure levels for which calibration functions C1 and C4 are given</cd:Description>
+        <cd:Unit>Pa</cd:Unit>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>uint32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="t_grid">
+    <cd:Array>
+      <cd:Dimension><![CDATA[int(/sph/num_t)]]></cd:Dimension>
+      <cd:Integer>
+        <cd:Description>Vector of size Num_T of the temperature levels for which calibration functions C1 and C4 are given</cd:Description>
+        <cd:Unit>1e-2 K</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="100.000000">
+          <cd:Unit>K</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="fd_grid">
+    <cd:Array>
+      <cd:Dimension><![CDATA[int(/sph/num_fd)]]></cd:Dimension>
+      <cd:Integer>
+        <cd:Description>Vector of size Num_Fd of the frequency steps for which calibration functions C1 to C4 are given</cd:Description>
+        <cd:Unit>Hz</cd:Unit>
+        <cd:BitSize>64</cd:BitSize>
+        <cd:NativeType>int64</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="f_fp">
+    <cd:Array>
+      <cd:Dimension><![CDATA[int(/sph/num_fp)]]></cd:Dimension>
+      <cd:Integer>
+        <cd:Description>Vector of size Num_FP of the frequency steps for which the transmission curves of the FPs A and B and the Fizeau are determined</cd:Description>
+        <cd:Unit>Hz</cd:Unit>
+        <cd:BitSize>64</cd:BitSize>
+        <cd:NativeType>int64</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="ta_fp">
+    <cd:Array>
+      <cd:Dimension><![CDATA[int(/sph/num_fp)]]></cd:Dimension>
+      <cd:Float>
+        <cd:Description>Transmission curve of Fabry Perot A</cd:Description>
+        <cd:BitSize>64</cd:BitSize>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="tb_fp">
+    <cd:Array>
+      <cd:Dimension><![CDATA[int(/sph/num_fp)]]></cd:Dimension>
+      <cd:Float>
+        <cd:Description>Transmission curve of Fabry Perot A</cd:Description>
+        <cd:BitSize>64</cd:BitSize>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="tmie_fp">
+    <cd:Array>
+      <cd:Dimension><![CDATA[int(/sph/num_fp)]]></cd:Dimension>
+      <cd:Float>
+        <cd:Description>Transmission curve of the Fizeau</cd:Description>
+        <cd:BitSize>64</cd:BitSize>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="cal_coeff_ray">
+    <cd:Record>
+      <cd:Description>Structure containing C1 and C4 as a function of pressures P_Grid, temperatures T_Grid and frequencies fd_Grid</cd:Description>
+      <cd:Field name="k_ray">
+        <cd:Float>
+          <cd:Description>Overall calibration coefficient for the useful signal in the Rayleigh channel.</cd:Description>
+          <cd:BitSize>64</cd:BitSize>
+          <cd:NativeType>double</cd:NativeType>
+          <ct:NamedTest id="Range2p5E13To3p5E14"/>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="coeff">
+        <cd:Array>
+          <cd:Description>Coefficients for each pressure, temperature and frequency Doppler shift.</cd:Description>
+          <cd:Dimension><![CDATA[int(/sph/num_p)]]></cd:Dimension>
+          <cd:Dimension><![CDATA[int(/sph/num_t)]]></cd:Dimension>
+          <cd:Dimension><![CDATA[int(/sph/num_fd)]]></cd:Dimension>
+          <cd:Record>
+            <cd:Field name="c1">
+              <cd:Float>
+                <cd:Description>Coefficient indicating how the transmission of Rayleigh light varies through the double FP as a function of the pressure, the temperature and the frequency shift.</cd:Description>
+                <cd:BitSize>64</cd:BitSize>
+                <cd:NativeType>double</cd:NativeType>
+              </cd:Float>
+            </cd:Field>
+            <cd:Field name="c4">
+              <cd:Float>
+                <cd:Description>Coefficient indicating how the transmission of Rayleigh light varies through the Fizeau as a function of the pressure, the temperature and the frequency shift.</cd:Description>
+                <cd:BitSize>64</cd:BitSize>
+                <cd:NativeType>double</cd:NativeType>
+              </cd:Float>
+            </cd:Field>
+          </cd:Record>
+          <ct:NamedTest id="AllC1Range03To1p7"/>
+          <ct:NamedTest id="AllC4Range09To1p1"/>
+        </cd:Array>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="cal_coeff_mie">
+    <cd:Record>
+      <cd:Description> Structure containing C2 and C3 as a function of the frequencies fd_Grid</cd:Description>
+      <cd:Field name="k_mie">
+        <cd:Float>
+          <cd:Description>Overall calibration coefficient for the useful signal in the Mie channel.</cd:Description>
+          <cd:BitSize>64</cd:BitSize>
+          <cd:NativeType>double</cd:NativeType>
+          <ct:NamedTest id="Range5E12To1E13"/>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="coeff">
+        <cd:Array>
+          <cd:Description>Coefficients for each frequencey Doppler shift.</cd:Description>
+          <cd:Dimension><![CDATA[int(/sph/num_fd)]]></cd:Dimension>
+          <cd:Record>
+            <cd:Field name="c2">
+              <cd:Float>
+                <cd:Description>Coefficient indicating how the transmission of Mie light varies through the double FP as a function of the frequency shift.</cd:Description>
+                <cd:BitSize>64</cd:BitSize>
+                <cd:NativeType>double</cd:NativeType>
+              </cd:Float>
+            </cd:Field>
+            <cd:Field name="c3">
+              <cd:Float>
+                <cd:Description>Coefficient indicating how the transmission of Mie light varies through the Fizeau as a function of the frequency shift.</cd:Description>
+                <cd:BitSize>64</cd:BitSize>
+                <cd:NativeType>double</cd:NativeType>
+              </cd:Float>
+            </cd:Field>
+          </cd:Record>
+          <ct:NamedTest id="AllC2Range01To1"/>
+          <ct:NamedTest id="AllC3Range0To1p5"/>
+        </cd:Array>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="isrcentreFreq">
+    <cd:Float>
+      <cd:Description>Reference frequency for TA_FP and TB_FP. This is the middle frequency of the ISR, or the nominal frequency offset of the laser in WVM mode</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+</cd:Record>
