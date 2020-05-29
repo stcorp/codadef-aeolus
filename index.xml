@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:ProductClass xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" name="AEOLUS" last-modified="2020-02-25">
+<cd:ProductClass xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" name="AEOLUS" last-modified="2020-05-29">
   <cd:Description>AEOLUS products</cd:Description>
   <cd:ProductType name="ALD_U_N_0_">
     <cd:Description>Aeolus Level 0 Product (DBL)</cd:Description>
@@ -1847,6 +1847,12 @@
         <cd:MatchData path="/{http://www.esa.int/schemas/ae/AUX_CSR_1B}Earth_Explorer_File@schemaversion">4.2</cd:MatchData>
       </cd:DetectionRule>
     </cd:ProductDefinition>
+    <cd:ProductDefinition id="AUX_CSR_1B_04_04" format="xml" version="5">
+      <cd:Description>This definition is based on version 4.4 of 'Generation of AUX_CSR' AE-TN-MFG-L2P-CAL-003</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchData path="/{http://www.esa.int/schemas/ae/AUX_CSR_1B}Earth_Explorer_File@schemaversion">4.4</cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
   </cd:ProductType>
   <cd:ProductType name="AUX_PARCSR">
     <cd:Description>AUX_CSR processor settings (EEF)</cd:Description>
@@ -1875,6 +1881,12 @@
       <cd:Description>This definition is based on version 4.1 of 'Generation of AUX_CSR' AE-TN-MFG-L2P-CAL-003</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData path="/{http://www.esa.int/schemas/ae/AUX_PAR_CS}Earth_Explorer_File@schemaversion">04.01</cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+    <cd:ProductDefinition id="AUX_PAR_CS_04_04" format="xml" version="3">
+      <cd:Description>This definition is based on version 4.4 of 'Generation of AUX_CSR' AE-TN-MFG-L2P-CAL-003</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchData path="/{http://www.esa.int/schemas/ae/AUX_PAR_CS}Earth_Explorer_File@schemaversion">4.4</cd:MatchData>
       </cd:DetectionRule>
     </cd:ProductDefinition>
   </cd:ProductType>
@@ -2315,6 +2327,14 @@
         <cd:MatchData offset="95">AE-TN-MFG-CAL-004 4.2  </cd:MatchData>
       </cd:DetectionRule>      
     </cd:ProductDefinition>
+    <cd:ProductDefinition id="AUX_CAL_L2_04_03" format="binary" version="4">
+      <cd:Description>This definition is based on version 4.3 of AUX_CAL IODD AE-TN-MFG-L2P-CAL-004</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT="AE_</cd:MatchData>
+        <cd:MatchData offset="17">AUX_CAL_L2</cd:MatchData>
+        <cd:MatchData offset="95">AE-TN-MFG-CAL-004 4.3  </cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>    
   </cd:ProductType>
   <cd:ProductType name="AUX_CAL_L2_HDR">
     <cd:Description>Auxiliary calibration parameters and functions (HDR)</cd:Description>
@@ -2350,7 +2370,10 @@
       <cd:DetectionRule>
         <cd:MatchData path="/{http://www.esa.int/schemas/ae/AUX_CAL_L2}Earth_Explorer_Header@schemaversion">4.2</cd:MatchData>
       </cd:DetectionRule>      
-    </cd:ProductDefinition>
+      <cd:DetectionRule>
+        <cd:MatchData path="/{http://www.esa.int/schemas/ae/AUX_CAL_L2}Earth_Explorer_Header@schemaversion">4.3</cd:MatchData>
+      </cd:DetectionRule>
+      </cd:ProductDefinition>
   </cd:ProductType>
   <cd:ProductType name="AUX_PAR_2A">
     <cd:Description>L2A Processing Parameters file (EEF)</cd:Description>
@@ -2910,6 +2933,14 @@
         <cd:MatchData offset="95">RBC IODD 4.1           </cd:MatchData>
       </cd:DetectionRule>
     </cd:ProductDefinition>
+    <cd:ProductDefinition id="AUX_RBC_L2_04_03" format="binary" version="4">
+      <cd:Description>This definition is based on version 4.3 of IODD AE-TN-MFG-GS-0003</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT="AE_</cd:MatchData>
+        <cd:MatchData offset="17">AUX_RBC_L2</cd:MatchData>
+        <cd:MatchData offset="95">RBC IODD 4.3           </cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
   </cd:ProductType>
   <cd:ProductType name="AUX_RBC_L2_HDR">
     <cd:Description>RBC Generator Product File (HDR)</cd:Description>
@@ -2936,7 +2967,10 @@
       <cd:DetectionRule>
         <cd:MatchData path="/{http://www.esa.int/schemas/ae/AUX_RBC_L2}Earth_Explorer_Header@schemaversion">4.1</cd:MatchData>
       </cd:DetectionRule>
-    </cd:ProductDefinition>
+      <cd:DetectionRule>
+        <cd:MatchData path="/{http://www.esa.int/schemas/ae/AUX_RBC_L2}Earth_Explorer_Header@schemaversion">4.3</cd:MatchData>
+      </cd:DetectionRule>
+  </cd:ProductDefinition>
   </cd:ProductType>
   <cd:ProductType name="AUX_PAR_RB">
     <cd:Description>RBC Generator Processing Parameters file (EEF)</cd:Description>
