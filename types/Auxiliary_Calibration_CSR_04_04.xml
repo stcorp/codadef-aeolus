@@ -1,0 +1,277 @@
+<?xml version="1.0"?>
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" name="Auxiliary_Calibration_CSR_04_04" format="xml" last-modified="2020-05-29" namexml="Corrected_Spectral_Registration">
+  <cd:Description>CSR GADS</cd:Description>
+  <cd:Field name="List_of_Data_Set_Records">
+    <cd:Record namexml="List_of_Data_Set_Records">
+      <cd:Description>List of Data Set Records</cd:Description>
+      <cd:Attribute name="count">
+      </cd:Attribute>
+      <cd:Field name="Data_Set_Record">
+        <cd:Array>
+          <cd:Dimension/>
+          <cd:Record namexml="Data_Set_Record">
+            <cd:Description>Data Set Record</cd:Description>
+            <cd:Field name="Fabry_Perot">
+              <cd:Record namexml="Fabry_Perot">
+                <cd:Description>Values of the parameters achieving the best fit of FPs to the internal CSR</cd:Description>
+                <cd:Field name="Peak_Frequency_A">
+                  <cd:Float format="ascii">
+                    <cd:Attribute name="unit">
+                      <cd:Optional/>
+                      <cd:FixedValue>GHz</cd:FixedValue>
+                    </cd:Attribute>
+                    <cd:Description>Peak frequency of FP A</cd:Description>
+                    <cd:Unit>GHz</cd:Unit>
+                    <cd:NativeType>double</cd:NativeType>
+                    <ct:NamedTest id="FloatIsFinite"/>
+                  </cd:Float>
+                </cd:Field>
+                <cd:Field name="Peak_Frequency_B">
+                  <cd:Float format="ascii">
+                    <cd:Attribute name="unit">
+                      <cd:Optional/>
+                      <cd:FixedValue>GHz</cd:FixedValue>
+                    </cd:Attribute>
+                    <cd:Description>Peak frequency of FP B</cd:Description>
+                    <cd:Unit>GHz</cd:Unit>
+                    <cd:NativeType>double</cd:NativeType>
+                    <ct:NamedTest id="FloatIsFinite"/>
+                  </cd:Float>
+                </cd:Field>
+                <cd:Field name="FWHM_A">
+                  <cd:Float format="ascii">
+                    <cd:Attribute name="unit">
+                      <cd:Optional/>
+                      <cd:FixedValue>MHz</cd:FixedValue>
+                    </cd:Attribute>
+                    <cd:Description>Full-width at half-max of FP A</cd:Description>
+                    <cd:Unit>MHz</cd:Unit>
+                    <cd:NativeType>double</cd:NativeType>
+                    <ct:NamedTest id="FloatIsFinite"/>
+                  </cd:Float>
+                </cd:Field>
+                <cd:Field name="FWHM_B">
+                  <cd:Float format="ascii">
+                    <cd:Attribute name="unit">
+                      <cd:Optional/>
+                      <cd:FixedValue>MHz</cd:FixedValue>
+                    </cd:Attribute>
+                    <cd:Description>Full-width at half-max of FP B</cd:Description>
+                    <cd:Unit>MHz</cd:Unit>
+                    <cd:NativeType>double</cd:NativeType>
+                    <ct:NamedTest id="FloatIsFinite"/>
+                  </cd:Float>
+                </cd:Field>
+                <cd:Field name="Defect_A">
+                  <cd:Float format="ascii">
+                    <cd:Attribute name="unit">
+                      <cd:Optional/>
+                      <cd:FixedValue>MHz</cd:FixedValue>
+                    </cd:Attribute>
+                    <cd:Description>Defect parameter of FP A</cd:Description>
+                    <cd:Unit>MHz</cd:Unit>
+                    <cd:NativeType>double</cd:NativeType>
+                    <ct:NamedTest id="FloatIsFinite"/>
+                  </cd:Float>
+                </cd:Field>
+                <cd:Field name="Defect_B">
+                  <cd:Float format="ascii">
+                    <cd:Attribute name="unit">
+                      <cd:Optional/>
+                      <cd:FixedValue>MHz</cd:FixedValue>
+                    </cd:Attribute>
+                    <cd:Description>Defect parameter of FP B</cd:Description>
+                    <cd:Unit>MHz</cd:Unit>
+                    <cd:NativeType>double</cd:NativeType>
+                    <ct:NamedTest id="FloatIsFinite"/>
+                  </cd:Float>
+                </cd:Field>
+                <cd:Field name="Factor_Q">
+                  <cd:Float format="ascii">
+                    <cd:Description>Q factor</cd:Description>
+                    <cd:NativeType>double</cd:NativeType>
+                    <ct:NamedTest id="FloatIsFinite"/>
+                  </cd:Float>
+                </cd:Field>
+              </cd:Record>
+            </cd:Field>
+            <cd:Field name="Fizeau">
+              <cd:Record namexml="Fizeau">
+                <cd:Description>Values of the parameters achieving the best fit of Fizeau to the internal CSR</cd:Description>
+                <cd:Field name="Peak_Frequency">
+                  <cd:Float format="ascii">
+                    <cd:Attribute name="unit">
+                      <cd:Optional/>
+                      <cd:FixedValue>GHz</cd:FixedValue>
+                    </cd:Attribute>
+                    <cd:Description>Peak frequency of the Fizeau reflection</cd:Description>
+                    <cd:Unit>GHz</cd:Unit>
+                    <cd:NativeType>double</cd:NativeType>
+                    <ct:NamedTest id="FloatIsFinite"/>
+                  </cd:Float>
+                </cd:Field>
+                <cd:Field name="Amplitude">
+                  <cd:Float format="ascii">
+                    <cd:Description>Amplitude of the Fizeau reflection</cd:Description>
+                    <cd:NativeType>double</cd:NativeType>
+                    <ct:NamedTest id="FloatIsFinite"/>
+                  </cd:Float>
+                </cd:Field>
+              </cd:Record>
+            </cd:Field>
+            <cd:Field name="Etendue">
+              <cd:Record namexml="Etendue">
+                <cd:Field name="Width">
+                  <cd:Float format="ascii">
+                    <cd:Attribute name="unit">
+                      <cd:Optional/>
+                      <cd:FixedValue>MHz</cd:FixedValue>
+                    </cd:Attribute>
+                    <cd:Unit>MHz</cd:Unit>
+                    <cd:NativeType>double</cd:NativeType>
+                    <ct:NamedTest id="FloatIsFinite"/>
+                  </cd:Float>
+                </cd:Field>
+                <cd:Field name="Tilt">
+                  <cd:Float format="ascii">
+                    <cd:NativeType>double</cd:NativeType>
+                    <ct:NamedTest id="FloatIsFinite"/>
+                  </cd:Float>
+                </cd:Field>
+                <cd:Field name="Delta_F_Int_Atm">
+                  <cd:Float format="ascii">
+                    <cd:Attribute name="unit">
+                      <cd:Optional/>
+                      <cd:FixedValue>GHz</cd:FixedValue>
+                    </cd:Attribute>
+                    <cd:Unit>GHz</cd:Unit>
+                    <cd:NativeType>double</cd:NativeType>
+                    <ct:NamedTest id="FloatIsFinite"/>
+                  </cd:Float>
+                </cd:Field>
+                <cd:Field name="Delta_F_Mode">
+                  <cd:Text namexml="Delta_F_Mode">
+                    <cd:Description>Either AUX_PAR_CS or GROUND_RETURNS</cd:Description>
+                  </cd:Text>
+                </cd:Field>
+              </cd:Record>
+            </cd:Field>
+            <cd:Field name="List_of_Internal_CSR_Frequency_Steps">
+              <cd:Record namexml="List_of_Internal_CSR_Frequency_Steps">
+                <cd:Description>List of internal frequency step results</cd:Description>
+                <cd:Attribute name="count"> </cd:Attribute>
+                <cd:Field name="Internal_CSR_Frequency_Step">
+                  <cd:Array>
+                    <cd:Dimension/>
+                    <cd:Record namexml="Internal_CSR_Frequency_Step">
+                      <cd:Description>Frequency step results</cd:Description>
+                      <cd:Field name="Laser_Freq_Offset">
+                        <cd:Type namexml="Laser_Freq_Offset">
+                          <cd:Attribute name="unit">
+                            <cd:Optional/>
+                            <cd:FixedValue>GHz</cd:FixedValue>
+                          </cd:Attribute>
+                          <cd:Float format="ascii">
+                            <cd:Description>Laser frequency offset</cd:Description>
+                            <cd:Unit>GHz</cd:Unit>
+                            <cd:NativeType>double</cd:NativeType>
+                            <ct:NamedTest id="FloatIsFinite"/>
+                          </cd:Float>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="Rayleigh_A_Response">
+                        <cd:Type namexml="Rayleigh_A_Response">
+                          <cd:Float format="ascii">
+                            <cd:Description>Response of FPA</cd:Description>
+                            <cd:NativeType>double</cd:NativeType>
+                            <ct:NamedTest id="FloatIsFinite"/>
+                          </cd:Float>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="Rayleigh_B_Response">
+                        <cd:Type namexml="Rayleigh_B_Response">
+                          <cd:Float format="ascii">
+                            <cd:Description>Response of FPB</cd:Description>
+                            <cd:NativeType>double</cd:NativeType>
+                            <ct:NamedTest id="FloatIsFinite"/>
+                          </cd:Float>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="Fizeau_Transmission">
+                        <cd:Type namexml="Fizeau_Transmission">
+                          <cd:Float format="ascii">
+                            <cd:Description>Transmission through the Fizeau</cd:Description>
+                            <cd:NativeType>double</cd:NativeType>
+                            <ct:NamedTest id="FloatIsFinite"/>
+                          </cd:Float>
+                        </cd:Type>
+                      </cd:Field>
+                    </cd:Record>
+                    <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                  </cd:Array>
+                </cd:Field>
+              </cd:Record>
+            </cd:Field>
+            <cd:Field name="List_of_Atmospheric_CSR_Frequency_Steps">
+              <cd:Record namexml="List_of_Atmospheric_CSR_Frequency_Steps">
+                <cd:Description>List of atmospheric frequency step results</cd:Description>
+                <cd:Attribute name="count"> </cd:Attribute>
+                <cd:Field name="Atmospheric_CSR_Frequency_Step">
+                  <cd:Array>
+                    <cd:Dimension/>
+                    <cd:Record namexml="Atmospheric_CSR_Frequency_Step">
+                      <cd:Description>Frequency step results</cd:Description>
+                      <cd:Field name="Laser_Freq_Offset">
+                        <cd:Type namexml="Laser_Freq_Offset">
+                          <cd:Attribute name="unit">
+                            <cd:Optional/>
+                            <cd:FixedValue>GHz</cd:FixedValue>
+                          </cd:Attribute>
+                          <cd:Float format="ascii">
+                            <cd:Description>Laser frequency offset</cd:Description>
+                            <cd:Unit>GHz</cd:Unit>
+                            <cd:NativeType>double</cd:NativeType>
+                            <ct:NamedTest id="FloatIsFinite"/>
+                          </cd:Float>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="Rayleigh_A_Response">
+                        <cd:Type namexml="Rayleigh_A_Response">
+                          <cd:Float format="ascii">
+                            <cd:Description>Response of FPA</cd:Description>
+                            <cd:NativeType>double</cd:NativeType>
+                            <ct:NamedTest id="FloatIsFinite"/>
+                          </cd:Float>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="Rayleigh_B_Response">
+                        <cd:Type namexml="Rayleigh_B_Response">
+                          <cd:Float format="ascii">
+                            <cd:Description>Response of FPB</cd:Description>
+                            <cd:NativeType>double</cd:NativeType>
+                            <ct:NamedTest id="FloatIsFinite"/>
+                          </cd:Float>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="Fizeau_Transmission">
+                        <cd:Type namexml="Fizeau_Transmission">
+                          <cd:Float format="ascii">
+                            <cd:Description>Transmission through the Fizeau</cd:Description>
+                            <cd:NativeType>double</cd:NativeType>
+                            <ct:NamedTest id="FloatIsFinite"/>
+                          </cd:Float>
+                        </cd:Type>
+                      </cd:Field>
+                    </cd:Record>
+                    <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                  </cd:Array>
+                </cd:Field>
+              </cd:Record>
+            </cd:Field>
+          </cd:Record>
+          <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+        </cd:Array>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+</cd:Record>
