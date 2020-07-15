@@ -1642,6 +1642,12 @@
         <cd:MatchData path="/{http://www.esa.int/schemas/ae/AUX_RRC_1B}Earth_Explorer_File@schemaversion">04.12</cd:MatchData>
       </cd:DetectionRule>
     </cd:ProductDefinition>
+    <cd:ProductDefinition id="AUX_RRC_1B_04_13" format="xml" version="8">
+      <cd:Description>This definition is based on version 4/13 of IODD ADM-IC-52-1666</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchData path="/{http://www.esa.int/schemas/ae/AUX_RRC_1B}Earth_Explorer_File@schemaversion">04.13</cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
   </cd:ProductType>
   <cd:ProductType name="AUX_LDT_1B">
     <cd:Description>Aeolus Level 1B Laser Diode Temperature Adjustment (DBL)</cd:Description>
