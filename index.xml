@@ -1294,6 +1294,14 @@
         <cd:MatchData offset="95">521666_IODD_4_12       </cd:MatchData>
       </cd:DetectionRule>
     </cd:ProductDefinition>
+    <cd:ProductDefinition id="ALD_U_N_1B_04_13" format="binary" version="9">
+      <cd:Description>This definition is based on version 4/13 of IODD ADM-IC-52-1666</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT="AE_</cd:MatchData>
+        <cd:MatchData offset="17">ALD_U_N_1B</cd:MatchData>
+        <cd:MatchData offset="95">521666_IODD_4_13       </cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
   </cd:ProductType>
   <cd:ProductType name="ALD_U_N_1B_HDR">
     <cd:Description>Aeolus Level 1B Wind Measurement Product (HDR)</cd:Description>
@@ -1343,6 +1351,9 @@
       </cd:DetectionRule>
       <cd:DetectionRule>
         <cd:MatchData path="/{http://www.esa.int/schemas/ae/ALD_U_N_1B}Earth_Explorer_Header@schemaversion">04.12</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData path="/{http://www.esa.int/schemas/ae/ALD_U_N_1B}Earth_Explorer_Header@schemaversion">04.13</cd:MatchData>
       </cd:DetectionRule>
     </cd:ProductDefinition>
   </cd:ProductType>
