@@ -390,7 +390,7 @@
                   <cd:NativeType>uint8</cd:NativeType>
                 </cd:Integer>
               </cd:Type>
-            </cd:Field>            
+            </cd:Field>
           </cd:Record>
           <ct:NamedTest id="ValueOfCountAttributeForParent"/>
         </cd:Array>
