@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="binary" last-modified="2015-12-08" name="Level_2A_Meas_PCD_ADSR_03_02">
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="binary" last-modified="2020-07-20" name="Level_2A_Meas_PCD_ADSR_03_02">
   <cd:Field name="start_of_obs_time">
     <cd:Time timeformat="binary_envisat_datetime">
       <cd:Description>Start date and time of Observation (or BRC)</cd:Description>
@@ -115,7 +115,7 @@
   </cd:Field>
   <cd:Field name="l2a_processing_qc">
     <cd:Record>
-      <cd:Description>Structure describing QC parameters resulting from the processing algorithms</cd:Description>
+      <cd:Description>Structure describing the processing of BRC level algorithms</cd:Description>
       <cd:Field name="sca_applied">
         <cd:Integer>
           <cd:Description>SCA algorithm was applied to this input BRC level data.</cd:Description>
