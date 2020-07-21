@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="binary" last-modified="2019-10-31" name="Level_2A_Group_PCD_ADSR_03_05">
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="binary" last-modified="2020-07-20" name="Level_2A_Group_PCD_ADSR_03_05">
   <cd:Field name="starttime">
     <cd:Time timeformat="binary_envisat_datetime">
       <cd:Description>Start date and time of the group profile covered by the present DSR. This is the centroid time of the first measurement of the profile.</cd:Description>
@@ -52,7 +52,7 @@
   </cd:Field>
   <cd:Field name="particle_extinction_variance">
     <cd:Float>
-      <cd:Description>Variance of the particle extinction coefficient.</cd:Description>
+      <cd:Description>Variance of the particle extinction coefficient. Missing value: -1.</cd:Description>
       <cd:Unit>m^-2</cd:Unit>
       <cd:BitSize>64</cd:BitSize>
       <cd:NativeType>double</cd:NativeType>
@@ -61,7 +61,7 @@
   </cd:Field>
   <cd:Field name="particle_backscatter_variance">
     <cd:Float>
-      <cd:Description>Variance of the particle backscatter coefficient.</cd:Description>
+      <cd:Description>Variance of the particle backscatter coefficient. Missing value: -1.</cd:Description>
       <cd:Unit>m^-2 sr^-2</cd:Unit>
       <cd:BitSize>64</cd:BitSize>
       <cd:NativeType>double</cd:NativeType>
@@ -70,7 +70,7 @@
   </cd:Field>
   <cd:Field name="particle_lod_variance">
     <cd:Float>
-      <cd:Description>Variance of the particle local optical depth.</cd:Description>
+      <cd:Description>Variance of the particle local optical depth. Missing value: -1.</cd:Description>
       <cd:BitSize>64</cd:BitSize>
       <cd:NativeType>double</cd:NativeType>
       <ct:NamedTest id="FloatIsFinite"/>
@@ -85,7 +85,7 @@
   </cd:Field>
   <cd:Field name="mid_particle_extinction_variance_top">
     <cd:Float>
-      <cd:Description>Variance of the particle extinction coefficient in this height top middle bin.</cd:Description>
+      <cd:Description>Variance of the particle extinction coefficient in this height top middle bin. Missing value: -1.</cd:Description>
       <cd:Unit>m^-2</cd:Unit>
       <cd:BitSize>64</cd:BitSize>
       <cd:NativeType>double</cd:NativeType>
@@ -94,7 +94,7 @@
   </cd:Field>
   <cd:Field name="mid_particle_backscatter_variance_top">
     <cd:Float>
-      <cd:Description>Variance of the particle backscatter coefficient in this height top middle bin.</cd:Description>
+      <cd:Description>Variance of the particle backscatter coefficient in this height top middle bin. Missing value: -1.</cd:Description>
       <cd:Unit>m^-2 sr^-2</cd:Unit>
       <cd:BitSize>64</cd:BitSize>
       <cd:NativeType>double</cd:NativeType>
@@ -103,7 +103,7 @@
   </cd:Field>
   <cd:Field name="mid_particle_lod_variance_top">
     <cd:Float>
-      <cd:Description>Variance of the particle local optical depth in this height top middle bin.</cd:Description>
+      <cd:Description>Variance of the particle local optical depth in this height top middle bin. Missing value: -1.</cd:Description>
       <cd:BitSize>64</cd:BitSize>
       <cd:NativeType>double</cd:NativeType>
       <ct:NamedTest id="FloatIsFinite"/>
@@ -111,7 +111,7 @@
   </cd:Field>
   <cd:Field name="mid_particle_ber_variance_top">
     <cd:Float>
-      <cd:Description>Variance of the BER in this height top middle bin.</cd:Description>
+      <cd:Description>Variance of the BER in this height top middle bin. Missing value: -1.</cd:Description>
       <cd:Unit>sr^-2</cd:Unit>
       <cd:BitSize>64</cd:BitSize>
       <cd:NativeType>double</cd:NativeType>
@@ -120,7 +120,7 @@
   </cd:Field>
   <cd:Field name="mid_particle_extinction_variance_bot">
     <cd:Float>
-      <cd:Description>Variance of the particle extinction coefficient in this height top middle bin.</cd:Description>
+      <cd:Description>Variance of the particle extinction coefficient in this height top middle bin. Missing value: -1.</cd:Description>
       <cd:Unit>m^-2</cd:Unit>
       <cd:BitSize>64</cd:BitSize>
       <cd:NativeType>double</cd:NativeType>
@@ -129,7 +129,7 @@
   </cd:Field>
   <cd:Field name="mid_particle_backscatter_variance_bot">
     <cd:Float>
-      <cd:Description>Variance of the particle backscatter coefficient in this height top middle bin.</cd:Description>
+      <cd:Description>Variance of the particle backscatter coefficient in this height top middle bin. Missing value: -1.</cd:Description>
       <cd:Unit>m^-2 sr^-2</cd:Unit>
       <cd:BitSize>64</cd:BitSize>
       <cd:NativeType>double</cd:NativeType>
@@ -138,7 +138,7 @@
   </cd:Field>
   <cd:Field name="mid_particle_lod_variance_bot">
     <cd:Float>
-      <cd:Description>Variance of the particle local optical depth in this height top middle bin.</cd:Description>
+      <cd:Description>Variance of the particle local optical depth in this height top middle bin. Missing value: -1.</cd:Description>
       <cd:BitSize>64</cd:BitSize>
       <cd:NativeType>double</cd:NativeType>
       <ct:NamedTest id="FloatIsFinite"/>
@@ -146,7 +146,7 @@
   </cd:Field>
   <cd:Field name="mid_particle_ber_variance_bot">
     <cd:Float>
-      <cd:Description>Variance of the BER in this height top middle bin.</cd:Description>
+      <cd:Description>Variance of the BER in this height top middle bin. Missing value: -1.</cd:Description>
       <cd:Unit>sr^-2</cd:Unit>
       <cd:BitSize>64</cd:BitSize>
       <cd:NativeType>double</cd:NativeType>

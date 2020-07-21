@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="binary" last-modified="2019-10-31" name="Level_2A_MCA_Opt_MDSR_03_02">
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="binary" last-modified="2020-07-20" name="Level_2A_MCA_Opt_MDSR_03_02">
   <cd:Field name="starttime">
     <cd:Time timeformat="binary_envisat_datetime">
       <cd:Description>Start date and time of the MCA profile covered by the present DSR</cd:Description>
@@ -23,7 +23,7 @@
         </cd:Field>
         <cd:Field name="extinction">
           <cd:Float>
-            <cd:Description>Particle extinction of the bin</cd:Description>
+            <cd:Description>Particle extinction of the bin. Missing value: -1e+06.</cd:Description>
             <cd:Unit>10^-6 m^-1</cd:Unit>
             <cd:BitSize>64</cd:BitSize>
             <cd:NativeType>double</cd:NativeType>
@@ -32,7 +32,7 @@
         </cd:Field>
         <cd:Field name="lod">
           <cd:Float>
-            <cd:Description>Particle LOD of the bin</cd:Description>
+            <cd:Description>Particle LOD of the bin. Missing value: -1.</cd:Description>
             <cd:BitSize>64</cd:BitSize>
             <cd:NativeType>double</cd:NativeType>
             <ct:NamedTest id="FloatIsFinite"/>

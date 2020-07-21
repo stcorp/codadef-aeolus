@@ -21,7 +21,7 @@
         </cd:Field>
         <cd:Field name="extinction">
           <cd:Float>
-            <cd:Description>Particle extinction of the bin</cd:Description>
+            <cd:Description>Particle extinction coefficient of the bin. Missing value: -1e+06.</cd:Description>
             <cd:Unit>10^-6 m^-1</cd:Unit>
             <cd:BitSize>64</cd:BitSize>
             <cd:NativeType>double</cd:NativeType>
@@ -30,7 +30,7 @@
         </cd:Field>
         <cd:Field name="backscatter">
           <cd:Float>
-            <cd:Description>Particle backscatter of the bin</cd:Description>
+            <cd:Description>Particle backscatter coefficient of the bin. Missing value: -1e+06.</cd:Description>
             <cd:Unit>10^-6 sr^-1 m^-1</cd:Unit>
             <cd:BitSize>64</cd:BitSize>
             <cd:NativeType>double</cd:NativeType>
@@ -39,7 +39,7 @@
         </cd:Field>
         <cd:Field name="lod">
           <cd:Float>
-            <cd:Description>Particle LOD of the bin</cd:Description>
+            <cd:Description>Particle LOD of the bin. Missing value: -1.</cd:Description>
             <cd:BitSize>64</cd:BitSize>
             <cd:NativeType>double</cd:NativeType>
             <ct:NamedTest id="FloatIsFinite"/>

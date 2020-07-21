@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="binary" last-modified="2019-10-31" name="Level_2A_Group_Opt_MDSR_03_02">
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="binary" last-modified="2020-07-20" name="Level_2A_Group_Opt_MDSR_03_02">
   <cd:Field name="starttime">
     <cd:Time timeformat="binary_envisat_datetime">
       <cd:Description>BRC start time</cd:Description>
@@ -18,7 +18,7 @@
     <cd:Record>
       <cd:Field name="group_extinction">
         <cd:Float>
-          <cd:Description>Particle extinction of the height bin</cd:Description>
+          <cd:Description>Particle extinction coefficient of the height bin. Missing value: -1e+06.</cd:Description>
           <cd:Unit>10^-6 m^-1</cd:Unit>
           <cd:BitSize>64</cd:BitSize>
           <cd:NativeType>double</cd:NativeType>
@@ -27,7 +27,7 @@
       </cd:Field>
       <cd:Field name="group_backscatter">
         <cd:Float>
-          <cd:Description>Particle backscatter of the height bin</cd:Description>
+          <cd:Description>Particle backscatter coefficient of the height bin. Missing value: -1e+06.</cd:Description>
           <cd:Unit>10^-6 m^-1 sr^-1</cd:Unit>
           <cd:BitSize>64</cd:BitSize>
           <cd:NativeType>double</cd:NativeType>
@@ -36,7 +36,7 @@
       </cd:Field>
       <cd:Field name="group_lod">
         <cd:Float>
-          <cd:Description>Particle LOD of the height bin</cd:Description>
+          <cd:Description>Particle LOD of the height bin. Missing value: -1.</cd:Description>
           <cd:BitSize>64</cd:BitSize>
           <cd:NativeType>double</cd:NativeType>
           <ct:NamedTest id="FloatIsFinite"/>
@@ -44,7 +44,7 @@
       </cd:Field>
       <cd:Field name="group_sr">
         <cd:Float>
-          <cd:Description>Scattering ratio of the height bin</cd:Description>
+          <cd:Description>Scattering ratio of the height bin. Missing value: -1.</cd:Description>
           <cd:BitSize>64</cd:BitSize>
           <cd:NativeType>double</cd:NativeType>
           <ct:NamedTest id="FloatIsFinite"/>
@@ -153,7 +153,7 @@
     <cd:Record>
       <cd:Field name="mid_extinction_top">
         <cd:Float>
-          <cd:Description>Particle extinction of the top middle bin</cd:Description>
+          <cd:Description>Particle extinction coefficient of the top middle bin. Missing value: -1e+06.</cd:Description>
           <cd:Unit>10^-6 m^-1</cd:Unit>
           <cd:BitSize>64</cd:BitSize>
           <cd:NativeType>double</cd:NativeType>
@@ -162,7 +162,7 @@
       </cd:Field>
       <cd:Field name="mid_backscatter_top">
         <cd:Float>
-          <cd:Description>Particle backscatter of the top middle bin</cd:Description>
+          <cd:Description>Particle backscatter coefficient of the top middle bin. Missing value: -1e+06.</cd:Description>
           <cd:Unit>10^-6 sr^-1 m^-1</cd:Unit>
           <cd:BitSize>64</cd:BitSize>
           <cd:NativeType>double</cd:NativeType>
@@ -171,7 +171,7 @@
       </cd:Field>
       <cd:Field name="mid_lod_top">
         <cd:Float>
-          <cd:Description>Particle LOD of the top middle bin</cd:Description>
+          <cd:Description>Particle LOD of the top middle bin. Missing value: -1.</cd:Description>
           <cd:BitSize>64</cd:BitSize>
           <cd:NativeType>double</cd:NativeType>
           <ct:NamedTest id="FloatIsFinite"/>
@@ -179,7 +179,7 @@
       </cd:Field>
       <cd:Field name="mid_ber_top">
         <cd:Float>
-          <cd:Description>Backscatter-to-extinction ratio of the top middle bin</cd:Description>
+          <cd:Description>Backscatter-to-extinction ratio of the top middle bin. Missing value: -1.</cd:Description>
           <cd:Unit>sr</cd:Unit>
           <cd:BitSize>64</cd:BitSize>
           <cd:NativeType>double</cd:NativeType>
@@ -188,7 +188,7 @@
       </cd:Field>
       <cd:Field name="mid_extinction_bot">
         <cd:Float>
-          <cd:Description>Particle extinction of the bottom middle bin</cd:Description>
+          <cd:Description>Particle extinction of the bottom middle bin. Missing value: -1e+06.</cd:Description>
           <cd:Unit>10^-6 m^-1</cd:Unit>
           <cd:BitSize>64</cd:BitSize>
           <cd:NativeType>double</cd:NativeType>
@@ -197,7 +197,7 @@
       </cd:Field>
       <cd:Field name="mid_backscatter_bot">
         <cd:Float>
-          <cd:Description>Particle backscatter of the bottom middle bin</cd:Description>
+          <cd:Description>Particle backscatter of the bottom middle bin. Missing value: -1e+06.</cd:Description>
           <cd:Unit>10^-6 sr^-1 m^-1</cd:Unit>
           <cd:BitSize>64</cd:BitSize>
           <cd:NativeType>double</cd:NativeType>
@@ -206,7 +206,7 @@
       </cd:Field>
       <cd:Field name="mid_lod_bot">
         <cd:Float>
-          <cd:Description>Particle LOD of the bottom middle bin</cd:Description>
+          <cd:Description>Particle LOD of the bottom middle bin. Missing value: -1.</cd:Description>
           <cd:BitSize>64</cd:BitSize>
           <cd:NativeType>double</cd:NativeType>
           <ct:NamedTest id="FloatIsFinite"/>
@@ -214,7 +214,7 @@
       </cd:Field>
       <cd:Field name="mid_ber_bot">
         <cd:Float>
-          <cd:Description>Backscatter-to-extinction ratio of the bottom middle bin</cd:Description>
+          <cd:Description>Backscatter-to-extinction ratio of the bottom middle bin. Missing value: -1.</cd:Description>
           <cd:Unit>sr</cd:Unit>
           <cd:BitSize>64</cd:BitSize>
           <cd:NativeType>double</cd:NativeType>
