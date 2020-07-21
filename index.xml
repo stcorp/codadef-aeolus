@@ -2582,6 +2582,12 @@
         <cd:MatchData path="/{http://www.esa.int/schemas/ae/AUX_PAR_2A}Earth_Explorer_File@schemaversion">03.10</cd:MatchData>
       </cd:DetectionRule>
     </cd:ProductDefinition>
+    <cd:ProductDefinition id="AUX_PAR_2A_03_11" format="xml" version="8">
+      <cd:Description>This definition is based on version 3.11 of IODD AED-SD-DoRIT-L2A-025</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchData path="/{http://www.esa.int/schemas/ae/AUX_PAR_2A}Earth_Explorer_File@schemaversion">03.11</cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
   </cd:ProductType>
   <cd:ProductType name="ALD_U_N_2B">
     <cd:Description>Aeolus Level 2B Product (DBL)</cd:Description>
@@ -2939,6 +2945,11 @@
         <cd:MatchData offset="17">AUX_CLM_L2</cd:MatchData>
         <cd:MatchData offset="95">L2B/L2C IODD Iss. 03.10</cd:MatchData>
       </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT="AE_</cd:MatchData>
+        <cd:MatchData offset="17">AUX_CLM_L2</cd:MatchData>
+        <cd:MatchData offset="95">L2B/L2C IODD Iss. 03.11</cd:MatchData>
+      </cd:DetectionRule>
     </cd:ProductDefinition>
   </cd:ProductType>
   <cd:ProductType name="AUX_CLM_L2_HDR">
@@ -2965,6 +2976,9 @@
       <cd:Description>This definition is based on version 3.10 of IODD AE-IF-ECMWF-L2BP-0001</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData path="/{http://www.esa.int/schemas/ae/AUX_CLM_L2}Earth_Explorer_Header@schemaversion">03.10</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData path="/{http://www.esa.int/schemas/ae/AUX_CLM_L2}Earth_Explorer_Header@schemaversion">03.11</cd:MatchData>
       </cd:DetectionRule>
     </cd:ProductDefinition>
   </cd:ProductType>
