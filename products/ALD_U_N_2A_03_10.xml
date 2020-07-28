@@ -158,6 +158,8 @@
     <cd:Init><![CDATA[$num_meas_max_brc = int(/sph/num_meas_max_brc)]]></cd:Init>
   </cd:ProductVariable>
   <!-- MPH Cross File Tests -->
+  <ct:NamedTest id="KmieWithinRange"/>
+  <ct:NamedTest id="KrayWithinRange"/>
   <ct:NamedCrossFileTest id="MPH_Product"/>
   <ct:NamedCrossFileTest id="MPH_Proc_Stage"/>
   <ct:NamedCrossFileTest id="MPH_Ref_Doc"/>
