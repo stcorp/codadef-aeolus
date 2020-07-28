@@ -102,7 +102,7 @@
                         <cd:Integer format="ascii">
                           <cd:Description>Altitude up to which AMD profiles are calculated.</cd:Description>
                           <cd:Unit>m</cd:Unit>
-                          <cd:NativeType>uint16</cd:NativeType>
+                          <cd:NativeType>uint32</cd:NativeType>
                         </cd:Integer>
                       </cd:Type>
                     </cd:Field>
