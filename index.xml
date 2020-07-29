@@ -2485,6 +2485,11 @@
         <cd:MatchData offset="17">AUX_CAL_L2</cd:MatchData>
         <cd:MatchData offset="95">AED-TN-MFG-CAL-004 4.3 </cd:MatchData>
       </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT="AE_</cd:MatchData>
+        <cd:MatchData offset="17">AUX_CAL_L2</cd:MatchData>
+        <cd:MatchData offset="95">AE-TN-MFG-CAL-004 4.3  </cd:MatchData>
+      </cd:DetectionRule>      
     </cd:ProductDefinition>
   </cd:ProductType>
   <cd:ProductType name="AUX_CAL_L2_HDR">
