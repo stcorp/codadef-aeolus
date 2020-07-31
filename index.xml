@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:ProductClass xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" name="AEOLUS" last-modified="2020-07-28">
+<cd:ProductClass xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" name="AEOLUS" last-modified="2020-07-31">
   <cd:Description>AEOLUS products</cd:Description>
   <cd:ProductType name="ALD_U_N_0_">
     <cd:Description>Aeolus Level 0 Product (DBL)</cd:Description>
@@ -1860,7 +1860,7 @@
       </cd:DetectionRule>
       <cd:DetectionRule>
         <cd:MatchData path="/{http://www.esa.int/schemas/ae/AUX_OWV_1B}Earth_Explorer_Header@schemaversion">04.13</cd:MatchData>
-      </cd:DetectionRule>      
+      </cd:DetectionRule>
     </cd:ProductDefinition>
   </cd:ProductType>
   <cd:ProductType name="AUX_ZWC_1B">
@@ -2500,7 +2500,7 @@
         <cd:MatchData offset="0">PRODUCT="AE_</cd:MatchData>
         <cd:MatchData offset="17">AUX_CAL_L2</cd:MatchData>
         <cd:MatchData offset="95">AE-TN-MFG-CAL-004 4.3  </cd:MatchData>
-      </cd:DetectionRule>      
+      </cd:DetectionRule>
     </cd:ProductDefinition>
   </cd:ProductType>
   <cd:ProductType name="AUX_CAL_L2_HDR">
@@ -2970,7 +2970,7 @@
         <cd:MatchData offset="0">PRODUCT="AE_</cd:MatchData>
         <cd:MatchData offset="17">AUX_CLM_L2</cd:MatchData>
         <cd:MatchData offset="95">AED-SD-DoRIT-L2A-025   </cd:MatchData>
-      </cd:DetectionRule>      
+      </cd:DetectionRule>
     </cd:ProductDefinition>
   </cd:ProductType>
   <cd:ProductType name="AUX_CLM_L2_HDR">
@@ -3003,7 +3003,7 @@
       </cd:DetectionRule>
       <cd:DetectionRule>
         <cd:MatchData path="/{http://www.esa.int/schemas/ae/AUX_CLM_L2}Earth_Explorer_Header@schemaversion">3.11</cd:MatchData>
-      </cd:DetectionRule>      
+      </cd:DetectionRule>
     </cd:ProductDefinition>
   </cd:ProductType>
   <cd:ProductType name="AUX_TEL_12">
