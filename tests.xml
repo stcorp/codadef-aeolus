@@ -76,7 +76,7 @@
   <ct:Test name="IntLessThanOrEqualTo1000" criticality="Error" description="The value should be less than or equal to 1000"><![CDATA[int(.) <= 1000]]></ct:Test>
   <ct:Test name="IspTfCrCErrorsSignificant" criticality="Error" description="Field should be zero"><![CDATA[int(.) == 0]]></ct:Test>
   <ct:Test name="IspCrCErrorsSignificant" criticality="Error" description="Field should be zero"><![CDATA[int(.) == 0]]></ct:Test>
-  <ct:Test name="KmieWithinRange" criticality="Error" description="All Kmie values should be within range 2.5e12 to 1.5e13"><![CDATA[if(exists(./sca_pcd),count(./sca_pcd,float(./Kmie) < 4.5e12 || float(./Kmie) > 1.5e13) == 0,true)]]></ct:Test>
+  <ct:Test name="KmieWithinRange" criticality="Error" description="All Kmie values should be within range 4.5e12 to 1.5e13"><![CDATA[if(exists(./sca_pcd),count(./sca_pcd,float(./Kmie) < 4.5e12 || float(./Kmie) > 1.5e13) == 0,true)]]></ct:Test>
   <ct:Test name="KrayWithinRange" criticality="Error" description="All Kray values should be within range 1.5e13 to 4.5e13"><![CDATA[if(exists(./sca_pcd),count(./sca_pcd,float(./Kray) < 1.5e13 || float(./Kray) > 4.5e13) == 0,true)]]></ct:Test>
   <ct:Test name="LessThan2PercentOfMeasurementsInValid" description="The number of invalid measurements should be less than 2 percent" criticality="Error"><![CDATA[int(./total_num_of_measurements) == 0 || float(./total_num_of_measurement_invalid)/float(./total_num_of_measurements) < 0.02]]></ct:Test>
   <ct:Test name="LessThan2PercentOfAmdUsMissing" description="Less than 2 percent of amd_us should be missing (equal to 32767)" criticality="Error"><![CDATA[numelements(.) == 0 || float(count(., int(./amd_us) == 32767)) / float(numelements(.)) < 0.02]]></ct:Test>
