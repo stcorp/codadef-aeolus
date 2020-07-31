@@ -2969,7 +2969,7 @@
       <cd:DetectionRule>
         <cd:MatchData offset="0">PRODUCT="AE_</cd:MatchData>
         <cd:MatchData offset="17">AUX_CLM_L2</cd:MatchData>
-        <cd:MatchData offset="95">AED-SD-DoRIT-L2A-025   </cd:MatchData>
+        <cd:MatchData offset="95">SD-DoRIT-L2A-025 v3.11 </cd:MatchData>
       </cd:DetectionRule>
     </cd:ProductDefinition>
   </cd:ProductType>
