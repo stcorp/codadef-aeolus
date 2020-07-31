@@ -163,11 +163,11 @@
       </cd:DetectionRule>
     </cd:ProductDefinition>
     <cd:ProductDefinition id="ALD_U_N_1A_04_13" format="binary" version="6">
-      <cd:Description>This definition is based on version 4/13 of IODD ADM-IC-52-1666</cd:Description>
+      <cd:Description>This definition is based on version 4/13 of IODD AED-SD-DoRIT-L1B-006</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData offset="0">PRODUCT="AE_</cd:MatchData>
         <cd:MatchData offset="17">ALD_U_N_1A</cd:MatchData>
-        <cd:MatchData offset="95">521666_IODD_4_13       </cd:MatchData>
+        <cd:MatchData offset="95">SD-DoRIT-L1B-006 v4.13 </cd:MatchData>
       </cd:DetectionRule>
     </cd:ProductDefinition>
   </cd:ProductType>
@@ -274,11 +274,11 @@
       </cd:DetectionRule>
     </cd:ProductDefinition>
     <cd:ProductDefinition id="AUX_ISR_1A_04_13" format="binary" version="6">
-      <cd:Description>This definition is based on version 4/13 of IODD ADM-IC-52-1666</cd:Description>
+      <cd:Description>This definition is based on version 4/13 of IODD AED-SD-DoRIT-L1B-006</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData offset="0">PRODUCT="AE_</cd:MatchData>
         <cd:MatchData offset="17">AUX_ISR_1A</cd:MatchData>
-        <cd:MatchData offset="95">521666_IODD_4_13       </cd:MatchData>
+        <cd:MatchData offset="95">SD-DoRIT-L1B-006 v4.13 </cd:MatchData>
       </cd:DetectionRule>
     </cd:ProductDefinition>
   </cd:ProductType>
@@ -379,11 +379,11 @@
       </cd:DetectionRule>
     </cd:ProductDefinition>
     <cd:ProductDefinition id="AUX_IAT_1A_04_13" format="binary" version="6">
-      <cd:Description>This definition is based on version 4/13 of IODD ADM-IC-52-1666</cd:Description>
+      <cd:Description>This definition is based on version 4/13 of IODD AED-SD-DoRIT-L1B-006</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData offset="0">PRODUCT="AE_</cd:MatchData>
         <cd:MatchData offset="17">AUX_IAT_1A</cd:MatchData>
-        <cd:MatchData offset="95">521666_IODD_4_13       </cd:MatchData>
+        <cd:MatchData offset="95">SD-DoRIT-L1B-006 v4.13 </cd:MatchData>
       </cd:DetectionRule>
     </cd:ProductDefinition>
   </cd:ProductType>
@@ -484,11 +484,11 @@
       </cd:DetectionRule>
     </cd:ProductDefinition>
     <cd:ProductDefinition id="AUX_DCC_1A_04_13" format="binary" version="6">
-      <cd:Description>This definition is based on version 4/13 of IODD ADM-IC-52-1666</cd:Description>
+      <cd:Description>This definition is based on version 4/13 of IODD AED-SD-DoRIT-L1B-006</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData offset="0">PRODUCT="AE_</cd:MatchData>
         <cd:MatchData offset="17">AUX_DCC_1A</cd:MatchData>
-        <cd:MatchData offset="95">521666_IODD_4_13       </cd:MatchData>
+        <cd:MatchData offset="95">SD-DoRIT-L1B-006 v4.13 </cd:MatchData>
       </cd:DetectionRule>
     </cd:ProductDefinition>
   </cd:ProductType>
@@ -589,11 +589,11 @@
       </cd:DetectionRule>
     </cd:ProductDefinition>
     <cd:ProductDefinition id="AUX_IDC_1A_04_13" format="binary" version="6">
-      <cd:Description>This definition is based on version 4/13 of IODD ADM-IC-52-1666</cd:Description>
+      <cd:Description>This definition is based on version 4/13 of IODD AED-SD-DoRIT-L1B-006</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData offset="0">PRODUCT="AE_</cd:MatchData>
         <cd:MatchData offset="17">AUX_IDC_1A</cd:MatchData>
-        <cd:MatchData offset="95">521666_IODD_4_13       </cd:MatchData>
+        <cd:MatchData offset="95">SD-DoRIT-L1B-006 v4.13 </cd:MatchData>
       </cd:DetectionRule>
     </cd:ProductDefinition>
   </cd:ProductType>
@@ -777,11 +777,11 @@
       </cd:DetectionRule>
     </cd:ProductDefinition>
     <cd:ProductDefinition id="AUX_IRC_1A_04_13" format="binary" version="6">
-      <cd:Description>This definition is based on version 4/13 of IODD ADM-IC-52-1666</cd:Description>
+      <cd:Description>This definition is based on version 4/13 of IODD AED-SD-DoRIT-L1B-006</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData offset="0">PRODUCT="AE_</cd:MatchData>
         <cd:MatchData offset="17">AUX_IRC_1A</cd:MatchData>
-        <cd:MatchData offset="95">521666_IODD_4_13       </cd:MatchData>
+        <cd:MatchData offset="95">SD-DoRIT-L1B-006 v4.13 </cd:MatchData>
       </cd:DetectionRule>
     </cd:ProductDefinition>
   </cd:ProductType>
@@ -965,11 +965,11 @@
       </cd:DetectionRule>
     </cd:ProductDefinition>
     <cd:ProductDefinition id="AUX_OWV_1A_04_13" format="binary" version="6">
-      <cd:Description>This definition is based on version 4/13 of IODD ADM-IC-52-1666</cd:Description>
+      <cd:Description>This definition is based on version 4/13 of IODD AED-SD-DoRIT-L1B-006</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData offset="0">PRODUCT="AE_</cd:MatchData>
         <cd:MatchData offset="17">AUX_OWV_1A</cd:MatchData>
-        <cd:MatchData offset="95">521666_IODD_4_13       </cd:MatchData>
+        <cd:MatchData offset="95">SD-DoRIT-L1B-006 v4.13 </cd:MatchData>
       </cd:DetectionRule>
     </cd:ProductDefinition>
   </cd:ProductType>
@@ -1044,11 +1044,11 @@
       </cd:DetectionRule>
     </cd:ProductDefinition>
     <cd:ProductDefinition id="AUX_DCMZ1A_04_13" format="binary" version="4">
-      <cd:Description>This definition is based on version 4/13 of IODD ADM-IC-52-1666</cd:Description>
+      <cd:Description>This definition is based on version 4/13 of IODD AED-SD-DoRIT-L1B-006 v4.13</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData offset="0">PRODUCT="AE_</cd:MatchData>
         <cd:MatchData offset="17">AUX_DCMZ1A</cd:MatchData>
-        <cd:MatchData offset="95">521666_IODD_4_13       </cd:MatchData>
+        <cd:MatchData offset="95">SD-DoRIT-L1B-006 v4.13 </cd:MatchData>
       </cd:DetectionRule>
     </cd:ProductDefinition>
   </cd:ProductType>
@@ -1111,11 +1111,11 @@
       </cd:DetectionRule>
     </cd:ProductDefinition>
     <cd:ProductDefinition id="AUX_NOU_1A_04_13" format="binary" version="4">
-      <cd:Description>This definition is based on version 4/13 of IODD ADM-IC-52-1666</cd:Description>
+      <cd:Description>This definition is based on version 4/13 of IODD AED-SD-DoRIT-L1B-006</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData offset="0">PRODUCT="AE_</cd:MatchData>
         <cd:MatchData offset="17">AUX_NOU_1A</cd:MatchData>
-        <cd:MatchData offset="95">521666_IODD_4_13       </cd:MatchData>
+        <cd:MatchData offset="95">SD-DoRIT-L1B-006 v4.13 </cd:MatchData>
       </cd:DetectionRule>
     </cd:ProductDefinition>
   </cd:ProductType>
@@ -1178,11 +1178,11 @@
       </cd:DetectionRule>
     </cd:ProductDefinition>
     <cd:ProductDefinition id="AUX_LBM_1A_04_13" format="binary" version="4">
-      <cd:Description>This definition is based on version 4/13 of IODD ADM-IC-52-1666</cd:Description>
+      <cd:Description>This definition is based on version 4/13 of IODD AED-SD-DoRIT-L1B-006</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData offset="0">PRODUCT="AE_</cd:MatchData>
         <cd:MatchData offset="17">AUX_LBM_1A</cd:MatchData>
-        <cd:MatchData offset="95">521666_IODD_4_13       </cd:MatchData>
+        <cd:MatchData offset="95">SD-DoRIT-L1B-006 v4.13 </cd:MatchData>
       </cd:DetectionRule>
     </cd:ProductDefinition>
   </cd:ProductType>
@@ -1295,11 +1295,11 @@
       </cd:DetectionRule>
     </cd:ProductDefinition>
     <cd:ProductDefinition id="ALD_U_N_1B_04_13" format="binary" version="9">
-      <cd:Description>This definition is based on version 4/13 of IODD ADM-IC-52-1666</cd:Description>
+      <cd:Description>This definition is based on version 4/13 of IODD AED-SD-DoRIT-L1B-006</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData offset="0">PRODUCT="AE_</cd:MatchData>
         <cd:MatchData offset="17">ALD_U_N_1B</cd:MatchData>
-        <cd:MatchData offset="95">521666_IODD_4_13       </cd:MatchData>
+        <cd:MatchData offset="95">SD-DoRIT-L1B-006 v4.13 </cd:MatchData>
       </cd:DetectionRule>
     </cd:ProductDefinition>
   </cd:ProductType>
@@ -1594,7 +1594,7 @@
       </cd:DetectionRule>
     </cd:ProductDefinition>
     <cd:ProductDefinition id="AUX_MRC_1B_04_13" format="xml" version="5">
-      <cd:Description>This definition is based on version 4/13 of IODD ADM-IC-52-1666</cd:Description>
+      <cd:Description>This definition is based on version 4/13 of IODD AED-SD-DoRIT-L1B-006</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData path="/{http://www.esa.int/schemas/ae/AUX_MRC_1B}Earth_Explorer_File@schemaversion">04.13</cd:MatchData>
       </cd:DetectionRule>
@@ -1654,7 +1654,7 @@
       </cd:DetectionRule>
     </cd:ProductDefinition>
     <cd:ProductDefinition id="AUX_RRC_1B_04_13" format="xml" version="8">
-      <cd:Description>This definition is based on version 4/13 of IODD ADM-IC-52-1666</cd:Description>
+      <cd:Description>This definition is based on version 4/13 of IODD AED-SD-DoRIT-L1B-006</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData path="/{http://www.esa.int/schemas/ae/AUX_RRC_1B}Earth_Explorer_File@schemaversion">04.13</cd:MatchData>
       </cd:DetectionRule>
@@ -1810,11 +1810,11 @@
       </cd:DetectionRule>
     </cd:ProductDefinition>
     <cd:ProductDefinition id="AUX_OWV_1B_04_13" format="binary" version="7">
-      <cd:Description>This definition is based on version 4/13 of IODD ADM-IC-52-1666</cd:Description>
+      <cd:Description>This definition is based on version 4/13 of IODD AED-SD-DoRIT-L1B-006</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData offset="0">PRODUCT="AE_</cd:MatchData>
         <cd:MatchData offset="17">AUX_OWV_1B</cd:MatchData>
-        <cd:MatchData offset="95">521666_IODD_4_13       </cd:MatchData>
+        <cd:MatchData offset="95">SD-DoRIT-L1B-006 v4.13 </cd:MatchData>
       </cd:DetectionRule>
     </cd:ProductDefinition>
   </cd:ProductType>
@@ -1935,7 +1935,7 @@
       </cd:DetectionRule>
     </cd:ProductDefinition>
     <cd:ProductDefinition id="AUX_DCMZ1B_04_13" format="xml" version="4">
-      <cd:Description>This definition is based on version 4/13 of IODD ADM-IC-52-1666</cd:Description>
+      <cd:Description>This definition is based on version 4/13 of IODD AED-SD-DoRIT-L1B-006</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData path="/{http://www.esa.int/schemas/ae/AUX_DCMZ1B}Earth_Explorer_File@schemaversion">04.13</cd:MatchData>
       </cd:DetectionRule>
@@ -2238,7 +2238,7 @@
       </cd:DetectionRule>
     </cd:ProductDefinition>
     <cd:ProductDefinition id="AUX_PAR_1A_04_13" format="xml" version="7">
-      <cd:Description>This definition is based on version 4/13 of IODD ADM-IC-52-1666</cd:Description>
+      <cd:Description>This definition is based on version 4/13 of IODD AED-SD-DoRIT-L1B-006</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData path="/{http://www.esa.int/schemas/ae/AUX_PAR_1A}Earth_Explorer_File@schemaversion">04.13</cd:MatchData>
       </cd:DetectionRule>
@@ -2304,7 +2304,7 @@
       </cd:DetectionRule>
     </cd:ProductDefinition>
     <cd:ProductDefinition id="AUX_PAR_1B_04_13" format="xml" version="9">
-      <cd:Description>This definition is based on version 4/13 of IODD ADM-IC-52-1666</cd:Description>
+      <cd:Description>This definition is based on version 4/13 of IODD AED-SD-DoRIT-L1B-006</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData path="/{http://www.esa.int/schemas/ae/AUX_PAR_1B}Earth_Explorer_File@schemaversion">04.13</cd:MatchData>
       </cd:DetectionRule>
@@ -3072,7 +3072,7 @@
       </cd:DetectionRule>
     </cd:ProductDefinition>
     <cd:ProductDefinition id="AUX_PAR_2B_03_40" format="xml" version="8">
-      <cd:Description>This definition is based on version 3.30 of IODD AED-SD-ECMWF-L2B-037</cd:Description>
+      <cd:Description>This definition is based on version 3.40 of IODD AED-SD-ECMWF-L2B-037</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData path="/{http://www.esa.int/schemas/ae/AUX_PAR_2B}Earth_Explorer_File@schemaversion">03.40</cd:MatchData>
       </cd:DetectionRule>
