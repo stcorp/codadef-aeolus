@@ -170,6 +170,14 @@
         <cd:MatchData offset="95">SD-DoRIT-L1B-006 v4.13 </cd:MatchData>
       </cd:DetectionRule>
     </cd:ProductDefinition>
+    <cd:ProductDefinition id="ALD_U_N_1A_04_14" format="binary" version="7">
+      <cd:Description>This definition is based on version 4/14 of IODD AED-SD-DoRIT-L1B-006</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT="AE_</cd:MatchData>
+        <cd:MatchData offset="17">ALD_U_N_1A</cd:MatchData>
+        <cd:MatchData offset="95">SD-DoRIT-L1B-006 v4.14 </cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
   </cd:ProductType>
   <cd:ProductType name="ALD_U_N_1A_HDR">
     <cd:Description>Aeolus Level 1A Wind Measurement Product (HDR)</cd:Description>
@@ -210,6 +218,9 @@
       </cd:DetectionRule>
       <cd:DetectionRule>
         <cd:MatchData path="/{http://www.esa.int/schemas/ae/ALD_U_N_1A}Earth_Explorer_Header@schemaversion">04.13</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData path="/{http://www.esa.int/schemas/ae/ALD_U_N_1A}Earth_Explorer_Header@schemaversion">04.14</cd:MatchData>
       </cd:DetectionRule>
     </cd:ProductDefinition>
   </cd:ProductType>
