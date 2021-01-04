@@ -1,0 +1,713 @@
+<?xml version="1.0"?>
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="xml" last-modified="2021-01-04" name="Auxiliary_Calibration_IDC_04_14" namexml="Auxiliary_Calibration_IDC">
+  <cd:Description>Auxiliary Calibration IDC</cd:Description>
+  <cd:Field name="List_of_Data_Set_Records">
+    <cd:Record namexml="List_of_Data_Set_Records">
+      <cd:Description>List of Data Set Records</cd:Description>
+      <cd:Attribute name="count">
+      </cd:Attribute>
+      <cd:Field name="Data_Set_Record">
+        <cd:Array>
+          <cd:Dimension/>
+          <cd:Record namexml="Data_Set_Record">
+            <cd:Description>Data Set Record</cd:Description>
+            <cd:Field name="First_Start_of_Observation_Time">
+              <cd:Type namexml="First_Start_of_Observation_Time">
+                <cd:Time format="ascii" timeformat="ascii_ccsds_datetime_ymd1_with_ref">
+                  <cd:Description>Start of observation time of the first BRC</cd:Description>
+                  <cd:Mapping string="UTC=0000-00-00T00:00:00" value="-inf"/>
+                  <cd:Mapping string="UTC=9999-12-31T23:59:59" value="+inf"/>
+                </cd:Time>
+              </cd:Type>
+            </cd:Field>
+            <cd:Field name="Last_Start_of_Observation_Time">
+              <cd:Type namexml="Last_Start_of_Observation_Time">
+                <cd:Time format="ascii" timeformat="ascii_ccsds_datetime_ymd1_with_ref">
+                  <cd:Description>Start of observation time of the last BRC</cd:Description>
+                  <cd:Mapping string="UTC=0000-00-00T00:00:00" value="-inf"/>
+                  <cd:Mapping string="UTC=9999-12-31T23:59:59" value="+inf"/>
+                </cd:Time>
+              </cd:Type>
+            </cd:Field>
+            <cd:Field name="List_of_Mean_Mie_Image_Pixel_Level_Vals">
+              <cd:Record namexml="List_of_Mean_Mie_Image_Pixel_Level_Vals">
+                <cd:Description>Map of mean Mie image pixel intensity values in list form. The map contains Num_Image_Pixel_Rows * Num_Image_Pixel_Cols numer of items. Location of item(i,j) at the list is Num_Image_Pixel_Cols * (i-1) + j, where i is the row index and j is the column index</cd:Description>
+                <cd:Attribute name="count">
+                </cd:Attribute>
+                <cd:Field name="Mean_Mie_Image_Pixel_Level_Val">
+                  <cd:Array>
+                    <cd:Dimension/>
+                    <cd:Type namexml="Mean_Mie_Image_Pixel_Level_Val">
+                      <cd:Attribute name="unit">
+                        <cd:Optional/>
+                        <cd:FixedValue>ACCD counts</cd:FixedValue>
+                      </cd:Attribute>
+                      <cd:Float format="ascii">
+                        <cd:Description>Mean Mie image pixel intensity</cd:Description>
+                        <cd:Unit>ACCD counts</cd:Unit>
+                        <cd:NativeType>double</cd:NativeType>
+                        <ct:NamedTest id="FloatIsFinite"/>
+                      </cd:Float>
+                    </cd:Type>
+                    <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                  </cd:Array>
+                </cd:Field>
+              </cd:Record>
+            </cd:Field>
+            <cd:Field name="List_of_Mean_Rayleigh_Image_Pixel_Level_Vals">
+              <cd:Record namexml="List_of_Mean_Rayleigh_Image_Pixel_Level_Vals">
+                <cd:Description>Map of mean Rayleigh image pixel intensity values in list form. The map contains Num_Image_Pixel_Rows * Num_Image_Pixel_Cols numer of items. Location of item(i,j) at the list is Num_Image_Pixel_Cols * (i-1) + j, where i is the row index and j is the column index</cd:Description>
+                <cd:Attribute name="count">
+                </cd:Attribute>
+                <cd:Field name="Mean_Rayleigh_Image_Pixel_Level_Val">
+                  <cd:Array>
+                    <cd:Dimension/>
+                    <cd:Type namexml="Mean_Rayleigh_Image_Pixel_Level_Val">
+                      <cd:Attribute name="unit">
+                        <cd:Optional/>
+                        <cd:FixedValue>ACCD counts</cd:FixedValue>
+                      </cd:Attribute>
+                      <cd:Float format="ascii">
+                        <cd:Description>Mean Rayleigh image pixel intensity</cd:Description>
+                        <cd:Unit>ACCD counts</cd:Unit>
+                        <cd:NativeType>double</cd:NativeType>
+                        <ct:NamedTest id="FloatIsFinite"/>
+                      </cd:Float>
+                    </cd:Type>
+                    <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                  </cd:Array>
+                </cd:Field>
+              </cd:Record>
+            </cd:Field>
+            <cd:Field name="Num_Image_Pixel_Rows">
+              <cd:Type namexml="Num_Image_Pixel_Rows">
+                <cd:Integer format="ascii">
+                  <cd:Description>Number of image pixel rows</cd:Description>
+                  <cd:NativeType>int16</cd:NativeType>
+                </cd:Integer>
+              </cd:Type>
+            </cd:Field>
+            <cd:Field name="Num_Image_Pixel_Cols">
+              <cd:Type namexml="Num_Image_Pixel_Cols">
+                <cd:Integer format="ascii">
+                  <cd:Description>Number of image pixel cols</cd:Description>
+                  <cd:NativeType>int16</cd:NativeType>
+                </cd:Integer>
+              </cd:Type>
+            </cd:Field>
+            <cd:Field name="Channel_1_Energetic_Centroid">
+              <cd:Record namexml="Channel_1_Energetic_Centroid">
+                <cd:Description>Channel 1 energetic centroid</cd:Description>
+                <cd:Field name="ENC_Row">
+                  <cd:Type namexml="ENC_Row">
+                    <cd:Attribute name="unit">
+                      <cd:Optional/>
+                      <cd:FixedValue>ACCD pixel index</cd:FixedValue>
+                    </cd:Attribute>
+                    <cd:Float format="ascii">
+                      <cd:Description>Row value closest to the energetic centroid</cd:Description>
+                      <cd:Unit>ACCD pixel index</cd:Unit>
+                      <cd:NativeType>double</cd:NativeType>
+                      <ct:NamedTest id="FloatIsFinite"/>
+                    </cd:Float>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="ENC_Col">
+                  <cd:Type namexml="ENC_Col">
+                    <cd:Attribute name="unit">
+                      <cd:Optional/>
+                      <cd:FixedValue>ACCD pixel index</cd:FixedValue>
+                    </cd:Attribute>
+                    <cd:Float format="ascii">
+                      <cd:Description>Column value closest to the energetic centroid</cd:Description>
+                      <cd:Unit>ACCD pixel index</cd:Unit>
+                      <cd:NativeType>double</cd:NativeType>
+                      <ct:NamedTest id="FloatIsFinite"/>
+                    </cd:Float>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="List_of_ENC_Row_Cross_Section_Vals">
+                  <cd:Record namexml="List_of_ENC_Row_Cross_Section_Vals">
+                    <cd:Description>Energetic centroid row cross section. List of image pixel intensities along the ENC_Row</cd:Description>
+                    <cd:Attribute name="count">
+                    </cd:Attribute>
+                    <cd:Field name="ENC_Row_Cross_Section_Val">
+                      <cd:Array>
+                        <cd:Dimension/>
+                        <cd:Type namexml="ENC_Row_Cross_Section_Val">
+                          <cd:Attribute name="unit">
+                            <cd:Optional/>
+                            <cd:FixedValue>ACCD counts</cd:FixedValue>
+                          </cd:Attribute>
+                          <cd:Float format="ascii">
+                            <cd:Description>Energetic centroid row cross section pixel value. Image pixel intensity along the ENC_Row</cd:Description>
+                            <cd:Unit>ACCD counts</cd:Unit>
+                            <cd:NativeType>double</cd:NativeType>
+                            <ct:NamedTest id="FloatIsFinite"/>
+                          </cd:Float>
+                        </cd:Type>
+                        <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                      </cd:Array>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+                <cd:Field name="List_of_ENC_Col_Cross_Section_Vals">
+                  <cd:Record namexml="List_of_ENC_Col_Cross_Section_Vals">
+                    <cd:Description>Energetic centroid column cross section. List of image pixel intensities along the ENC_Column</cd:Description>
+                    <cd:Attribute name="count">
+                    </cd:Attribute>
+                    <cd:Field name="ENC_Col_Cross_Section_Val">
+                      <cd:Array>
+                        <cd:Dimension/>
+                        <cd:Type namexml="ENC_Col_Cross_Section_Val">
+                          <cd:Attribute name="unit">
+                            <cd:Optional/>
+                            <cd:FixedValue>ACCD counts</cd:FixedValue>
+                          </cd:Attribute>
+                          <cd:Float format="ascii">
+                            <cd:Description>Energetic centroid column cross section pixel value. Image pixel intensity along the ENC_Col</cd:Description>
+                            <cd:Unit>ACCD counts</cd:Unit>
+                            <cd:NativeType>double</cd:NativeType>
+                            <ct:NamedTest id="FloatIsFinite"/>
+                          </cd:Float>
+                        </cd:Type>
+                        <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                      </cd:Array>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+                <cd:Field name="ENC_Row_Std_Dev">
+                  <cd:Type namexml="ENC_Row_Std_Dev">
+                    <cd:Attribute name="unit">
+                      <cd:Optional/>
+                      <cd:FixedValue>AU</cd:FixedValue>
+                    </cd:Attribute>
+                    <cd:Float format="ascii">
+                      <cd:Description>Energetic centroid row standard deviation</cd:Description>
+                      <cd:Unit>AU</cd:Unit>
+                      <cd:NativeType>double</cd:NativeType>
+                      <ct:NamedTest id="FloatIsFinite"/>
+                    </cd:Float>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="ENC_Col_Std_Dev">
+                  <cd:Type namexml="ENC_Col_Std_Dev">
+                    <cd:Attribute name="unit">
+                      <cd:Optional/>
+                      <cd:FixedValue>AU</cd:FixedValue>
+                    </cd:Attribute>
+                    <cd:Float format="ascii">
+                      <cd:Description>Energetic centroid column standard deviation</cd:Description>
+                      <cd:Unit>AU</cd:Unit>
+                      <cd:NativeType>double</cd:NativeType>
+                      <ct:NamedTest id="FloatIsFinite"/>
+                    </cd:Float>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="Std_Dev_Threshold_Met">
+                  <cd:Type namexml="Std_Dev_Threshold_Met">
+                    <cd:Integer format="ascii">
+                      <cd:Description>TRUE = Imaging integration time is valid</cd:Description>
+                      <cd:NativeType>uint8</cd:NativeType>
+                      <cd:Mapping string="FALSE" value="0"/>
+                      <cd:Mapping string="False" value="0"/>
+                      <cd:Mapping string="false" value="0"/>
+                      <cd:Mapping string="TRUE" value="1"/>
+                      <cd:Mapping string="True" value="1"/>
+                      <cd:Mapping string="true" value="1"/>
+                      <ct:NamedTest id="BooleanXmlTest"/>
+                      <ct:NamedTest id="BooleanXmlTrueTest"/>
+                    </cd:Integer>
+                  </cd:Type>
+                </cd:Field>
+              </cd:Record>
+            </cd:Field>
+            <cd:Field name="Channel_2_Energetic_Centroid">
+              <cd:Record namexml="Channel_2_Energetic_Centroid">
+                <cd:Description>Channel 2 energetic centroid</cd:Description>
+                <cd:Field name="ENC_Row">
+                  <cd:Type namexml="ENC_Row">
+                    <cd:Attribute name="unit">
+                      <cd:Optional/>
+                      <cd:FixedValue>ACCD pixel index</cd:FixedValue>
+                    </cd:Attribute>
+                    <cd:Float format="ascii">
+                      <cd:Description>Row value closest to the energetic centroid</cd:Description>
+                      <cd:Unit>ACCD pixel index</cd:Unit>
+                      <cd:NativeType>double</cd:NativeType>
+                      <ct:NamedTest id="FloatIsFinite"/>
+                    </cd:Float>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="ENC_Col">
+                  <cd:Type namexml="ENC_Col">
+                    <cd:Attribute name="unit">
+                      <cd:Optional/>
+                      <cd:FixedValue>ACCD pixel index</cd:FixedValue>
+                    </cd:Attribute>
+                    <cd:Float format="ascii">
+                      <cd:Description>Column value closest to the energetic centroid</cd:Description>
+                      <cd:Unit>ACCD pixel index</cd:Unit>
+                      <cd:NativeType>double</cd:NativeType>
+                      <ct:NamedTest id="FloatIsFinite"/>
+                    </cd:Float>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="List_of_ENC_Row_Cross_Section_Vals">
+                  <cd:Record namexml="List_of_ENC_Row_Cross_Section_Vals">
+                    <cd:Description>Energetic centroid row cross section. List of image pixel intensities along the ENC_Row</cd:Description>
+                    <cd:Attribute name="count">
+                    </cd:Attribute>
+                    <cd:Field name="ENC_Row_Cross_Section_Val">
+                      <cd:Array>
+                        <cd:Dimension/>
+                        <cd:Type namexml="ENC_Row_Cross_Section_Val">
+                          <cd:Attribute name="unit">
+                            <cd:Optional/>
+                            <cd:FixedValue>ACCD counts</cd:FixedValue>
+                          </cd:Attribute>
+                          <cd:Float format="ascii">
+                            <cd:Description>Energetic centroid row cross section pixel value. Image pixel intensity along the ENC_Row</cd:Description>
+                            <cd:Unit>ACCD counts</cd:Unit>
+                            <cd:NativeType>double</cd:NativeType>
+                            <ct:NamedTest id="FloatIsFinite"/>
+                          </cd:Float>
+                        </cd:Type>
+                        <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                      </cd:Array>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+                <cd:Field name="List_of_ENC_Col_Cross_Section_Vals">
+                  <cd:Record namexml="List_of_ENC_Col_Cross_Section_Vals">
+                    <cd:Description>Energetic centroid column cross section. List of image pixel intensities along the ENC_Column</cd:Description>
+                    <cd:Attribute name="count">
+                    </cd:Attribute>
+                    <cd:Field name="ENC_Col_Cross_Section_Val">
+                      <cd:Array>
+                        <cd:Dimension/>
+                        <cd:Type namexml="ENC_Col_Cross_Section_Val">
+                          <cd:Attribute name="unit">
+                            <cd:Optional/>
+                            <cd:FixedValue>ACCD counts</cd:FixedValue>
+                          </cd:Attribute>
+                          <cd:Float format="ascii">
+                            <cd:Description>Energetic centroid column cross section pixel value. Image pixel intensity along the ENC_Col</cd:Description>
+                            <cd:Unit>ACCD counts</cd:Unit>
+                            <cd:NativeType>double</cd:NativeType>
+                            <ct:NamedTest id="FloatIsFinite"/>
+                          </cd:Float>
+                        </cd:Type>
+                        <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                      </cd:Array>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+                <cd:Field name="ENC_Row_Std_Dev">
+                  <cd:Type namexml="ENC_Row_Std_Dev">
+                    <cd:Attribute name="unit">
+                      <cd:Optional/>
+                    </cd:Attribute>
+                    <cd:Float format="ascii">
+                      <cd:Description>Energetic centroid row standard deviation</cd:Description>
+                      <cd:NativeType>double</cd:NativeType>
+                      <ct:NamedTest id="FloatIsFinite"/>
+                    </cd:Float>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="ENC_Col_Std_Dev">
+                  <cd:Type namexml="ENC_Col_Std_Dev">
+                    <cd:Attribute name="unit">
+                      <cd:Optional/>
+                    </cd:Attribute>
+                    <cd:Float format="ascii">
+                      <cd:Description>Energetic centroid column standard deviation</cd:Description>
+                      <cd:NativeType>double</cd:NativeType>
+                      <ct:NamedTest id="FloatIsFinite"/>
+                    </cd:Float>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="Std_Dev_Threshold_Met">
+                  <cd:Type namexml="Std_Dev_Threshold_Met">
+                    <cd:Integer format="ascii">
+                      <cd:Description>TRUE = Imaging integration time is valid</cd:Description>
+                      <cd:NativeType>uint8</cd:NativeType>
+                      <cd:Mapping string="FALSE" value="0"/>
+                      <cd:Mapping string="False" value="0"/>
+                      <cd:Mapping string="false" value="0"/>
+                      <cd:Mapping string="TRUE" value="1"/>
+                      <cd:Mapping string="True" value="1"/>
+                      <cd:Mapping string="true" value="1"/>
+                      <ct:NamedTest id="BooleanXmlTest"/>
+                      <ct:NamedTest id="BooleanXmlTrueTest"/>
+                    </cd:Integer>
+                  </cd:Type>
+                </cd:Field>
+              </cd:Record>
+            </cd:Field>
+            <cd:Field name="Imaging_Integration_Time_Valid">
+              <cd:Type namexml="Imaging_Integration_Time_Valid">
+                <cd:Integer format="ascii">
+                  <cd:Description>TRUE = Imaging integration time is valid</cd:Description>
+                  <cd:NativeType>uint8</cd:NativeType>
+                  <cd:Mapping string="FALSE" value="0"/>
+                  <cd:Mapping string="False" value="0"/>
+                  <cd:Mapping string="false" value="0"/>
+                  <cd:Mapping string="TRUE" value="1"/>
+                  <cd:Mapping string="True" value="1"/>
+                  <cd:Mapping string="true" value="1"/>
+                  <ct:NamedTest id="BooleanXmlTest"/>
+                </cd:Integer>
+              </cd:Type>
+            </cd:Field>
+            <cd:Field name="List_of_Input_Info_Brcs">
+              <cd:Record namexml="List_of_Input_Info_Brcs">
+                <cd:Description>List of structures with information on input Brcs</cd:Description>
+                <cd:Attribute name="count">
+                </cd:Attribute>
+                <cd:Field name="Input_Info_Brc">
+                  <cd:Array>
+                    <cd:Dimension/>
+                    <cd:Record namexml="Input_Info_Brc">
+                      <cd:Description>Input Info BRC</cd:Description>
+                      <cd:Field name="M1_TC_Temp">
+                        <cd:Type namexml="M1_TC_Temp">
+                          <cd:Attribute name="unit">
+                            <cd:Optional/>
+                            <cd:FixedValue>C</cd:FixedValue>
+                          </cd:Attribute>
+                          <cd:Float format="ascii">
+                            <cd:Description>Average of M1 TC temperature</cd:Description>
+                            <cd:Unit>degC</cd:Unit>
+                            <cd:NativeType>double</cd:NativeType>
+                            <ct:NamedTest id="FloatIsFinite"/>
+                          </cd:Float>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="M2_TC_Temp">
+                        <cd:Type namexml="M2_TC_Temp">
+                          <cd:Attribute name="unit">
+                            <cd:Optional/>
+                            <cd:FixedValue>C</cd:FixedValue>
+                          </cd:Attribute>
+                          <cd:Float format="ascii">
+                            <cd:Description>Average of M2 TC temperature</cd:Description>
+                            <cd:Unit>degC</cd:Unit>
+                            <cd:NativeType>double</cd:NativeType>
+                            <ct:NamedTest id="FloatIsFinite"/>
+                          </cd:Float>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="Struts_Temp_Pxpy">
+                        <cd:Type namexml="Struts_Temp_Pxpy">
+                          <cd:Attribute name="unit">
+                            <cd:Optional/>
+                            <cd:FixedValue>C</cd:FixedValue>
+                          </cd:Attribute>
+                          <cd:Float format="ascii">
+                            <cd:Description>Average of Struts temperature +X+Y</cd:Description>
+                            <cd:Unit>degC</cd:Unit>
+                            <cd:NativeType>double</cd:NativeType>
+                            <ct:NamedTest id="FloatIsFinite"/>
+                          </cd:Float>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="Struts_Temp_Mxpy">
+                        <cd:Type namexml="Struts_Temp_Mxpy">
+                          <cd:Attribute name="unit">
+                            <cd:Optional/>
+                            <cd:FixedValue>C</cd:FixedValue>
+                          </cd:Attribute>
+                          <cd:Float format="ascii">
+                            <cd:Description>Average of Struts temperature -X+Y</cd:Description>
+                            <cd:Unit>degC</cd:Unit>
+                            <cd:NativeType>double</cd:NativeType>
+                            <ct:NamedTest id="FloatIsFinite"/>
+                          </cd:Float>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="Struts_Temp_My">
+                        <cd:Type namexml="Struts_Temp_My">
+                          <cd:Attribute name="unit">
+                            <cd:Optional/>
+                            <cd:FixedValue>C</cd:FixedValue>
+                          </cd:Attribute>
+                          <cd:Float format="ascii">
+                            <cd:Description>Average of Struts temperature -Y</cd:Description>
+                            <cd:Unit>degC</cd:Unit>
+                            <cd:NativeType>double</cd:NativeType>
+                            <ct:NamedTest id="FloatIsFinite"/>
+                          </cd:Float>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="Aht_22_Tel_M1">
+                        <cd:Type namexml="Aht_22_Tel_M1">
+                          <cd:Attribute name="unit">
+                            <cd:Optional/>
+                            <cd:FixedValue>C</cd:FixedValue>
+                          </cd:Attribute>
+                          <cd:Float format="ascii">
+                            <cd:Description>Average of Aht 22 M1 temperatures</cd:Description>
+                            <cd:Unit>degC</cd:Unit>
+                            <cd:NativeType>double</cd:NativeType>
+                            <ct:NamedTest id="FloatIsFinite"/>
+                          </cd:Float>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="Aht_23_Tel_M1">
+                        <cd:Type namexml="Aht_23_Tel_M1">
+                          <cd:Attribute name="unit">
+                            <cd:Optional/>
+                            <cd:FixedValue>C</cd:FixedValue>
+                          </cd:Attribute>
+                          <cd:Float format="ascii">
+                            <cd:Description>Average of Aht 23 M1 temperatures</cd:Description>
+                            <cd:Unit>degC</cd:Unit>
+                            <cd:NativeType>double</cd:NativeType>
+                            <ct:NamedTest id="FloatIsFinite"/>
+                          </cd:Float>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="Aht_24_Tel_M1">
+                        <cd:Type namexml="Aht_24_Tel_M1">
+                          <cd:Attribute name="unit">
+                            <cd:Optional/>
+                            <cd:FixedValue>C</cd:FixedValue>
+                          </cd:Attribute>
+                          <cd:Float format="ascii">
+                            <cd:Description>Average of Aht 24 M1 temperatures</cd:Description>
+                            <cd:Unit>degC</cd:Unit>
+                            <cd:NativeType>double</cd:NativeType>
+                            <ct:NamedTest id="FloatIsFinite"/>
+                          </cd:Float>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="Aht_25_Tel_M1">
+                        <cd:Type namexml="Aht_25_Tel_M1">
+                          <cd:Attribute name="unit">
+                            <cd:Optional/>
+                            <cd:FixedValue>C</cd:FixedValue>
+                          </cd:Attribute>
+                          <cd:Float format="ascii">
+                            <cd:Description>Average of Aht 25 M1 temperatures</cd:Description>
+                            <cd:Unit>degC</cd:Unit>
+                            <cd:NativeType>double</cd:NativeType>
+                            <ct:NamedTest id="FloatIsFinite"/>
+                          </cd:Float>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="Aht_26_Tel_M1">
+                        <cd:Type namexml="Aht_26_Tel_M1">
+                          <cd:Attribute name="unit">
+                            <cd:Optional/>
+                            <cd:FixedValue>C</cd:FixedValue>
+                          </cd:Attribute>
+                          <cd:Float format="ascii">
+                            <cd:Description>Average of Aht 26 M1 temperatures</cd:Description>
+                            <cd:Unit>degC</cd:Unit>
+                            <cd:NativeType>double</cd:NativeType>
+                            <ct:NamedTest id="FloatIsFinite"/>
+                          </cd:Float>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="Aht_27_Tel_M1">
+                        <cd:Type namexml="Aht_27_Tel_M1">
+                          <cd:Attribute name="unit">
+                            <cd:Optional/>
+                            <cd:FixedValue>C</cd:FixedValue>
+                          </cd:Attribute>
+                          <cd:Float format="ascii">
+                            <cd:Description>Average of Aht 27 M1 temperatures</cd:Description>
+                            <cd:Unit>degC</cd:Unit>
+                            <cd:NativeType>double</cd:NativeType>
+                            <ct:NamedTest id="FloatIsFinite"/>
+                          </cd:Float>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="Tc_18_Tel_M11">
+                        <cd:Type namexml="Tc_18_Tel_M11">
+                          <cd:Attribute name="unit">
+                            <cd:Optional/>
+                            <cd:FixedValue>C</cd:FixedValue>
+                          </cd:Attribute>
+                          <cd:Float format="ascii">
+                            <cd:Description>Average of TC 18 Tel M1-1 temperatures</cd:Description>
+                            <cd:Unit>degC</cd:Unit>
+                            <cd:NativeType>double</cd:NativeType>
+                            <ct:NamedTest id="FloatIsFinite"/>
+                          </cd:Float>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="Tc_19_Tel_M12">
+                        <cd:Type namexml="Tc_19_Tel_M12">
+                          <cd:Attribute name="unit">
+                            <cd:Optional/>
+                            <cd:FixedValue>C</cd:FixedValue>
+                          </cd:Attribute>
+                          <cd:Float format="ascii">
+                            <cd:Description>Average of TC 19 Tel M1-2 temperatures</cd:Description>
+                            <cd:Unit>degC</cd:Unit>
+                            <cd:NativeType>double</cd:NativeType>
+                            <ct:NamedTest id="FloatIsFinite"/>
+                          </cd:Float>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="Tc_20_Tel_M13">
+                        <cd:Type namexml="Tc_20_Tel_M13">
+                          <cd:Attribute name="unit">
+                            <cd:Optional/>
+                            <cd:FixedValue>C</cd:FixedValue>
+                          </cd:Attribute>
+                          <cd:Float format="ascii">
+                            <cd:Description>Average of TC 20 Tel M1-3 temperatures</cd:Description>
+                            <cd:Unit>degC</cd:Unit>
+                            <cd:NativeType>double</cd:NativeType>
+                            <ct:NamedTest id="FloatIsFinite"/>
+                          </cd:Float>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="Tc_21_Tel_M14">
+                        <cd:Type namexml="Tc_21_Tel_M14">
+                          <cd:Attribute name="unit">
+                            <cd:Optional/>
+                            <cd:FixedValue>C</cd:FixedValue>
+                          </cd:Attribute>
+                          <cd:Float format="ascii">
+                            <cd:Description>Average of TC 21 Tel M1-4 temperatures</cd:Description>
+                            <cd:Unit>degC</cd:Unit>
+                            <cd:NativeType>double</cd:NativeType>
+                            <ct:NamedTest id="FloatIsFinite"/>
+                          </cd:Float>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="Tc_25_Tm15_Ths1Y">
+                        <cd:Type namexml="Tc_25_Tm15_Ths1Y">
+                          <cd:Attribute name="unit">
+                            <cd:Optional/>
+                            <cd:FixedValue>C</cd:FixedValue>
+                          </cd:Attribute>
+                          <cd:Float format="ascii">
+                            <cd:Description>Average of TC 25 TM15 Ths1-Y temperatures</cd:Description>
+                            <cd:Unit>degC</cd:Unit>
+                            <cd:NativeType>double</cd:NativeType>
+                            <ct:NamedTest id="FloatIsFinite"/>
+                          </cd:Float>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="Tc_27_Tm16_Ths1Y">
+                        <cd:Type namexml="Tc_27_Tm16_Ths1Y">
+                          <cd:Attribute name="unit">
+                            <cd:Optional/>
+                            <cd:FixedValue>C</cd:FixedValue>
+                          </cd:Attribute>
+                          <cd:Float format="ascii">
+                            <cd:Description>Average of TC 27 TM16 Ths1-Y temperatures</cd:Description>
+                            <cd:Unit>degC</cd:Unit>
+                            <cd:NativeType>double</cd:NativeType>
+                            <ct:NamedTest id="FloatIsFinite"/>
+                          </cd:Float>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="Tc_29_Ths2">
+                        <cd:Type namexml="Tc_29_Ths2">
+                          <cd:Attribute name="unit">
+                            <cd:Optional/>
+                            <cd:FixedValue>C</cd:FixedValue>
+                          </cd:Attribute>
+                          <cd:Float format="ascii">
+                            <cd:Description>Average of TC 29 Ths2 temperatures</cd:Description>
+                            <cd:Unit>degC</cd:Unit>
+                            <cd:NativeType>double</cd:NativeType>
+                            <ct:NamedTest id="FloatIsFinite"/>
+                          </cd:Float>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="Tc_23_Ths1">
+                        <cd:Type namexml="Tc_23_Ths1">
+                          <cd:Attribute name="unit">
+                            <cd:Optional/>
+                            <cd:FixedValue>C</cd:FixedValue>
+                          </cd:Attribute>
+                          <cd:Float format="ascii">
+                            <cd:Description>Average of TC 23 Ths1 temperatures</cd:Description>
+                            <cd:Unit>degC</cd:Unit>
+                            <cd:NativeType>double</cd:NativeType>
+                            <ct:NamedTest id="FloatIsFinite"/>
+                          </cd:Float>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="Tc_32_Ths3">
+                        <cd:Type namexml="Tc_32_Ths3">
+                          <cd:Attribute name="unit">
+                            <cd:Optional/>
+                            <cd:FixedValue>C</cd:FixedValue>
+                          </cd:Attribute>
+                          <cd:Float format="ascii">
+                            <cd:Description>Average of TC 32 Ths3 temperatures</cd:Description>
+                            <cd:Unit>degC</cd:Unit>
+                            <cd:NativeType>double</cd:NativeType>
+                            <ct:NamedTest id="FloatIsFinite"/>
+                          </cd:Float>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="Sun_Elevation_Angle">
+                        <cd:Type namexml="Sun_Elevation_Angle">
+                          <cd:Attribute name="unit">
+                            <cd:Optional/>
+                            <cd:FixedValue>deg</cd:FixedValue>
+                          </cd:Attribute>
+                          <cd:Float format="ascii">
+                            <cd:Description>Sun elevation angle on observation level</cd:Description>
+                            <cd:Unit>degrees</cd:Unit>
+                            <cd:NativeType>double</cd:NativeType>
+                            <ct:NamedTest id="FloatIsFinite"/>
+                          </cd:Float>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="Latitude">
+                        <cd:Type namexml="Latitude">
+                          <cd:Attribute name="unit">
+                            <cd:Optional/>
+                            <cd:FixedValue>10-6DegN</cd:FixedValue>
+                          </cd:Attribute>
+                          <cd:Integer format="ascii">
+                            <cd:Description>Latitude of DEM intersection of observation</cd:Description>
+                            <cd:Unit>1e-6 degrees_north</cd:Unit>
+                            <cd:Conversion denominator="1000000.000000" numerator="1.000000">
+                              <cd:Unit>degrees_north</cd:Unit>
+                            </cd:Conversion>
+                            <cd:NativeType>int32</cd:NativeType>
+                            <ct:NamedTest id="RangeLatitude6"/>
+                          </cd:Integer>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="Longitude">
+                        <cd:Type namexml="Longitude">
+                          <cd:Attribute name="unit">
+                            <cd:Optional/>
+                            <cd:FixedValue>10-6DegE</cd:FixedValue>
+                          </cd:Attribute>
+                          <cd:Integer format="ascii">
+                            <cd:Description>Longitude of DEM intersection of observation</cd:Description>
+                            <cd:Unit>1e-6 degrees_east</cd:Unit>
+                            <cd:Conversion denominator="1000000.000000" numerator="1.000000">
+                              <cd:Unit>degrees_east</cd:Unit>
+                            </cd:Conversion>
+                            <cd:NativeType>int32</cd:NativeType>
+                            <ct:NamedTest id="RangeLongitude6"/>
+                          </cd:Integer>
+                        </cd:Type>
+                      </cd:Field>
+                    </cd:Record>
+                    <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                  </cd:Array>
+                </cd:Field>
+              </cd:Record>
+            </cd:Field>
+          </cd:Record>
+          <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+        </cd:Array>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+</cd:Record>
