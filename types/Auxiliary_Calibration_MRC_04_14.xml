@@ -805,7 +805,7 @@ Measurement_Valid = TRUE, Measurement_Data_Present = TRUE, Spacecraft_Attitude_O
                                         <cd:Array format="ascii">
                                           <cd:Dimension>24</cd:Dimension>
                                           <cd:Integer format="ascii">
-                                            <cd:Description>Index of expected ground bin corresponding to the altitude of DEM intersection</cd:Description>
+                                            <cd:Description>This list contains 24 values separated by blanks. The items in this list refer to height bins 1 ... 24. 1 if ground bin was detected, else 0.</cd:Description>
                                             <cd:NativeType>uint8</cd:NativeType>
                                             <ct:NamedTest id="IntIsZeroOrOne"/>
                                           </cd:Integer>
