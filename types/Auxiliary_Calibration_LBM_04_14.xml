@@ -1,0 +1,572 @@
+<?xml version="1.0"?>
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="xml" last-modified="2021-01-04" name="Auxiliary_Calibration_LBM_04_14" namexml="Auxiliary_Calibration_LBM">
+  <cd:Description>Auxiliary Calibration LBM</cd:Description>
+  <cd:Field name="List_of_Data_Set_Records">
+    <cd:Record namexml="List_of_Data_Set_Records">
+      <cd:Description>List of Data Set Records</cd:Description>
+      <cd:Attribute name="count"/>
+      <cd:Field name="Data_Set_Record">
+        <cd:Array>
+          <cd:Dimension/>
+          <cd:Record namexml="Data_Set_Record">
+            <cd:Description>Data Set Record</cd:Description>
+            <cd:Field name="First_Start_of_Observation_Time">
+              <cd:Type namexml="First_Start_of_Observation_Time">
+                <cd:Time format="ascii" timeformat="ascii_ccsds_datetime_ymd1_with_ref">
+                  <cd:Description>Start of observation time of the first BRC (UTC)</cd:Description>
+                </cd:Time>
+              </cd:Type>
+            </cd:Field>
+            <cd:Field name="Last_Start_of_Observation_Time">
+              <cd:Type namexml="Last_Start_of_Observation_Time">
+                <cd:Time format="ascii" timeformat="ascii_ccsds_datetime_ymd1_with_ref">
+                  <cd:Description>Start of observation time of the last BRC (UTC)</cd:Description>
+                </cd:Time>
+              </cd:Type>
+            </cd:Field>
+            <cd:Field name="List_of_Frequency_Step_Results">
+              <cd:Record namexml="List_of_Frequency_Step_Results">
+                <cd:Attribute name="count"/>
+                <cd:Field name="Frequency_Step_Result">
+                  <cd:Array>
+                    <cd:Dimension/>
+                    <cd:Record namexml="Frequency_Step_Result">
+                      <cd:Field name="Frequency_Offset">
+                        <cd:Type namexml="Frequency_Offset">
+                          <cd:Attribute name="unit">
+                            <cd:Optional/>
+                            <cd:FixedValue>GHz</cd:FixedValue>
+                          </cd:Attribute>
+                          <cd:Float format="ascii">
+                            <cd:Description>Frequency offset</cd:Description>
+                            <cd:Unit>GHz</cd:Unit>
+                            <cd:NativeType>double</cd:NativeType>
+                            <ct:NamedTest id="FloatIsFinite"/>
+                          </cd:Float>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="Frequency_Valid_Mie">
+                        <cd:Type namexml="Frequency_Valid_Mie">
+                          <cd:Integer format="ascii">
+                            <cd:Description>TRUE if threshold Min_Num_Valid_Images is reached, FALSE otherwise.</cd:Description>
+                            <cd:NativeType>uint8</cd:NativeType>
+                            <cd:Mapping string="False" value="0"/>
+                            <cd:Mapping string="false" value="0"/>
+                            <cd:Mapping string="FALSE" value="0"/>
+                            <cd:Mapping string="TRUE" value="1"/>
+                            <cd:Mapping string="True" value="1"/>
+                            <cd:Mapping string="true" value="1"/>
+                            <ct:NamedTest id="BooleanXmlTest"/>
+                          </cd:Integer>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="Frequency_Valid_Rayleigh">
+                        <cd:Type namexml="Frequency_Valid_Rayleigh">
+                          <cd:Integer format="ascii">
+                            <cd:Description>TRUE if threshold Min_Num_Valid_Images is reached, FALSE otherwise.</cd:Description>
+                            <cd:NativeType>uint8</cd:NativeType>
+                            <cd:Mapping string="False" value="0"/>
+                            <cd:Mapping string="false" value="0"/>
+                            <cd:Mapping string="FALSE" value="0"/>
+                            <cd:Mapping string="TRUE" value="1"/>
+                            <cd:Mapping string="True" value="1"/>
+                            <cd:Mapping string="true" value="1"/>
+                            <ct:NamedTest id="BooleanXmlTest"/>
+                          </cd:Integer>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="Frequency_Step_In_Range">
+                        <cd:Type namexml="Frequency_Step_In_Range">
+                          <cd:Integer format="ascii">
+                            <cd:Description>TRUE if Frequency_Offset is within range specified by Start_Frequency_Ramp and Stop_Frequency_Ramp, FALSE otherwise.</cd:Description>
+                            <cd:NativeType>uint8</cd:NativeType>
+                            <cd:Mapping string="False" value="0"/>
+                            <cd:Mapping string="false" value="0"/>
+                            <cd:Mapping string="FALSE" value="0"/>
+                            <cd:Mapping string="TRUE" value="1"/>
+                            <cd:Mapping string="True" value="1"/>
+                            <cd:Mapping string="true" value="1"/>
+                            <ct:NamedTest id="BooleanXmlTest"/>
+                          </cd:Integer>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="Num_Valid_Mie_Images">
+                        <cd:Type namexml="Num_Valid_Mie_Images">
+                          <cd:Integer format="ascii">
+                            <cd:Description>Number of valid Mie images for frequency step.</cd:Description>
+                            <cd:NativeType>uint8</cd:NativeType>
+                          </cd:Integer>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="Num_Valid_Rayleigh_Images">
+                        <cd:Type namexml="Num_Valid_Rayleigh_Images">
+                          <cd:Integer format="ascii">
+                            <cd:Description>Number of valid Rayleigh images for frequency step.</cd:Description>
+                            <cd:NativeType>uint8</cd:NativeType>
+                          </cd:Integer>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="Mean_Mie_DCO">
+                        <cd:Type namexml="Mean_Mie_DCO">
+                          <cd:Array format="ascii">
+                            <cd:Dimension>16</cd:Dimension>
+                            <cd:Float format="ascii">
+                              <cd:Description>Mean DCO values calculated from all DCO correction values used for a specific row of the valid Mie images.</cd:Description>
+                              <cd:NativeType>double</cd:NativeType>
+                              <ct:NamedTest id="FloatIsFinite"/>
+                            </cd:Float>
+                          </cd:Array>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="Mean_Rayleigh_DCO">
+                        <cd:Type namexml="Mean_Rayleigh_DCO">
+                          <cd:Array format="ascii">
+                            <cd:Dimension>16</cd:Dimension>
+                            <cd:Float format="ascii">
+                              <cd:Description>Mean DCO values calculated from all DCO correction values used for a specific row of the valid Rayleigh images.</cd:Description>
+                              <cd:NativeType>double</cd:NativeType>
+                              <ct:NamedTest id="FloatIsFinite"/>
+                            </cd:Float>
+                          </cd:Array>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="Mean_Rayleigh_Energy">
+                        <cd:Type namexml="Mean_Rayleigh_Energy">
+                          <cd:Attribute name="unit">
+                            <cd:Optional/>
+                            <cd:FixedValue>mJ</cd:FixedValue>
+                          </cd:Attribute>
+                          <cd:Float format="ascii">
+                            <cd:Description>Mean energy of all pulses attributed to the valid Rayleigh images.</cd:Description>
+                            <cd:Unit>mJ</cd:Unit>
+                            <cd:NativeType>double</cd:NativeType>
+                            <ct:NamedTest id="FloatIsFinite"/>
+                          </cd:Float>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="Mean_Mie_Energy">
+                        <cd:Type namexml="Mean_Mie_Energy">
+                          <cd:Attribute name="unit">
+                            <cd:Optional/>
+                            <cd:FixedValue>mJ</cd:FixedValue>
+                          </cd:Attribute>
+                          <cd:Float format="ascii">
+                            <cd:Description>Mean energy of all pulses attributed to the valid Mie images.</cd:Description>
+                            <cd:Unit>mJ</cd:Unit>
+                            <cd:NativeType>double</cd:NativeType>
+                            <ct:NamedTest id="FloatIsFinite"/>
+                          </cd:Float>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="Sun_Elevation_Angles">
+                        <cd:Type namexml="Sun_Elevation_Angles">
+                          <cd:Attribute name="unit">
+                            <cd:Optional/>
+                            <cd:FixedValue>deg</cd:FixedValue>
+                          </cd:Attribute>
+                          <cd:Array format="ascii">
+                            <cd:Dimension>2</cd:Dimension>
+                            <cd:Float format="ascii">
+                              <cd:Description>List of Sun_Elevation_Angles on observation level for all the BRCs with images contributing to the frequency step result.</cd:Description>
+                              <cd:Unit>degree</cd:Unit>
+                              <cd:NativeType>double</cd:NativeType>
+                              <ct:NamedTest id="FloatIsFinite"/>
+                            </cd:Float>
+                          </cd:Array>
+                        </cd:Type>
+                      </cd:Field>
+                    </cd:Record>
+                    <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                  </cd:Array>
+                </cd:Field>
+              </cd:Record>
+            </cd:Field>
+            <cd:Field name="List_of_Average_Rayleigh_Image_Vals">
+              <cd:Record namexml="List_of_Average_Rayleigh_Image_Vals">
+                <cd:Attribute name="count"/>
+                <cd:Field name="Average_Rayleigh_Image_Val">
+                  <cd:Array>
+                    <cd:Description>Map of mean image pixel intensity above minimum values in list form. The map contains Num_Image_Pixel_Rows * Num_Image_Pixel_Cols number of items. Location of item(i,j) at the list is Num_Image_Pixel_Cols * (i-1) + j, where i is the row index and j is the column index.</cd:Description>
+                    <cd:Dimension/>
+                    <cd:Type namexml="Average_Rayleigh_Image_Val">
+                      <cd:Attribute name="unit">
+                        <cd:FixedValue>ACCD counts</cd:FixedValue>
+                      </cd:Attribute>
+                      <cd:Float format="ascii">
+                        <cd:Description>Mean image pixel intensity above minimum</cd:Description>
+                        <cd:NativeType>double</cd:NativeType>
+                        <ct:NamedTest id="FloatIsFinite"/>
+                      </cd:Float>
+                    </cd:Type>
+                    <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                  </cd:Array>
+                </cd:Field>
+              </cd:Record>
+            </cd:Field>
+            <cd:Field name="Rayleigh_Min_Pixel_Value">
+              <cd:Type namexml="Rayleigh_Min_Pixel_Value">
+                <cd:Attribute name="unit">
+                  <cd:FixedValue>ACCD counts</cd:FixedValue>
+                </cd:Attribute>
+                <cd:Float format="ascii">
+                  <cd:Description>Minimum pixel value of averaged Rayleigh images</cd:Description>
+                  <cd:NativeType>double</cd:NativeType>
+                  <ct:NamedTest id="FloatIsFinite"/>
+                </cd:Float>
+              </cd:Type>
+            </cd:Field>
+            <cd:Field name="ENC_Col_Channel_A">
+              <cd:Type namexml="ENC_Col_Channel_A">
+                <cd:Attribute name="unit">
+                  <cd:FixedValue>ACCD pixel index</cd:FixedValue>
+                </cd:Attribute>
+                <cd:Float format="ascii">
+                  <cd:Description>Barycentre column value of the direct channel spot</cd:Description>
+                  <cd:NativeType>double</cd:NativeType>
+                  <ct:NamedTest id="Range3To5"/>
+                  <ct:NamedTest id="FloatIsFinite"/>
+                </cd:Float>
+              </cd:Type>
+            </cd:Field>
+            <cd:Field name="ENC_Row_Channel_A">
+              <cd:Type namexml="ENC_Row_Channel_A">
+                <cd:Attribute name="unit">
+                  <cd:FixedValue>ACCD pixel index</cd:FixedValue>
+                </cd:Attribute>
+                <cd:Float format="ascii">
+                  <cd:Description>Barycentre row value of the direct channel spot</cd:Description>
+                  <cd:NativeType>double</cd:NativeType>
+                  <ct:NamedTest id="Range7To9"/>
+                  <ct:NamedTest id="FloatIsFinite"/>
+                </cd:Float>
+              </cd:Type>
+            </cd:Field>
+            <cd:Field name="ENC_Col_Channel_B">
+              <cd:Type namexml="ENC_Col_Channel_B">
+                <cd:Attribute name="unit">
+                  <cd:FixedValue>ACCD pixel index</cd:FixedValue>
+                </cd:Attribute>
+                <cd:Float format="ascii">
+                  <cd:Description>Barycentre column value of the reflected channel spot</cd:Description>
+                  <cd:NativeType>double</cd:NativeType>
+                  <ct:NamedTest id="Range12To14"/>
+                  <ct:NamedTest id="FloatIsFinite"/>
+                </cd:Float>
+              </cd:Type>
+            </cd:Field>
+            <cd:Field name="ENC_Row_Channel_B">
+              <cd:Type namexml="ENC_Row_Channel_B">
+                <cd:Attribute name="unit">
+                  <cd:FixedValue>ACCD pixel index</cd:FixedValue>
+                </cd:Attribute>
+                <cd:Float format="ascii">
+                  <cd:Description>Barycentre row value of the reflected channel spot</cd:Description>
+                  <cd:NativeType>double</cd:NativeType>
+                  <ct:NamedTest id="Range7To9"/>
+                  <ct:NamedTest id="FloatIsFinite"/>
+                </cd:Float>
+              </cd:Type>
+            </cd:Field>
+            <cd:Field name="ENC_Col_Std_Dev_Channel_A">
+              <cd:Type namexml="ENC_Col_Std_Dev_Channel_A">
+                <cd:Float format="ascii">
+                  <cd:Description>Energetic centroid column standard deviation for channel A.</cd:Description>
+                  <cd:NativeType>double</cd:NativeType>
+                  <ct:NamedTest id="FloatIsFinite"/>
+                </cd:Float>
+              </cd:Type>
+            </cd:Field>
+            <cd:Field name="ENC_Row_Std_Dev_Channel_A">
+              <cd:Type namexml="ENC_Row_Std_Dev_Channel_A">
+                <cd:Float format="ascii">
+                  <cd:Description>Energetic centroid row standard deviation for channel A.</cd:Description>
+                  <cd:NativeType>double</cd:NativeType>
+                  <ct:NamedTest id="FloatIsFinite"/>
+                </cd:Float>
+              </cd:Type>
+            </cd:Field>
+            <cd:Field name="ENC_Col_Std_Dev_Channel_B">
+              <cd:Type namexml="ENC_Col_Std_Dev_Channel_B">
+                <cd:Float format="ascii">
+                  <cd:Description>Energetic centroid column standard deviation for channel B.</cd:Description>
+                  <cd:NativeType>double</cd:NativeType>
+                  <ct:NamedTest id="FloatIsFinite"/>
+                </cd:Float>
+              </cd:Type>
+            </cd:Field>
+            <cd:Field name="ENC_Row_Std_Dev_Channel_B">
+              <cd:Type namexml="ENC_Row_Std_Dev_Channel_B">
+                <cd:Float format="ascii">
+                  <cd:Description>Energetic centroid row standard deviation for channel B.</cd:Description>
+                  <cd:NativeType>double</cd:NativeType>
+                  <ct:NamedTest id="FloatIsFinite"/>
+                </cd:Float>
+              </cd:Type>
+            </cd:Field>
+            <cd:Field name="List_of_Average_Mie_Image_Vals">
+              <cd:Record namexml="List_of_Average_Mie_Image_Vals">
+                <cd:Attribute name="count"/>
+                <cd:Field name="Average_Mie_Image_Val">
+                  <cd:Array>
+                    <cd:Description>Map of mean image pixel intensity above minimum values in list form. The map contains Num_Image_Pixel_Rows * Num_Image_Pixel_Cols number of items. Location of item(i,j) at the list is Num_Image_Pixel_Cols * (i-1) + j, where i is the row index and j is the column index.</cd:Description>
+                    <cd:Dimension/>
+                    <cd:Type namexml="Average_Mie_Image_Val">
+                      <cd:Attribute name="unit">
+                        <cd:FixedValue>ACCD counts</cd:FixedValue>
+                      </cd:Attribute>
+                      <cd:Float format="ascii">
+                        <cd:Description>Mean image pixel intensity above minimum</cd:Description>
+                        <cd:NativeType>double</cd:NativeType>
+                        <ct:NamedTest id="FloatIsFinite"/>
+                      </cd:Float>
+                    </cd:Type>
+                    <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                  </cd:Array>
+                </cd:Field>
+              </cd:Record>
+            </cd:Field>
+            <cd:Field name="List_of_Average_Mie_Image_Val_Per_Cols">
+              <cd:Record namexml="List_of_Average_Mie_Image_Val_Per_Cols">
+                <cd:Attribute name="count"/>
+                <cd:Field name="Average_Mie_Image_Val_Per_Col">
+                  <cd:Array>
+                    <cd:Description>Num_Image_Pixel_Cols values calculated from the values reported in List_of_Average_Mie_Image_Vals by summing up values over all rows for each column.</cd:Description>
+                    <cd:Dimension/>
+                    <cd:Type namexml="Average_Mie_Image_Val_Per_Col">
+                      <cd:Attribute name="unit">
+                        <cd:FixedValue>ACCD counts</cd:FixedValue>
+                      </cd:Attribute>
+                      <cd:Float format="ascii">
+                        <cd:Description>Mean image pixel intensity above minimum per column.</cd:Description>
+                        <cd:NativeType>double</cd:NativeType>
+                        <ct:NamedTest id="FloatIsFinite"/>
+                      </cd:Float>
+                    </cd:Type>
+                    <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                  </cd:Array>
+                </cd:Field>
+              </cd:Record>
+            </cd:Field>
+            <cd:Field name="Mie_Min_Pixel_Value">
+              <cd:Type namexml="Mie_Min_Pixel_Value">
+                <cd:Attribute name="unit">
+                  <cd:FixedValue>ACCD counts</cd:FixedValue>
+                </cd:Attribute>
+                <cd:Float format="ascii">
+                  <cd:Description>Minimum pixel value of averaged Mie images</cd:Description>
+                  <cd:NativeType>double</cd:NativeType>
+                  <ct:NamedTest id="FloatIsFinite"/>
+                </cd:Float>
+              </cd:Type>
+            </cd:Field>
+            <cd:Field name="Mie_Max_Pixel_Value">
+              <cd:Type namexml="Mie_Max_Pixel_Value">
+                <cd:Attribute name="unit">
+                  <cd:FixedValue>ACCD counts</cd:FixedValue>
+                </cd:Attribute>
+                <cd:Float format="ascii">
+                  <cd:Description>Maximum pixel value of averaged Mie images</cd:Description>
+                  <cd:NativeType>double</cd:NativeType>
+                  <ct:NamedTest id="FloatIsFinite"/>
+                </cd:Float>
+              </cd:Type>
+            </cd:Field>
+            <cd:Field name="Mie_Mean_Pixel_Value">
+              <cd:Type namexml="Mie_Mean_Pixel_Value">
+                <cd:Attribute name="unit">
+                  <cd:FixedValue>ACCD counts</cd:FixedValue>
+                </cd:Attribute>
+                <cd:Float format="ascii">
+                  <cd:Description>Mean value of pixel intensities in List_of_Average_Mie_Image_Rows</cd:Description>
+                  <cd:NativeType>double</cd:NativeType>
+                  <ct:NamedTest id="FloatIsFinite"/>
+                </cd:Float>
+              </cd:Type>
+            </cd:Field>
+            <cd:Field name="Mie_Std">
+              <cd:Type namexml="Mie_Std">
+                <cd:Float format="ascii">
+                  <cd:Description>Standard deviation over values in List_of_Average_Mie_Image_Rows</cd:Description>
+                  <cd:NativeType>double</cd:NativeType>
+                  <ct:NamedTest id="FloatIsFinite"/>
+                </cd:Float>
+              </cd:Type>
+            </cd:Field>
+            <cd:Field name="List_of_Fluence_Values">
+              <cd:Record namexml="List_of_Fluence_Values">
+                <cd:Attribute name="count"/>
+                <cd:Field name="Fluence_Value">
+                  <cd:Array>
+                    <cd:Description>Map of fluence values in list form. The map contains Num_Image_Pixel_Rows * Num_Image_Pixel_Cols number of items. Location of item(i,j) at the list is Num_Image_Pixel_Cols * (i-1) + j, where i is the row index and j is the column index.</cd:Description>
+                    <cd:Dimension>256</cd:Dimension>
+                    <cd:Type namexml="Fluence_Value">
+                      <cd:Float format="ascii">
+                        <cd:Description>Fluence value of one pixel</cd:Description>
+                        <cd:NativeType>double</cd:NativeType>
+                        <ct:NamedTest id="FloatIsFinite"/>
+                      </cd:Float>
+                    </cd:Type>
+                    <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                  </cd:Array>
+                </cd:Field>
+              </cd:Record>
+            </cd:Field>
+            <cd:Field name="Mie_Max_Fluence_Value">
+              <cd:Type namexml="Mie_Max_Fluence_Value">
+                <cd:Attribute name="unit">
+                  <cd:FixedValue>J/cm^2</cd:FixedValue>
+                </cd:Attribute>
+                <cd:Float format="ascii">
+                  <cd:Description>Maximum value found in List_of_Fluence_Values</cd:Description>
+                  <cd:NativeType>double</cd:NativeType>
+                  <ct:NamedTest id="FloatIsFinite"/>
+                </cd:Float>
+              </cd:Type>
+            </cd:Field>
+            <cd:Field name="List_of_Mie_Image_Derivatives">
+              <cd:Record namexml="List_of_Mie_Image_Derivatives">
+                <cd:Attribute name="count"/>
+                <cd:Field name="Mie_Image_Derivative">
+                  <cd:Array>
+                    <cd:Description>Map of '0' and '1' where '1' indicates that the value of the mean image pixel intensitiy above minimum is above the threshold Mie_ Mean_Pixel_Value + * Mie_Std, where is taken from</cd:Description>
+                    <cd:Dimension/>
+                    <cd:Type namexml="Mie_Image_Derivative">
+                      <cd:Integer format="ascii">
+                        <cd:Description>Mie image derivative value</cd:Description>
+                        <cd:NativeType>uint16</cd:NativeType>
+                      </cd:Integer>
+                    </cd:Type>
+                    <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                  </cd:Array>
+                </cd:Field>
+              </cd:Record>
+            </cd:Field>
+            <cd:Field name="Mie_Initial_Guess_Ellipse_Center_Col">
+              <cd:Type namexml="Mie_Initial_Guess_Ellipse_Center_Col">
+                <cd:Attribute name="unit">
+                  <cd:FixedValue>ACCD pixel index</cd:FixedValue>
+                </cd:Attribute>
+                <cd:Float format="ascii">
+                  <cd:Description>Ellipse center in x-direction</cd:Description>
+                  <cd:NativeType>double</cd:NativeType>
+                  <ct:NamedTest id="FloatIsFinite"/>
+                </cd:Float>
+              </cd:Type>
+            </cd:Field>
+            <cd:Field name="Mie_Initial_Guess_Ellipse_Center_Row">
+              <cd:Type namexml="Mie_Initial_Guess_Ellipse_Center_Row">
+                <cd:Attribute name="unit">
+                  <cd:FixedValue>ACCD pixel index</cd:FixedValue>
+                </cd:Attribute>
+                <cd:Float format="ascii">
+                  <cd:Description>Ellipse center in y-direction</cd:Description>
+                  <cd:NativeType>double</cd:NativeType>
+                  <ct:NamedTest id="FloatIsFinite"/>
+                </cd:Float>
+              </cd:Type>
+            </cd:Field>
+            <cd:Field name="Mie_Initial_Guess_Ellipse_Major_Semi_Axes">
+              <cd:Type namexml="Mie_Initial_Guess_Ellipse_Major_Semi_Axes">
+                <cd:Attribute name="unit">
+                  <cd:FixedValue>ACCD pixel</cd:FixedValue>
+                </cd:Attribute>
+                <cd:Float format="ascii">
+                  <cd:Description>Length of semi major axes</cd:Description>
+                  <cd:NativeType>double</cd:NativeType>
+                  <ct:NamedTest id="FloatIsFinite"/>
+                </cd:Float>
+              </cd:Type>
+            </cd:Field>
+            <cd:Field name="Mie_Initial_Guess_Ellipse_Minor_Semi_Axes">
+              <cd:Type namexml="Mie_Initial_Guess_Ellipse_Minor_Semi_Axes">
+                <cd:Attribute name="unit">
+                  <cd:FixedValue>ACCD pixel</cd:FixedValue>
+                </cd:Attribute>
+                <cd:Float format="ascii">
+                  <cd:Description>Length of semi minor axes</cd:Description>
+                  <cd:NativeType>double</cd:NativeType>
+                  <ct:NamedTest id="FloatIsFinite"/>
+                </cd:Float>
+              </cd:Type>
+            </cd:Field>
+            <cd:Field name="Mie_Initial_Guess_Ellipse_Col_Axes_Angle">
+              <cd:Type namexml="Mie_Initial_Guess_Ellipse_Col_Axes_Angle">
+                <cd:Attribute name="unit">
+                  <cd:FixedValue>degree</cd:FixedValue>
+                </cd:Attribute>
+                <cd:Float format="ascii">
+                  <cd:Description>Angle of major axis to x-axes</cd:Description>
+                  <cd:NativeType>double</cd:NativeType>
+                  <ct:NamedTest id="FloatIsFinite"/>
+                </cd:Float>
+              </cd:Type>
+            </cd:Field>
+            <cd:Field name="Mie_Ellipse_Center_Col">
+              <cd:Type namexml="Mie_Ellipse_Center_Col">
+                <cd:Attribute name="unit">
+                  <cd:FixedValue>ACCD pixel index</cd:FixedValue>
+                </cd:Attribute>
+                <cd:Float format="ascii">
+                  <cd:Description>Ellipse center in x-direction</cd:Description>
+                  <cd:NativeType>double</cd:NativeType>
+                  <ct:NamedTest id="Range8To10"/>
+                  <ct:NamedTest id="FloatIsFinite"/>
+                </cd:Float>
+              </cd:Type>
+            </cd:Field>
+            <cd:Field name="Mie_Ellipse_Center_Row">
+              <cd:Type namexml="Mie_Ellipse_Center_Row">
+                <cd:Attribute name="unit">
+                  <cd:FixedValue>ACCD pixel index</cd:FixedValue>
+                </cd:Attribute>
+                <cd:Float format="ascii">
+                  <cd:Description>Ellipse center in y direction</cd:Description>
+                  <cd:NativeType>double</cd:NativeType>
+                  <ct:NamedTest id="Range8To10"/>
+                  <ct:NamedTest id="FloatIsFinite"/>
+                </cd:Float>
+              </cd:Type>
+            </cd:Field>
+            <cd:Field name="Mie_Ellipse_Major_Semi_Axes">
+              <cd:Type namexml="Mie_Ellipse_Major_Semi_Axes">
+                <cd:Attribute name="unit">
+                  <cd:FixedValue>ACCD pixel</cd:FixedValue>
+                </cd:Attribute>
+                <cd:Float format="ascii">
+                  <cd:Description>Length of semi major axes</cd:Description>
+                  <cd:NativeType>double</cd:NativeType>
+                  <ct:NamedTest id="FloatIsFinite"/>
+                </cd:Float>
+              </cd:Type>
+            </cd:Field>
+            <cd:Field name="Mie_Ellipse_Minor_Semi_Axes">
+              <cd:Type namexml="Mie_Ellipse_Minor_Semi_Axes">
+                <cd:Attribute name="unit">
+                  <cd:FixedValue>ACCD pixel</cd:FixedValue>
+                </cd:Attribute>
+                <cd:Float format="ascii">
+                  <cd:Description>Length of semi minor axes</cd:Description>
+                  <cd:NativeType>double</cd:NativeType>
+                  <ct:NamedTest id="FloatIsFinite"/>
+                </cd:Float>
+              </cd:Type>
+            </cd:Field>
+            <cd:Field name="Mie_Ellipse_Col_Axes_Angle">
+              <cd:Type namexml="Mie_Ellipse_Col_Axes_Angle">
+                <cd:Attribute name="unit">
+                  <cd:FixedValue>degree</cd:FixedValue>
+                </cd:Attribute>
+                <cd:Float format="ascii">
+                  <cd:Description>Angle of major axis to x-axes</cd:Description>
+                  <cd:NativeType>double</cd:NativeType>
+                  <ct:NamedTest id="FloatIsFinite"/>
+                </cd:Float>
+              </cd:Type>
+            </cd:Field>
+          </cd:Record>
+          <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+        </cd:Array>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+</cd:Record>
