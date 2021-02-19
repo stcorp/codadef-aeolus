@@ -1,0 +1,987 @@
+<?xml version="1.0"?>
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" name="Level_2A_Processing_Parameters_03_12" format="xml" namexml="Level_2A_Processing_Parameters" last-modified="2021-02-19">
+  <cd:Field name="List_of_Data_Set_Records">
+    <cd:Record namexml="List_of_Data_Set_Records">
+      <cd:Description>List of Data Set Records</cd:Description>
+      <cd:Attribute name="count"/>
+      <cd:Field name="Data_Set_Record">
+        <cd:Array>
+          <cd:Dimension/>
+          <cd:Record namexml="Data_Set_Record">
+            <cd:Description>Data Set Record</cd:Description>
+            <cd:Field name="FH_Default_Fields">
+              <cd:Record namexml="FH_Default_Fields">
+                <cd:Description>Fields responsible for populating the Fixed Header</cd:Description>
+                <cd:Field name="File_Description">
+                  <cd:Text namexml="File_Description">
+                    <cd:Description>1-line description of the file</cd:Description>
+                  </cd:Text>
+                </cd:Field>
+                <cd:Field name="Notes">
+                  <cd:Text namexml="Notes">
+                    <cd:Description>Multi-lines free text</cd:Description>
+                  </cd:Text>
+                </cd:Field>
+                <cd:Field name="Mission">
+                  <cd:Text namexml="Mission">
+                    <cd:Description>Aeolus</cd:Description>
+                  </cd:Text>
+                </cd:Field>
+                <cd:Field name="Mission_Id">
+                  <cd:Text namexml="Mission_Id">
+                    <cd:Description>AE</cd:Description>
+                  </cd:Text>
+                </cd:Field>
+                <cd:Field name="File_Class">
+                  <cd:Text namexml="File_Class">
+                    <cd:Description>1-Line description of the file class</cd:Description>
+                  </cd:Text>
+                </cd:Field>
+                <cd:Field name="File_Version">
+                  <cd:Type namexml="File_Version">
+                    <cd:Integer format="ascii">
+                      <cd:Description>4 digits used to distinguish between versions of a file having the same validity period</cd:Description>
+                      <cd:NativeType>int16</cd:NativeType>
+                    </cd:Integer>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="System">
+                  <cd:Text namexml="System">
+                    <cd:Description>Aeolus L2aP</cd:Description>
+                  </cd:Text>
+                </cd:Field>
+                <cd:Field name="Creator">
+                  <cd:Text namexml="Creator">
+                    <cd:Description>AE_L1B_L2A</cd:Description>
+                  </cd:Text>
+                </cd:Field>
+                <cd:Field name="Creator_Version">
+                  <cd:Text namexml="Creator_Version">
+                    <cd:Description>Version of the tool</cd:Description>
+                  </cd:Text>
+                </cd:Field>
+              </cd:Record>
+            </cd:Field>
+            <cd:Field name="MPH_Default_Fields">
+              <cd:Record namexml="MPH_Default_Fields">
+                <cd:Description>Values responsible for populating the main product header</cd:Description>
+                <cd:Field name="Ref_Doc">
+                  <cd:Text namexml="Ref_Doc">
+                    <cd:Description>Reference document describing the product</cd:Description>
+                  </cd:Text>
+                </cd:Field>
+                <cd:Field name="Software_Ver">
+                  <cd:Text namexml="Software_Ver">
+                    <cd:Description>Software version number of processing software. Format: name of processor (up to 10 char) version number (4 char)</cd:Description>
+                  </cd:Text>
+                </cd:Field>
+                <cd:Field name="Proc_Centre">
+                  <cd:Text namexml="Proc_Centre">
+                    <cd:Description>Set to "Local"</cd:Description>
+                  </cd:Text>
+                </cd:Field>
+              </cd:Record>
+            </cd:Field>
+            <cd:Field name="Config_Params">
+              <cd:Record namexml="Config_Params">
+                <cd:Field name="ATB">
+                  <cd:Record namexml="ATB">
+                    <cd:Field name="G_Ray">
+                      <cd:Type namexml="G_Ray">
+                        <cd:Float format="ascii">
+                          <cd:Description>The fraction of particulate backscatter that is detected by the (non-central) pixels of the MSP detector assigned to the "virtual Rayleigh channel" (zero Doppler-shift).</cd:Description>
+                          <cd:NativeType>double</cd:NativeType>
+                        </cd:Float>
+                      </cd:Type>
+                    </cd:Field>
+                    <cd:Field name="G_Mie">
+                      <cd:Type namexml="G_Mie">
+                        <cd:Float format="ascii">
+                          <cd:Description>The fraction of particulate backscatter that is detected by the (central) pixels of the MSP detector assigned to the "virtual Mie channel" (zero Doppler-shift).</cd:Description>
+                          <cd:NativeType>double</cd:NativeType>
+                        </cd:Float>
+                      </cd:Type>
+                    </cd:Field>
+                    <cd:Field name="P_Xt_Lookup">
+                      <cd:Type namexml="P_Xt_Lookup">
+                        <cd:Array format="ascii">
+                          <cd:Description>Pressure grid for the F_Ray and F_Mie look-up table, consisting of N_P = 6 pressure values.</cd:Description>
+                          <cd:Dimension>6</cd:Dimension>
+                          <cd:Float format="ascii">
+                            <cd:Unit>hPa</cd:Unit>
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Array>
+                      </cd:Type>
+                    </cd:Field>
+                    <cd:Field name="T_Xt_Lookup">
+                      <cd:Type namexml="T_Xt_Lookup">
+                        <cd:Array format="ascii">
+                          <cd:Description>Pressure grid for the F_Ray and F_Mie look-up table, consisting of N_T = 15 pressure values.</cd:Description>
+                          <cd:Dimension>15</cd:Dimension>
+                          <cd:Float format="ascii">
+                            <cd:Unit>K</cd:Unit>
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Array>
+                      </cd:Type>
+                    </cd:Field>
+                    <cd:Field name="List_of_F_Rays">
+                      <cd:Record>
+                        <cd:Description>List of F_Ray values</cd:Description>
+                        <cd:Attribute name="count"/>
+                        <cd:Field name="F_Ray">
+                          <cd:Array>
+                            <cd:Dimension>15</cd:Dimension>
+                            <cd:Type namexml="F_Ray">
+                              <cd:Array format="ascii">
+                                <cd:Dimension>6</cd:Dimension>
+                                <cd:Float format="ascii">
+                                  <cd:Description>The fraction of molecular backscatter that is detected by the (central) pixels of the MSP detector assigned to the "virtual Rayleigh channel" (zero Doppler shift). Array of N_P entries of the look-up table for F_Ray.</cd:Description>
+                                  <cd:NativeType>double</cd:NativeType>
+                                  <ct:NamedTest id="FloatIsFinite"/>
+                                </cd:Float>
+                              </cd:Array>
+                            </cd:Type>
+                          </cd:Array>
+                          </cd:Field>
+                      </cd:Record>
+                    </cd:Field>
+                    <cd:Field name="List_of_F_Mies">
+                      <cd:Record>
+                        <cd:Attribute name="count"/>
+                        <cd:Field name="F_Mie">
+                          <cd:Array>
+                            <cd:Dimension>15</cd:Dimension>
+                            <cd:Type namexml="F_Mie">
+                              <cd:Array format="ascii">
+                                <cd:Dimension>6</cd:Dimension>
+                                <cd:Float format="ascii">
+                                  <cd:Description>The fraction of molecular backscatter that is detected by the (central) pixels of the MSP detector assigned to the "virtual Mie channel" (zero Doppler shift). Array of N_P entries of the look-up table for F_Mie.</cd:Description>
+                                  <cd:NativeType>double</cd:NativeType>
+                                  <ct:NamedTest id="FloatIsFinite"/>
+                                </cd:Float>
+                              </cd:Array>
+                            </cd:Type>
+                          </cd:Array>
+                        </cd:Field>
+                      </cd:Record>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+                <cd:Field name="Feature_Mask"> <!--TODO listed as Feature_KNMI in the IODD -->
+                  <cd:Record namexml="Feature_Mask">
+                    <cd:Field name="Sensor_Config">
+                      <cd:Record namexml="Sensor_Config">
+                        <cd:Field name="Noise_Channel_Lower_Height">
+                          <cd:Type namexml="Noise_Channel_Lower_Height">
+                              <cd:Attribute name="unit"/>
+                            <cd:Float format="ascii">
+                              <cd:Description>Lower height for which the mean noise level in the channel is calculated.</cd:Description>
+                              <cd:Unit>m</cd:Unit>
+                              <cd:NativeType>double</cd:NativeType>
+                            </cd:Float>
+                          </cd:Type>
+                        </cd:Field>
+                        <cd:Field name="Noise_Channel_Upper_Height">
+                          <cd:Type namexml="Noise_Channel_Upper_Height">
+                            <cd:Attribute name="unit"/>
+                            <cd:Float format="ascii">
+                              <cd:Description>Upper height for which the mean noise level in the channel is calculated.</cd:Description>
+                              <cd:Unit>m</cd:Unit>
+                              <cd:NativeType>double</cd:NativeType>
+                            </cd:Float>
+                          </cd:Type>
+                        </cd:Field>
+                        <cd:Field name="PRF_Lidar">
+                          <cd:Type namexml="PRF_Lidar">
+                            <cd:Attribute name="unit"/>
+                            <cd:Float format="ascii">
+                              <cd:Description>Pulse repeat frequency of ALADIN.</cd:Description>
+                              <cd:Unit>Hz</cd:Unit>
+                              <cd:NativeType>double</cd:NativeType>
+                            </cd:Float>
+                          </cd:Type>
+                        </cd:Field>
+                        <cd:Field name="Surf_Multiply">
+                          <cd:Type namexml="Surf_Multiply">
+                            <cd:Float format="ascii">
+                              <cd:Description>The value for which the Mie signals have to be above the noise to detect surface.</cd:Description>
+                              <cd:NativeType>double</cd:NativeType>
+                            </cd:Float>
+                          </cd:Type>
+                        </cd:Field>
+                        <cd:Field name="Sat_Velocity">
+                          <cd:Type namexml="Sat_Velocity">
+                            <cd:Attribute name="unit"/>
+                            <cd:Float format="ascii">
+                              <cd:Description>Velocity of the ADM satellite.</cd:Description>
+                              <cd:Unit>km/s</cd:Unit>
+                              <cd:NativeType>double</cd:NativeType>
+                            </cd:Float>
+                          </cd:Type>
+                        </cd:Field>
+                        <cd:Field name="Max_Gap_Statistics">
+                          <cd:Type namexml="Max_Gap_Statistics">
+                            <cd:Attribute name="unit"/>
+                            <cd:Float format="ascii">
+                              <cd:Description>Maximum size of the gap allowed for which the atmospheric statistics does not change (~60 km).</cd:Description>
+                              <cd:Unit>m</cd:Unit>
+                              <cd:NativeType>double</cd:NativeType>
+                            </cd:Float>
+                          </cd:Type>
+                        </cd:Field>
+                        <cd:Field name="Surface_Diff_DEM">
+                          <cd:Type namexml="Surface_Diff_DEM">
+                            <cd:Attribute name="unit"/>
+                            <cd:Float format="ascii">
+                              <cd:Description>Maximum difference between Lidar surface and DEM information allowed.</cd:Description>
+                              <cd:Unit>m</cd:Unit>
+                              <cd:NativeType>double</cd:NativeType>
+                            </cd:Float>
+                          </cd:Type>
+                        </cd:Field>
+                        <cd:Field name="Dual_Surface_Return_Factor">
+                          <cd:Type namexml="Dual_Surface_Return_Factor">
+                            <cd:Float format="ascii">
+                              <cd:Description>Fraction of the 4 pixels above surface to assign as additional surface peak.</cd:Description>
+                              <cd:NativeType>double</cd:NativeType>
+                            </cd:Float>
+                          </cd:Type>
+                        </cd:Field>
+                        <cd:Field name="S1_S2_Min_Jump_Ratio">
+                          <cd:Type namexml="S1_S2_Min_Jump_Ratio">
+                            <cd:Float format="ascii">
+                              <cd:Description>The minimum ratio between the first (s1) to second (s2) pixel required to set s1 as surface.</cd:Description>
+                              <cd:NativeType>double</cd:NativeType>
+                            </cd:Float>
+                          </cd:Type>
+                        </cd:Field>
+                        <cd:Field name="S0_S1_Max_Jump_Ratio">
+                          <cd:Type namexml="S0_S1_Max_Jump_Ratio">
+                            <cd:Float format="ascii">
+                              <cd:Description>The maximum ratio between the surface signal (s0) and the first pixel (s1) to set s1 as surface.</cd:Description>
+                              <cd:NativeType>double</cd:NativeType>
+                            </cd:Float>
+                          </cd:Type>
+                        </cd:Field>
+                      </cd:Record>
+                    </cd:Field>
+                    <cd:Field name="Algorithm_Configuration">
+                      <cd:Record namexml="Algorithm_Configuration">
+                        <cd:Field name="Feature_Mask">
+                          <cd:Record namexml="Feature_Mask">
+                            <cd:Field name="Prob_Mie_Min_Val">
+                              <cd:Type namexml="Prob_Mie_Min_Val">
+                                <cd:Float format="ascii">
+                                  <cd:Description>Minimum probability value accepted by hybrid median masking.</cd:Description>
+                                  <cd:NativeType>double</cd:NativeType>
+                                </cd:Float>
+                              </cd:Type>
+                            </cd:Field>
+                            <cd:Field name="Prob_Ray_Max_Val">
+                              <cd:Type namexml="Prob_Ray_Max_Val">
+                                <cd:Float format="ascii">
+                                  <cd:Description>Maximum Rayleigh probability value accepted by hybrid median masking (between 0 and 100).</cd:Description>
+                                  <cd:NativeType>double</cd:NativeType>
+                                </cd:Float>
+                              </cd:Type>
+                            </cd:Field>
+                            <cd:Field name="Always_Feature">
+                              <cd:Type namexml="Always_Feature">
+                                <cd:Float format="ascii">
+                                  <cd:Description>Minimum probability for which the pixel is always assigned as feature.</cd:Description>
+                                  <cd:NativeType>double</cd:NativeType>
+                                </cd:Float>
+                              </cd:Type>
+                            </cd:Field>
+                            <cd:Field name="Hybrid_Median_Iteration">
+                              <cd:Type namexml="Hybrid_Median_Iteration">
+                                <cd:Integer format="ascii">
+                                  <cd:Description>Number of iterations performed with the hybrid median algorithm.</cd:Description>
+                                  <cd:NativeType>uint8</cd:NativeType>
+                                </cd:Integer>
+                              </cd:Type>
+                            </cd:Field>
+                          </cd:Record>
+                        </cd:Field>
+                        <cd:Field name="Gauss_Fitting">
+                          <cd:Record namexml="Gauss_Fitting">
+                            <cd:Field name="Gauss_Version">
+                              <cd:Text namexml="Gauss_Version">
+                                <cd:Description>Possible entries are "Quadratic" and "MultiGauss".</cd:Description>
+                              </cd:Text>
+                            </cd:Field>
+                            <cd:Field name="N_Histo">
+                              <cd:Type namexml="N_Histo">
+                                <cd:Integer format="ascii">
+                                  <cd:Description>Number of histogram data points.</cd:Description>
+                                  <cd:NativeType>uint16</cd:NativeType>
+                                </cd:Integer>
+                              </cd:Type>
+                            </cd:Field>
+                            <cd:Field name="Histo_Min_Val">
+                              <cd:Type namexml="Histo_Min_Val">
+                                <cd:Float format="ascii">
+                                  <cd:Description>Minimum histogram value.</cd:Description>
+                                  <cd:NativeType>double</cd:NativeType>
+                                </cd:Float>
+                              </cd:Type>
+                            </cd:Field>
+                            <cd:Field name="Gauss_Ratio">
+                              <cd:Type namexml="Gauss_Ratio">
+                                <cd:Array format="ascii">
+                                  <cd:Description>Ratio for which signal has to exceed the gaussian fit to be qualified as feature.</cd:Description>
+                                  <cd:Dimension>4</cd:Dimension>
+                                  <cd:Float format="ascii">
+                                    <cd:NativeType>double</cd:NativeType>
+                                  </cd:Float>
+                                </cd:Array>
+                              </cd:Type>
+                            </cd:Field>
+                          </cd:Record>
+                        </cd:Field>
+                        <cd:Field name="Max_Entropy">
+                          <cd:Record namexml="Max_Entropy">
+                            <cd:Field name="Convol_Dims">
+                              <cd:Type namexml="Convol_Dims">
+                                <cd:Array format="ascii">
+                                  <cd:Description>Size in pixels of the convolution kernel (x,z) used.</cd:Description>
+                                  <cd:Dimension>2</cd:Dimension>
+                                  <cd:Integer format="ascii">
+                                    <cd:NativeType>uint8</cd:NativeType>
+                                  </cd:Integer>
+                                </cd:Array>
+                              </cd:Type>
+                            </cd:Field>
+                            <cd:Field name="Convol_Size">
+                              <cd:Type namexml="Convol_Size">
+                                <cd:Integer format="ascii">
+                                  <cd:Description>Gaussian width of the convolution kernel (x,z) used in the procedure (sig=value/alog(8)).</cd:Description>
+                                  <cd:NativeType>uint8</cd:NativeType>
+                                </cd:Integer>
+                              </cd:Type>
+                            </cd:Field>
+                            <cd:Field name="Convol_Params">
+                              <cd:Type namexml="Convol_Params">
+                                <cd:Array format="ascii">
+                                  <cd:Description>Defines the iteration steps after which the convolution results are checked for gaussian fit.</cd:Description>
+                                  <cd:Dimension>4</cd:Dimension>
+                                  <cd:Integer format="ascii">
+                                    <cd:NativeType>uint16</cd:NativeType>
+                                  </cd:Integer>
+                                </cd:Array>
+                              </cd:Type>
+                            </cd:Field>
+                            <cd:Field name="Max_Feat_Convol">
+                              <cd:Type namexml="Max_Feat_Convol">
+                                <cd:Array format="ascii">
+                                  <cd:Description>Maximum value of the featuremask assigned per convolution (negative=full stat.)</cd:Description>
+                                  <cd:Dimension>4</cd:Dimension>
+                                  <cd:Integer format="ascii">
+                                    <cd:NativeType>uint8</cd:NativeType>
+                                  </cd:Integer>
+                                </cd:Array>
+                              </cd:Type>
+                            </cd:Field>
+                            <cd:Field name="N_Convol">
+                              <cd:Type namexml="N_Convol">
+                                <cd:Integer format="ascii">
+                                  <cd:Description>Number of iterations for convolution.</cd:Description>
+                                  <cd:NativeType>uint16</cd:NativeType>
+                                </cd:Integer>
+                              </cd:Type>
+                            </cd:Field>
+                            <cd:Field name="Prob_Noise_Val">
+                              <cd:Type namexml="Prob_Noise_Val">
+                                <cd:Float format="ascii">
+                                  <cd:Description>Factor for surface noise probability.</cd:Description>
+                                  <cd:NativeType>double</cd:NativeType>
+                                </cd:Float>
+                              </cd:Type>
+                            </cd:Field>
+                            <cd:Field name="Surface_Noise">
+                              <cd:Type namexml="Surface_Noise">
+                                <cd:Integer format="ascii">
+                                  <cd:Description>Value given to the lowest bin to increase chance of finding surface values.</cd:Description>
+                                  <cd:NativeType>uint8</cd:NativeType>
+                                </cd:Integer>
+                              </cd:Type>
+                            </cd:Field>
+                          </cd:Record>
+                        </cd:Field>
+                      </cd:Record>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+                <cd:Field name="SAMS">
+                  <cd:Record namexml="SAMS">
+                    <cd:Field name="Wavelength">
+                      <cd:Type namexml="Wavelength">
+                        <cd:Attribute name="unit"/>
+                        <cd:Float format="ascii">
+                          <cd:Description>Laser wavelength.</cd:Description>
+                          <cd:Unit>m</cd:Unit>
+                          <cd:NativeType>double</cd:NativeType>
+                        </cd:Float>
+                      </cd:Type>
+                    </cd:Field>
+                    <cd:Field name="Maximum_Altitude">
+                      <cd:Type namexml="Maximum_Altitude">
+                        <cd:Attribute name="unit"/>
+                        <cd:Integer format="ascii">
+                          <cd:Description>Altitude up to which AMD profiles are calculated.</cd:Description>
+                          <cd:Unit>m</cd:Unit>
+                          <cd:NativeType>uint32</cd:NativeType>
+                        </cd:Integer>
+                      </cd:Type>
+                    </cd:Field>
+                    <cd:Field name="Minimum_Altitude">
+                      <cd:Type namexml="Minimum_Altitude">
+                        <cd:Attribute name="unit"/>
+                        <cd:Integer format="ascii">
+                          <cd:Description>Altitude down to which AMD profiles are calculated.</cd:Description>
+                          <cd:Unit>m</cd:Unit>
+                          <cd:NativeType>int16</cd:NativeType>
+                        </cd:Integer>
+                      </cd:Type>
+                    </cd:Field>
+                    <cd:Field name="Altitude_Step">
+                      <cd:Type namexml="Altitude_Step">
+                        <cd:Attribute name="unit"/>
+                        <cd:Integer format="ascii">
+                          <cd:Description>Vertical resolution of the calculation of AMD profiles.</cd:Description>
+                          <cd:Unit>m</cd:Unit>
+                          <cd:NativeType>uint16</cd:NativeType>
+                        </cd:Integer>
+                      </cd:Type>
+                    </cd:Field>
+                    <cd:Field name="Betam_Factor">
+                      <cd:Type namexml="Betam_Factor">
+                        <cd:Attribute name="unit">
+                          <cd:Optional/>
+                        </cd:Attribute>
+                        <cd:Float format="ascii">
+                          <cd:Description>Multiplicative factor in the formula to get the molecular backscatter coefficient from atmospheric data.</cd:Description>
+                          <cd:Unit>1/m/sr</cd:Unit>
+                          <cd:NativeType>double</cd:NativeType>
+                        </cd:Float>
+                      </cd:Type>
+                    </cd:Field>
+                    <cd:Field name="Reference_Wavelength">
+                      <cd:Type namexml="Reference_Wavelength">
+                        <cd:Attribute name="unit"/>
+                        <cd:Float format="ascii">
+                          <cd:Description>Reference wavelength in the formula to get the molecular backscatter coefficient from atmospheric data.</cd:Description>
+                          <cd:Unit>m</cd:Unit>
+                          <cd:NativeType>double</cd:NativeType>
+                        </cd:Float>
+                      </cd:Type>
+                    </cd:Field>
+                    <cd:Field name="Wavelength_Exponent">
+                      <cd:Type namexml="Wavelength_Exponent">
+                        <cd:Float format="ascii">
+                          <cd:Description>Exponent of the ratio of wavelengths in the formula to get the molecular backscatter coefficient from atmospheric data.</cd:Description>
+                          <cd:NativeType>double</cd:NativeType>
+                        </cd:Float>
+                      </cd:Type>
+                    </cd:Field>
+                    <cd:Field name="Reference_Pressure">
+                      <cd:Type namexml="Reference_Pressure">
+                        <cd:Attribute name="unit"/>
+                        <cd:Integer format="ascii">
+                          <cd:Description>Reference pressure in the formula to get the molecular backscatter coefficient from atmospheric data.</cd:Description>
+                          <cd:Unit>hPa</cd:Unit>
+                          <cd:NativeType>uint16</cd:NativeType>
+                        </cd:Integer>
+                      </cd:Type>
+                    </cd:Field>
+                    <cd:Field name="Reference_Temperature">
+                      <cd:Type namexml="Reference_Temperature">
+                        <cd:Attribute name="unit"/>
+                        <cd:Integer format="ascii">
+                          <cd:Description>Reference temperature in the formula to get the molecular backscatter coefficient from atmospheric data</cd:Description>
+                          <cd:Unit>K</cd:Unit>
+                          <cd:NativeType>uint16</cd:NativeType>
+                        </cd:Integer>
+                      </cd:Type>
+                    </cd:Field>
+                    <cd:Field name="MatchAMD">
+                      <cd:Record namexml="MatchAMD">
+                        <cd:Field name="Time_Gap_Threshold">
+                          <cd:Type namexml="Time_Gap_Threshold">
+                            <cd:Attribute name="unit"/>
+                            <cd:Integer format="ascii">
+                              <cd:Description>Threshold lesser than which the delay between a measurement and an AMD profile must be.</cd:Description>
+                              <cd:Unit>s</cd:Unit>
+                              <cd:NativeType>uint16</cd:NativeType>
+                            </cd:Integer>
+                          </cd:Type>
+                        </cd:Field>
+                      </cd:Record>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+                <cd:Field name="L2Ap">
+                  <cd:Record namexml="L2Ap">
+                    <cd:Field name="Quality_Flag">
+                      <cd:Record namexml="Quality_Flag">
+                        <cd:Field name="Mie_Snr_Threshold">
+                          <cd:Type namexml="Mie_Snr_Threshold">
+                            <cd:Integer format="ascii">
+                              <cd:Description>Threshold on the Mie SNR to consider the Mie signal as valid</cd:Description>
+                              <cd:NativeType>uint16</cd:NativeType>
+                            </cd:Integer>
+                          </cd:Type>
+                        </cd:Field>
+                        <cd:Field name="Rayleigh_Snr_Threshold">
+                          <cd:Type namexml="Rayleigh_Snr_Threshold">
+                            <cd:Integer format="ascii">
+                              <cd:Description>Threshold on the Rayleigh SNR to consider the Rayleigh signal as valid</cd:Description>
+                              <cd:NativeType>uint16</cd:NativeType>
+                            </cd:Integer>
+                          </cd:Type>
+                        </cd:Field>
+                        <cd:Field name="Mid_Mie_Snr_Threshold">
+                          <cd:Type namexml="Mid_Mie_Snr_Threshold">
+                            <cd:Integer format="ascii">
+                              <cd:Description>Threshold on the Mie SNR defined on middle bins to consider the Mie signal as valid</cd:Description>
+                              <cd:NativeType>uint16</cd:NativeType>
+                            </cd:Integer>
+                          </cd:Type>
+                        </cd:Field>
+                        <cd:Field name="Mid_Rayleigh_Snr_Threshold">
+                          <cd:Type namexml="Mid_Rayleigh_Snr_Threshold">
+                            <cd:Integer format="ascii">
+                              <cd:Description>Threshold on the Rayleigh SNR defined on middle bins to consider the Rayleigh signal as valid</cd:Description>
+                              <cd:NativeType>uint16</cd:NativeType>
+                            </cd:Integer>
+                          </cd:Type>
+                        </cd:Field>
+                        <cd:Field name="Beta_Error_Bar_Threshold">
+                          <cd:Type namexml="Beta_Error_Bar_Threshold">
+                            <cd:Attribute name="unit"/>
+                            <cd:Integer format="ascii">
+                              <cd:Description>Threshold on the relative error of particle backscatter retrieval (ratio of the variance of the particle backscatter coefficient to the particle backscatter coefficient)</cd:Description>
+                              <cd:Unit>%</cd:Unit>
+                              <cd:NativeType>uint16</cd:NativeType>
+                            </cd:Integer>
+                          </cd:Type>
+                        </cd:Field>
+                        <cd:Field name="Alpha_Error_Bar_Threshold">
+                          <cd:Type namexml="Alpha_Error_Bar_Threshold">
+                            <cd:Attribute name="unit"/>
+                            <cd:Integer format="ascii">
+                              <cd:Description>Threshold on the relative error of particle extinction retrieval (ratio of the variance of the particle extinction coefficient to the particle extinction coefficient)</cd:Description>
+                              <cd:Unit>%</cd:Unit>
+                              <cd:NativeType>uint16</cd:NativeType>
+                            </cd:Integer>
+                          </cd:Type>
+                        </cd:Field>
+                        <cd:Field name="Mid_Beta_Error_Bar_Threshold">
+                          <cd:Type namexml="Mid_Beta_Error_Bar_Threshold">
+                            <cd:Attribute name="unit"/>
+                            <cd:Integer format="ascii">
+                              <cd:Description>Threshold on the relative error of particle backscatter retrieval on middle bins (ratio of the variance of the particle backscatter coefficient to the particle backscatter coefficient defined on middle bins)</cd:Description>
+                              <cd:Unit>%</cd:Unit>
+                              <cd:NativeType>uint16</cd:NativeType>
+                            </cd:Integer>
+                          </cd:Type>
+                        </cd:Field>
+                        <cd:Field name="Mid_Alpha_Error_Bar_Threshold">
+                          <cd:Type namexml="Mid_Alpha_Error_Bar_Threshold">
+                            <cd:Attribute name="unit"/>
+                            <cd:Integer format="ascii">
+                              <cd:Description>Threshold on the relative error of particle extinction retrieval on middle bins (ratio of the variance of the particle extinction coefficient to the particle extinction coefficient defined on middle bins)</cd:Description>
+                              <cd:Unit>%</cd:Unit>
+                              <cd:NativeType>uint16</cd:NativeType>
+                            </cd:Integer>
+                          </cd:Type>
+                        </cd:Field>
+                        <cd:Field name="Total_Optical_Depth_Threshold">
+                          <cd:Type namexml="Total_Optical_Depth_Threshold">
+                            <cd:Integer format="ascii">
+                              <cd:Description>Threshold above which we consider that the backscattered signal was totally attenuated by absorption.</cd:Description>
+                              <cd:NativeType>uint16</cd:NativeType>
+                            </cd:Integer>
+                          </cd:Type>
+                        </cd:Field>
+                        <cd:Field name="BER_Max_Threshold">
+                          <cd:Type namexml="BER_Max_Threshold">
+                            <cd:Attribute name="unit"/>
+                            <cd:Float format="ascii">
+                              <cd:Description>Above this value, the BER retrieval is supposed to be invalid</cd:Description>
+                              <cd:Unit>sr^-1</cd:Unit>
+                              <cd:NativeType>double</cd:NativeType>
+                            </cd:Float>
+                          </cd:Type>
+                        </cd:Field>
+                        <cd:Field name="BER_Min_Threshold">
+                          <cd:Type namexml="BER_Min_Threshold">
+                            <cd:Attribute name="unit"/>
+                            <cd:Float format="ascii">
+                              <cd:Description>Below this value, the BER retrieval is supposed to be invalid</cd:Description>
+                              <cd:Unit>sr^-1</cd:Unit>
+                              <cd:NativeType>double</cd:NativeType>
+                            </cd:Float>
+                          </cd:Type>
+                        </cd:Field>
+                      </cd:Record>
+                    </cd:Field>
+                    <cd:Field name="Find_Matching_Bins">
+                      <cd:Record namexml="Find_Matching_Bins">
+                        <cd:Field name="Altitude_Match_Threshold">
+                          <cd:Type namexml="Altitude_Match_Threshold">
+                            <cd:Attribute name="unit"/>
+                            <cd:Integer format="ascii">
+                              <cd:Description>Threshold lesser than which the gap between a Rayleigh bin border and a Mie bin border must be for them to match.</cd:Description>
+                              <cd:Unit>m</cd:Unit>
+                              <cd:NativeType>uint16</cd:NativeType>
+                            </cd:Integer>
+                          </cd:Type>
+                        </cd:Field>
+                      </cd:Record>
+                    </cd:Field>
+                    <cd:Field name="Radiometric_Correction">
+                      <cd:Record namexml="Radiometric_Correction">
+                        <cd:Field name="Radiometric_Correction_Switch_On">
+                          <cd:Type namexml="Radiometric_Correction_Switch_On">
+                            <cd:Integer format="ascii">
+                              <cd:Description>If radiometric correction shall be applied, set to '1', else '0'.</cd:Description>
+                              <cd:NativeType>uint8</cd:NativeType>
+                            </cd:Integer>
+                          </cd:Type>
+                        </cd:Field>
+                        <cd:Field name="Min_Signal_Level">
+                          <cd:Type namexml="Min_Signal_Level">
+                            <cd:Attribute name="unit"/>
+                            <cd:Float format="ascii">
+                              <cd:Description>Minimum signal level for observed signal to be used for the radiometric correction.</cd:Description>
+                              <cd:Unit>ACCD counts</cd:Unit>
+                              <cd:NativeType>double</cd:NativeType>
+                            </cd:Float>
+                          </cd:Type>
+                        </cd:Field>
+                        <cd:Field name="Rho_Threshold">
+                          <cd:Type namexml="Rho_Threshold">
+                            <cd:Float format="ascii">
+                              <cd:Description>SR threshold for selection of aerosol free bins within the height regime specified by Lower_Height and Upper_Height.</cd:Description>
+                              <cd:NativeType>double</cd:NativeType>
+                            </cd:Float>
+                          </cd:Type>
+                        </cd:Field>
+                        <cd:Field name="Lower_Height">
+                          <cd:Type namexml="Lower_Height">
+                            <cd:Attribute name="unit"/>
+                            <cd:Integer format="ascii">
+                              <cd:Description>Lower boundary of height regime for signals used for radiometric correction.</cd:Description>
+                              <cd:Unit>m</cd:Unit>
+                              <cd:NativeType>uint16</cd:NativeType>
+                            </cd:Integer>
+                          </cd:Type>
+                        </cd:Field>
+                        <cd:Field name="Upper_Height">
+                          <cd:Type namexml="Upper_Height">
+                            <cd:Attribute name="unit"/>
+                            <cd:Integer format="ascii">
+                              <cd:Description>Upper boundary of height regime for signals used for radiometric correction.</cd:Description>
+                              <cd:Unit>m</cd:Unit>
+                              <cd:NativeType>uint16</cd:NativeType>
+                            </cd:Integer>
+                          </cd:Type>
+                        </cd:Field>
+                        <cd:Field name="Filter_Size">
+                          <cd:Type namexml="Filter_Size">
+                            <cd:Integer format="ascii">
+                              <cd:Description>2*Filter_Size + 1 is used as the window size for the median filter applied to energy corrected Kray/Kmie derived from aerosol free bins on BRC level.</cd:Description>
+                              <cd:NativeType>uint16</cd:NativeType>
+                            </cd:Integer>
+                          </cd:Type>
+                        </cd:Field>
+                      </cd:Record>
+                    </cd:Field>
+                    <!--TODO confirm -->
+                    <cd:Field name="Denoising_Optimizer">
+                      <cd:Record namexml="Denoising_Optimizer">
+                        <cd:Field name="Denoising_Optimizer_Switch_On">
+                          <cd:Type namexml="Denoising_Optimizer_Switch_On">
+                            <cd:Integer format="ascii">
+                              <cd:NativeType>uint16</cd:NativeType>
+                            </cd:Integer>
+                          </cd:Type>
+                        </cd:Field>
+                      </cd:Record>
+                    </cd:Field>
+                    <cd:Field name="Feature_Finder">
+                      <cd:Record namexml="Feature_Finder">
+                        <cd:Field name="FF_Mie_Snr_Threshold">
+                          <cd:Type namexml="FF_Mie_Snr_Threshold">
+                            <cd:Float format="ascii">
+                              <cd:Description>SNR threshold used in median filter.</cd:Description>
+                              <cd:NativeType>double</cd:NativeType>
+                            </cd:Float>
+                          </cd:Type>
+                        </cd:Field>
+                        <cd:Field name="FF_Median_Filter_Width">
+                          <cd:Type namexml="FF_Median_Filter_Width">
+                            <cd:Integer format="ascii">
+                              <cd:Description>Width given as number of measurements used to smooth SNR values.</cd:Description>
+                              <cd:NativeType>uint16</cd:NativeType>
+                            </cd:Integer>
+                          </cd:Type>
+                        </cd:Field>
+                        <cd:Field name="FF_Min_Group_Size">
+                          <cd:Type namexml="FF_Min_Group_Size">
+                            <cd:Integer format="ascii">
+                              <cd:Description>Minimum number of measurements needed to form a group.</cd:Description>
+                              <cd:NativeType>uint16</cd:NativeType>
+                            </cd:Integer>
+                          </cd:Type>
+                        </cd:Field>
+                        <cd:Field name="FF_Transmission_Threshold">
+                          <cd:Type namexml="FF_Transmission_Threshold">
+                            <cd:Float format="ascii">
+                              <cd:Description>Transmission threshold used in median filter.</cd:Description>
+                              <cd:NativeType>double</cd:NativeType>
+                            </cd:Float>
+                          </cd:Type>
+                        </cd:Field>
+                      </cd:Record>
+                    </cd:Field>
+                    <cd:Field name="SCA">
+                      <cd:Record namexml="SCA">
+                        <cd:Field name="Clear_FMB_Beta_Threshold">
+                          <cd:Type namexml="Clear_FMB_Beta_Threshold">
+                            <cd:Attribute name="unit"/>
+                            <cd:Float format="ascii">
+                              <cd:Description>Particulate backscatter coefficient value below which the first matching bin will be considered empty of any particle, introducing thus no oscillating bias in the extinction retrieval.</cd:Description>
+                              <cd:Unit>m^-1 sr^-1</cd:Unit>
+                              <cd:NativeType>double</cd:NativeType>
+                            </cd:Float>
+                          </cd:Type>
+                        </cd:Field>
+                        <cd:Field name="Negative_Betap_Threshold">
+                          <cd:Type namexml="Negative_Betap_Threshold">
+                            <cd:Attribute name="unit"/>
+                            <cd:Float format="ascii">
+                              <cd:Description>Particulate backscatter coefficient value below which the coefficient and its derivatives will be considered invalid and set to -1. Slightly ngative values may be accepted to catch a glimps of the oscillations around zero.</cd:Description>
+                              <cd:Unit>m^-1 sr^-1</cd:Unit>
+                              <cd:NativeType>double</cd:NativeType>
+                            </cd:Float>
+                          </cd:Type>
+                        </cd:Field>
+                        <cd:Field name="Negative_SLOD_Threshold">
+                          <cd:Type namexml="Negative_SLOD_Threshold">
+                            <cd:Float format="ascii">
+                              <cd:Description>SLOD value below which the coefficient and its derivatives will be considered invalid and set to -1. Slightly ngative values may be accepted to catch a glimps of the oscillations around zero.</cd:Description>
+                              <cd:NativeType>double</cd:NativeType>
+                            </cd:Float>
+                          </cd:Type>
+                        </cd:Field>
+                        <cd:Field name="Negative_Betap_Threshold2">
+                          <cd:Type namexml="Negative_Betap_Threshold2">
+                            <cd:Attribute name="unit"/>
+                            <cd:Float format="ascii">
+                              <cd:Description>Particulate backscatter coefficient value below which thecoefficient and its derivatives will be considered invalid and set to - 1. Slightly ngative values may be accepted to catch a glimps of the oscillations around zero.</cd:Description>
+                              <cd:Unit>m^-1 sr^-1</cd:Unit>
+                              <cd:NativeType>double</cd:NativeType>
+                            </cd:Float>
+                          </cd:Type>
+                        </cd:Field>
+                      </cd:Record>
+                    </cd:Field>
+                    <cd:Field name="ICA">
+                      <cd:Record namexml="ICA">
+                        <cd:Field name="Emptiness_Betap_Threshold">
+                          <cd:Type namexml="Emptiness_Betap_Threshold">
+                            <cd:Attribute name="unit"/>
+                            <cd:Float format="ascii">
+                              <cd:Description>Particulate backscatter coefficient value below which it is considered that there is no significant amount of particles. Note that it may be the same as for the feature finder.</cd:Description>
+                              <cd:Unit>m^-1 sr^-1</cd:Unit>
+                              <cd:NativeType>double</cd:NativeType>
+                            </cd:Float>
+                          </cd:Type>
+                        </cd:Field>
+                        <cd:Field name="Negative_Betap_Threshold">
+                          <cd:Type namexml="Negative_Betap_Threshold">
+                            <cd:Attribute name="unit"/>
+                            <cd:Float format="ascii">
+                              <cd:Description>Negative value under which fluctuations are considered to be too high, leading to a rejection of the bin.</cd:Description>
+                              <cd:Unit>m^-1 sr^-1</cd:Unit>
+                              <cd:NativeType>double</cd:NativeType>
+                            </cd:Float>
+                          </cd:Type>
+                        </cd:Field>
+                        <cd:Field name="List_of_Filling_Cases">
+                          <cd:Record namexml="List_of_Filling_Cases">
+                            <cd:Attribute name="count"/>
+                            <cd:Field name="Filling_Case">
+                              <cd:Array>
+                                <cd:Dimension/>
+                                <cd:Record namexml="Filling_Case">
+                                  <cd:Field name="F1">
+                                    <cd:Type namexml="F1">
+                                      <cd:Float format="ascii">
+                                        <cd:Description>Factor of the constant member.</cd:Description>
+                                        <cd:NativeType>double</cd:NativeType>
+                                      </cd:Float>
+                                    </cd:Type>
+                                  </cd:Field>
+                                  <cd:Field name="F2">
+                                    <cd:Type namexml="F2">
+                                      <cd:Float format="ascii">
+                                        <cd:Description>Factor of the H function.</cd:Description>
+                                        <cd:NativeType>double</cd:NativeType>
+                                      </cd:Float>
+                                    </cd:Type>
+                                  </cd:Field>
+                                  <cd:Field name="F3">
+                                    <cd:Type namexml="F3">
+                                      <cd:Float format="ascii">
+                                        <cd:Description>Factor of the exponential function.</cd:Description>
+                                        <cd:NativeType>double</cd:NativeType>
+                                      </cd:Float>
+                                    </cd:Type>
+                                  </cd:Field>
+                                </cd:Record>
+                              </cd:Array>
+                            </cd:Field>
+                          </cd:Record>
+                        </cd:Field>
+                        <cd:Field name="Credibility_Criterion">
+                          <cd:Type namexml="Credibility_Criterion">
+                            <cd:Float format="ascii">
+                              <cd:Description>Particulate backscatter coefficient value below which thecoefficient and its derivatives will be considered invalid and set to - 1. Slightly negative values may be accepted to catch a glimps of the oscillations around zero.</cd:Description>
+                              <cd:NativeType>double</cd:NativeType>
+                            </cd:Float>
+                          </cd:Type>
+                        </cd:Field>
+                        <cd:Field name="Max_Cloud_Width">
+                          <cd:Type namexml="Max_Cloud_Width">
+                            <cd:Integer format="ascii">
+                              <cd:Description>Maximum number of consecutive height bins with cloud allowed for ICA algorithm.</cd:Description>
+                              <cd:NativeType>uint8</cd:NativeType>
+                            </cd:Integer>
+                          </cd:Type>
+                        </cd:Field>
+                      </cd:Record>
+                    </cd:Field>
+                    <cd:Field name="Trans2LOD">
+                      <cd:Record namexml="Trans2LOD">
+                        <cd:Field name="Iteration_Max">
+                          <cd:Type namexml="Iteration_Max">
+                            <cd:Integer format="ascii">
+                              <cd:Description>Maximum number of iterations in the iterative estimation of the SLOD.</cd:Description>
+                              <cd:NativeType>uint16</cd:NativeType>
+                            </cd:Integer>
+                          </cd:Type>
+                        </cd:Field>
+                        <cd:Field name="Inversion_Tolerance">
+                          <cd:Type namexml="Inversion_Tolerance">
+                            <cd:Float format="ascii">
+                              <cd:Description>Maximum gap between the ratio of the normalized two way transmission and the squared transmission from the satellite to the bin and the value resulting of the SLOD estimation.</cd:Description>
+                              <cd:NativeType>double</cd:NativeType>
+                            </cd:Float>
+                          </cd:Type>
+                        </cd:Field>
+                        <cd:Field name="Asymptotic_Expansion_Limit_Coefficient">
+                          <cd:Type namexml="Asymptotic_Expansion_Limit_Coefficient">
+                            <cd:Float format="ascii">
+                              <cd:Description>Coefficient involved in the determination of the asymptotic expansion to be used in the inversion to get the SLOD. It's value is set to 0.4 and may be static.</cd:Description>
+                              <cd:NativeType>double</cd:NativeType>
+                            </cd:Float>
+                          </cd:Type>
+                        </cd:Field>
+                      </cd:Record>
+                    </cd:Field>
+                    <cd:Field name="MCA">
+                      <cd:Record namexml="MCA">
+                        <cd:Field name="Low_SR_Fine_Threshold">
+                          <cd:Type namexml="Low_SR_Fine_Threshold">
+                            <cd:Float format="ascii">
+                              <cd:Description>Value below which the SR_fine frim L1B data is considered not vali. Note that the default value of 0.75 will obviously lead to quantitatively wrong results, but the shape of the variations may be ept in the calculation thus enabling some interpretation.</cd:Description>
+                              <cd:NativeType>double</cd:NativeType>
+                            </cd:Float>
+                          </cd:Type>
+                        </cd:Field>
+                      </cd:Record>
+                    </cd:Field>
+                    <cd:Field name="Scene_Classification">
+                      <cd:Record namexml="Scene_Classification">
+                        <cd:Field name="Scattering_Ratio_Cloud_Threshold">
+                          <cd:Type namexml="Scattering_Ratio_Cloud_Threshold">
+                            <cd:Float format="ascii">
+                              <cd:Description>Value of the SR above which the presence of a cloud is strongly assumed.</cd:Description>
+                              <cd:NativeType>double</cd:NativeType>
+                            </cd:Float>
+                          </cd:Type>
+                        </cd:Field>
+                        <cd:Field name="BER_Cloud_Threshold">
+                          <cd:Type namexml="BER_Cloud_Threshold">
+                            <cd:Attribute name="unit"/>
+                            <cd:Float format="ascii">
+                              <cd:Description>Value of the BER below which the presence of a cloud is strongly assumed.</cd:Description>
+                              <cd:Unit>m^-1 sr^-1</cd:Unit>
+                              <cd:NativeType>double</cd:NativeType>
+                            </cd:Float>
+                          </cd:Type>
+                        </cd:Field>
+                        <cd:Field name="Water_Melting_Temperature">
+                          <cd:Type namexml="Water_Melting_Temperature">
+                            <cd:Attribute name="unit"/>
+                            <cd:Float format="ascii">
+                              <cd:Description>Set to 273.15 K for 1 bar pressure.</cd:Description>
+                              <cd:Unit>K</cd:Unit>
+                              <cd:NativeType>double</cd:NativeType>
+                            </cd:Float>
+                          </cd:Type>
+                        </cd:Field>
+                        <cd:Field name="Surfusion_Threshold_Temperature">
+                          <cd:Type namexml="Surfusion_Threshold_Temperature">
+                            <cd:Attribute name="unit"/>
+                            <cd:Float format="ascii">
+                              <cd:Description>Temperature down to which supercooled water may be seen in the atmosphere. Set to 233.15 K.</cd:Description>
+                              <cd:Unit>K</cd:Unit>
+                              <cd:NativeType>double</cd:NativeType>
+                            </cd:Float>
+                          </cd:Type>
+                        </cd:Field>
+                        <cd:Field name="Relative_Humidity_Cloud_Threshold">
+                          <cd:Type namexml="Relative_Humidity_Cloud_Threshold">
+                            <cd:Float format="ascii">
+                              <cd:Description>RH value above which the presence of a cloud is strongly assumed. Taking the incertitude of the model, it is set to 0.94.</cd:Description>
+                              <cd:NativeType>double</cd:NativeType>
+                            </cd:Float>
+                          </cd:Type>
+                        </cd:Field>
+                      </cd:Record>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+              </cd:Record>
+            </cd:Field>
+            <cd:Field name="System_Params">
+              <cd:Record namexml="System_Params">
+                <cd:Field name="Simulated_Data_Flag">
+                  <cd:Type namexml="Simulated_Data_Flag">
+                    <cd:Integer format="ascii">
+                      <cd:Description>Flag indicating if simulated or measurement AISP data was used to process up to Level 1B</cd:Description>
+                      <cd:NativeType>uint8</cd:NativeType>
+                      <cd:Mapping string="FALSE" value="0"/>
+                      <cd:Mapping string="False" value="0"/>
+                      <cd:Mapping string="false" value="0"/>
+                      <cd:Mapping string="TRUE" value="1"/>
+                      <cd:Mapping string="True" value="1"/>
+                      <cd:Mapping string="true" value="1"/>
+                      <ct:NamedTest id="BooleanXmlTest"/>
+                    </cd:Integer>
+                  </cd:Type>
+                </cd:Field>
+              </cd:Record>
+            </cd:Field>
+          </cd:Record>
+        </cd:Array>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+</cd:Record>
