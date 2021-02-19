@@ -1,0 +1,178 @@
+<?xml version="1.0"?>
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="binary" last-modified="2021-02-19" name="Level_2A_SCA_Opt_MDSR_03_12">
+  <cd:Field name="starttime">
+    <cd:Time timeformat="binary_envisat_datetime">
+      <cd:Description>Start date and time of the SCA profile covered by the present DSR</cd:Description>
+      <ct:NamedTest id="RangeSecond" path="seconds"/>
+      <ct:NamedTest id="RangeMicroSecond" path="microseconds"/>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="sca_optical_properties">
+    <cd:Array>
+      <cd:Dimension>24</cd:Dimension>
+      <cd:Record>
+        <cd:Description>Structure containing SCA products</cd:Description>
+        <cd:Field name="extinction">
+          <cd:Float>
+            <cd:Description>Particle extinction coefficient of the bin. Missing value: -1e+06.</cd:Description>
+            <cd:Unit>10^-6 m^-1</cd:Unit>
+            <cd:BitSize>64</cd:BitSize>
+            <cd:NativeType>double</cd:NativeType>
+            <ct:NamedTest id="FloatIsFinite"/>
+          </cd:Float>
+        </cd:Field>
+        <cd:Field name="backscatter">
+          <cd:Float>
+            <cd:Description>Particle backscatter coefficient of the bin.  Missing value: -1e+06.</cd:Description>
+            <cd:Unit>10^-6 sr m^-1</cd:Unit>
+            <cd:BitSize>64</cd:BitSize>
+            <cd:NativeType>double</cd:NativeType>
+            <ct:NamedTest id="FloatIsFinite"/>
+          </cd:Float>
+        </cd:Field>
+        <cd:Field name="lod">
+          <cd:Float>
+            <cd:Description>Particle LOD of the bin. Missing value: -1.</cd:Description>
+            <cd:BitSize>64</cd:BitSize>
+            <cd:NativeType>double</cd:NativeType>
+            <ct:NamedTest id="FloatIsFinite"/>
+          </cd:Float>
+        </cd:Field>
+        <cd:Field name="sr">
+          <cd:Float>
+            <cd:Description>Scattering ratio of the height bin. Missing value: -1.</cd:Description>
+            <cd:BitSize>64</cd:BitSize>
+            <cd:NativeType>double</cd:NativeType>
+            <ct:NamedTest id="FloatIsFinite"/>
+          </cd:Float>
+        </cd:Field>
+        <cd:Field name="lr">
+          <cd:Float>
+            <cd:Description>Particle extinction-to-backscatter ratio. Missing value: -1.</cd:Description>
+            <cd:Unit>sr</cd:Unit>
+            <cd:BitSize>64</cd:BitSize>
+            <cd:NativeType>double</cd:NativeType>
+            <ct:NamedTest id="FloatIsFinite"/>
+          </cd:Float>
+        </cd:Field>
+      </cd:Record>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="geolocation_middle_bins">
+    <cd:Array>
+      <cd:Dimension>24</cd:Dimension>
+      <cd:Record>
+        <cd:Description>Horizontal averaged coordinates of the boundaries of the middle bins over the BRC. Middle bins are made of 2 halves of adjacent Rayleigh bins.</cd:Description>
+        <cd:Field name="longitude">
+          <cd:Integer>
+            <cd:Description>Longitude of the start point of the profile middle bin</cd:Description>
+            <cd:Unit>1e-6 degrees_east</cd:Unit>
+            <cd:Conversion denominator="1000000.000000" numerator="1.000000">
+              <cd:Unit>degrees_east</cd:Unit>
+            </cd:Conversion>
+            <cd:BitSize>32</cd:BitSize>
+            <cd:NativeType>int32</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="latitude">
+          <cd:Integer>
+            <cd:Description>Latitude of the start point of the profile middle bin</cd:Description>
+            <cd:Unit>1e-6 degrees_north</cd:Unit>
+            <cd:Conversion denominator="1000000.000000" numerator="1.000000">
+              <cd:Unit>degrees_north</cd:Unit>
+            </cd:Conversion>
+            <cd:BitSize>32</cd:BitSize>
+            <cd:NativeType>int32</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="altitude">
+          <cd:Float>
+            <cd:Description>Bottom altitude of the middle bin</cd:Description>
+            <cd:Unit>m</cd:Unit>
+            <cd:BitSize>64</cd:BitSize>
+            <cd:NativeType>double</cd:NativeType>
+            <ct:NamedTest id="FloatIsFinite"/>
+          </cd:Float>
+        </cd:Field>
+      </cd:Record>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="sca_optical_properties_mid_bins">
+    <cd:Array>
+      <cd:Dimension>23</cd:Dimension>
+      <cd:Record>
+        <cd:Description>Structure containing SCA BRC-level products in bins made from 2 halves of adjacent original Rayleigh bins</cd:Description>
+        <cd:Field name="extinction">
+          <cd:Float>
+            <cd:Description>Particle extinction coefficient of the middle bin. Missing value: -1e+06.</cd:Description>
+            <cd:Unit>10^-6 m^-1</cd:Unit>
+            <cd:BitSize>64</cd:BitSize>
+            <cd:NativeType>double</cd:NativeType>
+            <ct:NamedTest id="FloatIsFinite"/>
+          </cd:Float>
+        </cd:Field>
+        <cd:Field name="backscatter">
+          <cd:Float>
+            <cd:Description>Particle backscatter coefficient of the middle bin. Missing value: -1e+06.</cd:Description>
+            <cd:Unit>10^-6 sr m^-1</cd:Unit>
+            <cd:BitSize>64</cd:BitSize>
+            <cd:NativeType>double</cd:NativeType>
+            <ct:NamedTest id="FloatIsFinite"/>
+          </cd:Float>
+        </cd:Field>
+        <cd:Field name="lod">
+          <cd:Float>
+            <cd:Description>Particle LOD of the middle bin. Missing value: -1.</cd:Description>
+            <cd:BitSize>64</cd:BitSize>
+            <cd:NativeType>double</cd:NativeType>
+            <ct:NamedTest id="FloatIsFinite"/>
+          </cd:Float>
+        </cd:Field>
+        <cd:Field name="ber">
+          <cd:Float>
+            <cd:Description>Backscatter-to-extinction ratio of the middle bin. Missing value: -1.</cd:Description>
+            <cd:BitSize>64</cd:BitSize>
+            <cd:NativeType>double</cd:NativeType>
+            <ct:NamedTest id="FloatIsFinite"/>
+          </cd:Float>
+        </cd:Field>
+        <cd:Field name="lr">
+          <cd:Float>
+            <cd:Description>Particle extinction-to-backscatter ratio of the middle bin. Missing value: -1.</cd:Description>
+            <cd:Unit>sr</cd:Unit>
+            <cd:BitSize>64</cd:BitSize>
+            <cd:NativeType>double</cd:NativeType>
+            <ct:NamedTest id="FloatIsFinite"/>
+          </cd:Float>
+        </cd:Field>
+      </cd:Record>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="attenuated_backscatter_values">
+    <cd:Array>
+      <cd:Dimension>30</cd:Dimension>
+      <cd:Dimension>24</cd:Dimension>
+      <cd:Record>
+        <cd:Description>Structure containing containing cross-talk corrected attenuated molecular and particulate backscatter on Rayleigh height bins; missing values are indicated by 0</cd:Description>
+        <cd:Field name="attenuated_molecular_backscatter">
+          <cd:Float>
+            <cd:Description>Attenuated molecular backscatter on Rayleigh height bin. Missing value: 0.</cd:Description>
+            <cd:Unit>sr^-1 m^-1</cd:Unit>
+            <cd:BitSize>64</cd:BitSize>
+            <cd:NativeType>double</cd:NativeType>
+            <ct:NamedTest id="FloatIsFinite"/>
+          </cd:Float>
+        </cd:Field>
+        <cd:Field name="attenuated_particulate_backscatter">
+          <cd:Float>
+            <cd:Description>Attenuated particulate backscatter on Rayleigh height bin. Missing value: 0.</cd:Description>
+            <cd:Unit>sr^-1 m^-1</cd:Unit>
+            <cd:BitSize>64</cd:BitSize>
+            <cd:NativeType>double</cd:NativeType>
+            <ct:NamedTest id="FloatIsFinite"/>
+          </cd:Float>
+        </cd:Field>
+      </cd:Record>
+    </cd:Array>
+  </cd:Field>
+</cd:Record>
