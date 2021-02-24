@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" name="Level_2A_Processing_Parameters_03_12" format="xml" namexml="Level_2A_Processing_Parameters" last-modified="2021-02-19">
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" name="Level_2A_Processing_Parameters_03_12" format="xml" namexml="Level_2A_Processing_Parameters" last-modified="2021-02-24">
   <cd:Field name="List_of_Data_Set_Records">
     <cd:Record namexml="List_of_Data_Set_Records">
       <cd:Description>List of Data Set Records</cd:Description>
@@ -169,8 +169,8 @@
                     </cd:Field>
                   </cd:Record>
                 </cd:Field>
-                <cd:Field name="Feature_Mask"> <!--TODO listed as Feature_KNMI in the IODD -->
-                  <cd:Record namexml="Feature_Mask">
+                <cd:Field name="Feature_KNMI">
+                  <cd:Record namexml="Feature_KNMI">
                     <cd:Field name="Sensor_Config">
                       <cd:Record namexml="Sensor_Config">
                         <cd:Field name="Noise_Channel_Lower_Height">
@@ -700,12 +700,12 @@
                         </cd:Field>
                       </cd:Record>
                     </cd:Field>
-                    <!--TODO confirm -->
                     <cd:Field name="Denoising_Optimizer">
                       <cd:Record namexml="Denoising_Optimizer">
                         <cd:Field name="Denoising_Optimizer_Switch_On">
                           <cd:Type namexml="Denoising_Optimizer_Switch_On">
                             <cd:Integer format="ascii">
+                              <cd:Description>Switch for denoising algorithm. If set to 1, the algorithm is run, 0 otherwise.</cd:Description>
                               <cd:NativeType>uint16</cd:NativeType>
                             </cd:Integer>
                           </cd:Type>
