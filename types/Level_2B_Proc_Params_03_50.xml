@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" name="Level_2B_Proc_Params_03_50" format="xml" namexml="Level_2B_Proc_Params" last-modified="2021-01-27">
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" name="Level_2B_Proc_Params_03_50" format="xml" namexml="Level_2B_Proc_Params" last-modified="2021-03-10">
   <cd:Description>Level 2B Processing Parameters GADS DSR</cd:Description>
   <cd:Field name="FH_Default_Fields">
     <cd:Record namexml="FH_Default_Fields">
@@ -1279,6 +1279,20 @@
               </cd:Float>
             </cd:Type>
           </cd:Field>
+          <cd:Field name="Use_Fitted_Nonlinear_Correction">
+            <cd:Type namexml="Use_Fitted_Nonlinear_Correction">
+              <cd:Integer format="ascii">
+                <cd:Description>Switch that can be used to enable use of the fitted non-linear correction as is provided in the incoming L1B product file</cd:Description>
+                <cd:NativeType>uint8</cd:NativeType>
+                <cd:Mapping string="FALSE" value="0"/>
+                <cd:Mapping string="False" value="0"/>
+                <cd:Mapping string="false" value="0"/>
+                <cd:Mapping string="TRUE" value="1"/>
+                <cd:Mapping string="True" value="1"/>
+                <cd:Mapping string="true" value="1"/>
+              </cd:Integer>
+            </cd:Type>
+          </cd:Field>
         </cd:Record>
       </cd:Field>
       <cd:Field name="RBC_Algorithm_Params">
@@ -1302,9 +1316,19 @@
               <cd:Description>A switch to define how to do decontamination of the Rayleigh Clear winds.</cd:Description>
             </cd:Text>
           </cd:Field>
+          <cd:Field name="ScatRatio_Method2_for_Decontamination_Clear_Winds">
+            <cd:Text namexml="ScatRatio_Method2_for_Decontamination_Clear_Winds">
+              <cd:Description>A switch to define a backup method controlling how to do decontamination of the Rayleigh Clear winds. Only used if the primary method yields a missing result.</cd:Description>
+            </cd:Text>
+          </cd:Field>
           <cd:Field name="ScatRatio_Method_for_Decontamination_Cloudy_Winds">
             <cd:Text namexml="ScatRatio_Method_for_Decontamination_Cloudy_Winds">
               <cd:Description>A switch to define how to do decontamination of the Rayleigh Cloudy winds.</cd:Description>
+            </cd:Text>
+          </cd:Field>
+          <cd:Field name="ScatRatio_Method2_for_Decontamination_Cloudy_Winds">
+            <cd:Text namexml="ScatRatio_Method2_for_Decontamination_Cloudy_Winds">
+              <cd:Description>A switch to define a backup method controlling how to do decontamination of the Rayleigh Cloudy winds. Only used if the primary method yields a missing result.</cd:Description>
             </cd:Text>
           </cd:Field>
           <cd:Field name="Flag_Cloudy_Rayleigh_Results_Invalid">
