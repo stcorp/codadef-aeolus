@@ -2872,6 +2872,14 @@
         <cd:MatchData offset="95">L2B/L2C IODD Iss. 03.50</cd:MatchData>
       </cd:DetectionRule>
     </cd:ProductDefinition>
+    <cd:ProductDefinition id="ALD_U_N_2B_03_60" format="binary" version="9">
+      <cd:Description>This definition is based on version 3.60 of IODD AED-SD-ECMWF-L2B-037</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT="AE_</cd:MatchData>
+        <cd:MatchData offset="17">ALD_U_N_2B</cd:MatchData>
+        <cd:MatchData offset="95">L2B/L2C IODD Iss. 03.60</cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
   </cd:ProductType>
   <cd:ProductType name="ALD_U_N_2B_HDR">
     <cd:Description>Aeolus Level 2B Product (HDR)</cd:Description>
@@ -2924,6 +2932,9 @@
       </cd:DetectionRule>
       <cd:DetectionRule>
         <cd:MatchData path="/{http://www.esa.int/schemas/ae/ALD_U_N_2B}Earth_Explorer_Header@schemaversion">03.50</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData path="/{http://www.esa.int/schemas/ae/ALD_U_N_2B}Earth_Explorer_Header@schemaversion">03.60</cd:MatchData>
       </cd:DetectionRule>
     </cd:ProductDefinition>
   </cd:ProductType>
@@ -3006,6 +3017,14 @@
         <cd:MatchData offset="95">L2B/L2C IODD Iss. 03.50</cd:MatchData>
       </cd:DetectionRule>
     </cd:ProductDefinition>
+    <cd:ProductDefinition id="ALD_U_N_2C_03_60" format="binary" version="9">
+      <cd:Description>This definition is based on version 3.60 of IODD AED-SD-ECMWF-L2B-037</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT="AE_</cd:MatchData>
+        <cd:MatchData offset="17">ALD_U_N_2C</cd:MatchData>
+        <cd:MatchData offset="95">L2B/L2C IODD Iss. 03.60</cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
   </cd:ProductType>
   <cd:ProductType name="ALD_U_N_2C_HDR">
     <cd:Description>Aeolus Level 2C Product (HDR)</cd:Description>
@@ -3058,6 +3077,9 @@
       </cd:DetectionRule>
       <cd:DetectionRule>
         <cd:MatchData path="/{http://www.esa.int/schemas/ae/ALD_U_N_2C}Earth_Explorer_Header@schemaversion">03.50</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData path="/{http://www.esa.int/schemas/ae/ALD_U_N_2C}Earth_Explorer_Header@schemaversion">03.60</cd:MatchData>
       </cd:DetectionRule>
     </cd:ProductDefinition>
   </cd:ProductType>

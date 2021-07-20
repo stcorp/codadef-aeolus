@@ -1,0 +1,490 @@
+<?xml version="1.0"?>
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="binary" name="Level_2B_Meas_PCD_ADSR_03_60" last-modified="2021-07-19">
+  <cd:Field name="start_of_obs_datetime">
+    <cd:Time timeformat="binary_envisat_datetime">
+      <cd:Description>Start date and time of Measurement</cd:Description>
+      <ct:NamedTest id="RangeSecond" path="seconds"/>
+      <ct:NamedTest id="RangeMicroSecond" path="microseconds"/>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="l1b_brc_number">
+    <cd:Integer>
+      <cd:Description>The index of the original L1B BRC from which this L2B measurement was taken.</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="l1b_meas_number">
+    <cd:Integer>
+      <cd:Description>The index of the measurement within the above mentioned original L1B BRC from which this L2B measurement was taken.</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="l1b_num_meas_per_brc">
+    <cd:Integer>
+      <cd:Description>The number of measurements present in the original L1B BRC from which this L2B measurement was taken.</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="l2b_amd_collocation">
+    <cd:Record>
+      <cd:Description>Structure describing which AMD profile was used, and what the Match Up results are</cd:Description>
+      <cd:Field name="matching_amd_profile">
+        <cd:Integer>
+          <cd:Description>AMD profile number that was found to match with the current measurement</cd:Description>
+          <cd:BitSize>16</cd:BitSize>
+          <cd:NativeType>uint16</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="matchup_qc">
+        <cd:Integer>
+          <cd:Description>code that specifies whether matchup was succesull or not, and if not it gives a reason why it failed</cd:Description>
+          <cd:BitSize>8</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="distance">
+        <cd:Float>
+          <cd:Description>actual distance between this measurement and the selected AuxMet profile</cd:Description>
+          <cd:Unit>km</cd:Unit>
+          <cd:BitSize>64</cd:BitSize>
+          <cd:NativeType>double</cd:NativeType>
+          <ct:NamedTest id="FloatIsFinite"/>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="time_difference">
+        <cd:Float>
+          <cd:Description>actual time difference between this measurement and the selected AuxMet profile</cd:Description>
+          <cd:BitSize>64</cd:BitSize>
+          <cd:NativeType>double</cd:NativeType>
+          <ct:NamedTest id="FloatIsFinite"/>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="spare">
+        <cd:Raw>
+          <cd:Description>Spare</cd:Description>
+          <cd:BitSize>8</cd:BitSize>
+        </cd:Raw>
+        <cd:Hidden/>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="l1b_input_screening">
+    <cd:Record>
+      <cd:Description>Structure describing any problems found during reading of the L1B datafile</cd:Description>
+      <cd:Field name="l1b_obs_scr">
+        <cd:Record>
+          <cd:Description>A structure that stores L1B BRC Obs level screening results on measurement level. This is needed because a L2B group no longer corresponds by definition to a single L1B BRC</cd:Description>
+          <cd:Field name="obs_screening">
+            <cd:Integer>
+              <cd:Description>a field that stores a code indicating whether the L1B Observation level screening was passed for the BRC to which this measurement belongs.</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint8</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="obs_screening_flags1">
+            <cd:Integer>
+              <cd:Description>reserved</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint8</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="obs_screening_flags2">
+            <cd:Integer>
+              <cd:Description>reserved</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint8</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="obs_screening_flags3">
+            <cd:Integer>
+              <cd:Description>reserved</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint8</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="obs_screening_flags4">
+            <cd:Integer>
+              <cd:Description>reserved</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint8</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="obs_screening_flags5">
+            <cd:Integer>
+              <cd:Description>reserved</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint8</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+        </cd:Record>
+      </cd:Field>
+      <cd:Field name="mie_meas">
+        <cd:Record>
+          <cd:Description>structure describing the problems found for this Mie measurement</cd:Description>
+          <cd:Field name="meas_qc">
+            <cd:Integer>
+              <cd:Description>A code describing a problem which prevents using this Mie measurement</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint8</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="meas_qc_flags1">
+            <cd:Integer>
+              <cd:Description>Flags describing problems which prevent using this Mie Measurement. Bit 1: threshold check on num Mie invalid refpulses failed, Bit 2: threshold check on Mie avg. laser freq. offset failed, Bit 3: threshold check on Mie avg. UV energy failed, Bit 4: threshold check on Mie laser freq. offset stdev failed, Bit 5: threshold check on Mie UV energy stdev failed, Bit 6: threshold check on Mie velocity of attitude uncertainty error failed, Bit 7: threshold check on Mie mean emit freq. failed, Bit 8: threshold check on Mie emit freq. stdev failed</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint8</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="meas_qc_flags2">
+            <cd:Integer>
+              <cd:Description>Flags describing problems which prevent using this Mie Measurement. Bit 1: reserved (always set to 0), Bit 2: Moon Blinding flag was set in L1B product, Bit 3: reserved (always set to 0), ..., Bit 8: reserved (always set to 0)</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint8</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="meas_qc_flags3">
+            <cd:Integer>
+              <cd:Description>Flags describing problems which prevent using this Mie Measurement. Bit 1: reserved (always set to 0), Bit 2: reserved (always set to 0), ..., Bit 8: reserved (always set to 0).</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint8</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="bin_screening">
+            <cd:Array>
+              <cd:Dimension>24</cd:Dimension>
+              <cd:Record>
+                <cd:Field name="bin_qc">
+                  <cd:Integer>
+                    <cd:Description>A code describing a problem which prevents using this Mie measurement bin</cd:Description>
+                    <cd:BitSize>8</cd:BitSize>
+                    <cd:NativeType>uint8</cd:NativeType>
+                  </cd:Integer>
+                </cd:Field>
+                <cd:Field name="bin_qc_flags">
+                  <cd:Integer>
+                    <cd:Description>Flags describing problems which prevent using this Mie measurement bin. Bit 1: reserved, Bit 2: reserved, ..., Bit 8: reserved</cd:Description>
+                    <cd:BitSize>8</cd:BitSize>
+                    <cd:NativeType>uint8</cd:NativeType>
+                  </cd:Integer>
+                </cd:Field>
+              </cd:Record>
+            </cd:Array>
+          </cd:Field>
+          <cd:Field name="spare">
+            <cd:Raw>
+              <cd:Description>Spare</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+            </cd:Raw>
+            <cd:Hidden/>
+          </cd:Field>
+        </cd:Record>
+      </cd:Field>
+      <cd:Field name="rayleigh_meas">
+        <cd:Record>
+          <cd:Description>structure describing the problems found for this Rayleigh measurement</cd:Description>
+          <cd:Field name="meas_qc">
+            <cd:Integer>
+              <cd:Description>A code describing a problem which prevents using this Rayleigh measurement</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint8</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="meas_qc_flags1">
+            <cd:Integer>
+              <cd:Description>Flags describing problems which prevent using this Rayleigh Measurement. Bit 1: threshold check on num Rayleigh invalid refpulses failed, Bit 2: threshold check on Rayleigh avg. laser freq. offset failed, Bit 3: threshold check on Rayleigh avg. UV energy failed, Bit 4: threshold check on Rayleigh laser freq. offset stdev failed, Bit 5: threshold check on Rayleigh UV energy stdev failed, Bit 6: threshold check on Rayleigh velocity of attitude uncertainty error failed, Bit 7: threshold check on Rayleigh mean emit freq. failed, Bit 8: threshold check on Rayleigh emit freq. stdev failed</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint8</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="meas_qc_flags2">
+            <cd:Integer>
+              <cd:Description>Bit 1: threshold check on Mie emit freq. stdev failed and was propagated on to the Rayleigh channel, Bit 2: Moon Blinding flag was set in L1B product, Bit 3: reserved (always set to 0), ..., Bit 8: reserved (always set to 0)</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint8</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="meas_qc_flags3">
+            <cd:Integer>
+              <cd:Description>Flags describing problems which prevent using this Rayleigh Measurement. Bit 1: reserved (always set to 0), Bit 2: reserved (always set to 0), ..., Bit 8: reserved (always set to 0).</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint8</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="bin_screening">
+            <cd:Array>
+              <cd:Dimension>24</cd:Dimension>
+              <cd:Record>
+                <cd:Field name="bin_qc">
+                  <cd:Integer>
+                    <cd:Description>A code describing a problem which prevents using this Rayleigh measurement bin</cd:Description>
+                    <cd:BitSize>8</cd:BitSize>
+                    <cd:NativeType>uint8</cd:NativeType>
+                  </cd:Integer>
+                </cd:Field>
+                <cd:Field name="bin_qc_flags">
+                  <cd:Integer>
+                    <cd:Description>Flags describing problems which prevent using this Rayleigh measurement bin. Bit 1: reserved, Bit 2: reserved, ..., Bit 8: reserved</cd:Description>
+                    <cd:BitSize>8</cd:BitSize>
+                    <cd:NativeType>uint8</cd:NativeType>
+                  </cd:Integer>
+                </cd:Field>
+              </cd:Record>
+            </cd:Array>
+          </cd:Field>
+          <cd:Field name="spare">
+            <cd:Raw>
+              <cd:Description>Spare</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+            </cd:Raw>
+            <cd:Hidden/>
+          </cd:Field>
+        </cd:Record>
+      </cd:Field>
+      <cd:Field name="spare">
+        <cd:Raw>
+          <cd:Description>Spare</cd:Description>
+          <cd:BitSize>160</cd:BitSize>
+        </cd:Raw>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="l2b_mie_classification_qc">
+    <cd:Record>
+      <cd:Field name="l2b_mie_meas_bin_classification">
+        <cd:Array>
+          <cd:Dimension>24</cd:Dimension>
+          <cd:Record>
+            <cd:Description>Structure describing QC parameters resulting from the Mie Classification algorithm</cd:Description>
+            <cd:Field name="l2b_mie_meas_bin_class_flags1">
+              <cd:Integer>
+                <cd:Description>First byte of 8 flags describing classification properties for the current Mie measurement rangebin.</cd:Description>
+                <cd:BitSize>8</cd:BitSize>
+                <cd:NativeType>uint8</cd:NativeType>
+              </cd:Integer>
+            </cd:Field>
+            <cd:Field name="l2b_mie_meas_bin_class_flags2">
+              <cd:Integer>
+                <cd:Description>First byte of 8 flags describing classification properties for the current Mie measurement rangebin.</cd:Description>
+                <cd:BitSize>8</cd:BitSize>
+                <cd:NativeType>uint8</cd:NativeType>
+              </cd:Integer>
+            </cd:Field>
+            <cd:Field name="l2b_reliability">
+              <cd:Float>
+                <cd:Description>A measure for the reliability of the classification result for this rangebin.</cd:Description>
+                <cd:BitSize>64</cd:BitSize>
+                <cd:NativeType>double</cd:NativeType>
+                <ct:NamedTest id="FloatIsFinite"/>
+              </cd:Float>
+            </cd:Field>
+            <cd:Field name="backscatter_ratio">
+              <cd:Float>
+                <cd:Description>Backscatter ratio deduced for this rangebin</cd:Description>
+                <cd:BitSize>64</cd:BitSize>
+                <cd:NativeType>double</cd:NativeType>
+                <ct:NamedTest id="FloatIsFinite"/>
+              </cd:Float>
+            </cd:Field>
+            <cd:Field name="applied_scatratio_method">
+              <cd:Integer>
+                <cd:Description>Method applied to deduce Backscatter ratio for this rangebin</cd:Description>
+                <cd:BitSize>8</cd:BitSize>
+                <cd:NativeType>uint8</cd:NativeType>
+              </cd:Integer>
+            </cd:Field>
+            <cd:Field name="SNR">
+              <cd:Float>
+                <cd:Description>Signal-to-Noise ratio deduced for this rangebin</cd:Description>
+                <cd:BitSize>64</cd:BitSize>
+                <cd:NativeType>double</cd:NativeType>
+                <ct:NamedTest id="FloatIsFinite"/>
+              </cd:Float>
+            </cd:Field>
+            <cd:Field name="applied_snr_method">
+              <cd:Integer>
+                <cd:Description>Method applied to deduce SNR for this rangebin</cd:Description>
+                <cd:BitSize>8</cd:BitSize>
+                <cd:NativeType>uint8</cd:NativeType>
+              </cd:Integer>
+            </cd:Field>
+            <cd:Field name="spare">
+              <cd:Raw>
+                <cd:Description>Spare</cd:Description>
+                <cd:BitSize>8</cd:BitSize>
+              </cd:Raw>
+              <cd:Hidden/>
+            </cd:Field>
+          </cd:Record>
+        </cd:Array>
+      </cd:Field>
+      <cd:Field name="spare">
+        <cd:Raw>
+          <cd:Description>Spare</cd:Description>
+          <cd:BitSize>24</cd:BitSize>
+        </cd:Raw>
+        <cd:Hidden/>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="l2b_rayleigh_classification_qc">
+    <cd:Record>
+      <cd:Field name="l2b_rayleigh_meas_bin_classification">
+        <cd:Array>
+          <cd:Dimension>24</cd:Dimension>
+          <cd:Record>
+            <cd:Description>Structure describing QC parameters resulting from the Rayleigh Classification algorithm</cd:Description>
+            <cd:Field name="l2b_rayleigh_meas_bin_class_flags1">
+              <cd:Integer>
+                <cd:Description>First byte of 8 flags describing classification properties for the current Rayleigh measurement rangebin.</cd:Description>
+                <cd:BitSize>8</cd:BitSize>
+                <cd:NativeType>uint8</cd:NativeType>
+              </cd:Integer>
+            </cd:Field>
+            <cd:Field name="l2b_rayleigh_meas_bin_class_flags2">
+              <cd:Integer>
+                <cd:Description>First byte of 8 flags describing classification properties for the current Rayleigh measurement rangebin.</cd:Description>
+                <cd:BitSize>8</cd:BitSize>
+                <cd:NativeType>uint8</cd:NativeType>
+              </cd:Integer>
+            </cd:Field>
+            <cd:Field name="l2b_reliability">
+              <cd:Float>
+                <cd:Description>A measure for the reliability of the classification result for this rangebin.</cd:Description>
+                <cd:BitSize>64</cd:BitSize>
+                <cd:NativeType>double</cd:NativeType>
+                <ct:NamedTest id="FloatIsFinite"/>
+              </cd:Float>
+            </cd:Field>
+            <cd:Field name="backscatter_ratio">
+              <cd:Float>
+                <cd:Description>Backscatter ratio deduced for this rangebin</cd:Description>
+                <cd:BitSize>64</cd:BitSize>
+                <cd:NativeType>double</cd:NativeType>
+                <ct:NamedTest id="FloatIsFinite"/>
+              </cd:Float>
+            </cd:Field>
+            <cd:Field name="applied_scatratio_method">
+              <cd:Integer>
+                <cd:Description>Method applied to deduce Backscatter ratio for this rangebin</cd:Description>
+                <cd:BitSize>8</cd:BitSize>
+                <cd:NativeType>uint8</cd:NativeType>
+              </cd:Integer>
+            </cd:Field>
+            <cd:Field name="selected_mie_snr">
+              <cd:Float>
+                <cd:Description>Mie Signal-to-Noise ratio that was copied over from the matching Mie rangebin to this Rayleigh rangebin</cd:Description>
+                <cd:BitSize>64</cd:BitSize>
+                <cd:NativeType>double</cd:NativeType>
+                <ct:NamedTest id="FloatIsFinite"/>
+              </cd:Float>
+            </cd:Field>
+            <cd:Field name="applied_mie_snr_method">
+              <cd:Integer>
+                <cd:Description>Method applied to deduce the Mie SNR that was copied over from the matching Mie rangebin to this Rayleigh rangebin</cd:Description>
+                <cd:BitSize>8</cd:BitSize>
+                <cd:NativeType>uint8</cd:NativeType>
+              </cd:Integer>
+            </cd:Field>
+            <cd:Field name="spare">
+              <cd:Raw>
+                <cd:Description>Spare</cd:Description>
+                <cd:BitSize>8</cd:BitSize>
+              </cd:Raw>
+              <cd:Hidden/>
+            </cd:Field>
+          </cd:Record>
+        </cd:Array>
+      </cd:Field>
+      <cd:Field name="spare">
+        <cd:Raw>
+          <cd:Description>Spare</cd:Description>
+          <cd:BitSize>16</cd:BitSize>
+        </cd:Raw>
+        <cd:Hidden/>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="opt_prop_result">
+    <cd:Record>
+      <cd:Field name="opt_prop_meas_result">
+        <cd:Array>
+          <cd:Dimension>24</cd:Dimension>
+          <cd:Record>
+            <cd:Description>Structure describing the results of the iterative Optical properties algorithm for this measurement</cd:Description>
+            <cd:Field name="extinction_iterative">
+              <cd:Float>
+                <cd:Description>Aerosol extinction as determined by the iterative Optical Properties Algorithm</cd:Description>
+                <cd:Unit>1/m</cd:Unit>
+                <cd:BitSize>64</cd:BitSize>
+                <cd:NativeType>double</cd:NativeType>
+                <ct:NamedTest id="FloatIsFinite"/>
+              </cd:Float>
+            </cd:Field>
+            <cd:Field name="scattering_ratio_iterative">
+              <cd:Float>
+                <cd:Description>Scattering ratio as determined by the iterative Optical Properties Algorithm</cd:Description>
+                <cd:BitSize>64</cd:BitSize>
+                <cd:NativeType>double</cd:NativeType>
+                <ct:NamedTest id="FloatIsFinite"/>
+              </cd:Float>
+            </cd:Field>
+            <cd:Field name="xtalk_detected">
+              <cd:Integer>
+                <cd:Description>Switch to indicate if cross talk was detected or not by the iterative Optical Properties Algorithm</cd:Description>
+                <cd:BitSize>8</cd:BitSize>
+                <cd:NativeType>uint8</cd:NativeType>
+              </cd:Integer>
+            </cd:Field>
+            <cd:Field name="layer_top">
+              <cd:Integer>
+                <cd:Description>Top of the cloud layer detected by the iterative Optical Properties Algorithm</cd:Description>
+                <cd:Unit>m</cd:Unit>
+                <cd:BitSize>32</cd:BitSize>
+                <cd:NativeType>int32</cd:NativeType>
+              </cd:Integer>
+            </cd:Field>
+            <cd:Field name="layer_bottom">
+              <cd:Integer>
+                <cd:Description>Bottom of the cloud layer detected by the iterative Optical Properties Algorithm</cd:Description>
+                <cd:Unit>m</cd:Unit>
+                <cd:BitSize>32</cd:BitSize>
+                <cd:NativeType>int32</cd:NativeType>
+              </cd:Integer>
+            </cd:Field>
+            <cd:Field name="layer_method">
+              <cd:Integer>
+                <cd:Description>Method used by the iterative Optical Properties Algorithm to determine the cloud layer. -1 = Layer Method Undefined; 1 = Layer Method partial bin; 2 = Layer Method filled bins</cd:Description>
+                <cd:BitSize>8</cd:BitSize>
+                <cd:NativeType>int8</cd:NativeType>
+              </cd:Integer>
+            </cd:Field>
+            <cd:Field name="spare">
+              <cd:Raw>
+                <cd:Description>Spare</cd:Description>
+                <cd:BitSize>8</cd:BitSize>
+              </cd:Raw>
+              <cd:Hidden/>
+            </cd:Field>
+          </cd:Record>
+        </cd:Array>
+      </cd:Field>
+      <cd:Field name="spare">
+        <cd:Raw>
+          <cd:Description>Spare</cd:Description>
+          <cd:BitSize>40</cd:BitSize>
+        </cd:Raw>
+        <cd:Hidden/>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="spare">
+    <cd:Raw>
+      <cd:Description>Spare</cd:Description>
+      <cd:BitSize>160</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+</cd:Record>
