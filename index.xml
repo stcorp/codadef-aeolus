@@ -3315,6 +3315,12 @@
         <cd:MatchData path="/{http://www.esa.int/schemas/ae/AUX_PAR_2B}Earth_Explorer_File@schemaversion">03.50</cd:MatchData>
       </cd:DetectionRule>
     </cd:ProductDefinition>
+    <cd:ProductDefinition id="AUX_PAR_2B_03_60" format="xml" version="10">
+      <cd:Description>This definition is based on version 3.60 of IODD AED-SD-ECMWF-L2B-037</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchData path="/{http://www.esa.int/schemas/ae/AUX_PAR_2B}Earth_Explorer_File@schemaversion">03.60</cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
   </cd:ProductType>
   <cd:ProductType name="AUX_PAR_2C">
     <cd:Description>Level 2C Processing Parameters (EEF)</cd:Description>
