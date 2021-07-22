@@ -1,0 +1,102 @@
+<?xml version="1.0"?>
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="binary" last-modified="2021-07-22" name="Level_2A_SCA_MLE_PCD_ADSR_03_13">
+  <cd:Field name="starttime">
+    <cd:Time timeformat="binary_envisat_datetime">
+      <cd:Description>Start date and time of the SCA-MLE profile covered by the present DSR. This is the centroid time of the first measurement of the profile.</cd:Description>
+      <ct:NamedTest id="RangeSecond" path="seconds"/>
+      <ct:NamedTest id="RangeMicroSecond" path="microseconds"/>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="overall_quality">
+    <cd:Integer>
+      <cd:Description>Flag set to 1 in case Feature Mask of this BRC is considered to be of good quality, otherwise 0.</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="profile_pcd_bins">
+    <cd:Array>
+      <cd:Dimension>24</cd:Dimension>
+      <cd:Record>
+        <cd:Description>Structure containing variances of SCA-MLE BRC-level products bin per bin in Rayleigh scale.</cd:Description>
+        <cd:Field name="extinction_variance">
+          <cd:Float>
+            <cd:Description>Variance of the particle extinction coefficient retrieved by the SCA-MLE in this bin. Missing value: -1.</cd:Description>
+            <cd:Unit>m^-2</cd:Unit>
+            <cd:BitSize>64</cd:BitSize>
+            <cd:NativeType>double</cd:NativeType>
+            <ct:NamedTest id="FloatIsFinite"/>
+          </cd:Float>
+        </cd:Field>
+        <cd:Field name="backscatter_variance">
+          <cd:Float>
+            <cd:Description>Variance of the particle backscatter coefficient retrieved by the SCA-MLE in this bin. Missing value: -1.</cd:Description>
+            <cd:Unit>m^-2 sr^-2</cd:Unit>
+            <cd:BitSize>64</cd:BitSize>
+            <cd:NativeType>double</cd:NativeType>
+            <ct:NamedTest id="FloatIsFinite"/>
+          </cd:Float>
+        </cd:Field>
+        <cd:Field name="lr_variance">
+          <cd:Float>
+            <cd:Description>Variance of the particle lidar ratio retrieved by the SCA-MLE in this bin. Missing value: -1.</cd:Description>
+            <cd:BitSize>64</cd:BitSize>
+            <cd:NativeType>double</cd:NativeType>
+            <ct:NamedTest id="FloatIsFinite"/>
+          </cd:Float>
+        </cd:Field>
+        <cd:Field name="ber_variance">
+          <cd:Float>
+            <cd:Description>Variance of the particle lidar ratio retrieved by the SCA-MLE in this bin. Missing value: -1.</cd:Description>
+            <cd:BitSize>64</cd:BitSize>
+            <cd:NativeType>double</cd:NativeType>
+            <ct:NamedTest id="FloatIsFinite"/>
+          </cd:Float>
+        </cd:Field>
+        <cd:Field name="sr_variance">
+          <cd:Float>
+            <cd:Description>Variance of the particle scattering ratio retrieved by the SCA- MLE in this bin. Missing value: -1.</cd:Description>
+            <cd:BitSize>64</cd:BitSize>
+            <cd:NativeType>double</cd:NativeType>
+            <ct:NamedTest id="FloatIsFinite"/>
+          </cd:Float>
+        </cd:Field>
+        <cd:Field name="lod_variance">
+          <cd:Float>
+            <cd:Description>Variance of the particle scattering ratio retrieved by the SCA- MLE in this bin. Missing value: -1.</cd:Description>
+            <cd:BitSize>64</cd:BitSize>
+            <cd:NativeType>double</cd:NativeType>
+            <ct:NamedTest id="FloatIsFinite"/>
+          </cd:Float>
+        </cd:Field>
+        <cd:Field name="slod_variance">
+          <cd:Float>
+            <cd:Description>Variance of the slant LOD retrieved by the SCA-MLE in this bin. Missing value: -1.</cd:Description>
+            <cd:BitSize>64</cd:BitSize>
+            <cd:NativeType>double</cd:NativeType>
+            <ct:NamedTest id="FloatIsFinite"/>
+          </cd:Float>
+        </cd:Field>
+        <cd:Field name="cloud_mask">
+          <cd:Integer>
+            <cd:Description>Flag indicating the cloud contamination of each height bin (i.e. derived backscatter from AMD exceeding a defined threshold). Set to 1 for cloud contaminated bin, otherwise 0.</cd:Description>
+            <cd:BitSize>8</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+      </cd:Record>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="covariance_matrix">
+    <cd:Array>
+      <cd:Dimension>49</cd:Dimension>
+      <cd:Dimension>49</cd:Dimension>
+      <cd:Float>
+        <cd:Description>Covariance information (i.e. variance / covariance square matrix given for the 49 dimensional space per observation used for physical regularization of the signals)</cd:Description>
+        <cd:BitSize>64</cd:BitSize>
+        <cd:NativeType>double</cd:NativeType>
+        <ct:NamedTest id="FloatIsFinite"/>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+</cd:Record>

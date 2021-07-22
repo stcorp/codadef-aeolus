@@ -1,0 +1,91 @@
+<?xml version="1.0"?>
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="binary" last-modified="2021-07-22" name="Level_2A_AEL_PRO_PCD_ADSR_03_13">
+  <cd:Field name="starttime">
+    <cd:Time timeformat="binary_envisat_datetime">
+      <cd:Description>Start date and time of the AEL-PRO profile covered by the present DSR. This is the centroid time of the first measurement of the profile.</cd:Description>
+      <ct:NamedTest id="RangeSecond" path="seconds"/>
+      <ct:NamedTest id="RangeMicroSecond" path="microseconds"/>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="overall_quality">
+    <cd:Integer>
+      <cd:Description>Currently the FM_ADS flag setting is copied; the FM results are input to the AEL-PRO. More sophisticated setting will be added in the next version.</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="starting_cost_function_value_pass1">
+    <cd:Float>
+      <cd:Description>Value of the OE cost function corresponding to the initial guess for the low-resolution pass.</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+      <ct:NamedTest id="FloatIsFinite"/>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="ending_cost_function_value_pass1">
+    <cd:Float>
+      <cd:Description>Value of the OE cost function corresponding to the converged minimum found for the low-resolution pass</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+      <ct:NamedTest id="FloatIsFinite"/>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="measurement_ael_pro_pcd">
+    <cd:Array>
+      <cd:Dimension><![CDATA[$num_meas_max_brc]]></cd:Dimension>
+      <cd:Record>
+        <cd:Description>Structure containing AEL-PRO PCD information for the measurements of the BRC in the Mie bins</cd:Description>
+        <cd:Field name="starting_cost_function_value_pass2">
+          <cd:Float>
+            <cd:Description>Value of the OE cost function corresponding to the initial guess for the high-resolution pass</cd:Description>
+            <cd:BitSize>64</cd:BitSize>
+            <cd:NativeType>double</cd:NativeType>
+            <ct:NamedTest id="FloatIsFinite"/>
+          </cd:Float>
+        </cd:Field>
+        <cd:Field name="ending_cost_function_value_pass2">
+          <cd:Float>
+            <cd:Description>Value of the OE cost function corresponding to the converged minimum found for the high-resolution pass</cd:Description>
+            <cd:BitSize>64</cd:BitSize>
+            <cd:NativeType>double</cd:NativeType>
+            <ct:NamedTest id="FloatIsFinite"/>
+          </cd:Float>
+        </cd:Field>
+        <cd:Field name="height_bin_ael_pro_pcd">
+          <cd:Array>
+            <cd:Dimension>24</cd:Dimension>
+            <cd:Record>
+              <cd:Description>Structure containing AEL-PRO PCD information for the Mie bins</cd:Description>
+              <cd:Field name="error_extinction">
+                <cd:Float>
+                  <cd:Description>Particle extinction error of the height bin. Missing value: -1e+06.</cd:Description>
+                  <cd:Unit>10^-6 m^-1</cd:Unit>
+                  <cd:BitSize>64</cd:BitSize>
+                  <cd:NativeType>double</cd:NativeType>
+                  <ct:NamedTest id="FloatIsFinite"/>
+                </cd:Float>
+              </cd:Field>
+              <cd:Field name="error_lr">
+                <cd:Float>
+                  <cd:Description>Particle lidar ratio error. Missing value: -1.</cd:Description>
+                  <cd:Unit>sr</cd:Unit>
+                  <cd:BitSize>64</cd:BitSize>
+                  <cd:NativeType>double</cd:NativeType>
+                  <ct:NamedTest id="FloatIsFinite"/>
+                </cd:Float>
+              </cd:Field>
+              <cd:Field name="error_particle_effective_area_radius">
+                <cd:Float>
+                  <cd:Description>Error on particle effective area radius</cd:Description>
+                  <cd:BitSize>64</cd:BitSize>
+                  <cd:NativeType>double</cd:NativeType>
+                  <ct:NamedTest id="FloatIsFinite"/>
+                </cd:Float>
+              </cd:Field>
+            </cd:Record>
+          </cd:Array>
+        </cd:Field>
+      </cd:Record>
+    </cd:Array>
+  </cd:Field>
+</cd:Record>

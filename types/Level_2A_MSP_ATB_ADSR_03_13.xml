@@ -1,0 +1,100 @@
+<?xml version="1.0"?>
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="binary" last-modified="2021-07-22" name="Level_2A_MSP_ATB_ADSR_03_13">
+  <cd:Field name="starttime">
+    <cd:Time timeformat="binary_envisat_datetime">
+      <cd:Description>Start date and time of the MSP_ATB profile covered by the present DSR. This is the centroid time of the first measurement of the profile.</cd:Description>
+      <ct:NamedTest id="RangeSecond" path="seconds"/>
+      <ct:NamedTest id="RangeMicroSecond" path="microseconds"/>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="effective_msp_spectral_response">
+    <cd:Array>
+      <cd:Dimension>16</cd:Dimension>
+      <cd:Record>
+        <cd:Description>List of effective MSP spectral responses</cd:Description>
+        <cd:Field name="effective_msp_spectral_response">
+          <cd:Float>
+            <cd:Description>Effective MSP spectral response function for a column of the MSP estimated using clear sky MSP spectra.</cd:Description>
+            <cd:BitSize>32</cd:BitSize>
+            <cd:NativeType>float</cd:NativeType>
+            <ct:NamedTest id="FloatIsFinite"/>
+          </cd:Float>
+        </cd:Field>
+      </cd:Record>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="number_of_detected_missed_hot_pixels">
+    <cd:Integer>
+      <cd:Description>Number of detected suspect hot-pixels per observation interval summed over all heights and useful pixels.</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="height_bin_emsr_data_used_masks">
+    <cd:Array>
+      <cd:Dimension>24</cd:Dimension>
+      <cd:Record>
+        <cd:Description>Structure containing the EMSR mask for the Mie bins</cd:Description>
+        <cd:Field name="emsr_data_used_mask">
+          <cd:Integer>
+            <cd:Description>Mask: 1==> This observation-height interval was used in the EMSR determination.</cd:Description>
+            <cd:BitSize>8</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+      </cd:Record>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="measurement_msp_atb_properties">
+    <cd:Array>
+      <cd:Dimension><![CDATA[$num_meas_max_brc]]></cd:Dimension>
+      <cd:Record>
+        <cd:Description>Structure containing MSP_ATB products for the measurements of the BRC in the Mie bins</cd:Description>
+        <cd:Field name="height_bin_msp_atb_property">
+          <cd:Array>
+            <cd:Dimension>24</cd:Dimension>
+            <cd:Record>
+              <cd:Description>Structure containing MSP_ATB properties for the Mie bins</cd:Description>
+              <cd:Field name="attenuated_mie_backscatter_msp">
+                <cd:Float>
+                  <cd:Description>Attenuated particulate backscatter derived using the MSP data only.</cd:Description>
+                  <cd:Unit>m^-1 sr^-1</cd:Unit>
+                  <cd:BitSize>32</cd:BitSize>
+                  <cd:NativeType>float</cd:NativeType>
+                  <ct:NamedTest id="FloatIsFinite"/>
+                </cd:Float>
+              </cd:Field>
+              <cd:Field name="err_attenuated_mie_backscatter_msp">
+                <cd:Float>
+                  <cd:Description>Estimated 1-sigma error in Attenuated_Mie_Backscatter_Msp.</cd:Description>
+                  <cd:Unit>m^-1 sr^-1</cd:Unit>
+                  <cd:BitSize>32</cd:BitSize>
+                  <cd:NativeType>float</cd:NativeType>
+                  <ct:NamedTest id="FloatIsFinite"/>
+                </cd:Float>
+              </cd:Field>
+              <cd:Field name="attenuated_rayleigh_backscatter_msp">
+                <cd:Float>
+                  <cd:Description>Attenuated particulate backscatter derived using the MSP data only.</cd:Description>
+                  <cd:Unit>m^-1 sr^-1</cd:Unit>
+                  <cd:BitSize>32</cd:BitSize>
+                  <cd:NativeType>float</cd:NativeType>
+                  <ct:NamedTest id="FloatIsFinite"/>
+                </cd:Float>
+              </cd:Field>
+              <cd:Field name="err_attenuated_rayleigh_backscatter_msp">
+                <cd:Float>
+                  <cd:Description>Estimated 1-sigma error in Attenuated_Rayleigh_Backscatter_Msp.</cd:Description>
+                  <cd:Unit>m^-1 sr^-1</cd:Unit>
+                  <cd:BitSize>32</cd:BitSize>
+                  <cd:NativeType>float</cd:NativeType>
+                  <ct:NamedTest id="FloatIsFinite"/>
+                </cd:Float>
+              </cd:Field>
+            </cd:Record>
+          </cd:Array>
+        </cd:Field>
+      </cd:Record>
+    </cd:Array>
+  </cd:Field>
+</cd:Record>
