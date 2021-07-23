@@ -1975,6 +1975,14 @@
         <cd:MatchData offset="95">SD-DoRIT-L1B-006 v4.14 </cd:MatchData>
       </cd:DetectionRule>
     </cd:ProductDefinition>
+    <cd:ProductDefinition id="AUX_OWV_1B_04_15" format="binary" version="9">
+      <cd:Description>This definition is based on version 4/15 of IODD AED-SD-DoRIT-L1B-006</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT="AE_</cd:MatchData>
+        <cd:MatchData offset="17">AUX_OWV_1B</cd:MatchData>
+        <cd:MatchData offset="95">SD-DoRIT-L1B-006 v4.15 </cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
   </cd:ProductType>
   <cd:ProductType name="AUX_OWV_1B_HDR">
     <cd:Description>Aeolus Level 1B Offline Wind Velocity Measurement (HDR)</cd:Description>
@@ -2021,6 +2029,9 @@
       </cd:DetectionRule>
       <cd:DetectionRule>
         <cd:MatchData path="/{http://www.esa.int/schemas/ae/AUX_OWV_1B}Earth_Explorer_Header@schemaversion">04.14</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData path="/{http://www.esa.int/schemas/ae/AUX_OWV_1B}Earth_Explorer_Header@schemaversion">04.15</cd:MatchData>
       </cd:DetectionRule>
     </cd:ProductDefinition>
   </cd:ProductType>
