@@ -1858,7 +1858,7 @@
                 <cd:Type namexml="Min_Height_Above_L1B_DEM">
                   <cd:Attribute name="unit"/>
                   <cd:Float format="ascii">
-                    <cd:Description>Extra margin above DEM as reported by the L1B processor for which winds will be flagged invalid</cd:Description>
+                    <cd:Description>Extra margin above DEM as reported by the L1B processor for which winds will be flagged invalid. A negative value will disable this DEM check. A special value of -128 can be used to trigger a compatibility mode for which the maximum DEM height in the group will be used for this check, and not the local measurement level DEM value. The actual margin value will be set back to 0 if you use this. This will mimic the implementation that was present in L2BP v3.50 and before, and is mainly intended to be used to test the difference between the old and the new implementation.</cd:Description>
                     <cd:Unit>m</cd:Unit>
                     <cd:NativeType>double</cd:NativeType>
                   </cd:Float>
@@ -1868,7 +1868,7 @@
                 <cd:Type namexml="Min_Height_Above_L1B_Detected_Ground">
                   <cd:Attribute name="unit"/>
                   <cd:Float format="ascii">
-                    <cd:Description>Extra margin above detected ground as reported by the L1B processor for which winds will be flagged invalid</cd:Description>
+                    <cd:Description>Extra margin above detected ground as reported by the L1B processor for which winds will be flagged invalid. A negative value will disable this ground check.</cd:Description>
                     <cd:Unit>m</cd:Unit>
                     <cd:NativeType>double</cd:NativeType>
                   </cd:Float>
@@ -1878,7 +1878,7 @@
                 <cd:Type namexml="Min_Height_Above_AUX_MET_DEM">
                   <cd:Attribute name="unit"/>
                   <cd:Float format="ascii">
-                    <cd:Description>Extra margin above DEM as reported by the AUX_MET file for which winds will be flagged invalid</cd:Description>
+                    <cd:Description>Extra margin above DEM as reported by the AUX_MET file for which winds will be flagged invalid. A negative value will disable this AUX_MET DEM check.</cd:Description>
                     <cd:Unit>m</cd:Unit>
                     <cd:NativeType>double</cd:NativeType>
                   </cd:Float>
