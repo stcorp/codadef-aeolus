@@ -309,6 +309,13 @@
                 <cd:NativeType>uint8</cd:NativeType>
               </cd:Integer>
             </cd:Field>
+            <cd:Field name="applied_classification_method">
+              <cd:Integer>
+                <cd:Description>Method applied to derive the classification decision for this rangebin</cd:Description>
+                <cd:BitSize>8</cd:BitSize>
+                <cd:NativeType>uint8</cd:NativeType>
+              </cd:Integer>
+            </cd:Field>
             <cd:Field name="spare">
               <cd:Raw>
                 <cd:Description>Spare</cd:Description>
@@ -375,6 +382,13 @@
             <cd:Field name="applied_mie_snr_method">
               <cd:Integer>
                 <cd:Description>Method applied to deduce the Mie SNR that was copied over from the matching Mie rangebin to this Rayleigh rangebin</cd:Description>
+                <cd:BitSize>8</cd:BitSize>
+                <cd:NativeType>uint8</cd:NativeType>
+              </cd:Integer>
+            </cd:Field>
+            <cd:Field name="applied_classification_method">
+              <cd:Integer>
+                <cd:Description>Method applied to derive the classification decision for this rangebin</cd:Description>
                 <cd:BitSize>8</cd:BitSize>
                 <cd:NativeType>uint8</cd:NativeType>
               </cd:Integer>
