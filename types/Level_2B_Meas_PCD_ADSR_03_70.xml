@@ -279,14 +279,6 @@
                 <cd:NativeType>uint8</cd:NativeType>
               </cd:Integer>
             </cd:Field>
-            <cd:Field name="l2b_reliability">
-              <cd:Float>
-                <cd:Description>A measure for the reliability of the classification result for this rangebin.</cd:Description>
-                <cd:BitSize>64</cd:BitSize>
-                <cd:NativeType>double</cd:NativeType>
-                <ct:NamedTest id="FloatIsFinite"/>
-              </cd:Float>
-            </cd:Field>
             <cd:Field name="backscatter_ratio">
               <cd:Float>
                 <cd:Description>Backscatter ratio deduced for this rangebin</cd:Description>
@@ -356,14 +348,6 @@
                 <cd:BitSize>8</cd:BitSize>
                 <cd:NativeType>uint8</cd:NativeType>
               </cd:Integer>
-            </cd:Field>
-            <cd:Field name="l2b_reliability">
-              <cd:Float>
-                <cd:Description>A measure for the reliability of the classification result for this rangebin.</cd:Description>
-                <cd:BitSize>64</cd:BitSize>
-                <cd:NativeType>double</cd:NativeType>
-                <ct:NamedTest id="FloatIsFinite"/>
-              </cd:Float>
             </cd:Field>
             <cd:Field name="backscatter_ratio">
               <cd:Float>
