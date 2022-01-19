@@ -90,7 +90,7 @@
       <cd:Array>
         <cd:Description>Mie Wind Product Confidence Data</cd:Description>
         <cd:Dimension><![CDATA[$num_dsr[8]]]></cd:Dimension>
-        <cd:NamedType id="Level_2BC_Mie_Wind_PCD_ADSR_03_30"/>
+        <cd:NamedType id="Level_2BC_Mie_Wind_PCD_ADSR_03_70"/>
       </cd:Array>
       <cd:Available><![CDATA[$ds_available[8] != 0]]></cd:Available>
       <cd:BitOffset><![CDATA[$ds_offset[8]]]></cd:BitOffset>
@@ -99,7 +99,7 @@
       <cd:Array>
         <cd:Description>Rayleigh Wind Product Confidence Data</cd:Description>
         <cd:Dimension><![CDATA[$num_dsr[9]]]></cd:Dimension>
-        <cd:NamedType id="Level_2BC_Rayleigh_Wind_PCD_ADSR_03_30"/>
+        <cd:NamedType id="Level_2BC_Rayleigh_Wind_PCD_ADSR_03_70"/>
       </cd:Array>
       <cd:Available><![CDATA[$ds_available[9] != 0]]></cd:Available>
       <cd:BitOffset><![CDATA[$ds_offset[9]]]></cd:BitOffset>
