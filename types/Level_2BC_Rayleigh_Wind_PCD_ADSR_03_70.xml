@@ -111,6 +111,22 @@
           <cd:NativeType>uint8</cd:NativeType>
         </cd:Integer>
       </cd:Field>
+      <cd:Field name="rr_measured">
+        <cd:Float>
+          <cd:Description>Rayleigh response used as input for the atmospheric path part of the wind retrieval calculation (without additional bias corrections)</cd:Description>
+          <cd:BitSize>64</cd:BitSize>
+          <cd:NativeType>double</cd:NativeType>
+          <ct:NamedTest id="FloatIsFinite"/>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="rr_refpulse">
+        <cd:Float>
+          <cd:Description>Rayleigh response used as input for the internal reference path part of the wind retrieval calculation (without additional bias corrections)</cd:Description>
+          <cd:BitSize>64</cd:BitSize>
+          <cd:NativeType>double</cd:NativeType>
+          <ct:NamedTest id="FloatIsFinite"/>
+        </cd:Float>
+      </cd:Field>
       <cd:Field name="spare">
         <cd:Raw>
           <cd:Description>Spare</cd:Description>
