@@ -2546,12 +2546,37 @@
             <cd:Record namexml="L1B_Rayleigh_Meas_Screening_Params">
               <cd:Description>Parameters used for screening the L1B Rayleigh Measurements from the L1B input file</cd:Description>
               <cd:Field name="L1B_Rayleigh_Meas_Invalid_Ref_Pulses_Check">
-                <cd:Type namexml="L1B_Rayleigh_Meas_Invalid_Ref_Pulses_Check">
-                  <cd:Integer format="ascii">
-                    <cd:Description>Check definition to verify the value of num_of_Rayleigh_invalid_reference_pulses</cd:Description>
-                    <cd:NativeType>int32</cd:NativeType>
-                  </cd:Integer>
-                </cd:Type>
+                <cd:Record namexml="L1B_Rayleigh_Meas_Invalid_Ref_Pulses_Check">
+                  <cd:Field name="Flag_Measurements_Invalid">
+                    <cd:Integer format="ascii">
+                      <cd:Description>If set, measurements failing the current check are flagged invalid and not considered as Invalid input to the classification algorithm.</cd:Description>
+                      <cd:NativeType>uint8</cd:NativeType>
+                      <cd:Mapping string="FALSE" value="0"/>
+                      <cd:Mapping string="False" value="0"/>
+                      <cd:Mapping string="false" value="0"/>
+                      <cd:Mapping string="TRUE" value="1"/>
+                      <cd:Mapping string="True" value="1"/>
+                      <cd:Mapping string="true" value="1"/>
+                    </cd:Integer>
+                  </cd:Field>
+                  <cd:Field name="Flag_Wind_Invalid">
+                    <cd:Integer format="ascii">
+                      <cd:Description>If set, then the current wind result is flagged invalid in case any of the measurements used in the accumulation that is used to calculate this wind fails the current check.</cd:Description>
+                      <cd:NativeType>uint8</cd:NativeType>
+                      <cd:Mapping string="FALSE" value="0"/>
+                      <cd:Mapping string="False" value="0"/>
+                      <cd:Mapping string="false" value="0"/>
+                      <cd:Mapping string="TRUE" value="1"/>
+                      <cd:Mapping string="True" value="1"/>
+                      <cd:Mapping string="true" value="1"/>
+                    </cd:Integer>
+                  </cd:Field>
+                  <cd:Field name="Max_Threshold">
+                    <cd:Integer format="ascii">
+                      <cd:NativeType>uint32</cd:NativeType>
+                    </cd:Integer>
+                  </cd:Field>
+                </cd:Record>
               </cd:Field>
               <cd:Field name="L1B_Avg_Laser_Freq_Offset_Check">
                 <cd:Type namexml="L1B_Avg_Laser_Freq_Offset_Check">
