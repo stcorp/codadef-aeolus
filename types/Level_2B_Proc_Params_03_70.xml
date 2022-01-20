@@ -159,6 +159,21 @@
           </cd:Field>
         </cd:Record>
       </cd:Field>
+      <cd:Field name="Subgrouping_Params">
+        <cd:Record namexml="Subgrouping_Params">
+          <cd:Description>Parameters controlling the subgrouping scheme applied by the L2B processing.</cd:Description>
+          <cd:Field name="Subgroup_Method">
+            <cd:Text>
+              <cd:Description>Method to be used for composing subgroups of measurements, intended to increase the SNR of the signal before entering the optical properties and classification algorithm.</cd:Description>
+            </cd:Text>
+          </cd:Field>
+          <cd:Field name="Num_Meas_to_Combine">
+            <cd:Integer format="ascii">
+              <cd:Description>Defines how many measurements will be combined together as a subgroup, in case the subgroup method is set to “n_meas”.</cd:Description>
+            </cd:Integer>
+          </cd:Field>
+        </cd:Record>
+      </cd:Field>
       <cd:Field name="Classification_Params">
         <cd:Record namexml="Classification_Params">
           <cd:Description>Parameters for the Classification algorithm</cd:Description>
