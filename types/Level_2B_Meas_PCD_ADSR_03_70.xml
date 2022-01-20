@@ -406,7 +406,7 @@
       <cd:Field name="spare">
         <cd:Raw>
           <cd:Description>Spare</cd:Description>
-          <cd:BitSize>16</cd:BitSize>
+          <cd:BitSize>208</cd:BitSize>
         </cd:Raw>
         <cd:Hidden/>
       </cd:Field>
