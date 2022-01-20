@@ -32,7 +32,7 @@
               <cd:FixedValue>xml</cd:FixedValue>
             </cd:Attribute>
             <cd:Field name="Level_2B_Proc_Params">
-              <cd:NamedType id="Level_2B_Proc_Params_03_60"/>
+              <cd:NamedType id="Level_2B_Proc_Params_03_70"/>
             </cd:Field>
           </cd:Record>
         </cd:Field>
