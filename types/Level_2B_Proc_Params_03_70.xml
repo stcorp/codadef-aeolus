@@ -2809,19 +2809,33 @@
           <cd:Field name="L1B_Shared_Meas_Screening_Params">
             <cd:Record namexml="L1B_Shared_Meas_Screening_Params">
               <cd:Description>Shared parameters for both channels used for screening the L1B Rayleigh Measurements from the L1B input file.</cd:Description>
-              <cd:Field name="Apply_Moonblinding_Check">
-                <cd:Type namexml="Apply_Moonblinding_Check">
-                  <cd:Integer format="ascii">
-                    <cd:Description>Switch that controls if the moon blinding flag provided by the L1B product is used for flagging measurements invalid.</cd:Description>
-                    <cd:NativeType>uint8</cd:NativeType>
-                    <cd:Mapping string="FALSE" value="0"/>
-                    <cd:Mapping string="False" value="0"/>
-                    <cd:Mapping string="false" value="0"/>
-                    <cd:Mapping string="TRUE" value="1"/>
-                    <cd:Mapping string="True" value="1"/>
-                    <cd:Mapping string="true" value="1"/>
-                  </cd:Integer>
-                </cd:Type>
+              <cd:Field name="Moonblinding_Check">
+                <cd:Record namexml="Moonblinding_Check">
+                  <cd:Field name="Flag_Measurements_Invalid">
+                    <cd:Integer format="ascii">
+                      <cd:Description>If set, measurements failing the current check are flagged invalid and not considered as Invalid input to the classification algorithm.</cd:Description>
+                      <cd:NativeType>uint8</cd:NativeType>
+                      <cd:Mapping string="FALSE" value="0"/>
+                      <cd:Mapping string="False" value="0"/>
+                      <cd:Mapping string="false" value="0"/>
+                      <cd:Mapping string="TRUE" value="1"/>
+                      <cd:Mapping string="True" value="1"/>
+                      <cd:Mapping string="true" value="1"/>
+                    </cd:Integer>
+                  </cd:Field>
+                  <cd:Field name="Flag_Wind_Invalid">
+                    <cd:Integer format="ascii">
+                      <cd:Description>If set, then the current wind result is flagged invalid in case any of the measurements used in the accumulation that is used to calculate this wind fails the current check.</cd:Description>
+                      <cd:NativeType>uint8</cd:NativeType>
+                      <cd:Mapping string="FALSE" value="0"/>
+                      <cd:Mapping string="False" value="0"/>
+                      <cd:Mapping string="false" value="0"/>
+                      <cd:Mapping string="TRUE" value="1"/>
+                      <cd:Mapping string="True" value="1"/>
+                      <cd:Mapping string="true" value="1"/>
+                    </cd:Integer>
+                  </cd:Field>
+                </cd:Record>
               </cd:Field>
             </cd:Record>
           </cd:Field>
