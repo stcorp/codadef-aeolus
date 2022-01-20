@@ -2545,53 +2545,31 @@
           <cd:Field name="L1B_Rayleigh_Meas_Screening_Params">
             <cd:Record namexml="L1B_Rayleigh_Meas_Screening_Params">
               <cd:Description>Parameters used for screening the L1B Rayleigh Measurements from the L1B input file</cd:Description>
-              <cd:Field name="L1B_Rayleigh_Meas_Invalid_Ref_Pulses_Threshold">
-                <cd:Type namexml="L1B_Rayleigh_Meas_Invalid_Ref_Pulses_Threshold">
+              <cd:Field name="L1B_Rayleigh_Meas_Invalid_Ref_Pulses_Check">
+                <cd:Type namexml="L1B_Rayleigh_Meas_Invalid_Ref_Pulses_Check">
                   <cd:Integer format="ascii">
-                    <cd:Description>Threshold on the value of num_of_Rayleigh_invalid_reference_pulses</cd:Description>
+                    <cd:Description>Check definition to verify the value of num_of_Rayleigh_invalid_reference_pulses</cd:Description>
                     <cd:NativeType>int32</cd:NativeType>
                   </cd:Integer>
                 </cd:Type>
               </cd:Field>
-              <cd:Field name="L1B_Avg_Laser_Freq_Offset_Min">
-                <cd:Type namexml="L1B_Avg_Laser_Freq_Offset_Min">
+              <cd:Field name="L1B_Avg_Laser_Freq_Offset_Check">
+                <cd:Type namexml="L1B_Avg_Laser_Freq_Offset_Check">
                   <cd:Attribute name="unit"/>
                   <cd:Float format="ascii">
-                    <cd:Description>Minimum allowed value for Avg_Laser_Frequency_Offset</cd:Description>
+                    <cd:Description>Check definition to verify the value for Avg_Laser_Frequency_Offset</cd:Description>
                     <cd:Unit>GHz</cd:Unit>
                     <cd:NativeType>double</cd:NativeType>
                   </cd:Float>
                 </cd:Type>
               </cd:Field>
-              <cd:Field name="L1B_Avg_Laser_Freq_Offset_Max">
-                <cd:Type namexml="L1B_Avg_Laser_Freq_Offset_Max">
-                  <cd:Attribute name="unit"/>
-                  <cd:Float format="ascii">
-                    <cd:Description>Maximum allowed value for Avg_Laser_Frequency_Offset</cd:Description>
-                    <cd:Unit>GHz</cd:Unit>
-                    <cd:NativeType>double</cd:NativeType>
-                  </cd:Float>
-                </cd:Type>
-              </cd:Field>
-              <cd:Field name="L1B_Avg_UV_Energy_Min">
-                <cd:Type namexml="L1B_Avg_UV_Energy_Min">
+              <cd:Field name="L1B_Avg_UV_Energy_Check">
+                <cd:Type namexml="L1B_Avg_UV_Energy_Check">
                   <cd:Attribute name="unit">
                     <cd:FixedValue>mJ</cd:FixedValue>
                   </cd:Attribute>
                   <cd:Float format="ascii">
-                    <cd:Description>Minimum allowed value for Avg_UV_Energy</cd:Description>
-                    <cd:Unit>mJ</cd:Unit>
-                    <cd:NativeType>double</cd:NativeType>
-                  </cd:Float>
-                </cd:Type>
-              </cd:Field>
-              <cd:Field name="L1B_Avg_UV_Energy_Max">
-                <cd:Type namexml="L1B_Avg_UV_Energy_Max">
-                  <cd:Attribute name="unit">
-                    <cd:FixedValue>mJ</cd:FixedValue>
-                  </cd:Attribute>
-                  <cd:Float format="ascii">
-                    <cd:Description>Maximum allowed value for Avg_UV_Energy</cd:Description>
+                    <cd:Description>Check definition to verify the value for Avg_UV_Energy</cd:Description>
                     <cd:Unit>mJ</cd:Unit>
                     <cd:NativeType>double</cd:NativeType>
                   </cd:Float>
