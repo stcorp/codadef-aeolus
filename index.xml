@@ -2667,6 +2667,9 @@
       <cd:DetectionRule>
         <cd:MatchData path="/{http://www.esa.int/schemas/ae/ALD_U_N_2A}Earth_Explorer_Header@schemaversion">03.13</cd:MatchData>
       </cd:DetectionRule>
+    </cd:ProductDefinition>
+    <cd:ProductDefinition id="ALD_U_N_2A_HDR_03_14" format="xml" version="5">
+      <cd:Description>This definition is based on version 3.14 of IODD AED-SD-DoRIT-L2A-025</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData path="/{http://www.esa.int/schemas/ae/ALD_U_N_2A}Earth_Explorer_Header@schemaversion">03.14</cd:MatchData>
       </cd:DetectionRule>
