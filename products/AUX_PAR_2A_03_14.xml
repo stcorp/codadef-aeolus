@@ -34,7 +34,7 @@
               <cd:FixedValue>xml</cd:FixedValue>
             </cd:Attribute>
             <cd:Field name="Level_2A_Processing_Parameters">
-              <cd:NamedType id="Level_2A_Processing_Parameters_03_13"/>
+              <cd:NamedType id="Level_2A_Processing_Parameters_03_14"/>
             </cd:Field>
           </cd:Record>
         </cd:Field>
