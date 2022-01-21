@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" name="List_of_Orbit_Phase_Correction_Factors" format="xml" namexml="List_of_Orbit_Phase_Correction_Factors" last-modified="2022-01-19">
+  <cd:Description>List of Orbit Phase Correction Factors</cd:Description>
+  <cd:Attribute name="count">
+  </cd:Attribute>
+  <cd:Field name="Orbit_Phase_Correction_Factor">
+    <cd:Array>
+      <cd:Dimension/>
+      <cd:Record namexml="Orbit_Phase_Correction_Factor">
+        <cd:Description>Orbit Phase Correction Factor</cd:Description>
+        <cd:Field name="Order">
+          <cd:Integer format="ascii">
+            <cd:NativeType>int8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="Harmonic_Bias_Coefficient_Sin">
+          <cd:Float format="ascii">
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Field>
+        <cd:Field name="Harmonic_Bias_Coefficient_Cos">
+          <cd:Float format="ascii">
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Field>
+      </cd:Record>
+      <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+    </cd:Array>
+  </cd:Field>
+</cd:Record>
