@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="ascii" name="Level_2A_SPH_03_12" last-modified="2021-02-19">
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="ascii" name="Level_2A_SPH_03_14" last-modified="2021-02-21">
   <cd:Field name="sph_descriptor_title">
     <cd:Text>
       <cd:Description>SPH_DESCRIPTOR=</cd:Description>
@@ -353,31 +353,6 @@
     </cd:Integer>
   </cd:Field>
   <cd:Field name="newline_char_12">
-    <cd:Text>
-      <cd:Description>newline</cd:Description>
-      <cd:FixedValue>\n</cd:FixedValue>
-      <cd:ByteSize>1</cd:ByteSize>
-      <cd:NativeType>char</cd:NativeType>
-    </cd:Text>
-    <cd:Hidden/>
-  </cd:Field>
-  <cd:Field name="num_prof_ica_title">
-    <cd:Text>
-      <cd:Description>NUM_PROF_ICA=</cd:Description>
-      <cd:FixedValue>NUM_PROF_ICA=</cd:FixedValue>
-      <cd:ByteSize>13</cd:ByteSize>
-      <cd:NativeType>string</cd:NativeType>
-    </cd:Text>
-    <cd:Hidden/>
-  </cd:Field>
-  <cd:Field name="num_prof_ica">
-    <cd:Integer>
-      <cd:Description>Number of ICA BRC level profiles reported in this product.</cd:Description>
-      <cd:ByteSize>11</cd:ByteSize>
-      <cd:NativeType>int32</cd:NativeType>
-    </cd:Integer>
-  </cd:Field>
-  <cd:Field name="newline_char_13">
     <cd:Text>
       <cd:Description>newline</cd:Description>
       <cd:FixedValue>\n</cd:FixedValue>
