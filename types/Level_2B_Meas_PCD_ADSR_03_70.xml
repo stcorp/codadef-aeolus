@@ -231,7 +231,14 @@
                     <cd:NativeType>uint8</cd:NativeType>
                   </cd:Integer>
                 </cd:Field>
-                <cd:Field name="bin_qc_flags">
+                <cd:Field name="bin_qc_flags1">
+                  <cd:Integer>
+                    <cd:Description>Flags describing problems which prevent using this Rayleigh measurement bin. Bit 1: reserved, Bit 2: reserved, ..., Bit 8: reserved</cd:Description>
+                    <cd:BitSize>8</cd:BitSize>
+                    <cd:NativeType>uint8</cd:NativeType>
+                  </cd:Integer>
+                </cd:Field>
+                <cd:Field name="bin_qc_flags2">
                   <cd:Integer>
                     <cd:Description>Flags describing problems which prevent using this Rayleigh measurement bin. Bit 1: reserved, Bit 2: reserved, ..., Bit 8: reserved</cd:Description>
                     <cd:BitSize>8</cd:BitSize>
@@ -406,7 +413,7 @@
       <cd:Field name="spare">
         <cd:Raw>
           <cd:Description>Spare</cd:Description>
-          <cd:BitSize>208</cd:BitSize>
+          <cd:BitSize>16</cd:BitSize>
         </cd:Raw>
         <cd:Hidden/>
       </cd:Field>
