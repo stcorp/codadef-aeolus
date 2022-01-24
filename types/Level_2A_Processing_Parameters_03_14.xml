@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" name="Level_2A_Processing_Parameters_03_14" format="xml" namexml="Level_2A_Processing_Parameters" last-modified="2022-01-21">
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" name="Level_2A_Processing_Parameters_03_14" format="xml" namexml="Level_2A_Processing_Parameters" last-modified="2022-01-24">
   <cd:Field name="List_of_Data_Set_Records">
     <cd:Record namexml="List_of_Data_Set_Records">
       <cd:Description>List of Data Set Records</cd:Description>
@@ -557,8 +557,8 @@
                             </cd:Float>
                           </cd:Type>
                         </cd:Field>
-                        <cd:Field name="Water_Cld_Eta_0">
-                          <cd:Type namexml="Water_Cld_Eta_0">
+                        <cd:Field name="Water_Cld_Eta_O">
+                          <cd:Type namexml="Water_Cld_Eta_O">
                             <cd:Float format="ascii">
                               <cd:Description>Fixed value of eta for water</cd:Description>
                               <cd:NativeType>double</cd:NativeType>
@@ -605,8 +605,8 @@
                             </cd:Float>
                           </cd:Type>
                         </cd:Field>
-                        <cd:Field name="Ice_Cld_Eta">
-                          <cd:Type namexml="Ice_Cld_Eta">
+                        <cd:Field name="Ice_Cld_Eta_O">
+                          <cd:Type namexml="Ice_Cld_Eta_O">
                             <cd:Float format="ascii">
                               <cd:Description>Fixed value of eta for ice</cd:Description>
                               <cd:NativeType>double</cd:NativeType>
@@ -653,8 +653,8 @@
                             </cd:Float>
                           </cd:Type>
                         </cd:Field>
-                        <cd:Field name="Aerosol_Eta_0">
-                          <cd:Type namexml="Aerosol_Eta_0">
+                        <cd:Field name="Aerosol_Eta_O">
+                          <cd:Type namexml="Aerosol_Eta_O">
                             <cd:Float format="ascii">
                               <cd:Description>Fixed value of eta for aerosol</cd:Description>
                               <cd:NativeType>double</cd:NativeType>
@@ -831,6 +831,14 @@
                               <cd:Type namexml="Hybrid_Median_Iteration">
                                 <cd:Integer format="ascii">
                                   <cd:Description>Number of iterations performed with the hybrid median algorithm.</cd:Description>
+                                  <cd:NativeType>uint8</cd:NativeType>
+                                </cd:Integer>
+                              </cd:Type>
+                            </cd:Field>
+                            <cd:Field name="Hybrid_Median_Size">
+                              <cd:Type namexml="Hybrid_Median_Size">
+                                <cd:Integer format="ascii">
+                                  <cd:Description>Width of the hybrid median window.</cd:Description>
                                   <cd:NativeType>uint8</cd:NativeType>
                                 </cd:Integer>
                               </cd:Type>
@@ -1537,6 +1545,14 @@
                       <cd:Mapping string="true" value="1"/>
                       <ct:NamedTest id="BooleanXmlTest"/>
                     </cd:Integer>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="Random_Seed_Value">
+                  <cd:Type namexml="Random_Seed_Value">
+                    <cd:Float format="ascii">
+                      <cd:Description>Seed value for random number generation used in high resolution ATB calculation.</cd:Description>
+                      <cd:NativeType>double</cd:NativeType>
+                    </cd:Float>
                   </cd:Type>
                 </cd:Field>
               </cd:Record>
