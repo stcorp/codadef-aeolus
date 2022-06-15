@@ -1428,6 +1428,14 @@
         <cd:MatchData offset="95">SD-DoRIT-L1B-006 v4.15 </cd:MatchData>
       </cd:DetectionRule>
     </cd:ProductDefinition>
+    <cd:ProductDefinition id="ALD_U_N_1B_04_16" format="binary" version="12">
+      <cd:Description>This definition is based on version 4/16 of IODD AED-SD-DoRIT-L1B-006</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT="AE_</cd:MatchData>
+        <cd:MatchData offset="17">ALD_U_N_1B</cd:MatchData>
+        <cd:MatchData offset="95">SD-DoRIT-L1B-006 v4.16 </cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
   </cd:ProductType>
   <cd:ProductType name="ALD_U_N_1B_HDR">
     <cd:Description>Aeolus Level 1B Wind Measurement Product (HDR)</cd:Description>

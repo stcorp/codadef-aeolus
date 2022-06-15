@@ -1,0 +1,85 @@
+<?xml version="1.0"?>
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="binary" last-modified="2019-10-31" name="Level_1B_PCD_Mie_Core_characteristics_04_16">
+  <cd:Field name="peak_position">
+    <cd:Float>
+      <cd:Description>Calculated peak position of signal</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+      <ct:NamedTest id="FloatIsFinite"/>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="fwhm">
+    <cd:Float>
+      <cd:Description>Calculated FWHM of signal</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+      <ct:NamedTest id="FloatIsFinite"/>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="amplitude">
+    <cd:Float>
+      <cd:Description>Calculated amplitude of signal</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+      <ct:NamedTest id="FloatIsFinite"/>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="offset">
+    <cd:Float>
+      <cd:Description>Calculated offset of signal</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+      <ct:NamedTest id="FloatIsFinite"/>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="error_flag">
+    <cd:Integer>
+      <cd:Description>1 byte bit packed field</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="residual_error">
+    <cd:Float>
+      <cd:Description>Quadratic sum of differences between modelled and measured ACCD counts per pixel</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+      <ct:NamedTest id="FloatIsFinite"/>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="num_iterations">
+    <cd:Integer>
+      <cd:Description>Number of iterations</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="voigt_amplitude">
+    <cd:Float>
+      <cd:Description>Amplitude of signal calculated with Voigt fit</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="voigt_offset">
+    <cd:Float>
+      <cd:Description>Offset of signal calculated with Voigt fit</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="voigt_residual_error">
+    <cd:Float>
+      <cd:Description>Quadratic sum of differences between modelled and measured ACCD counts per pixel</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="voigt_error_flag">
+    <cd:Integer>
+      <cd:Description>Voigt error flags</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+</cd:Record>
