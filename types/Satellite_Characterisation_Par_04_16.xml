@@ -1,0 +1,2405 @@
+<?xml version="1.0"?>
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" name="Satellite_Characterisation_Par_04_16" format="xml" namexml="Satellite_Characterisation" last-modified="2017-09-12">
+  <cd:Description>Satellite Characterisation GADS DSR</cd:Description>
+  <cd:Field name="List_of_Data_Set_Records">
+    <cd:Record namexml="List_of_Data_Set_Records">
+      <cd:Description>List of Data Set Records</cd:Description>
+      <cd:Attribute name="count">
+      </cd:Attribute>
+      <cd:Field name="Data_Set_Record">
+        <cd:Array>
+          <cd:Dimension/>
+          <cd:Record namexml="Data_Set_Record">
+            <cd:Description>Data Set Record</cd:Description>
+            <cd:Field name="DEU_A">
+              <cd:Record namexml="DEU_A">
+                <cd:Field name="List_of_TM_1_StandardTelVals">
+                  <cd:Record namexml="List_of_TM_1_StandardTelVals">
+                    <cd:Description>List of standard telemetry values for DEU A used for transfer curves 8230 and 8232</cd:Description>
+                    <cd:Attribute name="count">
+                    </cd:Attribute>
+                    <cd:Field name="TM_1_StandardTelVal">
+                      <cd:Array>
+                        <cd:Dimension/>
+                        <cd:Type namexml="TM_1_StandardTelVal">
+                          <cd:Integer format="ascii">
+                            <cd:Description>Single telemetry value</cd:Description>
+                            <cd:NativeType>int16</cd:NativeType>
+                          </cd:Integer>
+                        </cd:Type>
+                        <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                      </cd:Array>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+                <cd:Field name="List_of_TM_8230_PhysVals">
+                  <cd:Record namexml="List_of_TM_8230_PhysVals">
+                    <cd:Description>List of physical values for transfer curve 8230</cd:Description>
+                    <cd:Attribute name="count">
+                    </cd:Attribute>
+                    <cd:Field name="TM_8230_PhysVal">
+                      <cd:Array>
+                        <cd:Dimension/>
+                        <cd:Type namexml="TM_8230_PhysVal">
+                          <cd:Float format="ascii">
+                            <cd:Description>Single physical value</cd:Description>
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                        <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                      </cd:Array>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+                <cd:Field name="List_of_TM_8232_PhysVals">
+                  <cd:Record namexml="List_of_TM_8232_PhysVals">
+                    <cd:Description>List of physical values for transfer curve 8232</cd:Description>
+                    <cd:Attribute name="count">
+                    </cd:Attribute>
+                    <cd:Field name="TM_8232_PhysVal">
+                      <cd:Array>
+                        <cd:Dimension/>
+                        <cd:Type namexml="TM_8232_PhysVal">
+                          <cd:Float format="ascii">
+                            <cd:Description>Single physical value</cd:Description>
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                        <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                      </cd:Array>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+              </cd:Record>
+            </cd:Field>
+            <cd:Field name="DEU_B">
+              <cd:Record namexml="DEU_B">
+                <cd:Field name="List_of_TM_1_StandardTelVals">
+                  <cd:Record namexml="List_of_TM_1_StandardTelVals">
+                    <cd:Description>List of standard telemetry values for DEU B used for transfer curves 8310 and 8312</cd:Description>
+                    <cd:Attribute name="count">
+                    </cd:Attribute>
+                    <cd:Field name="TM_1_StandardTelVal">
+                      <cd:Array>
+                        <cd:Dimension/>
+                        <cd:Type namexml="TM_1_StandardTelVal">
+                          <cd:Integer format="ascii">
+                            <cd:Description>Single telemetry value</cd:Description>
+                            <cd:NativeType>int16</cd:NativeType>
+                          </cd:Integer>
+                        </cd:Type>
+                        <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                      </cd:Array>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+                <cd:Field name="List_of_TM_8310_PhysVals">
+                  <cd:Record namexml="List_of_TM_8310_PhysVals">
+                    <cd:Description>List of physical values for transfer curve 8310</cd:Description>
+                    <cd:Attribute name="count">
+                    </cd:Attribute>
+                    <cd:Field name="TM_8310_PhysVal">
+                      <cd:Array>
+                        <cd:Dimension/>
+                        <cd:Type namexml="TM_8310_PhysVal">
+                          <cd:Float format="ascii">
+                            <cd:Description>Single physical value</cd:Description>
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                        <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                      </cd:Array>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+                <cd:Field name="List_of_TM_8312_PhysVals">
+                  <cd:Record namexml="List_of_TM_8312_PhysVals">
+                    <cd:Description>List of physical values for transfer curve 8312</cd:Description>
+                    <cd:Attribute name="count">
+                    </cd:Attribute>
+                    <cd:Field name="TM_8312_PhysVal">
+                      <cd:Array>
+                        <cd:Dimension/>
+                        <cd:Type namexml="TM_8312_PhysVal">
+                          <cd:Float format="ascii">
+                            <cd:Description>Single physical value</cd:Description>
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                        <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                      </cd:Array>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+              </cd:Record>
+            </cd:Field>
+            <cd:Field name="DEU_Common">
+              <cd:Record namexml="DEU_Common">
+                <cd:Field name="List_of_TM_1_StandardTelVals">
+                  <cd:Record namexml="List_of_TM_1_StandardTelVals">
+                    <cd:Description>List of standard telemetry values for DEU Common used for transfer curves 8235, 8236, 8237, 8238, 8239, and 8240</cd:Description>
+                    <cd:Attribute name="count">
+                    </cd:Attribute>
+                    <cd:Field name="TM_1_StandardTelVal">
+                      <cd:Array>
+                        <cd:Dimension/>
+                        <cd:Type namexml="TM_1_StandardTelVal">
+                          <cd:Integer format="ascii">
+                            <cd:Description>Single telemetry value</cd:Description>
+                            <cd:NativeType>int16</cd:NativeType>
+                          </cd:Integer>
+                        </cd:Type>
+                        <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                      </cd:Array>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+                <cd:Field name="List_of_TM_8235_PhysVals">
+                  <cd:Record namexml="List_of_TM_8235_PhysVals">
+                    <cd:Description>List of physical values for transfer curve 8235</cd:Description>
+                    <cd:Attribute name="count">
+                    </cd:Attribute>
+                    <cd:Field name="TM_8235_PhysVal">
+                      <cd:Array>
+                        <cd:Dimension/>
+                        <cd:Type namexml="TM_8235_PhysVal">
+                          <cd:Float format="ascii">
+                            <cd:Description>Single physical value</cd:Description>
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                        <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                      </cd:Array>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+                <cd:Field name="List_of_TM_8236_PhysVals">
+                  <cd:Record namexml="List_of_TM_8236_PhysVals">
+                    <cd:Description>List of physical values for transfer curve 8236</cd:Description>
+                    <cd:Attribute name="count">
+                    </cd:Attribute>
+                    <cd:Field name="TM_8236_PhysVal">
+                      <cd:Array>
+                        <cd:Dimension/>
+                        <cd:Type namexml="TM_8236_PhysVal">
+                          <cd:Float format="ascii">
+                            <cd:Description>Single physical value</cd:Description>
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                        <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                      </cd:Array>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+                <cd:Field name="List_of_TM_8237_PhysVals">
+                  <cd:Record namexml="List_of_TM_8237_PhysVals">
+                    <cd:Description>List of physical values for transfer curve 8237</cd:Description>
+                    <cd:Attribute name="count">
+                    </cd:Attribute>
+                    <cd:Field name="TM_8237_PhysVal">
+                      <cd:Array>
+                        <cd:Dimension/>
+                        <cd:Type namexml="TM_8237_PhysVal">
+                          <cd:Float format="ascii">
+                            <cd:Description>Single physical value</cd:Description>
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                        <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                      </cd:Array>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+                <cd:Field name="List_of_TM_8238_PhysVals">
+                  <cd:Record namexml="List_of_TM_8238_PhysVals">
+                    <cd:Description>List of physical values for transfer curve 8238</cd:Description>
+                    <cd:Attribute name="count">
+                    </cd:Attribute>
+                    <cd:Field name="TM_8238_PhysVal">
+                      <cd:Array>
+                        <cd:Dimension/>
+                        <cd:Type namexml="TM_8238_PhysVal">
+                          <cd:Float format="ascii">
+                            <cd:Description>Single physical value</cd:Description>
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                        <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                      </cd:Array>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+                <cd:Field name="List_of_TM_8239_PhysVals">
+                  <cd:Record namexml="List_of_TM_8239_PhysVals">
+                    <cd:Description>List of physical values for transfer curve 8239</cd:Description>
+                    <cd:Attribute name="count">
+                    </cd:Attribute>
+                    <cd:Field name="TM_8239_PhysVal">
+                      <cd:Array>
+                        <cd:Dimension/>
+                        <cd:Type namexml="TM_8239_PhysVal">
+                          <cd:Float format="ascii">
+                            <cd:Description>Single physical value</cd:Description>
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                        <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                      </cd:Array>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+                <cd:Field name="List_of_TM_8240_PhysVals">
+                  <cd:Record namexml="List_of_TM_8240_PhysVals">
+                    <cd:Description>List of physical values for transfer curve 8240</cd:Description>
+                    <cd:Attribute name="count">
+                    </cd:Attribute>
+                    <cd:Field name="TM_8240_PhysVal">
+                      <cd:Array>
+                        <cd:Dimension/>
+                        <cd:Type namexml="TM_8240_PhysVal">
+                          <cd:Float format="ascii">
+                            <cd:Description>Single physical value</cd:Description>
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                        <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                      </cd:Array>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+              </cd:Record>
+            </cd:Field>
+            <cd:Field name="TLE_1">
+              <cd:Record namexml="TLE_1">
+                <cd:Field name="List_of_TM_1_StandardTelVals">
+                  <cd:Record namexml="List_of_TM_1_StandardTelVals">
+                    <cd:Description>List of standard telemetry values for TLE_1 used for transfer curves 8419, 8437, 8513, 8514, 8517, 8518, 8521, 8522, 8544 and 8545</cd:Description>
+                    <cd:Attribute name="count">
+                    </cd:Attribute>
+                    <cd:Field name="TM_1_StandardTelVal">
+                      <cd:Array>
+                        <cd:Dimension/>
+                        <cd:Type namexml="TM_1_StandardTelVal">
+                          <cd:Integer format="ascii">
+                            <cd:Description>Single telemetry value</cd:Description>
+                            <cd:NativeType>int16</cd:NativeType>
+                          </cd:Integer>
+                        </cd:Type>
+                        <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                      </cd:Array>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+                <cd:Field name="List_of_TM_2_StandardTelVals">
+                  <cd:Record namexml="List_of_TM_2_StandardTelVals">
+                    <cd:Description>List of standard telemetry values for DEU B used for transfer curve 8451</cd:Description>
+                    <cd:Attribute name="count">
+                    </cd:Attribute>
+                    <cd:Field name="TM_2_StandardTelVal">
+                      <cd:Array>
+                        <cd:Dimension/>
+                        <cd:Type namexml="TM_2_StandardTelVal">
+                          <cd:Integer format="ascii">
+                            <cd:Description>Single telemetry value</cd:Description>
+                            <cd:NativeType>int16</cd:NativeType>
+                          </cd:Integer>
+                        </cd:Type>
+                        <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                      </cd:Array>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+                <cd:Field name="List_of_TM_8419_PhysVals">
+                  <cd:Record namexml="List_of_TM_8419_PhysVals">
+                    <cd:Description>List of physical values for transfer curve 8419</cd:Description>
+                    <cd:Attribute name="count">
+                    </cd:Attribute>
+                    <cd:Field name="TM_8419_PhysVal">
+                      <cd:Array>
+                        <cd:Dimension/>
+                        <cd:Type namexml="TM_8419_PhysVal">
+                          <cd:Float format="ascii">
+                            <cd:Description>Single physical value</cd:Description>
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                        <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                      </cd:Array>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+                <cd:Field name="List_of_TM_8437_PhysVals">
+                  <cd:Record namexml="List_of_TM_8437_PhysVals">
+                    <cd:Description>List of physical values for transfer curve 8437</cd:Description>
+                    <cd:Attribute name="count">
+                    </cd:Attribute>
+                    <cd:Field name="TM_8437_PhysVal">
+                      <cd:Array>
+                        <cd:Dimension/>
+                        <cd:Type namexml="TM_8437_PhysVal">
+                          <cd:Float format="ascii">
+                            <cd:Description>Single physical value</cd:Description>
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                        <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                      </cd:Array>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+                <cd:Field name="List_of_TM_8451_PhysVals">
+                  <cd:Record namexml="List_of_TM_8451_PhysVals">
+                    <cd:Description>List of physical values for transfer curve 8451</cd:Description>
+                    <cd:Attribute name="count">
+                    </cd:Attribute>
+                    <cd:Field name="TM_8451_PhysVal">
+                      <cd:Array>
+                        <cd:Dimension/>
+                        <cd:Type namexml="TM_8451_PhysVal">
+                          <cd:Float format="ascii">
+                            <cd:Description>Single physical value</cd:Description>
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                        <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                      </cd:Array>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+                <cd:Field name="List_of_TM_8513_PhysVals">
+                  <cd:Record namexml="List_of_TM_8513_PhysVals">
+                    <cd:Description>List of physical values for transfer curve 8513</cd:Description>
+                    <cd:Attribute name="count">
+                    </cd:Attribute>
+                    <cd:Field name="TM_8513_PhysVal">
+                      <cd:Array>
+                        <cd:Dimension/>
+                        <cd:Type namexml="TM_8513_PhysVal">
+                          <cd:Float format="ascii">
+                            <cd:Description>Single physical value</cd:Description>
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                        <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                      </cd:Array>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+                <cd:Field name="List_of_TM_8514_PhysVals">
+                  <cd:Record namexml="List_of_TM_8514_PhysVals">
+                    <cd:Description>List of physical values for transfer curve 8514</cd:Description>
+                    <cd:Attribute name="count">
+                    </cd:Attribute>
+                    <cd:Field name="TM_8514_PhysVal">
+                      <cd:Array>
+                        <cd:Dimension/>
+                        <cd:Type namexml="TM_8514_PhysVal">
+                          <cd:Float format="ascii">
+                            <cd:Description>Single physical value</cd:Description>
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                        <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                      </cd:Array>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+                <cd:Field name="List_of_TM_8517_PhysVals">
+                  <cd:Record namexml="List_of_TM_8517_PhysVals">
+                    <cd:Description>List of physical values for transfer curve 8517</cd:Description>
+                    <cd:Attribute name="count">
+                    </cd:Attribute>
+                    <cd:Field name="TM_8517_PhysVal">
+                      <cd:Array>
+                        <cd:Dimension/>
+                        <cd:Type namexml="TM_8517_PhysVal">
+                          <cd:Float format="ascii">
+                            <cd:Description>Single physical value</cd:Description>
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                        <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                      </cd:Array>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+                <cd:Field name="List_of_TM_8518_PhysVals">
+                  <cd:Record namexml="List_of_TM_8518_PhysVals">
+                    <cd:Description>List of physical values for transfer curve 8518</cd:Description>
+                    <cd:Attribute name="count">
+                    </cd:Attribute>
+                    <cd:Field name="TM_8518_PhysVal">
+                      <cd:Array>
+                        <cd:Dimension/>
+                        <cd:Type namexml="TM_8518_PhysVal">
+                          <cd:Float format="ascii">
+                            <cd:Description>Single physical value</cd:Description>
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                        <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                      </cd:Array>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+                <cd:Field name="List_of_TM_8521_PhysVals">
+                  <cd:Record namexml="List_of_TM_8521_PhysVals">
+                    <cd:Description>List of physical values for transfer curve 8521</cd:Description>
+                    <cd:Attribute name="count">
+                    </cd:Attribute>
+                    <cd:Field name="TM_8521_PhysVal">
+                      <cd:Array>
+                        <cd:Dimension/>
+                        <cd:Type namexml="TM_8521_PhysVal">
+                          <cd:Float format="ascii">
+                            <cd:Description>Single physical value</cd:Description>
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                        <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                      </cd:Array>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+                <cd:Field name="List_of_TM_8522_PhysVals">
+                  <cd:Record namexml="List_of_TM_8522_PhysVals">
+                    <cd:Description>List of physical values for transfer curve 8522</cd:Description>
+                    <cd:Attribute name="count">
+                    </cd:Attribute>
+                    <cd:Field name="TM_8522_PhysVal">
+                      <cd:Array>
+                        <cd:Dimension/>
+                        <cd:Type namexml="TM_8522_PhysVal">
+                          <cd:Float format="ascii">
+                            <cd:Description>Single physical value</cd:Description>
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                        <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                      </cd:Array>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+                <cd:Field name="List_of_TM_8544_PhysVals">
+                  <cd:Record namexml="List_of_TM_8544_PhysVals">
+                    <cd:Description>List of physical values for transfer curve 8544</cd:Description>
+                    <cd:Attribute name="count">
+                    </cd:Attribute>
+                    <cd:Field name="TM_8544_PhysVal">
+                      <cd:Array>
+                        <cd:Dimension/>
+                        <cd:Type namexml="TM_8544_PhysVal">
+                          <cd:Float format="ascii">
+                            <cd:Description>Single physical value</cd:Description>
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                        <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                      </cd:Array>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+                <cd:Field name="List_of_TM_8545_PhysVals">
+                  <cd:Record namexml="List_of_TM_8545_PhysVals">
+                    <cd:Description>List of physical values for transfer curve 8545</cd:Description>
+                    <cd:Attribute name="count">
+                    </cd:Attribute>
+                    <cd:Field name="TM_8545_PhysVal">
+                      <cd:Array>
+                        <cd:Dimension/>
+                        <cd:Type namexml="TM_8545_PhysVal">
+                          <cd:Float format="ascii">
+                            <cd:Description>Single physical value</cd:Description>
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                        <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                      </cd:Array>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+              </cd:Record>
+            </cd:Field>
+            <cd:Field name="TLE_2">
+              <cd:Record namexml="TLE_2">
+                <cd:Field name="List_of_TM_1_StandardTelVals">
+                  <cd:Record namexml="List_of_TM_1_StandardTelVals">
+                    <cd:Description>List of standard telemetry values for TLE_2 used for transfer curves 8619, 8637, 8713, 8714, 8717, 8718, 8721, 8722, 8744, and 8745</cd:Description>
+                    <cd:Attribute name="count">
+                    </cd:Attribute>
+                    <cd:Field name="TM_1_StandardTelVal">
+                      <cd:Array>
+                        <cd:Dimension/>
+                        <cd:Type namexml="TM_1_StandardTelVal">
+                          <cd:Integer format="ascii">
+                            <cd:Description>Single telemetry value</cd:Description>
+                            <cd:NativeType>int16</cd:NativeType>
+                          </cd:Integer>
+                        </cd:Type>
+                        <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                      </cd:Array>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+                <cd:Field name="List_of_TM_2_StandardTelVals">
+                  <cd:Record namexml="List_of_TM_2_StandardTelVals">
+                    <cd:Description>List of standard telemetry values for TLE_2 used for transfer curve 8651</cd:Description>
+                    <cd:Attribute name="count">
+                    </cd:Attribute>
+                    <cd:Field name="TM_2_StandardTelVal">
+                      <cd:Array>
+                        <cd:Dimension/>
+                        <cd:Type namexml="TM_2_StandardTelVal">
+                          <cd:Integer format="ascii">
+                            <cd:Description>Single telemetry value</cd:Description>
+                            <cd:NativeType>int16</cd:NativeType>
+                          </cd:Integer>
+                        </cd:Type>
+                        <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                      </cd:Array>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+                <cd:Field name="List_of_TM_8619_PhysVals">
+                  <cd:Record namexml="List_of_TM_8619_PhysVals">
+                    <cd:Description>List of physical values for transfer curve 8619</cd:Description>
+                    <cd:Attribute name="count">
+                    </cd:Attribute>
+                    <cd:Field name="TM_8619_PhysVal">
+                      <cd:Array>
+                        <cd:Dimension/>
+                        <cd:Type namexml="TM_8619_PhysVal">
+                          <cd:Float format="ascii">
+                            <cd:Description>Single physical value</cd:Description>
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                        <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                      </cd:Array>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+                <cd:Field name="List_of_TM_8637_PhysVals">
+                  <cd:Record namexml="List_of_TM_8637_PhysVals">
+                    <cd:Description>List of physical values for transfer curve 8637</cd:Description>
+                    <cd:Attribute name="count">
+                    </cd:Attribute>
+                    <cd:Field name="TM_8637_PhysVal">
+                      <cd:Array>
+                        <cd:Dimension/>
+                        <cd:Type namexml="TM_8637_PhysVal">
+                          <cd:Float format="ascii">
+                            <cd:Description>Single physical value</cd:Description>
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                        <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                      </cd:Array>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+                <cd:Field name="List_of_TM_8651_PhysVals">
+                  <cd:Record namexml="List_of_TM_8651_PhysVals">
+                    <cd:Description>List of physical values for transfer curve 8651</cd:Description>
+                    <cd:Attribute name="count">
+                    </cd:Attribute>
+                    <cd:Field name="TM_8651_PhysVal">
+                      <cd:Array>
+                        <cd:Dimension/>
+                        <cd:Type namexml="TM_8651_PhysVal">
+                          <cd:Float format="ascii">
+                            <cd:Description>Single physical value</cd:Description>
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                        <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                      </cd:Array>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+                <cd:Field name="List_of_TM_8713_PhysVals">
+                  <cd:Record namexml="List_of_TM_8713_PhysVals">
+                    <cd:Description>List of physical values for transfer curve 8713</cd:Description>
+                    <cd:Attribute name="count">
+                    </cd:Attribute>
+                    <cd:Field name="TM_8713_PhysVal">
+                      <cd:Array>
+                        <cd:Dimension/>
+                        <cd:Type namexml="TM_8713_PhysVal">
+                          <cd:Float format="ascii">
+                            <cd:Description>Single physical value</cd:Description>
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                        <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                      </cd:Array>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+                <cd:Field name="List_of_TM_8714_PhysVals">
+                  <cd:Record namexml="List_of_TM_8714_PhysVals">
+                    <cd:Description>List of physical values for transfer curve 8714</cd:Description>
+                    <cd:Attribute name="count">
+                    </cd:Attribute>
+                    <cd:Field name="TM_8714_PhysVal">
+                      <cd:Array>
+                        <cd:Dimension/>
+                        <cd:Type namexml="TM_8714_PhysVal">
+                          <cd:Float format="ascii">
+                            <cd:Description>Single physical value</cd:Description>
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                        <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                      </cd:Array>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+                <cd:Field name="List_of_TM_8717_PhysVals">
+                  <cd:Record namexml="List_of_TM_8717_PhysVals">
+                    <cd:Description>List of physical values for transfer curve 8717</cd:Description>
+                    <cd:Attribute name="count">
+                    </cd:Attribute>
+                    <cd:Field name="TM_8717_PhysVal">
+                      <cd:Array>
+                        <cd:Dimension/>
+                        <cd:Type namexml="TM_8717_PhysVal">
+                          <cd:Float format="ascii">
+                            <cd:Description>Single physical value</cd:Description>
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                        <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                      </cd:Array>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+                <cd:Field name="List_of_TM_8718_PhysVals">
+                  <cd:Record namexml="List_of_TM_8718_PhysVals">
+                    <cd:Description>List of physical values for transfer curve 8718</cd:Description>
+                    <cd:Attribute name="count">
+                    </cd:Attribute>
+                    <cd:Field name="TM_8718_PhysVal">
+                      <cd:Array>
+                        <cd:Dimension/>
+                        <cd:Type namexml="TM_8718_PhysVal">
+                          <cd:Float format="ascii">
+                            <cd:Description>Single physical value</cd:Description>
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                        <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                      </cd:Array>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+                <cd:Field name="List_of_TM_8721_PhysVals">
+                  <cd:Record namexml="List_of_TM_8721_PhysVals">
+                    <cd:Description>List of physical values for transfer curve 8721</cd:Description>
+                    <cd:Attribute name="count">
+                    </cd:Attribute>
+                    <cd:Field name="TM_8721_PhysVal">
+                      <cd:Array>
+                        <cd:Dimension/>
+                        <cd:Type namexml="TM_8721_PhysVal">
+                          <cd:Float format="ascii">
+                            <cd:Description>Single physical value</cd:Description>
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                        <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                      </cd:Array>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+                <cd:Field name="List_of_TM_8722_PhysVals">
+                  <cd:Record namexml="List_of_TM_8722_PhysVals">
+                    <cd:Description>List of physical values for transfer curve 8722</cd:Description>
+                    <cd:Attribute name="count">
+                    </cd:Attribute>
+                    <cd:Field name="TM_8722_PhysVal">
+                      <cd:Array>
+                        <cd:Dimension/>
+                        <cd:Type namexml="TM_8722_PhysVal">
+                          <cd:Float format="ascii">
+                            <cd:Description>Single physical value</cd:Description>
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                        <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                      </cd:Array>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+                <cd:Field name="List_of_TM_8744_PhysVals">
+                  <cd:Record namexml="List_of_TM_8744_PhysVals">
+                    <cd:Description>List of physical values for transfer curve 8744</cd:Description>
+                    <cd:Attribute name="count">
+                    </cd:Attribute>
+                    <cd:Field name="TM_8744_PhysVal">
+                      <cd:Array>
+                        <cd:Dimension/>
+                        <cd:Type namexml="TM_8744_PhysVal">
+                          <cd:Float format="ascii">
+                            <cd:Description>Single physical value</cd:Description>
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                        <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                      </cd:Array>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+                <cd:Field name="List_of_TM_8745_PhysVals">
+                  <cd:Record namexml="List_of_TM_8745_PhysVals">
+                    <cd:Description>List of physical values for transfer curve 8745</cd:Description>
+                    <cd:Attribute name="count">
+                    </cd:Attribute>
+                    <cd:Field name="TM_8745_PhysVal">
+                      <cd:Array>
+                        <cd:Dimension/>
+                        <cd:Type namexml="TM_8745_PhysVal">
+                          <cd:Float format="ascii">
+                            <cd:Description>Single physical value</cd:Description>
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                        <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                      </cd:Array>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+              </cd:Record>
+            </cd:Field>
+            <cd:Field name="ACDM_A">
+              <cd:Record namexml="ACDM_A">
+                <cd:Field name="List_of_TM_1_StandardTelVals">
+                  <cd:Record namexml="List_of_TM_1_StandardTelVals">
+                    <cd:Description>List of standard telemetry values for ACDM_A used for transfer curves 8116, 8117, 8118, 8146, 8147, 8148, and 8149</cd:Description>
+                    <cd:Attribute name="count">
+                    </cd:Attribute>
+                    <cd:Field name="TM_1_StandardTelVal">
+                      <cd:Array>
+                        <cd:Dimension/>
+                        <cd:Type namexml="TM_1_StandardTelVal">
+                          <cd:Integer format="ascii">
+                            <cd:Description>Single telemetry value</cd:Description>
+                            <cd:NativeType>int16</cd:NativeType>
+                          </cd:Integer>
+                        </cd:Type>
+                        <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                      </cd:Array>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+                <cd:Field name="List_of_TM_2_StandardTelVals">
+                  <cd:Record namexml="List_of_TM_2_StandardTelVals">
+                    <cd:Description>List of standard telemetry values for ACDM_A used for transfer curves 8104, 8105, 8106, 8107, 8108, 8109, 8138, 8139, 8140, and 8141</cd:Description>
+                    <cd:Attribute name="count">
+                    </cd:Attribute>
+                    <cd:Field name="TM_2_StandardTelVal">
+                      <cd:Array>
+                        <cd:Dimension/>
+                        <cd:Type namexml="TM_2_StandardTelVal">
+                          <cd:Integer format="ascii">
+                            <cd:Description>Single telemetry value</cd:Description>
+                            <cd:NativeType>int16</cd:NativeType>
+                          </cd:Integer>
+                        </cd:Type>
+                        <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                      </cd:Array>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+                <cd:Field name="List_of_TM_3_StandardTelVals">
+                  <cd:Record namexml="List_of_TM_3_StandardTelVals">
+                    <cd:Description>List of standard telemetry values for ACDM_A used for transfer curves 8130, 8131, 8132, and 8133</cd:Description>
+                    <cd:Attribute name="count">
+                    </cd:Attribute>
+                    <cd:Field name="TM_3_StandardTelVal">
+                      <cd:Array>
+                        <cd:Dimension/>
+                        <cd:Type namexml="TM_3_StandardTelVal">
+                          <cd:Integer format="ascii">
+                            <cd:Description>Single telemetry value</cd:Description>
+                            <cd:NativeType>int16</cd:NativeType>
+                          </cd:Integer>
+                        </cd:Type>
+                        <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                      </cd:Array>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+                <cd:Field name="List_of_TM_8104_PhysVals">
+                  <cd:Record namexml="List_of_TM_8104_PhysVals">
+                    <cd:Description>List of physical values for transfer curve 8104</cd:Description>
+                    <cd:Attribute name="count">
+                    </cd:Attribute>
+                    <cd:Field name="TM_8104_PhysVal">
+                      <cd:Array>
+                        <cd:Dimension/>
+                        <cd:Type namexml="TM_8104_PhysVal">
+                          <cd:Float format="ascii">
+                            <cd:Description>Single physical value</cd:Description>
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                        <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                      </cd:Array>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+                <cd:Field name="List_of_TM_8105_PhysVals">
+                  <cd:Record namexml="List_of_TM_8105_PhysVals">
+                    <cd:Description>List of physical values for transfer curve 8105</cd:Description>
+                    <cd:Attribute name="count">
+                    </cd:Attribute>
+                    <cd:Field name="TM_8105_PhysVal">
+                      <cd:Array>
+                        <cd:Dimension/>
+                        <cd:Type namexml="TM_8105_PhysVal">
+                          <cd:Float format="ascii">
+                            <cd:Description>Single physical value</cd:Description>
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                        <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                      </cd:Array>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+                <cd:Field name="List_of_TM_8106_PhysVals">
+                  <cd:Record namexml="List_of_TM_8106_PhysVals">
+                    <cd:Description>List of physical values for transfer curve 8106</cd:Description>
+                    <cd:Attribute name="count">
+                    </cd:Attribute>
+                    <cd:Field name="TM_8106_PhysVal">
+                      <cd:Array>
+                        <cd:Dimension/>
+                        <cd:Type namexml="TM_8106_PhysVal">
+                          <cd:Float format="ascii">
+                            <cd:Description>Single physical value</cd:Description>
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                        <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                      </cd:Array>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+                <cd:Field name="List_of_TM_8107_PhysVals">
+                  <cd:Record namexml="List_of_TM_8107_PhysVals">
+                    <cd:Description>List of physical values for transfer curve 8107</cd:Description>
+                    <cd:Attribute name="count">
+                    </cd:Attribute>
+                    <cd:Field name="TM_8107_PhysVal">
+                      <cd:Array>
+                        <cd:Dimension/>
+                        <cd:Type namexml="TM_8107_PhysVal">
+                          <cd:Float format="ascii">
+                            <cd:Description>Single physical value</cd:Description>
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                        <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                      </cd:Array>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+                <cd:Field name="List_of_TM_8108_PhysVals">
+                  <cd:Record namexml="List_of_TM_8108_PhysVals">
+                    <cd:Description>List of physical values for transfer curve 8108</cd:Description>
+                    <cd:Attribute name="count">
+                    </cd:Attribute>
+                    <cd:Field name="TM_8108_PhysVal">
+                      <cd:Array>
+                        <cd:Dimension/>
+                        <cd:Type namexml="TM_8108_PhysVal">
+                          <cd:Float format="ascii">
+                            <cd:Description>Single physical value</cd:Description>
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                        <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                      </cd:Array>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+                <cd:Field name="List_of_TM_8109_PhysVals">
+                  <cd:Record namexml="List_of_TM_8109_PhysVals">
+                    <cd:Description>List of physical values for transfer curve 8109</cd:Description>
+                    <cd:Attribute name="count">
+                    </cd:Attribute>
+                    <cd:Field name="TM_8109_PhysVal">
+                      <cd:Array>
+                        <cd:Dimension/>
+                        <cd:Type namexml="TM_8109_PhysVal">
+                          <cd:Float format="ascii">
+                            <cd:Description>Single physical value</cd:Description>
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                        <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                      </cd:Array>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+                <cd:Field name="List_of_TM_8116_PhysVals">
+                  <cd:Record namexml="List_of_TM_8116_PhysVals">
+                    <cd:Description>List of physical values for transfer curve 8116</cd:Description>
+                    <cd:Attribute name="count">
+                    </cd:Attribute>
+                    <cd:Field name="TM_8116_PhysVal">
+                      <cd:Array>
+                        <cd:Dimension/>
+                        <cd:Type namexml="TM_8116_PhysVal">
+                          <cd:Float format="ascii">
+                            <cd:Description>Single physical value</cd:Description>
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                        <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                      </cd:Array>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+                <cd:Field name="List_of_TM_8117_PhysVals">
+                  <cd:Record namexml="List_of_TM_8117_PhysVals">
+                    <cd:Description>List of physical values for transfer curve 8117</cd:Description>
+                    <cd:Attribute name="count">
+                    </cd:Attribute>
+                    <cd:Field name="TM_8117_PhysVal">
+                      <cd:Array>
+                        <cd:Dimension/>
+                        <cd:Type namexml="TM_8117_PhysVal">
+                          <cd:Float format="ascii">
+                            <cd:Description>Single physical value</cd:Description>
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                        <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                      </cd:Array>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+                <cd:Field name="List_of_TM_8118_PhysVals">
+                  <cd:Record namexml="List_of_TM_8118_PhysVals">
+                    <cd:Description>List of physical values for transfer curve 8118</cd:Description>
+                    <cd:Attribute name="count">
+                    </cd:Attribute>
+                    <cd:Field name="TM_8118_PhysVal">
+                      <cd:Array>
+                        <cd:Dimension/>
+                        <cd:Type namexml="TM_8118_PhysVal">
+                          <cd:Float format="ascii">
+                            <cd:Description>Single physical value</cd:Description>
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                        <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                      </cd:Array>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+                <cd:Field name="List_of_TM_8130_PhysVals">
+                  <cd:Record namexml="List_of_TM_8130_PhysVals">
+                    <cd:Description>List of physical values for transfer curve 8130</cd:Description>
+                    <cd:Attribute name="count">
+                    </cd:Attribute>
+                    <cd:Field name="TM_8130_PhysVal">
+                      <cd:Array>
+                        <cd:Dimension/>
+                        <cd:Type namexml="TM_8130_PhysVal">
+                          <cd:Float format="ascii">
+                            <cd:Description>Single physical value</cd:Description>
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                        <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                      </cd:Array>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+                <cd:Field name="List_of_TM_8131_PhysVals">
+                  <cd:Record namexml="List_of_TM_8131_PhysVals">
+                    <cd:Description>List of physical values for transfer curve 8131</cd:Description>
+                    <cd:Attribute name="count">
+                    </cd:Attribute>
+                    <cd:Field name="TM_8131_PhysVal">
+                      <cd:Array>
+                        <cd:Dimension/>
+                        <cd:Type namexml="TM_8131_PhysVal">
+                          <cd:Float format="ascii">
+                            <cd:Description>Single physical value</cd:Description>
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                        <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                      </cd:Array>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+                <cd:Field name="List_of_TM_8132_PhysVals">
+                  <cd:Record namexml="List_of_TM_8132_PhysVals">
+                    <cd:Description>List of physical values for transfer curve 8132</cd:Description>
+                    <cd:Attribute name="count">
+                    </cd:Attribute>
+                    <cd:Field name="TM_8132_PhysVal">
+                      <cd:Array>
+                        <cd:Dimension/>
+                        <cd:Type namexml="TM_8132_PhysVal">
+                          <cd:Float format="ascii">
+                            <cd:Description>Single physical value</cd:Description>
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                        <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                      </cd:Array>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+                <cd:Field name="List_of_TM_8133_PhysVals">
+                  <cd:Record namexml="List_of_TM_8133_PhysVals">
+                    <cd:Description>List of physical values for transfer curve 8133</cd:Description>
+                    <cd:Attribute name="count">
+                    </cd:Attribute>
+                    <cd:Field name="TM_8133_PhysVal">
+                      <cd:Array>
+                        <cd:Dimension/>
+                        <cd:Type namexml="TM_8133_PhysVal">
+                          <cd:Float format="ascii">
+                            <cd:Description>Single physical value</cd:Description>
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                        <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                      </cd:Array>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+                <cd:Field name="List_of_TM_8138_PhysVals">
+                  <cd:Record namexml="List_of_TM_8138_PhysVals">
+                    <cd:Description>List of physical values for transfer curve 8138</cd:Description>
+                    <cd:Attribute name="count">
+                    </cd:Attribute>
+                    <cd:Field name="TM_8138_PhysVal">
+                      <cd:Array>
+                        <cd:Dimension/>
+                        <cd:Type namexml="TM_8138_PhysVal">
+                          <cd:Float format="ascii">
+                            <cd:Description>Single physical value</cd:Description>
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                        <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                      </cd:Array>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+                <cd:Field name="List_of_TM_8139_PhysVals">
+                  <cd:Record namexml="List_of_TM_8139_PhysVals">
+                    <cd:Description>List of physical values for transfer curve 8139</cd:Description>
+                    <cd:Attribute name="count">
+                    </cd:Attribute>
+                    <cd:Field name="TM_8139_PhysVal">
+                      <cd:Array>
+                        <cd:Dimension/>
+                        <cd:Type namexml="TM_8139_PhysVal">
+                          <cd:Float format="ascii">
+                            <cd:Description>Single physical value</cd:Description>
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                        <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                      </cd:Array>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+                <cd:Field name="List_of_TM_8140_PhysVals">
+                  <cd:Record namexml="List_of_TM_8140_PhysVals">
+                    <cd:Description>List of physical values for transfer curve 8140</cd:Description>
+                    <cd:Attribute name="count">
+                    </cd:Attribute>
+                    <cd:Field name="TM_8140_PhysVal">
+                      <cd:Array>
+                        <cd:Dimension/>
+                        <cd:Type namexml="TM_8140_PhysVal">
+                          <cd:Float format="ascii">
+                            <cd:Description>Single physical value</cd:Description>
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                        <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                      </cd:Array>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+                <cd:Field name="List_of_TM_8141_PhysVals">
+                  <cd:Record namexml="List_of_TM_8141_PhysVals">
+                    <cd:Description>List of physical values for transfer curve 8141</cd:Description>
+                    <cd:Attribute name="count">
+                    </cd:Attribute>
+                    <cd:Field name="TM_8141_PhysVal">
+                      <cd:Array>
+                        <cd:Dimension/>
+                        <cd:Type namexml="TM_8141_PhysVal">
+                          <cd:Float format="ascii">
+                            <cd:Description>Single physical value</cd:Description>
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                        <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                      </cd:Array>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+                <cd:Field name="List_of_TM_8146_PhysVals">
+                  <cd:Record namexml="List_of_TM_8146_PhysVals">
+                    <cd:Description>List of physical values for transfer curve 8146</cd:Description>
+                    <cd:Attribute name="count">
+                    </cd:Attribute>
+                    <cd:Field name="TM_8146_PhysVal">
+                      <cd:Array>
+                        <cd:Dimension/>
+                        <cd:Type namexml="TM_8146_PhysVal">
+                          <cd:Float format="ascii">
+                            <cd:Description>Single physical value</cd:Description>
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                        <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                      </cd:Array>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+                <cd:Field name="List_of_TM_8147_PhysVals">
+                  <cd:Record namexml="List_of_TM_8147_PhysVals">
+                    <cd:Description>List of physical values for transfer curve 8147</cd:Description>
+                    <cd:Attribute name="count">
+                    </cd:Attribute>
+                    <cd:Field name="TM_8147_PhysVal">
+                      <cd:Array>
+                        <cd:Dimension/>
+                        <cd:Type namexml="TM_8147_PhysVal">
+                          <cd:Float format="ascii">
+                            <cd:Description>Single physical value</cd:Description>
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                        <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                      </cd:Array>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+                <cd:Field name="List_of_TM_8148_PhysVals">
+                  <cd:Record namexml="List_of_TM_8148_PhysVals">
+                    <cd:Description>List of physical values for transfer curve 8148</cd:Description>
+                    <cd:Attribute name="count">
+                    </cd:Attribute>
+                    <cd:Field name="TM_8148_PhysVal">
+                      <cd:Array>
+                        <cd:Dimension/>
+                        <cd:Type namexml="TM_8148_PhysVal">
+                          <cd:Float format="ascii">
+                            <cd:Description>Single physical value</cd:Description>
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                        <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                      </cd:Array>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+                <cd:Field name="List_of_TM_8149_PhysVals">
+                  <cd:Record namexml="List_of_TM_8149_PhysVals">
+                    <cd:Description>List of physical values for transfer curve 8149</cd:Description>
+                    <cd:Attribute name="count">
+                    </cd:Attribute>
+                    <cd:Field name="TM_8149_PhysVal">
+                      <cd:Array>
+                        <cd:Dimension/>
+                        <cd:Type namexml="TM_8149_PhysVal">
+                          <cd:Float format="ascii">
+                            <cd:Description>Single physical value</cd:Description>
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                        <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                      </cd:Array>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+              </cd:Record>
+            </cd:Field>
+            <cd:Field name="ACDM_Common">
+              <cd:Record namexml="ACDM_Common">
+                <cd:Field name="List_of_TM_1_StandardTelVals">
+                  <cd:Record namexml="List_of_TM_1_StandardTelVals">
+                    <cd:Description>List of standard telemetry values for ACFM_Common used for transfer curves 8101</cd:Description>
+                    <cd:Attribute name="count">
+                    </cd:Attribute>
+                    <cd:Field name="TM_1_StandardTelVal">
+                      <cd:Array>
+                        <cd:Dimension/>
+                        <cd:Type namexml="TM_1_StandardTelVal">
+                          <cd:Integer format="ascii">
+                            <cd:Description>Single telemetry value</cd:Description>
+                            <cd:NativeType>int16</cd:NativeType>
+                          </cd:Integer>
+                        </cd:Type>
+                        <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                      </cd:Array>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+                <cd:Field name="List_of_TM_8101_PhysVals">
+                  <cd:Record namexml="List_of_TM_8101_PhysVals">
+                    <cd:Description>List of physical values for transfer curve 8101</cd:Description>
+                    <cd:Attribute name="count">
+                    </cd:Attribute>
+                    <cd:Field name="TM_8101_PhysVal">
+                      <cd:Array>
+                        <cd:Dimension/>
+                        <cd:Type namexml="TM_8101_PhysVal">
+                          <cd:Float format="ascii">
+                            <cd:Description>Single physical value</cd:Description>
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                        <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                      </cd:Array>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+              </cd:Record>
+            </cd:Field>
+            <cd:Field name="ACDM_B">
+              <cd:Record namexml="ACDM_B">
+                <cd:Field name="List_of_TM_1_StandardTelVals">
+                  <cd:Record namexml="List_of_TM_1_StandardTelVals">
+                    <cd:Description>List of standard telemetry values for ACDM_B used for transfer curves 8123, 8124, 8125, 8150, 8151, 8152, and 8153</cd:Description>
+                    <cd:Attribute name="count">
+                    </cd:Attribute>
+                    <cd:Field name="TM_1_StandardTelVal">
+                      <cd:Array>
+                        <cd:Dimension/>
+                        <cd:Type namexml="TM_1_StandardTelVal">
+                          <cd:Integer format="ascii">
+                            <cd:Description>Single telemetry value</cd:Description>
+                            <cd:NativeType>int16</cd:NativeType>
+                          </cd:Integer>
+                        </cd:Type>
+                        <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                      </cd:Array>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+                <cd:Field name="List_of_TM_2_StandardTelVals">
+                  <cd:Record namexml="List_of_TM_2_StandardTelVals">
+                    <cd:Description>List of standard telemetry values for ACDM_B used for transfer curves 8110, 8111, 8112, 8113, 8114, 8115, 8142, 8143, 8144, and 8145</cd:Description>
+                    <cd:Attribute name="count">
+                    </cd:Attribute>
+                    <cd:Field name="TM_2_StandardTelVal">
+                      <cd:Array>
+                        <cd:Dimension/>
+                        <cd:Type namexml="TM_2_StandardTelVal">
+                          <cd:Integer format="ascii">
+                            <cd:Description>Single telemetry value</cd:Description>
+                            <cd:NativeType>int16</cd:NativeType>
+                          </cd:Integer>
+                        </cd:Type>
+                        <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                      </cd:Array>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+                <cd:Field name="List_of_TM_3_StandardTelVals">
+                  <cd:Record namexml="List_of_TM_3_StandardTelVals">
+                    <cd:Description>List of standard telemetry values for ACDM_B used for transfer curves 8134, 8135, 8136, and 8137</cd:Description>
+                    <cd:Attribute name="count">
+                    </cd:Attribute>
+                    <cd:Field name="TM_3_StandardTelVal">
+                      <cd:Array>
+                        <cd:Dimension/>
+                        <cd:Type namexml="TM_3_StandardTelVal">
+                          <cd:Integer format="ascii">
+                            <cd:Description>Single telemetry value</cd:Description>
+                            <cd:NativeType>int16</cd:NativeType>
+                          </cd:Integer>
+                        </cd:Type>
+                        <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                      </cd:Array>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+                <cd:Field name="List_of_TM_8110_PhysVals">
+                  <cd:Record namexml="List_of_TM_8110_PhysVals">
+                    <cd:Description>List of physical values for transfer curve 8110</cd:Description>
+                    <cd:Attribute name="count">
+                    </cd:Attribute>
+                    <cd:Field name="TM_8110_PhysVal">
+                      <cd:Array>
+                        <cd:Dimension/>
+                        <cd:Type namexml="TM_8110_PhysVal">
+                          <cd:Float format="ascii">
+                            <cd:Description>Single physical value</cd:Description>
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                        <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                      </cd:Array>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+                <cd:Field name="List_of_TM_8111_PhysVals">
+                  <cd:Record namexml="List_of_TM_8111_PhysVals">
+                    <cd:Description>List of physical values for transfer curve 8111</cd:Description>
+                    <cd:Attribute name="count">
+                    </cd:Attribute>
+                    <cd:Field name="TM_8111_PhysVal">
+                      <cd:Array>
+                        <cd:Dimension/>
+                        <cd:Type namexml="TM_8111_PhysVal">
+                          <cd:Float format="ascii">
+                            <cd:Description>Single physical value</cd:Description>
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                        <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                      </cd:Array>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+                <cd:Field name="List_of_TM_8112_PhysVals">
+                  <cd:Record namexml="List_of_TM_8112_PhysVals">
+                    <cd:Description>List of physical values for transfer curve 8112</cd:Description>
+                    <cd:Attribute name="count">
+                    </cd:Attribute>
+                    <cd:Field name="TM_8112_PhysVal">
+                      <cd:Array>
+                        <cd:Dimension/>
+                        <cd:Type namexml="TM_8112_PhysVal">
+                          <cd:Float format="ascii">
+                            <cd:Description>Single physical value</cd:Description>
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                        <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                      </cd:Array>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+                <cd:Field name="List_of_TM_8113_PhysVals">
+                  <cd:Record namexml="List_of_TM_8113_PhysVals">
+                    <cd:Description>List of physical values for transfer curve 8113</cd:Description>
+                    <cd:Attribute name="count">
+                    </cd:Attribute>
+                    <cd:Field name="TM_8113_PhysVal">
+                      <cd:Array>
+                        <cd:Dimension/>
+                        <cd:Type namexml="TM_8113_PhysVal">
+                          <cd:Float format="ascii">
+                            <cd:Description>Single physical value</cd:Description>
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                        <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                      </cd:Array>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+                <cd:Field name="List_of_TM_8114_PhysVals">
+                  <cd:Record namexml="List_of_TM_8114_PhysVals">
+                    <cd:Description>List of physical values for transfer curve 8114</cd:Description>
+                    <cd:Attribute name="count">
+                    </cd:Attribute>
+                    <cd:Field name="TM_8114_PhysVal">
+                      <cd:Array>
+                        <cd:Dimension/>
+                        <cd:Type namexml="TM_8114_PhysVal">
+                          <cd:Float format="ascii">
+                            <cd:Description>Single physical value</cd:Description>
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                        <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                      </cd:Array>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+                <cd:Field name="List_of_TM_8115_PhysVals">
+                  <cd:Record namexml="List_of_TM_8115_PhysVals">
+                    <cd:Description>List of physical values for transfer curve 8115</cd:Description>
+                    <cd:Attribute name="count">
+                    </cd:Attribute>
+                    <cd:Field name="TM_8115_PhysVal">
+                      <cd:Array>
+                        <cd:Dimension/>
+                        <cd:Type namexml="TM_8115_PhysVal">
+                          <cd:Float format="ascii">
+                            <cd:Description>Single physical value</cd:Description>
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                        <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                      </cd:Array>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+                <cd:Field name="List_of_TM_8123_PhysVals">
+                  <cd:Record namexml="List_of_TM_8123_PhysVals">
+                    <cd:Description>List of physical values for transfer curve 8123</cd:Description>
+                    <cd:Attribute name="count">
+                    </cd:Attribute>
+                    <cd:Field name="TM_8123_PhysVal">
+                      <cd:Array>
+                        <cd:Dimension/>
+                        <cd:Type namexml="TM_8123_PhysVal">
+                          <cd:Float format="ascii">
+                            <cd:Description>Single physical value</cd:Description>
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                        <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                      </cd:Array>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+                <cd:Field name="List_of_TM_8124_PhysVals">
+                  <cd:Record namexml="List_of_TM_8124_PhysVals">
+                    <cd:Description>List of physical values for transfer curve 8124</cd:Description>
+                    <cd:Attribute name="count">
+                    </cd:Attribute>
+                    <cd:Field name="TM_8124_PhysVal">
+                      <cd:Array>
+                        <cd:Dimension/>
+                        <cd:Type namexml="TM_8124_PhysVal">
+                          <cd:Float format="ascii">
+                            <cd:Description>Single physical value</cd:Description>
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                        <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                      </cd:Array>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+                <cd:Field name="List_of_TM_8125_PhysVals">
+                  <cd:Record namexml="List_of_TM_8125_PhysVals">
+                    <cd:Description>List of physical values for transfer curve 8125</cd:Description>
+                    <cd:Attribute name="count">
+                    </cd:Attribute>
+                    <cd:Field name="TM_8125_PhysVal">
+                      <cd:Array>
+                        <cd:Dimension/>
+                        <cd:Type namexml="TM_8125_PhysVal">
+                          <cd:Float format="ascii">
+                            <cd:Description>Single physical value</cd:Description>
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                        <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                      </cd:Array>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+                <cd:Field name="List_of_TM_8134_PhysVals">
+                  <cd:Record namexml="List_of_TM_8134_PhysVals">
+                    <cd:Description>List of physical values for transfer curve 8134</cd:Description>
+                    <cd:Attribute name="count">
+                    </cd:Attribute>
+                    <cd:Field name="TM_8134_PhysVal">
+                      <cd:Array>
+                        <cd:Dimension/>
+                        <cd:Type namexml="TM_8134_PhysVal">
+                          <cd:Float format="ascii">
+                            <cd:Description>Single physical value</cd:Description>
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                        <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                      </cd:Array>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+                <cd:Field name="List_of_TM_8135_PhysVals">
+                  <cd:Record namexml="List_of_TM_8135_PhysVals">
+                    <cd:Description>List of physical values for transfer curve 8135</cd:Description>
+                    <cd:Attribute name="count">
+                    </cd:Attribute>
+                    <cd:Field name="TM_8135_PhysVal">
+                      <cd:Array>
+                        <cd:Dimension/>
+                        <cd:Type namexml="TM_8135_PhysVal">
+                          <cd:Float format="ascii">
+                            <cd:Description>Single physical value</cd:Description>
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                        <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                      </cd:Array>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+                <cd:Field name="List_of_TM_8136_PhysVals">
+                  <cd:Record namexml="List_of_TM_8136_PhysVals">
+                    <cd:Description>List of physical values for transfer curve 8136</cd:Description>
+                    <cd:Attribute name="count">
+                    </cd:Attribute>
+                    <cd:Field name="TM_8136_PhysVal">
+                      <cd:Array>
+                        <cd:Dimension/>
+                        <cd:Type namexml="TM_8136_PhysVal">
+                          <cd:Float format="ascii">
+                            <cd:Description>Single physical value</cd:Description>
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                        <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                      </cd:Array>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+                <cd:Field name="List_of_TM_8137_PhysVals">
+                  <cd:Record namexml="List_of_TM_8137_PhysVals">
+                    <cd:Description>List of physical values for transfer curve 8137</cd:Description>
+                    <cd:Attribute name="count">
+                    </cd:Attribute>
+                    <cd:Field name="TM_8137_PhysVal">
+                      <cd:Array>
+                        <cd:Dimension/>
+                        <cd:Type namexml="TM_8137_PhysVal">
+                          <cd:Float format="ascii">
+                            <cd:Description>Single physical value</cd:Description>
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                        <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                      </cd:Array>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+                <cd:Field name="List_of_TM_8142_PhysVals">
+                  <cd:Record namexml="List_of_TM_8142_PhysVals">
+                    <cd:Description>List of physical values for transfer curve 8142</cd:Description>
+                    <cd:Attribute name="count">
+                    </cd:Attribute>
+                    <cd:Field name="TM_8142_PhysVal">
+                      <cd:Array>
+                        <cd:Dimension/>
+                        <cd:Type namexml="TM_8142_PhysVal">
+                          <cd:Float format="ascii">
+                            <cd:Description>Single physical value</cd:Description>
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                        <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                      </cd:Array>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+                <cd:Field name="List_of_TM_8143_PhysVals">
+                  <cd:Record namexml="List_of_TM_8143_PhysVals">
+                    <cd:Description>List of physical values for transfer curve 8143</cd:Description>
+                    <cd:Attribute name="count">
+                    </cd:Attribute>
+                    <cd:Field name="TM_8143_PhysVal">
+                      <cd:Array>
+                        <cd:Dimension/>
+                        <cd:Type namexml="TM_8143_PhysVal">
+                          <cd:Float format="ascii">
+                            <cd:Description>Single physical value</cd:Description>
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                        <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                      </cd:Array>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+                <cd:Field name="List_of_TM_8144_PhysVals">
+                  <cd:Record namexml="List_of_TM_8144_PhysVals">
+                    <cd:Description>List of physical values for transfer curve 8144</cd:Description>
+                    <cd:Attribute name="count">
+                    </cd:Attribute>
+                    <cd:Field name="TM_8144_PhysVal">
+                      <cd:Array>
+                        <cd:Dimension/>
+                        <cd:Type namexml="TM_8144_PhysVal">
+                          <cd:Float format="ascii">
+                            <cd:Description>Single physical value</cd:Description>
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                        <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                      </cd:Array>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+                <cd:Field name="List_of_TM_8145_PhysVals">
+                  <cd:Record namexml="List_of_TM_8145_PhysVals">
+                    <cd:Description>List of physical values for transfer curve 8145</cd:Description>
+                    <cd:Attribute name="count">
+                    </cd:Attribute>
+                    <cd:Field name="TM_8145_PhysVal">
+                      <cd:Array>
+                        <cd:Dimension/>
+                        <cd:Type namexml="TM_8145_PhysVal">
+                          <cd:Float format="ascii">
+                            <cd:Description>Single physical value</cd:Description>
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                        <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                      </cd:Array>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+                <cd:Field name="List_of_TM_8150_PhysVals">
+                  <cd:Record namexml="List_of_TM_8150_PhysVals">
+                    <cd:Description>List of physical values for transfer curve 8150</cd:Description>
+                    <cd:Attribute name="count">
+                    </cd:Attribute>
+                    <cd:Field name="TM_8150_PhysVal">
+                      <cd:Array>
+                        <cd:Dimension/>
+                        <cd:Type namexml="TM_8150_PhysVal">
+                          <cd:Float format="ascii">
+                            <cd:Description>Single physical value</cd:Description>
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                        <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                      </cd:Array>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+                <cd:Field name="List_of_TM_8151_PhysVals">
+                  <cd:Record namexml="List_of_TM_8151_PhysVals">
+                    <cd:Description>List of physical values for transfer curve 8151</cd:Description>
+                    <cd:Attribute name="count">
+                    </cd:Attribute>
+                    <cd:Field name="TM_8151_PhysVal">
+                      <cd:Array>
+                        <cd:Dimension/>
+                        <cd:Type namexml="TM_8151_PhysVal">
+                          <cd:Float format="ascii">
+                            <cd:Description>Single physical value</cd:Description>
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                        <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                      </cd:Array>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+                <cd:Field name="List_of_TM_8152_PhysVals">
+                  <cd:Record namexml="List_of_TM_8152_PhysVals">
+                    <cd:Description>List of physical values for transfer curve 8152</cd:Description>
+                    <cd:Attribute name="count">
+                    </cd:Attribute>
+                    <cd:Field name="TM_8152_PhysVal">
+                      <cd:Array>
+                        <cd:Dimension/>
+                        <cd:Type namexml="TM_8152_PhysVal">
+                          <cd:Float format="ascii">
+                            <cd:Description>Single physical value</cd:Description>
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                        <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                      </cd:Array>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+                <cd:Field name="List_of_TM_8153_PhysVals">
+                  <cd:Record namexml="List_of_TM_8153_PhysVals">
+                    <cd:Description>List of physical values for transfer curve 8153</cd:Description>
+                    <cd:Attribute name="count">
+                    </cd:Attribute>
+                    <cd:Field name="TM_8153_PhysVal">
+                      <cd:Array>
+                        <cd:Dimension/>
+                        <cd:Type namexml="TM_8153_PhysVal">
+                          <cd:Float format="ascii">
+                            <cd:Description>Single physical value</cd:Description>
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                        <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                      </cd:Array>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+              </cd:Record>
+            </cd:Field>
+            <cd:Field name="Laser_Transmit_Frequency">
+              <cd:Record namexml="Laser_Transmit_Frequency">
+                <cd:Description>Laser Transmit Frequency</cd:Description>
+                <cd:Field name="Base_Frequency">
+                  <cd:Type namexml="Base_Frequency">
+                    <cd:Attribute name="unit">
+                      <cd:Optional/>
+                      <cd:FixedValue>GHz</cd:FixedValue>
+                    </cd:Attribute>
+                    <cd:Float format="ascii">
+                      <cd:Description>Base Laser Transmit Frequency</cd:Description>
+                      <cd:Unit>GHz</cd:Unit>
+                      <cd:NativeType>double</cd:NativeType>
+                    </cd:Float>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="List_of_Freq_Offsets">
+                  <cd:Record namexml="List_of_Freq_Offsets">
+                    <cd:Description>Table listing frequency rank TC code and actual transmitter frequency</cd:Description>
+                    <cd:Attribute name="count">
+                    </cd:Attribute>
+                    <cd:Field name="Freq_Offset">
+                      <cd:Array>
+                        <cd:Dimension/>
+                        <cd:Type namexml="Freq_Offset">
+                          <cd:Attribute name="unit">
+                            <cd:Optional/>
+                            <cd:FixedValue>GHz</cd:FixedValue>
+                          </cd:Attribute>
+                          <cd:Float format="ascii">
+                            <cd:Description>Frequency offset - 12.5GigaHertz to + 12.5GigaHertz in steps of 0.025GHz</cd:Description>
+                            <cd:Unit>GHz</cd:Unit>
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                        <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                      </cd:Array>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+              </cd:Record>
+            </cd:Field>
+            <cd:Field name="List_of_Vertical_Sampling_Times">
+              <cd:Record namexml="List_of_Vertical_Sampling_Times">
+                <cd:Description>Table listing the 8 possible values of vertical sampling time coefficients, as defined in the Transfer Curve Document</cd:Description>
+                <cd:Attribute name="count">
+                </cd:Attribute>
+                <cd:Field name="Vertical_Sampling_Time">
+                  <cd:Array>
+                    <cd:Dimension/>
+                    <cd:Type namexml="Vertical_Sampling_Time">
+                      <cd:Attribute name="unit">
+                        <cd:Optional/>
+                        <cd:FixedValue>TMC</cd:FixedValue>
+                      </cd:Attribute>
+                      <cd:Integer format="ascii">
+                        <cd:Description>Vertical sampling time coefficient in TMC</cd:Description>
+                        <cd:NativeType>uint16</cd:NativeType>
+                      </cd:Integer>
+                    </cd:Type>
+                    <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                  </cd:Array>
+                </cd:Field>
+              </cd:Record>
+            </cd:Field>
+            <cd:Field name="List_of_Background_Integration_Times">
+              <cd:Record namexml="List_of_Background_Integration_Times">
+                <cd:Description>Table listing the 8 possible values of background integration time coefficients for Mie and Rayleigh, as defined in the Transfer Curve</cd:Description>
+                <cd:Attribute name="count">
+                </cd:Attribute>
+                <cd:Field name="Background_Integration_Time">
+                  <cd:Array>
+                    <cd:Dimension/>
+                    <cd:Type namexml="Background_Integration_Time">
+                      <cd:Attribute name="unit">
+                        <cd:Optional/>
+                        <cd:FixedValue>TMC</cd:FixedValue>
+                      </cd:Attribute>
+                      <cd:Integer format="ascii">
+                        <cd:Description>Background Integration time coefficient in TMC</cd:Description>
+                        <cd:NativeType>uint32</cd:NativeType>
+                      </cd:Integer>
+                    </cd:Type>
+                    <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                  </cd:Array>
+                </cd:Field>
+              </cd:Record>
+            </cd:Field>
+            <cd:Field name="List_of_Ray_Mie_Delays">
+              <cd:Record namexml="List_of_Ray_Mie_Delays">
+                <cd:Description>Table listing the 64 possible values of offset delay coefficients between Rayleigh and Mie first bin, as defined in the Transfer Curve Document</cd:Description>
+                <cd:Attribute name="count">
+                </cd:Attribute>
+                <cd:Field name="Ray_Mie_Delay">
+                  <cd:Array>
+                    <cd:Dimension/>
+                    <cd:Type namexml="Ray_Mie_Delay">
+                      <cd:Attribute name="unit">
+                        <cd:Optional/>
+                        <cd:FixedValue>TMC</cd:FixedValue>
+                      </cd:Attribute>
+                      <cd:Integer format="ascii">
+                        <cd:Description>Rayleigh Mie Time Delay coefficient in TMC</cd:Description>
+                        <cd:NativeType>uint32</cd:NativeType>
+                      </cd:Integer>
+                    </cd:Type>
+                    <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                  </cd:Array>
+                </cd:Field>
+              </cd:Record>
+            </cd:Field>
+            <cd:Field name="List_of_Imaging_Integration_Times">
+              <cd:Record namexml="List_of_Imaging_Integration_Times">
+                <cd:Description>Table listing the 4 possible values of imaging integration time coefficients for both Mie and Rayleigh, as defined in the Transfer Curve Document</cd:Description>
+                <cd:Attribute name="count">
+                </cd:Attribute>
+                <cd:Field name="Imaging_Integration_Time">
+                  <cd:Array>
+                    <cd:Dimension/>
+                    <cd:Type namexml="Imaging_Integration_Time">
+                      <cd:Attribute name="unit">
+                        <cd:Optional/>
+                        <cd:FixedValue>TMC</cd:FixedValue>
+                      </cd:Attribute>
+                      <cd:Integer format="ascii">
+                        <cd:Description>Imaging Integration Time coefficient in TMC</cd:Description>
+                        <cd:NativeType>uint32</cd:NativeType>
+                      </cd:Integer>
+                    </cd:Type>
+                    <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                  </cd:Array>
+                </cd:Field>
+              </cd:Record>
+            </cd:Field>
+            <cd:Field name="Laser_Wavelength">
+              <cd:Type namexml="Laser_Wavelength">
+                <cd:Attribute name="unit">
+                  <cd:Optional/>
+                  <cd:FixedValue>nm</cd:FixedValue>
+                </cd:Attribute>
+                <cd:Float format="ascii">
+                  <cd:Description>Laser wavelength in nanometers</cd:Description>
+                  <cd:Unit>nm</cd:Unit>
+                  <cd:NativeType>double</cd:NativeType>
+                </cd:Float>
+              </cd:Type>
+            </cd:Field>
+            <cd:Field name="Low_Frequency_Clock">
+              <cd:Type namexml="Low_Frequency_Clock">
+                <cd:Attribute name="unit">
+                  <cd:Optional/>
+                  <cd:FixedValue>s</cd:FixedValue>
+                </cd:Attribute>
+                <cd:Float format="ascii">
+                  <cd:Description>Low Frequency Clock</cd:Description>
+                  <cd:Unit>s</cd:Unit>
+                  <cd:NativeType>double</cd:NativeType>
+                </cd:Float>
+              </cd:Type>
+            </cd:Field>
+            <cd:Field name="Master_Clock_Rate">
+              <cd:Type namexml="Master_Clock_Rate">
+                <cd:Attribute name="unit">
+                  <cd:Optional/>
+                  <cd:FixedValue>GHz</cd:FixedValue>
+                </cd:Attribute>
+                <cd:Float format="ascii">
+                  <cd:Description>Master Clock Rate (TMC)</cd:Description>
+                  <cd:Unit>GHz</cd:Unit>
+                  <cd:NativeType>double</cd:NativeType>
+                </cd:Float>
+              </cd:Type>
+            </cd:Field>
+            <cd:Field name="Error_Quantifiers">
+              <cd:Record namexml="Error_Quantifiers">
+                <cd:Description>Error Quantifiers</cd:Description>
+                <cd:Field name="Mie_Error_Quantifier_K1">
+                  <cd:Type namexml="Mie_Error_Quantifier_K1">
+                    <cd:Float format="ascii">
+                      <cd:Description>Mie Error Quantifier K1</cd:Description>
+                      <cd:NativeType>double</cd:NativeType>
+                    </cd:Float>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="Mie_Error_Quantifier_K2">
+                  <cd:Type namexml="Mie_Error_Quantifier_K2">
+                    <cd:Attribute name="unit">
+                      <cd:Optional/>
+                      <cd:FixedValue>PixelIntensity</cd:FixedValue>
+                    </cd:Attribute>
+                    <cd:Float format="ascii">
+                      <cd:Description>Mie Error Quantifier K2</cd:Description>
+                      <cd:NativeType>double</cd:NativeType>
+                    </cd:Float>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="Mie_Error_Quantifier_K3">
+                  <cd:Type namexml="Mie_Error_Quantifier_K3">
+                    <cd:Float format="ascii">
+                      <cd:Description>Mie Error Quantifier K3</cd:Description>
+                      <cd:NativeType>double</cd:NativeType>
+                    </cd:Float>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="Rayleigh_Error_Quantifier_Ka2">
+                  <cd:Type namexml="Rayleigh_Error_Quantifier_Ka2">
+                    <cd:Attribute name="unit">
+                      <cd:Optional/>
+                      <cd:FixedValue>PixelIntensity</cd:FixedValue>
+                    </cd:Attribute>
+                    <cd:Float format="ascii">
+                      <cd:Description>Rayleigh Error Quantifier Ka2</cd:Description>
+                      <cd:NativeType>double</cd:NativeType>
+                    </cd:Float>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="Rayleigh_Error_Quantifier_Ka3">
+                  <cd:Type namexml="Rayleigh_Error_Quantifier_Ka3">
+                    <cd:Float format="ascii">
+                      <cd:Description>Rayleigh Error Quantifier Ka3</cd:Description>
+                      <cd:NativeType>double</cd:NativeType>
+                    </cd:Float>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="Rayleigh_Error_Quantifier_Kb2">
+                  <cd:Type namexml="Rayleigh_Error_Quantifier_Kb2">
+                    <cd:Attribute name="unit">
+                      <cd:Optional/>
+                      <cd:FixedValue>PixelIntensity</cd:FixedValue>
+                    </cd:Attribute>
+                    <cd:Float format="ascii">
+                      <cd:Description>Rayleigh Error Quantifier Kb2</cd:Description>
+                      <cd:NativeType>double</cd:NativeType>
+                    </cd:Float>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="Rayleigh_Error_Quantifier_Kb3">
+                  <cd:Type namexml="Rayleigh_Error_Quantifier_Kb3">
+                    <cd:Float format="ascii">
+                      <cd:Description>Rayleigh Error Quantifier Kb3</cd:Description>
+                      <cd:NativeType>double</cd:NativeType>
+                    </cd:Float>
+                  </cd:Type>
+                </cd:Field>
+              </cd:Record>
+            </cd:Field>
+            <cd:Field name="Roll_Error">
+              <cd:Type namexml="Roll_Error">
+                <cd:Attribute name="unit">
+                  <cd:Optional/>
+                  <cd:FixedValue>deg</cd:FixedValue>
+                </cd:Attribute>
+                <cd:Float format="ascii">
+                  <cd:Description>Roll Error</cd:Description>
+                  <cd:Unit>degrees</cd:Unit>
+                  <cd:NativeType>double</cd:NativeType>
+                </cd:Float>
+              </cd:Type>
+            </cd:Field>
+            <cd:Field name="Pitch_Error">
+              <cd:Type namexml="Pitch_Error">
+                <cd:Attribute name="unit">
+                  <cd:Optional/>
+                  <cd:FixedValue>deg</cd:FixedValue>
+                </cd:Attribute>
+                <cd:Float format="ascii">
+                  <cd:Description>Pitch Error</cd:Description>
+                  <cd:Unit>degrees</cd:Unit>
+                  <cd:NativeType>double</cd:NativeType>
+                </cd:Float>
+              </cd:Type>
+            </cd:Field>
+            <cd:Field name="List_of_Tripod_Obscuration_Corrections">
+              <cd:Record namexml="List_of_Tripod_Obscuration_Corrections">
+                <cd:Description>Table listing the 16 Telescope Tripod Obscuration corrections</cd:Description>
+                <cd:Attribute name="count">
+                </cd:Attribute>
+                <cd:Field name="Tripod_Obscuration_Correction">
+                  <cd:Array>
+                    <cd:Dimension/>
+                    <cd:Type namexml="Tripod_Obscuration_Correction">
+                      <cd:Float format="ascii">
+                        <cd:Description>Telescope Tripod Obscuration correction for one column</cd:Description>
+                        <cd:NativeType>double</cd:NativeType>
+                      </cd:Float>
+                    </cd:Type>
+                    <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                  </cd:Array>
+                </cd:Field>
+              </cd:Record>
+            </cd:Field>
+            <cd:Field name="List_of_EMSRs">
+              <cd:Record namexml="List_of_EMSRs">
+                <cd:Description>Table listing the 16 effective Mie spectrometer response values</cd:Description>
+                <cd:Attribute name="count">
+                </cd:Attribute>
+                <cd:Field name="EMSR">
+                  <cd:Array>
+                    <cd:Dimension/>
+                    <cd:Type namexml="EMSR">
+                      <cd:Float format="ascii">
+                        <cd:Description>Effective Mie spectral response correction for one column</cd:Description>
+                        <cd:NativeType>double</cd:NativeType>
+                      </cd:Float>
+                    </cd:Type>
+                    <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                  </cd:Array>
+                </cd:Field>
+              </cd:Record>
+            </cd:Field>
+            <cd:Field name="Laser_Pulse_Time_Delays">
+              <cd:Record namexml="Laser_Pulse_Time_Delays">
+                <cd:Description>Laser pulse time delays</cd:Description>
+                <cd:Field name="Delay_Dt1_Offset">
+                  <cd:Type namexml="Delay_Dt1_Offset">
+                    <cd:Attribute name="unit">
+                      <cd:Optional/>
+                      <cd:FixedValue>TMC</cd:FixedValue>
+                    </cd:Attribute>
+                    <cd:Float format="ascii">
+                      <cd:Description>Offset in TMC used to calculate DT1 delay, as defined in the Transfer Curve Document. It corresponds to the delay of the output signal if the minimun dt is programmed (0ms)</cd:Description>
+                      <cd:NativeType>double</cd:NativeType>
+                    </cd:Float>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="Delay_Dt2_Offset">
+                  <cd:Type namexml="Delay_Dt2_Offset">
+                    <cd:Attribute name="unit">
+                      <cd:Optional/>
+                      <cd:FixedValue>TMC</cd:FixedValue>
+                    </cd:Attribute>
+                    <cd:Float format="ascii">
+                      <cd:Description>Offset in TMC used to calculate DT2 delay, as defined in the Transfer Curve Document. It corresponds to the delay of the output signal if the minimun dt is programmed (0ms)</cd:Description>
+                      <cd:NativeType>double</cd:NativeType>
+                    </cd:Float>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="Delay_Dt3_Fixed_Offset">
+                  <cd:Type namexml="Delay_Dt3_Fixed_Offset">
+                    <cd:Attribute name="unit">
+                      <cd:Optional/>
+                      <cd:FixedValue>TMC</cd:FixedValue>
+                    </cd:Attribute>
+                    <cd:Float format="ascii">
+                      <cd:Description>Offset in TMC used to calculate DT3_Fixed delay, as defined in the Transfer Curve Document. It corresponds to the delay of the output signal if the minimun dt is programmed (0ms)</cd:Description>
+                      <cd:NativeType>double</cd:NativeType>
+                    </cd:Float>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="Delay_Dt3_Variable_Offset">
+                  <cd:Type namexml="Delay_Dt3_Variable_Offset">
+                    <cd:Attribute name="unit">
+                      <cd:Optional/>
+                      <cd:FixedValue>TMC</cd:FixedValue>
+                    </cd:Attribute>
+                    <cd:Float format="ascii">
+                      <cd:Description>Offset in TMC used to calculate DT3_Variable delay, as defined in the Transfer Curve Document. It corresponds to the delay of the output signal if the minimun dt is programmed (0ms)</cd:Description>
+                      <cd:NativeType>double</cd:NativeType>
+                    </cd:Float>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="Delay_Dt4_Offset">
+                  <cd:Type namexml="Delay_Dt4_Offset">
+                    <cd:Attribute name="unit">
+                      <cd:Optional/>
+                      <cd:FixedValue>TMC</cd:FixedValue>
+                    </cd:Attribute>
+                    <cd:Float format="ascii">
+                      <cd:Description>Offset in TMC used to calculate DT4 delay, as defined in the Transfer Curve Document. It corresponds to the delay of the output signal if the minimun dt is programmed (0ms)</cd:Description>
+                      <cd:NativeType>double</cd:NativeType>
+                    </cd:Float>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="Delay_Dt5_Offset">
+                  <cd:Type namexml="Delay_Dt5_Offset">
+                    <cd:Attribute name="unit">
+                      <cd:Optional/>
+                      <cd:FixedValue>TMC</cd:FixedValue>
+                    </cd:Attribute>
+                    <cd:Float format="ascii">
+                      <cd:Description>Offset in TMC used to calculate DT5 delay, as defined in the Transfer Curve Document. It corresponds to the delay of the output signal if the minimun dt is programmed (0ms)</cd:Description>
+                      <cd:NativeType>double</cd:NativeType>
+                    </cd:Float>
+                  </cd:Type>
+                </cd:Field>
+              </cd:Record>
+            </cd:Field>
+            <cd:Field name="List_of_Rayleigh_Linearity_Corrections">
+              <cd:Record namexml="List_of_Rayleigh_Linearity_Corrections">
+                <cd:Description>Table listing up to 65536 Rayleigh Linearity Corrections</cd:Description>
+                <cd:Attribute name="count">
+                </cd:Attribute>
+                <cd:Field name="Rayleigh_Linearity_Correction">
+                  <cd:Array>
+                    <cd:Dimension/>
+                    <cd:Record namexml="Rayleigh_Linearity_Correction">
+                      <cd:Field name="RLC_Index">
+                        <cd:Type namexml="RLC_Index">
+                          <cd:Integer format="ascii">
+                            <cd:Description>Rayleigh Linearity Correction index</cd:Description>
+                            <cd:NativeType>uint16</cd:NativeType>
+                          </cd:Integer>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="RLC_Value">
+                        <cd:Type namexml="RLC_Value">
+                          <cd:Float format="ascii">
+                            <cd:Description>Rayleigh Linearity Correction value</cd:Description>
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                      </cd:Field>
+                    </cd:Record>
+                    <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                  </cd:Array>
+                </cd:Field>
+              </cd:Record>
+            </cd:Field>
+            <cd:Field name="Aisp_Default_Parameters">
+              <cd:Record namexml="Aisp_Default_Parameters">
+                <cd:Description>Default values for unused Aisp parameters</cd:Description>
+                <cd:Field name="Source_Packet_Header">
+                  <cd:Record namexml="Source_Packet_Header">
+                    <cd:Field name="Version_Num">
+                      <cd:Type namexml="Version_Num">
+                        <cd:Integer format="ascii">
+                          <cd:Description>Version number</cd:Description>
+                          <cd:NativeType>int16</cd:NativeType>
+                        </cd:Integer>
+                      </cd:Type>
+                    </cd:Field>
+                    <cd:Field name="Sp_Type">
+                      <cd:Type namexml="Sp_Type">
+                        <cd:Integer format="ascii">
+                          <cd:Description>Source Packet Type</cd:Description>
+                          <cd:NativeType>int16</cd:NativeType>
+                        </cd:Integer>
+                      </cd:Type>
+                    </cd:Field>
+                    <cd:Field name="Data_Field_Header_Flag">
+                      <cd:Type namexml="Data_Field_Header_Flag">
+                        <cd:Integer format="ascii">
+                          <cd:Description>Data Field Header Flag</cd:Description>
+                          <cd:NativeType>int16</cd:NativeType>
+                        </cd:Integer>
+                      </cd:Type>
+                    </cd:Field>
+                    <cd:Field name="Application_Process_Id">
+                      <cd:Type namexml="Application_Process_Id">
+                        <cd:Integer format="ascii">
+                          <cd:Description>Application Process Identifier</cd:Description>
+                          <cd:NativeType>int16</cd:NativeType>
+                        </cd:Integer>
+                      </cd:Type>
+                    </cd:Field>
+                    <cd:Field name="Process_Category">
+                      <cd:Type namexml="Process_Category">
+                        <cd:Integer format="ascii">
+                          <cd:Description>Process Category</cd:Description>
+                          <cd:NativeType>int16</cd:NativeType>
+                        </cd:Integer>
+                      </cd:Type>
+                    </cd:Field>
+                    <cd:Field name="Sequence_Flags">
+                      <cd:Type namexml="Sequence_Flags">
+                        <cd:Integer format="ascii">
+                          <cd:Description>Sequence Flags</cd:Description>
+                          <cd:NativeType>int16</cd:NativeType>
+                        </cd:Integer>
+                      </cd:Type>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+                <cd:Field name="Data_Field_Header">
+                  <cd:Record namexml="Data_Field_Header">
+                    <cd:Field name="Secondary_Header_Flag">
+                      <cd:Type namexml="Secondary_Header_Flag">
+                        <cd:Integer format="ascii">
+                          <cd:Description>SP Secondary header flag</cd:Description>
+                          <cd:NativeType>int16</cd:NativeType>
+                        </cd:Integer>
+                      </cd:Type>
+                    </cd:Field>
+                    <cd:Field name="Pus_Version">
+                      <cd:Type namexml="Pus_Version">
+                        <cd:Integer format="ascii">
+                          <cd:Description>Indicates the availability of the Packet Error Control Field</cd:Description>
+                          <cd:NativeType>int16</cd:NativeType>
+                        </cd:Integer>
+                      </cd:Type>
+                    </cd:Field>
+                    <cd:Field name="Ack_N">
+                      <cd:Type namexml="Ack_N">
+                        <cd:Integer format="ascii">
+                          <cd:Description>Ack_N</cd:Description>
+                          <cd:NativeType>int16</cd:NativeType>
+                        </cd:Integer>
+                      </cd:Type>
+                    </cd:Field>
+                    <cd:Field name="Service_Type">
+                      <cd:Type namexml="Service_Type">
+                        <cd:Integer format="ascii">
+                          <cd:Description>Service type</cd:Description>
+                          <cd:NativeType>int16</cd:NativeType>
+                        </cd:Integer>
+                      </cd:Type>
+                    </cd:Field>
+                    <cd:Field name="Source_Id">
+                      <cd:Type namexml="Source_Id">
+                        <cd:Integer format="ascii">
+                          <cd:Description>SP Source Identifier</cd:Description>
+                          <cd:NativeType>int16</cd:NativeType>
+                        </cd:Integer>
+                      </cd:Type>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+              </cd:Record>
+            </cd:Field>
+            <cd:Field name="Height_Rayleigh_Bin_1">
+              <cd:Type namexml="Height_Rayleigh_Bin_1">
+                <cd:Attribute name="unit">
+                  <cd:Optional/>
+                  <cd:FixedValue>km</cd:FixedValue>
+                </cd:Attribute>
+                <cd:Float format="ascii">
+                  <cd:Description>Altitude of upper edge of highest Raleigh sample bin (SP_VS_R)</cd:Description>
+                  <cd:Unit>km</cd:Unit>
+                  <cd:NativeType>double</cd:NativeType>
+                </cd:Float>
+              </cd:Type>
+            </cd:Field>
+            <cd:Field name="d2">
+              <cd:Type namexml="d2">
+                <cd:Attribute name="unit">
+                  <cd:Optional/>
+                  <cd:FixedValue>ms</cd:FixedValue>
+                </cd:Attribute>
+                <cd:Float format="ascii">
+                  <cd:Description>Aladin internal delay in milliseconds</cd:Description>
+                  <cd:Unit>ms</cd:Unit>
+                  <cd:NativeType>double</cd:NativeType>
+                </cd:Float>
+              </cd:Type>
+            </cd:Field>
+            <cd:Field name="Del_2_M">
+              <cd:Type namexml="Del_2_M">
+                <cd:Attribute name="unit">
+                  <cd:Optional/>
+                  <cd:FixedValue>ms</cd:FixedValue>
+                </cd:Attribute>
+                <cd:Float format="ascii">
+                  <cd:Description>Fixed delay in milliseconds before the effective first layer starting point for Rayleigh Channel</cd:Description>
+                  <cd:Unit>ms</cd:Unit>
+                  <cd:NativeType>double</cd:NativeType>
+                </cd:Float>
+              </cd:Type>
+            </cd:Field>
+            <cd:Field name="Del_2_R">
+              <cd:Type namexml="Del_2_R">
+                <cd:Attribute name="unit">
+                  <cd:Optional/>
+                  <cd:FixedValue>ms</cd:FixedValue>
+                </cd:Attribute>
+                <cd:Float format="ascii">
+                  <cd:Description>Fixed delay in milliseconds before the effective first layer starting point for Mie Channel</cd:Description>
+                  <cd:Unit>ms</cd:Unit>
+                  <cd:NativeType>double</cd:NativeType>
+                </cd:Float>
+              </cd:Type>
+            </cd:Field>
+            <cd:Field name="Velocity_Offset">
+              <cd:Type namexml="Velocity_Offset">
+                <cd:Attribute name="unit">
+                  <cd:Optional/>
+                  <cd:FixedValue>m/s</cd:FixedValue>
+                </cd:Attribute>
+                <cd:Float format="ascii">
+                  <cd:Description>Commanded Doppler velocity offset</cd:Description>
+                  <cd:Unit>m/s</cd:Unit>
+                  <cd:NativeType>double</cd:NativeType>
+                </cd:Float>
+              </cd:Type>
+            </cd:Field>
+            <cd:Field name="Scan_Limit">
+              <cd:Type namexml="Scan_Limit">
+                <cd:Attribute name="unit">
+                  <cd:Optional/>
+                  <cd:FixedValue>deg</cd:FixedValue>
+                </cd:Attribute>
+                <cd:Float format="ascii">
+                  <cd:Description>Off-nadir angle below which the yaw steering shall be switched off</cd:Description>
+                  <cd:Unit>degrees</cd:Unit>
+                  <cd:NativeType>double</cd:NativeType>
+                </cd:Float>
+              </cd:Type>
+            </cd:Field>
+            <cd:Field name="Nominal_Scan_Angle">
+              <cd:Type namexml="Nominal_Scan_Angle">
+                <cd:Attribute name="unit">
+                  <cd:Optional/>
+                  <cd:FixedValue>deg</cd:FixedValue>
+                </cd:Attribute>
+                <cd:Float format="ascii">
+                  <cd:Description>Nominal pointing of the satellite</cd:Description>
+                  <cd:Unit>degrees</cd:Unit>
+                  <cd:NativeType>double</cd:NativeType>
+                </cd:Float>
+              </cd:Type>
+            </cd:Field>
+            <cd:Field name="Radiometric_Gain_Mie">
+              <cd:Type namexml="Radiometric_Gain_Mie">
+                <cd:Attribute name="unit">
+                  <cd:Optional/>
+                  <cd:FixedValue>ACCD counts/electron</cd:FixedValue>
+                </cd:Attribute>
+                <cd:Float format="ascii">
+                  <cd:Description>Radiometric gain factor for the Mie signal.</cd:Description>
+                  <cd:Unit>ACCD counts/electron</cd:Unit>
+                  <cd:NativeType>double</cd:NativeType>
+                </cd:Float>
+              </cd:Type>
+            </cd:Field>
+            <cd:Field name="Radiometric_Gain_Rayleigh">
+              <cd:Type namexml="Radiometric_Gain_Rayleigh">
+                <cd:Attribute name="unit">
+                  <cd:Optional/>
+                  <cd:FixedValue>ACCD counts/electron</cd:FixedValue>
+                </cd:Attribute>
+                <cd:Float format="ascii">
+                  <cd:Description>Radiometric gain factor for the Rayleigh signal.</cd:Description>
+                  <cd:Unit>ACCD counts/electron</cd:Unit>
+                  <cd:NativeType>double</cd:NativeType>
+                </cd:Float>
+              </cd:Type>
+            </cd:Field>
+            <cd:Field name="Mie_Time_In_Memory_Zone">
+              <cd:Type namexml="Mie_Time_In_Memory_Zone">
+                <cd:Attribute name="unit">
+                  <cd:Optional/>
+                  <cd:FixedValue>s</cd:FixedValue>
+                </cd:Attribute>
+                <cd:Float format="ascii">
+                  <cd:Description>Time duration the signal remains in the memory zone for the Mie.</cd:Description>
+                  <cd:Unit>s</cd:Unit>
+                  <cd:NativeType>double</cd:NativeType>
+                </cd:Float>
+              </cd:Type>
+            </cd:Field>
+            <cd:Field name="Rayleigh_Time_In_Memory_Zone">
+              <cd:Type namexml="Rayleigh_Time_In_Memory_Zone">
+                <cd:Attribute name="unit">
+                  <cd:Optional/>
+                  <cd:FixedValue>s</cd:FixedValue>
+                </cd:Attribute>
+                <cd:Float format="ascii">
+                  <cd:Description>Time duration the signal remains in the memory zone for the Rayleigh.</cd:Description>
+                  <cd:Unit>s</cd:Unit>
+                  <cd:NativeType>double</cd:NativeType>
+                </cd:Float>
+              </cd:Type>
+            </cd:Field>
+          </cd:Record>
+          <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+        </cd:Array>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+</cd:Record>

@@ -2345,6 +2345,12 @@
         <cd:MatchData path="/{http://www.esa.int/schemas/ae/AUX_CHAR__}Earth_Explorer_File@schemaversion">04.09</cd:MatchData>
       </cd:DetectionRule>
     </cd:ProductDefinition>
+    <cd:ProductDefinition id="AUX_CHAR___04_16" format="xml" version="5">
+      <cd:Description>This definition is based on version 4/16 of IODD ADM-IC-52-1666</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchData path="/{http://www.esa.int/schemas/ae/AUX_CHAR__}Earth_Explorer_File@schemaversion">04.16</cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
   </cd:ProductType>
   <cd:ProductType name="AUX_PAR_0_">
     <cd:Description>Level 0 Processing Parameters (EEF)</cd:Description>
