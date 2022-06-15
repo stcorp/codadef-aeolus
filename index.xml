@@ -1751,6 +1751,12 @@
         <cd:MatchData path="/{http://www.esa.int/schemas/ae/AUX_MRC_1B}Earth_Explorer_File@schemaversion">04.14</cd:MatchData>
       </cd:DetectionRule>
     </cd:ProductDefinition>
+    <cd:ProductDefinition id="AUX_MRC_1B_04_16" format="xml" version="7">
+      <cd:Description>This definition is based on version 4/16 of IODD AED-SD-DoRIT-L1B-006</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchData path="/{http://www.esa.int/schemas/ae/AUX_MRC_1B}Earth_Explorer_File@schemaversion">04.16</cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
   </cd:ProductType>
   <cd:ProductType name="AUX_RRC_1B">
     <cd:Description>Aeolus Level 1B Rayleigh Response Calibration (EEF)</cd:Description>
