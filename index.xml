@@ -1997,6 +1997,14 @@
         <cd:MatchData offset="95">SD-DoRIT-L1B-006 v4.15 </cd:MatchData>
       </cd:DetectionRule>
     </cd:ProductDefinition>
+    <cd:ProductDefinition id="AUX_OWV_1B_04_16" format="binary" version="10">
+      <cd:Description>This definition is based on version 4/16 of IODD AED-SD-DoRIT-L1B-006</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT="AE_</cd:MatchData>
+        <cd:MatchData offset="17">AUX_OWV_1B</cd:MatchData>
+        <cd:MatchData offset="95">SD-DoRIT-L1B-006 v4.16 </cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
   </cd:ProductType>
   <cd:ProductType name="AUX_OWV_1B_HDR">
     <cd:Description>Aeolus Level 1B Offline Wind Velocity Measurement (HDR)</cd:Description>
