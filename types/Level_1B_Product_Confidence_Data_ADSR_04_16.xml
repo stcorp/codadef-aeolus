@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="binary" last-modified="2021-07-23" name="Level_1B_Product_Confidence_Data_ADSR_04_16">
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="binary" last-modified="2022-06-16" name="Level_1B_Product_Confidence_Data_ADSR_04_16">
   <cd:Field name="start_of_observation_time">
     <cd:Time timeformat="binary_envisat_datetime">
       <cd:Description>Start time at start of BRC</cd:Description>

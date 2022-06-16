@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="binary" last-modified="2019-10-31" name="Level_1B_PCD_Mie_Core_characteristics_04_16">
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="binary" last-modified="2022-06-16" name="Level_1B_PCD_Mie_Core_characteristics_04_16">
   <cd:Field name="peak_position">
     <cd:Float>
       <cd:Description>Calculated peak position of signal</cd:Description>
