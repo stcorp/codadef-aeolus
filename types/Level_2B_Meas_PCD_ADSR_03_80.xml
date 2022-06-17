@@ -307,7 +307,7 @@ Bit 8: L1B_Mie_Invalid_Meas_Check failed</cd:Description>
                 <cd:NativeType>uint8</cd:NativeType>
               </cd:Integer>
             </cd:Field>
-            <cd:Field name="SNR">
+            <cd:Field name="selected_SNR">
               <cd:Float>
                 <cd:Description>Signal-to-Noise ratio deduced for this rangebin</cd:Description>
                 <cd:BitSize>64</cd:BitSize>
