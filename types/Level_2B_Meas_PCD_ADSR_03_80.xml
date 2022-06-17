@@ -159,11 +159,12 @@ Bit 8: L1B_Mie_Invalid_Meas_Check failed</cd:Description>
             <cd:Array>
               <cd:Dimension>24</cd:Dimension>
               <cd:Record>
-                <cd:Field name="bin_qc">
+                <cd:Field name="bin_valid">
                   <cd:Integer>
-                    <cd:Description>A code describing a problem which prevents using this Mie measurement bin</cd:Description>
+                    <cd:Description>This flag is set to true if this bin is considered valid.</cd:Description>
                     <cd:BitSize>8</cd:BitSize>
                     <cd:NativeType>uint8</cd:NativeType>
+                    <ct:NamedTest id="BooleanBinTest"/>
                   </cd:Integer>
                 </cd:Field>
                 <cd:Field name="bin_qc_flags1">
@@ -195,11 +196,12 @@ Bit 8: L1B_Mie_Invalid_Meas_Check failed</cd:Description>
       <cd:Field name="rayleigh_meas">
         <cd:Record>
           <cd:Description>structure describing the problems found for this Rayleigh measurement</cd:Description>
-          <cd:Field name="meas_qc">
+          <cd:Field name="meas_valid">
             <cd:Integer>
-              <cd:Description>A code describing a problem which prevents using this Rayleigh measurement</cd:Description>
+              <cd:Description>This flag is set to true if this measurement is considered valid.</cd:Description>
               <cd:BitSize>8</cd:BitSize>
               <cd:NativeType>uint8</cd:NativeType>
+              <ct:NamedTest id="BooleanBinTest"/>
             </cd:Integer>
           </cd:Field>
           <cd:Field name="meas_qc_flags1">
@@ -227,11 +229,12 @@ Bit 8: L1B_Mie_Invalid_Meas_Check failed</cd:Description>
             <cd:Array>
               <cd:Dimension>24</cd:Dimension>
               <cd:Record>
-                <cd:Field name="bin_qc">
+                <cd:Field name="bin_valid">
                   <cd:Integer>
-                    <cd:Description>A code describing a problem which prevents using this Rayleigh measurement bin</cd:Description>
+                    <cd:Description>This flag is set to true if this bin is considered valid.</cd:Description>
                     <cd:BitSize>8</cd:BitSize>
                     <cd:NativeType>uint8</cd:NativeType>
+                    <ct:NamedTest id="BooleanBinTest"/>
                   </cd:Integer>
                 </cd:Field>
                 <cd:Field name="bin_qc_flags1">
