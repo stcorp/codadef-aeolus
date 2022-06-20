@@ -1,0 +1,168 @@
+<?xml version="1.0"?>
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="binary" last-modified="2021-07-19" name="Level_2BC_Rayleigh_HLOSWind_MDSR_03_80">
+  <cd:Field name="wind_result_id">
+    <cd:Integer>
+      <cd:Description>unique L2B Mie wind result identification number for this L2B file</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="start_of_obs_datetime">
+    <cd:Time timeformat="binary_envisat_datetime">
+      <cd:Description>Date and time of the first measurement used to compose the accumulated signals used to retrieve this wind result</cd:Description>
+      <ct:NamedTest id="RangeSecond" path="seconds"/>
+      <ct:NamedTest id="RangeMicroSecond" path="microseconds"/>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="windresult">
+    <cd:Record>
+      <cd:Description>structure containing the wind retrieval result associated to the current Rayleigh accumulation for a given group and classification</cd:Description>
+      <cd:Field name="which_range_bin">
+        <cd:Integer>
+          <cd:Description>Defines whether this observation was classified as cloud, no cloud</cd:Description>
+          <cd:BitSize>8</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="observation_type">
+        <cd:Integer>
+          <cd:Description>Remember if this was a cloud or no-cloud profile (or any other type we define)</cd:Description>
+          <cd:BitSize>8</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="validity_flag">
+        <cd:Integer>
+          <cd:Description>Validity flag (1 or TRUE = valid, 0 or FALSE = invalid) attached to the reported wind velocity. Details on the reasons why a result is invalid can be found in the l2b mie wind pcd - ads dataset.</cd:Description>
+          <cd:BitSize>8</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="rayleigh_wind_velocity">
+        <cd:Integer>
+          <cd:Description>Wind velocity given in cm/s and rounded to the nearest integer.</cd:Description>
+          <cd:Unit>cm/s</cd:Unit>
+          <cd:BitSize>16</cd:BitSize>
+          <cd:NativeType>int16</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="rayleigh_wind_to_pressure">
+        <cd:Integer>
+          <cd:Description>First-order derivative of the HLOS wind with respect to the pressure inside the sensing volume. This parameter may be used to correct the reported HLOS wind from pressure modifications brought by the assimilation.</cd:Description>
+          <cd:Unit>10^-6 m/s/Pa</cd:Unit>
+          <cd:BitSize>16</cd:BitSize>
+          <cd:NativeType>int16</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="rayleigh_wind_to_temperature">
+        <cd:Integer>
+          <cd:Description>First-order derivative of the HLOS wind with respect to the temperature inside the sensing volume. This parameter may be used to correct the reported HLOS wind from temperature modifications brought by the assimilation.</cd:Description>
+          <cd:Unit>cm/s/K</cd:Unit>
+          <cd:BitSize>16</cd:BitSize>
+          <cd:NativeType>int16</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="rayleigh_wind_to_backscatter_ratio">
+        <cd:Integer>
+          <cd:Description>First-order derivative of the HLOS wind with respect to the backscattering ratio inside the sensing volume. This parameter may be used to correct the reported HLOS wind if the reference backscatter ratio is modified.</cd:Description>
+          <cd:Unit>cm/s</cd:Unit>
+          <cd:BitSize>16</cd:BitSize>
+          <cd:NativeType>int16</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="reference_pressure">
+        <cd:Integer>
+          <cd:Description>Reference pressure used for inverting the Rayleigh response into an HLOS wind. This pressure information is taken from the numerical weather prediction model.</cd:Description>
+          <cd:Unit>Pa</cd:Unit>
+          <cd:BitSize>32</cd:BitSize>
+          <cd:NativeType>uint32</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="reference_temperature">
+        <cd:Integer>
+          <cd:Description>Reference temperature used for inverting the Rayleigh response into an HLOS wind. This temperature information is taken from the numerical weather prediction model.</cd:Description>
+          <cd:Unit>10^-2 K</cd:Unit>
+          <cd:BitSize>16</cd:BitSize>
+          <cd:NativeType>uint16</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="reference_backscatter_ratio">
+        <cd:Integer>
+          <cd:Description>Reference backscatter ratio used for inverting the Rayleigh response measured by the lidar. Note that this value might be set to 1 for Rayleigh clear winds depending on the associated setting in the AUX_PAR_2B file. In this case an actual estimate of the scattering ratio is still available in the Scattering_Ratio field.</cd:Description>
+          <cd:Unit>10^-6</cd:Unit>
+          <cd:BitSize>32</cd:BitSize>
+          <cd:NativeType>uint32</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="applied_spacecraft_los_corr_velocity">
+        <cd:Integer>
+          <cd:Description>Applied spacecraft LOS correction to the Wind velocity, given in cm/s and rounded to the nearest integer.</cd:Description>
+          <cd:Unit>cm/s</cd:Unit>
+          <cd:BitSize>16</cd:BitSize>
+          <cd:NativeType>int16</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="applied_rdb_corr_velocity">
+        <cd:Integer>
+          <cd:Description>Applied range dependent bias correction to the Wind velocity, given in cm/s and rounded to the nearest integer.</cd:Description>
+          <cd:Unit>cm/s</cd:Unit>
+          <cd:BitSize>16</cd:BitSize>
+          <cd:NativeType>int16</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="applied_ground_corr_velocity">
+        <cd:Integer>
+          <cd:Description>Applied ground correction to the Wind velocity (either HBE or ZWC based), given in cm/s and rounded to the nearest integer.</cd:Description>
+          <cd:Unit>cm/s</cd:Unit>
+          <cd:BitSize>16</cd:BitSize>
+          <cd:NativeType>int16</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="applied_m1_temperature_corr_velocity">
+        <cd:Integer>
+          <cd:Description>Applied M1 mirror temperature correction to the LOS Wind velocity, given in cm/s and rounded to the nearest integer.</cd:Description>
+          <cd:Unit>cm/s</cd:Unit>
+          <cd:BitSize>16</cd:BitSize>
+          <cd:NativeType>int16</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="applied_parametrized_response_correction">
+        <cd:Integer>
+          <cd:Description>Applied parametrized response correction to the cloudy Rayleigh winds to compensate for Mie contamination (as derived from NWP data) converted to LOS Wind velocity, given in cm/s and rounded to the nearest integer.</cd:Description>
+          <cd:Unit>cm/s</cd:Unit>
+          <cd:BitSize>16</cd:BitSize>
+          <cd:NativeType>int16</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="integration_length">
+        <cd:Integer>
+          <cd:Description>Integration length for the reported Rayleigh wind.</cd:Description>
+          <cd:Unit>m</cd:Unit>
+          <cd:BitSize>32</cd:BitSize>
+          <cd:NativeType>uint32</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="n_meas_in_class">
+        <cd:Integer>
+          <cd:Description>Number of measurements used to construct the accumulation used to derive the current Rayleigh wind result</cd:Description>
+          <cd:BitSize>16</cd:BitSize>
+          <cd:NativeType>uint16</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="spare">
+        <cd:Raw>
+          <cd:Description>Spare</cd:Description>
+          <cd:BitSize>16</cd:BitSize>
+        </cd:Raw>
+        <cd:Hidden/>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="spare">
+    <cd:Raw>
+      <cd:Description>Spare</cd:Description>
+      <cd:BitSize>40</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+</cd:Record>
