@@ -2515,6 +2515,47 @@
           </cd:Field>
         </cd:Record>
       </cd:Field>
+      <cd:Field name="Climatological_Screening">
+        <cd:Record namexml="Climatological_Screening">
+          <cd:Description>Defines a vertical threshold curve for screening the generated HLOS winds.</cd:Description>
+          <cd:Field name="List_of_Allowed_Max_HLOS_Values">
+            <cd:Record namexml="List_of_Allowed_Max_HLOS_Values">
+              <cd:Attribute name="count"/>
+              <cd:Field name="Allowed_Max_HLOS_value">
+                <cd:Array>
+                  <cd:Dimension/>
+                  <cd:Record namexml="Allowed_Max_HLOS_Value">
+                    <cd:Field name="Threshold_Value">
+                      <cd:Type namexml="Threshold_Value">
+                        <cd:Attribute name="unit">
+                          <cd:FixedValue>m/s</cd:FixedValue>
+                        </cd:Attribute>
+                        <cd:Float format="ascii">
+                          <cd:Description></cd:Description>
+                          <cd:Unit>m/s</cd:Unit>
+                          <cd:NativeType>double</cd:NativeType>
+                        </cd:Float>
+                      </cd:Type>
+                    </cd:Field>
+                    <cd:Field name="Altitude">
+                      <cd:Type namexml="Altitude">
+                        <cd:Attribute name="unit">
+                          <cd:FixedValue>km</cd:FixedValue>
+                        </cd:Attribute>
+                        <cd:Float format="ascii">
+                          <cd:Description></cd:Description>
+                          <cd:Unit>km</cd:Unit>
+                          <cd:NativeType>double</cd:NativeType>
+                        </cd:Float>
+                      </cd:Type>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Array>
+              </cd:Field>
+            </cd:Record>
+          </cd:Field>
+        </cd:Record>
+      </cd:Field>
     </cd:Record>
   </cd:Field>
   <cd:Field name="Monitoring_Params">
