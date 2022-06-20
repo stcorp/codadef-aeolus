@@ -2045,428 +2045,100 @@
           <cd:Field name="L1B_Obs_Screening_Params">
             <cd:Record namexml="L1B_Obs_Screening_Params">
               <cd:Description>Parameters used for screening the L1B observations from the L1B input file</cd:Description>
-              <cd:Field name="L1B_Laser_Freq_Unlocked_Threshold">
-                <cd:Type namexml="L1B_Laser_Freq_Unlocked_Threshold">
-                  <cd:Integer format="ascii">
-                    <cd:Description>Threshold on the value of nmeas with laser_freq_unlocked</cd:Description>
-                    <cd:NativeType>int32</cd:NativeType>
-                  </cd:Integer>
-                </cd:Type>
+              <cd:Field name="L1B_Laser_Freq_Unlocked_Check">
+                <cd:NamedType id="Level_1B_Screening_Params_Check"/>
               </cd:Field>
-              <cd:Field name="L1B_Ref_Pulses_Unlocked_Threshold">
-                <cd:Type namexml="L1B_Ref_Pulses_Unlocked_Threshold">
-                  <cd:Integer format="ascii">
-                    <cd:Description>Threshold on the value of nrefpulses with laser_freq_unlocked</cd:Description>
-                    <cd:NativeType>int32</cd:NativeType>
-                  </cd:Integer>
-                </cd:Type>
+              <cd:Field name="L1B_Ref_Pulses_Unlocked_Check">
+                <cd:NamedType id="Level_1B_Screening_Params_Check"/>
               </cd:Field>
-              <cd:Field name="L1B_Laser_Freq_Offset_Threshold">
-                <cd:Type namexml="L1B_Laser_Freq_Offset_Threshold">
-                  <cd:Attribute name="unit"/>
-                  <cd:Float format="ascii">
-                    <cd:Description>Threshold on the value of average laser freq. offset</cd:Description>
-                    <cd:Unit>GHz</cd:Unit>
-                    <cd:NativeType>double</cd:NativeType>
-                  </cd:Float>
-                </cd:Type>
+              <cd:Field name="L1B_Laser_Freq_Offset_Check">
+                <cd:NamedType id="Level_1B_Screening_Params_Check"/>
               </cd:Field>
-              <cd:Field name="L1B_Laser_UV_Energy_Threshold">
-                <cd:Type namexml="L1B_Laser_UV_Energy_Threshold">
-                  <cd:Attribute name="unit">
-                    <cd:FixedValue>mJ</cd:FixedValue>
-                  </cd:Attribute>
-                  <cd:Float format="ascii">
-                    <cd:Description>Threshold on the value of average laser UV energy</cd:Description>
-                    <cd:Unit>mJ</cd:Unit>
-                    <cd:NativeType>double</cd:NativeType>
-                  </cd:Float>
-                </cd:Type>
+              <cd:Field name="L1B_Laser_UV_Energy_Check">
+                <cd:NamedType id="Level_1B_Screening_Params_Check"/>
               </cd:Field>
-              <cd:Field name="L1B_Laser_Freq_Offs_Stdev_Threshold">
-                <cd:Type namexml="L1B_Laser_Freq_Offs_Stdev_Threshold">
-                  <cd:Attribute name="unit"/>
-                  <cd:Float format="ascii">
-                    <cd:Description>Threshold on the value of Standard deviation for laser frequency offset</cd:Description>
-                    <cd:Unit>GHz</cd:Unit>
-                    <cd:NativeType>double</cd:NativeType>
-                  </cd:Float>
-                </cd:Type>
+              <cd:Field name="L1B_Laser_Freq_Offs_Stdev_Check">
+                <cd:NamedType id="Level_1B_Screening_Params_Check"/>
               </cd:Field>
-              <cd:Field name="L1B_Laser_UV_Energy_Stdev_Threshold">
-                <cd:Type namexml="L1B_Laser_UV_Energy_Stdev_Threshold">
-                  <cd:Attribute name="unit">
-                    <cd:FixedValue>mJ</cd:FixedValue>
-                  </cd:Attribute>
-                  <cd:Float format="ascii">
-                    <cd:Description>Threshold on the value of Standard deviation for laser pulse UV energy</cd:Description>
-                    <cd:Unit>mJ</cd:Unit>
-                    <cd:NativeType>double</cd:NativeType>
-                  </cd:Float>
-                </cd:Type>
+              <cd:Field name="L1B_Laser_UV_Energy_Stdev_Check">
+                <cd:NamedType id="Level_1B_Screening_Params_Check"/>
               </cd:Field>
-              <cd:Field name="L1B_Mie_Mean_Emit_Freq_Min">
-                <cd:Type namexml="L1B_Mie_Mean_Emit_Freq_Min">
-                  <cd:Attribute name="unit"/>
-                  <cd:Float format="ascii">
-                    <cd:Description>Minimum allowed value for Mie mean emitted frequency</cd:Description>
-                    <cd:Unit>GHz</cd:Unit>
-                    <cd:NativeType>double</cd:NativeType>
-                  </cd:Float>
-                </cd:Type>
+              <cd:Field name="L1B_Mie_Mean_Emit_Freq_Check">
+                <cd:NamedType id="Level_1B_Screening_Params_Check"/>
               </cd:Field>
-              <cd:Field name="L1B_Mie_Mean_Emit_Freq_Max">
-                <cd:Type namexml="L1B_Mie_Mean_Emit_Freq_Max">
-                  <cd:Attribute name="unit"/>
-                  <cd:Float format="ascii">
-                    <cd:Description>Maximumallowed value for Mie mean emitted frequency</cd:Description>
-                    <cd:Unit>GHz</cd:Unit>
-                    <cd:NativeType>double</cd:NativeType>
-                  </cd:Float>
-                </cd:Type>
+              <cd:Field name="L1B_Mie_Emit_Freq_Stdev_Check">
+                <cd:NamedType id="Level_1B_Screening_Params_Check"/>
               </cd:Field>
-              <cd:Field name="L1B_Mie_Emit_Freq_Stdev_Threshold">
-                <cd:Type namexml="L1B_Mie_Emit_Freq_Stdev_Threshold">
-                  <cd:Attribute name="unit"/>
-                  <cd:Float format="ascii">
-                    <cd:Description>Threshold on the value of Mie emitted frequency standard deveation</cd:Description>
-                    <cd:Unit>GHz</cd:Unit>
-                    <cd:NativeType>double</cd:NativeType>
-                  </cd:Float>
-                </cd:Type>
+              <cd:Field name="L1B_Rayleigh_Mean_Emit_Freq_Check">
+                <cd:NamedType id="Level_1B_Screening_Params_Check"/>
               </cd:Field>
-              <cd:Field name="L1B_Rayleigh_Mean_Emit_Freq_Min">
-                <cd:Type namexml="L1B_Rayleigh_Mean_Emit_Freq_Min">
-                  <cd:Attribute name="unit"/>
-                  <cd:Float format="ascii">
-                    <cd:Description>Minimum allowed value for Rayleigh mean emitted frequency</cd:Description>
-                    <cd:Unit>GHz</cd:Unit>
-                    <cd:NativeType>double</cd:NativeType>
-                  </cd:Float>
-                </cd:Type>
+              <cd:Field name="L1B_Rayleigh_Emit_Freq_Stdev_Check">
+                <cd:NamedType id="Level_1B_Screening_Params_Check"/>
               </cd:Field>
-              <cd:Field name="L1B_Rayleigh_Mean_Emit_Freq_Max">
-                <cd:Type namexml="L1B_Rayleigh_Mean_Emit_Freq_Max">
-                  <cd:Attribute name="unit"/>
-                  <cd:Float format="ascii">
-                    <cd:Description>Maximumallowed value for Rayleigh mean emitted frequency</cd:Description>
-                    <cd:Unit>GHz</cd:Unit>
-                    <cd:NativeType>double</cd:NativeType>
-                  </cd:Float>
-                </cd:Type>
+              <cd:Field name="L1B_Sat_Not_on_Target_Check">
+                <cd:NamedType id="Level_1B_Screening_Params_Check"/>
               </cd:Field>
-              <cd:Field name="L1B_Rayleigh_Emit_Freq_Stdev_Threshold">
-                <cd:Type namexml="L1B_Rayleigh_Emit_Freq_Stdev_Threshold">
-                  <cd:Attribute name="unit"/>
-                  <cd:Float format="ascii">
-                    <cd:Description>Threshold on the value of Rayleigh emitted frequency standard deviation</cd:Description>
-                    <cd:Unit>GHz</cd:Unit>
-                    <cd:NativeType>double</cd:NativeType>
-                  </cd:Float>
-                </cd:Type>
+              <cd:Field name="L1B_Mie_Corrupt_Check">
+                <cd:NamedType id="Level_1B_Screening_Params_Check"/>
               </cd:Field>
-              <cd:Field name="L1B_Sat_Not_on_Target_Threshold">
-                <cd:Type namexml="L1B_Sat_Not_on_Target_Threshold">
-                  <cd:Integer format="ascii">
-                    <cd:Description>Threshold on the value of nmeas with sat_not_on_target</cd:Description>
-                    <cd:NativeType>int32</cd:NativeType>
-                  </cd:Integer>
-                </cd:Type>
+              <cd:Field name="L1B_Rayleigh_Corrupt_Check">
+                <cd:NamedType id="Level_1B_Screening_Params_Check"/>
               </cd:Field>
-              <cd:Field name="L1B_Mie_Corrupt_Threshold">
-                <cd:Type namexml="L1B_Mie_Corrupt_Threshold">
-                  <cd:Integer format="ascii">
-                    <cd:Description>Threshold on the value of nmeas with corrupt Mie meas</cd:Description>
-                    <cd:NativeType>int32</cd:NativeType>
-                  </cd:Integer>
-                </cd:Type>
+              <cd:Field name="L1B_Mie_Ref_Pulses_Corrupt_Check">
+                <cd:NamedType id="Level_1B_Screening_Params_Check"/>
               </cd:Field>
-              <cd:Field name="L1B_Rayleigh_Corrupt_Threshold">
-                <cd:Type namexml="L1B_Rayleigh_Corrupt_Threshold">
-                  <cd:Integer format="ascii">
-                    <cd:Description>Threshold on the value of nmeas with corrupt Rayleigh meas</cd:Description>
-                    <cd:NativeType>int32</cd:NativeType>
-                  </cd:Integer>
-                </cd:Type>
+              <cd:Field name="L1B_Rayl_Ref_Pulses_Corrupt_Check">
+                <cd:NamedType id="Level_1B_Screening_Params_Check"/>
               </cd:Field>
-              <cd:Field name="L1B_Mie_Ref_Pulses_Corrupt_Threshold">
-                <cd:Type namexml="L1B_Mie_Ref_Pulses_Corrupt_Threshold">
-                  <cd:Integer format="ascii">
-                    <cd:Description>Threshold on the value of nmeas with corrupt Mie ref. Pulses</cd:Description>
-                    <cd:NativeType>int32</cd:NativeType>
-                  </cd:Integer>
-                </cd:Type>
+              <cd:Field name="L1B_Mie_Invalid_Meas_Check">
+                <cd:NamedType id="Level_1B_Screening_Params_Check"/>
               </cd:Field>
-              <cd:Field name="L1B_Rayl_Ref_Pulses_Corrupt_Threshold">
-                <cd:Type namexml="L1B_Rayl_Ref_Pulses_Corrupt_Threshold">
-                  <cd:Integer format="ascii">
-                    <cd:Description>Threshold on the value of nmeas with corrupt Rayleigh ref. Pulses</cd:Description>
-                    <cd:NativeType>int32</cd:NativeType>
-                  </cd:Integer>
-                </cd:Type>
+              <cd:Field name="L1B_Mie_Invalid_Ref_Pulses_Check">
+                <cd:NamedType id="Level_1B_Screening_Params_Check"/>
               </cd:Field>
-              <cd:Field name="L1B_Mie_Invalid_Meas_Threshold">
-                <cd:Type namexml="L1B_Mie_Invalid_Meas_Threshold">
-                  <cd:Integer format="ascii">
-                    <cd:Description>Threshold on the value of num_of_mie_invalid_measurements</cd:Description>
-                    <cd:NativeType>int32</cd:NativeType>
-                  </cd:Integer>
-                </cd:Type>
+              <cd:Field name="L1B_Rayl_Invalid_Meas_Check">
+                <cd:NamedType id="Level_1B_Screening_Params_Check"/>
               </cd:Field>
-              <cd:Field name="L1B_Mie_Invalid_Ref_Pulses_Threshold">
-                <cd:Type namexml="L1B_Mie_Invalid_Ref_Pulses_Threshold">
-                  <cd:Integer format="ascii">
-                    <cd:Description>Threshold on the value of num_of_mie_invalid_reference_pulse</cd:Description>
-                    <cd:NativeType>int32</cd:NativeType>
-                  </cd:Integer>
-                </cd:Type>
-              </cd:Field>
-              <cd:Field name="L1B_Rayl_Invalid_Meas_Threshold">
-                <cd:Type namexml="L1B_Rayl_Invalid_Meas_Threshold">
-                  <cd:Integer format="ascii">
-                    <cd:Description>Threshold on the value of num_of_rayleigh_invalid_measurements</cd:Description>
-                    <cd:NativeType>int32</cd:NativeType>
-                  </cd:Integer>
-                </cd:Type>
-              </cd:Field>
-              <cd:Field name="L1B_Rayl_Invalid_Ref_Pulses_Threshold">
-                <cd:Type namexml="L1B_Rayl_Invalid_Ref_Pulses_Threshold">
-                  <cd:Integer format="ascii">
-                    <cd:Description>Threshold on the value of num_of_rayleigh_invalid_reference_pulse</cd:Description>
-                    <cd:NativeType>int32</cd:NativeType>
-                  </cd:Integer>
-                </cd:Type>
+              <cd:Field name="L1B_Rayl_Invalid_Ref_Pulses_Check">
+                <cd:NamedType id="Level_1B_Screening_Params_Check"/>
               </cd:Field>
             </cd:Record>
           </cd:Field>
           <cd:Field name="L1B_Mie_Meas_Screening_Params">
             <cd:Record namexml="L1B_Mie_Meas_Screening_Params">
               <cd:Description>Parameters used for screening the L1B Mie Measurements from the L1B input file</cd:Description>
-              <cd:Field name="L1B_Mie_Meas_Invalid_Ref_Pulses_Threshold">
-                <cd:Type namexml="L1B_Mie_Meas_Invalid_Ref_Pulses_Threshold">
-                  <cd:Integer format="ascii">
-                    <cd:Description>Threshold on the value of num_of_mie_invalid_reference_pulses</cd:Description>
-                    <cd:NativeType>int32</cd:NativeType>
-                  </cd:Integer>
-                </cd:Type>
+              <cd:Field name="L1B_Mie_Meas_Invalid_Ref_Pulses_Check">
+                <cd:NamedType id="Level_1B_Screening_Params_Check"/>
               </cd:Field>
-              <cd:Field name="L1B_Avg_Laser_Freq_Offset_Min">
-                <cd:Type namexml="L1B_Avg_Laser_Freq_Offset_Min">
-                  <cd:Attribute name="unit"/>
-                  <cd:Float format="ascii">
-                    <cd:Description>Minimum allowed value for Avg_Laser_Frequency_Offset</cd:Description>
-                    <cd:Unit>GHz</cd:Unit>
-                    <cd:NativeType>double</cd:NativeType>
-                  </cd:Float>
-                </cd:Type>
+              <cd:Field name="L1B_Avg_Laser_Freq_Offset_Check">
+                <cd:NamedType id="Level_1B_Screening_Params_Check"/>
               </cd:Field>
-              <cd:Field name="L1B_Avg_Laser_Freq_Offset_Max">
-                <cd:Type namexml="L1B_Avg_Laser_Freq_Offset_Max">
-                  <cd:Attribute name="unit"/>
-                  <cd:Float format="ascii">
-                    <cd:Description>Maximum allowed value for Avg_Laser_Frequency_Offset</cd:Description>
-                    <cd:Unit>GHz</cd:Unit>
-                    <cd:NativeType>double</cd:NativeType>
-                  </cd:Float>
-                </cd:Type>
+              <cd:Field name="L1B_Avg_UV_Energy_Check">
+                <cd:NamedType id="Level_1B_Screening_Params_Check"/>
               </cd:Field>
-              <cd:Field name="L1B_Avg_UV_Energy_Min">
-                <cd:Type namexml="L1B_Avg_UV_Energy_Min">
-                  <cd:Attribute name="unit">
-                    <cd:FixedValue>mJ</cd:FixedValue>
-                  </cd:Attribute>
-                  <cd:Float format="ascii">
-                    <cd:Description>Minimum allowed value for Avg_UV_Energy</cd:Description>
-                    <cd:Unit>mJ</cd:Unit>
-                    <cd:NativeType>double</cd:NativeType>
-                  </cd:Float>
-                </cd:Type>
+              <cd:Field name="L1B_Laser_Freq_Offset_Stdev_Check">
+                <cd:NamedType id="Level_1B_Screening_Params_Check"/>
               </cd:Field>
-              <cd:Field name="L1B_Avg_UV_Energy_Max">
-                <cd:Type namexml="L1B_Avg_UV_Energy_Max">
-                  <cd:Attribute name="unit">
-                    <cd:FixedValue>mJ</cd:FixedValue>
-                  </cd:Attribute>
-                  <cd:Float format="ascii">
-                    <cd:Description>Maximum allowed value for Avg_UV_Energy</cd:Description>
-                    <cd:Unit>mJ</cd:Unit>
-                    <cd:NativeType>double</cd:NativeType>
-                  </cd:Float>
-                </cd:Type>
+              <cd:Field name="L1B_UV_Energy_Stdev_Check">
+                <cd:NamedType id="Level_1B_Screening_Params_Check"/>
               </cd:Field>
-              <cd:Field name="L1B_Laser_Freq_Offset_Stdev_Threshold">
-                <cd:Type namexml="L1B_Laser_Freq_Offset_Stdev_Threshold">
-                  <cd:Attribute name="unit"/>
-                  <cd:Float format="ascii">
-                    <cd:Description>Threshold on the value for Laser_Frequency_Offset_Std_ Dev</cd:Description>
-                    <cd:Unit>GHz</cd:Unit>
-                    <cd:NativeType>double</cd:NativeType>
-                  </cd:Float>
-                </cd:Type>
+              <cd:Field name="L1B_Vel_of_Att_Uncertainty_Error_Check">
+                <cd:NamedType id="Level_1B_Screening_Params_Check"/>
               </cd:Field>
-              <cd:Field name="L1B_UV_Energy_Stdev_Threshold">
-                <cd:Type namexml="L1B_UV_Energy_Stdev_Threshold">
-                  <cd:Attribute name="unit">
-                    <cd:FixedValue>mJ</cd:FixedValue>
-                  </cd:Attribute>
-                  <cd:Float format="ascii">
-                    <cd:Description>Threshold on the value for UV_Energy_Std_Dev</cd:Description>
-                    <cd:Unit>mJ</cd:Unit>
-                    <cd:NativeType>double</cd:NativeType>
-                  </cd:Float>
-                </cd:Type>
+              <cd:Field name="L1B_Mie_Mean_Emitted_Freq_Check">
+                <cd:NamedType id="Level_1B_Screening_Params_Check"/>
               </cd:Field>
-              <cd:Field name="L1B_Vel_of_Att_Uncertainty_Error_Min">
-                <cd:Type namexml="L1B_Vel_of_Att_Uncertainty_Error_Min">
-                  <cd:Attribute name="unit">
-                    <cd:FixedValue>m/s</cd:FixedValue>
-                  </cd:Attribute>
-                  <cd:Float format="ascii">
-                    <cd:Description>Minimum allowed value for Velocity_of_Attitude_Uncertainty_Error</cd:Description>
-                    <cd:Unit>m/s</cd:Unit>
-                    <cd:NativeType>double</cd:NativeType>
-                  </cd:Float>
-                </cd:Type>
+              <cd:Field name="L1B_Mie_Emitted_Freq_Stdev_Check">
+                <cd:NamedType id="Level_1B_Screening_Params_Check"/>
               </cd:Field>
-              <cd:Field name="L1B_Vel_of_Att_Uncertainty_Error_Max">
-                <cd:Type namexml="L1B_Vel_of_Att_Uncertainty_Error_Max">
-                  <cd:Attribute name="unit">
-                    <cd:FixedValue>m/s</cd:FixedValue>
-                  </cd:Attribute>
-                  <cd:Float format="ascii">
-                    <cd:Description>Maximum allowed value for Velocity_of_Attitude_Uncertainty_Error</cd:Description>
-                    <cd:Unit>m/s</cd:Unit>
-                    <cd:NativeType>double</cd:NativeType>
-                  </cd:Float>
-                </cd:Type>
+              <cd:Field name="Mie_Meas_Invalid_Check">
+                <cd:NamedType id="Level_1B_Screening_Params_Check"/>
               </cd:Field>
-              <cd:Field name="L1B_Mie_Mean_Emitted_Freq_Min">
-                <cd:Type namexml="L1B_Mie_Mean_Emitted_Freq_Min">
-                  <cd:Attribute name="unit"/>
-                  <cd:Float format="ascii">
-                    <cd:Description>Minimum allowed value for Mie_Mean_Emitted_Frequency</cd:Description>
-                    <cd:Unit>GHz</cd:Unit>
-                    <cd:NativeType>double</cd:NativeType>
-                  </cd:Float>
-                </cd:Type>
+              <cd:Field name="L1B_Scattering_Ratio_Check">
+                <cd:NamedType id="Level_1B_Screening_Params_Check"/>
               </cd:Field>
-              <cd:Field name="L1B_Mie_Mean_Emitted_Freq_Max">
-                <cd:Type namexml="L1B_Mie_Mean_Emitted_Freq_Max">
-                  <cd:Attribute name="unit"/>
-                  <cd:Float format="ascii">
-                    <cd:Description>Maximum allowed value for Mie_Mean_Emitted_Frequency</cd:Description>
-                    <cd:Unit>GHz</cd:Unit>
-                    <cd:NativeType>double</cd:NativeType>
-                  </cd:Float>
-                </cd:Type>
-              </cd:Field>
-              <cd:Field name="L1B_Mie_Emitted_Freq_Stdev_Threshold">
-                <cd:Type namexml="L1B_Mie_Emitted_Freq_Stdev_Threshold">
-                  <cd:Attribute name="unit"/>
-                  <cd:Float format="ascii">
-                    <cd:Description>Threshold on the value of Mie_Emitted_Frequency_Std_Dev</cd:Description>
-                    <cd:Unit>GHz</cd:Unit>
-                    <cd:NativeType>double</cd:NativeType>
-                  </cd:Float>
-                </cd:Type>
-              </cd:Field>
-              <cd:Field name="L1B_Meas_Reference_Pulse_FWHM_Min">
-                <cd:Type namexml="L1B_Meas_Reference_Pulse_FWHM_Min">
-                  <cd:Attribute name="unit">
-                    <cd:Optional/>
-                    <cd:FixedValue>ACCD pixel index</cd:FixedValue>
-                  </cd:Attribute>
-                  <cd:Float format="ascii">
-                    <cd:Description>Minimum allowed value for L1B PCD measurement-level parameter Reference_Pulse_FWHM</cd:Description>
-                    <cd:NativeType>double</cd:NativeType>
-                  </cd:Float>
-                </cd:Type>
-              </cd:Field>
-              <cd:Field name="L1B_Meas_Reference_Pulse_FWHM_Max">
-                <cd:Type namexml="L1B_Meas_Reference_Pulse_FWHM_Max">
-                  <cd:Attribute name="unit">
-                    <cd:Optional/>
-                    <cd:FixedValue>ACCD pixel index</cd:FixedValue>
-                  </cd:Attribute>
-                  <cd:Float format="ascii">
-                    <cd:Description>Maximum allowed value for L1B PCD measurement-level parameter Reference_Pulse_FWHM</cd:Description>
-                    <cd:NativeType>double</cd:NativeType>
-                  </cd:Float>
-                </cd:Type>
-              </cd:Field>
-              <cd:Field name="L1B_Scattering_Ratio_Min">
-                <cd:Type namexml="L1B_Scattering_Ratio_Min">
-                  <cd:Float format="ascii">
-                    <cd:Description>Minimum allowed value for Scattering_Ratio_Mie</cd:Description>
-                    <cd:NativeType>double</cd:NativeType>
-                  </cd:Float>
-                </cd:Type>
-              </cd:Field>
-              <cd:Field name="L1B_Scattering_Ratio_Max">
-                <cd:Type namexml="L1B_Scattering_Ratio_Max">
-                  <cd:Float format="ascii">
-                    <cd:Description>Maximum allowed value for Scattering_Ratio_Mie</cd:Description>
-                    <cd:NativeType>double</cd:NativeType>
-                  </cd:Float>
-                </cd:Type>
-              </cd:Field>
-              <cd:Field name="L1B_Mie_SNR_Threshold">
-                <cd:Type namexml="L1B_Mie_SNR_Threshold">
-                  <cd:Float format="ascii">
-                    <cd:Description>Threshold on the value of Mie_Signal_to_Noise_Ratio</cd:Description>
-                    <cd:NativeType>double</cd:NativeType>
-                  </cd:Float>
-                </cd:Type>
-              </cd:Field>
-              <cd:Field name="Mie_Ground_Bin_Thickness_Threshold">
-                <cd:Type namexml="Mie_Ground_Bin_Thickness_Threshold">
-                  <cd:Attribute name="unit">
-                    <cd:FixedValue>m</cd:FixedValue>
-                  </cd:Attribute>
-                  <cd:Float format="ascii">
-                    <cd:Description>Threshold on the part of the ground bin that is above the surface according to the DEM</cd:Description>
-                    <cd:Unit>m</cd:Unit>
-                    <cd:NativeType>double</cd:NativeType>
-                  </cd:Float>
-                </cd:Type>
-              </cd:Field>
-              <cd:Field name="Max_Signal_Derivative">
-                <cd:Type namexml="Max_Signal_Derivative">
-                  <cd:Attribute name="unit">
-                    <cd:Optional/>
-                    <cd:FixedValue>ACCD counts</cd:FixedValue>
-                  </cd:Attribute>
-                  <cd:Integer format="ascii">
-                    <cd:Description>Threshold on the Mie spectrum to be able to detect corrupt channels</cd:Description>
-                    <cd:NativeType>int16</cd:NativeType>
-                  </cd:Integer>
-                </cd:Type>
-              </cd:Field>
-              <cd:Field name="Pixel_Saturation_Threshold">
-                <cd:Type namexml="Pixel_Saturation_Threshold">
-                  <cd:Attribute name="unit">
-                    <cd:Optional/>
-                    <cd:FixedValue>ACCD counts</cd:FixedValue>
-                  </cd:Attribute>
-                  <cd:Integer format="ascii">
-                    <cd:Description>Threshold on the Mie spectral channels to be able to detect saturated channels</cd:Description>
-                    <cd:NativeType>int16</cd:NativeType>
-                  </cd:Integer>
-                </cd:Type>
-              </cd:Field>
-              <cd:Field name="Ignore_Mie_Meas_Invalid_Switch">
-                <cd:Type namexml="Ignore_Mie_Meas_Invalid_Switch">
-                  <cd:Integer format="ascii">
-                    <cd:Description>Switch to select whether the L1B flag indicating an Invalid Mie Measurement should be ignored in the L2BP or not</cd:Description>
-                    <cd:NativeType>uint8</cd:NativeType>
-                    <cd:Mapping string="FALSE" value="0"/>
-                    <cd:Mapping string="False" value="0"/>
-                    <cd:Mapping string="false" value="0"/>
-                    <cd:Mapping string="TRUE" value="1"/>
-                    <cd:Mapping string="True" value="1"/>
-                    <cd:Mapping string="true" value="1"/>
-                  </cd:Integer>
-                </cd:Type>
+              <cd:Field name="L1B_Mie_SNR_Check">
+                <cd:NamedType id="Level_1B_Screening_Params_Check"/>
               </cd:Field>
             </cd:Record>
           </cd:Field>
