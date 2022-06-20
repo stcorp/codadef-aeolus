@@ -256,13 +256,6 @@
           <ct:NamedTest id="FloatIsFinite"/>
         </cd:Float>
       </cd:Field>
-      <cd:Field name="mie_background_high">
-        <cd:Integer>
-          <cd:Description>A value of 1 indicates that this data was taken during daylight, so possibly the background radiation level is high.</cd:Description>
-          <cd:BitSize>8</cd:BitSize>
-          <cd:NativeType>uint8</cd:NativeType>
-        </cd:Integer>
-      </cd:Field>
       <cd:Field name="spare">
         <cd:Raw>
           <cd:Description>Spare</cd:Description>
