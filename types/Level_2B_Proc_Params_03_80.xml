@@ -2016,169 +2016,29 @@
           <cd:Description>Parameters used for screening the L1B input file</cd:Description>
           <cd:Field name="L1B_Geolocation_Screening_Params">
             <cd:Record namexml="L1B_Geolocation_Screening_Params">
-              <cd:Field name="Latitude_Min">
-                <cd:Type namexml="Latitude_Min">
-                  <cd:Attribute name="unit"/>
-                  <cd:Float format="ascii">
-                    <cd:Description>Minimum latitude allowed in L1B Geolocation Data</cd:Description>
-                    <cd:Unit>degrees_north</cd:Unit>
-                    <cd:NativeType>double</cd:NativeType>
-                  </cd:Float>
-                </cd:Type>
+              <cd:Field name="Latitude_Check">
+                <cd:NamedType id="Level_1B_Screening_Params_Check"/>
               </cd:Field>
-              <cd:Field name="Latitude_Max">
-                <cd:Type namexml="Latitude_Max">
-                  <cd:Attribute name="unit"/>
-                  <cd:Float format="ascii">
-                    <cd:Description>Maximum latitude allowed in L1B Geolocation Data</cd:Description>
-                    <cd:Unit>degrees_north</cd:Unit>
-                    <cd:NativeType>double</cd:NativeType>
-                  </cd:Float>
-                </cd:Type>
+              <cd:Field name="Longitude_Check">
+                <cd:NamedType id="Level_1B_Screening_Params_Check"/>
               </cd:Field>
-              <cd:Field name="Longitude_Min">
-                <cd:Type namexml="Longitude_Min">
-                  <cd:Attribute name="unit"/>
-                  <cd:Float format="ascii">
-                    <cd:Description>Minimum longitude allowed in L1B Geolocation Data</cd:Description>
-                    <cd:Unit>degrees_east</cd:Unit>
-                    <cd:NativeType>double</cd:NativeType>
-                  </cd:Float>
-                </cd:Type>
+              <cd:Field name="Altitude_Check">
+                <cd:NamedType id="Level_1B_Screening_Params_Check"/>
               </cd:Field>
-              <cd:Field name="Longitude_Max">
-                <cd:Type namexml="Longitude_Max">
-                  <cd:Attribute name="unit"/>
-                  <cd:Float format="ascii">
-                    <cd:Description>Maximum longitude allowed in L1B Geolocation Data</cd:Description>
-                    <cd:Unit>degrees_east</cd:Unit>
-                    <cd:NativeType>double</cd:NativeType>
-                  </cd:Float>
-                </cd:Type>
+              <cd:Field name="Altitude_DEM_Check">
+                <cd:NamedType id="Level_1B_Screening_Params_Check"/>
               </cd:Field>
-              <cd:Field name="Altitude_Min">
-                <cd:Type namexml="Altitude_Min">
-                  <cd:Attribute name="unit"/>
-                  <cd:Float format="ascii">
-                    <cd:Description>Minimum altitude allowed in L1B Geolocation Data</cd:Description>
-                    <cd:Unit>km</cd:Unit>
-                    <cd:NativeType>double</cd:NativeType>
-                  </cd:Float>
-                </cd:Type>
+              <cd:Field name="Geoid_Separation_Check">
+                <cd:NamedType id="Level_1B_Screening_Params_Check"/>
               </cd:Field>
-              <cd:Field name="Altitude_Max">
-                <cd:Type namexml="Altitude_Max">
-                  <cd:Attribute name="unit"/>
-                  <cd:Float format="ascii">
-                    <cd:Description>Maximum altitude allowed in L1B Geolocation Data</cd:Description>
-                    <cd:Unit>km</cd:Unit>
-                    <cd:NativeType>double</cd:NativeType>
-                  </cd:Float>
-                </cd:Type>
+              <cd:Field name="Topocentric_Elevation_Check">
+                <cd:NamedType id="Level_1B_Screening_Params_Check"/>
               </cd:Field>
-              <cd:Field name="Altitude_DEM_Min">
-                <cd:Type namexml="Altitude_DEM_Min">
-                  <cd:Attribute name="unit"/>
-                  <cd:Float format="ascii">
-                    <cd:Description>Minimum DEM altitude allowed in L1B Geolocation Data</cd:Description>
-                    <cd:Unit>km</cd:Unit>
-                    <cd:NativeType>double</cd:NativeType>
-                  </cd:Float>
-                </cd:Type>
+              <cd:Field name="Topocentric_Azimuth_Check">
+                <cd:NamedType id="Level_1B_Screening_Params_Check"/>
               </cd:Field>
-              <cd:Field name="Altitude_DEM_Max">
-                <cd:Type namexml="Altitude_DEM_Max">
-                  <cd:Attribute name="unit"/>
-                  <cd:Float format="ascii">
-                    <cd:Description>Maximum DEM altitude allowed in L1B Geolocation Data</cd:Description>
-                    <cd:Unit>km</cd:Unit>
-                    <cd:NativeType>double</cd:NativeType>
-                  </cd:Float>
-                </cd:Type>
-              </cd:Field>
-              <cd:Field name="Geoid_Separation_Min">
-                <cd:Type namexml="Geoid_Separation_Min">
-                  <cd:Attribute name="unit"/>
-                  <cd:Float format="ascii">
-                    <cd:Description>Minimum geoid separation allowed in L1B Geolocation Data</cd:Description>
-                    <cd:Unit>km</cd:Unit>
-                    <cd:NativeType>double</cd:NativeType>
-                  </cd:Float>
-                </cd:Type>
-              </cd:Field>
-              <cd:Field name="Geoid_Separation_Max">
-                <cd:Type namexml="Geoid_Separation_Max">
-                  <cd:Attribute name="unit"/>
-                  <cd:Float format="ascii">
-                    <cd:Description>Maximum geoid separation allowed in L1B Geolocation Data</cd:Description>
-                    <cd:Unit>km</cd:Unit>
-                    <cd:NativeType>double</cd:NativeType>
-                  </cd:Float>
-                </cd:Type>
-              </cd:Field>
-              <cd:Field name="Topocentric_Elevation_Min">
-                <cd:Type namexml="Topocentric_Elevation_Min">
-                  <cd:Attribute name="unit"/>
-                  <cd:Float format="ascii">
-                    <cd:Description>Minimum topocentric elevation allowed in L1B Geolocation Data</cd:Description>
-                    <cd:Unit>degrees</cd:Unit>
-                    <cd:NativeType>double</cd:NativeType>
-                  </cd:Float>
-                </cd:Type>
-              </cd:Field>
-              <cd:Field name="Topocentric_Elevation_Max">
-                <cd:Type namexml="Topocentric_Elevation_Max">
-                  <cd:Attribute name="unit"/>
-                  <cd:Float format="ascii">
-                    <cd:Description>Maximum topocentric elevation allowed in L1B Geolocation Data</cd:Description>
-                    <cd:Unit>degrees</cd:Unit>
-                    <cd:NativeType>double</cd:NativeType>
-                  </cd:Float>
-                </cd:Type>
-              </cd:Field>
-              <cd:Field name="Topocentric_Azimuth_Min">
-                <cd:Type namexml="Topocentric_Azimuth_Min">
-                  <cd:Attribute name="unit"/>
-                  <cd:Float format="ascii">
-                    <cd:Description>Minimum topocentric azimuth allowed in L1B Geolocation Data</cd:Description>
-                    <cd:Unit>degrees</cd:Unit>
-                    <cd:NativeType>double</cd:NativeType>
-                  </cd:Float>
-                </cd:Type>
-              </cd:Field>
-              <cd:Field name="Topocentric_Azimuth_Max">
-                <cd:Type namexml="Topocentric_Azimuth_Max">
-                  <cd:Attribute name="unit"/>
-                  <cd:Float format="ascii">
-                    <cd:Description>Maximum topocentric azimuth allowed in L1B Geolocation Data</cd:Description>
-                    <cd:Unit>degrees</cd:Unit>
-                    <cd:NativeType>double</cd:NativeType>
-                  </cd:Float>
-                </cd:Type>
-              </cd:Field>
-              <cd:Field name="AOCS_LOS_Velocity_Min">
-                <cd:Type namexml="AOCS_LOS_Velocity_Min">
-                  <cd:Attribute name="unit">
-                    <cd:FixedValue>m/s</cd:FixedValue>
-                  </cd:Attribute>
-                  <cd:Float format="ascii">
-                    <cd:Description>Minimum AOCS LOS Velocity allowed in L1B Geolocation Data</cd:Description>
-                    <cd:Unit>m/s</cd:Unit>
-                    <cd:NativeType>double</cd:NativeType>
-                  </cd:Float>
-                </cd:Type>
-              </cd:Field>
-              <cd:Field name="AOCS_LOS_Velocity_Max">
-                <cd:Type namexml="AOCS_LOS_Velocity_Max">
-                  <cd:Attribute name="unit">
-                    <cd:FixedValue>m/s</cd:FixedValue>
-                  </cd:Attribute>
-                  <cd:Float format="ascii">
-                    <cd:Description>Maximum AOCS LOS Velocity allowed in L1B Geolocation Data</cd:Description>
-                    <cd:Unit>m/s</cd:Unit>
-                    <cd:NativeType>double</cd:NativeType>
-                  </cd:Float>
-                </cd:Type>
+              <cd:Field name="AOCS_LOS_Velocity_Check">
+                <cd:NamedType id="Level_1B_Screening_Params_Check"/>
               </cd:Field>
             </cd:Record>
           </cd:Field>
