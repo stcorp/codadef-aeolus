@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="xml" last-modified="2019-10-31" name="Level_1B_Screening_Params_Check">
   <cd:Field name="Lower_Threshold">
+    <cd:Optional/>
     <cd:Type namexml="Lower_Threshold">
       <cd:Attribute name="unit">
         <cd:Optional/>
@@ -12,6 +13,7 @@
     </cd:Type>
   </cd:Field>
   <cd:Field name="Upper_Threshold">
+    <cd:Optional/>
     <cd:Type namexml="Upper_Threshold">
       <cd:Attribute name="unit">
         <cd:Optional/>
@@ -22,9 +24,40 @@
       </cd:Float>
     </cd:Type>
   </cd:Field>
-
-
+  <cd:Field name="Flag_Measurements_Invalid">
+    <cd:Optional/>
+    <cd:Type namexml="Flag_Measurements_Invalid">
+      <cd:Integer format="ascii">
+        <cd:Description>If set, measurements failing the current check are flagged invalid and not considered as input to the classification algorithm.</cd:Description>
+        <cd:NativeType>uint8</cd:NativeType>
+        <cd:Mapping string="FALSE" value="0"/>
+        <cd:Mapping string="False" value="0"/>
+        <cd:Mapping string="false" value="0"/>
+        <cd:Mapping string="TRUE" value="1"/>
+        <cd:Mapping string="True" value="1"/>
+        <cd:Mapping string="true" value="1"/>
+        <ct:NamedTest id="BooleanXmlTest"/>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Flag_Wind_Invalid">
+    <cd:Optional/>
+    <cd:Type namexml="Flag_Wind_Invalid">
+      <cd:Integer format="ascii">
+        <cd:Description>If set, then the current wind result is flagged invalid in case any of the measurements used in the accumulation that is used to calculate this wind fails the current check.</cd:Description>
+        <cd:NativeType>uint8</cd:NativeType>
+        <cd:Mapping string="FALSE" value="0"/>
+        <cd:Mapping string="False" value="0"/>
+        <cd:Mapping string="false" value="0"/>
+        <cd:Mapping string="TRUE" value="1"/>
+        <cd:Mapping string="True" value="1"/>
+        <cd:Mapping string="true" value="1"/>
+        <ct:NamedTest id="BooleanXmlTest"/>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
   <cd:Field name="Abort_Processing">
+    <cd:Optional/>
     <cd:Type namexml="Abort_Processing">
       <cd:Integer format="ascii">
         <cd:Description>If set, then a measurement failing the current check causes the processor to abort with an error.</cd:Description>
