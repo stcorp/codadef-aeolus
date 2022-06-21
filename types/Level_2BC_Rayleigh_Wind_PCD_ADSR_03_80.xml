@@ -61,13 +61,6 @@
           <cd:NativeType>uint8</cd:NativeType>
         </cd:Integer>
       </cd:Field>
-      <cd:Field name="flags5">
-        <cd:Integer>
-          <cd:Description>Fifth flag describing Mie processing results for the current wind result.</cd:Description>
-          <cd:BitSize>8</cd:BitSize>
-          <cd:NativeType>uint8</cd:NativeType>
-        </cd:Integer>
-      </cd:Field>
       <cd:Field name="input_screening_flags1">
         <cd:Integer>
           <cd:Description>First input screening flag describing in detail which condition caused this current wind result to be invalid</cd:Description>
@@ -99,6 +92,13 @@
       <cd:Field name="input_screening_flags5">
         <cd:Integer>
           <cd:Description>Fifth input screening flag describing in detail which condition caused this current wind result to be invalid</cd:Description>
+          <cd:BitSize>8</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="input_screening_flags6">
+        <cd:Integer>
+          <cd:Description>Sixth input screening flag describing in detail which condition caused this current wind result to be invalid</cd:Description>
           <cd:BitSize>8</cd:BitSize>
           <cd:NativeType>uint8</cd:NativeType>
         </cd:Integer>
