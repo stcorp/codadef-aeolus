@@ -2911,6 +2911,12 @@
         <cd:MatchData path="/{http://www.esa.int/schemas/ae/AUX_PAR_2A}Earth_Explorer_File@schemaversion">03.14</cd:MatchData>
       </cd:DetectionRule>
     </cd:ProductDefinition>
+    <cd:ProductDefinition id="AUX_PAR_2A_03_15" format="xml" version="12">
+      <cd:Description>This definition is based on version 3.15 of IODD AED-SD-DoRIT-L2A-025</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchData path="/{http://www.esa.int/schemas/ae/AUX_PAR_2A}Earth_Explorer_File@schemaversion">03.15</cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
   </cd:ProductType>
   <cd:ProductType name="ALD_U_N_2B">
     <cd:Description>Aeolus Level 2B Product (DBL)</cd:Description>
