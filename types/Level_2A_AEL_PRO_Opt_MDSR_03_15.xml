@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="binary" last-modified="2022-06-21" name="Level_2A_AEL_PRO_Opt_MDSR_03_15">
+  <cd:Field name="starttime">
+    <cd:Time timeformat="binary_envisat_datetime">
+      <cd:Description>Start date and time of the AEL-PRO profile covered by the present DSR. This is the centroid time of the first measurement of the profile.</cd:Description>
+      <ct:NamedTest id="RangeSecond" path="seconds"/>
+      <ct:NamedTest id="RangeMicroSecond" path="microseconds"/>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="measurement_ael_pro_optical_properties">
+    <cd:Array>
+      <cd:Dimension><![CDATA[$num_meas_max_brc]]></cd:Dimension>
+      <cd:Record>
+        <cd:Description>Structure containing AEL-PRO products for the measurements of the BRC in the Mie bins</cd:Description>
+        <cd:Field name="tropopause_altitude">
+          <cd:Float>
+            <cd:Description>Tropopause altitude estimates using the CALIPSO method</cd:Description>
+            <cd:Unit>m</cd:Unit>
+            <cd:BitSize>64</cd:BitSize>
+            <cd:NativeType>double</cd:NativeType>
+            <ct:NamedTest id="FloatIsFinite"/>
+          </cd:Float>
+        </cd:Field>
+        <cd:Field name="retrieved_lidar_calibration_constant">
+          <cd:Float>
+            <cd:Description>Estimated Lidar calibration constant</cd:Description>
+            <cd:Unit>ACCD_counts m^2 sr</cd:Unit>
+            <cd:BitSize>64</cd:BitSize>
+            <cd:NativeType>double</cd:NativeType>
+            <ct:NamedTest id="FloatIsFinite"/>
+          </cd:Float>
+        </cd:Field>
+        <cd:Field name="height_bin_ael_pro_optical_properties">
+          <cd:Array>
+            <cd:Dimension>24</cd:Dimension>
+            <cd:Record>
+              <cd:Description>Structure containing AEL-PRO products for the Mie bins</cd:Description>
+              <cd:Field name="extinction">
+                <cd:Float>
+                  <cd:Description>Particle extinction coefficient of the height bin. Missing value: -1e+06.</cd:Description>
+                  <cd:Unit>10^-6 m^-1</cd:Unit>
+                  <cd:BitSize>64</cd:BitSize>
+                  <cd:NativeType>double</cd:NativeType>
+                  <ct:NamedTest id="FloatIsFinite"/>
+                </cd:Float>
+              </cd:Field>
+              <cd:Field name="lr">
+                <cd:Float>
+                  <cd:Description>Particle lidar ratio. Missing value: -1.</cd:Description>
+                  <cd:Unit>sr</cd:Unit>
+                  <cd:BitSize>64</cd:BitSize>
+                  <cd:NativeType>double</cd:NativeType>
+                  <ct:NamedTest id="FloatIsFinite"/>
+                </cd:Float>
+              </cd:Field>
+              <cd:Field name="particle_effective_area_radius">
+                <cd:Float>
+                  <cd:Description>Particle effective area radius: Missing value: -1</cd:Description>
+                  <cd:Unit>microns</cd:Unit>
+                  <cd:BitSize>64</cd:BitSize>
+                  <cd:NativeType>double</cd:NativeType>
+                  <ct:NamedTest id="FloatIsFinite"/>
+                </cd:Float>
+              </cd:Field>
+              <cd:Field name="classification">
+                <cd:Integer>
+                  <cd:Description>Possible settings:
+1: Water cloud
+2: Ice cloud
+3: Aerosol
+0: Clear sky
+-3: Surface
+-2: Attenuated</cd:Description>
+                  <cd:BitSize>16</cd:BitSize>
+                  <cd:NativeType>int16</cd:NativeType>
+                </cd:Integer>
+              </cd:Field>
+            </cd:Record>
+          </cd:Array>
+        </cd:Field>
+      </cd:Record>
+    </cd:Array>
+  </cd:Field>
+</cd:Record>
