@@ -103,13 +103,6 @@
           <cd:NativeType>uint8</cd:NativeType>
         </cd:Integer>
       </cd:Field>
-      <cd:Field name="input_screening_flags6">
-        <cd:Integer>
-          <cd:Description>Sixth input screening flag describing in detail which condition caused this current wind result to be invalid</cd:Description>
-          <cd:BitSize>8</cd:BitSize>
-          <cd:NativeType>uint8</cd:NativeType>
-        </cd:Integer>
-      </cd:Field>
       <cd:Field name="scattering_ratio">
         <cd:Float>
           <cd:Description>Scattering_Ratio. Note that this value will always be available if valid signals are present, also in case the value used in Mie decontamination for this wind result is forced to 1.</cd:Description>
