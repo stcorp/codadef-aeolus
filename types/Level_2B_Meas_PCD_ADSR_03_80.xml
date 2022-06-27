@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="binary" name="Level_2B_Meas_PCD_ADSR_03_80" last-modified="2022-06-21">
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="binary" name="Level_2B_Meas_PCD_ADSR_03_80" last-modified="2022-06-27">
   <cd:Field name="start_of_obs_datetime">
     <cd:Time timeformat="binary_envisat_datetime">
       <cd:Description>Start date and time of Measurement</cd:Description>
@@ -280,14 +280,14 @@ Bit 8: L1B_Mie_Invalid_Meas_Check failed</cd:Description>
             <cd:Description>Structure describing QC parameters resulting from the Mie Classification algorithm</cd:Description>
             <cd:Field name="l2b_mie_meas_bin_class_flags1">
               <cd:Integer>
-                <cd:Description>First byte of 8 flags describing classification properties for the current Mie measurement rangebin.</cd:Description>
+                <cd:Description>First byte of 8 flags describing classification properties for the current Mie measurement rangebin. Bit 1 (L2B_Mie_Class_Cloud_Above) : a cloud was detected in a range bin higher than the current range bin, Bit 2 (L2B_Mie_Class_Cloud) : this rangebin contains a cloud, Bit 3 (L2B_Mie_Class_Maybe_Cloud) : this rangebin contains possibly a cloud, but the backscatter is close to the threshold, Bit 4 (L2B_Mie_Class_Aerosol) : Mie backscatter is present, but it is not a cloud, Bit 5 (L2B_Mie_Class_Precipitation) : Precipitation is present in this range bin, Bit 6 (L2B_Mie_Class_No_Extinction) : No extinction is known for this range bin, Bit 7 (L2B_Mie_Class_Unknown_Scatterer) : the value encountered in this rangebin for backscatter is unphysical for clouds, Bit 8 (L2B_Mie_Class_Broken_Clouds) : this range bin contains a broken cloud layer (currently only used for Obs range bins)</cd:Description>
                 <cd:BitSize>8</cd:BitSize>
                 <cd:NativeType>uint8</cd:NativeType>
               </cd:Integer>
             </cd:Field>
             <cd:Field name="l2b_mie_meas_bin_class_flags2">
               <cd:Integer>
-                <cd:Description>First byte of 8 flags describing classification properties for the current Mie measurement rangebin.</cd:Description>
+                <cd:Description>Second byte of 8 flags describing classification properties for the current Mie measurement rangebin. Bit 1 (L2B_Mie_Class_Convective_Clouds) : this range bin contains convective clouds, Bit 2 (L2B_Mie_Class_No_Cloud_Detected) : Flag indicating that no cloud or aerosol was detected in this rangebin, Bit 3 (L2B_NWP_Data_Used) : Flag indicating that NWP data was used to determine the clas- sification of this rangebin, Bit 4 : reserved (always set to 0), ..., Bit 8 : reserved (always set to 0)</cd:Description>
                 <cd:BitSize>8</cd:BitSize>
                 <cd:NativeType>uint8</cd:NativeType>
               </cd:Integer>
@@ -357,14 +357,14 @@ Bit 8: L1B_Mie_Invalid_Meas_Check failed</cd:Description>
             <cd:Description>Structure describing QC parameters resulting from the Rayleigh Classification algorithm</cd:Description>
             <cd:Field name="l2b_rayleigh_meas_bin_class_flags1">
               <cd:Integer>
-                <cd:Description>First byte of 8 flags describing classification properties for the current Rayleigh measurement rangebin.</cd:Description>
+                <cd:Description>First byte of 8 flags describing classification properties for the current Rayleigh measurement rangebin. Bit 1 (L2B_Rayl_Class_Cloud_Above) : a cloud was detected in a range bin higher than the current range bin, Bit 2 (L2B_Rayl_Class_Cloud) : this rangebin contains a cloud, Bit 3 (L2B_Rayl_Class_Maybe_Cloud) : this rangebin contains possibly a cloud, but the backscatter is close to the threshold, Bit 4 (L2B_Rayl_Class_Aerosol) : Mie backscatter is present, but it is not a cloud, Bit 5 (L2B_Rayl_Class_Precipitation) : Precipitation is present in this range bin, Bit 6 (L2B_Rayl_Class_No_Extinction) : No extinction is known for this range bin, Bit 7 (L2B_Rayl_Class_Unknown_Scatterer) : the value encountered in this rangebin for backscatter is unphysical for clouds, Bit 8 (L2B_Rayl_Class_Broken_Clouds) : this range bin contains a broken cloud layer (currently only used for Obs range bins)</cd:Description>
                 <cd:BitSize>8</cd:BitSize>
                 <cd:NativeType>uint8</cd:NativeType>
               </cd:Integer>
             </cd:Field>
             <cd:Field name="l2b_rayleigh_meas_bin_class_flags2">
               <cd:Integer>
-                <cd:Description>First byte of 8 flags describing classification properties for the current Rayleigh measurement rangebin.</cd:Description>
+                <cd:Description>Second byte of 8 flags describing classification properties for the current Rayleigh measurement rangebin. Bit 1 (L2B_Rayl_Class_Convective_Clouds) : this range bin contains convective clouds, Bit 2 (L2B_Rayl_Class_No_Cloud_Detected) : Flag indicating that no cloud or aerosol was detected in this rangebin, Bit 3 (L2B_NWP_Data_Used) : Flag indicating that NWP data was used to determine the classification of this rangebin, Bit 4 : reserved (always set to 0), ..., Bit 8 : reserved (always set to 0)</cd:Description>
                 <cd:BitSize>8</cd:BitSize>
                 <cd:NativeType>uint8</cd:NativeType>
               </cd:Integer>
