@@ -2146,6 +2146,12 @@
         <cd:MatchData path="/{http://www.esa.int/schemas/ae/AUX_DCMZ1B}Earth_Explorer_File@schemaversion">04.15</cd:MatchData>
       </cd:DetectionRule>
     </cd:ProductDefinition>
+    <cd:ProductDefinition id="AUX_DCMZ1B_04_18" format="xml" version="6">
+      <cd:Description>This definition is based on version 4/18 of IODD AED-SD-DoRIT-L1B-006</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchData path="/{http://www.esa.int/schemas/ae/AUX_DCMZ1B}Earth_Explorer_File@schemaversion">04.18</cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
   </cd:ProductType>
   <cd:ProductType name="AUX_LBM_1B">
     <cd:Description>Aeolus Level 1B Laser Beam Monitoring (EEF)</cd:Description>
@@ -2549,6 +2555,12 @@
       <cd:Description>This definition is based on version 4/17 of IODD AED-SD-DoRIT-L1B-006</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData path="/{http://www.esa.int/schemas/ae/AUX_PAR_1B}Earth_Explorer_File@schemaversion">04.17</cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+    <cd:ProductDefinition id="AUX_PAR_1B_04_18" format="xml" version="14">
+      <cd:Description>This definition is based on version 4/18 of IODD AED-SD-DoRIT-L1B-006</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchData path="/{http://www.esa.int/schemas/ae/AUX_PAR_1B}Earth_Explorer_File@schemaversion">04.18</cd:MatchData>
       </cd:DetectionRule>
     </cd:ProductDefinition>
   </cd:ProductType>
