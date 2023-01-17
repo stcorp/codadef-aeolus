@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<cd:ProductDefinition xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" id="AUX_NOU_1A_04_14" format="binary" last-modified="2021-01-05">
-  <cd:NamedType id="Level_1A_Product_04_14"/>
+<cd:ProductDefinition xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" id="AUX_NOU_1A_04_14" format="binary" last-modified="2023-01-17">
+  <cd:NamedType id="Level_1A_NOU_Product_04_14"/>
   <cd:ProductVariable name="num_dsd">
     <cd:Init><![CDATA[$num_dsd = int(/mph/num_dsd)]]></cd:Init>
   </cd:ProductVariable>

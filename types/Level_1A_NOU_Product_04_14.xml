@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="binary" name="Level_1A_NOU_Product_04_14" last-modified="2023-01-17">
+  <cd:Description>Level 1A Product</cd:Description>
+  <cd:Field name="mph">
+    <cd:NamedType id="MPH_v3"/>
+  </cd:Field>
+  <cd:Field name="sph">
+    <cd:NamedType id="Level_1A_NOU_SPH_04_04"/>
+  </cd:Field>
+  <cd:Field name="dsd">
+    <cd:Array format="ascii">
+      <cd:Dimension><![CDATA[$num_dsd]]></cd:Dimension>
+      <cd:NamedType id="DSD"/>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="geolocation">
+    <cd:Array>
+      <cd:Description>Geolocation ADS</cd:Description>
+      <cd:Dimension><![CDATA[$num_dsr[0]]]></cd:Dimension>
+      <cd:NamedType id="Level_1A_Geolocation_ADSR_04_13"/>
+    </cd:Array>
+    <cd:Available><![CDATA[$ds_available[0] != 0]]></cd:Available>
+    <cd:BitOffset><![CDATA[$ds_offset[0]]]></cd:BitOffset>
+  </cd:Field>
+  <cd:Field name="data_quality">
+    <cd:Array>
+      <cd:Description>Data Quality ADS</cd:Description>
+      <cd:Dimension><![CDATA[$num_dsr[1]]]></cd:Dimension>
+      <cd:NamedType id="Level_1A_Data_Quality_ADSR_04_14"/>
+    </cd:Array>
+    <cd:Available><![CDATA[$ds_available[1] != 0]]></cd:Available>
+    <cd:BitOffset><![CDATA[$ds_offset[1]]]></cd:BitOffset>
+  </cd:Field>
+  <cd:Field name="reference_pulse">
+    <cd:Array>
+      <cd:Description>Reference Pulse ADSR</cd:Description>
+      <cd:Dimension><![CDATA[$num_dsr[2]]]></cd:Dimension>
+      <cd:NamedType id="Level_1A_Reference_Pulse_ADSR_04_04"/>
+    </cd:Array>
+    <cd:Available><![CDATA[$ds_available[2] != 0]]></cd:Available>
+    <cd:BitOffset><![CDATA[$ds_offset[2]]]></cd:BitOffset>
+  </cd:Field>
+  <cd:Field name="house_keeping">
+    <cd:Array>
+      <cd:Description>House Keeping ADS</cd:Description>
+      <cd:Dimension><![CDATA[$num_dsr[3]]]></cd:Dimension>
+      <cd:NamedType id="Level_1A_Housekeeping_ADSR_04_13"/>
+    </cd:Array>
+    <cd:Available><![CDATA[$ds_available[3] != 0]]></cd:Available>
+    <cd:BitOffset><![CDATA[$ds_offset[3]]]></cd:BitOffset>
+  </cd:Field>
+  <cd:Field name="mie_measurement">
+    <cd:Array>
+      <cd:Description>Mie Measurement MDSR</cd:Description>
+      <cd:Dimension><![CDATA[$num_dsr[4]]]></cd:Dimension>
+      <cd:NamedType id="Level_1A_Mie_Measurement_MDSR_04_04"/>
+    </cd:Array>
+    <cd:Available><![CDATA[$ds_available[4] != 0]]></cd:Available>
+    <cd:BitOffset><![CDATA[$ds_offset[4]]]></cd:BitOffset>
+  </cd:Field>
+  <cd:Field name="rayleigh_measurement">
+    <cd:Array>
+      <cd:Description>Rayleigh Measurement MDS</cd:Description>
+      <cd:Dimension><![CDATA[$num_dsr[5]]]></cd:Dimension>
+      <cd:NamedType id="Level_1A_Rayleigh_Measurement_MDSR_04_04"/>
+    </cd:Array>
+    <cd:Available><![CDATA[$ds_available[5] != 0]]></cd:Available>
+    <cd:BitOffset><![CDATA[$ds_offset[5]]]></cd:BitOffset>
+  </cd:Field>
+  <ct:NamedTest id="NumDataSetsLevel1A" path="mph/num_data_sets"/>
+</cd:Record>
