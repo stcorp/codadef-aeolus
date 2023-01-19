@@ -1,0 +1,2668 @@
+<?xml version="1.0"?>
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" name="Level_2B_Proc_Params_03_90" format="xml" namexml="Level_2B_Proc_Params" last-modified="2023-01-18">
+  <cd:Description>Level 2B Processing Parameters GADS DSR</cd:Description>
+  <cd:Field name="FH_Default_Fields">
+    <cd:Record namexml="FH_Default_Fields">
+      <cd:Description>Fields responsible for populating the Fixed Header</cd:Description>
+      <cd:Field name="File_Description">
+        <cd:Text namexml="File_Description">
+          <cd:Description>1-line description of the file</cd:Description>
+        </cd:Text>
+      </cd:Field>
+      <cd:Field name="Mission">
+        <cd:Text namexml="Mission">
+          <cd:Description>Aeolus</cd:Description>
+        </cd:Text>
+      </cd:Field>
+      <cd:Field name="File_Version">
+        <cd:Type namexml="File_Version">
+          <cd:Integer format="ascii">
+            <cd:Description>4 digits used to distinguish between versions of a file having the same validity period</cd:Description>
+            <cd:NativeType>int16</cd:NativeType>
+          </cd:Integer>
+        </cd:Type>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="WVM_Params">
+    <cd:Record namexml="WVM_Params">
+      <cd:Description>Processing parameters for Wind Velocity Measurement</cd:Description>
+      <cd:Field name="File_Type">
+        <cd:Text namexml="File_Type">
+          <cd:Description>File type string</cd:Description>
+        </cd:Text>
+      </cd:Field>
+      <cd:Field name="Sph_Descriptor">
+        <cd:Text namexml="Sph_Descriptor">
+          <cd:Description>ASCII string describing the product</cd:Description>
+        </cd:Text>
+      </cd:Field>
+      <cd:Field name="Rangebin_Mismatch_Tolerance">
+        <cd:Type namexml="Rangebin_Mismatch_Tolerance">
+          <cd:Attribute name="unit">
+            <cd:FixedValue>m</cd:FixedValue>
+          </cd:Attribute>
+          <cd:Float format="ascii">
+            <cd:Description>Tolerance above which Mie and Rayleigh rangebins are considered mismatched</cd:Description>
+            <cd:Unit>m</cd:Unit>
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="Line_of_Sight_Wind_Flag">
+        <cd:Type namexml="Line_of_Sight_Wind_Flag">
+          <cd:Integer format="ascii">
+            <cd:Description>Flag indicating whether the horizontal or line-of-sight wind component should be reported</cd:Description>
+            <cd:NativeType>uint8</cd:NativeType>
+            <cd:Mapping string="FALSE" value="0"/>
+            <cd:Mapping string="False" value="0"/>
+            <cd:Mapping string="false" value="0"/>
+            <cd:Mapping string="TRUE" value="1"/>
+            <cd:Mapping string="True" value="1"/>
+            <cd:Mapping string="true" value="1"/>
+          </cd:Integer>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="Report_Measurement_Center_DateTime">
+        <cd:Type namexml="Report_Measurement_Center_DateTime">
+          <cd:Integer format="ascii">
+            <cd:Description>If set to True the edge values reported for a wind result will be taken from the center datetime value of the first and last included measurement as reported in the L1B product. If set to False the first measurement will be shifted backward and the last measurement will be shifted forward by half the measurement time to ensure the reported timespan matches with the actual measurement time. This prevents reporting identical start and stop datetime values in case a wind is based on a single measurement.</cd:Description>
+            <cd:NativeType>uint8</cd:NativeType>
+            <cd:Mapping string="FALSE" value="0"/>
+            <cd:Mapping string="False" value="0"/>
+            <cd:Mapping string="false" value="0"/>
+            <cd:Mapping string="TRUE" value="1"/>
+            <cd:Mapping string="True" value="1"/>
+            <cd:Mapping string="true" value="1"/>
+          </cd:Integer>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="Report_Measurement_Center_LatLon">
+        <cd:Type namexml="Report_Measurement_Center_LatLon">
+          <cd:Integer format="ascii">
+            <cd:Description>If set to True the edge values reported for a wind result will be taken from the center location value of the first and last included measurement as reported in the L1B product. If set to False the first measurement will be shifted backward and the last measurement will be shifted forward by half the measurement length to ensure the reported integration length matches with the actual measurement integration length. This prevents reporting identical start and stop values in case a wind is based on a single measurement.</cd:Description>
+            <cd:NativeType>uint8</cd:NativeType>
+            <cd:Mapping string="FALSE" value="0"/>
+            <cd:Mapping string="False" value="0"/>
+            <cd:Mapping string="false" value="0"/>
+            <cd:Mapping string="TRUE" value="1"/>
+            <cd:Mapping string="True" value="1"/>
+            <cd:Mapping string="true" value="1"/>
+          </cd:Integer>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="Grouping_Params_Mie">
+        <cd:Record namexml="Grouping_Params_Mie">
+          <cd:Description>Parameters controlling the Mie grouping scheme applied by the L2B processing.</cd:Description>
+          <cd:Field name="Grouping_Method">
+            <cd:Text namexml="Grouping_Method">
+              <cd:Description>Method to be used for composing groups of measurements, determining the maximum possible observation size after classification and accumulation.</cd:Description>
+            </cd:Text>
+          </cd:Field>
+          <cd:Field name="Max_Vertical_Rangebin_Misalignment">
+            <cd:Type namexml="Max_Vertical_Rangebin_Misalignment">
+              <cd:Attribute name="unit"/>
+              <cd:Float format="ascii">
+                <cd:Description>maximum allowed vertical difference between 2 rangebins with the same index. If a rangebin is found that has a larger difference a new group will be started</cd:Description>
+                <cd:Unit>m</cd:Unit>
+                <cd:NativeType>double</cd:NativeType>
+              </cd:Float>
+            </cd:Type>
+          </cd:Field>
+          <cd:Field name="Max_Horizontal_Accumulation_Length">
+            <cd:Type namexml="Max_Horizontal_Accumulation_Length">
+              <cd:Attribute name="unit"/>
+              <cd:Float format="ascii">
+                <cd:Description>maximum horizontal difference between first and last measurement in a group. If a measurement at larger distance is found a new group will be started</cd:Description>
+                <cd:Unit>km</cd:Unit>
+                <cd:NativeType>double</cd:NativeType>
+              </cd:Float>
+            </cd:Type>
+          </cd:Field>
+          <cd:Field name="Max_Allowed_Gap_Between_Measurements">
+            <cd:Type namexml="Max_Allowed_Gap_Between_Measurements">
+              <cd:Attribute name="unit"/>
+              <cd:Float format="ascii">
+                <cd:Description>maximum length of missing measurements before a group definition is closed and a new group is started</cd:Description>
+                <cd:Unit>km</cd:Unit>
+                <cd:NativeType>double</cd:NativeType>
+              </cd:Float>
+            </cd:Type>
+          </cd:Field>
+          <cd:Field name="Num_BRCs_to_Merge">
+            <cd:Type namexml="Num_BRCs_to_Merge">
+              <cd:Integer format="ascii">
+                <cd:Description>define how many BRCs will be combined together is a group, in case the grouping method is set to combine BRCs</cd:Description>
+                <cd:NativeType>uint32</cd:NativeType>
+              </cd:Integer>
+            </cd:Type>
+          </cd:Field>
+        </cd:Record>
+      </cd:Field>
+      <cd:Field name="Grouping_Params_Rayleigh">
+        <cd:Record namexml="Grouping_Params_Rayleigh">
+          <cd:Description>Parameters controlling the Rayleigh grouping scheme applied by the L2B processing.</cd:Description>
+          <cd:Field name="Grouping_Method">
+            <cd:Text namexml="Grouping_Method">
+              <cd:Description>Method to be used for composing groups of measurements, determining the maximum possible observation size after classification and accumulation.</cd:Description>
+            </cd:Text>
+          </cd:Field>
+          <cd:Field name="Max_Vertical_Rangebin_Misalignment">
+            <cd:Type namexml="Max_Vertical_Rangebin_Misalignment">
+              <cd:Attribute name="unit"/>
+              <cd:Float format="ascii">
+                <cd:Description>maximum allowed vertical difference between 2 rangebins with the same index. If a rangebin is found that has a larger difference a new group will be started</cd:Description>
+                <cd:Unit>m</cd:Unit>
+                <cd:NativeType>double</cd:NativeType>
+              </cd:Float>
+            </cd:Type>
+          </cd:Field>
+          <cd:Field name="Max_Horizontal_Accumulation_Length">
+            <cd:Type namexml="Max_Horizontal_Accumulation_Length">
+              <cd:Attribute name="unit"/>
+              <cd:Float format="ascii">
+                <cd:Description>maximum horizontal difference between first and last measurement in a group. If a measurement at larger distance is found a new group will be started</cd:Description>
+                <cd:Unit>km</cd:Unit>
+                <cd:NativeType>double</cd:NativeType>
+              </cd:Float>
+            </cd:Type>
+          </cd:Field>
+          <cd:Field name="Max_Allowed_Gap_Between_Measurements">
+            <cd:Type namexml="Max_Allowed_Gap_Between_Measurements">
+              <cd:Attribute name="unit"/>
+              <cd:Float format="ascii">
+                <cd:Description>maximum length of missing measurements before a group definition is closed and a new group is started</cd:Description>
+                <cd:Unit>km</cd:Unit>
+                <cd:NativeType>double</cd:NativeType>
+              </cd:Float>
+            </cd:Type>
+          </cd:Field>
+          <cd:Field name="Num_BRCs_to_Merge">
+            <cd:Type namexml="Num_BRCs_to_Merge">
+              <cd:Integer format="ascii">
+                <cd:Description>define how many BRCs will be combined together is a group, in case the grouping method is set to combine BRCs</cd:Description>
+                <cd:NativeType>uint32</cd:NativeType>
+              </cd:Integer>
+            </cd:Type>
+          </cd:Field>
+        </cd:Record>
+      </cd:Field>
+      <cd:Field name="Subgrouping_Params">
+        <cd:Record namexml="Subgrouping_Params">
+          <cd:Description>Parameters controlling the subgrouping scheme applied by the L2B processing.</cd:Description>
+          <cd:Field name="Subgroup_Method">
+            <cd:Text>
+              <cd:Description>Method to be used for composing subgroups of measurements, intended to increase the SNR of the signal before entering the optical properties and classification algorithm.</cd:Description>
+            </cd:Text>
+          </cd:Field>
+          <cd:Field name="Num_Meas_to_Combine">
+            <cd:Integer format="ascii">
+              <cd:Description>Defines how many measurements will be combined together as a subgroup, in case the subgroup method is set to “n_meas”.</cd:Description>
+            </cd:Integer>
+          </cd:Field>
+        </cd:Record>
+      </cd:Field>
+      <cd:Field name="Classification_Params">
+        <cd:Record namexml="Classification_Params">
+          <cd:Description>Parameters for the Classification algorithm</cd:Description>
+          <cd:Field name="Classification_Type_Mie">
+            <cd:Text namexml="Classification_Type_Mie">
+              <cd:Description>The classification type for the Mie channel</cd:Description>
+            </cd:Text>
+          </cd:Field>
+          <cd:Field name="Classification_Type_Rayleigh">
+            <cd:Text namexml="Classification_Type_Rayleigh">
+              <cd:Description>The classification type for the Rayleigh channel</cd:Description>
+            </cd:Text>
+          </cd:Field>
+          <cd:Field name="Classification_Type_Rayleigh2">
+            <cd:Text namexml="Classification_Type_Rayleigh2">
+              <cd:Description>A fallback option for the classification type for the Rayleigh channel, to be used in case the primary method yields no result.</cd:Description>
+            </cd:Text>
+          </cd:Field>
+          <cd:Field name="List_of_Mie_BackscatterRatio_Thresholds">
+            <cd:Record namexml="List_of_Mie_BackscatterRatio_Thresholds">
+              <cd:Description>List of BackscatterRatio_threshold structures</cd:Description>
+              <cd:Attribute name="count">
+              </cd:Attribute>
+              <cd:Field name="Mie_BackscatterRatio_Threshold">
+                <cd:Array>
+                  <cd:Dimension/>
+                  <cd:Record namexml="Mie_BackscatterRatio_Threshold">
+                    <cd:Description>used for classification of a rangebin using a threshold on the backscatter ratio</cd:Description>
+                    <cd:Field name="Threshold_Value">
+                      <cd:Type namexml="Threshold_Value">
+                        <cd:Float format="ascii">
+                          <cd:Description>Thresholds to be used for classification of a rangebin</cd:Description>
+                          <cd:NativeType>double</cd:NativeType>
+                        </cd:Float>
+                      </cd:Type>
+                    </cd:Field>
+                    <cd:Field name="Altitude">
+                      <cd:Type namexml="Altitude">
+                        <cd:Attribute name="unit">
+                          <cd:FixedValue>km</cd:FixedValue>
+                        </cd:Attribute>
+                        <cd:Float format="ascii">
+                          <cd:Description>Altitude at which Threshold_Value is valid</cd:Description>
+                          <cd:Unit>km</cd:Unit>
+                          <cd:NativeType>double</cd:NativeType>
+                        </cd:Float>
+                      </cd:Type>
+                    </cd:Field>
+                  </cd:Record>
+                  <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                </cd:Array>
+              </cd:Field>
+            </cd:Record>
+          </cd:Field>
+          <cd:Field name="List_of_Rayleigh_BackscatterRatio_Thresholds">
+            <cd:Record namexml="List_of_Rayleigh_BackscatterRatio_Thresholds">
+              <cd:Description>List of BackscatterRatio_threshold structures</cd:Description>
+              <cd:Attribute name="count">
+              </cd:Attribute>
+              <cd:Field name="Rayleigh_BackscatterRatio_Threshold">
+                <cd:Array>
+                  <cd:Dimension/>
+                  <cd:Record namexml="Rayleigh_BackscatterRatio_Threshold">
+                    <cd:Description>used for classification of a rangebin using a threshold on the backscatter ratio</cd:Description>
+                    <cd:Field name="Threshold_Value">
+                      <cd:Type namexml="Threshold_Value">
+                        <cd:Float format="ascii">
+                          <cd:Description>Thresholds to be used for classification of a rangebin</cd:Description>
+                          <cd:NativeType>double</cd:NativeType>
+                        </cd:Float>
+                      </cd:Type>
+                    </cd:Field>
+                    <cd:Field name="Altitude">
+                      <cd:Type namexml="Altitude">
+                        <cd:Attribute name="unit">
+                          <cd:FixedValue>km</cd:FixedValue>
+                        </cd:Attribute>
+                        <cd:Float format="ascii">
+                          <cd:Description>Altitude at which Threshold_Value is valid</cd:Description>
+                          <cd:Unit>km</cd:Unit>
+                          <cd:NativeType>double</cd:NativeType>
+                        </cd:Float>
+                      </cd:Type>
+                    </cd:Field>
+                  </cd:Record>
+                  <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                </cd:Array>
+              </cd:Field>
+            </cd:Record>
+          </cd:Field>
+          <cd:Field name="List_of_Mie_Extinction_Thresholds">
+            <cd:Record namexml="List_of_Mie_Extinction_Thresholds">
+              <cd:Description>List of Extinction_threshold structures</cd:Description>
+              <cd:Attribute name="count">
+              </cd:Attribute>
+              <cd:Field name="Mie_Extinction_Threshold">
+                <cd:Array>
+                  <cd:Dimension/>
+                  <cd:Record namexml="Mie_Extinction_Threshold">
+                    <cd:Description>used for classification of a rangebin using a threshold on the extinction value</cd:Description>
+                    <cd:Field name="Threshold_Value">
+                      <cd:Type namexml="Threshold_Value">
+                        <cd:Attribute name="unit">
+                          <cd:FixedValue>m-1</cd:FixedValue>
+                        </cd:Attribute>
+                        <cd:Float format="ascii">
+                          <cd:Description>Thresholds to be used for classification of a rangebin</cd:Description>
+                          <cd:Unit>1/m</cd:Unit>
+                          <cd:NativeType>double</cd:NativeType>
+                        </cd:Float>
+                      </cd:Type>
+                    </cd:Field>
+                    <cd:Field name="Altitude">
+                      <cd:Type namexml="Altitude">
+                        <cd:Attribute name="unit">
+                          <cd:FixedValue>km</cd:FixedValue>
+                        </cd:Attribute>
+                        <cd:Float format="ascii">
+                          <cd:Description>Altitude at which Threshold_Value is valid</cd:Description>
+                          <cd:Unit>km</cd:Unit>
+                          <cd:NativeType>double</cd:NativeType>
+                        </cd:Float>
+                      </cd:Type>
+                    </cd:Field>
+                  </cd:Record>
+                  <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                </cd:Array>
+              </cd:Field>
+            </cd:Record>
+          </cd:Field>
+          <cd:Field name="List_of_Rayleigh_Extinction_Thresholds">
+            <cd:Record namexml="List_of_Rayleigh_Extinction_Thresholds">
+              <cd:Description>List of Extinction_threshold structures</cd:Description>
+              <cd:Attribute name="count">
+              </cd:Attribute>
+              <cd:Field name="Rayleigh_Extinction_Threshold">
+                <cd:Array>
+                  <cd:Dimension/>
+                  <cd:Record namexml="Rayleigh_Extinction_Threshold">
+                    <cd:Description>used for classification of a rangebin using a threshold on the extinction value</cd:Description>
+                    <cd:Field name="Threshold_Value">
+                      <cd:Type namexml="Threshold_Value">
+                        <cd:Attribute name="unit">
+                          <cd:FixedValue>m-1</cd:FixedValue>
+                        </cd:Attribute>
+                        <cd:Float format="ascii">
+                          <cd:Description>Thresholds to be used for classification of a rangebin</cd:Description>
+                          <cd:Unit>1/m</cd:Unit>
+                          <cd:NativeType>double</cd:NativeType>
+                        </cd:Float>
+                      </cd:Type>
+                    </cd:Field>
+                    <cd:Field name="Altitude">
+                      <cd:Type namexml="Altitude">
+                        <cd:Attribute name="unit">
+                          <cd:FixedValue>km</cd:FixedValue>
+                        </cd:Attribute>
+                        <cd:Float format="ascii">
+                          <cd:Description>Altitude at which Threshold_Value is valid</cd:Description>
+                          <cd:Unit>km</cd:Unit>
+                          <cd:NativeType>double</cd:NativeType>
+                        </cd:Float>
+                      </cd:Type>
+                    </cd:Field>
+                  </cd:Record>
+                  <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                </cd:Array>
+              </cd:Field>
+            </cd:Record>
+          </cd:Field>
+          <cd:Field name="List_of_Mie_SNR_Thresholds">
+            <cd:Record namexml="List_of_Mie_SNR_Thresholds">
+              <cd:Description>List of SNR_threshold structures to be used for classification of a Mie rangebin using a threshold on the SNR value.</cd:Description>
+              <cd:Attribute name="count">
+              </cd:Attribute>
+              <cd:Field name="Mie_SNR_Threshold">
+                <cd:Array>
+                  <cd:Dimension/>
+                  <cd:Record namexml="Mie_SNR_Threshold">
+                    <cd:Description>used for classification of a rangebin using a threshold on the extinction value</cd:Description>
+                    <cd:Field name="Threshold_Value">
+                      <cd:Type namexml="Threshold_Value">
+                        <cd:Float format="ascii">
+                          <cd:Description>Thresholds to be used for classification of a rangebin</cd:Description>
+                          <cd:NativeType>double</cd:NativeType>
+                        </cd:Float>
+                      </cd:Type>
+                    </cd:Field>
+                    <cd:Field name="Altitude">
+                      <cd:Type namexml="Altitude">
+                        <cd:Attribute name="unit">
+                          <cd:FixedValue>km</cd:FixedValue>
+                        </cd:Attribute>
+                        <cd:Float format="ascii">
+                          <cd:Description>Altitude at which Threshold_Value is valid</cd:Description>
+                          <cd:Unit>km</cd:Unit>
+                          <cd:NativeType>double</cd:NativeType>
+                        </cd:Float>
+                      </cd:Type>
+                    </cd:Field>
+                  </cd:Record>
+                  <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                </cd:Array>
+              </cd:Field>
+            </cd:Record>
+          </cd:Field>
+          <cd:Field name="List_of_Rayleigh_Channel_Mie_SNR_Thresholds">
+            <cd:Record namexml="List_of_Rayleigh_Channel_Mie_SNR_Thresholds">
+              <cd:Description>List of SNR_threshold structures to be used for classification of a Rayleigh rangebin using a threshold on the corresponding Mie SNR value.</cd:Description>
+              <cd:Attribute name="count">
+              </cd:Attribute>
+              <cd:Field name="Rayleigh_Channel_Mie_SNR_Threshold">
+                <cd:Array>
+                  <cd:Dimension/>
+                  <cd:Record namexml="Rayleigh_Channel_Mie_SNR_Threshold">
+                    <cd:Description>used for classification of a rangebin using a threshold on the extinction value</cd:Description>
+                    <cd:Field name="Threshold_Value">
+                      <cd:Type namexml="Threshold_Value">
+                        <cd:Float format="ascii">
+                          <cd:Description>Thresholds to be used for classification of a rangebin</cd:Description>
+                          <cd:NativeType>double</cd:NativeType>
+                        </cd:Float>
+                      </cd:Type>
+                    </cd:Field>
+                    <cd:Field name="Altitude">
+                      <cd:Type namexml="Altitude">
+                        <cd:Attribute name="unit">
+                          <cd:FixedValue>km</cd:FixedValue>
+                        </cd:Attribute>
+                        <cd:Float format="ascii">
+                          <cd:Description>Altitude at which Threshold_Value is valid</cd:Description>
+                          <cd:Unit>km</cd:Unit>
+                          <cd:NativeType>double</cd:NativeType>
+                        </cd:Float>
+                      </cd:Type>
+                    </cd:Field>
+                  </cd:Record>
+                  <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                </cd:Array>
+              </cd:Field>
+            </cd:Record>
+          </cd:Field>
+        </cd:Record>
+      </cd:Field>
+      <cd:Field name="Optical_Properties_Params">
+        <cd:Record namexml="Optical_Properties_Params">
+          <cd:Description>Parameters for the algorithms determining the optical properties of the atmosphere</cd:Description>
+          <cd:Field name="ScatRatio_Method">
+            <cd:Text namexml="ScatRatio_Method">
+              <cd:Description>The method to be used to get the scattering ratio</cd:Description>
+            </cd:Text>
+          </cd:Field>
+          <cd:Field name="ScatRatio_Method2">
+            <cd:Text namexml="ScatRatio_Method2">
+              <cd:Description>A backup method to get the scattering ratio, to be used when ScatRatio_Method gives no result, i.e. returns a missing_data indicator</cd:Description>
+            </cd:Text>
+          </cd:Field>
+          <cd:Field name="SNR_Method">
+            <cd:Text namexml="SNR_Method">
+              <cd:Description>The method to be used to get the signal to noise ratio.</cd:Description>
+            </cd:Text>
+          </cd:Field>
+          <cd:Field name="SNR_Method2">
+            <cd:Text namexml="SNR_Method2">
+              <cd:Description>A backup method to get the signal to noise ratio, to be used when SNR_Method gives no result, i.e. returns a missing_data indicator.</cd:Description>
+            </cd:Text>
+          </cd:Field>
+          <cd:Field name="PartExt_Method">
+            <cd:Text namexml="PartExt_Method">
+              <cd:Description>the method to be used to get the particle extinction.</cd:Description>
+            </cd:Text>
+          </cd:Field>
+          <cd:Field name="MolExt_Method">
+            <cd:Text namexml="MolExt_Method">
+              <cd:Description>the method to be used to get the molecular extinction.</cd:Description>
+            </cd:Text>
+          </cd:Field>
+          <cd:Field name="Minimum_Altitude_for_Assuming_Rho_1">
+            <cd:Type namexml="Minimum_Altitude_for_Assuming_Rho_1">
+              <cd:Attribute name="unit"/>
+              <cd:Float format="ascii">
+                <cd:Description>Minimum Altitude at which scattering ratio (Rho) may be set to 1</cd:Description>
+                <cd:Unit>km</cd:Unit>
+                <cd:NativeType>double</cd:NativeType>
+              </cd:Float>
+            </cd:Type>
+          </cd:Field>
+          <cd:Field name="Minimum_Altitude_for_Assuming_SNR_0">
+            <cd:Type namexml="Minimum_Altitude_for_Assuming_SNR_0">
+              <cd:Attribute name="unit"/>
+              <cd:Float format="ascii">
+                <cd:Description>Minimum Altitude at which signal to noise ratio (SNR) may be set to 0</cd:Description>
+                <cd:Unit>km</cd:Unit>
+                <cd:NativeType>double</cd:NativeType>
+              </cd:Float>
+            </cd:Type>
+          </cd:Field>
+          <cd:Field name="k_power">
+            <cd:Type namexml="k_power">
+              <cd:Float format="ascii">
+                <cd:Description>Filter exponent used to damp oscillatory behaviour when retrieving bin extinction</cd:Description>
+                <cd:NativeType>double</cd:NativeType>
+              </cd:Float>
+            </cd:Type>
+          </cd:Field>
+          <cd:Field name="FP_Xtalk_factor">
+            <cd:Type namexml="FP_Xtalk_factor">
+              <cd:Float format="ascii">
+                <cd:Description>Optional predefined cross-talk factor (not used when set to -1.0)</cd:Description>
+                <cd:NativeType>double</cd:NativeType>
+              </cd:Float>
+            </cd:Type>
+          </cd:Field>
+          <cd:Field name="Median_Filter_Window_Width_x">
+            <cd:Type namexml="Median_Filter_Window_Width_x">
+              <cd:Attribute name="unit">
+                <cd:Optional/>
+              </cd:Attribute>
+              <cd:Integer format="ascii">
+                <cd:Description>Window width in horizontal (x) direction used by median filter</cd:Description>
+                <cd:Unit>meas. index</cd:Unit>
+                <cd:NativeType>uint8</cd:NativeType>
+              </cd:Integer>
+            </cd:Type>
+          </cd:Field>
+          <cd:Field name="Median_Filter_Window_Width_y">
+            <cd:Type namexml="Median_Filter_Window_Width_y">
+              <cd:Attribute name="unit">
+                <cd:Optional/>
+              </cd:Attribute>
+              <cd:Integer format="ascii">
+                <cd:Description>Window width in vertical (y) direction used by median filter</cd:Description>
+                <cd:Unit>range bin index</cd:Unit>
+                <cd:NativeType>uint8</cd:NativeType>
+              </cd:Integer>
+            </cd:Type>
+          </cd:Field>
+          <cd:Field name="Calibration_from_AuxCal">
+            <cd:Type namexml="Calibration_from_AuxCal">
+              <cd:Integer format="ascii">
+                <cd:Description>If True: take Rayleigh Channel calibration values from the Aux. Cal. input file; if False: derive these values from the upper range bin</cd:Description>
+                <cd:NativeType>uint8</cd:NativeType>
+                <cd:Mapping string="FALSE" value="0"/>
+                <cd:Mapping string="False" value="0"/>
+                <cd:Mapping string="false" value="0"/>
+                <cd:Mapping string="TRUE" value="1"/>
+                <cd:Mapping string="True" value="1"/>
+                <cd:Mapping string="true" value="1"/>
+              </cd:Integer>
+            </cd:Type>
+          </cd:Field>
+          <cd:Field name="Cross_Talk_from_AuxCal">
+            <cd:Type namexml="Cross_Talk_from_AuxCal">
+              <cd:Integer format="ascii">
+                <cd:Description>If True: derive cross-talk factor from the Aux.Cal input file; if False: t.b.d.</cd:Description>
+                <cd:NativeType>uint8</cd:NativeType>
+                <cd:Mapping string="FALSE" value="0"/>
+                <cd:Mapping string="False" value="0"/>
+                <cd:Mapping string="false" value="0"/>
+                <cd:Mapping string="TRUE" value="1"/>
+                <cd:Mapping string="True" value="1"/>
+                <cd:Mapping string="true" value="1"/>
+              </cd:Integer>
+            </cd:Type>
+          </cd:Field>
+          <cd:Field name="Apply_Median_Filter">
+            <cd:Type namexml="Apply_Median_Filter">
+              <cd:Integer format="ascii">
+                <cd:Description>Apply the median filter to smooth out noise after applying the 2D feature finder</cd:Description>
+                <cd:NativeType>uint8</cd:NativeType>
+                <cd:Mapping string="FALSE" value="0"/>
+                <cd:Mapping string="False" value="0"/>
+                <cd:Mapping string="false" value="0"/>
+                <cd:Mapping string="TRUE" value="1"/>
+                <cd:Mapping string="True" value="1"/>
+                <cd:Mapping string="true" value="1"/>
+              </cd:Integer>
+            </cd:Type>
+          </cd:Field>
+          <cd:Field name="Apply_2D_Feature_Finder">
+            <cd:Type namexml="Apply_2D_Feature_Finder">
+              <cd:Integer format="ascii">
+                <cd:Description>apply the 2D feature finder algorithm to find cloud and/or aerosol layers in each group of measurements</cd:Description>
+                <cd:NativeType>uint8</cd:NativeType>
+                <cd:Mapping string="FALSE" value="0"/>
+                <cd:Mapping string="False" value="0"/>
+                <cd:Mapping string="false" value="0"/>
+                <cd:Mapping string="TRUE" value="1"/>
+                <cd:Mapping string="True" value="1"/>
+                <cd:Mapping string="true" value="1"/>
+              </cd:Integer>
+            </cd:Type>
+          </cd:Field>
+          <cd:Field name="FP_On_Upper_Bin_Std_Threshold">
+            <cd:Type namexml="FP_On_Upper_Bin_Std_Threshold">
+              <cd:Float format="ascii">
+                <cd:Description>Threshold used to decide of the Rayleigh channel calibration factor as derived from the upper range bin is to be trusted or not</cd:Description>
+                <cd:NativeType>double</cd:NativeType>
+              </cd:Float>
+            </cd:Type>
+          </cd:Field>
+          <cd:Field name="ScatRatio_round_to_1_below">
+            <cd:Type namexml="ScatRatio_round_to_1_below">
+              <cd:Float format="ascii">
+                <cd:Description>L1B Scattering ratio values below this value are rounded down to 1. This is useful to suppress the unevitable noise</cd:Description>
+                <cd:NativeType>double</cd:NativeType>
+              </cd:Float>
+            </cd:Type>
+          </cd:Field>
+          <cd:Field name="ScatRatio_do_BiasCorrection">
+            <cd:Type namexml="ScatRatio_do_BiasCorrection">
+              <cd:Integer format="ascii">
+                <cd:Description>if True: use the SR bias correction to correct the SR values produced by the L1B algorithm</cd:Description>
+                <cd:NativeType>uint8</cd:NativeType>
+                <cd:Mapping string="FALSE" value="0"/>
+                <cd:Mapping string="False" value="0"/>
+                <cd:Mapping string="false" value="0"/>
+                <cd:Mapping string="TRUE" value="1"/>
+                <cd:Mapping string="True" value="1"/>
+                <cd:Mapping string="true" value="1"/>
+              </cd:Integer>
+            </cd:Type>
+          </cd:Field>
+          <cd:Field name="List_of_ScatRatio_BiasCorrections">
+            <cd:Record namexml="List_of_ScatRatio_BiasCorrections">
+              <cd:Description>List of BiasCorrection structures to be used for correcting the scattering ratio values</cd:Description>
+              <cd:Attribute name="count">
+              </cd:Attribute>
+              <cd:Field name="ScatRatio_BiasCorrection">
+                <cd:Array>
+                  <cd:Dimension/>
+                  <cd:Record namexml="ScatRatio_BiasCorrection">
+                    <cd:Description>used for classification of a rangebin using a threshold on the extinction value</cd:Description>
+                    <cd:Field name="Value">
+                      <cd:Type namexml="Value">
+                        <cd:Float format="ascii">
+                          <cd:Description>value defining one of the x values for the curve defining the bias correction</cd:Description>
+                          <cd:NativeType>double</cd:NativeType>
+                        </cd:Float>
+                      </cd:Type>
+                    </cd:Field>
+                    <cd:Field name="BiasCorr">
+                      <cd:Type namexml="BiasCorr">
+                        <cd:Float format="ascii">
+                          <cd:Description>Bias correction value (y value) associated to the above point (x value)</cd:Description>
+                          <cd:NativeType>double</cd:NativeType>
+                        </cd:Float>
+                      </cd:Type>
+                    </cd:Field>
+                  </cd:Record>
+                  <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                </cd:Array>
+              </cd:Field>
+            </cd:Record>
+          </cd:Field>
+        </cd:Record>
+      </cd:Field>
+      <cd:Field name="Error_Quantifier_Params">
+        <cd:Record namexml="Error_Quantifier_Params">
+          <cd:Description>Parameters for the algorithms determining the Error properties of the reported wind results</cd:Description>
+          <cd:Field name="ErrorQuantMethod_Mie">
+            <cd:Text namexml="ErrorQuantMethod_Mie">
+              <cd:Description>The method to be used to calculate the Error quantifier for the Mie channel</cd:Description>
+            </cd:Text>
+          </cd:Field>
+          <cd:Field name="ErrorQuantMethod_Rayleigh">
+            <cd:Text namexml="ErrorQuantMethod_Rayleigh">
+              <cd:Description>The method to be used to calculate the Error quantifier for the Rayleigh channel</cd:Description>
+            </cd:Text>
+          </cd:Field>
+        </cd:Record>
+      </cd:Field>
+      <cd:Field name="Common_Processing_Params">
+        <cd:Record namexml="Common_Processing_Params">
+          <cd:Description>Common Processing Parameters</cd:Description>
+          <cd:Field name="Mie_Scattering_Ratio_Params">
+            <cd:Record namexml="Mie_Scattering_Ratio_Params">
+              <cd:Description>Processing parameters for Mie product confidence params SNR and backscatter-ratio</cd:Description>
+              <cd:Field name="Alpha_Correction">
+                <cd:Type namexml="Alpha_Correction">
+                  <cd:Float format="ascii">
+                    <cd:Description>Correction factor for the calculation of the Mie SNR</cd:Description>
+                    <cd:NativeType>double</cd:NativeType>
+                  </cd:Float>
+                </cd:Type>
+              </cd:Field>
+              <cd:Field name="Summation_Index">
+                <cd:Type namexml="Summation_Index">
+                  <cd:Integer format="ascii">
+                    <cd:Description>Summation index for calculation of SNR and backscatter ratio</cd:Description>
+                    <cd:NativeType>uint32</cd:NativeType>
+                  </cd:Integer>
+                </cd:Type>
+              </cd:Field>
+              <cd:Field name="SR_Cubic_A_x3">
+                <cd:Type namexml="SR_Cubic_A_x3">
+                  <cd:Float format="ascii">
+                    <cd:Description>Cubic correction factor for the calculation of the Mie Scattering Ratio</cd:Description>
+                    <cd:NativeType>double</cd:NativeType>
+                  </cd:Float>
+                </cd:Type>
+              </cd:Field>
+              <cd:Field name="SR_Cubic_B_x2">
+                <cd:Type namexml="SR_Cubic_B_x2">
+                  <cd:Float format="ascii">
+                    <cd:Description>Cubic correction factor for the calculation of the Mie Scattering Ratio</cd:Description>
+                    <cd:NativeType>double</cd:NativeType>
+                  </cd:Float>
+                </cd:Type>
+              </cd:Field>
+              <cd:Field name="SR_Cubic_C_x1">
+                <cd:Type namexml="SR_Cubic_C_x1">
+                  <cd:Float format="ascii">
+                    <cd:Description>Cubic correction factor for the calculation of the Mie Scattering Ratio</cd:Description>
+                    <cd:NativeType>double</cd:NativeType>
+                  </cd:Float>
+                </cd:Type>
+              </cd:Field>
+              <cd:Field name="SR_Cubic_D_x0">
+                <cd:Type namexml="SR_Cubic_D_x0">
+                  <cd:Float format="ascii">
+                    <cd:Description>Cubic correction factor for the calculation of the Mie Scattering Ratio</cd:Description>
+                    <cd:NativeType>double</cd:NativeType>
+                  </cd:Float>
+                </cd:Type>
+              </cd:Field>
+            </cd:Record>
+          </cd:Field>
+          <cd:Field name="Mie_Core_Algorithm_Params">
+            <cd:Record namexml="Mie_Core_Algorithm_Params">
+              <cd:Description>Processing parameters for Mie Core Algorithm as applied for measurement data</cd:Description>
+              <cd:Field name="SNR_Threshold">
+                <cd:Type namexml="SNR_Threshold">
+                  <cd:Float format="ascii">
+                    <cd:Description>Threshold to switch Mie-Core processing on/off</cd:Description>
+                    <cd:NativeType>double</cd:NativeType>
+                  </cd:Float>
+                </cd:Type>
+              </cd:Field>
+              <cd:Field name="Start_FWHM">
+                <cd:Type namexml="Start_FWHM">
+                  <cd:Attribute name="unit">
+                    <cd:Optional/>
+                    <cd:FixedValue>ACCD pixel</cd:FixedValue>
+                  </cd:Attribute>
+                  <cd:Float format="ascii">
+                    <cd:Description>Starting value for FWHM</cd:Description>
+                    <cd:NativeType>double</cd:NativeType>
+                  </cd:Float>
+                </cd:Type>
+              </cd:Field>
+              <cd:Field name="Residual_Error_Change_Threshold">
+                <cd:Type namexml="Residual_Error_Change_Threshold">
+                  <cd:Attribute name="unit">
+                    <cd:Optional/>
+                    <cd:FixedValue>A.U.</cd:FixedValue>
+                  </cd:Attribute>
+                  <cd:Float format="ascii">
+                    <cd:Description>Threshold on the change in residual error while doing the Mie Core iterative fitting. If the change from one iteration to the next drops below this threshold the iteration is stopped.</cd:Description>
+                    <cd:NativeType>double</cd:NativeType>
+                  </cd:Float>
+                </cd:Type>
+              </cd:Field>
+              <cd:Field name="Residual_Error_Threshold">
+                <cd:Type namexml="Residual_Error_Threshold">
+                  <cd:Attribute name="unit">
+                    <cd:Optional/>
+                    <cd:FixedValue>A.U.</cd:FixedValue>
+                  </cd:Attribute>
+                  <cd:Float format="ascii">
+                    <cd:Description>Maximum threshold for the final Mie Core fitting residual, i.e. the quadratic sum of differences between modeled and measured ACCD counts per pixel. If the threshold is not met then the fit result is flagged as invalid.</cd:Description>
+                    <cd:NativeType>double</cd:NativeType>
+                  </cd:Float>
+                </cd:Type>
+              </cd:Field>
+              <cd:Field name="Max_Iterations_Lorentz_Fit">
+                <cd:Type namexml="Max_Iterations_Lorentz_Fit">
+                  <cd:Integer format="ascii">
+                    <cd:Description>Maximum number of iterations in Lorentz fit-loop</cd:Description>
+                    <cd:NativeType>uint8</cd:NativeType>
+                  </cd:Integer>
+                </cd:Type>
+              </cd:Field>
+              <cd:Field name="FWHM_Upper_Threshold">
+                <cd:Type namexml="FWHM_Upper_Threshold">
+                  <cd:Attribute name="unit">
+                    <cd:Optional/>
+                    <cd:FixedValue>ACCD pixel</cd:FixedValue>
+                  </cd:Attribute>
+                  <cd:Float format="ascii">
+                    <cd:Description>Upper threshold for FWHM of Lorentz function for quality check</cd:Description>
+                    <cd:NativeType>double</cd:NativeType>
+                  </cd:Float>
+                </cd:Type>
+              </cd:Field>
+              <cd:Field name="FWHM_Lower_Threshold">
+                <cd:Type namexml="FWHM_Lower_Threshold">
+                  <cd:Attribute name="unit">
+                    <cd:Optional/>
+                    <cd:FixedValue>ACCD pixel</cd:FixedValue>
+                  </cd:Attribute>
+                  <cd:Float format="ascii">
+                    <cd:Description>Lower threshold for FWHM of Lorentz function for quality check</cd:Description>
+                    <cd:NativeType>double</cd:NativeType>
+                  </cd:Float>
+                </cd:Type>
+              </cd:Field>
+              <cd:Field name="Peak_Height_Upper_Threshold">
+                <cd:Type namexml="Peak_Height_Upper_Threshold">
+                  <cd:Attribute name="unit">
+                    <cd:Optional/>
+                    <cd:FixedValue>ACCD counts</cd:FixedValue>
+                  </cd:Attribute>
+                  <cd:Float format="ascii">
+                    <cd:Description>Relative (upper) threshold for peak height of Lorentz function</cd:Description>
+                    <cd:NativeType>double</cd:NativeType>
+                  </cd:Float>
+                </cd:Type>
+              </cd:Field>
+              <cd:Field name="Peak_Height_Lower_Threshold">
+                <cd:Type namexml="Peak_Height_Lower_Threshold">
+                  <cd:Attribute name="unit">
+                    <cd:Optional/>
+                    <cd:FixedValue>ACCD counts</cd:FixedValue>
+                  </cd:Attribute>
+                  <cd:Float format="ascii">
+                    <cd:Description>Relative (lower) threshold for peak height of Lorentz function</cd:Description>
+                    <cd:NativeType>double</cd:NativeType>
+                  </cd:Float>
+                </cd:Type>
+              </cd:Field>
+              <cd:Field name="Peak_Location_Threshold">
+                <cd:Type namexml="Peak_Location_Threshold">
+                  <cd:Attribute name="unit">
+                    <cd:Optional/>
+                    <cd:FixedValue>ACCD pixel</cd:FixedValue>
+                  </cd:Attribute>
+                  <cd:Float format="ascii">
+                    <cd:Description>Peak location threshold</cd:Description>
+                    <cd:NativeType>double</cd:NativeType>
+                  </cd:Float>
+                </cd:Type>
+              </cd:Field>
+              <cd:Field name="Nonlinear_Optimization_Threshold">
+                <cd:Type namexml="Nonlinear_Optimization_Threshold">
+                  <cd:Attribute name="unit">
+                    <cd:Optional/>
+                    <cd:FixedValue>A.U.</cd:FixedValue>
+                  </cd:Attribute>
+                  <cd:Float format="ascii">
+                    <cd:Description>Stop threshold for Downhill Simplex algorithm merit function</cd:Description>
+                    <cd:NativeType>double</cd:NativeType>
+                  </cd:Float>
+                </cd:Type>
+              </cd:Field>
+              <cd:Field name="Max_Iterations_Nonlinear_Optimization">
+                <cd:Type namexml="Max_Iterations_Nonlinear_Optimization">
+                  <cd:Attribute name="unit">
+                    <cd:Optional/>
+                    <cd:FixedValue>A.U.</cd:FixedValue>
+                  </cd:Attribute>
+                  <cd:Integer format="ascii">
+                    <cd:Description>Maximum number of interations of Downhill Simplex algorithm</cd:Description>
+                    <cd:NativeType>uint32</cd:NativeType>
+                  </cd:Integer>
+                </cd:Type>
+              </cd:Field>
+              <cd:Field name="Num_Spectral_Sub_Samples">
+                <cd:Type namexml="Num_Spectral_Sub_Samples">
+                  <cd:Attribute name="unit">
+                    <cd:Optional/>
+                    <cd:FixedValue>A.U.</cd:FixedValue>
+                  </cd:Attribute>
+                  <cd:Integer format="ascii">
+                    <cd:Description>Number of functional evaluations of Lorentz fit function for one pixel</cd:Description>
+                    <cd:NativeType>uint32</cd:NativeType>
+                  </cd:Integer>
+                </cd:Type>
+              </cd:Field>
+            </cd:Record>
+          </cd:Field>
+          <cd:Field name="Mie_Core_Algorithm_Params_Reference_Pulse">
+            <cd:Record namexml="Mie_Core_Algorithm_Params_Reference_Pulse">
+              <cd:Description>Processing parameters for Mie Core Algorithm as applied for internal reference pulses</cd:Description>
+              <cd:Field name="SNR_Threshold">
+                <cd:Type namexml="SNR_Threshold">
+                  <cd:Float format="ascii">
+                    <cd:Description>Threshold to switch Mie-Core processing on/off</cd:Description>
+                    <cd:NativeType>double</cd:NativeType>
+                  </cd:Float>
+                </cd:Type>
+              </cd:Field>
+              <cd:Field name="Start_FWHM">
+                <cd:Type namexml="Start_FWHM">
+                  <cd:Attribute name="unit">
+                    <cd:Optional/>
+                    <cd:FixedValue>ACCD pixel</cd:FixedValue>
+                  </cd:Attribute>
+                  <cd:Float format="ascii">
+                    <cd:Description>Starting value for FWHM</cd:Description>
+                    <cd:NativeType>double</cd:NativeType>
+                  </cd:Float>
+                </cd:Type>
+              </cd:Field>
+              <cd:Field name="Residual_Error_Change_Threshold">
+                <cd:Type namexml="Residual_Error_Change_Threshold">
+                  <cd:Attribute name="unit">
+                    <cd:Optional/>
+                    <cd:FixedValue>A.U.</cd:FixedValue>
+                  </cd:Attribute>
+                  <cd:Float format="ascii">
+                    <cd:Description>Threshold on the change in residual error while doing the Mie Core iterative fitting. If the change from one iteration to the next drops below this threshold the iteration is stopped.</cd:Description>
+                    <cd:NativeType>double</cd:NativeType>
+                  </cd:Float>
+                </cd:Type>
+              </cd:Field>
+              <cd:Field name="Residual_Error_Threshold">
+                <cd:Type namexml="Residual_Error_Threshold">
+                  <cd:Attribute name="unit">
+                    <cd:Optional/>
+                    <cd:FixedValue>A.U.</cd:FixedValue>
+                  </cd:Attribute>
+                  <cd:Float format="ascii">
+                    <cd:Description>Maximum threshold for the final Mie Core fitting residual, i.e. the quadratic sum of differences between modeled and measured ACCD counts per pixel. If the threshold is not met then the fit result is flagged as invalid.</cd:Description>
+                    <cd:NativeType>double</cd:NativeType>
+                  </cd:Float>
+                </cd:Type>
+              </cd:Field>
+              <cd:Field name="Max_Iterations_Lorentz_Fit">
+                <cd:Type namexml="Max_Iterations_Lorentz_Fit">
+                  <cd:Integer format="ascii">
+                    <cd:Description>Maximum number of iterations in Lorentz fit-loop</cd:Description>
+                    <cd:NativeType>uint8</cd:NativeType>
+                  </cd:Integer>
+                </cd:Type>
+              </cd:Field>
+              <cd:Field name="FWHM_Upper_Threshold">
+                <cd:Type namexml="FWHM_Upper_Threshold">
+                  <cd:Attribute name="unit">
+                    <cd:Optional/>
+                    <cd:FixedValue>ACCD pixel</cd:FixedValue>
+                  </cd:Attribute>
+                  <cd:Float format="ascii">
+                    <cd:Description>Upper threshold for FWHM of Lorentz function for quality check</cd:Description>
+                    <cd:NativeType>double</cd:NativeType>
+                  </cd:Float>
+                </cd:Type>
+              </cd:Field>
+              <cd:Field name="FWHM_Lower_Threshold">
+                <cd:Type namexml="FWHM_Lower_Threshold">
+                  <cd:Attribute name="unit">
+                    <cd:Optional/>
+                    <cd:FixedValue>ACCD pixel</cd:FixedValue>
+                  </cd:Attribute>
+                  <cd:Float format="ascii">
+                    <cd:Description>Lower threshold for FWHM of Lorentz function for quality check</cd:Description>
+                    <cd:NativeType>double</cd:NativeType>
+                  </cd:Float>
+                </cd:Type>
+              </cd:Field>
+              <cd:Field name="Peak_Height_Upper_Threshold">
+                <cd:Type namexml="Peak_Height_Upper_Threshold">
+                  <cd:Attribute name="unit">
+                    <cd:Optional/>
+                    <cd:FixedValue>ACCD counts</cd:FixedValue>
+                  </cd:Attribute>
+                  <cd:Float format="ascii">
+                    <cd:Description>Relative (upper) threshold for peak height of Lorentz function</cd:Description>
+                    <cd:NativeType>double</cd:NativeType>
+                  </cd:Float>
+                </cd:Type>
+              </cd:Field>
+              <cd:Field name="Peak_Height_Lower_Threshold">
+                <cd:Type namexml="Peak_Height_Lower_Threshold">
+                  <cd:Attribute name="unit">
+                    <cd:Optional/>
+                    <cd:FixedValue>ACCD counts</cd:FixedValue>
+                  </cd:Attribute>
+                  <cd:Float format="ascii">
+                    <cd:Description>Relative (lower) threshold for peak height of Lorentz function</cd:Description>
+                    <cd:NativeType>double</cd:NativeType>
+                  </cd:Float>
+                </cd:Type>
+              </cd:Field>
+              <cd:Field name="Peak_Location_Threshold">
+                <cd:Type namexml="Peak_Location_Threshold">
+                  <cd:Attribute name="unit">
+                    <cd:Optional/>
+                    <cd:FixedValue>ACCD pixel</cd:FixedValue>
+                  </cd:Attribute>
+                  <cd:Float format="ascii">
+                    <cd:Description>Peak location threshold</cd:Description>
+                    <cd:NativeType>double</cd:NativeType>
+                  </cd:Float>
+                </cd:Type>
+              </cd:Field>
+              <cd:Field name="Nonlinear_Optimization_Threshold">
+                <cd:Type namexml="Nonlinear_Optimization_Threshold">
+                  <cd:Attribute name="unit">
+                    <cd:Optional/>
+                    <cd:FixedValue>A.U.</cd:FixedValue>
+                  </cd:Attribute>
+                  <cd:Float format="ascii">
+                    <cd:Description>Stop threshold for Downhill Simplex algorithm merit function</cd:Description>
+                    <cd:NativeType>double</cd:NativeType>
+                  </cd:Float>
+                </cd:Type>
+              </cd:Field>
+              <cd:Field name="Max_Iterations_Nonlinear_Optimization">
+                <cd:Type namexml="Max_Iterations_Nonlinear_Optimization">
+                  <cd:Attribute name="unit">
+                    <cd:Optional/>
+                    <cd:FixedValue>A.U.</cd:FixedValue>
+                  </cd:Attribute>
+                  <cd:Integer format="ascii">
+                    <cd:Description>Maximum number of interations of Downhill Simplex algorithm</cd:Description>
+                    <cd:NativeType>uint32</cd:NativeType>
+                  </cd:Integer>
+                </cd:Type>
+              </cd:Field>
+              <cd:Field name="Num_Spectral_Sub_Samples">
+                <cd:Type namexml="Num_Spectral_Sub_Samples">
+                  <cd:Attribute name="unit">
+                    <cd:Optional/>
+                    <cd:FixedValue>A.U.</cd:FixedValue>
+                  </cd:Attribute>
+                  <cd:Integer format="ascii">
+                    <cd:Description>Number of functional evaluations of Lorentz fit function for one pixel</cd:Description>
+                    <cd:NativeType>uint32</cd:NativeType>
+                  </cd:Integer>
+                </cd:Type>
+              </cd:Field>
+            </cd:Record>
+          </cd:Field>
+          <cd:Field name="Corrupt_Data_Detection_Params">
+            <cd:Record namexml="Corrupt_Data_Detection_Params">
+              <cd:Description>Parameters for corrupt data detection</cd:Description>
+              <cd:Field name="Max_Signal_Derivative">
+                <cd:Type namexml="Max_Signal_Derivative">
+                  <cd:Attribute name="unit">
+                    <cd:Optional/>
+                    <cd:FixedValue>ACCD counts</cd:FixedValue>
+                  </cd:Attribute>
+                  <cd:Integer format="ascii">
+                    <cd:Description>Maximum signal derivative. Maximum valid pixel intensity difference between adjacent CCD pixels</cd:Description>
+                    <cd:NativeType>uint16</cd:NativeType>
+                  </cd:Integer>
+                </cd:Type>
+              </cd:Field>
+              <cd:Field name="Pixel_Saturation_Threshold">
+                <cd:Type namexml="Pixel_Saturation_Threshold">
+                  <cd:Attribute name="unit">
+                    <cd:Optional/>
+                    <cd:FixedValue>ACCD counts</cd:FixedValue>
+                  </cd:Attribute>
+                  <cd:Integer format="ascii">
+                    <cd:Description>Pixel saturation threshold</cd:Description>
+                    <cd:NativeType>uint16</cd:NativeType>
+                  </cd:Integer>
+                </cd:Type>
+              </cd:Field>
+            </cd:Record>
+          </cd:Field>
+        </cd:Record>
+      </cd:Field>
+      <cd:Field name="Mie_Algorithm_Params">
+        <cd:Record namexml="Mie_Algorithm_Params">
+          <cd:Description>Parameters used by the Mie algorithm.</cd:Description>
+          <cd:Field name="Copy_L1B_Mie_Core_Algorithm_Params">
+            <cd:Type namexml="Copy_L1B_Mie_Core_Algorithm_Params">
+              <cd:Integer format="ascii">
+                <cd:Description>Switch to select whether L1B Mie Core Algorithm Parameters should be copied/used in the L2BP</cd:Description>
+                <cd:NativeType>uint8</cd:NativeType>
+                <cd:Mapping string="FALSE" value="0"/>
+                <cd:Mapping string="False" value="0"/>
+                <cd:Mapping string="false" value="0"/>
+                <cd:Mapping string="TRUE" value="1"/>
+                <cd:Mapping string="True" value="1"/>
+                <cd:Mapping string="true" value="1"/>
+              </cd:Integer>
+            </cd:Type>
+          </cd:Field>
+          <cd:Field name="Copy_MieCoreAlgParams_to_IntRef">
+            <cd:Type namexml="Copy_MieCoreAlgParams_to_IntRef">
+              <cd:Integer format="ascii">
+                <cd:Description>In case Mie Core Algorithm Parameters are taken from the L1B product, copy the parameters used for measurement fitting to the parameters used for internal reference fitting</cd:Description>
+                <cd:NativeType>uint8</cd:NativeType>
+                <cd:Mapping string="FALSE" value="0"/>
+                <cd:Mapping string="False" value="0"/>
+                <cd:Mapping string="false" value="0"/>
+                <cd:Mapping string="TRUE" value="1"/>
+                <cd:Mapping string="True" value="1"/>
+                <cd:Mapping string="true" value="1"/>
+              </cd:Integer>
+            </cd:Type>
+          </cd:Field>
+          <cd:Field name="Copy_L1B_Mie_ScatRatio_Algorithm_Params">
+            <cd:Type namexml="Copy_L1B_Mie_ScatRatio_Algorithm_Params">
+              <cd:Integer format="ascii">
+                <cd:Description>Switch to select whether L1B Mie Scattering Ratio Parameters should be copied/used in the L2BP.</cd:Description>
+                <cd:NativeType>uint8</cd:NativeType>
+                <cd:Mapping string="FALSE" value="0"/>
+                <cd:Mapping string="False" value="0"/>
+                <cd:Mapping string="false" value="0"/>
+                <cd:Mapping string="TRUE" value="1"/>
+                <cd:Mapping string="True" value="1"/>
+                <cd:Mapping string="true" value="1"/>
+              </cd:Integer>
+            </cd:Type>
+          </cd:Field>
+          <cd:Field name="Mie_Height_Assignment_Method">
+            <cd:Text namexml="Mie_Height_Assignment_Method">
+              <cd:Description>Switch to select Mie height assignment method.</cd:Description>
+            </cd:Text>
+          </cd:Field>
+          <cd:Field name="Mie_Height_Weight_Upper">
+            <cd:Type namexml="Mie_Height_Weight_Upper">
+              <cd:Float format="ascii">
+                <cd:Description>Weight given to upper altitude of range bin (applicable when Mie Height Assignment Method = use fixed weight).</cd:Description>
+                <cd:NativeType>double</cd:NativeType>
+              </cd:Float>
+            </cd:Type>
+          </cd:Field>
+          <cd:Field name="Skip_Mie_Non_Linearity_Correction">
+            <cd:Type namexml="Skip_Mie_Non_Linearity_Correction">
+              <cd:Integer format="ascii">
+                <cd:Description>Switch to select whether Mie Nonlinearity Correction should be skipped in the L2BP or not</cd:Description>
+                <cd:NativeType>uint8</cd:NativeType>
+                <cd:Mapping string="FALSE" value="0"/>
+                <cd:Mapping string="False" value="0"/>
+                <cd:Mapping string="false" value="0"/>
+                <cd:Mapping string="TRUE" value="1"/>
+                <cd:Mapping string="True" value="1"/>
+                <cd:Mapping string="true" value="1"/>
+              </cd:Integer>
+            </cd:Type>
+          </cd:Field>
+          <cd:Field name="Extrapolate_Mie_Calibration_Data">
+            <cd:Type namexml="Extrapolate_Mie_Calibration_Data">
+              <cd:Integer format="ascii">
+                <cd:Description>Switch to select whether Mie Nonlinearity Correction (calibration data) should be extrapolated in the L2BP or not</cd:Description>
+                <cd:NativeType>uint8</cd:NativeType>
+                <cd:Mapping string="FALSE" value="0"/>
+                <cd:Mapping string="False" value="0"/>
+                <cd:Mapping string="false" value="0"/>
+                <cd:Mapping string="TRUE" value="1"/>
+                <cd:Mapping string="True" value="1"/>
+                <cd:Mapping string="true" value="1"/>
+              </cd:Integer>
+            </cd:Type>
+          </cd:Field>
+          <cd:Field name="Offset_Subtraction_Col20_Weight">
+            <cd:Type namexml="Offset_Subtraction_Col20_Weight">
+              <cd:Float format="ascii">
+                <cd:Description>Weight given to ACCD column 20 in (Mie) offset subtraction</cd:Description>
+                <cd:NativeType>double</cd:NativeType>
+              </cd:Float>
+            </cd:Type>
+          </cd:Field>
+          <cd:Field name="Disable_DCO_subtraction">
+            <cd:Type namexml="Disable_DCO_subtraction">
+              <cd:Integer format="ascii">
+                <cd:Description>Switch to choose if dark current offset correction is performed in the L2BP Mie Core algorithm or not (needed in case it was switched off in the L1bP as well and implicitly handled by the DCMZ1B calibration file instead).</cd:Description>
+                <cd:NativeType>uint8</cd:NativeType>
+                <cd:Mapping string="FALSE" value="0"/>
+                <cd:Mapping string="False" value="0"/>
+                <cd:Mapping string="false" value="0"/>
+                <cd:Mapping string="TRUE" value="1"/>
+                <cd:Mapping string="True" value="1"/>
+                <cd:Mapping string="true" value="1"/>
+              </cd:Integer>
+            </cd:Type>
+          </cd:Field>
+          <cd:Field name="List_of_SNR_Thresholds">
+            <cd:Record namexml="List_of_SNR_Thresholds">
+              <cd:Description>List of SNR threshold structures to be used for quality control of L2B Mie hlos retrievals. </cd:Description>
+              <cd:Attribute name="count">
+              </cd:Attribute>
+              <cd:Field name="SNR_Threshold">
+                <cd:Array>
+                  <cd:Dimension/>
+                  <cd:Record namexml="SNR_Threshold">
+                    <cd:Field name="Threshold_Value">
+                      <cd:Type namexml="Threshold_Value">
+                        <cd:Float format="ascii">
+                          <cd:Description>Threshold to be used for quality control of L2B Mie hlos retrievals</cd:Description>
+                          <cd:NativeType>double</cd:NativeType>
+                        </cd:Float>
+                      </cd:Type>
+                    </cd:Field>
+                    <cd:Field name="Altitude_Low">
+                      <cd:Type namexml="Altitude_Low">
+                        <cd:Attribute name="unit"/>
+                        <cd:Float format="ascii">
+                          <cd:Description>Lowest altitude at which Threshold Value is valid</cd:Description>
+                          <cd:Unit>km</cd:Unit>
+                          <cd:NativeType>double</cd:NativeType>
+                        </cd:Float>
+                      </cd:Type>
+                    </cd:Field>
+                    <cd:Field name="Altitude_High">
+                      <cd:Type namexml="Altitude_High">
+                        <cd:Attribute name="unit"/>
+                        <cd:Float format="ascii">
+                          <cd:Description>Highest altitude at which Threshold Value is valid</cd:Description>
+                          <cd:Unit>km</cd:Unit>
+                          <cd:NativeType>double</cd:NativeType>
+                        </cd:Float>
+                      </cd:Type>
+                    </cd:Field>
+                    <cd:Field name="Altitude_Reference">
+                      <cd:Text namexml="Altitude_Reference">
+                        <cd:Description>Description of reference level for altitude.</cd:Description>
+                      </cd:Text>
+                    </cd:Field>
+                  </cd:Record>
+                  <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                </cd:Array>
+              </cd:Field>
+            </cd:Record>
+          </cd:Field>
+          <cd:Field name="Flag_Clear_Mie_Results_Invalid">
+            <cd:Type namexml="Flag_Clear_Mie_Results_Invalid">
+              <cd:Integer format="ascii">
+                <cd:Description>A switch to force all clear Mie winds to be flagged invalid</cd:Description>
+                <cd:NativeType>uint8</cd:NativeType>
+                <cd:Mapping string="FALSE" value="0"/>
+                <cd:Mapping string="False" value="0"/>
+                <cd:Mapping string="false" value="0"/>
+                <cd:Mapping string="TRUE" value="1"/>
+                <cd:Mapping string="True" value="1"/>
+                <cd:Mapping string="true" value="1"/>
+              </cd:Integer>
+            </cd:Type>
+          </cd:Field>
+          <cd:Field name="List_of_Invalid_Mie_Rangebins">
+            <cd:Record namexml="List_of_Invalid_Mie_Rangebins">
+              <cd:Description>A list indicating which Mie channel range bins cannot be trusted, for example due to the "hot-pixel" problem. The list size must be between 0 and 24. (3 range bins are assumed for the size calculation)</cd:Description>
+              <cd:Attribute name="count">
+              </cd:Attribute>
+              <cd:Field name="Invalid_Mie_Rangebin">
+                <cd:Array>
+                  <cd:Dimension/>
+                  <cd:Type namexml="Invalid_Mie_Rangebin">
+                    <cd:Integer format="ascii">
+                      <cd:Description>rangebin index defining that this rangebin cannot be trusted</cd:Description>
+                      <cd:NativeType>uint8</cd:NativeType>
+                    </cd:Integer>
+                  </cd:Type>
+                  <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                </cd:Array>
+              </cd:Field>
+            </cd:Record>
+          </cd:Field>
+          <cd:Field name="spacecraft_los_vel_factor">
+            <cd:Type namexml="spacecraft_los_vel_factor">
+              <cd:Float format="ascii">
+                <cd:Description>multiplication factor applied to spacecraft LOS velocity correction to the HLOS wind result. Set to 0.0 to disable this correction. Set to 1.0 to enable it. Intermediate values are possible as well</cd:Description>
+                <cd:NativeType>double</cd:NativeType>
+              </cd:Float>
+            </cd:Type>
+          </cd:Field>
+          <cd:Field name="manual_hlos_bias_correction">
+            <cd:Type namexml="manual_hlos_bias_correction">
+              <cd:Attribute name="unit">
+                <cd:FixedValue>m/s</cd:FixedValue>
+              </cd:Attribute>
+              <cd:Float format="ascii">
+                <cd:Description>optional hlos bias correction for experimental use only (for expert use only, not intended for users not familiar with the details of the Aeolus Calibration files).</cd:Description>
+                <cd:Unit>m/s</cd:Unit>
+                <cd:NativeType>double</cd:NativeType>
+              </cd:Float>
+            </cd:Type>
+          </cd:Field>
+          <cd:Field name="Apply_M1_Telescope_Temperature_Correction">
+            <cd:Type namexml="Apply_M1_Telescope_Temperature_Correction">
+              <cd:Integer format="ascii">
+                <cd:Description>If set to true, switch on the M1 telescope temperature wind bias correction as defined by the AUX_TEL input file.</cd:Description>
+                <cd:NativeType>uint8</cd:NativeType>
+                <cd:Mapping string="FALSE" value="0"/>
+                <cd:Mapping string="False" value="0"/>
+                <cd:Mapping string="false" value="0"/>
+                <cd:Mapping string="TRUE" value="1"/>
+                <cd:Mapping string="True" value="1"/>
+                <cd:Mapping string="true" value="1"/>
+              </cd:Integer>
+            </cd:Type>
+          </cd:Field>
+          <cd:Field name="Enforce_Fixed_IntRef_PeakPos">
+            <cd:Type namexml="Enforce_Fixed_IntRef_PeakPos">
+              <cd:Integer format="ascii">
+                <cd:Description>Switch that can be used to enforce filling the Internal Reference Mie Peak Position with a constant value</cd:Description>
+                <cd:NativeType>uint8</cd:NativeType>
+                <cd:Mapping string="FALSE" value="0"/>
+                <cd:Mapping string="False" value="0"/>
+                <cd:Mapping string="false" value="0"/>
+                <cd:Mapping string="TRUE" value="1"/>
+                <cd:Mapping string="True" value="1"/>
+                <cd:Mapping string="true" value="1"/>
+              </cd:Integer>
+            </cd:Type>
+          </cd:Field>
+          <cd:Field name="Fixed_IntRef_PeakPos_Value">
+            <cd:Type namexml="Fixed_IntRef_PeakPos_Value">
+              <cd:Attribute name="unit">
+                <cd:Optional/>
+                <cd:FixedValue>ACCD pixel index</cd:FixedValue>
+              </cd:Attribute>
+              <cd:Float format="ascii">
+                <cd:Description>Fixed value to be used for the Internal Reference Mie Peak Position, in case we enforce it to be filled with a constant value</cd:Description>
+                <cd:NativeType>double</cd:NativeType>
+              </cd:Float>
+            </cd:Type>
+          </cd:Field>
+          <cd:Field name="Use_Fitted_Nonlinear_Correction">
+            <cd:Type namexml="Use_Fitted_Nonlinear_Correction">
+              <cd:Integer format="ascii">
+                <cd:Description>Switch that can be used to enable use of the fitted non-linear correction as is provided in the incoming L1B product file</cd:Description>
+                <cd:NativeType>uint8</cd:NativeType>
+                <cd:Mapping string="FALSE" value="0"/>
+                <cd:Mapping string="False" value="0"/>
+                <cd:Mapping string="false" value="0"/>
+                <cd:Mapping string="TRUE" value="1"/>
+                <cd:Mapping string="True" value="1"/>
+                <cd:Mapping string="true" value="1"/>
+              </cd:Integer>
+            </cd:Type>
+          </cd:Field>
+          <cd:Field name="Override_Fitted_Nonlinear_Correction_Int_Ref">
+            <cd:Type namexml="Override_Fitted_Nonlinear_Correction_Int_Ref">
+              <cd:Integer format="ascii">
+                <cd:Description>Switch that can be used to enable overriding the fitted Mie-NL correction data for the internal path as is provided in the incoming L1B product file. Note that it will only be used if also the Use_Fitted_Nonlinear_Correction switch is set to True</cd:Description>
+                <cd:NativeType>uint8</cd:NativeType>
+                <cd:Mapping string="FALSE" value="0"/>
+                <cd:Mapping string="False" value="0"/>
+                <cd:Mapping string="false" value="0"/>
+                <cd:Mapping string="TRUE" value="1"/>
+                <cd:Mapping string="True" value="1"/>
+                <cd:Mapping string="true" value="1"/>
+              </cd:Integer>
+            </cd:Type>
+          </cd:Field>
+          <cd:Field name="List_of_Fitted_Int_Ref_Mie_NL_Corrections">
+            <cd:Record namexml="List_of_Fitted_Int_Ref_Mie_NL_Corrections">
+              <cd:Description>A list of ACCD pixel corrections against ACCS pixel index location that can be used to enable overriding the fitted Mie-NL correction data for the internal path as is provided in the incoming L1B product file.</cd:Description>
+              <cd:Attribute name="count"/>
+              <cd:Field name="Fitted_Int_Ref_Mie_NL_Correction">
+                <cd:Array>
+                  <cd:Dimension/>
+                  <cd:Record namexml="Fitted_Int_Ref_Mie_NL_Correction">
+                    <cd:Description>Fitted Int Ref Mie NL Correction</cd:Description>
+                      <cd:Field name="Pixel_Position">
+                      <cd:Type namexml="Pixel_Position">
+                        <cd:Attribute name="unit">
+                          <cd:FixedValue>ACCD pixel index</cd:FixedValue>
+                        </cd:Attribute>
+                        <cd:Float format="ascii">
+                          <cd:Description>Pixel position for which this Mie non-linearity correction will be applied</cd:Description>
+                          <cd:Unit>ACCD pixel index</cd:Unit>
+                          <cd:NativeType>double</cd:NativeType>
+                        </cd:Float>
+                      </cd:Type>
+                    </cd:Field>
+                    <cd:Field name="Correction">
+                      <cd:Type namexml="Correction">
+                        <cd:Attribute name="unit">
+                          <cd:FixedValue>ACCD pixel</cd:FixedValue>
+                        </cd:Attribute>
+                        <cd:Float format="ascii">
+                          <cd:Description>Mie non-linearity correction to be applied</cd:Description>
+                          <cd:Unit>ACCD pixel</cd:Unit>
+                          <cd:NativeType>double</cd:NativeType>
+                        </cd:Float>
+                      </cd:Type>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Array>
+              </cd:Field>
+            </cd:Record>
+          </cd:Field>
+          <cd:Field name="Override_Fitted_Nonlinear_Correction_Atm_Path">
+            <cd:Type namexml="Override_Fitted_Nonlinear_Correction_Atm_Path">
+              <cd:Integer format="ascii">
+                <cd:Description>Switch that can be used to enable overriding the fitted Mie-NL correction data for the atmospheric path as is provided in the incoming L1B product file. Note that it will only be used if also the Use_Fitted_Nonlinear_Correction switch is set to True</cd:Description>
+                <cd:NativeType>uint8</cd:NativeType>
+                <cd:Mapping string="FALSE" value="0"/>
+                <cd:Mapping string="False" value="0"/>
+                <cd:Mapping string="false" value="0"/>
+                <cd:Mapping string="TRUE" value="1"/>
+                <cd:Mapping string="True" value="1"/>
+                <cd:Mapping string="true" value="1"/>
+              </cd:Integer>
+            </cd:Type>
+          </cd:Field>
+          <cd:Field name="List_of_Fitted_Atm_Path_Mie_NL_Corrections">
+            <cd:Record namexml="List_of_Fitted_Atm_Path_Mie_NL_Corrections">
+              <cd:Description>A list of ACCD pixel corrections against ACCS pixel index location that can be used to enable overriding the fitted Mie-NL correction data for the atmospheric path as is provided in the incoming L1B product file.</cd:Description>
+              <cd:Attribute name="count"/>
+              <cd:Field name="Fitted_Atm_Path_Mie_NL_Correction">
+                <cd:Array>
+                  <cd:Dimension/>
+                  <cd:Record namexml="Fitted_Atm_Path_Mie_NL_Correction">
+                    <cd:Description>Fitted_Atm_Path_Mie_NL_Correction</cd:Description>
+                    <cd:Field name="Pixel_Position">
+                      <cd:Type namexml="Pixel_Position">
+                        <cd:Attribute name="unit">
+                          <cd:FixedValue>ACCD pixel index</cd:FixedValue>
+                        </cd:Attribute>
+                        <cd:Float format="ascii">
+                          <cd:Description>Pixel position for which this Mie non-linearity correction will be applied</cd:Description>
+                          <cd:Unit>ACCD pixel index</cd:Unit>
+                          <cd:NativeType>double</cd:NativeType>
+                        </cd:Float>
+                      </cd:Type>
+                    </cd:Field>
+                    <cd:Field name="Correction">
+                      <cd:Type namexml="Correction">
+                        <cd:Attribute name="unit">
+                          <cd:FixedValue>ACCD pixel</cd:FixedValue>
+                        </cd:Attribute>
+                        <cd:Float format="ascii">
+                          <cd:Description>Mie non-linearity correction to be applied</cd:Description>
+                          <cd:Unit>ACCD pixel</cd:Unit>
+                          <cd:NativeType>double</cd:NativeType>
+                        </cd:Float>
+                      </cd:Type>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Array>
+              </cd:Field>
+            </cd:Record>
+          </cd:Field>
+          <cd:Field name="Max_Reported_Mie_HLOS_Error">
+            <cd:Type namexml="Max_Reported_Mie_HLOS_Error">
+              <cd:Attribute name="unit">
+                <cd:FixedValue>m/s</cd:FixedValue>
+              </cd:Attribute>
+              <cd:Float format="ascii">
+                <cd:Description>Maximum value reported for the Mie HLOS error. If the algorithm produces a larger value, it will be trunctaed at this value before reporting it in the L2B product.</cd:Description>
+                <cd:NativeType>double</cd:NativeType>
+              </cd:Float>
+            </cd:Type>
+          </cd:Field>
+          <cd:Field name="Spike_Detection_Params">
+            <cd:Record namexml="Spike_Detection_Params">
+              <cd:Description>Collected settings for the Mie channel spike detection algorithm.</cd:Description>
+              <cd:Field name="Enable_Spike_Detection">
+                <cd:Type namexml="Enable_Spike_Detection">
+                  <cd:Integer format="ascii">
+                    <cd:Description>Enable the algorithm to detect and remove measurements with suspicious signal spikes.</cd:Description>
+                    <cd:NativeType>uint8</cd:NativeType>
+                    <cd:Mapping string="FALSE" value="0"/>
+                    <cd:Mapping string="False" value="0"/>
+                    <cd:Mapping string="false" value="0"/>
+                    <cd:Mapping string="TRUE" value="1"/>
+                    <cd:Mapping string="True" value="1"/>
+                    <cd:Mapping string="true" value="1"/>
+                  </cd:Integer>
+                </cd:Type>
+              </cd:Field>
+              <cd:Field name="Signal_Threshold_Percentage">
+                <cd:Type namexml="Signal_Threshold_Percentage">
+                  <cd:Float format="ascii">
+                    <cd:Description>Threshold (in percentage of the maximum detected signal) to be used for detecting suspicious secundary peaks in the spectrum</cd:Description>
+                    <cd:NativeType>double</cd:NativeType>
+                  </cd:Float>
+                </cd:Type>
+              </cd:Field>
+              <cd:Field name="Only_if_SNR_improves">
+                <cd:Type namexml="Only_if_SNR_improves">
+                  <cd:Integer format="ascii">
+                    <cd:Description>Only remove measurements with suspicious spikes if this improves the accumulated SNR of the Mie spectrum.</cd:Description>
+                    <cd:NativeType>uint8</cd:NativeType>
+                    <cd:Mapping string="FALSE" value="0"/>
+                    <cd:Mapping string="False" value="0"/>
+                    <cd:Mapping string="false" value="0"/>
+                    <cd:Mapping string="TRUE" value="1"/>
+                    <cd:Mapping string="True" value="1"/>
+                    <cd:Mapping string="true" value="1"/>
+                  </cd:Integer>
+                </cd:Type>
+              </cd:Field>
+              <cd:Field name="Print_Details">
+                <cd:Type namexml="Print_Details">
+                  <cd:Integer format="ascii">
+                    <cd:Description>Display internal details of the spike detection algorithm during processing. Only useful when debugging or further developing this algorithm.</cd:Description>
+                    <cd:NativeType>uint8</cd:NativeType>
+                    <cd:Mapping string="FALSE" value="0"/>
+                    <cd:Mapping string="False" value="0"/>
+                    <cd:Mapping string="false" value="0"/>
+                    <cd:Mapping string="TRUE" value="1"/>
+                    <cd:Mapping string="True" value="1"/>
+                    <cd:Mapping string="true" value="1"/>
+                  </cd:Integer>
+                </cd:Type>
+              </cd:Field>
+            </cd:Record>  
+          </cd:Field>
+        </cd:Record>
+      </cd:Field>
+      <cd:Field name="RBC_Algorithm_Params">
+        <cd:Record namexml="RBC_Algorithm_Params">
+          <cd:Description>Parameters used by the RBC algorithm</cd:Description>
+          <cd:Field name="Rayleigh_Height_Assignment_Method">
+            <cd:Text namexml="Rayleigh_Height_Assignment_Method">
+              <cd:Description>Switch to select Rayleigh height assignment method.</cd:Description>
+            </cd:Text>
+          </cd:Field>
+          <cd:Field name="Rayleigh_Height_Weight_Upper">
+            <cd:Type namexml="Rayleigh_Height_Weight_Upper">
+              <cd:Float format="ascii">
+                <cd:Description>Weight given to upper altitude of range bin (applicable when Rayleigh Height Assignment Method = use fixed weight)</cd:Description>
+                <cd:NativeType>double</cd:NativeType>
+              </cd:Float>
+            </cd:Type>
+          </cd:Field>
+          <cd:Field name="ScatRatio_Method_for_Decontamination_Clear_Winds">
+            <cd:Text namexml="ScatRatio_Method_for_Decontamination_Clear_Winds">
+              <cd:Description>A switch to define how to do decontamination of the Rayleigh Clear winds.</cd:Description>
+            </cd:Text>
+          </cd:Field>
+          <cd:Field name="ScatRatio_Method2_for_Decontamination_Clear_Winds">
+            <cd:Text namexml="ScatRatio_Method2_for_Decontamination_Clear_Winds">
+              <cd:Description>A switch to define a backup method controlling how to do decontamination of the Rayleigh Clear winds. Only used if the primary method yields a missing result.</cd:Description>
+            </cd:Text>
+          </cd:Field>
+          <cd:Field name="ScatRatio_Method_for_Decontamination_Cloudy_Winds">
+            <cd:Text namexml="ScatRatio_Method_for_Decontamination_Cloudy_Winds">
+              <cd:Description>A switch to define how to do decontamination of the Rayleigh Cloudy winds.</cd:Description>
+            </cd:Text>
+          </cd:Field>
+          <cd:Field name="ScatRatio_Method2_for_Decontamination_Cloudy_Winds">
+            <cd:Text namexml="ScatRatio_Method2_for_Decontamination_Cloudy_Winds">
+              <cd:Description>A switch to define a backup method controlling how to do decontamination of the Rayleigh Cloudy winds. Only used if the primary method yields a missing result.</cd:Description>
+            </cd:Text>
+          </cd:Field>
+          <cd:Field name="Min_Allowed_Meas_Level_Rho">
+            <cd:Type namexml="Min_Allowed_Meas_Level_Rho">
+              <cd:Float format="ascii">
+                <cd:Description>Safety threshold to check the scattering ratio value (rho) used as input for averaging in case DSR_Method_Average is used. A value of -1 can be used to disable this check.</cd:Description>
+                <cd:NativeType>double</cd:NativeType>
+              </cd:Float>
+            </cd:Type>
+          </cd:Field>
+          <cd:Field name="Max_Allowed_Meas_Level_Rho">
+            <cd:Type namexml="Max_Allowed_Meas_Level_Rho">
+              <cd:Float format="ascii">
+                <cd:Description>Safety threshold to check the scattering ratio value (rho) used as input for averaging in case DSR_Method_Average is used. A value of -1 can be used to disable this check.</cd:Description>
+                <cd:NativeType>double</cd:NativeType>
+              </cd:Float>
+            </cd:Type>
+          </cd:Field>
+          <cd:Field name="Min_Allowed_Rho_for_Decontamination">
+            <cd:Type namexml="Min_Allowed_Rho_for_Decontamination">
+              <cd:Float format="ascii">
+                <cd:Description>Safety threshold to check the scattering ratio value (rho) calculated internally, and used for Mie decontamination of the Rayleigh wind. A value of -1 can be used to disable this check.</cd:Description>
+                <cd:NativeType>double</cd:NativeType>
+              </cd:Float>
+            </cd:Type>
+          </cd:Field>
+          <cd:Field name="Max_Allowed_Rho_for_Decontamination">
+            <cd:Type namexml="Max_Allowed_Rho_for_Decontamination">
+              <cd:Float format="ascii">
+                <cd:Description>Safety threshold to check the scattering ratio value (rho) calculated internally, and used for Mie decontamination of the Rayleigh wind. A value of -1 can be used to disable this check.</cd:Description>
+                <cd:NativeType>double</cd:NativeType>
+              </cd:Float>
+            </cd:Type>
+          </cd:Field>
+          <cd:Field name="Flag_Cloudy_Rayleigh_Results_Invalid">
+            <cd:Type namexml="Flag_Cloudy_Rayleigh_Results_Invalid">
+              <cd:Integer format="ascii">
+                <cd:Description>A switch to force all cloudy Rayleigh winds to be flagged invalid</cd:Description>
+                <cd:NativeType>uint8</cd:NativeType>
+                <cd:Mapping string="FALSE" value="0"/>
+                <cd:Mapping string="False" value="0"/>
+                <cd:Mapping string="false" value="0"/>
+                <cd:Mapping string="TRUE" value="1"/>
+                <cd:Mapping string="True" value="1"/>
+                <cd:Mapping string="true" value="1"/>
+              </cd:Integer>
+            </cd:Type>
+          </cd:Field>
+          <cd:Field name="List_of_Invalid_Rayleigh_Rangebins">
+            <cd:Record namexml="List_of_Invalid_Rayleigh_Rangebins">
+              <cd:Description>A list indicating which Rayleigh channel range bins cannot be trusted, for example due to the "hot-pixel" problem. The list size must be between 0 and 24. (3 range bins are assumed for the size calculation)</cd:Description>
+              <cd:Attribute name="count">
+              </cd:Attribute>
+              <cd:Field name="Invalid_Rayleigh_Rangebin">
+                <cd:Array>
+                  <cd:Dimension/>
+                  <cd:Type namexml="Invalid_Rayleigh_Rangebin">
+                    <cd:Integer format="ascii">
+                      <cd:Description>rangebin index defining that this rangebin cannot be trusted</cd:Description>
+                      <cd:NativeType>uint8</cd:NativeType>
+                    </cd:Integer>
+                  </cd:Type>
+                  <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                </cd:Array>
+              </cd:Field>
+            </cd:Record>
+          </cd:Field>
+          <cd:Field name="spacecraft_los_vel_factor">
+            <cd:Type namexml="spacecraft_los_vel_factor">
+              <cd:Float format="ascii">
+                <cd:Description>multiplication factor applied to spacecraft LOS velocity correction to the HLOS wind result. Set to 0.0 to disable this correction. Set to 1.0 to enable it. Intermediate values are possible as well</cd:Description>
+                <cd:NativeType>double</cd:NativeType>
+              </cd:Float>
+            </cd:Type>
+          </cd:Field>
+          <cd:Field name="manual_hlos_bias_correction">
+            <cd:Type namexml="manual_hlos_bias_correction">
+              <cd:Attribute name="unit">
+                <cd:FixedValue>m/s</cd:FixedValue>
+              </cd:Attribute>
+              <cd:Float format="ascii">
+                <cd:Description>optional hlos bias correction for experimental use only (for expert use only, not intended for users not familiar with the details of the Aeolus Calibration files).</cd:Description>
+                <cd:Unit>m/s</cd:Unit>
+                <cd:NativeType>double</cd:NativeType>
+              </cd:Float>
+            </cd:Type>
+          </cd:Field>
+          <cd:Field name="Apply_M1_Telescope_Temperature_Correction">
+            <cd:Type namexml="Apply_M1_Telescope_Temperature_Correction">
+              <cd:Integer format="ascii">
+                <cd:Description>If set to true, switch on the M1 telescope temperature wind bias correction as defined by the AUX_TEL input file.</cd:Description>
+                <cd:NativeType>uint8</cd:NativeType>
+                <cd:Mapping string="FALSE" value="0"/>
+                <cd:Mapping string="False" value="0"/>
+                <cd:Mapping string="false" value="0"/>
+                <cd:Mapping string="TRUE" value="1"/>
+                <cd:Mapping string="True" value="1"/>
+                <cd:Mapping string="true" value="1"/>
+              </cd:Integer>
+            </cd:Type>
+          </cd:Field>
+          <cd:Field name="RR_Ref_Method">
+            <cd:Text namexml="RR_Ref_Method">
+              <cd:Description>A switch to controls how the reference Rayleigh Response is defined.</cd:Description>
+            </cd:Text>
+          </cd:Field>
+          <cd:Field name="Fixed_RR_IntRef_Value">
+            <cd:Type namexml="Fixed_RR_IntRef_Value">
+              <cd:Float format="ascii">
+                <cd:Description>Fixed value to be used for the Internal  Reference Rayleigh Response, in case we enforce it to be filled with a constant value</cd:Description>
+                <cd:NativeType>double</cd:NativeType>
+              </cd:Float>
+            </cd:Type>
+          </cd:Field>
+          <cd:Field name="MieRespFreq_to_RR_offset">
+            <cd:Type namexml="MieRespFreq_to_RR_offset">
+              <cd:Float format="ascii">
+                <cd:Description>Parameter that defines the offset when converting the Mie mean frequency to the reference Rayleigh Response.</cd:Description>
+                <cd:NativeType>double</cd:NativeType>
+              </cd:Float>
+            </cd:Type>
+          </cd:Field>
+          <cd:Field name="MieRespFreq_to_RR_slope">
+            <cd:Type namexml="MieRespFreq_to_RR_slope">
+              <cd:Attribute name="unit">
+                <cd:FixedValue>1/GHz</cd:FixedValue>
+              </cd:Attribute>
+              <cd:Float format="ascii">
+                <cd:Description>Parameter that defines the slope when converting the Mie mean frequency to the reference Rayleigh Response.</cd:Description>
+                <cd:Unit>1/GHz</cd:Unit>
+                <cd:NativeType>double</cd:NativeType>
+              </cd:Float>
+            </cd:Type>
+          </cd:Field>
+          <cd:Field name="Rayleigh_Cloudy_Wind_Response_Correction">
+            <cd:Record namexml="Rayleigh_Cloudy_Wind_Response_Correction">
+              <cd:Description>Parameters needed to calculate the Rayleigh Response correction for cloudy winds using the NWP based parameterization</cd:Description>
+              <cd:Field name="Apply_Correction">
+                <cd:Type namexml="Apply_Correction">
+                  <cd:Integer format="ascii">
+                    <cd:Description>Switch that controls wether the response correction is applied or not.</cd:Description>
+                    <cd:NativeType>uint8</cd:NativeType>
+                    <cd:Mapping string="FALSE" value="0"/>
+                    <cd:Mapping string="False" value="0"/>
+                    <cd:Mapping string="false" value="0"/>
+                    <cd:Mapping string="TRUE" value="1"/>
+                    <cd:Mapping string="True" value="1"/>
+                    <cd:Mapping string="true" value="1"/>
+                  </cd:Integer>
+                </cd:Type>
+              </cd:Field>
+              <cd:Field name="List_of_Alphas">
+                <cd:Record namexml="List_of_Alphas">
+                  <cd:Description>List of alpha values as used by the parameterization for the response correction</cd:Description>
+                  <cd:Attribute name="count"/>
+                  <cd:Field name="Alpha">
+                    <cd:Array>
+                      <cd:Dimension/>
+                      <cd:Type namexml="Alpha">
+                        <cd:Attribute name="unit"/>
+                        <cd:Float namexml="Alpha">
+                          <cd:Description>Alpha</cd:Description>
+                          <cd:Unit>MHz**-order</cd:Unit>
+                          <cd:NativeType>double</cd:NativeType>
+                        </cd:Float>
+                      </cd:Type>
+                    </cd:Array>
+                  </cd:Field>
+                </cd:Record>
+              </cd:Field>
+              <cd:Field name="List_of_Betas">
+                <cd:Record namexml="List_of_Betas">
+                  <cd:Description>List of beta values as used by the parameterization for the response correction</cd:Description>
+                  <cd:Attribute name="count"/>
+                  <cd:Field name="Beta">
+                    <cd:Array>
+                      <cd:Dimension/>
+                      <cd:Type namexml="Beta">
+                        <cd:Attribute name="unit"/>
+                        <cd:Float namexml="Beta">
+                          <cd:Description>Beta</cd:Description>
+                          <cd:Unit>MHz**-order</cd:Unit>
+                          <cd:NativeType>double</cd:NativeType>
+                        </cd:Float>
+                      </cd:Type>
+                    </cd:Array>
+                  </cd:Field>
+                </cd:Record>
+              </cd:Field>
+            </cd:Record>
+          </cd:Field>
+          <cd:Field name="RR_Meas_Threshold_Min">
+            <cd:Type namexml="RR_Meas_Threshold_Min">
+              <cd:Float format="ascii">
+                <cd:Description>Minimum Rayleigh response value allowed for the measurement signal for producing a valid wind.</cd:Description>
+                <cd:Unit>m/s</cd:Unit>
+                <cd:NativeType>double</cd:NativeType>
+              </cd:Float>
+            </cd:Type>
+          </cd:Field>
+          <cd:Field name="RR_Meas_Threshold_Max">
+            <cd:Type namexml="RR_Meas_Threshold_Max">
+              <cd:Float format="ascii">
+                <cd:Description>Maximum Rayleigh response value allowed for the measurement signal for producing a valid wind.</cd:Description>
+                <cd:Unit>m/s</cd:Unit>
+                <cd:NativeType>double</cd:NativeType>
+              </cd:Float>
+            </cd:Type>
+          </cd:Field>
+          <cd:Field name="RR_IntRef_Threshold_Min">
+            <cd:Type namexml="RR_IntRef_Threshold_Min">
+              <cd:Float format="ascii">
+                <cd:Description>Minimum Rayleigh response value allowed for the internal reference signal for producing a valid wind.</cd:Description>
+                <cd:Unit>m/s</cd:Unit>
+                <cd:NativeType>double</cd:NativeType>
+              </cd:Float>
+            </cd:Type>
+          </cd:Field>
+          <cd:Field name="RR_IntRef_Threshold_Max">
+            <cd:Type namexml="RR_IntRef_Threshold_Max">
+              <cd:Float format="ascii">
+                <cd:Description>Maximum Rayleigh response value allowed for the internal reference signal for producing a valid wind.</cd:Description>
+                <cd:Unit>m/s</cd:Unit>
+                <cd:NativeType>double</cd:NativeType>
+              </cd:Float>
+            </cd:Type>
+          </cd:Field>
+          <cd:Field name="LOS_min">
+            <cd:Type namexml="LOS_min">
+              <cd:Attribute name="unit">
+                <cd:FixedValue>m/s</cd:FixedValue>
+              </cd:Attribute>
+              <cd:Float format="ascii">
+                <cd:Description>Minimum atmospheric signal LOS speed component</cd:Description>
+                <cd:Unit>m/s</cd:Unit>
+                <cd:NativeType>double</cd:NativeType>
+              </cd:Float>
+            </cd:Type>
+          </cd:Field>
+          <cd:Field name="LOS_max">
+            <cd:Type namexml="LOS_max">
+              <cd:Attribute name="unit">
+                <cd:FixedValue>m/s</cd:FixedValue>
+              </cd:Attribute>
+              <cd:Float format="ascii">
+                <cd:Description>Maximum atmospheric signal LOS speed component</cd:Description>
+                <cd:Unit>m/s</cd:Unit>
+                <cd:NativeType>double</cd:NativeType>
+              </cd:Float>
+            </cd:Type>
+          </cd:Field>
+          <cd:Field name="LOS_ref_min">
+            <cd:Type namexml="LOS_ref_min">
+              <cd:Attribute name="unit">
+                <cd:FixedValue>m/s</cd:FixedValue>
+              </cd:Attribute>
+              <cd:Float format="ascii">
+                <cd:Description>Minimum reference signal LOS speed component</cd:Description>
+                <cd:Unit>m/s</cd:Unit>
+                <cd:NativeType>double</cd:NativeType>
+              </cd:Float>
+            </cd:Type>
+          </cd:Field>
+          <cd:Field name="LOS_ref_max">
+            <cd:Type namexml="LOS_ref_max">
+              <cd:Attribute name="unit">
+                <cd:FixedValue>m/s</cd:FixedValue>
+              </cd:Attribute>
+              <cd:Float format="ascii">
+                <cd:Description>Maximum reference signal LOS speed component</cd:Description>
+                <cd:Unit>m/s</cd:Unit>
+                <cd:NativeType>double</cd:NativeType>
+              </cd:Float>
+            </cd:Type>
+          </cd:Field>
+          <cd:Field name="dLOSdR_min">
+            <cd:Type namexml="dLOSdR_min">
+              <cd:Attribute name="unit">
+                <cd:FixedValue>m/s</cd:FixedValue>
+              </cd:Attribute>
+              <cd:Float format="ascii">
+                <cd:Description>Minimum gradient of LOS speed component with respect to rayleigh Response</cd:Description>
+                <cd:Unit>m/s</cd:Unit>
+                <cd:NativeType>double</cd:NativeType>
+              </cd:Float>
+            </cd:Type>
+          </cd:Field>
+          <cd:Field name="dLOSdR_max">
+            <cd:Type namexml="dLOSdR_max">
+              <cd:Attribute name="unit">
+                <cd:FixedValue>m/s</cd:FixedValue>
+              </cd:Attribute>
+              <cd:Float format="ascii">
+                <cd:Description>Maximum gradient of LOS speed component with respect to rayleigh Response</cd:Description>
+                <cd:Unit>m/s</cd:Unit>
+                <cd:NativeType>double</cd:NativeType>
+              </cd:Float>
+            </cd:Type>
+          </cd:Field>
+          <cd:Field name="dLOSdT_min">
+            <cd:Type namexml="dLOSdT_min">
+              <cd:Attribute name="unit">
+                <cd:FixedValue>m/s/K</cd:FixedValue>
+              </cd:Attribute>
+              <cd:Float format="ascii">
+                <cd:Description>Minimum gradient of LOS speed component with respect to atmospheric temperature</cd:Description>
+                <cd:Unit>m/s/K</cd:Unit>
+                <cd:NativeType>double</cd:NativeType>
+              </cd:Float>
+            </cd:Type>
+          </cd:Field>
+          <cd:Field name="dLOSdT_max">
+            <cd:Type namexml="dLOSdT_max">
+              <cd:Attribute name="unit">
+                <cd:FixedValue>m/s/K</cd:FixedValue>
+              </cd:Attribute>
+              <cd:Float format="ascii">
+                <cd:Description>Maximum gradient of LOS speed component with respect to atmospheric temperature</cd:Description>
+                <cd:Unit>m/s/K</cd:Unit>
+                <cd:NativeType>double</cd:NativeType>
+              </cd:Float>
+            </cd:Type>
+          </cd:Field>
+          <cd:Field name="dLOSdP_min">
+            <cd:Type namexml="dLOSdP_min">
+              <cd:Attribute name="unit">
+                <cd:FixedValue>m/s/hPa</cd:FixedValue>
+              </cd:Attribute>
+              <cd:Float format="ascii">
+                <cd:Description>Minimum gradient of LOS speed component with respect to atmospheric pressure</cd:Description>
+                <cd:Unit>m/s/hPa</cd:Unit>
+                <cd:NativeType>double</cd:NativeType>
+              </cd:Float>
+            </cd:Type>
+          </cd:Field>
+          <cd:Field name="dLOSdP_max">
+            <cd:Type namexml="dLOSdP_max">
+              <cd:Attribute name="unit">
+                <cd:FixedValue>m/s/hPa</cd:FixedValue>
+              </cd:Attribute>
+              <cd:Float format="ascii">
+                <cd:Description>Maximum gradient of LOS speed component with respect to atmospheric pressure</cd:Description>
+                <cd:Unit>m/s/hPa</cd:Unit>
+                <cd:NativeType>double</cd:NativeType>
+              </cd:Float>
+            </cd:Type>
+          </cd:Field>
+          <cd:Field name="dLOSdrho_min">
+            <cd:Type namexml="dLOSdrho_min">
+              <cd:Attribute name="unit">
+                <cd:FixedValue>m/s</cd:FixedValue>
+              </cd:Attribute>
+              <cd:Float format="ascii">
+                <cd:Description>Minimum gradient of LOS speed component with respect to atmospheric scattering ratio</cd:Description>
+                <cd:Unit>m/s</cd:Unit>
+                <cd:NativeType>double</cd:NativeType>
+              </cd:Float>
+            </cd:Type>
+          </cd:Field>
+          <cd:Field name="dLOSdrho_max">
+            <cd:Type namexml="dLOSdrho_max">
+              <cd:Attribute name="unit">
+                <cd:FixedValue>m/s</cd:FixedValue>
+              </cd:Attribute>
+              <cd:Float format="ascii">
+                <cd:Description>Maximum gradient of LOS speed component with respect to atmospheric scattering ratio</cd:Description>
+                <cd:Unit>m/s</cd:Unit>
+                <cd:NativeType>double</cd:NativeType>
+              </cd:Float>
+            </cd:Type>
+          </cd:Field>
+        </cd:Record>
+      </cd:Field>
+      <cd:Field name="AMD_Matchup_Params">
+        <cd:Record namexml="AMD_Matchup_Params">
+          <cd:Description>Parameters used by the L1B-AMD matchup algorithm</cd:Description>
+          <cd:Field name="Matchup_Method">
+            <cd:Text namexml="Matchup_Method">
+              <cd:Description>Matchup method to be used for L1B-AMD matchup. 0: one-for-one between L1B BRC and AMD DSR, 1: Nearest-neighbour in space and time</cd:Description>
+            </cd:Text>
+          </cd:Field>
+          <cd:Field name="Max_Allowed_Time_Diff">
+            <cd:Type namexml="Max_Allowed_Time_Diff">
+              <cd:Attribute name="unit">
+                <cd:FixedValue>s</cd:FixedValue>
+              </cd:Attribute>
+              <cd:Float format="ascii">
+                <cd:Description>Maximum allowed time difference in seconds between L1B BRC and AMD DSR</cd:Description>
+                <cd:Unit>s</cd:Unit>
+                <cd:NativeType>double</cd:NativeType>
+              </cd:Float>
+            </cd:Type>
+          </cd:Field>
+          <cd:Field name="Max_Allowed_Distance">
+            <cd:Type namexml="Max_Allowed_Distance">
+              <cd:Attribute name="unit">
+                <cd:FixedValue>km</cd:FixedValue>
+              </cd:Attribute>
+              <cd:Float format="ascii">
+                <cd:Description>Maximum allowed distance in kilometres between L1B BRC and AMD DSR</cd:Description>
+                <cd:Unit>km</cd:Unit>
+                <cd:NativeType>double</cd:NativeType>
+              </cd:Float>
+            </cd:Type>
+          </cd:Field>
+          <cd:Field name="Max_Analysis_Time_Diff">
+            <cd:Type namexml="Max_Analysis_Time_Diff">
+              <cd:Attribute name="unit">
+                <cd:FixedValue>s</cd:FixedValue>
+              </cd:Attribute>
+              <cd:Float format="ascii">
+                <cd:Description>Maximum Analysis time difference in seconds</cd:Description>
+                <cd:Unit>s</cd:Unit>
+                <cd:NativeType>double</cd:NativeType>
+              </cd:Float>
+            </cd:Type>
+          </cd:Field>
+        </cd:Record>
+      </cd:Field>
+      <cd:Field name="AMD_Interpolation_Settings">
+        <cd:Record namexml="AMD_Interpolation_Settings">
+          <cd:Description>Parameters used by the AUX_MET data interpolation algorithm.</cd:Description>
+          <cd:Field name="convert_Z_to_z">
+            <cd:Type namexml="convert_Z_to_z">
+              <cd:Integer format="ascii">
+                <cd:Description>Explanation.</cd:Description>
+                <cd:NativeType>uint8</cd:NativeType>
+                <cd:Mapping string="FALSE" value="0"/>
+                <cd:Mapping string="False" value="0"/>
+                <cd:Mapping string="false" value="0"/>
+                <cd:Mapping string="TRUE" value="1"/>
+                <cd:Mapping string="True" value="1"/>
+                <cd:Mapping string="true" value="1"/>
+              </cd:Integer>
+            </cd:Type>
+          </cd:Field>
+          <cd:Field name="Pressure">
+            <cd:Record namexml="Pressure">
+              <cd:Description>Settings used for inperpolation and extrapolation of the pressure profile against altitude in the external AUX_MET data.</cd:Description>
+              <cd:Field name="Interpolation_Type">
+                <cd:Text namexml="Interpolation_Type">
+                  <cd:Description>Type of interpolation used.</cd:Description>
+                </cd:Text>
+              </cd:Field> 
+              <cd:Field name="Extrapolation_Type_Up">
+                <cd:Text namexml="Extrapolation_Type_Up">
+                  <cd:Description>Type of extrapolation used above the highest provided altitude.</cd:Description>
+                </cd:Text>
+              </cd:Field> 
+              <cd:Field name="Extrapolation_Type_Down">
+                <cd:Text namexml="Extrapolation_Type_Down">
+                  <cd:Description>Type of extrapolation used below the lowest provided altitude.</cd:Description>
+                </cd:Text>
+              </cd:Field> 
+            </cd:Record>
+          </cd:Field> 
+          <cd:Field name="Temperature">
+            <cd:Record namexml="Temperature">
+              <cd:Description>Settings used for inperpolation and extrapolation of the temperature profile against altitude in the external AUX_MET data.</cd:Description>
+              <cd:Field name="Interpolation_Type">
+                <cd:Text namexml="Interpolation_Type">
+                  <cd:Description>Type of interpolation used.</cd:Description>
+                </cd:Text>
+              </cd:Field> 
+              <cd:Field name="Extrapolation_Type_Up">
+                <cd:Text namexml="Extrapolation_Type_Up">
+                  <cd:Description>Type of extrapolation used above the highest provided altitude.</cd:Description>
+                </cd:Text>
+              </cd:Field> 
+              <cd:Field name="Extrapolation_Type_Down">
+                <cd:Text namexml="Extrapolation_Type_Down">
+                  <cd:Description>Type of extrapolation used below the lowest provided altitude.</cd:Description>
+                </cd:Text>
+              </cd:Field> 
+            </cd:Record>
+          </cd:Field> 
+          <cd:Field name="Wind_U_Component">
+            <cd:Record namexml="Wind_U_Component">
+              <cd:Description>Settings used for inperpolation and extrapolation of the profile of U wind component against altitude in the external AUX_MET data.</cd:Description>
+              <cd:Field name="Interpolation_Type">
+                <cd:Text namexml="Interpolation_Type">
+                  <cd:Description>Type of interpolation used.</cd:Description>
+                </cd:Text>
+              </cd:Field> 
+              <cd:Field name="Extrapolation_Type_Up">
+                <cd:Text namexml="Extrapolation_Type_Up">
+                  <cd:Description>Type of extrapolation used above the highest provided altitude.</cd:Description>
+                </cd:Text>
+              </cd:Field> 
+              <cd:Field name="Extrapolation_Type_Down">
+                <cd:Text namexml="Extrapolation_Type_Down">
+                  <cd:Description>Type of extrapolation used below the lowest provided altitude.</cd:Description>
+                </cd:Text>
+              </cd:Field>
+            </cd:Record>
+          </cd:Field> 
+          <cd:Field name="Wind_V_Component">
+            <cd:Record namexml="Wind_V_Component">
+              <cd:Description>Settings used for inperpolation and extrapolation of the profile of V wind component against altitude in the external AUX_MET data.</cd:Description>
+              <cd:Field name="Interpolation_Type">
+                <cd:Text namexml="Interpolation_Type">
+                  <cd:Description>Type of interpolation used.</cd:Description>
+                </cd:Text>
+              </cd:Field> 
+              <cd:Field name="Extrapolation_Type_Up">
+                <cd:Text namexml="Extrapolation_Type_Up">
+                  <cd:Description>Type of extrapolation used above the highest provided altitude.</cd:Description>
+                </cd:Text>
+              </cd:Field> 
+              <cd:Field name="Extrapolation_Type_Down">
+                <cd:Text namexml="Extrapolation_Type_Down">
+                  <cd:Description>Type of extrapolation used below the lowest provided altitude.</cd:Description>
+                </cd:Text>
+              </cd:Field>
+            </cd:Record>
+          </cd:Field>
+        </cd:Record>
+      </cd:Field>
+      <cd:Field name="CLM_Matchup_Params">
+        <cd:Record namexml="CLM_Matchup_Params">
+          <cd:Description>Parameters used by the L1B-CLM matchup algorithm</cd:Description>
+          <cd:Field name="Matchup_Method">
+            <cd:Text namexml="Matchup_Method">
+              <cd:Description>Matchup method to be used for L1B-CLM matchup. 0: TBD, 1: Nearest-neighbour in space and time</cd:Description>
+            </cd:Text>
+          </cd:Field>
+        </cd:Record>
+      </cd:Field>
+      <cd:Field name="ZWC_Params">
+        <cd:Record namexml="ZWC_Params">
+          <cd:Description>Parameters used to specify the L2B Zero-Wind Correction</cd:Description>
+          <cd:Field name="ZWC_Scheme_Mie">
+            <cd:Text namexml="ZWC_Scheme_Mie">
+              <cd:Description>Zero-Wind Correction scheme to be used for L2B Mie processing.</cd:Description>
+            </cd:Text>
+          </cd:Field>
+          <cd:Field name="ZWC_Scheme_Rayleigh">
+            <cd:Text namexml="ZWC_Scheme_Rayleigh">
+              <cd:Description>Zero-Wind Correction scheme to be used for L2B Rayleigh processing.</cd:Description>
+            </cd:Text>
+          </cd:Field>
+          <cd:Field name="Mie_Ground_Correction_Weighting">
+            <cd:Type namexml="Mie_Ground_Correction_Weighting">
+              <cd:Float format="ascii">
+                <cd:Description>Mie ground correction weighting factor</cd:Description>
+                <cd:NativeType>double</cd:NativeType>
+              </cd:Float>
+            </cd:Type>
+          </cd:Field>
+          <cd:Field name="Mie_HBE_Ground_Correction_Weighting">
+            <cd:Type namexml="Mie_HBE_Ground_Correction_Weighting">
+              <cd:Float format="ascii">
+                <cd:Description>Mie HBE ground correction weighting factor</cd:Description>
+                <cd:NativeType>double</cd:NativeType>
+              </cd:Float>
+            </cd:Type>
+          </cd:Field>
+          <cd:Field name="Rayleigh_Ground_Correction_Weighting">
+            <cd:Type namexml="Rayleigh_Ground_Correction_Weighting">
+              <cd:Float format="ascii">
+                <cd:Description>Rayleigh ground correction weighting factor</cd:Description>
+                <cd:NativeType>double</cd:NativeType>
+              </cd:Float>
+            </cd:Type>
+          </cd:Field>
+          <cd:Field name="Rayleigh_HBE_Ground_Correction_Weighting">
+            <cd:Type namexml="Rayleigh_HBE_Ground_Correction_Weighting">
+              <cd:Float format="ascii">
+                <cd:Description>Rayleigh HBE ground correction weighting factor</cd:Description>
+                <cd:NativeType>double</cd:NativeType>
+              </cd:Float>
+            </cd:Type>
+          </cd:Field>
+          <cd:Field name="Mie_Rayleigh_Ground_Correction_Weighting">
+            <cd:Type namexml="Mie_Rayleigh_Ground_Correction_Weighting">
+              <cd:Float format="ascii">
+                <cd:Description>Mie-Rayleigh ground correction weighting factor</cd:Description>
+                <cd:NativeType>double</cd:NativeType>
+              </cd:Float>
+            </cd:Type>
+          </cd:Field>
+          <cd:Field name="Mie_Rayleigh_HBE_Ground_Correction_Weighting">
+            <cd:Type namexml="Mie_Rayleigh_HBE_Ground_Correction_Weighting">
+              <cd:Float format="ascii">
+                <cd:Description>Mie-Rayleigh HBE ground correction weighting factor</cd:Description>
+                <cd:NativeType>double</cd:NativeType>
+              </cd:Float>
+            </cd:Type>
+          </cd:Field>
+          <cd:Field name="Mie_Rayleigh_Ground_Correction_Offset">
+            <cd:Type namexml="Mie_Rayleigh_Ground_Correction_Offset">
+              <cd:Attribute name="unit">
+                <cd:FixedValue>m/s</cd:FixedValue>
+              </cd:Attribute>
+              <cd:Float format="ascii">
+                <cd:Unit>m/s</cd:Unit>
+                <cd:Description>Mie-Rayleigh ground correction weighting offset</cd:Description>
+                <cd:NativeType>double</cd:NativeType>
+              </cd:Float>
+            </cd:Type>
+          </cd:Field>
+        </cd:Record>
+      </cd:Field>
+      <cd:Field name="RDB_Params">
+        <cd:Record namexml="RDB_Params">
+          <cd:Description>Parameters to control the Range Dependent Bias (RDB) correction</cd:Description>
+          <cd:Field name="Do_Mie_RDB_corr">
+            <cd:Type namexml="Do_Mie_RDB_corr">
+              <cd:Integer format="ascii">
+                <cd:Description>Switch to select whether Mie Range Dependent Bias correction should be done in the L2BP</cd:Description>
+                <cd:NativeType>uint8</cd:NativeType>
+                <cd:Mapping string="FALSE" value="0"/>
+                <cd:Mapping string="False" value="0"/>
+                <cd:Mapping string="false" value="0"/>
+                <cd:Mapping string="TRUE" value="1"/>
+                <cd:Mapping string="True" value="1"/>
+                <cd:Mapping string="true" value="1"/>
+              </cd:Integer>
+            </cd:Type>
+          </cd:Field>
+          <cd:Field name="Do_Rayleigh_RDB_corr">
+            <cd:Type namexml="Do_Rayleigh_RDB_corr">
+              <cd:Integer format="ascii">
+                <cd:Description>Switch to select whether Rayleigh Range Dependent Bias correction should be done in the L2BP</cd:Description>
+                <cd:NativeType>uint8</cd:NativeType>
+                <cd:Mapping string="FALSE" value="0"/>
+                <cd:Mapping string="False" value="0"/>
+                <cd:Mapping string="false" value="0"/>
+                <cd:Mapping string="TRUE" value="1"/>
+                <cd:Mapping string="True" value="1"/>
+                <cd:Mapping string="true" value="1"/>
+              </cd:Integer>
+            </cd:Type>
+          </cd:Field>
+        </cd:Record>
+      </cd:Field>
+      <cd:Field name="Ground_Detection_Params">
+        <cd:Record namexml="Ground_Detection_Params">
+          <cd:Description>Parameters to control the additional ground flagging of winds on L2B side for both channels.</cd:Description>
+          <cd:Field name="Mie_Channel_Ground_Detection_Thresholds">
+            <cd:Record namexml="Mie_Channel_Ground_Detection_Thresholds">
+              <cd:Description>Structure holding threshold settings used for additional ground flagging of winds on top of the L1B defined ground detection results.</cd:Description>
+              <cd:Field name="Min_Height_Above_L1B_DEM">
+                <cd:Type namexml="Min_Height_Above_L1B_DEM">
+                  <cd:Attribute name="unit"/>
+                  <cd:Float format="ascii">
+                    <cd:Description>Extra margin above DEM as reported by the L1B processor for which winds will be flagged invalid. A negative value will disable this DEM check. A special value of -128 can be used to trigger a compatibility mode for which the maximum DEM height in the group will be used for this check, and not the local measurement level DEM value. The actual margin value will be set back to 0 if you use this. This will mimic the implementation that was present in L2BP v3.50 and before, and is mainly intended to be used to test the difference between the old and the new implementation.</cd:Description>
+                    <cd:Unit>m</cd:Unit>
+                    <cd:NativeType>double</cd:NativeType>
+                  </cd:Float>
+                </cd:Type>
+              </cd:Field>
+              <cd:Field name="Min_Height_Above_L1B_Detected_Ground">
+                <cd:Type namexml="Min_Height_Above_L1B_Detected_Ground">
+                  <cd:Attribute name="unit"/>
+                  <cd:Float format="ascii">
+                    <cd:Description>Extra margin above detected ground as reported by the L1B processor for which winds will be flagged invalid. A negative value will disable this ground check.</cd:Description>
+                    <cd:Unit>m</cd:Unit>
+                    <cd:NativeType>double</cd:NativeType>
+                  </cd:Float>
+                </cd:Type>
+              </cd:Field>
+              <cd:Field name="Min_Height_Above_AUX_MET_DEM">
+                <cd:Type namexml="Min_Height_Above_AUX_MET_DEM">
+                  <cd:Attribute name="unit"/>
+                  <cd:Float format="ascii">
+                    <cd:Description>Extra margin above DEM as reported by the AUX_MET file for which winds will be flagged invalid. A negative value will disable this AUX_MET DEM check.</cd:Description>
+                    <cd:Unit>m</cd:Unit>
+                    <cd:NativeType>double</cd:NativeType>
+                  </cd:Float>
+                </cd:Type>
+              </cd:Field>
+            </cd:Record>
+          </cd:Field>
+          <cd:Field name="Rayleigh_Channel_Ground_Detection_Thresholds">
+            <cd:Record namexml="Rayleigh_Channel_Ground_Detection_Thresholds">
+              <cd:Description>Structure holding threshold settings used for additional ground flagging of winds on top of the L1B defined ground detection results.</cd:Description>
+              <cd:Field name="Min_Height_Above_L1B_DEM">
+                <cd:Type namexml="Min_Height_Above_L1B_DEM">
+                  <cd:Attribute name="unit"/>
+                  <cd:Float format="ascii">
+                    <cd:Description>Extra margin above DEM as reported by the L1B processor for which winds will be flagged invalid</cd:Description>
+                    <cd:Unit>m</cd:Unit>
+                    <cd:NativeType>double</cd:NativeType>
+                  </cd:Float>
+                </cd:Type>
+              </cd:Field>
+              <cd:Field name="Min_Height_Above_L1B_Detected_Ground">
+                <cd:Type namexml="Min_Height_Above_L1B_Detected_Ground">
+                  <cd:Attribute name="unit"/>
+                  <cd:Float format="ascii">
+                    <cd:Description>Extra margin above detected ground as reported by the L1B processor for which winds will be flagged invalid</cd:Description>
+                    <cd:Unit>m</cd:Unit>
+                    <cd:NativeType>double</cd:NativeType>
+                  </cd:Float>
+                </cd:Type>
+              </cd:Field>
+              <cd:Field name="Min_Height_Above_AUX_MET_DEM">
+                <cd:Type namexml="Min_Height_Above_AUX_MET_DEM">
+                  <cd:Attribute name="unit"/>
+                  <cd:Float format="ascii">
+                    <cd:Description>Extra margin above DEM as reported by the AUX_MET file for which winds will be flagged invalid</cd:Description>
+                    <cd:Unit>m</cd:Unit>
+                    <cd:NativeType>double</cd:NativeType>
+                  </cd:Float>
+                </cd:Type>
+              </cd:Field>
+            </cd:Record>
+          </cd:Field>
+        </cd:Record>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="Screening_Params">
+    <cd:Record namexml="Screening_Params">
+      <cd:Description>Collected Screening Parameters used for testing the input files and the generated results</cd:Description>
+      <cd:Field name="L1B_Screening_Params">
+        <cd:Record namexml="L1B_Screening_Params">
+          <cd:Description>Parameters used for screening the L1B input file</cd:Description>
+          <cd:Field name="L1B_Geolocation_Screening_Params">
+            <cd:Record namexml="L1B_Geolocation_Screening_Params">
+              <cd:Field name="Latitude_Check">
+                <cd:NamedType id="Level_1B_Screening_Params_Check"/>
+              </cd:Field>
+              <cd:Field name="Longitude_Check">
+                <cd:NamedType id="Level_1B_Screening_Params_Check"/>
+              </cd:Field>
+              <cd:Field name="Altitude_Check">
+                <cd:NamedType id="Level_1B_Screening_Params_Check"/>
+              </cd:Field>
+              <cd:Field name="Altitude_DEM_Check">
+                <cd:NamedType id="Level_1B_Screening_Params_Check"/>
+              </cd:Field>
+              <cd:Field name="Geoid_Separation_Check">
+                <cd:NamedType id="Level_1B_Screening_Params_Check"/>
+              </cd:Field>
+              <cd:Field name="Topocentric_Elevation_Check">
+                <cd:NamedType id="Level_1B_Screening_Params_Check"/>
+              </cd:Field>
+              <cd:Field name="Topocentric_Azimuth_Check">
+                <cd:NamedType id="Level_1B_Screening_Params_Check"/>
+              </cd:Field>
+              <cd:Field name="AOCS_LOS_Velocity_Check">
+                <cd:NamedType id="Level_1B_Screening_Params_Check"/>
+              </cd:Field>
+            </cd:Record>
+          </cd:Field>
+          <cd:Field name="L1B_Obs_Screening_Params">
+            <cd:Record namexml="L1B_Obs_Screening_Params">
+              <cd:Description>Parameters used for screening the L1B observations from the L1B input file</cd:Description>
+              <cd:Field name="L1B_Laser_Freq_Unlocked_Check">
+                <cd:NamedType id="Level_1B_Screening_Params_Check"/>
+              </cd:Field>
+              <cd:Field name="L1B_Ref_Pulses_Unlocked_Check">
+                <cd:NamedType id="Level_1B_Screening_Params_Check"/>
+              </cd:Field>
+              <cd:Field name="L1B_Laser_Freq_Offset_Check">
+                <cd:NamedType id="Level_1B_Screening_Params_Check"/>
+              </cd:Field>
+              <cd:Field name="L1B_Laser_UV_Energy_Check">
+                <cd:NamedType id="Level_1B_Screening_Params_Check"/>
+              </cd:Field>
+              <cd:Field name="L1B_Laser_Freq_Offs_Stdev_Check">
+                <cd:NamedType id="Level_1B_Screening_Params_Check"/>
+              </cd:Field>
+              <cd:Field name="L1B_Laser_UV_Energy_Stdev_Check">
+                <cd:NamedType id="Level_1B_Screening_Params_Check"/>
+              </cd:Field>
+              <cd:Field name="L1B_Mie_Mean_Emit_Freq_Check">
+                <cd:NamedType id="Level_1B_Screening_Params_Check"/>
+              </cd:Field>
+              <cd:Field name="L1B_Mie_Emit_Freq_Stdev_Check">
+                <cd:NamedType id="Level_1B_Screening_Params_Check"/>
+              </cd:Field>
+              <cd:Field name="L1B_Rayleigh_Mean_Emit_Freq_Check">
+                <cd:NamedType id="Level_1B_Screening_Params_Check"/>
+              </cd:Field>
+              <cd:Field name="L1B_Rayleigh_Emit_Freq_Stdev_Check">
+                <cd:NamedType id="Level_1B_Screening_Params_Check"/>
+              </cd:Field>
+              <cd:Field name="L1B_Sat_Not_on_Target_Check">
+                <cd:NamedType id="Level_1B_Screening_Params_Check"/>
+              </cd:Field>
+              <cd:Field name="L1B_Mie_Corrupt_Check">
+                <cd:NamedType id="Level_1B_Screening_Params_Check"/>
+              </cd:Field>
+              <cd:Field name="L1B_Rayleigh_Corrupt_Check">
+                <cd:NamedType id="Level_1B_Screening_Params_Check"/>
+              </cd:Field>
+              <cd:Field name="L1B_Mie_Ref_Pulses_Corrupt_Check">
+                <cd:NamedType id="Level_1B_Screening_Params_Check"/>
+              </cd:Field>
+              <cd:Field name="L1B_Rayl_Ref_Pulses_Corrupt_Check">
+                <cd:NamedType id="Level_1B_Screening_Params_Check"/>
+              </cd:Field>
+              <cd:Field name="L1B_Mie_Invalid_Meas_Check">
+                <cd:NamedType id="Level_1B_Screening_Params_Check"/>
+              </cd:Field>
+              <cd:Field name="L1B_Mie_Invalid_Ref_Pulses_Check">
+                <cd:NamedType id="Level_1B_Screening_Params_Check"/>
+              </cd:Field>
+              <cd:Field name="L1B_Rayl_Invalid_Meas_Check">
+                <cd:NamedType id="Level_1B_Screening_Params_Check"/>
+              </cd:Field>
+              <cd:Field name="L1B_Rayl_Invalid_Ref_Pulses_Check">
+                <cd:NamedType id="Level_1B_Screening_Params_Check"/>
+              </cd:Field>
+            </cd:Record>
+          </cd:Field>
+          <cd:Field name="L1B_Mie_Meas_Screening_Params">
+            <cd:Record namexml="L1B_Mie_Meas_Screening_Params">
+              <cd:Description>Parameters used for screening the L1B Mie Measurements from the L1B input file</cd:Description>
+              <cd:Field name="L1B_Mie_Meas_Invalid_Ref_Pulses_Check">
+                <cd:NamedType id="Level_1B_Screening_Params_Check"/>
+              </cd:Field>
+              <cd:Field name="L1B_Avg_Laser_Freq_Offset_Check">
+                <cd:NamedType id="Level_1B_Screening_Params_Check"/>
+              </cd:Field>
+              <cd:Field name="L1B_Avg_UV_Energy_Check">
+                <cd:NamedType id="Level_1B_Screening_Params_Check"/>
+              </cd:Field>
+              <cd:Field name="L1B_Laser_Freq_Offset_Stdev_Check">
+                <cd:NamedType id="Level_1B_Screening_Params_Check"/>
+              </cd:Field>
+              <cd:Field name="L1B_UV_Energy_Stdev_Check">
+                <cd:NamedType id="Level_1B_Screening_Params_Check"/>
+              </cd:Field>
+              <cd:Field name="L1B_Vel_of_Att_Uncertainty_Error_Check">
+                <cd:NamedType id="Level_1B_Screening_Params_Check"/>
+              </cd:Field>
+              <cd:Field name="L1B_Mie_Mean_Emitted_Freq_Check">
+                <cd:NamedType id="Level_1B_Screening_Params_Check"/>
+              </cd:Field>
+              <cd:Field name="L1B_Mie_Emitted_Freq_Stdev_Check">
+                <cd:NamedType id="Level_1B_Screening_Params_Check"/>
+              </cd:Field>
+              <cd:Field name="Mie_Meas_Invalid_Check">
+                <cd:NamedType id="Level_1B_Screening_Params_Check"/>
+              </cd:Field>
+              <cd:Field name="L1B_Scattering_Ratio_Check">
+                <cd:NamedType id="Level_1B_Screening_Params_Check"/>
+              </cd:Field>
+              <cd:Field name="L1B_Mie_SNR_Check">
+                <cd:NamedType id="Level_1B_Screening_Params_Check"/>
+              </cd:Field>
+            </cd:Record>
+          </cd:Field>
+          <cd:Field name="L1B_Rayleigh_Meas_Screening_Params">
+            <cd:Record namexml="L1B_Rayleigh_Meas_Screening_Params">
+              <cd:Description>Parameters used for screening the L1B Rayleigh Measurements from the L1B input file</cd:Description>
+              <cd:Field name="L1B_Rayleigh_Meas_Invalid_Ref_Pulses_Check">
+                <cd:NamedType id="Level_1B_Screening_Params_Check"/>
+              </cd:Field>
+              <cd:Field name="L1B_Avg_Laser_Freq_Offset_Check">
+                <cd:NamedType id="Level_1B_Screening_Params_Check"/>
+              </cd:Field>
+              <cd:Field name="L1B_Avg_UV_Energy_Check">
+                <cd:NamedType id="Level_1B_Screening_Params_Check"/>
+              </cd:Field>
+              <cd:Field name="L1B_Laser_Freq_Offset_Stdev_Check">
+                <cd:NamedType id="Level_1B_Screening_Params_Check"/>
+              </cd:Field>
+              <cd:Field name="L1B_UV_Energy_Stdev_Check">
+                <cd:NamedType id="Level_1B_Screening_Params_Check"/>
+              </cd:Field>
+              <cd:Field name="L1B_Vel_of_Att_Uncertainty_Error_Check">
+                <cd:NamedType id="Level_1B_Screening_Params_Check"/>
+              </cd:Field>
+              <cd:Field name="L1B_Rayleigh_Mean_Emitted_Freq_Check">
+                <cd:NamedType id="Level_1B_Screening_Params_Check"/>
+              </cd:Field>
+              <cd:Field name="L1B_Rayleigh_Emitted_Freq_Stdev_Check">
+                <cd:NamedType id="Level_1B_Screening_Params_Check"/>
+              </cd:Field>
+              <cd:Field name="L1B_Rayleigh_SNR_Check">
+                <cd:NamedType id="Level_1B_Screening_Params_Check"/>
+              </cd:Field>
+              <cd:Field name="Pixel_Saturation_Check">
+                <cd:NamedType id="Level_1B_Screening_Params_Check"/>
+              </cd:Field>
+              <cd:Field name="Rayl_Meas_Invalid_Check">
+                <cd:NamedType id="Level_1B_Screening_Params_Check"/>
+              </cd:Field>
+              <cd:Field name="Rayl_Response_Check">
+                <cd:NamedType id="Level_1B_Screening_Params_Check"/>
+              </cd:Field>
+            </cd:Record>
+          </cd:Field>
+          <cd:Field name="L1B_Shared_Meas_Screening_Params">
+            <cd:Record namexml="L1B_Shared_Meas_Screening_Params">
+              <cd:Description>Shared parameters for both channels used for screening the L1B Rayleigh Measurements from the L1B input file.</cd:Description>
+              <cd:Field name="Moonblinding_Check">
+                <cd:NamedType id="Level_1B_Screening_Params_Check"/>
+              </cd:Field>
+            </cd:Record>
+          </cd:Field>
+        </cd:Record>
+      </cd:Field>
+      <cd:Field name="L2B_AMD_Screening_Params">
+        <cd:Record namexml="L2B_AMD_Screening_Params">
+          <cd:Description>Parameters used for screening the L2B_AMD input file</cd:Description>
+          <cd:Field name="L2B_AMD_p_min">
+            <cd:Type namexml="L2B_AMD_p_min">
+              <cd:Attribute name="unit">
+                <cd:FixedValue>Pa</cd:FixedValue>
+              </cd:Attribute>
+              <cd:Float format="ascii">
+                <cd:Description>Minimum pressure allowed in a pressure profile</cd:Description>
+                <cd:Unit>Pa</cd:Unit>
+                <cd:NativeType>double</cd:NativeType>
+              </cd:Float>
+            </cd:Type>
+          </cd:Field>
+          <cd:Field name="L2B_AMD_p_max">
+            <cd:Type namexml="L2B_AMD_p_max">
+              <cd:Attribute name="unit">
+                <cd:FixedValue>Pa</cd:FixedValue>
+              </cd:Attribute>
+              <cd:Float format="ascii">
+                <cd:Description>Maximum pressure allowed in a pressure profile</cd:Description>
+                <cd:Unit>Pa</cd:Unit>
+                <cd:NativeType>double</cd:NativeType>
+              </cd:Float>
+            </cd:Type>
+          </cd:Field>
+          <cd:Field name="L2B_AMD_T_min">
+            <cd:Type namexml="L2B_AMD_T_min">
+              <cd:Attribute name="unit">
+                <cd:FixedValue>K</cd:FixedValue>
+              </cd:Attribute>
+              <cd:Float format="ascii">
+                <cd:Description>Minimum temperature allowed in a temperature profile</cd:Description>
+                <cd:Unit>K</cd:Unit>
+                <cd:NativeType>double</cd:NativeType>
+              </cd:Float>
+            </cd:Type>
+          </cd:Field>
+          <cd:Field name="L2B_AMD_T_max">
+            <cd:Type namexml="L2B_AMD_T_max">
+              <cd:Attribute name="unit">
+                <cd:FixedValue>K</cd:FixedValue>
+              </cd:Attribute>
+              <cd:Float format="ascii">
+                <cd:Description>Maximum temperature allowed in a temperature profile</cd:Description>
+                <cd:Unit>K</cd:Unit>
+                <cd:NativeType>double</cd:NativeType>
+              </cd:Float>
+            </cd:Type>
+          </cd:Field>
+        </cd:Record>
+      </cd:Field>
+      <cd:Field name="RBC_Screening_Params">
+        <cd:Record namexml="RBC_Screening_Params">
+          <cd:Description>Parameters used for screening the AUX RBC input file</cd:Description>
+          <cd:Field name="Fcalib_R_min">
+            <cd:Type namexml="Fcalib_R_min">
+              <cd:Attribute name="unit">
+                <cd:FixedValue>GHz</cd:FixedValue>
+              </cd:Attribute>
+              <cd:Float format="ascii">
+                <cd:Description>Minimum frequency allowed in the Fcalib array of the AUX_RBC input file.</cd:Description>
+                <cd:Unit>GHz</cd:Unit>
+                <cd:NativeType>double</cd:NativeType>
+              </cd:Float>
+            </cd:Type>
+          </cd:Field>
+          <cd:Field name="Fcalib_R_max">
+            <cd:Type namexml="Fcalib_R_max">
+              <cd:Attribute name="unit">
+                <cd:FixedValue>GHz</cd:FixedValue>
+              </cd:Attribute>
+              <cd:Float format="ascii">
+                <cd:Description>Maximum frequency allowed in the Fcalib array of the AUX_RBC input file.</cd:Description>
+                <cd:Unit>GHz</cd:Unit>
+                <cd:NativeType>double</cd:NativeType>
+              </cd:Float>
+            </cd:Type>
+          </cd:Field>
+        </cd:Record>
+      </cd:Field>
+      <cd:Field name="Climatological_Screening">
+        <cd:Record namexml="Climatological_Screening">
+          <cd:Description>Defines a vertical threshold curve for screening the generated HLOS winds.</cd:Description>
+          <cd:Field name="List_of_Allowed_Max_HLOS_Values">
+            <cd:Record namexml="List_of_Allowed_Max_HLOS_Values">
+              <cd:Attribute name="count"/>
+              <cd:Field name="Allowed_Max_HLOS_value">
+                <cd:Array>
+                  <cd:Dimension/>
+                  <cd:Record namexml="Allowed_Max_HLOS_Value">
+                    <cd:Field name="Threshold_Value">
+                      <cd:Type namexml="Threshold_Value">
+                        <cd:Attribute name="unit">
+                          <cd:FixedValue>m/s</cd:FixedValue>
+                        </cd:Attribute>
+                        <cd:Float format="ascii">
+                          <cd:Description></cd:Description>
+                          <cd:Unit>m/s</cd:Unit>
+                          <cd:NativeType>double</cd:NativeType>
+                        </cd:Float>
+                      </cd:Type>
+                    </cd:Field>
+                    <cd:Field name="Altitude">
+                      <cd:Type namexml="Altitude">
+                        <cd:Attribute name="unit">
+                          <cd:FixedValue>km</cd:FixedValue>
+                        </cd:Attribute>
+                        <cd:Float format="ascii">
+                          <cd:Description></cd:Description>
+                          <cd:Unit>km</cd:Unit>
+                          <cd:NativeType>double</cd:NativeType>
+                        </cd:Float>
+                      </cd:Type>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Array>
+              </cd:Field>
+            </cd:Record>
+          </cd:Field>
+        </cd:Record>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="Monitoring_Params">
+    <cd:Record namexml="Monitoring_Params">
+      <cd:Description>Collected Monitoring Parameters used for testing the generated wind results</cd:Description>
+      <cd:Field name="Mie_Estimated_Error_Threshold">
+        <cd:Type namexml="Mie_Estimated_Error_Threshold">
+          <cd:Attribute name="unit">
+            <cd:FixedValue>m/s</cd:FixedValue>
+          </cd:Attribute>
+          <cd:Float format="ascii">
+            <cd:Description>Threshold applied to the estimated Mie wind error to select wind results that will be taken in to account in the O-B statistics. (set it to zero to disable this selection)</cd:Description>
+            <cd:Unit>m/s</cd:Unit>
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="Rayleigh_Estimated_Error_Threshold">
+        <cd:Type namexml="Rayleigh_Estimated_Error_Threshold">
+          <cd:Attribute name="unit">
+            <cd:FixedValue>m/s</cd:FixedValue>
+          </cd:Attribute>
+          <cd:Float format="ascii">
+            <cd:Description>Threshold applied to the estimated Rayleigh wind error to select wind results that will be taken in to account in the O-B statistics. (set it to zero to disable this selection)</cd:Description>
+            <cd:Unit>m/s</cd:Unit>
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="Use_OminB_to_Flag_Hot_Pixels">
+        <cd:Type namexml="Use_OminB_to_Flag_Hot_Pixels">
+          <cd:Integer format="ascii">
+            <cd:Description>Switch controlling wether O-minus-B statistical results will be used for quality control or not. If set to true, the following "Min_Bias_to_Flag_a_Hot_Pixel" parameter is used to decide how to flag the wind results.</cd:Description>
+            <cd:NativeType>uint8</cd:NativeType>
+            <cd:Mapping string="FALSE" value="0"/>
+            <cd:Mapping string="False" value="0"/>
+            <cd:Mapping string="false" value="0"/>
+            <cd:Mapping string="TRUE" value="1"/>
+            <cd:Mapping string="True" value="1"/>
+            <cd:Mapping string="true" value="1"/>
+          </cd:Integer>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="Min_Bias_to_Flag_a_Hot_Pixel">
+        <cd:Type namexml="Min_Bias_to_Flag_a_Hot_Pixel">
+          <cd:Attribute name="unit">
+            <cd:FixedValue>m/s</cd:FixedValue>
+          </cd:Attribute>
+          <cd:Float format="ascii">
+            <cd:Description>Threshold used on bias to decide if the current range bin is affected by an uncorrected hot-pixel or not. If the above "Use_OminB_to_Flag_Hot_Pixels" switch is set to true, and if the average bias for the current file is above this threshold, the produced winds are flagged invalid.</cd:Description>
+            <cd:Unit>m/s</cd:Unit>
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="Min_Nr_of_Winds_OminB_flagging">
+        <cd:Type namexml="Min_Nr_of_Winds_OminB_flagging">
+          <cd:Integer format="ascii">
+            <cd:Description>Threshold used to decide if we have enough statistics to be able to flag wind results based on O-minus-B bias. If the number of winds is too small, the statistics are not significant enough, and wind results will not be flagged, even if the bias is passed. Use a value of 0 to switch off this setting.</cd:Description>
+            <cd:NativeType>uint32</cd:NativeType>
+          </cd:Integer>
+        </cd:Type>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="Blacklisting_Params">
+    <cd:Record namexml="Blacklisting_Params">
+      <cd:Description>Blacklisting Parameters used to flag winds invalid in case of know problems.</cd:Description>
+      <cd:Field name="List_of_Blacklisted_Periods">
+        <cd:Record namexml="List_of_Blacklisted_Periods">
+          <cd:Description>List of zero or more periods for which wind results should be blacklisted to indicate to users that the winds are not to be trusted and should most probably not be used in data assimilation or for scientific studies.</cd:Description>
+          <cd:Attribute name="count">
+          </cd:Attribute>
+          <cd:Field name="Blacklisted_Period">
+            <cd:Array>
+              <cd:Dimension/>
+              <cd:Record namexml="Blacklisted_Period">
+                <cd:Field name="Blacklisting_Start">
+                  <cd:Type namexml="Blacklisting_Start">
+                    <cd:Time format="ascii" timeformat="ascii_ccsds_datetime_ymd2_with_ref">
+                      <cd:Description>Start datetime of period to be blacklisted.</cd:Description>
+                      <cd:Mapping string="UTC=0000-00-00T00:00:00" value="-inf"/>
+                      <cd:Mapping string="UTC=9999-99-99T99:99:99" value="+inf"/>
+                    </cd:Time>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="Blacklisting_Stop">
+                  <cd:Type namexml="Blacklisting_Stop">
+                    <cd:Time format="ascii" timeformat="ascii_ccsds_datetime_ymd2_with_ref">
+                      <cd:Description>Stop datetime of period to be blacklisted.</cd:Description>
+                      <cd:Mapping string="UTC=0000-00-00T00:00:00" value="-inf"/>
+                      <cd:Mapping string="UTC=9999-99-99T99:99:99" value="+inf"/>
+                    </cd:Time>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="Channel">
+                  <cd:Text namexml="Channel">
+                    <cd:Description>Name of channel for which this blacklisting period should be applied. Allowed values are "Mie", "Rayleigh" or "Both"</cd:Description>
+                  </cd:Text>
+                </cd:Field>
+              </cd:Record>
+              <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+            </cd:Array>
+          </cd:Field>
+        </cd:Record>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+</cd:Record>

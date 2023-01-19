@@ -3039,6 +3039,14 @@
         <cd:MatchData offset="95">L2B/L2C IODD Iss. 03.80</cd:MatchData>
       </cd:DetectionRule>
     </cd:ProductDefinition>
+    <cd:ProductDefinition id="ALD_U_N_2B_03_90" format="binary" version="12">
+      <cd:Description>This definition is based on version 3.90 of IODD AED-SD-ECMWF-L2B-037</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT="AE_</cd:MatchData>
+        <cd:MatchData offset="17">ALD_U_N_2B</cd:MatchData>
+        <cd:MatchData offset="95">L2B/L2C IODD Iss. 03.90</cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
   </cd:ProductType>
   <cd:ProductType name="ALD_U_N_2B_HDR">
     <cd:Description>Aeolus Level 2B Product (HDR)</cd:Description>
@@ -3204,6 +3212,14 @@
         <cd:MatchData offset="0">PRODUCT="AE_</cd:MatchData>
         <cd:MatchData offset="17">ALD_U_N_2C</cd:MatchData>
         <cd:MatchData offset="95">L2B/L2C IODD Iss. 03.80</cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+    <cd:ProductDefinition id="ALD_U_N_2C_03_90" format="binary" version="12">
+      <cd:Description>This definition is based on version 3.90 of IODD AED-SD-ECMWF-L2B-037</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT="AE_</cd:MatchData>
+        <cd:MatchData offset="17">ALD_U_N_2C</cd:MatchData>
+        <cd:MatchData offset="95">L2B/L2C IODD Iss. 03.90</cd:MatchData>
       </cd:DetectionRule>
     </cd:ProductDefinition>
   </cd:ProductType>
@@ -3536,6 +3552,12 @@
       <cd:Description>This definition is based on version 3.81 of IODD AED-SD-ECMWF-L2B-037</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData path="/{http://www.esa.int/schemas/ae/AUX_PAR_2B}Earth_Explorer_File@schemaversion">03.81</cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+    <cd:ProductDefinition id="AUX_PAR_2B_03_90" format="xml" version="14">
+      <cd:Description>This definition is based on version 3.90 of IODD AED-SD-ECMWF-L2B-037</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchData path="/{http://www.esa.int/schemas/ae/AUX_PAR_2B}Earth_Explorer_File@schemaversion">03.90</cd:MatchData>
       </cd:DetectionRule>
     </cd:ProductDefinition>
   </cd:ProductType>
