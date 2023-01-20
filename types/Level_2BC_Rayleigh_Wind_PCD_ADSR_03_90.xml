@@ -158,8 +158,16 @@
         </cd:Float>
       </cd:Field>
       <cd:Field name="rr_mie_emit_freq">
-        <cd:Raw>
+        <cd:Float>
           <cd:Description>Reference Rayleigh Response (RR) derived RR_mie_emit_freq from the Mie emit frequency as reported by the L1B product on measurement level.</cd:Description>
+          <cd:BitSize>64</cd:BitSize>
+          <cd:NativeType>double</cd:NativeType>
+          <ct:NamedTest id="FloatIsFinite"/>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="spare">
+        <cd:Raw>
+          <cd:Description>Spare</cd:Description>
           <cd:BitSize>8</cd:BitSize>
         </cd:Raw>
         <cd:Hidden/>
