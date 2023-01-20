@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="binary" last-modified="2023-01-19" name="Level_2A_Feature_Mask_ADSR_03_16">
+  <cd:Field name="starttime">
+    <cd:Time timeformat="binary_envisat_datetime">
+      <cd:Description>BRC start time</cd:Description>
+      <ct:NamedTest id="RangeSecond" path="seconds"/>
+      <ct:NamedTest id="RangeMicroSecond" path="microseconds"/>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="overall_quality">
+    <cd:Integer>
+      <cd:Description>Flag set to 1 in case Feature Mask of this BRC is considered to be of good quality, otherwise 0. Currently set fixed to 0 as long as algorithm is in experimental status.</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="feature_mask_indices">
+    <cd:Array>
+      <cd:Dimension><![CDATA[$num_meas_max_brc]]></cd:Dimension>
+      <cd:Dimension>24</cd:Dimension>
+      <cd:Record>
+        <cd:Description>Structure containing containing feature index for all lidar bins of each measurement of the BRC.</cd:Description>
+        <cd:Field name="feature_mask_index">
+          <cd:Integer>
+            <cd:Description>Index for specific height bin in specific measurement. For L2A products generated with the L2A prototype, all indices are set to -2, as the Feature Mask is not retrieved by the prototype.
+Possible settings:
+-3 (sub-)surface data
+-2 no retrievals
+-1 Fully Rayleigh attenuated
+0 clear sky
+1 most likely molecular
+2 very likely molecular
+3 more likely molecular
+4 likely only molecules
+5 expected low altitude aerosol (not retrieved)
+6 likely clouds or aerosols
+7 more likely clouds or aerosols
+8 very likely clouds or aerosols
+9 most likely clouds
+10 Clouds present</cd:Description>
+            <cd:BitSize>8</cd:BitSize>
+            <cd:NativeType>int8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+      </cd:Record>
+    </cd:Array>
+  </cd:Field>
+</cd:Record>
