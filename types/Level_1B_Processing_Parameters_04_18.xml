@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="xml" last-modified="2022-12-13" name="Level_1B_Processing_Parameters_04_18" namexml="Level_1B_Processing_Parameters">
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="xml" last-modified="2023-02-02" name="Level_1B_Processing_Parameters_04_18" namexml="Level_1B_Processing_Parameters">
   <cd:Description>Level 1B Processing Parameters GADS DSR</cd:Description>
   <cd:Field name="List_of_Data_Set_Records">
     <cd:Record namexml="List_of_Data_Set_Records">
@@ -3168,6 +3168,103 @@
                           <cd:Mapping string="true" value="1"/>
                           <ct:NamedTest id="BooleanXmlTest"/>
                         </cd:Integer>
+                      </cd:Type>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+                <cd:Field name="DCMZ_Correction_Selections">
+                  <cd:Record namexml="DCMZ_Correction_Selections">
+                    <cd:Description>Processing parameters for the selection of pixels that shall be DCMZ corrected.</cd:Description>
+                    <cd:Field name="Apply_Selection_Rayleigh">
+                      <cd:Type namexml="Apply_Selection_Rayleigh">
+                        <cd:Integer format="ascii">
+                          <cd:Description>Switch on/off the selection of Rayleigh pixels that shall be DCMZ corrected</cd:Description>
+                          <cd:NativeType>uint8</cd:NativeType>
+                          <cd:Mapping string="FALSE" value="0"/>
+                          <cd:Mapping string="False" value="0"/>
+                          <cd:Mapping string="false" value="0"/>
+                          <cd:Mapping string="TRUE" value="1"/>
+                          <cd:Mapping string="True" value="1"/>
+                          <cd:Mapping string="true" value="1"/>
+                          <ct:NamedTest id="BooleanXmlTest"/>
+                        </cd:Integer>
+                      </cd:Type>
+                    </cd:Field> 
+                    <cd:Field name="List_of_Rayleigh_Selections">
+                      <cd:Record>
+                        <cd:Description>A list of 24 structures with pixel selections per row. The first structure corresponds to the upper most row on the Rayleigh memory zone.</cd:Description>
+                        <cd:Attribute name="count"/>
+                        <cd:Field name="List_of_Rayleigh_Selections">
+                          <cd:Array>
+                            <cd:Dimension>24</cd:Dimension>
+                            <cd:Type namexml="Rayleigh_Selection">
+                              <cd:Array format="ascii">
+                                <cd:Description>This list contains 16 values, separated by blanks. The 16 values correspond to a specific row of the ACCD in the memory zone. Each value selects via the setting 0 (no correction) or 1 (perform correction) if the specific pixel should be DCMZ corrected. The first value corresponds to the left most useful pixel on the ACCD in a row.</cd:Description>
+                                <cd:Dimension>16</cd:Dimension>
+                                <cd:Integer format="ascii">
+                                  <cd:NativeType>uint16</cd:NativeType>
+                                </cd:Integer>
+                              </cd:Array>
+                            </cd:Type>
+                          </cd:Array>
+                        </cd:Field>
+                      </cd:Record>
+                    </cd:Field>
+                    <cd:Field name="Rayleigh_Selection_Background">
+                      <cd:Type namexml="Rayleigh_Selection_Background" format="ascii">
+                        <cd:Array>
+                          <cd:Description>This list contains 16 values, separated by blanks. The 16 values correspond to the Rayleigh background row. Each value selects via the setting 0 (no correction) or 1 (perform correction) if the specific pixel should be DCMZ corrected. The first value corresponds to the left most useful pixel on the ACCD in a row.</cd:Description>
+                          <cd:Dimension>16</cd:Dimension>
+                          <cd:Integer format="ascii">
+                            <cd:NativeType>uint16</cd:NativeType>
+                          </cd:Integer>
+                        </cd:Array>
+                      </cd:Type>
+                    </cd:Field>
+                    <cd:Field name="Apply_Selection_Mie">
+                      <cd:Type namexml="Apply_Selection_Mie">
+                        <cd:Integer format="ascii">
+                          <cd:Description>Switch on/off the selection of Rayleigh pixels that shall be DCMZ corrected</cd:Description>
+                          <cd:NativeType>uint8</cd:NativeType>
+                          <cd:Mapping string="FALSE" value="0"/>
+                          <cd:Mapping string="False" value="0"/>
+                          <cd:Mapping string="false" value="0"/>
+                          <cd:Mapping string="TRUE" value="1"/>
+                          <cd:Mapping string="True" value="1"/>
+                          <cd:Mapping string="true" value="1"/>
+                          <ct:NamedTest id="BooleanXmlTest"/>
+                        </cd:Integer>
+                      </cd:Type>
+                    </cd:Field> 
+                    <cd:Field name="List_of_Mie_Selections">
+                      <cd:Record>
+                        <cd:Description>A list of 24 structures with pixel selections per row. The first structure corresponds to the upper most row on the Mie memory zone.</cd:Description>
+                        <cd:Attribute name="count"/>
+                        <cd:Field name="List_of_Mie_Selections">
+                          <cd:Array>
+                            <cd:Dimension>24</cd:Dimension>
+                            <cd:Type namexml="Mie_Selection">
+                              <cd:Array format="ascii">
+                                <cd:Description>This list contains 16 values, separated by blanks. The 16 values correspond to a specific row of the ACCD in the memory zone. Each value selects via the setting 0 (no correction) or 1 (perform correction) if the specific pixel should be DCMZ corrected. The first value corresponds to the left most useful pixel on the ACCD in a row.</cd:Description>
+                                <cd:Dimension>16</cd:Dimension>
+                                <cd:Integer format="ascii">
+                                  <cd:NativeType>uint16</cd:NativeType>
+                                </cd:Integer>
+                              </cd:Array>
+                            </cd:Type>
+                          </cd:Array>
+                        </cd:Field>
+                      </cd:Record>
+                    </cd:Field>
+                    <cd:Field name="Mie_Selection_Background">
+                      <cd:Type namexml="Mie_Selection_Background" format="ascii">
+                        <cd:Array>
+                          <cd:Description>This list contains 16 values, separated by blanks. The 16 values correspond to the Mie background row. Each value selects via the setting 0 (no correction) or 1 (perform correction) if the specific pixel should be DCMZ corrected. The first value corresponds to the left most useful pixel on the ACCD in a row.</cd:Description>
+                          <cd:Dimension>16</cd:Dimension>
+                          <cd:Integer format="ascii">
+                            <cd:NativeType>uint16</cd:NativeType>
+                          </cd:Integer>
+                        </cd:Array>
                       </cd:Type>
                     </cd:Field>
                   </cd:Record>
