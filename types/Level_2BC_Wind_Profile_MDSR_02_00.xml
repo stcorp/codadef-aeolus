@@ -94,7 +94,7 @@
       <ct:NamedTest id="RangeMicroSecond" path="microseconds"/>
     </cd:Time>
   </cd:Field>
-  <cd:Field name="l2b_wind_profiles">
+  <cd:Field name="l2b_wind_profile">
     <cd:Record>
       <cd:Description>structure containing reference id numbers of wind retrieval results associated with the current profile for a given group and classification.</cd:Description>
       <cd:Field name="channel">
