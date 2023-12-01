@@ -1,0 +1,910 @@
+<?xml version="1.0"?>
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="xml" last-modified="2023-12-01" name="Auxiliary_Calibration_ZWC_04_19" namexml="Auxiliary_Calibration_ZWC">
+  <cd:Description>Auxiliary Calibration ZWC</cd:Description>
+  <cd:Field name="List_of_Data_Set_Records">
+    <cd:Record namexml="List_of_Data_Set_Records">
+      <cd:Description>List of Data Set Records</cd:Description>
+      <cd:Attribute name="count"/>
+      <cd:Field name="Data_Set_Record">
+        <cd:Array>
+          <cd:Dimension/>
+          <cd:Record namexml="Data_Set_Record">
+            <cd:Description>Data Set Record</cd:Description>
+            <cd:Field name="Start_of_Observation_Time">
+              <cd:Type namexml="Start_of_Observation_Time">
+                <cd:Time format="ascii" timeformat="ascii_ccsds_datetime_ymd1_with_ref">
+                  <cd:Description>Start of observation time</cd:Description>
+                  <cd:Mapping string="UTC=0000-00-00T00:00:00" value="-inf"/>
+                  <cd:Mapping string="UTC=9999-12-31T23:59:59" value="+inf"/>
+                </cd:Time>
+              </cd:Type>
+            </cd:Field>
+            <cd:Field name="Observation_Info">
+              <cd:Record namexml="Observation_Info">
+                <cd:Description>Obsevation information containing the attitude and geolocation</cd:Description>
+                <cd:Field name="Latitude_of_DEM_Intersection">
+                  <cd:Type namexml="Latitude_of_DEM_Intersection">
+                    <cd:Attribute name="unit">
+                      <cd:Optional/>
+                      <cd:FixedValue>10-6DegN</cd:FixedValue>
+                    </cd:Attribute>
+                    <cd:Float format="ascii">
+                      <cd:Description>Latitude of DEM Intersection with instrument lineof-sight at the centre of the observation</cd:Description>
+                      <cd:Unit>1e-6 degrees_north</cd:Unit>
+                      <cd:Conversion denominator="1000000.000000" numerator="1.000000">
+                        <cd:Unit>degrees_north</cd:Unit>
+                      </cd:Conversion>
+                      <cd:NativeType>double</cd:NativeType>
+                      <ct:NamedTest id="RangeLatitude6"/>
+                      <ct:NamedTest id="FloatIsFinite"/>
+                    </cd:Float>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="Longitude_of_DEM_Intersection">
+                  <cd:Type namexml="Longitude_of_DEM_Intersection">
+                    <cd:Attribute name="unit">
+                      <cd:Optional/>
+                      <cd:FixedValue>10-6DegE</cd:FixedValue>
+                    </cd:Attribute>
+                    <cd:Float format="ascii">
+                      <cd:Description>Longitude of DEM Intersection with instrument lineof-sight at the centre of the observation</cd:Description>
+                      <cd:Unit>1e-6 degrees_east</cd:Unit>
+                      <cd:Conversion denominator="1000000.000000" numerator="1.000000">
+                        <cd:Unit>degrees_east</cd:Unit>
+                      </cd:Conversion>
+                      <cd:NativeType>double</cd:NativeType>
+                      <ct:NamedTest id="RangeLongitude6"/>
+                      <ct:NamedTest id="FloatIsFinite"/>
+                    </cd:Float>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="Argument_of_Latitude_of_DEM_Intersection">
+                  <cd:Type namexml="Argument_of_Latitude_of_DEM_Intersection">
+                    <cd:Attribute name="unit">
+                      <cd:Optional/>
+                      <cd:FixedValue>10-6Deg</cd:FixedValue>
+                    </cd:Attribute>
+                    <cd:Float format="ascii">
+                      <cd:Description>Argument of Latitude of DEM Intersection with instrument line-of-sight at the centre of the observation</cd:Description>
+                      <cd:Unit>1e-6 degrees</cd:Unit>
+                      <cd:Conversion denominator="1000000.000000" numerator="1.000000">
+                        <cd:Unit>degrees</cd:Unit>
+                      </cd:Conversion>
+                      <cd:NativeType>double</cd:NativeType>
+                      <ct:NamedTest id="FloatIsFinite"/>
+                    </cd:Float>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="Roll_Angle">
+                  <cd:Type namexml="Roll_Angle">
+                    <cd:Attribute name="unit">
+                      <cd:Optional/>
+                      <cd:FixedValue>deg</cd:FixedValue>
+                    </cd:Attribute>
+                    <cd:Float format="ascii">
+                      <cd:Description>Instrument roll angle in ECEF frame at the centre of the observation</cd:Description>
+                      <cd:Unit>degrees</cd:Unit>
+                      <cd:NativeType>double</cd:NativeType>
+                      <ct:NamedTest id="FloatIsFinite"/>
+                    </cd:Float>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="Pitch_Angle">
+                  <cd:Type namexml="Pitch_Angle">
+                    <cd:Attribute name="unit">
+                      <cd:Optional/>
+                      <cd:FixedValue>deg</cd:FixedValue>
+                    </cd:Attribute>
+                    <cd:Float format="ascii">
+                      <cd:Description>Instrument pitch angle in ECEF frame at the centre of the observation</cd:Description>
+                      <cd:Unit>degrees</cd:Unit>
+                      <cd:NativeType>double</cd:NativeType>
+                      <ct:NamedTest id="FloatIsFinite"/>
+                    </cd:Float>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="Yaw_Angle">
+                  <cd:Type namexml="Yaw_Angle">
+                    <cd:Attribute name="unit">
+                      <cd:Optional/>
+                      <cd:FixedValue>deg</cd:FixedValue>
+                    </cd:Attribute>
+                    <cd:Float format="ascii">
+                      <cd:Description>Instrument yaw angle in ECEF frame at the centre of the observation</cd:Description>
+                      <cd:Unit>deg</cd:Unit>
+                      <cd:NativeType>double</cd:NativeType>
+                      <ct:NamedTest id="FloatIsFinite"/>
+                    </cd:Float>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="Mie_Satellite_Range_to_Target">
+                  <cd:Type namexml="Mie_Satellite_Range_to_Target">
+                    <cd:Description>List of satellite range to target values for all Mie height bins of the observation</cd:Description>
+                    <cd:Attribute name="unit">
+                      <cd:Optional/>
+                      <cd:FixedValue>m</cd:FixedValue>
+                    </cd:Attribute>
+                    <cd:Array format="ascii">
+                      <cd:Dimension>25</cd:Dimension>
+                      <cd:Float format="ascii">
+                        <cd:NativeType>double</cd:NativeType>
+                        <ct:NamedTest id="FloatIsFinite"/>
+                      </cd:Float>
+                    </cd:Array>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="Rayleigh_Satellite_Range_to_Target">
+                  <cd:Type namexml="Rayleigh_Satellite_Range_to_Target">
+                    <cd:Description>List of satellite range to target values for all Rayleigh height bins of the observation</cd:Description>
+                    <cd:Attribute name="unit">
+                      <cd:Optional/>
+                      <cd:FixedValue>m</cd:FixedValue>
+                    </cd:Attribute>
+                    <cd:Array format="ascii">
+                      <cd:Dimension>25</cd:Dimension>
+                      <cd:Float format="ascii">
+                        <cd:NativeType>double</cd:NativeType>
+                        <ct:NamedTest id="FloatIsFinite"/>
+                      </cd:Float>
+                    </cd:Array>
+                  </cd:Type>
+                </cd:Field>
+              </cd:Record>
+            </cd:Field>
+            <cd:Field name="ZWC_Result_Type">
+              <cd:Text namexml="ZWC_Result_Type">
+                <cd:Description>Enum indicating ZWC result type. One of Mie only (ZWC_Mie), Rayleigh only (ZWC_Rayleigh), or both (ZWC_Both)</cd:Description>
+              </cd:Text>
+            </cd:Field>
+            <cd:Field name="Mie_Ground_Correction_Velocity">
+              <cd:Type namexml="Mie_Ground_Correction_Velocity">
+                <cd:Attribute name="unit">
+                  <cd:Optional/>
+                  <cd:FixedValue>m/s</cd:FixedValue>
+                </cd:Attribute>
+                <cd:Float format="ascii">
+                  <cd:Description>Mie ground correction velocityr. This value is filled in when ZWC_Result_Type is set to ZWC_Mie or ZWC_Both</cd:Description>
+                  <cd:Unit>m/s</cd:Unit>
+                  <cd:NativeType>double</cd:NativeType>
+                  <ct:NamedTest id="FloatIsFinite"/>
+                </cd:Float>
+              </cd:Type>
+            </cd:Field>
+            <cd:Field name="Rayleigh_Ground_Correction_Velocity">
+              <cd:Type namexml="Rayleigh_Ground_Correction_Velocity">
+                <cd:Attribute name="unit">
+                  <cd:Optional/>
+                  <cd:FixedValue>m/s</cd:FixedValue>
+                </cd:Attribute>
+                <cd:Float format="ascii">
+                  <cd:Description>Rayleigh ground correction factor. This value is filled in when ZWC_Result_Type is set to ZWC_Rayleigh or ZWC_Both</cd:Description>
+                  <cd:Unit>m/s</cd:Unit>
+                  <cd:NativeType>double</cd:NativeType>
+                  <ct:NamedTest id="FloatIsFinite"/>
+                </cd:Float>
+              </cd:Type>
+            </cd:Field>
+            <cd:Field name="Validity_Indicators">
+              <cd:Record namexml="Validity_Indicators">
+                <cd:Description>Validity Indicators</cd:Description>
+                <cd:Field name="Min_Num_of_Mie_Ground_Echo_Measurements">
+                  <cd:Type namexml="Min_Num_of_Mie_Ground_Echo_Measurements">
+                    <cd:Integer format="ascii">
+                      <cd:Description>Minimum number of Mie ground wind measurements to validate ground correction factor</cd:Description>
+                      <cd:NativeType>uint32</cd:NativeType>
+                    </cd:Integer>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="Mie_Land_Useful_Signal_Lower_Threshold">
+                  <cd:Type namexml="Mie_Land_Useful_Signal_Lower_Threshold">
+                    <cd:Attribute name="unit">
+                      <cd:Optional/>
+                      <cd:FixedValue>ACCD counts</cd:FixedValue>
+                    </cd:Attribute>
+                    <cd:Float format="ascii">
+                      <cd:Description>Threshold applied to coadded gound signal of a measurement if the surface indicates land surface. If the threshold is met, the signal is added to the sum of the ground signal on observation level</cd:Description>
+                      <cd:Unit>ACCD counts</cd:Unit>
+                      <cd:NativeType>double</cd:NativeType>
+                      <ct:NamedTest id="FloatIsFinite"/>
+                    </cd:Float>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="Mie_Water_Useful_Signal_Lower_Threshold">
+                  <cd:Type namexml="Mie_Water_Useful_Signal_Lower_Threshold">
+                    <cd:Attribute name="unit">
+                      <cd:Optional/>
+                      <cd:FixedValue>ACCD counts</cd:FixedValue>
+                    </cd:Attribute>
+                    <cd:Float format="ascii">
+                      <cd:Description>Threshold applied to coadded gound signal of a measurement if the surface indicates water/sea ice surface. If the threshold is met, the signal is added to the sum of the ground signal on observation level</cd:Description>
+                      <cd:Unit>ACCD counts</cd:Unit>
+                      <cd:NativeType>double</cd:NativeType>
+                      <ct:NamedTest id="FloatIsFinite"/>
+                    </cd:Float>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="Mie_Max_Ground_Echo_Bin_Thickness_Above_DEM">
+                  <cd:Type namexml="Mie_Max_Ground_Echo_Bin_Thickness_Above_DEM">
+                    <cd:Attribute name="unit">
+                      <cd:Optional/>
+                      <cd:FixedValue>m</cd:FixedValue>
+                    </cd:Attribute>
+                    <cd:Float format="ascii">
+                      <cd:Description>Threshold applied to a bin identified as ground bin candidate. If the threshold is not met, the signal of the bin is not added to the sum of the ground signal on observation level</cd:Description>
+                      <cd:Unit>meters</cd:Unit>
+                      <cd:NativeType>double</cd:NativeType>
+                      <ct:NamedTest id="FloatIsFinite"/>
+                    </cd:Float>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="Min_Num_of_Rayleigh_Ground_Echo_Measurements">
+                  <cd:Type namexml="Min_Num_of_Rayleigh_Ground_Echo_Measurements">
+                    <cd:Integer format="ascii">
+                      <cd:Description>Minimum number of Rayleigh ground wind measurements to validate ground correction factor</cd:Description>
+                      <cd:NativeType>uint32</cd:NativeType>
+                    </cd:Integer>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="Rayleigh_Land_Useful_Signal_Lower_Threshold">
+                  <cd:Type namexml="Rayleigh_Land_Useful_Signal_Lower_Threshold">
+                    <cd:Attribute name="unit">
+                      <cd:Optional/>
+                      <cd:FixedValue>ACCD counts</cd:FixedValue>
+                    </cd:Attribute>
+                    <cd:Float format="ascii">
+                      <cd:Description>Threshold applied to coadded gound signal of a measurement if the surface indicates land surface. If the threshold is met, the signal is added to the sum of the ground signal on observation level</cd:Description>
+                      <cd:Unit>ACCD counts</cd:Unit>
+                      <cd:NativeType>double</cd:NativeType>
+                      <ct:NamedTest id="FloatIsFinite"/>
+                    </cd:Float>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="Rayleigh_Water_Useful_Signal_Lower_Threshold">
+                  <cd:Type namexml="Rayleigh_Water_Useful_Signal_Lower_Threshold">
+                    <cd:Attribute name="unit">
+                      <cd:Optional/>
+                      <cd:FixedValue>ACCD counts</cd:FixedValue>
+                    </cd:Attribute>
+                    <cd:Float format="ascii">
+                      <cd:Description>Threshold applied to coadded gound signal of a measurement if the surface indicates water/sea ice surface. If the threshold is met, the signal is added to the sum of the ground signal on observation level</cd:Description>
+                      <cd:Unit>ACCD counts</cd:Unit>
+                      <cd:NativeType>double</cd:NativeType>
+                      <ct:NamedTest id="FloatIsFinite"/>
+                    </cd:Float>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="Rayleigh_Max_Ground_Echo_Bin_Thickness_Above_DEM">
+                  <cd:Type namexml="Rayleigh_Max_Ground_Echo_Bin_Thickness_Above_DEM">
+                    <cd:Attribute name="unit">
+                      <cd:Optional/>
+                      <cd:FixedValue>m</cd:FixedValue>
+                    </cd:Attribute>
+                    <cd:Float format="ascii">
+                      <cd:Description>Threshold applied to a bin identified as ground bin candidate. If the threshold is not met, the signal of the bin is not added to the sum of the ground signal on observation level</cd:Description>
+                      <cd:Unit>meters</cd:Unit>
+                      <cd:NativeType>double</cd:NativeType>
+                      <ct:NamedTest id="FloatIsFinite"/>
+                    </cd:Float>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="Number_of_Mie_Ground_Measurements">
+                  <cd:Type namexml="Number_of_Mie_Ground_Measurements">
+                    <cd:Integer format="ascii">
+                      <cd:Description>Number of Mie measurements with detected ground echo</cd:Description>
+                      <cd:NativeType>uint32</cd:NativeType>
+                    </cd:Integer>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="Number_of_Rayleigh_Ground_Measurements">
+                  <cd:Type namexml="Number_of_Rayleigh_Ground_Measurements">
+                    <cd:Integer format="ascii">
+                      <cd:Description>Number of Rayleigh measurements with detected ground echo</cd:Description>
+                      <cd:NativeType>uint32</cd:NativeType>
+                    </cd:Integer>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="Mie_Average_Ground_Echo_Bin_Thickness">
+                  <cd:Type namexml="Mie_Average_Ground_Echo_Bin_Thickness">
+                    <cd:Attribute name="unit">
+                      <cd:Optional/>
+                      <cd:FixedValue>m</cd:FixedValue>
+                    </cd:Attribute>
+                    <cd:Float format="ascii">
+                      <cd:Description>Average of measurement ground wind bin altitudes for Mie</cd:Description>
+                      <cd:Unit>meters</cd:Unit>
+                      <cd:NativeType>double</cd:NativeType>
+                      <ct:NamedTest id="FloatIsFinite"/>
+                    </cd:Float>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="Rayleigh_Average_Ground_Echo_Bin_Thickness">
+                  <cd:Type namexml="Rayleigh_Average_Ground_Echo_Bin_Thickness">
+                    <cd:Attribute name="unit">
+                      <cd:Optional/>
+                      <cd:FixedValue>m</cd:FixedValue>
+                    </cd:Attribute>
+                    <cd:Float format="ascii">
+                      <cd:Description>Average of measurement ground wind bin altitudes for Rayleigh</cd:Description>
+                      <cd:Unit>meters</cd:Unit>
+                      <cd:NativeType>double</cd:NativeType>
+                      <ct:NamedTest id="FloatIsFinite"/>
+                    </cd:Float>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="Mie_Average_Ground_Echo_Bin_Thickness_Above_DEM">
+                  <cd:Type namexml="Mie_Average_Ground_Echo_Bin_Thickness_Above_DEM">
+                    <cd:Attribute name="unit">
+                      <cd:Optional/>
+                      <cd:FixedValue>m</cd:FixedValue>
+                    </cd:Attribute>
+                    <cd:Float format="ascii">
+                      <cd:Description>Average ground wind bin thickness (air column height) for Mie</cd:Description>
+                      <cd:Unit>meters</cd:Unit>
+                      <cd:NativeType>double</cd:NativeType>
+                      <ct:NamedTest id="FloatIsFinite"/>
+                    </cd:Float>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="Rayleigh_Average_Ground_Echo_Bin_Thickness_Above_DEM">
+                  <cd:Type namexml="Rayleigh_Average_Ground_Echo_Bin_Thickness_Above_DEM">
+                    <cd:Attribute name="unit">
+                      <cd:Optional/>
+                      <cd:FixedValue>m</cd:FixedValue>
+                    </cd:Attribute>
+                    <cd:Float format="ascii">
+                      <cd:Description>Average ground wind bin thickness (air column height) for Rayleigh</cd:Description>
+                      <cd:Unit>meters</cd:Unit>
+                      <cd:NativeType>double</cd:NativeType>
+                      <ct:NamedTest id="FloatIsFinite"/>
+                    </cd:Float>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="Mie_Min_Top_Ground_Bin">
+                  <cd:Type namexml="Mie_Min_Top_Ground_Bin">
+                    <cd:Integer format="ascii">
+                      <cd:Description>Highest of all the ground bins detected in all the measurements used in that observation. (Highest bin is bin number 1.) Value is set to 0 in case ground could not be detected in any measurement of the observation</cd:Description>
+                      <cd:NativeType>int32</cd:NativeType>
+                    </cd:Integer>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="Rayleigh_Min_Top_Ground_Bin">
+                  <cd:Type namexml="Rayleigh_Min_Top_Ground_Bin">
+                    <cd:Integer format="ascii">
+                      <cd:Description>Highest of all the ground bins detected in all the measurements used in that observation. (Highest bin is bin number 1.) Value is set to 0 in case ground could not be detected in any measurement of the observation</cd:Description>
+                      <cd:NativeType>int32</cd:NativeType>
+                    </cd:Integer>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="Mie_Max_Bottom_Ground_Bin">
+                  <cd:Type namexml="Mie_Max_Bottom_Ground_Bin">
+                    <cd:Integer format="ascii">
+                      <cd:Description>Lowest of all the ground bins detected in all the measurements used in that observation. (Lowest bin is bin number 24.) Value is set to 0 in case ground could not be detected in any measurement of the observation</cd:Description>
+                      <cd:NativeType>int32</cd:NativeType>
+                    </cd:Integer>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="Rayleigh_Max_Bottom_Ground_Bin">
+                  <cd:Type namexml="Rayleigh_Max_Bottom_Ground_Bin">
+                    <cd:Integer format="ascii">
+                      <cd:Description>Lowest of all the ground bins detected in all the measurements used in that observation. (Lowest bin is bin number 24.) Value is set to 0 in case ground could not be detected in any measurement of the observation</cd:Description>
+                      <cd:NativeType>int32</cd:NativeType>
+                    </cd:Integer>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="Mie_Ground_FWHM">
+                  <cd:Type namexml="Mie_Ground_FWHM">
+                    <cd:Attribute name="unit">
+                      <cd:Optional/>
+                      <cd:FixedValue>ACCD pixel</cd:FixedValue>
+                    </cd:Attribute>
+                    <cd:Float format="ascii">
+                      <cd:Description>Mie Core 2 output FWHM when applied to observation level Mie ground signal. This value is filled in when ZWC_Result_Type is set to ZWC_Mie or ZWC_Both and the Mie Core 2 algorithm has been applied. In all other cases the value is set to 0.0</cd:Description>
+                      <cd:Unit>ACCD pixel</cd:Unit>
+                      <cd:NativeType>double</cd:NativeType>
+                      <ct:NamedTest id="FloatIsFinite"/>
+                    </cd:Float>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="Mie_Ground_Useful_Signal">
+                  <cd:Type namexml="Mie_Ground_Useful_Signal">
+                    <cd:Attribute name="unit">
+                      <cd:Optional/>
+                      <cd:FixedValue>ACCD counts</cd:FixedValue>
+                    </cd:Attribute>
+                    <cd:Float format="ascii">
+                      <cd:Description>Useful signal of observation level Mie ground signal. This value is filled in when ZWC_Result_Type is set to ZWC_Mie or ZWC_Both. In all other cases the value is set to 0.0</cd:Description>
+                      <cd:Unit>ACCD counts</cd:Unit>
+                      <cd:NativeType>double</cd:NativeType>
+                      <ct:NamedTest id="FloatIsFinite"/>
+                    </cd:Float>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="Mie_Ground_Signal_to_Noise_Ratio">
+                  <cd:Type namexml="Mie_Ground_Signal_to_Noise_Ratio">
+                    <cd:Float format="ascii">
+                      <cd:Description>Signal to noise ratio of observation level Mie ground signal. This value is filled in when ZWC_Result_Type is set to ZWC_Mie or ZWC_Both. In all other cases the value is set to 0.0</cd:Description>
+                      <cd:NativeType>double</cd:NativeType>
+                      <ct:NamedTest id="FloatIsFinite"/>
+                    </cd:Float>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="Mie_Ground_Refined_Signal_to_Noise_Ratio">
+                  <cd:Type namexml="Mie_Ground_Refined_Signal_to_Noise_Ratio">
+                    <cd:Float format="ascii">
+                      <cd:Description>Refined signal to noise ratio of observation level Mie ground signal. This value is filled in when ZWC_Result_Type is set to ZWC_Mie or ZWC_Both. In all other cases the value is set to 0.0</cd:Description>
+                      <cd:NativeType>double</cd:NativeType>
+                      <ct:NamedTest id="FloatIsFinite"/>
+                    </cd:Float>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="Rayleigh_Ground_Useful_Signal">
+                  <cd:Type namexml="Rayleigh_Ground_Useful_Signal">
+                    <cd:Attribute name="unit">
+                      <cd:Optional/>
+                      <cd:FixedValue>ACCD counts</cd:FixedValue>
+                    </cd:Attribute>
+                    <cd:Float format="ascii">
+                      <cd:Description>Useful signal of observation level Rayleigh ground signal. This value is filled in when ZWC_Result_Type is set to ZWC_Rayleigh or ZWC_Both. In all other cases the value is set to 0.0</cd:Description>
+                      <cd:Unit>ACCD counts</cd:Unit>
+                      <cd:NativeType>double</cd:NativeType>
+                      <ct:NamedTest id="FloatIsFinite"/>
+                    </cd:Float>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="Rayleigh_Ground_Signal_to_Noise_Ratio">
+                  <cd:Type namexml="Rayleigh_Ground_Signal_to_Noise_Ratio">
+                    <cd:Float format="ascii">
+                      <cd:Description>Signal to noise ratio of observation level Rayleigh ground signal. This value is filled in when ZWC_Result_Type is set to ZWC_Rayleigh or ZWC_Both. In all other cases the value is set to 0.0</cd:Description>
+                      <cd:NativeType>double</cd:NativeType>
+                      <ct:NamedTest id="FloatIsFinite"/>
+                    </cd:Float>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="Mie_Measurement_Validity_Indicators">
+                  <cd:Record namexml="Mie_Measurement_Validity_Indicators">
+                    <cd:Field name="Measurement_Used">
+                      <cd:Type namexml="Measurement_Used">
+                        <cd:Array format="ascii">
+                          <cd:Dimension>int(str(../../../Measurement_Info/List_of_Measurement_Range_Infos@count))</cd:Dimension>
+                          <cd:Integer>
+                            <cd:Description>TRUE if measurement ground bin was detected, velocity calculated and used for average of ground correction value on observation level</cd:Description>
+                            <cd:NativeType>uint8</cd:NativeType>
+                            <cd:Mapping string="FALSE" value="0"/>
+                            <cd:Mapping string="False" value="0"/>
+                            <cd:Mapping string="false" value="0"/>
+                            <cd:Mapping string="TRUE" value="1"/>
+                            <cd:Mapping string="True" value="1"/>
+                            <cd:Mapping string="true" value="1"/>
+                            <ct:NamedTest id="IntIsZeroOrOne"/>
+                          </cd:Integer>
+                        </cd:Array>
+                      </cd:Type>
+                    </cd:Field>
+                    <cd:Field name="Expected_Ground_Bin_Index">
+                      <cd:Type namexml="Expected_Ground_Bin_Index">
+                        <cd:Array format="ascii">
+                        <cd:Dimension>int(str(../../../Measurement_Info/List_of_Measurement_Range_Infos@count))</cd:Dimension>
+                          <cd:Integer format="ascii">
+                            <cd:Description>Expected DEM ground bin</cd:Description>
+                            <cd:NativeType>uint8</cd:NativeType>
+                          </cd:Integer>
+                        </cd:Array>
+                      </cd:Type>
+                    </cd:Field>
+                    <cd:Field name="Topocentric_Elevation_Expected_Ground_Bin">
+                      <cd:Type namexml="Topocentric_Elevation_Expected_Ground_Bin">
+                        <cd:Array format="ascii">
+                          <cd:Attribute name="unit">
+                            <cd:Optional/>
+                            <cd:FixedValue>deg</cd:FixedValue>
+                          </cd:Attribute>
+                          <cd:Dimension>int(str(../../../Measurement_Info/List_of_Measurement_Range_Infos@count))</cd:Dimension>
+                          <cd:Float format="ascii">
+                            <cd:Description>Topocentric elevation of the expected ground bin</cd:Description>
+                            <cd:Unit>degrees</cd:Unit>
+                            <cd:NativeType>double</cd:NativeType>
+                            <ct:NamedTest id="FloatIsFinite"/>
+                          </cd:Float>
+                        </cd:Array>
+                      </cd:Type>
+                    </cd:Field>
+                    <cd:Field name="Top_Ground_Bin">
+                      <cd:Type namexml="Top_Ground_Bin">
+                        <cd:Array format="ascii">
+                          <cd:Dimension>int(str(../../../Measurement_Info/List_of_Measurement_Range_Infos@count))</cd:Dimension>
+                          <cd:Integer format="ascii">
+                            <cd:Description>Highest detected bin with ground return signal. Value is set to 0 in case ground could not be detected in the measurement</cd:Description>
+                            <cd:NativeType>uint8</cd:NativeType>
+                          </cd:Integer>
+                        </cd:Array>
+                      </cd:Type>
+                    </cd:Field>
+                    <cd:Field name="Topocentric_Elevation_Top_Ground_Bin">
+                      <cd:Type namexml="Topocentric_Elevation_Top_Ground_Bin">
+                        <cd:Array format="ascii">
+                          <cd:Attribute name="unit">
+                            <cd:Optional/>
+                            <cd:FixedValue>deg</cd:FixedValue>
+                          </cd:Attribute>
+                          <cd:Dimension>int(str(../../../Measurement_Info/List_of_Measurement_Range_Infos@count))</cd:Dimension>
+                          <cd:Float format="ascii">
+                            <cd:Description>Topocentric elevation of the highest detected ground bin</cd:Description>
+                            <cd:Unit>degrees</cd:Unit>
+                            <cd:NativeType>double</cd:NativeType>
+                            <ct:NamedTest id="FloatIsFinite"/>
+                          </cd:Float>
+                        </cd:Array>
+                      </cd:Type>
+                    </cd:Field>
+                    <cd:Field name="Bottom_Ground_Bin">
+                      <cd:Type namexml="Bottom_Ground_Bin">
+                        <cd:Array format="ascii">
+                          <cd:Dimension>int(str(../../../Measurement_Info/List_of_Measurement_Range_Infos@count))</cd:Dimension>
+                          <cd:Integer format="ascii">
+                            <cd:Description>Lowest detected bin with ground return signal. Value is set to 0 in case ground could not be detected in the measurement</cd:Description>
+                            <cd:NativeType>uint8</cd:NativeType>
+                          </cd:Integer>
+                        </cd:Array>
+                      </cd:Type>
+                    </cd:Field>
+                    <cd:Field name="Topocentric_Elevation_Bottom_Ground_Bin">
+                      <cd:Type namexml="Topocentric_Elevation_Bottom_Ground_Bin">
+                        <cd:Array format="ascii">
+                          <cd:Attribute name="unit">
+                            <cd:Optional/>
+                            <cd:FixedValue>deg</cd:FixedValue>
+                          </cd:Attribute>
+                          <cd:Dimension>int(str(../../../Measurement_Info/List_of_Measurement_Range_Infos@count))</cd:Dimension>
+                          <cd:Float format="ascii">
+                            <cd:Description>Topocentric elevation of the lowest detected ground bin</cd:Description>
+                            <cd:Unit>degrees</cd:Unit>
+                            <cd:NativeType>double</cd:NativeType>
+                            <ct:NamedTest id="FloatIsFinite"/>
+                          </cd:Float>
+                        </cd:Array>
+                      </cd:Type>
+                    </cd:Field>
+                    <cd:Field name="Height_Difference_Expected_to_Top">
+                      <cd:Type namexml="Height_Difference_Expected_to_Top">
+                        <cd:Array format="ascii">
+                          <cd:Attribute name="unit">
+                            <cd:Optional/>
+                            <cd:FixedValue>m</cd:FixedValue>
+                          </cd:Attribute>
+                          <cd:Dimension>int(str(../../../Measurement_Info/List_of_Measurement_Range_Infos@count))</cd:Dimension>
+                          <cd:Float>
+                            <cd:Description>Height difference between detected top ground bin and expected ground bin, with reference to centre altitude of bins</cd:Description>
+                            <cd:Unit>meters</cd:Unit>
+                            <cd:NativeType>double</cd:NativeType>
+                            <ct:NamedTest id="FloatIsFinite"/>
+                          </cd:Float>
+                        </cd:Array>
+                      </cd:Type>
+                    </cd:Field>
+                    <cd:Field name="Height_Difference_Expected_to_Bottom">
+                      <cd:Type namexml="Height_Difference_Expected_to_Bottom">
+                        <cd:Array format="ascii">
+                          <cd:Attribute name="unit">
+                            <cd:Optional/>
+                            <cd:FixedValue>m</cd:FixedValue>
+                          </cd:Attribute>
+                          <cd:Dimension>int(str(../../../Measurement_Info/List_of_Measurement_Range_Infos@count))</cd:Dimension>
+                          <cd:Float format="ascii">
+                            <cd:Description>Height difference between detected bottom ground bin and expected ground bin, with reference to centre altitude of bins</cd:Description>
+                            <cd:Unit>meters</cd:Unit>
+                            <cd:NativeType>double</cd:NativeType>
+                            <ct:NamedTest id="FloatIsFinite"/>
+                          </cd:Float>
+                        </cd:Array>
+                      </cd:Type>
+                    </cd:Field>
+                    <cd:Field name="Mean_Ground_Bin_SNR">
+                      <cd:Type namexml="Mean_Ground_Bin_SNR">
+                        <cd:Array format="ascii">
+                          <cd:Dimension>int(str(../../../Measurement_Info/List_of_Measurement_Range_Infos@count))</cd:Dimension>
+                          <cd:Float format="ascii">
+                            <cd:Description>Mean SNR over SNR values of detected ground bins</cd:Description>
+                            <cd:NativeType>double</cd:NativeType>
+                            <ct:NamedTest id="FloatIsFinite"/>
+                          </cd:Float>
+                        </cd:Array>
+                      </cd:Type>
+                    </cd:Field>
+                    <cd:Field name="Num_Top_Ground_Bins_Discarded">
+                      <cd:Type namexml="Num_Top_Ground_Bins_Discarded">
+                        <cd:Array format="ascii">
+                          <cd:Dimension>int(str(../../../Measurement_Info/List_of_Measurement_Range_Infos@count))</cd:Dimension>
+                          <cd:Integer format="ascii">
+                            <cd:Description>Number of bins above expected bin in which ground return signal was detected, but offset to expected bin was larger than threshold</cd:Description>
+                            <cd:NativeType>uint8</cd:NativeType>
+                          </cd:Integer>
+                        </cd:Array>
+                      </cd:Type>
+                    </cd:Field>
+                    <cd:Field name="Num_Bottom_Ground_Bins_Discarded">
+                      <cd:Type namexml="Num_Bottom_Ground_Bins_Discarded">
+                        <cd:Array format="ascii">
+                          <cd:Dimension>int(str(../../../Measurement_Info/List_of_Measurement_Range_Infos@count))</cd:Dimension>
+                          <cd:Integer format="ascii">
+                            <cd:Description>Number of bins below expected bin in which ground return signal was detected, but offset to expected bin was larger than threshold</cd:Description>
+                            <cd:NativeType>uint8</cd:NativeType>
+                          </cd:Integer>
+                        </cd:Array>
+                      </cd:Type>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+                <cd:Field name="Rayleigh_Measurement_Validity_Indicators">
+                  <cd:Record namexml="Rayleigh_Measurement_Validity_Indicators">
+                    <cd:Field name="Measurement_Used">
+                      <cd:Type namexml="Measurement_Used">
+                        <cd:Array format="ascii">
+                          <cd:Dimension>int(str(../../../Measurement_Info/List_of_Measurement_Range_Infos@count))</cd:Dimension>
+                          <cd:Integer format="ascii">
+                            <cd:Description>TRUE if measurement ground bin was detected, velocity calculated and used for average of ground correction value on observation level</cd:Description>
+                            <cd:NativeType>uint8</cd:NativeType>
+                            <cd:Mapping string="FALSE" value="0"/>
+                            <cd:Mapping string="False" value="0"/>
+                            <cd:Mapping string="false" value="0"/>
+                            <cd:Mapping string="TRUE" value="1"/>
+                            <cd:Mapping string="True" value="1"/>
+                            <cd:Mapping string="true" value="1"/>
+                            <ct:NamedTest id="IntIsZeroOrOne"/>
+                          </cd:Integer>
+                        </cd:Array>
+                      </cd:Type>
+                    </cd:Field>
+                    <cd:Field name="Expected_Ground_Bin_Index">
+                      <cd:Type namexml="Expected_Ground_Bin_Index">
+                        <cd:Array format="ascii">
+                          <cd:Dimension>int(str(../../../Measurement_Info/List_of_Measurement_Range_Infos@count))</cd:Dimension>
+                          <cd:Integer format="ascii">
+                            <cd:Description>Expected DEM ground bin</cd:Description>
+                            <cd:NativeType>uint8</cd:NativeType>
+                          </cd:Integer>
+                        </cd:Array>
+                      </cd:Type>
+                    </cd:Field>
+                    <cd:Field name="Topocentric_Elevation_Expected_Ground_Bin">
+                      <cd:Type namexml="Topocentric_Elevation_Expected_Ground_Bin">
+                        <cd:Array format="ascii">
+                          <cd:Attribute name="unit">
+                            <cd:Optional/>
+                            <cd:FixedValue>deg</cd:FixedValue>
+                          </cd:Attribute>
+                          <cd:Dimension>int(str(../../../Measurement_Info/List_of_Measurement_Range_Infos@count))</cd:Dimension>
+                          <cd:Float format="ascii">
+                            <cd:Description>Topocentric elevation of the expected ground bin</cd:Description>
+                            <cd:Unit>degrees</cd:Unit>
+                            <cd:NativeType>double</cd:NativeType>
+                            <ct:NamedTest id="FloatIsFinite"/>
+                          </cd:Float>
+                        </cd:Array>
+                      </cd:Type>
+                    </cd:Field>
+                    <cd:Field name="Top_Ground_Bin">
+                      <cd:Type namexml="Top_Ground_Bin">
+                        <cd:Array format="ascii">
+                          <cd:Dimension>int(str(../../../Measurement_Info/List_of_Measurement_Range_Infos@count))</cd:Dimension>
+                          <cd:Integer format="ascii">
+                            <cd:Description>Highest detected bin with ground return signal. Value is set to 0 in case ground could not be detected in the measurement</cd:Description>
+                            <cd:NativeType>uint8</cd:NativeType>
+                          </cd:Integer>
+                        </cd:Array>
+                      </cd:Type>
+                    </cd:Field>
+                    <cd:Field name="Topocentric_Elevation_Top_Ground_Bin">
+                      <cd:Type namexml="Topocentric_Elevation_Top_Ground_Bin">
+                        <cd:Array format="ascii">
+                          <cd:Attribute name="unit">
+                            <cd:Optional/>
+                            <cd:FixedValue>deg</cd:FixedValue>
+                          </cd:Attribute>
+                          <cd:Dimension>int(str(../../../Measurement_Info/List_of_Measurement_Range_Infos@count))</cd:Dimension>
+                          <cd:Float format="ascii">
+                            <cd:Description>Topocentric elevation of the highest detected ground bin</cd:Description>
+                            <cd:Unit>degrees</cd:Unit>
+                            <cd:NativeType>double</cd:NativeType>
+                            <ct:NamedTest id="FloatIsFinite"/>
+                          </cd:Float>
+                        </cd:Array>
+                      </cd:Type>
+                    </cd:Field>
+                    <cd:Field name="Bottom_Ground_Bin">
+                      <cd:Type namexml="Bottom_Ground_Bin">
+                        <cd:Array format="ascii">
+                          <cd:Dimension>int(str(../../../Measurement_Info/List_of_Measurement_Range_Infos@count))</cd:Dimension>
+                          <cd:Integer format="ascii">
+                            <cd:Description>Lowest detected bin with ground return signal. Value is set to 0 in case ground could not be detected in the measurement</cd:Description>
+                            <cd:NativeType>uint8</cd:NativeType>
+                          </cd:Integer>
+                        </cd:Array>
+                      </cd:Type>
+                    </cd:Field>
+                    <cd:Field name="Topocentric_Elevation_Bottom_Ground_Bin">
+                      <cd:Type namexml="Topocentric_Elevation_Bottom_Ground_Bin">
+                        <cd:Array format="ascii">
+                          <cd:Attribute name="unit">
+                            <cd:Optional/>
+                            <cd:FixedValue>deg</cd:FixedValue>
+                          </cd:Attribute>
+                          <cd:Dimension>int(str(../../../Measurement_Info/List_of_Measurement_Range_Infos@count))</cd:Dimension>
+                          <cd:Float format="ascii">
+                            <cd:Description>Topocentric elevation of the lowest detected ground bin</cd:Description>
+                            <cd:Unit>degrees</cd:Unit>
+                            <cd:NativeType>double</cd:NativeType>
+                            <ct:NamedTest id="FloatIsFinite"/>
+                          </cd:Float>
+                        </cd:Array>
+                      </cd:Type>
+                    </cd:Field>
+                    <cd:Field name="Height_Difference_Expected_to_Top">
+                      <cd:Type namexml="Height_Difference_Expected_to_Top">
+                        <cd:Array format="ascii">
+                          <cd:Attribute name="unit">
+                            <cd:Optional/>
+                            <cd:FixedValue>m</cd:FixedValue>
+                          </cd:Attribute>
+                          <cd:Dimension>int(str(../../../Measurement_Info/List_of_Measurement_Range_Infos@count))</cd:Dimension>
+                          <cd:Float format="ascii">
+                            <cd:Description>Height difference between detected top ground bin and expected ground bin, with reference to centre altitude of bins</cd:Description>
+                            <cd:Unit>meters</cd:Unit>
+                            <cd:NativeType>double</cd:NativeType>
+                            <ct:NamedTest id="FloatIsFinite"/>
+                          </cd:Float>
+                        </cd:Array>
+                      </cd:Type>
+                    </cd:Field>
+                    <cd:Field name="Height_Difference_Expected_to_Bottom">
+                      <cd:Type namexml="Height_Difference_Expected_to_Bottom">
+                        <cd:Array format="ascii">
+                          <cd:Attribute name="unit">
+                            <cd:Optional/>
+                            <cd:FixedValue>m</cd:FixedValue>
+                          </cd:Attribute>
+                          <cd:Dimension>int(str(../../../Measurement_Info/List_of_Measurement_Range_Infos@count))</cd:Dimension>
+                          <cd:Float format="ascii">
+                            <cd:Description>Height difference between detected bottom ground bin and expected ground bin, with reference to centre altitude of bins</cd:Description>
+                            <cd:Unit>meters</cd:Unit>
+                            <cd:NativeType>double</cd:NativeType>
+                            <ct:NamedTest id="FloatIsFinite"/>
+                          </cd:Float>
+                        </cd:Array>
+                      </cd:Type>
+                    </cd:Field>
+                    <cd:Field name="Channel_A_Mean_Ground_Bin_SNR">
+                      <cd:Type namexml="Channel_A_Mean_Ground_Bin_SNR">
+                        <cd:Array format="ascii">
+                          <cd:Dimension>int(str(../../../Measurement_Info/List_of_Measurement_Range_Infos@count))</cd:Dimension>
+                          <cd:Float format="ascii">
+                            <cd:Description>Mean SNR over SNR values of detected ground bins</cd:Description>
+                            <cd:NativeType>double</cd:NativeType>
+                            <ct:NamedTest id="FloatIsFinite"/>
+                          </cd:Float>
+                        </cd:Array>
+                      </cd:Type>
+                    </cd:Field>
+                    <cd:Field name="Channel_B_Mean_Ground_Bin_SNR">
+                      <cd:Type namexml="Channel_B_Mean_Ground_Bin_SNR">
+                        <cd:Array format="ascii">
+                          <cd:Dimension>int(str(../../../Measurement_Info/List_of_Measurement_Range_Infos@count))</cd:Dimension>
+                          <cd:Float format="ascii">
+                            <cd:Description>Mean SNR over SNR values of detected ground bins</cd:Description>
+                            <cd:NativeType>double</cd:NativeType>
+                            <ct:NamedTest id="FloatIsFinite"/>
+                          </cd:Float>
+                        </cd:Array>
+                      </cd:Type>
+                    </cd:Field>
+                    <cd:Field name="Num_Top_Ground_Bins_Discarded">
+                      <cd:Type namexml="Num_Top_Ground_Bins_Discarded">
+                        <cd:Array format="ascii">
+                          <cd:Dimension>int(str(../../../Measurement_Info/List_of_Measurement_Range_Infos@count))</cd:Dimension>
+                          <cd:Integer format="ascii">
+                            <cd:Description>Number of bins above expected bin in which ground return signal was detected, but offset to expected bin was larger than threshold</cd:Description>
+                            <cd:NativeType>uint8</cd:NativeType>
+                          </cd:Integer>
+                        </cd:Array>
+                      </cd:Type>
+                    </cd:Field>
+                    <cd:Field name="Num_Bottom_Ground_Bins_Discarded">
+                      <cd:Type namexml="Num_Bottom_Ground_Bins_Discarded">
+                        <cd:Array format="ascii">
+                          <cd:Dimension>int(str(../../../Measurement_Info/List_of_Measurement_Range_Infos@count))</cd:Dimension>
+                          <cd:Integer format="ascii">
+                            <cd:Description>Number of bins below expected bin in which ground return signal was detected, but offset to expected bin was larger than threshold</cd:Description>
+                            <cd:NativeType>uint8</cd:NativeType>
+                          </cd:Integer>
+                        </cd:Array>
+                      </cd:Type>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+              </cd:Record>
+            </cd:Field>
+            <cd:Field name="Measurement_Info">
+              <cd:Record namexml="Measurement_Info">
+                <cd:Field name="DEM_Height">
+                  <cd:Type namexml="DEM_Height">
+                    <cd:Attribute name="unit">
+                      <cd:Optional/>
+                      <cd:FixedValue>m</cd:FixedValue>
+                    </cd:Attribute>
+                    <cd:Array format="ascii">
+                      <cd:Description>This list contains N_Meas values separated by blanks. The items in this list refer to the altitude of the DEM intersection of the measurements 1 .. N_Meas of the observation.</cd:Description>
+                      <cd:Dimension>int(str(../List_of_Measurement_Range_Infos@count))</cd:Dimension>
+                      <cd:Float>
+                        <cd:Unit>m</cd:Unit>
+                        <cd:NativeType>double</cd:NativeType>
+                        <ct:NamedTest id="FloatIsFinite"/>
+                      </cd:Float>
+                    </cd:Array>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="Surface_Type">
+                  <cd:Type namexml="Surface_Type">
+                    <cd:Attribute name="unit">
+                      <cd:Optional/>
+                      <cd:FixedValue>m</cd:FixedValue>
+                    </cd:Attribute>
+                    <cd:Array format="ascii">
+                      <cd:Description>This list contains N_Meas values separated by blanks. The items in this list refer to the altitude of the DEM intersection of the measurements 1 .. N_Meas of the observation.</cd:Description>
+                      <cd:Dimension>int(str(../List_of_Measurement_Range_Infos@count))</cd:Dimension>
+                      <cd:Integer>
+                        <cd:NativeType>uint8</cd:NativeType>
+                      </cd:Integer>
+                    </cd:Array>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="List_of_Measurement_Range_Infos">
+                  <cd:Record namexml="List_of_Measurement_Range_Infos">
+                    <cd:Attribute name="count"/>
+                    <cd:Field name="Measurement_Range_Info">
+                      <cd:Array>
+                        <cd:Dimension/>
+                        <cd:Record namexml="Measurement_Range_Info">
+                          <cd:Field name="Satellite_Range_to_Target_Mie">
+                            <cd:Type namexml="Satellite_Range_to_Target_Mie">
+                              <cd:Attribute name="unit">
+                                <cd:Optional/>
+                                <cd:FixedValue>m</cd:FixedValue>
+                              </cd:Attribute>
+                              <cd:Array format="ascii">
+                                <cd:Description>This list contains 25 values, separated by blanks. The first item contains the range from satellite to the upper edge of the top-most Mie lidar measurement range bin. The remaining 24 items contain the height of the lower edge of each lidar measurement range bin.</cd:Description>
+                                <cd:Dimension>25</cd:Dimension>
+                                <cd:Integer>
+                                  <cd:NativeType>uint32</cd:NativeType>
+                                </cd:Integer>
+                              </cd:Array>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="Satellite_Range_to_Target_Rayleigh">
+                            <cd:Type namexml="Satellite_Range_to_Target_Rayleigh">
+                              <cd:Attribute name="unit">
+                                <cd:Optional/>
+                                <cd:FixedValue>m</cd:FixedValue>
+                              </cd:Attribute>
+                              <cd:Array format="ascii">
+                                <cd:Description>This list contains 25 values, separated by blanks. The first item contains the range from satellite to the upper edge of the top-most Rayleigh lidar measurement range bin. The remaining 24 items contain the height of the lower edge of each lidar measurement range bin.</cd:Description>
+                                <cd:Dimension>25</cd:Dimension>
+                                <cd:Integer>
+                                  <cd:NativeType>uint32</cd:NativeType>
+                                </cd:Integer>
+                              </cd:Array>
+                            </cd:Type>
+                          </cd:Field>
+                        </cd:Record>
+                        <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                      </cd:Array>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+              </cd:Record>
+            </cd:Field>
+          </cd:Record>
+          <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+        </cd:Array>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+</cd:Record>

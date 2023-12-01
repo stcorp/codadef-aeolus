@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="xml" last-modified="2023-12-01" name="Level_1B_Processing_IAT_Parameters_04_19" namexml="Level_1B_Processing_IAT_Parameters">
+  <cd:Description>Processing parameters for Instrument Auto Test</cd:Description>
+  <cd:Field name="File_Type">
+    <cd:Text namexml="File_Type">
+      <cd:Description>File type string</cd:Description>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="Sph_Descriptor">
+    <cd:Text namexml="Sph_Descriptor">
+      <cd:Description>ASCII string describing the product</cd:Description>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="Lorentz_Refinement_Factor">
+    <cd:Type namexml="Lorentz_Refinement_Factor">
+      <cd:Float format="ascii">
+        <cd:Description>Lorentz refinement resolution ratio for creating the delta value of the estimate. (delta estimate = estimate / ratio) Given estimated value x, and refinement resolution r. Three adjacent points Lorentz(x), Lorentz(x+x/r), Lorentz(x-x/r) are computed for least squares fit. The refinement resolution r must be greater than 1.0</cd:Description>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Lorentz_Refinement_Threshold">
+    <cd:Type namexml="Lorentz_Refinement_Threshold">
+      <cd:Float format="ascii">
+        <cd:Description>Lorentz refinement threshold. If ratio between delta(estimate) / estimate smaller than the threshold, stop the iteration and report the value</cd:Description>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Min_Num_of_Valid_Mie_Pulses">
+    <cd:Type namexml="Min_Num_of_Valid_Mie_Pulses">
+      <cd:Integer format="ascii">
+        <cd:Description>Minimum number of valid Mie pulses needed to generate valid output data for a frequency step</cd:Description>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Min_Num_of_Valid_Rayleigh_Pulses">
+    <cd:Type namexml="Min_Num_of_Valid_Rayleigh_Pulses">
+      <cd:Integer format="ascii">
+        <cd:Description>Minimum number of valid Rayleigh pulses needed to generate valid output data for a frequency step</cd:Description>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Mid_Frequency_Range_Lower_Limit">
+    <cd:Type namexml="Mid_Frequency_Range_Lower_Limit">
+      <cd:Attribute name="unit">
+        <cd:FixedValue>GHz</cd:FixedValue>
+      </cd:Attribute>
+      <cd:Float format="ascii">
+        <cd:Description>Lower frequency limit that defines the Mie fit range</cd:Description>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Mid_Frequency_Range_Upper_Limit">
+    <cd:Type namexml="Mid_Frequency_Range_Upper_Limit">
+      <cd:Attribute name="unit">
+        <cd:FixedValue>GHz</cd:FixedValue>
+      </cd:Attribute>
+      <cd:Float format="ascii">
+        <cd:Description>Upper frequency limit that defines the Mie fit range</cd:Description>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+</cd:Record>

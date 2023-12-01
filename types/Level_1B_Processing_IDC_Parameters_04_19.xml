@@ -1,0 +1,126 @@
+<?xml version="1.0"?>
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="xml" last-modified="2023-12-01" name="Level_1B_Processing_IDC_Parameters_04_19" namexml="Level_1B_Processing_IDC_Parameters">
+  <cd:Description>Processing parameters for Instrument Defocus Characterisation</cd:Description>
+  <cd:Field name="File_Type">
+    <cd:Text namexml="File_Type">
+      <cd:Description>File type string</cd:Description>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="Sph_Descriptor">
+    <cd:Text namexml="Sph_Descriptor">
+      <cd:Description>ASCII string describing the product</cd:Description>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="Image_Row_Max">
+    <cd:Type namexml="Image_Row_Max">
+      <cd:Integer format="ascii">
+        <cd:Description>IDC image summation range maximum row</cd:Description>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Image_Row_Min">
+    <cd:Type namexml="Image_Row_Min">
+      <cd:Integer format="ascii">
+        <cd:Description>IDC image summation range miminum row</cd:Description>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Image_Column_Channel1_Max">
+    <cd:Type namexml="Image_Column_Channel1_Max">
+      <cd:Integer format="ascii">
+        <cd:Description>IDC image summation range maximum column for channel 1</cd:Description>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Image_Column_Channel1_Min">
+    <cd:Type namexml="Image_Column_Channel1_Min">
+      <cd:Integer format="ascii">
+        <cd:Description>IDC image summation range minimun column for channel 1</cd:Description>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Image_Column_Channel2_Max">
+    <cd:Type namexml="Image_Column_Channel2_Max">
+      <cd:Integer format="ascii">
+        <cd:Description>IDC image summation range maximum column for channel 2</cd:Description>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Image_Column_Channel2_Min">
+    <cd:Type namexml="Image_Column_Channel2_Min">
+      <cd:Integer format="ascii">
+        <cd:Description>IDC image summation range minimun column for channel 2</cd:Description>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="DEU_Integration_Upper_Limit">
+    <cd:Type namexml="DEU_Integration_Upper_Limit">
+      <cd:Attribute name="unit">
+        <cd:Optional/>
+        <cd:FixedValue>TMC</cd:FixedValue>
+      </cd:Attribute>
+      <cd:Integer format="ascii">
+        <cd:Description>The upper limit integration time used for the verification in IDC mode</cd:Description>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="DEU_Integration_Lower_Limit">
+    <cd:Type namexml="DEU_Integration_Lower_Limit">
+      <cd:Attribute name="unit">
+        <cd:Optional/>
+        <cd:FixedValue>TMC</cd:FixedValue>
+      </cd:Attribute>
+      <cd:Integer format="ascii">
+        <cd:Description>The lower limit integration time used for the verification in IDC mode</cd:Description>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="ENC_Std_Dev_Upper_Threshold">
+    <cd:Type namexml="ENC_Std_Dev_Upper_Threshold">
+      <cd:Float format="ascii">
+        <cd:Description>Upper threshold for standard deviation of energetic centroid column and row standard deviation</cd:Description>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Mie_Gradient_Correction_Slope">
+    <cd:Type namexml="Mie_Gradient_Correction_Slope">
+      <cd:Float format="ascii">
+        <cd:Description>Slope used for the Mie horizontal gradient correction</cd:Description>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Mie_Gradient_Correction_Offset">
+    <cd:Type namexml="Mie_Gradient_Correction_Offset">
+      <cd:Float format="ascii">
+        <cd:Description>Offset used for the Mie horizontal gradient correction</cd:Description>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Rayleigh_Gradient_Correction_Slope">
+    <cd:Type namexml="Rayleigh_Gradient_Correction_Slope">
+      <cd:Float format="ascii">
+        <cd:Description>Slope used for the Rayleigh horizontal gradient correction</cd:Description>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Rayleigh_Gradient_Correction_Offset">
+    <cd:Type namexml="Rayleigh_Gradient_Correction_Offset">
+      <cd:Float format="ascii">
+        <cd:Description>Offset used for the Rayleigh horizontal gradient correction</cd:Description>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field> 
+</cd:Record>

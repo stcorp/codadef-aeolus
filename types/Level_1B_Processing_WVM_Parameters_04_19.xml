@@ -1,0 +1,490 @@
+<?xml version="1.0"?>
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="xml" last-modified="2023-12-01" name="Level_1B_Processing_WVM_Parameters_04_19" namexml="Level_1B_Processing_WVM_Parameters">
+  <cd:Description>Processing parameters for Wind Velocity Measurement</cd:Description>
+  <cd:Field name="File_Type">
+    <cd:Text namexml="File_Type">
+      <cd:Description>File type string</cd:Description>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="Sph_Descriptor">
+    <cd:Text namexml="Sph_Descriptor">
+      <cd:Description>ASCII string describing the product</cd:Description>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="Data_Source">
+    <cd:Text namexml="Data_Source">
+      <cd:Description>String indicating source of AISP data product. If set to 'A2D' equ. 69(b) is used. If set to 'E2S' or any other string equ 69(a) is used.</cd:Description>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="Line_Of_Sight_Wind_Flag">
+    <cd:Type namexml="Line_Of_Sight_Wind_Flag">
+      <cd:Integer format="ascii">
+        <cd:Description>Flag indicating whether horizontal or line-of-sight wind should be used. This flag can be set to either "true" or "false". A "true" value indicates that the line of sight wind velocity is computed, and a "false" value indicates that horizontal wind velocity is computed</cd:Description>
+        <cd:NativeType>uint8</cd:NativeType>
+        <cd:Mapping string="FALSE" value="0"/>
+        <cd:Mapping string="False" value="0"/>
+        <cd:Mapping string="false" value="0"/>
+        <cd:Mapping string="TRUE" value="1"/>
+        <cd:Mapping string="True" value="1"/>
+        <cd:Mapping string="true" value="1"/>
+        <ct:NamedTest id="BooleanXmlTest"/>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Min_Num_of_Mie_Ground_Echo_Measurements">
+    <cd:Type namexml="Min_Num_of_Mie_Ground_Echo_Measurements">
+      <cd:Integer format="ascii">
+        <cd:Description>Minimum number of Mie ground wind measurement bins to validate ground correction factor</cd:Description>
+        <cd:NativeType>uint32</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Mie_Land_Useful_Signal_Lower_Threshold">
+    <cd:Type namexml="Mie_Land_Useful_Signal_Lower_Threshold">
+      <cd:Attribute name="unit">
+        <cd:Optional/>
+        <cd:FixedValue>ACCD counts</cd:FixedValue>
+      </cd:Attribute>
+      <cd:Float format="ascii">
+        <cd:Description>Threshold applied to coadded gound signal of a measurement if the surface indicates land surface. If the threshold is met, the signal is added to the sum of the ground signal on observation level</cd:Description>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Mie_Water_Useful_Signal_Lower_Threshold">
+    <cd:Type namexml="Mie_Water_Useful_Signal_Lower_Threshold">
+      <cd:Attribute name="unit">
+        <cd:Optional/>
+        <cd:FixedValue>ACCD counts</cd:FixedValue>
+      </cd:Attribute>
+      <cd:Float format="ascii">
+        <cd:Description>Threshold applied to coadded gound signal of a measurement if the surface indicates water/sea ice surface. If the threshold is met, the signal is added to the sum of the ground signal on observation level</cd:Description>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Mie_Max_Ground_Echo_Bin_Thickness_Above_DEM">
+    <cd:Type namexml="Mie_Max_Ground_Echo_Bin_Thickness_Above_DEM">
+      <cd:Attribute name="unit">
+        <cd:Optional/>
+        <cd:FixedValue>m</cd:FixedValue>
+      </cd:Attribute>
+      <cd:Float format="ascii">
+        <cd:Description>Threshold applied to a bin identified as ground bin candidate. If the threshold is not met, the signal of the bin is not added to the sum of the ground signal on observation level</cd:Description>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Mie_SR_Useful_Signal_Lower_Threshold">
+    <cd:Type namexml="Mie_SR_Useful_Signal_Lower_Threshold">
+      <cd:Attribute name="unit">
+        <cd:Optional/>
+        <cd:FixedValue>ACCD counts</cd:FixedValue>
+      </cd:Attribute>
+      <cd:Float format="ascii">
+        <cd:Description>Useful signal threshold used to flag Mie SR on measurement level valid/invalid. See also parameter Mie_SR_Useful_Signal_Lower_Threshold_Met</cd:Description>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Min_Num_of_Rayleigh_Ground_Echo_Measurements">
+    <cd:Type namexml="Min_Num_of_Rayleigh_Ground_Echo_Measurements">
+      <cd:Integer format="ascii">
+        <cd:Description>Minimum number of Rayleigh ground wind measurement bins to validate ground correction factor</cd:Description>
+        <cd:NativeType>uint32</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Rayleigh_Land_Useful_Signal_Lower_Threshold">
+    <cd:Type namexml="Rayleigh_Land_Useful_Signal_Lower_Threshold">
+      <cd:Attribute name="unit">
+        <cd:Optional/>
+        <cd:FixedValue>ACCD counts</cd:FixedValue>
+      </cd:Attribute>
+      <cd:Float format="ascii">
+        <cd:Description>Threshold applied to coadded gound signal of a measurement if the surface indicates land surface. If the threshold is met, the signal is added to the sum of the ground signal on observation level</cd:Description>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Rayleigh_Water_Useful_Signal_Lower_Threshold">
+    <cd:Type namexml="Rayleigh_Water_Useful_Signal_Lower_Threshold">
+      <cd:Attribute name="unit">
+        <cd:Optional/>
+        <cd:FixedValue>ACCD counts</cd:FixedValue>
+      </cd:Attribute>
+      <cd:Float format="ascii">
+        <cd:Description>Threshold applied to coadded gound signal of a measurement if the surface indicates water/sea ice surface. If the threshold is met, the signal is added to the sum of the ground signal on observation level</cd:Description>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Rayleigh_Max_Ground_Echo_Bin_Thickness_Above_DEM">
+    <cd:Type namexml="Rayleigh_Max_Ground_Echo_Bin_Thickness_Above_DEM">
+      <cd:Attribute name="unit">
+        <cd:Optional/>
+        <cd:FixedValue>m</cd:FixedValue>
+      </cd:Attribute>
+      <cd:Float format="ascii">
+        <cd:Description>Threshold applied to a bin identified as ground bin candidate. If the threshold is not met, the signal of the bin is not added to the sum of the ground signal on observation level</cd:Description>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Maximum_Upper_DEM_Offset">
+    <cd:Type namexml="Maximum_Upper_DEM_Offset">
+      <cd:Attribute name="unit"/>
+      <cd:Float format="ascii">
+        <cd:Description>Maximum height difference that center of detected ground bin is allowed to be above center of DEM intersection bin</cd:Description>
+        <cd:Unit>m</cd:Unit>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Maximum_Lower_DEM_Offset">
+    <cd:Type namexml="Maximum_Lower_DEM_Offset">
+      <cd:Attribute name="unit"/>
+      <cd:Float format="ascii">
+        <cd:Description>Maximum height difference that center of detected ground bin is allowed to be below center of DEM intersection bin</cd:Description>
+        <cd:Unit>m</cd:Unit>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Correction_With_Error_Response_Fit">
+    <cd:Type namexml="Correction_With_Error_Response_Fit">
+      <cd:Integer format="ascii">
+        <cd:Description>Flag indicating wether the Rayleigh response correction shall be performed using the array of response errors of the AUX_RRC file or the polynomial fit of the response errors. A 'TRUE' value indicates that the polynomial fit parameters are used.</cd:Description>
+        <cd:NativeType>uint8</cd:NativeType>
+        <cd:Mapping string="FALSE" value="0"/>
+        <cd:Mapping string="False" value="0"/>
+        <cd:Mapping string="false" value="0"/>
+        <cd:Mapping string="TRUE" value="1"/>
+        <cd:Mapping string="True" value="1"/>
+        <cd:Mapping string="true" value="1"/>
+        <ct:NamedTest id="BooleanXmlTest"/>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Root_Selection_Stop_Threshold">
+    <cd:Type namexml="Root_Selection_Stop_Threshold">
+      <cd:Float format="ascii">
+        <cd:Description>If CorrectionWith_Error_Respose_Fit is set to TRUE, the root of a polynomial is retrieved in a Newton iteration that uses this iteration stop threshold.</cd:Description>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Mie_Ground_Correction_Weighting_Factor">
+    <cd:Type namexml="Mie_Ground_Correction_Weighting_Factor">
+      <cd:Float format="ascii">
+        <cd:Description>Mie ground correction weighting factor</cd:Description>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Rayleigh_Ground_Correction_Weighting_Factor">
+    <cd:Type namexml="Rayleigh_Ground_Correction_Weighting_Factor">
+      <cd:Float format="ascii">
+        <cd:Description>Rayleigh ground correction weighting factor</cd:Description>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Min_Mie_Ground_Detection_Signal_Derivative">
+    <cd:Type namexml="Min_Mie_Ground_Detection_Signal_Derivative">
+      <cd:Attribute name="unit">
+        <cd:Optional/>
+        <cd:FixedValue>ACCD counts</cd:FixedValue>
+      </cd:Attribute>
+      <cd:Float format="ascii">
+        <cd:Description>Minimum derivative of Mie signal for ground detection</cd:Description>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Max_Mie_Ground_Detection_Response_Shift">
+    <cd:Type namexml="Max_Mie_Ground_Detection_Response_Shift">
+      <cd:Attribute name="unit">
+        <cd:Optional/>
+        <cd:FixedValue>ACCD pixel</cd:FixedValue>
+      </cd:Attribute>
+      <cd:Float format="ascii">
+        <cd:Description>Maximum Mie Response shift for ground detection</cd:Description>
+        <cd:Unit>ACCD pixel</cd:Unit>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Min_Rayleigh_Ground_Detection_Signal_Derivative">
+    <cd:Type namexml="Min_Rayleigh_Ground_Detection_Signal_Derivative">
+      <cd:Float format="ascii">
+        <cd:Description>Minimum derivative of Rayleigh signal shift forground detection</cd:Description>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Max_Rayleigh_Ground_Detection_Response_Shift">
+    <cd:Type namexml="Max_Rayleigh_Ground_Detection_Response_Shift">
+      <cd:Float format="ascii">
+        <cd:Description>Maximum Rayleigh Response shift for ground detection</cd:Description>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Ground_Detection_FWHM_Upper_Threshold">
+    <cd:Type namexml="Ground_Detection_FWHM_Upper_Threshold">
+      <cd:Attribute name="unit">
+        <cd:Optional/>
+        <cd:FixedValue>ACCD pixel</cd:FixedValue>
+      </cd:Attribute>
+      <cd:Float format="ascii">
+        <cd:Description>Maximum FWHM of Mie signal for ground detection</cd:Description>
+        <cd:Unit>pixel</cd:Unit>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Mie_Rayleigh_Ground_Correction_Offset">
+    <cd:Type namexml="Mie_Rayleigh_Ground_Correction_Offset">
+      <cd:Attribute name="unit"/>
+      <cd:Float format="ascii">
+        <cd:Description>Offset between Mie and Rayleigh ground corrections</cd:Description>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Rayleigh_Correction_With_Mie_Ground_Echo_Weighting_Factor">
+    <cd:Type namexml="Rayleigh_Correction_With_Mie_Ground_Echo_Weighting_Factor">
+      <cd:Float format="ascii">
+        <cd:Description>Weighting parameter for correction of Rayleigh with Mie ground echo</cd:Description>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Mie_Harmonic_Correction_Factor">
+    <cd:Type namexml="Mie_Harmonic_Correction_Factor">
+      <cd:Float format="ascii">
+        <cd:Description>Weighting parameter for Mie harmonic correction</cd:Description>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Rayleigh_Harmonic_Correction_Factor">
+    <cd:Type namexml="Rayleigh_Harmonic_Correction_Factor">
+      <cd:Float format="ascii">
+        <cd:Description>Weighting parameter for Rayleigh harmonic correction</cd:Description>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Rayleigh_Correction_With_Mie_Harmonic_Weighting_Factor">
+    <cd:Type namexml="Rayleigh_Correction_With_Mie_Harmonic_Weighting_Factor">
+      <cd:Float format="ascii">
+        <cd:Description>Weighting parameter for correction of Rayleigh with Mie harmonic</cd:Description>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Num_Bad_Pulses_Per_Meas_Threshold">
+    <cd:Type namexml="Num_Bad_Pulses_Per_Meas_Threshold">
+      <cd:Integer format="ascii">
+        <cd:Description>Threshold for the number of bad pulses in each measurement</cd:Description>
+        <cd:NativeType>uint32</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Multimode_Average_Ratio_Obs_Threshold">
+    <cd:Type namexml="Multimode_Average_Ratio_Obs_Threshold">
+      <cd:Float format="ascii">
+        <cd:Description>Threshold for the for the multimode average ratio over an observation</cd:Description>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Wind_Velocity_Threshold">
+    <cd:Type namexml="Wind_Velocity_Threshold">
+      <cd:Attribute name="unit">
+        <cd:Optional/>
+        <cd:FixedValue>m/s</cd:FixedValue>
+      </cd:Attribute>
+      <cd:Float format="ascii">
+        <cd:Description>Retrieved wind values above this threshold are flagged invalid</cd:Description>
+        <cd:Unit>m/s</cd:Unit>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Cut_Negative_Mie_Measurement_Data">
+    <cd:Type namexml="Cut_Negative_Mie_Measurement_Data">
+      <cd:Integer format="ascii">
+        <cd:Description>Flag TRUE/FALSE to indicate whether negative values for the Mie_Measurement_Data should be set to 0.0.</cd:Description>
+        <cd:NativeType>uint8</cd:NativeType>
+        <cd:Mapping string="FALSE" value="0"/>
+        <cd:Mapping string="False" value="0"/>
+        <cd:Mapping string="false" value="0"/>
+        <cd:Mapping string="TRUE" value="1"/>
+        <cd:Mapping string="True" value="1"/>
+        <cd:Mapping string="true" value="1"/>
+        <ct:NamedTest id="BooleanXmlTest"/>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Cut_Negative_Mie_Mean_Ref_Pulse_Data">
+    <cd:Type namexml="Cut_Negative_Mie_Mean_Ref_Pulse_Data">
+      <cd:Integer format="ascii">
+        <cd:Description>Flag TRUE/FALSE to indicate whether negative values for the Mie_Reference_Pulse should be set to 0.0.</cd:Description>
+        <cd:NativeType>uint8</cd:NativeType>
+        <cd:Mapping string="FALSE" value="0"/>
+        <cd:Mapping string="False" value="0"/>
+        <cd:Mapping string="false" value="0"/>
+        <cd:Mapping string="TRUE" value="1"/>
+        <cd:Mapping string="True" value="1"/>
+        <cd:Mapping string="true" value="1"/>
+        <ct:NamedTest id="BooleanXmlTest"/>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Use_Fitted_Non_Linearities">
+    <cd:Type namexml="Use_Fitted_Non_Linearities">
+      <cd:Integer format="ascii">
+        <cd:Description>Flag TRUE/FALSE to indicate if the fitted non-linearities should be used for the Mie processing instead of non-linearities of the input AUX_MRC_1B</cd:Description>
+        <cd:NativeType>uint8</cd:NativeType>
+        <cd:Mapping string="FALSE" value="0"/>
+        <cd:Mapping string="False" value="0"/>
+        <cd:Mapping string="false" value="0"/>
+        <cd:Mapping string="TRUE" value="1"/>
+        <cd:Mapping string="True" value="1"/>
+        <cd:Mapping string="true" value="1"/>
+        <ct:NamedTest id="BooleanXmlTest"/>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Fitted_Non_Linearities">
+    <cd:Record namexml="Fitted_Non_Linearities">
+      <cd:Field name="Num_Sampling_Points_Internal_Reference">
+        <cd:Type namexml="Num_Sampling_Points_Internal_Reference">
+          <cd:Integer format="ascii">
+            <cd:Description>Number of sampling points for the Mie non-linearities for the internal path</cd:Description>
+            <cd:NativeType>uint16</cd:NativeType>
+          </cd:Integer>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="Num_Sampling_Points_Atmosphere">
+        <cd:Type namexml="Num_Sampling_Points_Atmosphere">
+          <cd:Integer format="ascii">
+            <cd:Description>Number of sampling points for the Mie non-linearities for the atmospheric path</cd:Description>
+            <cd:NativeType>uint16</cd:NativeType>
+          </cd:Integer>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="Pixel_Positions_Internal_Reference">
+        <cd:Type namexml="Pixel_Positions_Internal_Reference" format="ascii">
+          <cd:Attribute name="unit">
+            <cd:Optional/>
+            <cd:FixedValue>ACCD pixel index</cd:FixedValue>
+          </cd:Attribute>
+          <cd:Array>
+            <cd:Dimension>int(../Num_Sampling_Points_Internal_Reference)</cd:Dimension>
+            <cd:Float>
+              <cd:NativeType>double</cd:NativeType>
+            </cd:Float>
+          </cd:Array>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="Fitted_Reference_Pulse_Error_Mie_Response">
+        <cd:Type namexml="Fitted_Reference_Pulse_Error_Mie_Response" format="ascii">
+          <cd:Attribute name="unit">
+            <cd:Optional/>
+            <cd:FixedValue>ACCD pixel</cd:FixedValue>
+          </cd:Attribute>
+          <cd:Array>
+            <cd:Dimension>int(../Num_Sampling_Points_Internal_Reference)</cd:Dimension>
+            <cd:Float>
+              <cd:NativeType>double</cd:NativeType>
+            </cd:Float>
+          </cd:Array>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="Pixel_Positions_Atmospheric_Path">
+        <cd:Type namexml="Pixel_Positions_Atmospheric_Path" format="ascii">
+          <cd:Attribute name="unit">
+            <cd:Optional/>
+            <cd:FixedValue>ACCD pixel index</cd:FixedValue>
+          </cd:Attribute>
+          <cd:Array>
+            <cd:Dimension>int(../Num_Sampling_Points_Atmosphere)</cd:Dimension>
+            <cd:Float>
+              <cd:NativeType>double</cd:NativeType>
+            </cd:Float>
+          </cd:Array>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="Fitted_Measurement_Error_Mie_Response">
+        <cd:Type namexml="Fitted_Measurement_Error_Mie_Response" format="ascii">
+          <cd:Attribute name="unit">
+            <cd:Optional/>
+            <cd:FixedValue>ACCD pixel</cd:FixedValue>
+          </cd:Attribute>
+          <cd:Array>
+            <cd:Dimension>int(../Num_Sampling_Points_Atmosphere)</cd:Dimension>
+            <cd:Float>
+              <cd:NativeType>double</cd:NativeType>
+            </cd:Float>
+          </cd:Array>
+        </cd:Type>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="Use_Constant_Internal_Response_Rayleigh">
+    <cd:Type namexml="Use_Constant_Internal_Response_Rayleigh">
+      <cd:Integer format="ascii">
+        <cd:Description>Flag TRUE/FALSE to indicate if a constant response value for the internal Rayleigh reference should be used instead of the processed internal Rayleigh reference response.</cd:Description>
+        <cd:NativeType>uint8</cd:NativeType>
+        <cd:Mapping string="FALSE" value="0"/>
+        <cd:Mapping string="False" value="0"/>
+        <cd:Mapping string="false" value="0"/>
+        <cd:Mapping string="TRUE" value="1"/>
+        <cd:Mapping string="True" value="1"/>
+        <cd:Mapping string="true" value="1"/>
+        <ct:NamedTest id="BooleanXmlTest"/>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Constant_Internal_Response_Rayleigh">
+    <cd:Type namexml="Constant_Internal_Response_Rayleigh">
+      <cd:Float format="ascii">
+        <cd:Description>Constant internal Rayleigh reference response.</cd:Description>
+        <cd:Unit>pixel</cd:Unit>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Use_Constant_Internal_Response_Mie">
+    <cd:Type namexml="Use_Constant_Internal_Response_Mie">
+      <cd:Integer format="ascii">
+        <cd:Description>Flag TRUE/FALSE to indicate if a constant response value for the internal Mie reference should be used instead of the processed internal Mie reference response.</cd:Description>
+        <cd:NativeType>uint8</cd:NativeType>
+        <cd:Mapping string="FALSE" value="0"/>
+        <cd:Mapping string="False" value="0"/>
+        <cd:Mapping string="false" value="0"/>
+        <cd:Mapping string="TRUE" value="1"/>
+        <cd:Mapping string="True" value="1"/>
+        <cd:Mapping string="true" value="1"/>
+        <ct:NamedTest id="BooleanXmlTest"/>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Constant_Internal_Response_Mie">
+    <cd:Type namexml="Constant_Internal_Response_Mie">
+      <cd:Attribute name="unit">
+        <cd:Optional/>
+        <cd:FixedValue>ACCD pixel index</cd:FixedValue>
+      </cd:Attribute>
+      <cd:Float format="ascii">
+        <cd:Description>Constant internal Mie reference response.</cd:Description>
+        <cd:Unit>pixel</cd:Unit>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+</cd:Record>

@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="xml" last-modified="2023-12-01" name="Level_1B_Processing_ISR_Parameters_04_19" namexml="Level_1B_Processing_ISR_Parameters">
+  <cd:Description>Processing parameters for Instrument Spectral Registration</cd:Description>
+  <cd:Field name="File_Type">
+    <cd:Text namexml="File_Type">
+      <cd:Description>File type string</cd:Description>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="Sph_Descriptor">
+    <cd:Text namexml="Sph_Descriptor">
+      <cd:Description>ASCII string describing the product</cd:Description>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="Min_Num_of_Valid_Mie_Pulses">
+    <cd:Type namexml="Min_Num_of_Valid_Mie_Pulses">
+      <cd:Integer format="ascii">
+        <cd:Description>Minimum number of valid Mie pulses needed to generate valid output data for a frequency step</cd:Description>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Min_Num_of_Valid_Rayleigh_Pulses">
+    <cd:Type namexml="Min_Num_of_Valid_Rayleigh_Pulses">
+      <cd:Integer format="ascii">
+        <cd:Description>Minimum number of valid Rayleigh pulses needed to generate valid output data for a frequency step</cd:Description>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Mid_Mie_Response_Pixel">
+    <cd:Type namexml="Mid_Mie_Response_Pixel">
+      <cd:Attribute name="unit">
+        <cd:FixedValue>ACCD pixel index</cd:FixedValue>
+      </cd:Attribute>
+      <cd:Float format="ascii">
+        <cd:Description>ACCD pixel position expected to be in the middle of the Mie USR</cd:Description>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Apply_Energy_Correction">
+    <cd:Type namexml="Apply_Energy_Correction">
+      <cd:Integer format="ascii">
+        <cd:Description>Flag TRUE/FALSE to indicate if energy correction should be applied to Mie and Rayleigh.</cd:Description>
+        <cd:NativeType>uint8</cd:NativeType>
+        <cd:Mapping string="FALSE" value="0"/>
+        <cd:Mapping string="False" value="0"/>
+        <cd:Mapping string="false" value="0"/>
+        <cd:Mapping string="TRUE" value="1"/>
+        <cd:Mapping string="True" value="1"/>
+        <cd:Mapping string="true" value="1"/>
+        <ct:NamedTest id="BooleanXmlTest"/>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Energy_Drift_Correction_Factor_Mie">
+    <cd:Type namexml="Energy_Drift_Correction_Factor_Mie">
+      <cd:Float format="ascii">
+        <cd:Description>The Energy_Drift_Correction_Factor_Mie describes a difference of the laser energy measured by PD74 and the actual signal level detected by the MSP ACCD.</cd:Description>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Energy_Drift_Correction_Factor_Channel_A">
+    <cd:Type namexml="Energy_Drift_Correction_Factor_Channel_A">
+      <cd:Float format="ascii">
+        <cd:Description>The Energy_Drift_Correction_Factor_Channel_A describes a difference of the laser energy measured by PD74 and the actual signal level detected by the RSP ACCD for channel A. Such a difference might be caused by slightly different illumination angles of the different optical paths.</cd:Description>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Energy_Drift_Correction_Factor_Channel_B">
+    <cd:Type namexml="Energy_Drift_Correction_Factor_Channel_B">
+      <cd:Float format="ascii">
+        <cd:Description>The Energy_Drift_Correction_Factor_Channel_B describes a difference of the laser energy measured by PD74 and the actual signal level detected by the RSP ACCD for channel B. Such a difference might be caused by slightly different illumination angles of the different optical paths.</cd:Description>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Num_Energy_Drift_Correction_Steps">
+    <cd:Type namexml="Num_Energy_Drift_Correction_Steps">
+      <cd:Integer format="ascii">
+        <cd:Description>Number of frequency steps</cd:Description>
+        <cd:NativeType>uint32</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+</cd:Record>
