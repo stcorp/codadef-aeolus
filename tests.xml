@@ -221,7 +221,7 @@
   </ct:CrossFileTest>
   <ct:CrossFileTest name="MPH_Software_Ver" criticality="Error" description="Software_Ver mismatch">
     <ct:ValueExpressionDbl><![CDATA[rtrim(str(/mph/software_ver))]]></ct:ValueExpressionDbl>
-    <ct:ValueExpressionHdr><![CDATA[str(/Earth_Explorer_Header/Variable_Header/Main_Product_Header/Software_Ver)]]></ct:ValueExpressionHdr>
+    <ct:ValueExpressionHdr><![CDATA[rtrim(str(/Earth_Explorer_Header/Variable_Header/Main_Product_Header/Software_Ver))]]></ct:ValueExpressionHdr>
   </ct:CrossFileTest>
   <ct:CrossFileTest name="MPH_Baseline" criticality="Error" description="Baseline mismatch">
     <ct:ValueExpressionDbl><![CDATA[rtrim(str(/mph/baseline))]]></ct:ValueExpressionDbl>
