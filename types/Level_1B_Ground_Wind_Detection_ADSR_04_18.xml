@@ -1,0 +1,344 @@
+<?xml version="1.0"?>
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="binary" last-modified="2023-03-29" name="Level_1B_Ground_Wind_Detection_ADSR_04_18">
+  <cd:Field name="start_of_observation_time">
+    <cd:Time timeformat="binary_envisat_datetime">
+      <cd:Description>Start time at start of BRC</cd:Description>
+      <ct:NamedTest id="RangeSecond" path="seconds"/>
+      <ct:NamedTest id="RangeMicroSecond" path="microseconds"/>
+      <ct:NamedTest id="TimeNotZero"/>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="mie_ground_correction_velocity">
+    <cd:Float>
+      <cd:Description>Mie ground correction velocity</cd:Description>
+      <cd:Unit>m/s</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+      <ct:NamedTest id="FloatIsFinite"/>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="rayleigh_ground_correction_velocity">
+    <cd:Float>
+      <cd:Description>Rayleigh ground correction velocity</cd:Description>
+      <cd:Unit>m/s</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+      <ct:NamedTest id="FloatIsFinite"/>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="updated_mie_ground_correction_velocity">
+    <cd:Integer>
+      <cd:Description>TRUE if Mie ground correction velocity is update</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+      <ct:NamedTest id="BooleanBinTest"/>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="updated_rayleigh_ground_correction_velocity">
+    <cd:Integer>
+      <cd:Description>TRUE if Rayleigh ground correction velocity is update</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+      <ct:NamedTest id="BooleanBinTest"/>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="mie_ground_fwhm">
+    <cd:Float>
+      <cd:Description>Mie Core 2 output FWHM when applied to observation level Mie ground signal. This value is filled in when ZWC_Result_Type is set to ZWC_Mie or ZWC_Both and the Mie Core 2 algorithm has been applied. In all other cases the value is set to 0.0</cd:Description>
+      <cd:Unit>ACCD pixel</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+      <ct:NamedTest id="FloatIsFinite"/>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="mie_ground_useful_signal">
+    <cd:Float>
+      <cd:Description>Useful signal of observation level Mie ground signal. This value is filled in when ZWC_Result_Type is set to ZWC_Mie or ZWC_Both. In all other cases the value is set to 0.0</cd:Description>
+      <cd:Unit>ACCD counts</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+      <ct:NamedTest id="FloatIsFinite"/>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="mie_ground_signal_to_noise_ratio">
+    <cd:Float>
+      <cd:Description>Signal to noise ratio of observation level Mie ground signal. This value is filled in when ZWC_Result_Type is set to ZWC_Mie or ZWC_Both. In all other cases the value is set to 0.0</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+      <ct:NamedTest id="FloatIsFinite"/>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="mie_ground_refined_signal_to_noise_ratio">
+    <cd:Float>
+      <cd:Description>Refined signal to noise ratio of observation level Mie ground signal. This value is filled in when ZWC_Result_Type is set to ZWC_Mie or ZWC_Both. In all other cases the value is set to 0.0</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+      <ct:NamedTest id="FloatIsFinite"/>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="rayleigh_ground_useful_signal">
+    <cd:Float>
+      <cd:Description>Useful signal of observation level Rayleigh ground signal. This value is filled in when ZWC_Result_Type is set to ZWC_Rayleigh or ZWC_Both. In all other cases the value is set to 0.0</cd:Description>
+      <cd:Unit>ACCD counts</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+      <ct:NamedTest id="FloatIsFinite"/>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="rayleigh_ground_signal_to_noise_ratio">
+    <cd:Float>
+      <cd:Description>Signal to noise ratio of observation level Rayleigh ground signal. This value is filled in when ZWC_Result_Type is set to ZWC_Rayleigh or ZWC_Both. In all other cases the value is set to 0.0</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+      <ct:NamedTest id="FloatIsFinite"/>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="mie_average_ground_wind_bin_thickness">
+    <cd:Float>
+      <cd:Description>Average of bin thicknesses of detected ground wind bins of all measurements for Mie</cd:Description>
+      <cd:Unit>m</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+      <ct:NamedTest id="FloatIsFinite"/>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="rayleigh_average_ground_wind_bin_thickness">
+    <cd:Float>
+      <cd:Description>Average of bin thicknesses of detected ground wind bins of all measurements for Rayleigh</cd:Description>
+      <cd:Unit>m</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+      <ct:NamedTest id="FloatIsFinite"/>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="mie_average_ground_wind_bin_thickness_above_dem">
+    <cd:Float>
+      <cd:Description>Average ground wind bin thickness (height of the air column) above DEM intersection for Mie</cd:Description>
+      <cd:Unit>m</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+      <ct:NamedTest id="FloatIsFinite"/>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="rayleigh_average_ground_wind_bin_thickness_above_dem">
+    <cd:Float>
+      <cd:Description>Average ground wind bin thickness (height of the air column) above DEM intersection for Rayleigh</cd:Description>
+      <cd:Unit>m</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+      <ct:NamedTest id="FloatIsFinite"/>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="validation_criteria">
+    <cd:Record>
+      <cd:Description>Level 1B ground Wind Direction Validation Criteria</cd:Description>
+      <cd:Field name="min_num_of_mie_ground_echo_measurements">
+        <cd:Integer>
+          <cd:Description>The minimum number of measurements with valid Mie ground bins detected in order to validate new ground correction factor</cd:Description>
+          <cd:BitSize>8</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="mie_land_useful_signal_treshold">
+        <cd:Float>
+          <cd:Description>Threshold applied to coadded gound signal of a measurement if the surface indicates land surface. If the threshold is met, the signal is added to the sum of the ground signal on observation level</cd:Description>
+          <cd:Unit>ACCD counts</cd:Unit>
+          <cd:BitSize>64</cd:BitSize>
+          <cd:NativeType>double</cd:NativeType>
+          <ct:NamedTest id="FloatIsFinite"/>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="mie_water_useful_signal_treshold">
+        <cd:Float>
+          <cd:Description>Threshold applied to coadded gound signal of a measurement if the surface indicates water/sea ice surface. If the threshold is met, the signal is added to the sum of the ground signal on observation level</cd:Description>
+          <cd:Unit>ACCD counts</cd:Unit>
+          <cd:BitSize>64</cd:BitSize>
+          <cd:NativeType>double</cd:NativeType>
+          <ct:NamedTest id="FloatIsFinite"/>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="mie_max_ground_echo_bin_thickness_above_dem">
+        <cd:Float>
+          <cd:Description>Threshold applied to a bin identified as ground bin candidate. If the threshold is not met, the signal of the bin is not added to the sum of the ground signal on observation level</cd:Description>
+          <cd:Unit>m</cd:Unit>
+          <cd:BitSize>64</cd:BitSize>
+          <cd:NativeType>double</cd:NativeType>
+          <ct:NamedTest id="FloatIsFinite"/>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="min_num_of_rayleigh_ground_echo_measurements">
+        <cd:Integer>
+          <cd:Description>The minimum number of measurements with valid Rayleigh ground bins detected in order to validate new ground correction factor</cd:Description>
+          <cd:BitSize>8</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="rayleigh_land_useful_signal_treshold">
+        <cd:Float>
+          <cd:Description>Threshold applied to coadded gound signal of a measurement if the surface indicates land surface. If the threshold is met, the signal is added to the sum of the ground signal on observation level</cd:Description>
+          <cd:Unit>ACCD counts</cd:Unit>
+          <cd:BitSize>64</cd:BitSize>
+          <cd:NativeType>double</cd:NativeType>
+          <ct:NamedTest id="FloatIsFinite"/>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="rayleigh_water_useful_signal_treshold">
+        <cd:Float>
+          <cd:Description>Threshold applied to coadded gound signal of a measurement if the surface indicates water/sea ice surface. If the threshold is met, the signal is added to the sum of the ground signal on observation level</cd:Description>
+          <cd:Unit>ACCD counts</cd:Unit>
+          <cd:BitSize>64</cd:BitSize>
+          <cd:NativeType>double</cd:NativeType>
+          <ct:NamedTest id="FloatIsFinite"/>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="rayleigh_max_ground_echo_bin_thickness_above_dem">
+        <cd:Float>
+          <cd:Description>Threshold applied to a bin identified as ground bin candidate. If the threshold is not met, the signal of the bin is not added to the sum of the ground signal on observation level</cd:Description>
+          <cd:Unit>m</cd:Unit>
+          <cd:BitSize>64</cd:BitSize>
+          <cd:NativeType>double</cd:NativeType>
+          <ct:NamedTest id="FloatIsFinite"/>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="number_of_mie_ground_bins">
+        <cd:Integer>
+          <cd:Description>Number of Mie measurements containing ground wind bins</cd:Description>
+          <cd:BitSize>8</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="number_of_rayleigh_ground_bins">
+        <cd:Integer>
+          <cd:Description>Number of Rayleigh measurements containing ground wind bins</cd:Description>
+          <cd:BitSize>8</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="spare_1">
+        <cd:Raw>
+          <cd:Description>Spare</cd:Description>
+          <cd:BitSize>64</cd:BitSize>
+        </cd:Raw>
+        <cd:Hidden/>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="measurement_ground_wind_detection">
+    <cd:Array>
+      <cd:Dimension><![CDATA[int(/sph/n_max)]]></cd:Dimension>
+      <cd:Record>
+        <cd:Description>Level 1B Measurement Ground Wind Detection</cd:Description>
+        <cd:Field name="mie_measurement_ground_wind_bin">
+          <cd:NamedType id="Level_1B_Ground_Wind_Detection_04_03"/>
+        </cd:Field>
+        <cd:Field name="rayleigh_measurement_ground_wind_bin">
+          <cd:NamedType id="Level_1B_Ground_Wind_Detection_04_03"/>
+        </cd:Field>
+      </cd:Record>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="mie_ground_correction_weighting_factor">
+    <cd:Float>
+      <cd:Description>Mie ground correction weighting factor</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+      <ct:NamedTest id="FloatIsFinite"/>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="rayleigh_ground_correction_weighting_factor">
+    <cd:Float>
+      <cd:Description>Rayleigh ground correction weighting factor</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+      <ct:NamedTest id="FloatIsFinite"/>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="rayleigh_correction_with_mie_ground_echo_weighting_factor">
+    <cd:Float>
+      <cd:Description>Weighting parameter for correction of Rayleigh with Mie ground echo</cd:Description>
+      <cd:Unit>AU</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+      <ct:NamedTest id="FloatIsFinite"/>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="mie_harmonic_correction_factor">
+    <cd:Float>
+      <cd:Description>Weighting parameter for Mie harmonic correction</cd:Description>
+      <cd:Unit>AU</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+      <ct:NamedTest id="FloatIsFinite"/>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="rayleigh_harmonic_correction_factor">
+    <cd:Float>
+      <cd:Description>Weighting parameter for Rayleigh harmonic correction</cd:Description>
+      <cd:Unit>AU</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+      <ct:NamedTest id="FloatIsFinite"/>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="rayleigh_correction_with_mie_harmonic_weighting_factor">
+    <cd:Float>
+      <cd:Description>Weighting parameter for correction of Rayleigh with Mie harmonic</cd:Description>
+      <cd:Unit>AU</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+      <ct:NamedTest id="FloatIsFinite"/>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="mie_rayleigh_ground_correction_offset">
+    <cd:Float>
+      <cd:Description>Offset between Mie and Rayleigh ground corrections</cd:Description>
+      <cd:Unit>m/s</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+      <ct:NamedTest id="FloatIsFinite"/>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="hbe_mie_ground_correction_velocity">
+    <cd:Float>
+      <cd:Description>Mie ground correction velocity using harmonic bias estimation for the observation</cd:Description>
+      <cd:Unit>m/s</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+      <ct:NamedTest id="FloatIsFinite"/>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="hbe_rayleigh_ground_correction_velocity">
+    <cd:Float>
+      <cd:Description>Rayleigh ground correction velocity using harmonic bias estimation for the observation</cd:Description>
+      <cd:Unit>m/s</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+      <ct:NamedTest id="FloatIsFinite"/>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="mie_channel_total_zero_wind_correction">
+    <cd:Float>
+      <cd:Description>Mie channel total zero wind correction calculated for this observation</cd:Description>
+      <cd:Unit>m/s</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+      <ct:NamedTest id="FloatIsFinite"/>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="rayleigh_channel_total_zero_wind_correction">
+    <cd:Float>
+      <cd:Description>Rayleigh channel total zero wind correction calculated for this observation</cd:Description>
+      <cd:Unit>m/s</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+      <ct:NamedTest id="FloatIsFinite"/>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="spare_1">
+    <cd:Raw>
+      <cd:Description>Spare</cd:Description>
+      <cd:BitSize>128</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+</cd:Record>
