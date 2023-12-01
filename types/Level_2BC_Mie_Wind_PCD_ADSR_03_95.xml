@@ -1,0 +1,275 @@
+<?xml version="1.0"?>
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="binary" name="Level_2BC_Mie_Wind_PCD_ADSR_03_95" last-modified="2023-12-01">
+  <cd:Field name="wind_result_id">
+    <cd:Integer>
+      <cd:Description>unique L2B wind result identification number for this L2B file</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="start_of_observation_datetime">
+    <cd:Time timeformat="binary_envisat_datetime">
+      <cd:Description>Start date and time of Measurement</cd:Description>
+      <ct:NamedTest id="RangeSecond" path="seconds"/>
+      <ct:NamedTest id="RangeMicroSecond" path="microseconds"/>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="mie_wind_qc">
+    <cd:Record>
+      <cd:Description>Structure in which the wind retrieval output QC parameters for the Mie channel are collected</cd:Description>
+      <cd:Field name="hlos_error_estimate">
+        <cd:Integer>
+          <cd:Description>Error estimate reported by the Mie processing algorithm, given in cm/s and rounded to the nearest integer</cd:Description>
+          <cd:Unit>cm/s</cd:Unit>
+          <cd:BitSize>16</cd:BitSize>
+          <cd:NativeType>uint16</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="reference_hlos">
+        <cd:Integer>
+          <cd:Description>Reference HLOS wind taken from the matching profile in the AUX_MET file that was used for processing (and as is used for calculating O-B statistics), given in cm/s and rounded to the nearest integer.</cd:Description>
+          <cd:Unit>cm/s</cd:Unit>
+          <cd:BitSize>16</cd:BitSize>
+          <cd:NativeType>int16</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="flags1">
+        <cd:Integer>
+          <cd:Description>First flag describing Mie processing results for the current wind result.  Bit 1: MaxItLorFit threshold reached for measurement fit, Bit 2: ResErrThresh threshold reached for measurement fit, Bit 3: MaxItNonLinOpt threshold reached for measurement fit, Bit 4: PeakHeightLoThresh threshold reached for measurement fit, Bit 5: PeakHeightUpThresh threshold reached for measurement fit, Bit 6: FWHMLoThresh threshold reached for measurement fit, Bit 7: FWHMUpThresh threshold reached for measurement fit, Bit 8: PeakLocThresh threshold reached for measurement fit</cd:Description>
+          <cd:BitSize>8</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="flags2">
+        <cd:Integer>
+          <cd:Description>Second flag describing Mie processing results for the current wind result. Bit 1: MaxItLorFit threshold reached for internal reference fit, Bit 2: ResErrThresh threshold reached for internal reference fit, Bit 3: MaxItNonLinOpt threshold reached for internal reference fit, Bit 4: PeakHeightLoThresh threshold reached for internal reference fit, Bit 5: PeakHeightUpThresh threshold reached for internal reference fit, Bit 6: FWHMLoThresh threshold reached for internal reference fit, Bit 7: FWHMUpThresh threshold reached for internal reference fit, Bit 8: PeakLocThresh threshold reached for internal reference fit</cd:Description>
+          <cd:BitSize>8</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="flags3">
+        <cd:Integer>
+          <cd:Description>Third flag describing Mie processing results for the current wind result. Bit 1: SNR threshold failed for this wind result (signal was too low), Bit 2: reserved (always set to 0), Bit 3: reserved (always set to 0), Bit 4: reserved (always set to 0), Bit 5: the wind was flagged invalid since it includes measurements that may have ground echoes according to the DEM as reported by the AUX_MET_12 input file, Bit 6: the wind was flagged invalid since it includes measurements that may have ground echoes according to the DEM as reported by the L1B product, Bit 7: the wind was flagged invalid since it contains measurements for which the L1B product reported ground echoes at this range bin level or above, Bit 8: the wind was flagged invalid because the classification “clear” is not trusted for the Mie channel (the user has set Flag_Clear_Mie_Results_Invalid to True)</cd:Description>
+          <cd:BitSize>8</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="flags4">
+        <cd:Integer>
+          <cd:Description>Fourth flag describing Mie processing results for the current wind result. Bit 1: the wind was manually flagged invalid since this range bin is currently untrusted due to a “hot pixel”, Bit 2: the wind was in the O-B bias check automatically flagged invalid. This range bin is currently untrusted because it may be affected by an uncorrected “hot pixel”, Bit 3: the wind result was flagged invalid due to blacklisting, Bit 4: flagged invalid due to climatological sanity check, Bit 5: flagged invalid due to large O-B bias during moonblinding, Bit 6: reserved (always set to 0), Bit 7: reserved (always set to 0), Bit 8: reserved (always set to 0)</cd:Description>
+          <cd:BitSize>8</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="input_screening_flags1">
+        <cd:Integer>
+          <cd:Description>First input screening flag describing in detail which condition caused this current wind result to be invalid. Bit 1: L1B_Laser_Freq_Unlocked_Check failed (BRC level check), Bit 2: L1B_Ref_Pulses_Unlocked_Check failed (BRC level check), Bit 3: L1B_Laser_Freq_Offset_Check failed (BRC level check), Bit 4: L1B_Laser_UV_Energy_Check failed (BRC level check), Bit 5: L1B_Laser_Freq_Offs_Stdev_Check failed (BRC level check), Bit 6: L1B_Laser_UV_Energy_Stdev_Check failed (BRC level check), Bit 7: L1B_Mie_Mean_Emit_Freq_Check failed (BRC level check), Bit 8: L1B_Mie_Emit_Freq_Stdev_Check failed (BRC level check).</cd:Description>
+          <cd:BitSize>8</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="input_screening_flags2">
+        <cd:Integer>
+          <cd:Description>Second input screening flag describing in detail which condition caused this current wind result to be invalid. Bit 1: L1B_Rayleigh_Mean_Emit_Freq_Chk failed (BRC level check), Bit 2: L1B_RayleighEmitFreqStdev_Check failed (BRC level check), Bit 3: L1B_Sat_Not_on_Target_Check failed (BRC level check), Bit 4: L1B_Mie_Corrupt_Check failed (BRC level check), Bit 5: L1B_Rayleigh_Corrupt_Check failed (BRC level check), Bit 6: L1B_Mie_Ref_PulsesCorrupt_Check failed (BRC level check), Bit 7: L1B_Rayl_RefPulsesCorrupt_Check failed (BRC level check), Bit 8: L1B_Mie_Invalid_Meas_Check failed (BRC level check).</cd:Description>
+          <cd:BitSize>8</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="input_screening_flags3">
+        <cd:Integer>
+          <cd:Description>Third input screening flag describing in detail which condition caused this current wind result to be invalid. Bit 1: L1B_Mie_Invalid_RefPulses_Check failed (BRC level check), Bit 2: L1B_Rayl_Invalid_Meas_Check failed (BRC level check), Bit 3: L1B_Rayl_InvalidRefPulses_Check failed (BRC level check), Bit 4: invalid ref. pulses check failed (meas level check), Bit 5: avg. laser freq. offset check failed (meas level check), Bit 6: avg. UV energy check failed (meas level check), Bit 7: laser freq. offset stdev check failed (meas level check), Bit 8: UV energy stdev check failed (meas level check).</cd:Description>
+          <cd:BitSize>8</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="input_screening_flags4">
+        <cd:Integer>
+          <cd:Description>Fourth input screening flag describing in detail which condition caused this current wind result to be invalid. Bit 1: vel_of_att_uncertainty_error check failed (meas level check), Bit 2: mie_mean_emitted_freq check failed (meas level check), Bit 3: mie_emitted_freq_std_dev check failed (meas level check), Bit 4: reserved (always set to 0), Bit 5: moon blinding check failed (meas level check), Bit 6: reserved (always set to 0),  Bit 7: reserved (always set to 0),  Bit 8: reserved (always set to 0).</cd:Description>
+          <cd:BitSize>8</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="input_screening_flags5">
+        <cd:Integer>
+          <cd:Description>Fifth input screening flag describing in detail which condition caused this current wind result to be invalid. Bit 1: Mie_Meas_Invalid_Check failed (meas bin level check), Bit 2: scattering ratio check failed (meas bin level check), Bit 3: refined scattering ratio check failed (meas bin level check), Bit 4: SNR check failed (meas bin level check), Bit 5: refined SNR check failed (meas bin level check), Bit 6: reserved (always set to 0), Bit 7: reserved (always set to 0), Bit 8: reserved (always set to 0).</cd:Description>
+          <cd:BitSize>8</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="input_screening_flags6">
+        <cd:Integer>
+          <cd:Description>Sixth input screening flag describing in detail which condition caused this current wind result to be invalid. Bit 1: Overall validity flag raised for any meas. included in this wind (copied L1B QC bit), Bit 2: SNR ratio below given threshold flag raised for any meas. included in this wind (copied L1B QC bit), Bit 3: Data saturation found flag raised for any meas. included in this wind (copied L1B QC bit), Bit 4: Data spike found flag raised for any meas. included in this wind (copied L1B QC bit), Bit 5: reserved (always set to 0), Bit 6: Source packet invalid flag raised for any meas. included in this wind (copied L1B QC bit), Bit 7: Laser frequency not locked flag raised for any meas. included in this wind (copied L1B QC bit), Bit 8: Spacecraft attitude not on target raised for any meas. included in this wind (copied L1B QC bit).</cd:Description>
+          <cd:BitSize>8</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="intref_fitting_amplitude">
+        <cd:Float>
+          <cd:Description>Amplitude of the curve used for fitting the internal reference spectrum</cd:Description>
+          <cd:BitSize>64</cd:BitSize>
+          <cd:NativeType>double</cd:NativeType>
+          <ct:NamedTest id="FloatIsFinite"/>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="intref_fitting_residual">
+        <cd:Float>
+          <cd:Description>Residual after the fit to the internal reference spectrum is performed (should also give an idea of the reliability of the fit)</cd:Description>
+          <cd:BitSize>64</cd:BitSize>
+          <cd:NativeType>double</cd:NativeType>
+          <ct:NamedTest id="FloatIsFinite"/>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="intref_fitting_offset">
+        <cd:Float>
+          <cd:Description>Offset of the curve used for fitting the internal reference spectrum</cd:Description>
+          <cd:BitSize>64</cd:BitSize>
+          <cd:NativeType>double</cd:NativeType>
+          <ct:NamedTest id="FloatIsFinite"/>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="intref_fitting_fwhm">
+        <cd:Float>
+          <cd:Description>FWHM of the curve used for fitting internal reference the spectrum.</cd:Description>
+          <cd:BitSize>64</cd:BitSize>
+          <cd:NativeType>double</cd:NativeType>
+          <ct:NamedTest id="FloatIsFinite"/>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="intref_fitting_peakloc">
+        <cd:Float>
+          <cd:Description>Peak location result from fitting the internal reference spectrum.</cd:Description>
+          <cd:BitSize>64</cd:BitSize>
+          <cd:NativeType>double</cd:NativeType>
+          <ct:NamedTest id="FloatIsFinite"/>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="intref_fitting_offsetsub">
+        <cd:Float>
+          <cd:Description>Offset subtraction as applied to the fit result of the internal reference spectrum.</cd:Description>
+          <cd:BitSize>64</cd:BitSize>
+          <cd:NativeType>double</cd:NativeType>
+          <ct:NamedTest id="FloatIsFinite"/>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="intref_fitting_valflag">
+        <cd:Integer>
+          <cd:Description>Validity flag indicating the succes of fitting the internal reference spectrum.</cd:Description>
+          <cd:BitSize>8</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+          <ct:NamedTest id="BooleanBinTest"/>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="intref_fitting_mie_snr">
+        <cd:Float>
+          <cd:Description>Refined SNR value derived by fitting the internal reference spectrum.</cd:Description>
+          <cd:BitSize>64</cd:BitSize>
+          <cd:NativeType>double</cd:NativeType>
+          <ct:NamedTest id="FloatIsFinite"/>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="intref_fitting_mie_sr">
+        <cd:Float>
+          <cd:Description>Refined Scattering Ratio value derived by fitting the internal reference spectrum.</cd:Description>
+          <cd:BitSize>64</cd:BitSize>
+          <cd:NativeType>double</cd:NativeType>
+          <ct:NamedTest id="FloatIsFinite"/>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="fitting_amplitude">
+        <cd:Float>
+          <cd:Description>Amplitude of the curve used for fitting the Mie spectrum</cd:Description>
+          <cd:BitSize>64</cd:BitSize>
+          <cd:NativeType>double</cd:NativeType>
+          <ct:NamedTest id="FloatIsFinite"/>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="fitting_residual">
+        <cd:Float>
+          <cd:Description>Residual after the fit to the Mie spectrum is performed (should also give an idea of the reliability of the fit)</cd:Description>
+          <cd:BitSize>64</cd:BitSize>
+          <cd:NativeType>double</cd:NativeType>
+          <ct:NamedTest id="FloatIsFinite"/>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="fitting_offset">
+        <cd:Float>
+          <cd:Description>Offset of the curve used for fitting the Mie spectrum</cd:Description>
+          <cd:BitSize>64</cd:BitSize>
+          <cd:NativeType>double</cd:NativeType>
+          <ct:NamedTest id="FloatIsFinite"/>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="fitting_fwhm">
+        <cd:Float>
+          <cd:Description>FWHM of the curve used for fitting the Mie spectrum. This gives a measure of the wind variability in this rangebin</cd:Description>
+          <cd:BitSize>64</cd:BitSize>
+          <cd:NativeType>double</cd:NativeType>
+          <ct:NamedTest id="FloatIsFinite"/>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="fitting_peakloc">
+        <cd:Float>
+          <cd:Description>Peak location result from fitting the measured atmospheric Mie spectrum.</cd:Description>
+          <cd:BitSize>64</cd:BitSize>
+          <cd:NativeType>double</cd:NativeType>
+          <ct:NamedTest id="FloatIsFinite"/>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="fitting_offsetsub">
+        <cd:Float>
+          <cd:Description>Offset subtraction as applied to the fit result of the measured atmospheric Mie spectrum.</cd:Description>
+          <cd:BitSize>64</cd:BitSize>
+          <cd:NativeType>double</cd:NativeType>
+          <ct:NamedTest id="FloatIsFinite"/>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="fitting_valflag">
+        <cd:Integer>
+          <cd:Description>Validity flag indicating the succes of fitting the measured atmospheric Mie spectrum.</cd:Description>
+          <cd:BitSize>8</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+          <ct:NamedTest id="BooleanBinTest"/>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="fitting_mie_snr">
+        <cd:Float>
+          <cd:Description>SNR of the measured atmospheric Mie spectrum</cd:Description>
+          <cd:BitSize>64</cd:BitSize>
+          <cd:NativeType>double</cd:NativeType>
+          <ct:NamedTest id="FloatIsFinite"/>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="fitting_mie_sr">
+        <cd:Float>
+          <cd:Description>Refined Scattering ratio value derived by fitting the accumulated measured atmospheric Mie spectrum</cd:Description>
+          <cd:BitSize>64</cd:BitSize>
+          <cd:NativeType>double</cd:NativeType>
+          <ct:NamedTest id="FloatIsFinite"/>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="extinction">
+        <cd:Float>
+          <cd:Description>Extinction</cd:Description>
+          <cd:Unit>1/m</cd:Unit>
+          <cd:BitSize>64</cd:BitSize>
+          <cd:NativeType>double</cd:NativeType>
+          <ct:NamedTest id="FloatIsFinite"/>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="spare">
+        <cd:Raw>
+          <cd:Description>Spare</cd:Description>
+          <cd:BitSize>8</cd:BitSize>
+        </cd:Raw>
+        <cd:Hidden/>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="spare">
+    <cd:Raw>
+      <cd:Description>Spare</cd:Description>
+      <cd:BitSize>160</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+</cd:Record>

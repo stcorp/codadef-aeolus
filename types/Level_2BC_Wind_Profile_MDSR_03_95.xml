@@ -1,0 +1,147 @@
+<?xml version="1.0"?>
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="binary" last-modified="2020-10-23" name="Level_2BC_Wind_Profile_MDSR_03_95">
+  <cd:Field name="start_of_observation_datetime">
+    <cd:Time timeformat="binary_envisat_datetime">
+      <cd:Description>Date and time of the first measurement used to compose the accumulated signals pointed at by this wind profile MDS</cd:Description>
+      <ct:NamedTest id="RangeSecond" path="seconds"/>
+      <ct:NamedTest id="RangeMicroSecond" path="microseconds"/>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="profile_lat_start">
+    <cd:Integer>
+      <cd:Description>start latitude of the set of wind retrieval results pointed at by this profile MDS</cd:Description>
+      <cd:Unit>1e-6 degrees_north</cd:Unit>
+      <cd:Conversion denominator="1000000.000000" numerator="1.000000">
+        <cd:Unit>degrees_north</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="profile_lat_average">
+    <cd:Integer>
+      <cd:Description>average latitude of the set of wind retrieval results pointed at by this profile MDS</cd:Description>
+      <cd:Unit>1e-6 degrees_north</cd:Unit>
+      <cd:Conversion denominator="1000000.000000" numerator="1.000000">
+        <cd:Unit>degrees_north</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="profile_lat_stop">
+    <cd:Integer>
+      <cd:Description>stop latitude of the set of wind retrieval results pointed at by this profile MDS</cd:Description>
+      <cd:Unit>1e-6 degrees_north</cd:Unit>
+      <cd:Conversion denominator="1000000.000000" numerator="1.000000">
+        <cd:Unit>degrees_north</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="profile_lon_start">
+    <cd:Integer>
+      <cd:Description>start longitude of the set of wind retrieval results pointed at by this profile MDS</cd:Description>
+      <cd:Unit>1e-6 degrees_east</cd:Unit>
+      <cd:Conversion denominator="1000000.000000" numerator="1.000000">
+        <cd:Unit>degrees_east</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="profile_lon_average">
+    <cd:Integer>
+      <cd:Description>average longitude of the set of wind retrieval results pointed at by this profile MDS</cd:Description>
+      <cd:Unit>1e-6 degrees_east</cd:Unit>
+      <cd:Conversion denominator="1000000.000000" numerator="1.000000">
+        <cd:Unit>degrees_east</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="profile_lon_stop">
+    <cd:Integer>
+      <cd:Description>stop longitude of the set of wind retrieval results pointed at by this profile MDS</cd:Description>
+      <cd:Unit>1e-6 degrees_east</cd:Unit>
+      <cd:Conversion denominator="1000000.000000" numerator="1.000000">
+        <cd:Unit>degrees_east</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="profile_datetime_start">
+    <cd:Time timeformat="binary_envisat_datetime">
+      <cd:Description>Date and time of the first measurement used to compose the accumulated signals pointed at by this wind profile MDS</cd:Description>
+      <ct:NamedTest id="RangeSecond" path="seconds"/>
+      <ct:NamedTest id="RangeMicroSecond" path="microseconds"/>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="profile_datetime_average">
+    <cd:Time timeformat="binary_envisat_datetime">
+      <cd:Description>Average date and time of the measurements used to compose the accumulated signals pointed at by this wind profile MDS</cd:Description>
+      <ct:NamedTest id="RangeSecond" path="seconds"/>
+      <ct:NamedTest id="RangeMicroSecond" path="microseconds"/>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="profile_datetime_stop">
+    <cd:Time timeformat="binary_envisat_datetime">
+      <cd:Description>Date and time of the last measurement used to compose the accumulated signals pointed at by this wind profile MDS</cd:Description>
+      <ct:NamedTest id="RangeSecond" path="seconds"/>
+      <ct:NamedTest id="RangeMicroSecond" path="microseconds"/>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="l2b_wind_profile">
+    <cd:Record>
+      <cd:Description>structure containing reference id numbers of wind retrieval results associated with the current profile for a given group and classification.</cd:Description>
+      <cd:Field name="channel">
+        <cd:Integer>
+          <cd:Description>Switch indicating to which channel this profile refers.</cd:Description>
+          <cd:BitSize>8</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="obs_type">
+        <cd:Integer>
+          <cd:Description>remember if this was a cloud or no-cloud profile (or any other type we define).</cd:Description>
+          <cd:BitSize>8</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="num_winds_in_profile">
+        <cd:Integer>
+          <cd:Description>Number of wind results pointed at by this profile</cd:Description>
+          <cd:BitSize>8</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="profile_id_number">
+        <cd:Integer>
+          <cd:Description>unique L2B wind profile identification number for this L2B file</cd:Description>
+          <cd:BitSize>32</cd:BitSize>
+          <cd:NativeType>uint32</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="wind_result_id_number">
+        <cd:Array>
+          <cd:Description>A list of 24 wind id values referring to at most 24 individual wind results that are assigned to this profile. The reserved value of 0 is used to indicate no wind was assigned to the profile at that specific level.</cd:Description>
+          <cd:Dimension>24</cd:Dimension>
+          <cd:Integer>
+            <cd:BitSize>32</cd:BitSize>
+            <cd:NativeType>uint32</cd:NativeType>
+          </cd:Integer>
+        </cd:Array>
+      </cd:Field>
+      <cd:Field name="spare">
+        <cd:Raw>
+          <cd:Description>Spare</cd:Description>
+          <cd:BitSize>8</cd:BitSize>
+        </cd:Raw>
+        <cd:Hidden/>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+</cd:Record>

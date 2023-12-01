@@ -1,0 +1,148 @@
+<?xml version="1.0"?>
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="binary" last-modified="2023-12-01" name="Level_2BC_Copied_BRC_Data_ADSR_03_95">
+  <cd:Field name="start_of_observation_datetime">
+    <cd:Time timeformat="binary_envisat_datetime">
+      <cd:Description>Start date and time of Measurement</cd:Description>
+      <ct:NamedTest id="RangeSecond" path="seconds"/>
+      <ct:NamedTest id="RangeMicroSecond" path="microseconds"/>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="m1_temperature">
+    <cd:Record>
+      <cd:Field name="aht_22">
+        <cd:Float>
+          <cd:Description>AHT_22 temperature reading</cd:Description>
+          <cd:Unit>C</cd:Unit>
+          <cd:BitSize>64</cd:BitSize>
+          <cd:NativeType>double</cd:NativeType>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="aht_23">
+        <cd:Float>
+          <cd:Description>AHT_23 temperature reading</cd:Description>
+          <cd:Unit>C</cd:Unit>
+          <cd:BitSize>64</cd:BitSize>
+          <cd:NativeType>double</cd:NativeType>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="aht_24">
+        <cd:Float>
+          <cd:Description>AHT_24 temperature reading</cd:Description>
+          <cd:Unit>C</cd:Unit>
+          <cd:BitSize>64</cd:BitSize>
+          <cd:NativeType>double</cd:NativeType>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="aht_25">
+        <cd:Float>
+          <cd:Description>AHT_25 temperature reading</cd:Description>
+          <cd:Unit>C</cd:Unit>
+          <cd:BitSize>64</cd:BitSize>
+          <cd:NativeType>double</cd:NativeType>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="aht_26">
+        <cd:Float>
+          <cd:Description>AHT_26 temperature reading</cd:Description>
+          <cd:Unit>C</cd:Unit>
+          <cd:BitSize>64</cd:BitSize>
+          <cd:NativeType>double</cd:NativeType>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="aht_27">
+        <cd:Float>
+          <cd:Description>AHT_27 temperature reading</cd:Description>
+          <cd:Unit>C</cd:Unit>
+          <cd:BitSize>64</cd:BitSize>
+          <cd:NativeType>double</cd:NativeType>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="tc_18">
+        <cd:Float>
+          <cd:Description>TC_18 temperature reading</cd:Description>
+          <cd:Unit>C</cd:Unit>
+          <cd:BitSize>64</cd:BitSize>
+          <cd:NativeType>double</cd:NativeType>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="tc_19">
+        <cd:Float>
+          <cd:Description>TC_19 temperature reading</cd:Description>
+          <cd:Unit>C</cd:Unit>
+          <cd:BitSize>64</cd:BitSize>
+          <cd:NativeType>double</cd:NativeType>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="tc_20">
+        <cd:Float>
+          <cd:Description>TC_20 temperature reading</cd:Description>
+          <cd:Unit>C</cd:Unit>
+          <cd:BitSize>64</cd:BitSize>
+          <cd:NativeType>double</cd:NativeType>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="tc_21">
+        <cd:Float>
+          <cd:Description>TC_21 temperature reading</cd:Description>
+          <cd:Unit>C</cd:Unit>
+          <cd:BitSize>64</cd:BitSize>
+          <cd:NativeType>double</cd:NativeType>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="tc_23">
+        <cd:Float>
+          <cd:Description>TC_23 temperature reading</cd:Description>
+          <cd:Unit>C</cd:Unit>
+          <cd:BitSize>64</cd:BitSize>
+          <cd:NativeType>double</cd:NativeType>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="tc_25">
+        <cd:Float>
+          <cd:Description>TC_25 temperature reading</cd:Description>
+          <cd:Unit>C</cd:Unit>
+          <cd:BitSize>64</cd:BitSize>
+          <cd:NativeType>double</cd:NativeType>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="tc_27">
+        <cd:Float>
+          <cd:Description>TC_27 temperature reading</cd:Description>
+          <cd:Unit>C</cd:Unit>
+          <cd:BitSize>64</cd:BitSize>
+          <cd:NativeType>double</cd:NativeType>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="tc_29">
+        <cd:Float>
+          <cd:Description>TC_29 temperature reading</cd:Description>
+          <cd:Unit>C</cd:Unit>
+          <cd:BitSize>64</cd:BitSize>
+          <cd:NativeType>double</cd:NativeType>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="tc_32">
+        <cd:Float>
+          <cd:Description>TC_32 temperature reading</cd:Description>
+          <cd:Unit>C</cd:Unit>
+          <cd:BitSize>64</cd:BitSize>
+          <cd:NativeType>double</cd:NativeType>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="spare">
+        <cd:Raw>
+          <cd:Description>Spare</cd:Description>
+          <cd:BitSize>24</cd:BitSize>
+        </cd:Raw>
+        <cd:Hidden/>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="spare">
+    <cd:Raw>
+      <cd:Description>Spare</cd:Description>
+      <cd:BitSize>112</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+</cd:Record>

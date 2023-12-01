@@ -1,0 +1,103 @@
+<?xml version="1.0"?>
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="binary" last-modified="2023-12-01" name="Level_2BC_Meas_Map_ADSR_03_95">
+  <cd:Field name="start_of_observation_datetime">
+    <cd:Time timeformat="binary_envisat_datetime">
+      <cd:Description>Start date and time of Measurement</cd:Description>
+      <ct:NamedTest id="RangeSecond" path="seconds"/>
+      <ct:NamedTest id="RangeMicroSecond" path="microseconds"/>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="mie_map_of_l1b_meas_used">
+    <cd:Array>
+      <cd:Description>Map of Mie Measurements used by the L2B accumulations</cd:Description>
+      <cd:Dimension>24</cd:Dimension>
+      <cd:Record>
+        <cd:Field name="which_l2b_wind_id">
+          <cd:Integer>
+            <cd:Description>reference to the L2B wind result to which this L1B range bin contributed. It will be set to 0 if not used.</cd:Description>
+            <cd:BitSize>32</cd:BitSize>
+            <cd:NativeType>uint32</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="weight">
+          <cd:Integer>
+            <cd:Description>Weight used for this L1B range bin while accumulating the signals used to produce the L2B wind result to which this L1B range bin contributed. The valid range is 0-1000</cd:Description>
+            <cd:BitSize>16</cd:BitSize>
+            <cd:NativeType>uint16</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+      </cd:Record>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="mie_map_assigned_to_which_group">
+    <cd:Integer>
+      <cd:Description>Index of the group to which the measurements are assigned</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="mie_map_assigned_to_which_subgroup">
+    <cd:Integer>
+      <cd:Description>Index of the subgroup to which the measurements are assigned</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="spare2">
+    <cd:Integer>
+      <cd:BitSize>24</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="rayleigh_map_of_l1b_meas_used">
+    <cd:Array>
+      <cd:Description>Map of Rayleigh Measurements used by the L2B accumulations</cd:Description>
+      <cd:Dimension>24</cd:Dimension>
+      <cd:Record>
+        <cd:Field name="which_l2b_wind_id">
+          <cd:Integer>
+            <cd:Description>reference to the L2B wind result to which this L1B range bin contributed. It will be set to 0 if not used.</cd:Description>
+            <cd:BitSize>32</cd:BitSize>
+            <cd:NativeType>uint32</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="weight">
+          <cd:Integer>
+            <cd:Description>Weight used for this L1B range bin while accumulating the signals used to produce the L2B wind result to which this L1B range bin contributed. The valid range is 0-1000</cd:Description>
+            <cd:BitSize>16</cd:BitSize>
+            <cd:NativeType>uint16</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+      </cd:Record>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="rayleigh_map_assigned_to_which_group">
+    <cd:Integer>
+      <cd:Description>Index of the group to which the measurements are assigned</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="rayleigh_map_assigned_to_which_subgroup">
+    <cd:Integer>
+      <cd:Description>Index of the subgroup to which the measurements are assigned</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="spare3">
+    <cd:Integer>
+      <cd:BitSize>24</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="spare">
+    <cd:Raw>
+      <cd:Description>Spare</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+</cd:Record>
