@@ -1,0 +1,215 @@
+<?xml version="1.0"?>
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="binary" last-modified="2023-12-01" name="Level_2A_SCA_PCD_ADSR_03_17">
+  <cd:Field name="starttime">
+    <cd:Time timeformat="binary_envisat_datetime">
+      <cd:Description>Start date and time of the SCA profile covered by the present DSR. This is the centroid time of the first measurement of the profile.</cd:Description>
+      <ct:NamedTest id="RangeSecond" path="seconds"/>
+      <ct:NamedTest id="RangeMicroSecond" path="microseconds"/>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="firstmatchingbin">
+    <cd:Integer>
+      <cd:Description>Index of the first matching bin</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="bin_1_clear">
+    <cd:Integer>
+      <cd:Description>SCA QC flag about processed data: 1 if the first matching bin is clear; 0 else</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="last_computation_bin">
+    <cd:Integer>
+      <cd:Description>Lowest (in altitude) bin processed by the SCA</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="profile_pcd_bins">
+    <cd:Array>
+      <cd:Dimension>24</cd:Dimension>
+      <cd:Record>
+        <cd:Description>Structure containing variances of SCA products bin per bin</cd:Description>
+        <cd:Field name="extinction_variance">
+          <cd:Float>
+            <cd:Description>Variance of the particle extinction coefficient retrieved by the SCA in this bin. Missing value: -1.</cd:Description>
+            <cd:Unit>m^-2</cd:Unit>
+            <cd:BitSize>64</cd:BitSize>
+            <cd:NativeType>double</cd:NativeType>
+            <ct:NamedTest id="FloatIsFinite"/>
+          </cd:Float>
+        </cd:Field>
+        <cd:Field name="backscatter_variance">
+          <cd:Float>
+            <cd:Description>Variance of the particle backscatter coefficient retrieved by the SCA in this bin. Missing value: -1.</cd:Description>
+            <cd:Unit>m^-2 sr^-2</cd:Unit>
+            <cd:BitSize>64</cd:BitSize>
+            <cd:NativeType>double</cd:NativeType>
+            <ct:NamedTest id="FloatIsFinite"/>
+          </cd:Float>
+        </cd:Field>
+        <cd:Field name="lr_variance">
+          <cd:Float>
+            <cd:Description>Variance of the particle lidar ratio retrieved by the SCA in this bin. Missing value: -1.</cd:Description>
+            <cd:BitSize>64</cd:BitSize>
+            <cd:NativeType>double</cd:NativeType>
+            <ct:NamedTest id="FloatIsFinite"/>
+          </cd:Float>
+        </cd:Field>
+        <cd:Field name="ber_variance">
+          <cd:Float>
+            <cd:Description>Variance of the particle lidar ratio retrieved by the SCA in this bin. Missing value: -1.</cd:Description>
+            <cd:BitSize>64</cd:BitSize>
+            <cd:NativeType>double</cd:NativeType>
+            <ct:NamedTest id="FloatIsFinite"/>
+          </cd:Float>
+        </cd:Field>
+        <cd:Field name="rayleigh_heterogeneity_index">
+          <cd:Float>
+            <cd:Description>Index that characterizes the variability of the Rayleigh useful signal within one BRC. It is defined as the standard deviation of the Rayleigh useful signal within a BRC with respect to the Poisson noise.</cd:Description>
+            <cd:BitSize>64</cd:BitSize>
+            <cd:NativeType>double</cd:NativeType>
+            <ct:NamedTest id="FloatIsFinite"/>
+          </cd:Float>
+        </cd:Field>
+        <cd:Field name="mie_heterogeneity_index">
+          <cd:Float>
+            <cd:Description>Index that characterizes the variability of the Mie useful signal within one BRC. It is defined as the standard deviation of the Mie useful signal within a BRC with respect to the Poisson noise.</cd:Description>
+            <cd:BitSize>64</cd:BitSize>
+            <cd:NativeType>double</cd:NativeType>
+            <ct:NamedTest id="FloatIsFinite"/>
+          </cd:Float>
+        </cd:Field>
+        <cd:Field name="lod_variance">
+          <cd:Float>
+            <cd:Description>Variance of the LOD retrieved by the SCA in this bin. Missing value: -1.</cd:Description>
+            <cd:BitSize>64</cd:BitSize>
+            <cd:NativeType>double</cd:NativeType>
+            <ct:NamedTest id="FloatIsFinite"/>
+          </cd:Float>
+        </cd:Field>
+        <cd:Field name="processing_qc_flag">
+          <cd:Integer>
+            <cd:Description>QC information about processing (1=data valid, otherwise 0). Bit 1: Extinction, 2: Backscatter, 3: BER, 4: Mie SNR, 5: Rayleigh SNR, 6: Extinction error bar, 7: Backscatter error bar, 8: Cumulative LOD</cd:Description>
+            <cd:BitSize>8</cd:BitSize>
+            <cd:NativeType>int8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="cloud_mask">
+          <cd:Integer>
+            <cd:Description>Flag indicating the cloud contamination of each height bin (i.e. derived backscatter from AMD exceeding a defined threshold). Set to 1 for cloud contaminated bin, otherwise 0.</cd:Description>
+            <cd:BitSize>8</cd:BitSize>
+            <cd:NativeType>int8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="ray_snr_in_ray_grid">
+          <cd:Float>
+            <cd:Description>Rayleigh SNR processed by SCA and expressed in Rayleigh scale</cd:Description>
+            <cd:BitSize>64</cd:BitSize>
+            <cd:NativeType>double</cd:NativeType>
+            <ct:NamedTest id="FloatIsFinite"/>
+          </cd:Float>
+        </cd:Field>
+        <cd:Field name="mie_snr_in_ray_grid">
+          <cd:Float>
+            <cd:Description>Mie SNR processed by SCA and expressed in Rayleigh scale</cd:Description>
+            <cd:BitSize>64</cd:BitSize>
+            <cd:NativeType>double</cd:NativeType>
+            <ct:NamedTest id="FloatIsFinite"/>
+          </cd:Float>
+        </cd:Field>
+      </cd:Record>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="profile_pcd_mid_bins">
+    <cd:Array>
+      <cd:Dimension>23</cd:Dimension>
+      <cd:Record>
+        <cd:Description>Structure containing variances of SCA products as mean over two neighbouring bins</cd:Description>
+        <cd:Field name="extinction_variance">
+          <cd:Float>
+            <cd:Description>Variance of the particle extinction coefficient retrieved by the SCA in this bin. Missing value: -1.</cd:Description>
+            <cd:Unit>m^-2</cd:Unit>
+            <cd:BitSize>64</cd:BitSize>
+            <cd:NativeType>double</cd:NativeType>
+            <ct:NamedTest id="FloatIsFinite"/>
+          </cd:Float>
+        </cd:Field>
+        <cd:Field name="backscatter_variance">
+          <cd:Float>
+            <cd:Description>Variance of the particle backscatter coefficient retrieved by the SCA in this bin. Missing value: -1.</cd:Description>
+            <cd:Unit>m^-2 sr^-2</cd:Unit>
+            <cd:BitSize>64</cd:BitSize>
+            <cd:NativeType>double</cd:NativeType>
+            <ct:NamedTest id="FloatIsFinite"/>
+          </cd:Float>
+        </cd:Field>
+        <cd:Field name="lod_variance">
+          <cd:Float>
+            <cd:Description>Variance of the LOD retrieved by the SCA in this bin. Missing value: -1.</cd:Description>
+            <cd:BitSize>64</cd:BitSize>
+            <cd:NativeType>double</cd:NativeType>
+            <ct:NamedTest id="FloatIsFinite"/>
+          </cd:Float>
+        </cd:Field>
+        <cd:Field name="ber_variance">
+          <cd:Float>
+            <cd:Description>Variance of the backscatter-to-extinction ratio. Missing value: -1.</cd:Description>
+            <cd:BitSize>64</cd:BitSize>
+            <cd:NativeType>double</cd:NativeType>
+            <ct:NamedTest id="FloatIsFinite"/>
+          </cd:Float>
+        </cd:Field>
+        <cd:Field name="lr_variance">
+          <cd:Float>
+            <cd:Description>Variance of the extinction-to-backscatter ratio. Missing value: -1.</cd:Description>
+            <cd:BitSize>64</cd:BitSize>
+            <cd:NativeType>double</cd:NativeType>
+            <ct:NamedTest id="FloatIsFinite"/>
+          </cd:Float>
+        </cd:Field>
+        <cd:Field name="processing_qc_flag">
+          <cd:Integer>
+            <cd:Description>QC information about processing</cd:Description>
+            <cd:BitSize>8</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="cloud_mask">
+          <cd:Integer>
+            <cd:Description>Flag indicating the cloud contamination of each height bin (i.e. derived backscatter from AMD exceeding a defined threshold). Set to 1 for cloud contaminated bin, otherwise 0.</cd:Description>
+            <cd:BitSize>8</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+
+      </cd:Record>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="radiometric_correction_performed">
+    <cd:Integer>
+      <cd:Description>Set to '0', '1', or '2': '0' the default Kray and Kmie values of the AUX_CAL file have been used. '1' the per orbit corrected in particle free conditions Kray and Kmie values have been calculated and used. '2' the per observation fitted Kray and Kmie values have been calculated and used.</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="Kray">
+    <cd:Float>
+      <cd:Description>Radiometric correction factor for the Rayleigh channel (calculated as indicated by the setting of field Radiometric_Correction_Performed)</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+      <ct:NamedTest id="FloatIsFinite"/>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="Kmie">
+    <cd:Float>
+      <cd:Description>Radiometric correction factor for the Mie channel (calculated as indicated by the setting of field Radiometric_Correction_Performed)</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+      <ct:NamedTest id="FloatIsFinite"/>
+    </cd:Float>
+  </cd:Field>
+</cd:Record>
