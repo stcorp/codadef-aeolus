@@ -1,0 +1,135 @@
+<?xml version="1.0"?>
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="binary" last-modified="2025-01-14" name="Level_1B_PCD_Mie_Core_characteristics_04_20">
+  <cd:Field name="peak_position">
+    <cd:Float>
+      <cd:Description>Calculated peak position of signal</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+      <ct:NamedTest id="FloatIsFinite"/>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="fwhm">
+    <cd:Float>
+      <cd:Description>Calculated FWHM of signal</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+      <ct:NamedTest id="FloatIsFinite"/>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="amplitude">
+    <cd:Float>
+      <cd:Description>Calculated amplitude of signal</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+      <ct:NamedTest id="FloatIsFinite"/>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="offset">
+    <cd:Float>
+      <cd:Description>Calculated offset of signal</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+      <ct:NamedTest id="FloatIsFinite"/>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="error_flag">
+    <cd:Integer>
+      <cd:Description>1 byte bit packed field</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="residual_error">
+    <cd:Float>
+      <cd:Description>Quadratic sum of differences between modelled and measured ACCD counts per pixel</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+      <ct:NamedTest id="FloatIsFinite"/>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="num_iterations">
+    <cd:Integer>
+      <cd:Description>Number of Lorentzian fit iterations reached, compare input parameter.</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="voigt_centroid">
+    <cd:Float>
+      <cd:Description>Centroid of signal calculated with Voigt fit</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="voigt_amplitude">
+    <cd:Float>
+      <cd:Description>Amplitude of signal calculated with Voigt fit</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="voigt_offset">
+    <cd:Float>
+      <cd:Description>Offset of signal calculated with Voigt fit</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="voigt_residual_error">
+    <cd:Float>
+      <cd:Description>Quadratic sum of differences between modelled and measured ACCD counts per pixel</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="voigt_fwhm">
+    <cd:Float>
+      <cd:Description>FWHM estimated from linear interpolation</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="voigt_rayleigh_distance">
+    <cd:Float>
+      <cd:Description>Difference between maximum signal value and mean of twelve lowest signals</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="voigt_error_flag">
+    <cd:Integer>
+      <cd:Description>1 byte bit packed field. Bit 1: Overall validity, data invalid 1, otherwise 0 Bit 2: Peak height lower threshold not met 1, otherwise 0 Bit 3: Peak height upper threshold not met 1, otherwise 0 Bit 4: Minimum number of data points threshold not met 1, otherwise 0 Bit 5: Spare Bit 6: Peak location threshold not met 1, otherwise 0 Bit 7: Spare Bit 8: SNR below threshold 1, otherwise 0 Field set to ‘10000000’ in case the Voigt fit was not requested by the user in the AUX_PAR_1B.</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="voigt_sigma_centroid">
+    <cd:Float>
+      <cd:Description>Sigma of centroid retrieved by the Voigt fit.</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="voigt_sigma_amplitude">
+    <cd:Float>
+      <cd:Description>Sigma of amplitude retrieved by the Voigt fit.</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="voigt_sigma_offset">
+    <cd:Float>
+      <cd:Description>Sigma of offset retrieved by the Voigt fit.</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="voigt_num_iterations">
+    <cd:Integer>
+      <cd:Description>Number of iterations performed in the fit loop; maximum number is 50.</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  
+</cd:Record>

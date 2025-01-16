@@ -1,0 +1,1181 @@
+<?xml version="1.0"?>
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07"
+  xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="binary" last-modified="2025-01-14"
+  name="Level_1B_Product_Confidence_Data_ADSR_04_20">
+  <cd:Field name="start_of_observation_time">
+    <cd:Time timeformat="binary_envisat_datetime">
+      <cd:Description>Start time at start of BRC</cd:Description>
+      <ct:NamedTest id="RangeSecond" path="seconds" />
+      <ct:NamedTest id="RangeMicroSecond" path="microseconds" />
+      <ct:NamedTest id="TimeNotZero" />
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="n">
+    <cd:Integer>
+      <cd:Description>Number of measurements</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="p">
+    <cd:Integer>
+      <cd:Description>Number of pulses</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="spare_1">
+    <cd:Raw>
+      <cd:Description>Spare</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden />
+  </cd:Field>
+  <cd:Field name="observation_pcd">
+    <cd:Record>
+      <cd:Description>Level 1B Observation PCD</cd:Description>
+      <cd:Field name="num_measurement_invalid">
+        <cd:Integer>
+          <cd:Description>The number of measurements for which the number of corresponding valid
+            pulses is below Meas_Cavity_Lock_Status_Thresh</cd:Description>
+          <cd:BitSize>32</cd:BitSize>
+          <cd:NativeType>int32</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="num_reference_pulse_invalid">
+        <cd:Integer>
+          <cd:Description>The number of reference pulses with invalid status</cd:Description>
+          <cd:BitSize>32</cd:BitSize>
+          <cd:NativeType>int32</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="num_sat_not_on_target_measurements">
+        <cd:Integer>
+          <cd:Description>Number of measurements with the satellite not no target status</cd:Description>
+          <cd:BitSize>32</cd:BitSize>
+          <cd:NativeType>int32</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="num_corrupt_mie_measurements">
+        <cd:Integer>
+          <cd:Description>Number of corrupt Mie measurements found to be flagged invalid or missing
+            in the L1A product.</cd:Description>
+          <cd:BitSize>32</cd:BitSize>
+          <cd:NativeType>int32</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="num_corrupt_rayleigh_measurements">
+        <cd:Integer>
+          <cd:Description>Number of corrupt Rayleigh measurements found to be flagged invalid or
+            missing in the L1A product.</cd:Description>
+          <cd:BitSize>32</cd:BitSize>
+          <cd:NativeType>int32</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="num_corrupt_mie_reference_pulses">
+        <cd:Integer>
+          <cd:Description>Number of corrupt Mie reference pulses found to be flagged invalid or
+            missing in the L1A product.</cd:Description>
+          <cd:BitSize>32</cd:BitSize>
+          <cd:NativeType>int32</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="num_corrupt_rayleigh_reference_pulses">
+        <cd:Integer>
+          <cd:Description>Number of corrupt Rayleigh reference pulses found to be flagged invalid or
+            missing in the L1A product.</cd:Description>
+          <cd:BitSize>32</cd:BitSize>
+          <cd:NativeType>int32</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="avg_laser_frequency_offset">
+        <cd:Float>
+          <cd:Description>Average of commanded laser frequency offset</cd:Description>
+          <cd:Unit>GHz</cd:Unit>
+          <cd:BitSize>64</cd:BitSize>
+          <cd:NativeType>double</cd:NativeType>
+          <ct:NamedTest id="FloatIsFinite" />
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="avg_uv_energy">
+        <cd:Float>
+          <cd:Description>Average laser UV energy</cd:Description>
+          <cd:Unit>mJ</cd:Unit>
+          <cd:BitSize>64</cd:BitSize>
+          <cd:NativeType>double</cd:NativeType>
+          <ct:NamedTest id="FloatIsFinite" />
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="laser_frequency_offset_std_dev">
+        <cd:Float>
+          <cd:Description>Standard deviation of the individual Laser frequency offset values</cd:Description>
+          <cd:Unit>GHz</cd:Unit>
+          <cd:BitSize>64</cd:BitSize>
+          <cd:NativeType>double</cd:NativeType>
+          <ct:NamedTest id="FloatIsFinite" />
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="uv_energy_std_dev">
+        <cd:Float>
+          <cd:Description>Laser pulse UV energy standard deviation of the N * (P-1) individual
+            pulses, regardless of the UV_Energy_OK_Status</cd:Description>
+          <cd:Unit>mJ</cd:Unit>
+          <cd:BitSize>64</cd:BitSize>
+          <cd:NativeType>double</cd:NativeType>
+          <ct:NamedTest id="FloatIsFinite" />
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="mie_ref_pulse_signal_to_noise_ratio">
+        <cd:Float>
+          <cd:Description>Mie signal to noise ratio for coadded valid pulses of the observation</cd:Description>
+          <cd:BitSize>64</cd:BitSize>
+          <cd:NativeType>double</cd:NativeType>
+          <ct:NamedTest id="FloatIsFinite" />
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="mie_ref_pulse_refined_signal_to_noise_ratio">
+        <cd:Float>
+          <cd:Description>Refined Mie signal to noise ratio for coadded valid pulses of the
+            observation using the Mie Core Downhill Simplex algorithm output or Voigt fit output. If
+            the SNR cannot be computed, or neither Downhill Simplex nor Voigt fit are selected, the
+            field is set to -1.0.</cd:Description>
+          <cd:BitSize>64</cd:BitSize>
+          <cd:NativeType>double</cd:NativeType>
+          <ct:NamedTest id="FloatIsFinite" />
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="mie_ref_pulse_refined_signal_to_noise_ratio_std_dev">
+        <cd:Float>
+          <cd:Description>Standard deviation of the individual Mie reference pulses refined SNR;
+            only calculated if Voigt fit output was used to calculate the refined SNR. If
+            Mie_Ref_Pulse_Refined_Signal_to_Noise_Ratio is set to -1.0, this field is set to -1.0 as
+            well</cd:Description>
+          <cd:BitSize>64</cd:BitSize>
+          <cd:NativeType>double</cd:NativeType>
+          <ct:NamedTest id="FloatIsFinite" />
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="mie_ref_pulse_refined_snr_data_quality_flag">
+        <cd:Integer>
+          <cd:Description>This field is a 1 byte, bit-packed field. It applies to the refined SR
+            and/or the refined SNR calculation, whenever those values are set to -1.0. When the data
+            is valid, Bit 1 is set to 0. Bit 1: Overall validity. Data invalid 1, otherwise 0 Bit 2:
+            For atmospheric data this field is set to 1 if a saturated pixel was found. For the
+            internal reference data this field is unused. Bit 3: Neither MC2 nor MC 3 selected 1,
+            otherwise 0 Bit 4: MC3 selected but Voigt_Error_Flag not valid 1, otherwise 0 Bit 5: MC2
+            selected but Error_Flag not valid 1, otherwise 0 Bit 6: MC2 pre-processing not possible
+            1, otherwise 0 Bit 7: MC 2 post, or MC 3 processing not possible 1, otherwise 0 Bit 8:
+            Spare</cd:Description>
+          <cd:BitSize>8</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="rayleigh_ref_pulse_signal_to_noise_ratio_channel_a">
+        <cd:Float>
+          <cd:Description>Rayleigh signal to noise ratio of channel A for the coadded valid pulses
+            of the observation</cd:Description>
+          <cd:BitSize>64</cd:BitSize>
+          <cd:NativeType>double</cd:NativeType>
+          <ct:NamedTest id="FloatIsFinite" />
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="rayleigh_ref_pulse_signal_to_noise_ratio_channel_b">
+        <cd:Float>
+          <cd:Description>Rayleigh signal to noise ratio of channel B for the coadded valid pulses
+            of the observation</cd:Description>
+          <cd:BitSize>64</cd:BitSize>
+          <cd:NativeType>double</cd:NativeType>
+          <ct:NamedTest id="FloatIsFinite" />
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="enc_col_ref_pulse_channel_a">
+        <cd:Float>
+          <cd:Description>Col value of the energetic centroid of the mean reference pulse of the
+            individual observation for channel A. Value set to 0 if parameter couldn’t be retrieved.</cd:Description>
+          <cd:Unit>ACCD pixel index</cd:Unit>
+          <cd:BitSize>64</cd:BitSize>
+          <cd:NativeType>double</cd:NativeType>
+          <ct:NamedTest id="FloatIsFinite" />
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="enc_col_ref_pulse_channel_b">
+        <cd:Float>
+          <cd:Description>Col value of the energetic centroid of the mean reference pulse of the
+            individual observation for channel B. Value set to 0 if parameter couldn’t be retrieved.</cd:Description>
+          <cd:Unit>ACCD pixel index</cd:Unit>
+          <cd:BitSize>64</cd:BitSize>
+          <cd:NativeType>double</cd:NativeType>
+          <ct:NamedTest id="FloatIsFinite" />
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="enc_col_std_dev_ref_pulse_channel_a">
+        <cd:Float>
+          <cd:Description>Energetic centroid column standard deviation for the mean reference pulse
+            of channel A. Value set to 0 if parameter couldn’t be retrieved.</cd:Description>
+          <cd:BitSize>64</cd:BitSize>
+          <cd:NativeType>double</cd:NativeType>
+          <ct:NamedTest id="FloatIsFinite" />
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="enc_col_std_dev_ref_pulse_channel_b">
+        <cd:Float>
+          <cd:Description>Energetic centroid column standard deviation for the mean reference pulse
+            of channel B. Value set to 0 if parameter couldn’t be retrieved.</cd:Description>
+          <cd:BitSize>64</cd:BitSize>
+          <cd:NativeType>double</cd:NativeType>
+          <ct:NamedTest id="FloatIsFinite" />
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="num_mie_peak_invalid">
+        <cd:Integer>
+          <cd:Description>Number of invalid Mie bin due to invalid peak fit of the measurement data
+            or reference pulse data</cd:Description>
+          <cd:BitSize>32</cd:BitSize>
+          <cd:NativeType>int32</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="polynomial_fit_data_used">
+        <cd:Integer>
+          <cd:Description>Flag indicating if the polynomial fit data of the response errors was used
+            for the conversion of the response into a frequency</cd:Description>
+          <cd:BitSize>8</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+          <ct:NamedTest id="BooleanBinTest" />
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="corrected_mie_reference_pulse_response">
+        <cd:Float>
+          <cd:Description>In case the Polynomial_Fit_Data_Used flag is set to 0, this field reports
+            the corrected response of the accumulated Mie reference pulses. Otherwise parameter set
+            to 0.0</cd:Description>
+          <cd:BitSize>64</cd:BitSize>
+          <cd:NativeType>double</cd:NativeType>
+          <ct:NamedTest id="FloatIsFinite" />
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="corrected_rayleigh_reference_pulse_response">
+        <cd:Float>
+          <cd:Description>In case the Polynomial_Fit_Data_Used flag is set to 0, this field reports
+            the corrected response of the accumulated Rayleigh reference pulses. Otherwise parameter
+            set to 0.0</cd:Description>
+          <cd:BitSize>64</cd:BitSize>
+          <cd:NativeType>double</cd:NativeType>
+          <ct:NamedTest id="FloatIsFinite" />
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="observation_alt_bin_pcd">
+        <cd:Array>
+          <cd:Dimension>25</cd:Dimension>
+          <cd:Record>
+            <cd:Description>Level 1B Observation Alt Bin PCD</cd:Description>
+            <cd:Field name="error_quantifier_mie">
+              <cd:Float>
+                <cd:Description>Error quantifier for Mie</cd:Description>
+                <cd:Unit>m/s</cd:Unit>
+                <cd:BitSize>64</cd:BitSize>
+                <cd:NativeType>double</cd:NativeType>
+                <ct:NamedTest id="FloatIsFinite" />
+              </cd:Float>
+            </cd:Field>
+            <cd:Field name="error_quantifier_rayleigh">
+              <cd:Float>
+                <cd:Description>Error quantifier for Rayleigh</cd:Description>
+                <cd:Unit>m/s</cd:Unit>
+                <cd:BitSize>64</cd:BitSize>
+                <cd:NativeType>double</cd:NativeType>
+                <ct:NamedTest id="FloatIsFinite" />
+              </cd:Float>
+            </cd:Field>
+            <cd:Field name="error_quantifier_rayleigh_channel_a">
+              <cd:Float>
+                <cd:Description>Error quantifier for Rayleigh channel A</cd:Description>
+                <cd:Unit>AU</cd:Unit>
+                <cd:BitSize>64</cd:BitSize>
+                <cd:NativeType>double</cd:NativeType>
+                <ct:NamedTest id="FloatIsFinite" />
+              </cd:Float>
+            </cd:Field>
+            <cd:Field name="error_quantifier_rayleigh_channel_b">
+              <cd:Float>
+                <cd:Description>Error quantifier for Rayleigh channel B</cd:Description>
+                <cd:Unit>AU</cd:Unit>
+                <cd:BitSize>64</cd:BitSize>
+                <cd:NativeType>double</cd:NativeType>
+                <ct:NamedTest id="FloatIsFinite" />
+              </cd:Float>
+            </cd:Field>
+            <cd:Field name="mie_wind_velocity_std_dev">
+              <cd:Float>
+                <cd:Description>Mie wind velocity standard deviation of the individual altitude bin
+                  values</cd:Description>
+                <cd:Unit>m/s</cd:Unit>
+                <cd:BitSize>64</cd:BitSize>
+                <cd:NativeType>double</cd:NativeType>
+                <ct:NamedTest id="FloatIsFinite" />
+              </cd:Float>
+            </cd:Field>
+            <cd:Field name="rayleigh_wind_velocity_std_dev">
+              <cd:Float>
+                <cd:Description>Rayleigh wind velocity standard deviation of the individual altitude
+                  bin values</cd:Description>
+                <cd:Unit>m/s</cd:Unit>
+                <cd:BitSize>64</cd:BitSize>
+                <cd:NativeType>double</cd:NativeType>
+                <ct:NamedTest id="FloatIsFinite" />
+              </cd:Float>
+            </cd:Field>
+            <cd:Field name="mie_useful_signal_std_dev">
+              <cd:Float>
+                <cd:Description>Mie useful signal tandard deviation of the individual altitude bin
+                  values</cd:Description>
+                <cd:Unit>AU</cd:Unit>
+                <cd:BitSize>64</cd:BitSize>
+                <cd:NativeType>double</cd:NativeType>
+                <ct:NamedTest id="FloatIsFinite" />
+              </cd:Float>
+            </cd:Field>
+            <cd:Field name="rayleigh_useful_signal_channel_a_std_dev">
+              <cd:Float>
+                <cd:Description>Rayleigh channel A useful signal tandard deviation of the individual
+                  altitude bin values</cd:Description>
+                <cd:Unit>AU</cd:Unit>
+                <cd:BitSize>64</cd:BitSize>
+                <cd:NativeType>double</cd:NativeType>
+                <ct:NamedTest id="FloatIsFinite" />
+              </cd:Float>
+            </cd:Field>
+            <cd:Field name="rayleigh_useful_signal_channel_b_std_dev">
+              <cd:Float>
+                <cd:Description>Rayleigh channel B useful signal tandard deviation of the altitude
+                  bin</cd:Description>
+                <cd:Unit>AU</cd:Unit>
+                <cd:BitSize>64</cd:BitSize>
+                <cd:NativeType>double</cd:NativeType>
+                <ct:NamedTest id="FloatIsFinite" />
+              </cd:Float>
+            </cd:Field>
+            <cd:Field name="mie_core_characteristic">
+              <cd:NamedType id="Level_1B_PCD_Mie_Core_characteristics_04_20" />
+            </cd:Field>
+            <cd:Field name="scattering_ratio_mie">
+              <cd:Float>
+                <cd:Description>Scattering ratio of the altitude bin. If the scattering ratio cannot
+                  be computed, the field is set to -1.0 For the background radiation sample the
+                  value is always set to 0.0.</cd:Description>
+                <cd:Unit>AU</cd:Unit>
+                <cd:BitSize>64</cd:BitSize>
+                <cd:NativeType>double</cd:NativeType>
+                <ct:NamedTest id="FloatIsFinite" />
+              </cd:Float>
+            </cd:Field>
+            <cd:Field name="refined_scattering_ratio_mie">
+              <cd:Float>
+                <cd:Description>Refined scattering ratio of the altitude bin using the Mie Core
+                  Downhill Simplex algorithm output or Voigt fit output. If the scattering ratio
+                  cannot be computed, the field is set to -1.0</cd:Description>
+                <cd:Unit>AU</cd:Unit>
+                <cd:BitSize>64</cd:BitSize>
+                <cd:NativeType>double</cd:NativeType>
+                <ct:NamedTest id="FloatIsFinite" />
+              </cd:Float>
+            </cd:Field>
+            <cd:Field name="refined_scattering_ratio_mie_std_dev">
+              <cd:Float>
+                <cd:Description>Standard deviation of the individual refined scattering ratio
+                  values; only calculated if Voigt fit output was used to calculate the refined SR.
+                  If the standard deviation of the SR cannot be computed or
+                  Refined_Scattering_Ratio_Mie is set to -1.0, this field is set to -1.0 as well.
+                  For the background radiation sample the value is always set to 0.0.</cd:Description>
+                <cd:Unit>AU</cd:Unit>
+                <cd:BitSize>64</cd:BitSize>
+                <cd:NativeType>double</cd:NativeType>
+                <ct:NamedTest id="FloatIsFinite" />
+              </cd:Float>
+            </cd:Field>
+            <cd:Field name="refined_scattering_ratio_error_mie">
+              <cd:Float>
+                <cd:Description>Refined scattering ratio of the altitude bin using the Mie Core
+                  Downhill Simplex algorithm output or Voigt fit output. If the refined scattering
+                  ratio cannot be computed, or neither Downhill Simplex nor Voigt fit are selected,
+                  the field is set to -1.0. For the background radiation sample the value is always
+                  set to 0.0.</cd:Description>
+                <cd:Unit>AU</cd:Unit>
+                <cd:BitSize>64</cd:BitSize>
+                <cd:NativeType>double</cd:NativeType>
+                <ct:NamedTest id="FloatIsFinite" />
+              </cd:Float>
+            </cd:Field>
+            <cd:Field name="mie_signal_to_noise_ratio">
+              <cd:Float>
+                <cd:Description>Mie Signal-to-Noise ratio of the altitude bin. If the Mie
+                  Signal-to-Noise ratio cannot be computed, this field is set to –1.0. For the
+                  background radiation sample the value is always set to 0.0.</cd:Description>
+                <cd:Unit>AU</cd:Unit>
+                <cd:BitSize>64</cd:BitSize>
+                <cd:NativeType>double</cd:NativeType>
+                <ct:NamedTest id="FloatIsFinite" />
+              </cd:Float>
+            </cd:Field>
+            <cd:Field name="refined_mie_signal_to_noise_ratio">
+              <cd:Float>
+                <cd:Description>Refined scattering ratio of the altitude bin using the Mie Core
+                  Downhill Simplex algorithm output. or Voigt fit output. If the SNR cannot be
+                  computed, or neither Downhill Simplex nor Voigt fit are selected, the field is set
+                  to -1.0. For the background radiation sample the value is always set to 0.0.</cd:Description>
+                <cd:BitSize>64</cd:BitSize>
+                <cd:NativeType>double</cd:NativeType>
+                <ct:NamedTest id="FloatIsFinite" />
+              </cd:Float>
+            </cd:Field>
+            <cd:Field name="refined_mie_signal_to_noise_ratio_std_dev">
+              <cd:Float>
+                <cd:Description>Standard deviation of the individual refined SNR values; only
+                  calculated if Voigt fit output was used to calculate the refined SNR. If the
+                  refined SNR cannot be computed, the field is set to -1.0. If the standard
+                  deviation of the SNR cannot be computed or Refined_Mie_Signal_to_Noise_Ratio is
+                  set to -1.0, this field is set to -1.0 as well. For the background radiation
+                  sample the value is always set to 0.0.</cd:Description>
+                <cd:BitSize>64</cd:BitSize>
+                <cd:NativeType>double</cd:NativeType>
+                <ct:NamedTest id="FloatIsFinite" />
+              </cd:Float>
+            </cd:Field>
+            <cd:Field name="refined_mie_snr_data_quality_flag">
+              <cd:Integer>
+                <cd:Description>This field is a 1 byte, bit-packed field. It applies to the refined
+                  SR and/or the refined SNR calculation, whenever those values are set to -1.0. When
+                  the data is valid, Bit 1 is set to 0. Bit 1: Overall validity. Data invalid 1,
+                  otherwise 0 Bit 2: For atmospheric data this field is set to 1 if a saturated
+                  pixel was found. For the internal reference data this field is unused. Bit 3:
+                  Neither MC2 nor MC 3 selected 1, otherwise 0 Bit 4: MC3 selected but
+                  Voigt_Error_Flag not valid 1, otherwise 0 Bit 5: MC2 selected but Error_Flag not
+                  valid 1, otherwise 0 Bit 6: MC2 pre-processing not possible 1, otherwise 0 Bit 7:
+                  MC 2 post, or MC 3 processing not possible 1, otherwise 0 Bit 8: SR on measurement
+                  level should be processed with observation level offset, but this was not
+                  possible.</cd:Description>
+                <cd:BitSize>8</cd:BitSize>
+                <cd:NativeType>uint8</cd:NativeType>
+              </cd:Integer>
+            </cd:Field>
+
+            <cd:Field name="total_mie_signal_to_noise_ratio">
+              <cd:Float>
+                <cd:Description>Total Mie Signal-to-Noise ratio of the altitude bin using the Mie
+                  Core Downhill Simplex algorithm output. If the signal-to-noise ratio cannot be
+                  computed, the field is set to -1.0.</cd:Description>
+                <cd:Unit>AU</cd:Unit>
+                <cd:BitSize>64</cd:BitSize>
+                <cd:NativeType>double</cd:NativeType>
+                <ct:NamedTest id="FloatIsFinite" />
+              </cd:Float>
+            </cd:Field>
+            <cd:Field name="rayleigh_signal_to_noise_ratio_channel_a">
+              <cd:Float>
+                <cd:Description>Rayleigh channel A signal-to-noise ratio of the altitude bin.</cd:Description>
+                <cd:Unit>AU</cd:Unit>
+                <cd:BitSize>64</cd:BitSize>
+                <cd:NativeType>double</cd:NativeType>
+                <ct:NamedTest id="FloatIsFinite" />
+              </cd:Float>
+            </cd:Field>
+            <cd:Field name="rayleigh_signal_to_noise_ratio_channel_b">
+              <cd:Float>
+                <cd:Description>Rayleigh channel B signal-to-noise ratio of the altitude bin.</cd:Description>
+                <cd:Unit>AU</cd:Unit>
+                <cd:BitSize>64</cd:BitSize>
+                <cd:NativeType>double</cd:NativeType>
+                <ct:NamedTest id="FloatIsFinite" />
+              </cd:Float>
+            </cd:Field>
+            <cd:Field name="enc_col_channel_a">
+              <cd:Float>
+                <cd:Description>Col value of the energetic centroid of the observation level
+                  altitude bin signal for channel A. Value set to 0 if parameter couldn’t be
+                  retrieved.</cd:Description>
+                <cd:Unit>ACCD pixel index</cd:Unit>
+                <cd:BitSize>64</cd:BitSize>
+                <cd:NativeType>double</cd:NativeType>
+                <ct:NamedTest id="FloatIsFinite" />
+              </cd:Float>
+            </cd:Field>
+            <cd:Field name="enc_col_channel_b">
+              <cd:Float>
+                <cd:Description>Col value of the energetic centroid of the observation level
+                  altitude bin signal for channel B. Value set to 0 if parameter couldn’t be
+                  retrieved.</cd:Description>
+                <cd:Unit>ACCD pixel index</cd:Unit>
+                <cd:BitSize>64</cd:BitSize>
+                <cd:NativeType>double</cd:NativeType>
+                <ct:NamedTest id="FloatIsFinite" />
+              </cd:Float>
+            </cd:Field>
+            <cd:Field name="enc_col_std_dev_channel_a">
+              <cd:Float>
+                <cd:Description>Energetic centroid column standard deviation for the individual
+                  values for channel A. Value set to 0 if parameter couldn’t be retrieved.</cd:Description>
+                <cd:BitSize>64</cd:BitSize>
+                <cd:NativeType>double</cd:NativeType>
+                <ct:NamedTest id="FloatIsFinite" />
+              </cd:Float>
+            </cd:Field>
+            <cd:Field name="enc_col_std_dev_channel_b">
+              <cd:Float>
+                <cd:Description>Energetic centroid column standard deviation for the individual
+                  values for channel B. Value set to 0 if parameter couldn’t be retrieved.</cd:Description>
+                <cd:BitSize>64</cd:BitSize>
+                <cd:NativeType>double</cd:NativeType>
+                <ct:NamedTest id="FloatIsFinite" />
+              </cd:Float>
+            </cd:Field>
+          </cd:Record>
+        </cd:Array>
+      </cd:Field>
+      <cd:Field name="num_mie_invalid_measurements">
+        <cd:Integer>
+          <cd:Description>Number of Mie invalid measurement data over all bins due to source packet
+            invalid, data corruption, laser frequency unlocked, or satellite attitude not on target</cd:Description>
+          <cd:BitSize>32</cd:BitSize>
+          <cd:NativeType>int32</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="num_mie_invalid_reference_pulse">
+        <cd:Integer>
+          <cd:Description>Number of Mie invalid measurement data over all bins due to source packet
+            invalid, data corruption, or laser frequency unlocked</cd:Description>
+          <cd:BitSize>32</cd:BitSize>
+          <cd:NativeType>int32</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="num_rayleigh_invalid_measurements">
+        <cd:Integer>
+          <cd:Description>Number of Rayleigh invalid measurement data over all bins due to source
+            packet invalid, data corruption, laser frequency unlocked, or satellite attitude not on
+            target</cd:Description>
+          <cd:BitSize>32</cd:BitSize>
+          <cd:NativeType>int32</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="num_rayleigh_invalid_reference_pulse">
+        <cd:Integer>
+          <cd:Description>Number of Rayleigh invalid measurement data over all bins due to source
+            packet invalid, data corruption, or laser frequency unlocked</cd:Description>
+          <cd:BitSize>32</cd:BitSize>
+          <cd:NativeType>int32</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="mie_mean_emitted_frequency">
+        <cd:Float>
+          <cd:Description>Emitted responses calculated using : eqn 58 from R-2 for the reference
+            pulse of the observation : eqn 60 from R-2 for the reference pulse of a measuremen :
+            emitted responses are then converted to emitted frequencies</cd:Description>
+          <cd:Unit>GHz</cd:Unit>
+          <cd:BitSize>64</cd:BitSize>
+          <cd:NativeType>double</cd:NativeType>
+          <ct:NamedTest id="FloatIsFinite" />
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="mie_emitted_frequency_std_dev">
+        <cd:Float>
+          <cd:Description>Standard deviation of the individual emitted frequencies standard
+            deviation values</cd:Description>
+          <cd:Unit>GHz</cd:Unit>
+          <cd:BitSize>64</cd:BitSize>
+          <cd:NativeType>double</cd:NativeType>
+          <ct:NamedTest id="FloatIsFinite" />
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="rayleigh_mean_emitted_frequency">
+        <cd:Float>
+          <cd:Description>Emitted responses calculated using : eqn 58 from R-2 for the reference
+            pulse of the observation : eqn 60 from R-2 for the reference pulse of a measuremen :
+            emitted responses are then converted to emitted frequencies</cd:Description>
+          <cd:Unit>GHz</cd:Unit>
+          <cd:BitSize>64</cd:BitSize>
+          <cd:NativeType>double</cd:NativeType>
+          <ct:NamedTest id="FloatIsFinite" />
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="rayleigh_emitted_frequency_std_dev">
+        <cd:Float>
+          <cd:Description>Standard deviation of the individual emitted frequencies standard
+            deviation values</cd:Description>
+          <cd:Unit>GHz</cd:Unit>
+          <cd:BitSize>64</cd:BitSize>
+          <cd:NativeType>double</cd:NativeType>
+          <ct:NamedTest id="FloatIsFinite" />
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="multimode_ratio_quality_flag">
+        <cd:Integer>
+          <cd:Description>Flag that is set if the multimode ratio falls below the multimode ratio
+            threshold for an observation</cd:Description>
+          <cd:BitSize>8</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+          <ct:NamedTest id="BooleanBinTest" />
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="txa_frequency">
+        <cd:Float>
+          <cd:Description>Mean of up to N*P values of the TXA frequency of valid pulses</cd:Description>
+          <cd:BitSize>64</cd:BitSize>
+          <cd:NativeType>double</cd:NativeType>
+          <ct:NamedTest id="FloatIsFinite" />
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="RSPT_Temperatures">
+        <cd:Array>
+          <cd:Dimension>6</cd:Dimension>
+          <cd:Record>
+            <cd:Description>RSPT temperatures for each sensor and each time sample in the BRC</cd:Description>
+            <cd:Field name="tc_8_rspt_1">
+              <cd:Float>
+                <cd:Description>Sensor RSPT temperature</cd:Description>
+                <cd:BitSize>64</cd:BitSize>
+                <cd:NativeType>double</cd:NativeType>
+                <ct:NamedTest id="FloatIsFinite" />
+              </cd:Float>
+            </cd:Field>
+            <cd:Field name="tc_9_rspt_2">
+              <cd:Float>
+                <cd:Description>Sensor RSPT temperature</cd:Description>
+                <cd:BitSize>64</cd:BitSize>
+                <cd:NativeType>double</cd:NativeType>
+                <ct:NamedTest id="FloatIsFinite" />
+              </cd:Float>
+            </cd:Field>
+            <cd:Field name="tc_10_rspt_3">
+              <cd:Float>
+                <cd:Description>Sensor RSPT temperature</cd:Description>
+                <cd:BitSize>64</cd:BitSize>
+                <cd:NativeType>double</cd:NativeType>
+                <ct:NamedTest id="FloatIsFinite" />
+              </cd:Float>
+            </cd:Field>
+            <cd:Field name="tc_11_rspt_4">
+              <cd:Float>
+                <cd:Description>Sensor RSPT temperature</cd:Description>
+                <cd:BitSize>64</cd:BitSize>
+                <cd:NativeType>double</cd:NativeType>
+                <ct:NamedTest id="FloatIsFinite" />
+              </cd:Float>
+            </cd:Field>
+          </cd:Record>
+        </cd:Array>
+      </cd:Field>
+      <cd:Field name="M1_Temperatures">
+        <cd:Record>
+          <cd:Field name="aht_22_tel_m1">
+            <cd:Float>
+              <cd:Description>Average of Aht 22 M1 temperatures</cd:Description>
+              <cd:BitSize>64</cd:BitSize>
+              <cd:NativeType>double</cd:NativeType>
+              <ct:NamedTest id="FloatIsFinite" />
+            </cd:Float>
+          </cd:Field>
+          <cd:Field name="aht_23_tel_m1">
+            <cd:Float>
+              <cd:Description>Average of Aht 23 M1 temperatures</cd:Description>
+              <cd:BitSize>64</cd:BitSize>
+              <cd:NativeType>double</cd:NativeType>
+              <ct:NamedTest id="FloatIsFinite" />
+            </cd:Float>
+          </cd:Field>
+          <cd:Field name="aht_24_tel_m1">
+            <cd:Float>
+              <cd:Description>Average of Aht 24 M1 temperatures</cd:Description>
+              <cd:BitSize>64</cd:BitSize>
+              <cd:NativeType>double</cd:NativeType>
+              <ct:NamedTest id="FloatIsFinite" />
+            </cd:Float>
+          </cd:Field>
+          <cd:Field name="aht_25_tel_m1">
+            <cd:Float>
+              <cd:Description>Average of Aht 25 M1 temperatures</cd:Description>
+              <cd:BitSize>64</cd:BitSize>
+              <cd:NativeType>double</cd:NativeType>
+              <ct:NamedTest id="FloatIsFinite" />
+            </cd:Float>
+          </cd:Field>
+          <cd:Field name="aht_26_tel_m1">
+            <cd:Float>
+              <cd:Description>Average of Aht 26 M1 temperatures</cd:Description>
+              <cd:BitSize>64</cd:BitSize>
+              <cd:NativeType>double</cd:NativeType>
+              <ct:NamedTest id="FloatIsFinite" />
+            </cd:Float>
+          </cd:Field>
+          <cd:Field name="aht_27_tel_m1">
+            <cd:Float>
+              <cd:Description>Average of Aht 27 M1 temperatures</cd:Description>
+              <cd:BitSize>64</cd:BitSize>
+              <cd:NativeType>double</cd:NativeType>
+              <ct:NamedTest id="FloatIsFinite" />
+            </cd:Float>
+          </cd:Field>
+          <cd:Field name="tc_18_tel_m11">
+            <cd:Float>
+              <cd:Description>Average of TC 18 Tel M1-1 temperatures</cd:Description>
+              <cd:BitSize>64</cd:BitSize>
+              <cd:NativeType>double</cd:NativeType>
+              <ct:NamedTest id="FloatIsFinite" />
+            </cd:Float>
+          </cd:Field>
+          <cd:Field name="tc_19_tel_m12">
+            <cd:Float>
+              <cd:Description>Average of TC 19 Tel M1-2 temperatures</cd:Description>
+              <cd:BitSize>64</cd:BitSize>
+              <cd:NativeType>double</cd:NativeType>
+              <ct:NamedTest id="FloatIsFinite" />
+            </cd:Float>
+          </cd:Field>
+          <cd:Field name="tc_20_tel_m13">
+            <cd:Float>
+              <cd:Description>Average of TC 20 Tel M1-3 temperatures</cd:Description>
+              <cd:BitSize>64</cd:BitSize>
+              <cd:NativeType>double</cd:NativeType>
+              <ct:NamedTest id="FloatIsFinite" />
+            </cd:Float>
+          </cd:Field>
+          <cd:Field name="tc_21_tel_m14">
+            <cd:Float>
+              <cd:Description>Average of TC 21 Tel M1-4 temperatures</cd:Description>
+              <cd:BitSize>64</cd:BitSize>
+              <cd:NativeType>double</cd:NativeType>
+              <ct:NamedTest id="FloatIsFinite" />
+            </cd:Float>
+          </cd:Field>
+          <cd:Field name="tc_25_tm15_ths1y">
+            <cd:Float>
+              <cd:Description>Average of TC 25 TM15 Ths1-Y temperatures</cd:Description>
+              <cd:BitSize>64</cd:BitSize>
+              <cd:NativeType>double</cd:NativeType>
+              <ct:NamedTest id="FloatIsFinite" />
+            </cd:Float>
+          </cd:Field>
+          <cd:Field name="tc_27_tm16_ths1y">
+            <cd:Float>
+              <cd:Description>Average of TC 27 TM16 Ths1-Y temperatures</cd:Description>
+              <cd:BitSize>64</cd:BitSize>
+              <cd:NativeType>double</cd:NativeType>
+              <ct:NamedTest id="FloatIsFinite" />
+            </cd:Float>
+          </cd:Field>
+          <cd:Field name="tc_29_ths2">
+            <cd:Float>
+              <cd:Description>Average of TC 29 Ths2 temperatures</cd:Description>
+              <cd:BitSize>64</cd:BitSize>
+              <cd:NativeType>double</cd:NativeType>
+              <ct:NamedTest id="FloatIsFinite" />
+            </cd:Float>
+          </cd:Field>
+          <cd:Field name="tc_23_ths1">
+            <cd:Float>
+              <cd:Description>Average of TC 23 Ths1 temperatures</cd:Description>
+              <cd:BitSize>64</cd:BitSize>
+              <cd:NativeType>double</cd:NativeType>
+              <ct:NamedTest id="FloatIsFinite" />
+            </cd:Float>
+          </cd:Field>
+          <cd:Field name="tc_32_ths3">
+            <cd:Float>
+              <cd:Description>Average of TC 32 Ths3 temperatures</cd:Description>
+              <cd:BitSize>64</cd:BitSize>
+              <cd:NativeType>double</cd:NativeType>
+              <ct:NamedTest id="FloatIsFinite" />
+            </cd:Float>
+          </cd:Field>
+        </cd:Record>
+      </cd:Field>
+      <cd:Field name="spare_3">
+        <cd:Raw>
+          <cd:Description>Spare</cd:Description>
+          <cd:BitSize>32</cd:BitSize>
+        </cd:Raw>
+        <cd:Hidden />
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="measurement_pcd">
+    <cd:Array>
+      <cd:Dimension><![CDATA[int(/sph/n_max)]]></cd:Dimension>
+      <cd:Record>
+        <cd:Description>Level 1B measurement PCD</cd:Description>
+        <cd:Field name="num_of_mie_invalid_reference_pulse">
+          <cd:Integer>
+            <cd:Description>Number of Mie invalid reference pulses due to source packet invalid,
+              data corruption, or laser frequency unlocked</cd:Description>
+            <cd:BitSize>32</cd:BitSize>
+            <cd:NativeType>int32</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="num_of_rayleigh_invalid_reference_pulse">
+          <cd:Integer>
+            <cd:Description>Number of Rayleigh invalid reference pulses due to source packet
+              invalid, data corruption, or laser frequency unlocked</cd:Description>
+            <cd:BitSize>32</cd:BitSize>
+            <cd:NativeType>int32</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="avg_laser_frequency_offset">
+          <cd:Float>
+            <cd:Description>Average laser frequency offset</cd:Description>
+            <cd:Unit>GHz</cd:Unit>
+            <cd:BitSize>64</cd:BitSize>
+            <cd:NativeType>double</cd:NativeType>
+            <ct:NamedTest id="FloatIsFinite" />
+          </cd:Float>
+        </cd:Field>
+        <cd:Field name="avg_uv_energy">
+          <cd:Float>
+            <cd:Description>Average laser UV energy</cd:Description>
+            <cd:Unit>mJ</cd:Unit>
+            <cd:BitSize>64</cd:BitSize>
+            <cd:NativeType>double</cd:NativeType>
+            <ct:NamedTest id="FloatIsFinite" />
+          </cd:Float>
+        </cd:Field>
+        <cd:Field name="laser_frequency_offset_std_dev">
+          <cd:Float>
+            <cd:Description>Laser frequency offset standard deviation</cd:Description>
+            <cd:Unit>GHz</cd:Unit>
+            <cd:BitSize>64</cd:BitSize>
+            <cd:NativeType>double</cd:NativeType>
+            <ct:NamedTest id="FloatIsFinite" />
+          </cd:Float>
+        </cd:Field>
+        <cd:Field name="uv_energy_std_dev">
+          <cd:Float>
+            <cd:Description>Laser pulse UV energy standard deviation of the (P –1) individual
+              pulses, regardless of the UV_Energy_OK_Status.</cd:Description>
+            <cd:Unit>mJ</cd:Unit>
+            <cd:BitSize>64</cd:BitSize>
+            <cd:NativeType>double</cd:NativeType>
+            <ct:NamedTest id="FloatIsFinite" />
+          </cd:Float>
+        </cd:Field>
+        <cd:Field name="mie_ref_pulse_signal_to_noise_ratio">
+          <cd:Float>
+            <cd:Description>Mie signal to noise ratio for coadded valid pulses of the measurement.
+              If the signal to noise ratio cannot be computed, the field is set to -1.0.</cd:Description>
+            <cd:BitSize>64</cd:BitSize>
+            <cd:NativeType>double</cd:NativeType>
+            <ct:NamedTest id="FloatIsFinite" />
+          </cd:Float>
+        </cd:Field>
+        <cd:Field name="mie_ref_pulse_refined_signal_to_noise_ratio">
+          <cd:Float>
+            <cd:Description>Refined Mie signal to noise ratio for coadded valid pulses of the
+              measurement. using the Mie Core Downhill Simplex algorithm output or Voigt fit output.
+              If the SNR cannot be computed, or neither Downhill Simplex nor Voigt fit are selected,
+              the field is set to -1.0</cd:Description>
+            <cd:BitSize>64</cd:BitSize>
+            <cd:NativeType>double</cd:NativeType>
+            <ct:NamedTest id="FloatIsFinite" />
+          </cd:Float>
+        </cd:Field>
+        <cd:Field name="mie_ref_pulse_refined_signal_to_noise_ratio_std_dev">
+          <cd:Float>
+            <cd:Description>Standard deviation of the individual Mie reference pulses refined SNR;
+              only calculated if Voigt fit output was used to calculate the refined SNR. If
+              Mie_Ref_Pulse_Refined_Signal_to_Noise_Ratio is set to -1.0, this field is set to -1.0
+              as well.</cd:Description>
+            <cd:BitSize>64</cd:BitSize>
+            <cd:NativeType>double</cd:NativeType>
+            <ct:NamedTest id="FloatIsFinite" />
+          </cd:Float>
+        </cd:Field>
+        <cd:Field name="mie_ref_pulse_refined_snr_data_quality_flag">
+          <cd:Integer>
+            <cd:Description>This field is a 1 byte, bit-packed field. It applies to the refined SR
+              and/or the refined SNR calculation, whenever those values are set to -1.0. When the
+              data is valid, Bit 1 is set to 0. Bit 1: Overall validity. Data invalid 1, otherwise 0
+              Bit 2: For atmospheric data this field is set to 1 if a saturated pixel was found. For
+              the internal reference data this field is unused. Bit 3: Neither MC2 nor MC 3 selected
+              1, otherwise 0 Bit 4: MC3 selected but Voigt_Error_Flag not valid 1, otherwise 0 Bit
+              5: MC2 selected but Error_Flag not valid 1, otherwise 0 Bit 6: MC2 pre-processing not
+              possible 1, otherwise 0 Bit 7: MC 2 post, or MC 3 processing not possible 1, otherwise
+              0 Bit 8: Spare</cd:Description>
+            <cd:BitSize>8</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="rayleigh_ref_pulse_signal_to_noise_ratio_channel_a">
+          <cd:Float>
+            <cd:Description>Rayleigh signal to noise ratio of channel A for the coadded valid pulses
+              of the measurement. If the signal to noise ratio cannot be computed, the field is set
+              to -1.0.</cd:Description>
+            <cd:BitSize>64</cd:BitSize>
+            <cd:NativeType>double</cd:NativeType>
+            <ct:NamedTest id="FloatIsFinite" />
+          </cd:Float>
+        </cd:Field>
+        <cd:Field name="rayleigh_ref_pulse_signal_to_noise_ratio_channel_b">
+          <cd:Float>
+            <cd:Description>Rayleigh signal to noise ratio of channel B for the coadded valid pulses
+              of the measurement.If the signal to noise ratio cannot be computed, the field is set
+              to -1.0.</cd:Description>
+            <cd:BitSize>64</cd:BitSize>
+            <cd:NativeType>double</cd:NativeType>
+            <ct:NamedTest id="FloatIsFinite" />
+          </cd:Float>
+        </cd:Field>
+        <cd:Field name="meas_alt_bin_pcd">
+          <cd:Array>
+            <cd:Dimension>25</cd:Dimension>
+            <cd:Record>
+              <cd:Description>Level 1B Meas Alt Bin PCD</cd:Description>
+              <cd:Field name="mie_measurement_invalid">
+                <cd:Integer>
+                  <cd:Description>Invalid Mie measurement data for the current altitude bin due to
+                    source packet invalid, data corruption, laser frequency unlocked, or satellite
+                    attitude not on target, or bin below ground</cd:Description>
+                  <cd:BitSize>8</cd:BitSize>
+                  <cd:NativeType>uint8</cd:NativeType>
+                  <ct:NamedTest id="BooleanBinTest" />
+                </cd:Integer>
+              </cd:Field>
+              <cd:Field name="rayleigh_measurement_invalid">
+                <cd:Integer>
+                  <cd:Description>Invalid Rayleigh measurement data for the current altitude bin due
+                    to source packet invalid, data corruption, laser frequency unlocked, or
+                    satellite attitude not on target, or bin below ground</cd:Description>
+                  <cd:BitSize>8</cd:BitSize>
+                  <cd:NativeType>uint8</cd:NativeType>
+                  <ct:NamedTest id="BooleanBinTest" />
+                </cd:Integer>
+              </cd:Field>
+              <cd:Field name="mie_peak_invalid">
+                <cd:Integer>
+                  <cd:Description>Invalid mie bin due to invalid peak fit of the measurement data of
+                    reference pulse data</cd:Description>
+                  <cd:BitSize>8</cd:BitSize>
+                  <cd:NativeType>uint8</cd:NativeType>
+                  <ct:NamedTest id="BooleanBinTest" />
+                </cd:Integer>
+              </cd:Field>
+              <cd:Field name="mie_core_characteristic">
+                <cd:NamedType id="Level_1B_PCD_Mie_Core_characteristics_04_20" />
+              </cd:Field>
+              <cd:Field name="scattering_ratio_mie">
+                <cd:Float>
+                  <cd:Description>Scattering ratio of the altitude bin</cd:Description>
+                  <cd:Unit>AU</cd:Unit>
+                  <cd:BitSize>64</cd:BitSize>
+                  <cd:NativeType>double</cd:NativeType>
+                  <ct:NamedTest id="FloatIsFinite" />
+                </cd:Float>
+              </cd:Field>
+              <cd:Field name="refined_scattering_ratio_mie">
+                <cd:Float>
+                  <cd:Description>Refined scattering ratio of the altitude bin using the Mie Core
+                    Downhill Simplex algorithm output. If the scattering ratio cannot be computed,
+                    this field is set to -1.0</cd:Description>
+                  <cd:Unit>AU</cd:Unit>
+                  <cd:BitSize>64</cd:BitSize>
+                  <cd:NativeType>double</cd:NativeType>
+                  <ct:NamedTest id="FloatIsFinite" />
+                </cd:Float>
+              </cd:Field>
+              <cd:Field name="refined_scattering_ratio_mie_std_dev">
+                <cd:Float>
+                  <cd:Description>Standard deviation of the individual refined scattering ratio
+                    values; only calculated if Voigt fit output was used to calculate the refined
+                    SR. If the standard deviation of the SR cannot be computed or
+                    Refined_Scattering_Ratio_Mie is set to -1.0, this field is set to -1.0 as well.
+                    For the background radiation sample the value is always set to 0.0</cd:Description>
+                  <cd:Unit>AU</cd:Unit>
+                  <cd:BitSize>64</cd:BitSize>
+                  <cd:NativeType>double</cd:NativeType>
+                  <ct:NamedTest id="FloatIsFinite" />
+                </cd:Float>
+              </cd:Field>
+              <cd:Field name="refined_scattering_ratio_error_mie">
+                <cd:Float>
+                  <cd:Description>Error of refined scattering ratio of the altitude bin using the
+                    Voigt fit output. If the Voigt fit is not used, the field is set to 0.0.</cd:Description>
+                  <cd:Unit>AU</cd:Unit>
+                  <cd:BitSize>64</cd:BitSize>
+                  <cd:NativeType>double</cd:NativeType>
+                  <ct:NamedTest id="FloatIsFinite" />
+                </cd:Float>
+              </cd:Field>
+              <cd:Field name="mie_sr_useful_signal_lower_threshold_met">
+                <cd:Integer>
+                  <cd:Description>Set to true, if the useful signal derived for the current bin is
+                    above the threshold Mie_SR_Useful_Signal_Lower_Threshold. Set to false
+                    otherwise.</cd:Description>
+                  <cd:BitSize>8</cd:BitSize>
+                  <cd:NativeType>uint8</cd:NativeType>
+                  <ct:NamedTest id="BooleanBinTest" />
+                </cd:Integer>
+              </cd:Field>
+              <cd:Field name="mie_signal_to_noise_ratio">
+                <cd:Float>
+                  <cd:Description>Mie signal to noise ratio of the altitude bin. If the Mie
+                    Signal-to-Noise ratio cannot be computed, this field is set to -1.0</cd:Description>
+                  <cd:Unit>AU</cd:Unit>
+                  <cd:BitSize>64</cd:BitSize>
+                  <cd:NativeType>double</cd:NativeType>
+                  <ct:NamedTest id="FloatIsFinite" />
+                </cd:Float>
+              </cd:Field>
+              <cd:Field name="refined_mie_signal_to_noise_ratio">
+                <cd:Float>
+                  <cd:Description>Refined Mie Signal-to-Noise ratio of the altitude bin using the
+                    Mie Core Downhill Simplex algorithm output. If the signal-to-noise ratio cannot
+                    be computed, this field is set to -1.0</cd:Description>
+                  <cd:Unit>AU</cd:Unit>
+                  <cd:BitSize>64</cd:BitSize>
+                  <cd:NativeType>double</cd:NativeType>
+                  <ct:NamedTest id="FloatIsFinite" />
+                </cd:Float>
+              </cd:Field>
+              <cd:Field name="refined_mie_signal_to_noise_ratio_std_dev">
+                <cd:Float>
+                  <cd:Description>Standard deviation of the individual refined SNR values; only
+                    calculated if Voigt fit output was used to calculate the refined SNR. If the
+                    refined SNR cannot be computed, the field is set to -1.0. If the standard
+                    deviation of the SNR cannot be computed or Refined_Mie_Signal_to_Noise_Ratio is
+                    set to -1.0, this field is set to -1.0 as well. For the background radiation
+                    sample the value is always set to 0.0</cd:Description>
+                  <cd:Unit>AU</cd:Unit>
+                  <cd:BitSize>64</cd:BitSize>
+                  <cd:NativeType>double</cd:NativeType>
+                  <ct:NamedTest id="FloatIsFinite" />
+                </cd:Float>
+              </cd:Field>
+              <cd:Field name="refinend_sr_snr_data_quality_flag">
+                <cd:Integer>
+                  <cd:Description>This field is a 1 byte, bit-packed field. It applies to the
+                    refined SR and/or the refined SNR calculation, whenever those values are set to
+                    -1.0. When the data is valid, Bit 1 is set to 0. Bit 1: Overall validity. Data
+                    invalid 1, otherwise 0 Bit 2: For atmospheric data this field is set to 1 if a
+                    saturated pixel was found. For the internal reference data this field is unused.
+                    Bit 3: Neither MC2 nor MC 3 selected 1, otherwise 0 Bit 4: MC3 selected but
+                    Voigt_Error_Flag not valid 1, otherwise 0 Bit 5: MC2 selected but Error_Flag not
+                    valid 1, otherwise 0 Bit 6: MC2 pre-processing not possible 1, otherwise 0 Bit
+                    7: MC 2 post, or MC 3 processing not possible 1, otherwise 0 Bit 8: SR on
+                    measurement level should be processed with observation level offset, but this
+                    was not possible.</cd:Description>
+                  <cd:BitSize>8</cd:BitSize>
+                  <cd:NativeType>uint8</cd:NativeType>
+                </cd:Integer>
+              </cd:Field>
+              <cd:Field name="total_mie_signal_to_noise_ratio">
+                <cd:Float>
+                  <cd:Description>Total Mie Signal-to-Noise ratio of the altitude bin using the Mie
+                    Core Downhill Simplex algorithm output. If the signal-to-noise ratio cannot be
+                    computed, the field is set to -1.0.</cd:Description>
+                  <cd:Unit>AU</cd:Unit>
+                  <cd:BitSize>64</cd:BitSize>
+                  <cd:NativeType>double</cd:NativeType>
+                  <ct:NamedTest id="FloatIsFinite" />
+                </cd:Float>
+              </cd:Field>
+              <cd:Field name="rayleigh_signal_to_noise_ratio_channel_a">
+                <cd:Float>
+                  <cd:Description>Rayleigh channel A signal to noise ratio of the altitude bin. If
+                    the Rayleigh channel A Signal-to-Noise ratio cannot be computed, this field is
+                    set to -1.0</cd:Description>
+                  <cd:Unit>AU</cd:Unit>
+                  <cd:BitSize>64</cd:BitSize>
+                  <cd:NativeType>double</cd:NativeType>
+                  <ct:NamedTest id="FloatIsFinite" />
+                </cd:Float>
+              </cd:Field>
+              <cd:Field name="rayleigh_signal_to_noise_ratio_channel_b">
+                <cd:Float>
+                  <cd:Description>Rayleigh channel B signal to noise ratio of the altitude bin. If
+                    the Rayleigh channel B Signal-to-Noise ratio cannot be computed, this field is
+                    set to -1.0</cd:Description>
+                  <cd:Unit>AU</cd:Unit>
+                  <cd:BitSize>64</cd:BitSize>
+                  <cd:NativeType>double</cd:NativeType>
+                  <ct:NamedTest id="FloatIsFinite" />
+                </cd:Float>
+              </cd:Field>
+            </cd:Record>
+          </cd:Array>
+        </cd:Field>
+        <cd:Field name="velocity_of_attitude_uncertainty_error">
+          <cd:Float>
+            <cd:Description>Velocity of attitude uncertainty error</cd:Description>
+            <cd:Unit>m/s</cd:Unit>
+            <cd:BitSize>64</cd:BitSize>
+            <cd:NativeType>double</cd:NativeType>
+            <ct:NamedTest id="FloatIsFinite" />
+          </cd:Float>
+        </cd:Field>
+        <cd:Field name="mie_mean_emitted_frequency">
+          <cd:Float>
+            <cd:Description>emitted responses calculated using ...</cd:Description>
+            <cd:Unit>GHz</cd:Unit>
+            <cd:BitSize>64</cd:BitSize>
+            <cd:NativeType>double</cd:NativeType>
+            <ct:NamedTest id="FloatIsFinite" />
+          </cd:Float>
+        </cd:Field>
+        <cd:Field name="mie_emitted_frequency_std_dev">
+          <cd:Float>
+            <cd:Description>Standard deviation for the individual eEmitted frequency values</cd:Description>
+            <cd:Unit>GHz</cd:Unit>
+            <cd:BitSize>64</cd:BitSize>
+            <cd:NativeType>double</cd:NativeType>
+            <ct:NamedTest id="FloatIsFinite" />
+          </cd:Float>
+        </cd:Field>
+        <cd:Field name="reference_pulse_fwhm">
+          <cd:Float>
+            <cd:Description>Reference pulse FWHM</cd:Description>
+            <cd:Unit>pixel</cd:Unit>
+            <cd:BitSize>64</cd:BitSize>
+            <cd:NativeType>double</cd:NativeType>
+            <ct:NamedTest id="FloatIsFinite" />
+          </cd:Float>
+        </cd:Field>
+        <cd:Field name="rayleigh_mean_emitted_frequency">
+          <cd:Float>
+            <cd:Description>emitted responses calculated using - Equation 64 of 0 for the reference
+              pulses of the observation - Equation 66 of 0 for the different reference pulses of a
+              measurement. Emitted responses are then converted to emitted frequencies and averaged</cd:Description>
+            <cd:Unit>GHz</cd:Unit>
+            <cd:BitSize>64</cd:BitSize>
+            <cd:NativeType>double</cd:NativeType>
+            <ct:NamedTest id="FloatIsFinite" />
+          </cd:Float>
+        </cd:Field>
+        <cd:Field name="rayleigh_emitted_frequency_std_dev">
+          <cd:Float>
+            <cd:Description>Standard deviation of the individual eEmitted frequencies values</cd:Description>
+            <cd:Unit>GHz</cd:Unit>
+            <cd:BitSize>64</cd:BitSize>
+            <cd:NativeType>double</cd:NativeType>
+            <ct:NamedTest id="FloatIsFinite" />
+          </cd:Float>
+        </cd:Field>
+        <cd:Field name="uv_energy_quality_flag">
+          <cd:Integer>
+            <cd:Description>Flag that shows the quality of the UV energy</cd:Description>
+            <cd:BitSize>8</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+            <ct:NamedTest id="BooleanBinTest" />
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="spare_4">
+          <cd:Raw>
+            <cd:Description>Spare</cd:Description>
+            <cd:BitSize>64</cd:BitSize>
+          </cd:Raw>
+          <cd:Hidden />
+        </cd:Field>
+      </cd:Record>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="spare_2">
+    <cd:Raw>
+      <cd:Description>Spare</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden />
+  </cd:Field>
+</cd:Record>
