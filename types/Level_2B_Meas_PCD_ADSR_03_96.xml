@@ -1,0 +1,509 @@
+<?xml version="1.0"?>
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="binary" name="Level_2B_Meas_PCD_ADSR_03_96" last-modified="2025-01-13">
+  <cd:Field name="start_of_observation_datetime">
+    <cd:Time timeformat="binary_envisat_datetime">
+      <cd:Description>Start date and time of Measurement</cd:Description>
+      <ct:NamedTest id="RangeSecond" path="seconds"/>
+      <ct:NamedTest id="RangeMicroSecond" path="microseconds"/>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="l1b_brc_number">
+    <cd:Integer>
+      <cd:Description>The index of the original L1B BRC from which this L2B measurement was taken.</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="l1b_meas_number">
+    <cd:Integer>
+      <cd:Description>The index of the measurement within the above mentioned original L1B BRC from which this L2B measurement was taken.</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="l1b_num_meas_per_brc">
+    <cd:Integer>
+      <cd:Description>The number of measurements present in the original L1B BRC from which this L2B measurement was taken.</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="l2b_amd_collocation">
+    <cd:Record>
+      <cd:Description>Structure describing which AMD profile was used, and what the Match Up results are</cd:Description>
+      <cd:Field name="matching_amd_profile">
+        <cd:Integer>
+          <cd:Description>AMD profile number that was found to match with the current measurement</cd:Description>
+          <cd:BitSize>16</cd:BitSize>
+          <cd:NativeType>uint16</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="matchup_qc">
+        <cd:Integer>
+          <cd:Description>code that specifies whether matchup was succesull or not, and if not it gives a reason why it failed</cd:Description>
+          <cd:BitSize>8</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="distance">
+        <cd:Float>
+          <cd:Description>actual distance between this measurement and the selected AuxMet profile</cd:Description>
+          <cd:Unit>km</cd:Unit>
+          <cd:BitSize>64</cd:BitSize>
+          <cd:NativeType>double</cd:NativeType>
+          <ct:NamedTest id="FloatIsFinite"/>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="time_difference">
+        <cd:Float>
+          <cd:Description>actual time difference between this measurement and the selected AuxMet profile</cd:Description>
+          <cd:Unit>s</cd:Unit>
+          <cd:BitSize>64</cd:BitSize>
+          <cd:NativeType>double</cd:NativeType>
+          <ct:NamedTest id="FloatIsFinite"/>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="spare">
+        <cd:Raw>
+          <cd:Description>Spare</cd:Description>
+          <cd:BitSize>8</cd:BitSize>
+        </cd:Raw>
+        <cd:Hidden/>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="l1b_input_screening">
+    <cd:Record>
+      <cd:Description>Structure describing any problems found during reading of the L1B datafile</cd:Description>
+      <cd:Field name="l1b_obs_scr">
+        <cd:Record>
+          <cd:Description>A structure that stores L1B BRC Obs level screening results on measurement level. This is needed because a L2B group no longer corresponds by definition to a single L1B BRC</cd:Description>
+          <cd:Field name="obs_valid">
+            <cd:Integer>
+              <cd:Description>This flag is set to true if the L1B observation (i.e. BRC) in which the current measurement is contained is considered valid.</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint8</cd:NativeType>
+              <ct:NamedTest id="BooleanBinTest"/>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="obs_qc_flags1">
+            <cd:Integer>
+              <cd:Description>Bit 1: L1B_Laser_Freq_Unlocked_Check failed, Bit 2: L1B_Ref_Pulses_Unlocked_Check failed, Bit 3: L1B_Laser_Freq_Offset_Check failed, Bit 4: L1B_Laser_UV_Energy_Check failed, Bit 5: L1B_Laser_Freq_Offs_Stdev_Check failed, Bit 6: L1B_Laser_UV_Energy_Stdev_Check, failed, Bit 7: L1B_Mie_Mean_Emit_Freq_Check failed, Bit 8: L1B_Mie_Emit_Freq_Stdev_Check failed</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint8</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="obs_qc_flags2">
+            <cd:Integer>
+              <cd:Description>Bit 1: L1B_Rayleigh_Mean_Emit_Freq_Chk failed, Bit 2: L1B_RayleighEmitFreqStdev_Check failed, Bit 3: L1B_Sat_Not_on_Target_Check failed, Bit 4: L1B_Mie_Corrupt_Check failed, Bit 5: L1B_Rayleigh_Corrupt_Check failed, Bit 6: L1B_Mie_Ref_PulsesCorrupt_Check failed, Bit 7: L1B_Rayl_RefPulsesCorrupt_Check failed,
+Bit 8: L1B_Mie_Invalid_Meas_Check failed</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint8</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="obs_qc_flags3">
+            <cd:Integer>
+              <cd:Description>Bit 1: L1B_Mie_Invalid_RefPulses_Check failed, Bit 2: L1B_Rayl_Invalid_Meas_Check failed, Bit 3: L1B_Rayl_InvalidRefPulses_Check failed, Bit 4: reserved (always set to 0), Bit 5: reserved (always set to 0), Bit 6: reserved (always set to 0), Bit 7: reserved (always set to 0), Bit 8: reserved (always set to 0)</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint8</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="obs_qc_flags4">
+            <cd:Integer>
+              <cd:Description>reserved</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint8</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="obs_qc_flags5">
+            <cd:Integer>
+              <cd:Description>reserved</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint8</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+        </cd:Record>
+      </cd:Field>
+      <cd:Field name="mie_meas">
+        <cd:Record>
+          <cd:Description>structure describing the problems found for this Mie measurement</cd:Description>
+          <cd:Field name="meas_valid">
+            <cd:Integer>
+              <cd:Description>This flag is set to true if this measurement is considered valid.</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint8</cd:NativeType>
+              <ct:NamedTest id="BooleanBinTest"/>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="meas_qc_flags1">
+            <cd:Integer>
+              <cd:Description>Flags describing problems which prevent using this Mie Measurement. Bit 1: threshold check on num Mie invalid refpulses failed, Bit 2: threshold check on Mie avg. laser freq. offset failed, Bit 3: threshold check on Mie avg. UV energy failed, Bit 4: threshold check on Mie laser freq. offset stdev failed, Bit 5: threshold check on Mie UV energy stdev failed, Bit 6: threshold check on Mie velocity of attitude uncertainty error failed, Bit 7: threshold check on Mie mean emit freq. failed, Bit 8: threshold check on Mie emit freq. stdev failed</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint8</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="meas_qc_flags2">
+            <cd:Integer>
+              <cd:Description>Flags describing problems which prevent using this Mie Measurement. Bit 1: reserved (always set to 0), Bit 2: reserved (always set to 0), Bit 3: reserved (always set to 0), ..., Bit 8: reserved (always set to 0)</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint8</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="meas_qc_flags3">
+            <cd:Integer>
+              <cd:Description>Flags describing problems which prevent using this Mie Measurement. Bit 1: Moon Blinding flag was set in L1B product, Bit 2: reserved (always set to 0), ..., Bit 8: reserved (always set to 0).</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint8</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="bin_screening">
+            <cd:Array>
+              <cd:Dimension>24</cd:Dimension>
+              <cd:Record>
+                <cd:Field name="bin_valid">
+                  <cd:Integer>
+                    <cd:Description>This flag is set to true if this bin is considered valid.</cd:Description>
+                    <cd:BitSize>8</cd:BitSize>
+                    <cd:NativeType>uint8</cd:NativeType>
+                    <ct:NamedTest id="BooleanBinTest"/>
+                  </cd:Integer>
+                </cd:Field>
+                <cd:Field name="bin_qc_flags1">
+                  <cd:Integer>
+                    <cd:Description>Flags describing problems which prevent using this Mie measurement bin. Bit 1: Mie_meas_invalid was set by the L1bP, Bit 2: Threshold check on scatratio failed, Bit 3: Threshold check on refined scatratio failed, Bit 4: Threshold check on SNR failed, Bit 5: Threshold check on refined SNR failed, Bit 6: reserved (always set to 0), Bit 7: reserved (always set to 0), Bit 8: reserved (always set to 0)</cd:Description>
+                    <cd:BitSize>8</cd:BitSize>
+                    <cd:NativeType>uint8</cd:NativeType>
+                  </cd:Integer>
+                </cd:Field>
+                <cd:Field name="bin_qc_flags2">
+                  <cd:Integer>
+                    <cd:Description>Flags describing problems which prevent using this Mie measurement bin. Bit 1: data quality flag from L1bP bit 1 was set: overal validity: data invalid, Bit 2: data quality flag from L1bP bit 2 was set: SNR below SNR threshold, Bit 3: data quality flag from L1bP bit 3 was set: data saturation found, Bit 4: data quality flag from L1bP bit 4 was set: data spike found, Bit 5: data quality flag from L1bP bit 5 was set: spare (not used). Bit 6: data quality flag from L1bP bit 6 was set: source packet invalid, Bit 7: data quality flag from L1bP bit 7 was set: num. corresp. valid pulses is below meas. cavity lock status threshold, Bit 8: data quality flag from L1bP bit 8 was set: spacecraft attitude not on target.</cd:Description>
+                    <cd:BitSize>8</cd:BitSize>
+                    <cd:NativeType>uint8</cd:NativeType>
+                  </cd:Integer>
+                </cd:Field>
+              </cd:Record>
+            </cd:Array>
+          </cd:Field>
+          <cd:Field name="spare">
+            <cd:Raw>
+              <cd:Description>Spare</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+            </cd:Raw>
+            <cd:Hidden/>
+          </cd:Field>
+        </cd:Record>
+      </cd:Field>
+      <cd:Field name="rayleigh_meas">
+        <cd:Record>
+          <cd:Description>structure describing the problems found for this Rayleigh measurement</cd:Description>
+          <cd:Field name="meas_valid">
+            <cd:Integer>
+              <cd:Description>This flag is set to true if this measurement is considered valid.</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint8</cd:NativeType>
+              <ct:NamedTest id="BooleanBinTest"/>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="meas_qc_flags1">
+            <cd:Integer>
+              <cd:Description>Flags describing problems which prevent using this Rayleigh Measurement. Bit 1: threshold check on num Rayleigh invalid refpulses failed, Bit 2: threshold check on Rayleigh avg. laser freq. offset failed, Bit 3: threshold check on Rayleigh avg. UV energy failed, Bit 4: threshold check on Rayleigh laser freq. offset stdev failed, Bit 5: threshold check on Rayleigh UV energy stdev failed, Bit 6: threshold check on Rayleigh velocity of attitude uncertainty error failed, Bit 7: threshold check on Rayleigh mean emit freq. failed, Bit 8: threshold check on Rayleigh emit freq. stdev failed</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint8</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="meas_qc_flags2">
+            <cd:Integer>
+              <cd:Description>Flags describing problems which prevent using this Rayleigh Measurement. Bit 1: threshold check on Mie emit freq. stdev failed and was propagated on to the Rayleigh channel, Bit 2: reserved (always set to 0), Bit 3: reserved (always set to 0), ..., Bit 8: reserved (always set to 0)</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint8</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="meas_qc_flags3">
+            <cd:Integer>
+              <cd:Description>Flags describing problems which prevent using this Rayleigh Measurement. Bit 1: Moon Blinding flag was set in L1B product, Bit 2: reserved (always set to 0), ..., Bit 8: reserved (always set to 0).</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint8</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="bin_screening">
+            <cd:Array>
+              <cd:Dimension>24</cd:Dimension>
+              <cd:Record>
+                <cd:Field name="bin_valid">
+                  <cd:Integer>
+                    <cd:Description>This flag is set to true if this bin is considered valid.</cd:Description>
+                    <cd:BitSize>8</cd:BitSize>
+                    <cd:NativeType>uint8</cd:NativeType>
+                    <ct:NamedTest id="BooleanBinTest"/>
+                  </cd:Integer>
+                </cd:Field>
+                <cd:Field name="bin_qc_flags1">
+                  <cd:Integer>
+                    <cd:Description>Flags describing problems which prevent using this Rayleigh measurement bin. Bit 1: Rayleigh_meas_invalid was set by the L1bP, Bit 2: Threshold check on SNR channel A failed, Bit 3: Threshold check on SNR channel B failed, Bit 4: Threshold check on meas. level Rayleigh Response failed, Bit 5: reserved (always set to 0), Bit 6: MieCore-2 was used for refined SR and SNR, Bit 7: MieCore-3 was used for refined SR and SNR, Bit 8: Ground was detected by the L1bP for this bin.</cd:Description>
+                    <cd:BitSize>8</cd:BitSize>
+                    <cd:NativeType>uint8</cd:NativeType>
+                  </cd:Integer>
+                </cd:Field>
+                <cd:Field name="bin_qc_flags2">
+                  <cd:Integer>
+                    <cd:Description>Flags describing problems which prevent using this Rayleigh measurement bin. Bit 1: data quality flag from L1bP bit 1 was set: overal validity: data invalid, Bit 2: data quality flag from L1bP bit 2 was set: SNR below SNR threshold (Note: this condition will raise this QC flag but it will not set the Bin_Valid flag to false), Bit 3: data quality flag from L1bP bit 3 was set: data saturation found, Bit 4: data quality flag from L1bP bit 4 was set: data spike found, Bit 5: data quality flag from L1bP bit 5 was set: spare (not used), Bit 6: data quality flag from L1bP bit 6 was set: source packet invalid, Bit 7: data quality flag from L1bP bit 7 was set: num. corresp. valid pulses is below meas. cavity lock status threshold, Bit 8: data quality flag from L1bP bit 8 was set: spacecraft attitude not on target.</cd:Description>
+                    <cd:BitSize>8</cd:BitSize>
+                    <cd:NativeType>uint8</cd:NativeType>
+                  </cd:Integer>
+                </cd:Field>
+              </cd:Record>
+            </cd:Array>
+          </cd:Field>
+          <cd:Field name="spare">
+            <cd:Raw>
+              <cd:Description>Spare</cd:Description>
+              <cd:BitSize>8</cd:BitSize>
+            </cd:Raw>
+            <cd:Hidden/>
+          </cd:Field>
+        </cd:Record>
+      </cd:Field>
+      <cd:Field name="spare">
+        <cd:Raw>
+          <cd:Description>Spare</cd:Description>
+          <cd:BitSize>160</cd:BitSize>
+        </cd:Raw>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="l2b_mie_classification_qc">
+    <cd:Record>
+      <cd:Field name="l2b_mie_meas_bin_classification">
+        <cd:Array>
+          <cd:Dimension>24</cd:Dimension>
+          <cd:Record>
+            <cd:Description>Structure describing QC parameters resulting from the Mie Classification algorithm</cd:Description>
+            <cd:Field name="l2b_mie_meas_bin_class_flags1">
+              <cd:Integer>
+                <cd:Description>First byte of 8 flags describing classification properties for the current Mie measurement rangebin. Bit 1 (L2B_Mie_Class_Cloud_Above) : a cloud was detected in a range bin higher than the current range bin, Bit 2 (L2B_Mie_Class_Cloud) : this rangebin contains a cloud, Bit 3 (L2B_Mie_Class_Maybe_Cloud) : this rangebin contains possibly a cloud, but the backscatter is close to the threshold, Bit 4 (L2B_Mie_Class_Aerosol) : Mie backscatter is present, but it is not a cloud, Bit 5 (L2B_Mie_Class_Precipitation) : Precipitation is present in this range bin, Bit 6 (L2B_Mie_Class_No_Extinction) : No extinction is known for this range bin, Bit 7 (L2B_Mie_Class_Unknown_Scatterer) : the value encountered in this rangebin for backscatter is unphysical for clouds, Bit 8 (L2B_Mie_Class_Broken_Clouds) : this range bin contains a broken cloud layer (currently only used for Obs range bins)</cd:Description>
+                <cd:BitSize>8</cd:BitSize>
+                <cd:NativeType>uint8</cd:NativeType>
+              </cd:Integer>
+            </cd:Field>
+            <cd:Field name="l2b_mie_meas_bin_class_flags2">
+              <cd:Integer>
+                <cd:Description>Second byte of 8 flags describing classification properties for the current Mie measurement rangebin. Bit 1 (L2B_Mie_Class_Convective_Clouds) : this range bin contains convective clouds, Bit 2 (L2B_Mie_Class_No_Cloud_Detected) : Flag indicating that no cloud or aerosol was detected in this rangebin, Bit 3 (L2B_NWP_Data_Used) : Flag indicating that NWP data was used to determine the clas- sification of this rangebin, Bit 4 : reserved (always set to 0), ..., Bit 8 : reserved (always set to 0)</cd:Description>
+                <cd:BitSize>8</cd:BitSize>
+                <cd:NativeType>uint8</cd:NativeType>
+              </cd:Integer>
+            </cd:Field>
+            <cd:Field name="backscatter_ratio">
+              <cd:Float>
+                <cd:Description>Backscatter ratio deduced for this rangebin</cd:Description>
+                <cd:BitSize>64</cd:BitSize>
+                <cd:NativeType>double</cd:NativeType>
+                <ct:NamedTest id="FloatIsFinite"/>
+              </cd:Float>
+            </cd:Field>
+            <cd:Field name="applied_scatratio_method">
+              <cd:Integer>
+                <cd:Description>Method applied to deduce Backscatter ratio for this rangebin</cd:Description>
+                <cd:BitSize>8</cd:BitSize>
+                <cd:NativeType>uint8</cd:NativeType>
+              </cd:Integer>
+            </cd:Field>
+            <cd:Field name="selected_SNR">
+              <cd:Float>
+                <cd:Description>Signal-to-Noise ratio deduced for this rangebin</cd:Description>
+                <cd:BitSize>64</cd:BitSize>
+                <cd:NativeType>double</cd:NativeType>
+                <ct:NamedTest id="FloatIsFinite"/>
+              </cd:Float>
+            </cd:Field>
+            <cd:Field name="applied_snr_method">
+              <cd:Integer>
+                <cd:Description>Method applied to deduce SNR for this rangebin</cd:Description>
+                <cd:BitSize>8</cd:BitSize>
+                <cd:NativeType>uint8</cd:NativeType>
+              </cd:Integer>
+            </cd:Field>
+            <cd:Field name="applied_classification_method">
+              <cd:Integer>
+                <cd:Description>Method applied to derive the classification decision for this rangebin</cd:Description>
+                <cd:BitSize>8</cd:BitSize>
+                <cd:NativeType>uint8</cd:NativeType>
+              </cd:Integer>
+            </cd:Field>
+            <cd:Field name="spare">
+              <cd:Raw>
+                <cd:Description>Spare</cd:Description>
+                <cd:BitSize>8</cd:BitSize>
+              </cd:Raw>
+              <cd:Hidden/>
+            </cd:Field>
+          </cd:Record>
+        </cd:Array>
+      </cd:Field>
+      <cd:Field name="spare">
+        <cd:Raw>
+          <cd:Description>Spare</cd:Description>
+          <cd:BitSize>24</cd:BitSize>
+        </cd:Raw>
+        <cd:Hidden/>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="l2b_rayleigh_classification_qc">
+    <cd:Record>
+      <cd:Field name="l2b_rayleigh_meas_bin_classification">
+        <cd:Array>
+          <cd:Dimension>24</cd:Dimension>
+          <cd:Record>
+            <cd:Description>Structure describing QC parameters resulting from the Rayleigh Classification algorithm</cd:Description>
+            <cd:Field name="l2b_rayleigh_meas_bin_class_flags1">
+              <cd:Integer>
+                <cd:Description>First byte of 8 flags describing classification properties for the current Rayleigh measurement rangebin. Bit 1 (L2B_Rayl_Class_Cloud_Above) : a cloud was detected in a range bin higher than the current range bin, Bit 2 (L2B_Rayl_Class_Cloud) : this rangebin contains a cloud, Bit 3 (L2B_Rayl_Class_Maybe_Cloud) : this rangebin contains possibly a cloud, but the backscatter is close to the threshold, Bit 4 (L2B_Rayl_Class_Aerosol) : Mie backscatter is present, but it is not a cloud, Bit 5 (L2B_Rayl_Class_Precipitation) : Precipitation is present in this range bin, Bit 6 (L2B_Rayl_Class_No_Extinction) : No extinction is known for this range bin, Bit 7 (L2B_Rayl_Class_Unknown_Scatterer) : the value encountered in this rangebin for backscatter is unphysical for clouds, Bit 8 (L2B_Rayl_Class_Broken_Clouds) : this range bin contains a broken cloud layer (currently only used for Obs range bins)</cd:Description>
+                <cd:BitSize>8</cd:BitSize>
+                <cd:NativeType>uint8</cd:NativeType>
+              </cd:Integer>
+            </cd:Field>
+            <cd:Field name="l2b_rayleigh_meas_bin_class_flags2">
+              <cd:Integer>
+                <cd:Description>Second byte of 8 flags describing classification properties for the current Rayleigh measurement rangebin. Bit 1 (L2B_Rayl_Class_Convective_Clouds) : this range bin contains convective clouds, Bit 2 (L2B_Rayl_Class_No_Cloud_Detected) : Flag indicating that no cloud or aerosol was detected in this rangebin, Bit 3 (L2B_NWP_Data_Used) : Flag indicating that NWP data was used to determine the classification of this rangebin, Bit 4 : reserved (always set to 0), ..., Bit 8 : reserved (always set to 0)</cd:Description>
+                <cd:BitSize>8</cd:BitSize>
+                <cd:NativeType>uint8</cd:NativeType>
+              </cd:Integer>
+            </cd:Field>
+            <cd:Field name="backscatter_ratio">
+              <cd:Float>
+                <cd:Description>Backscatter ratio deduced for this rangebin</cd:Description>
+                <cd:BitSize>64</cd:BitSize>
+                <cd:NativeType>double</cd:NativeType>
+                <ct:NamedTest id="FloatIsFinite"/>
+              </cd:Float>
+            </cd:Field>
+            <cd:Field name="applied_scatratio_method">
+              <cd:Integer>
+                <cd:Description>Method applied to deduce Backscatter ratio for this rangebin</cd:Description>
+                <cd:BitSize>8</cd:BitSize>
+                <cd:NativeType>uint8</cd:NativeType>
+              </cd:Integer>
+            </cd:Field>
+            <cd:Field name="selected_mie_snr">
+              <cd:Float>
+                <cd:Description>Mie Signal-to-Noise ratio that was copied over from the matching Mie rangebin to this Rayleigh rangebin</cd:Description>
+                <cd:BitSize>64</cd:BitSize>
+                <cd:NativeType>double</cd:NativeType>
+                <ct:NamedTest id="FloatIsFinite"/>
+              </cd:Float>
+            </cd:Field>
+            <cd:Field name="applied_mie_snr_method">
+              <cd:Integer>
+                <cd:Description>Method applied to deduce the Mie SNR that was copied over from the matching Mie rangebin to this Rayleigh rangebin</cd:Description>
+                <cd:BitSize>8</cd:BitSize>
+                <cd:NativeType>uint8</cd:NativeType>
+              </cd:Integer>
+            </cd:Field>
+            <cd:Field name="applied_classification_method">
+              <cd:Integer>
+                <cd:Description>Method applied to derive the classification decision for this rangebin</cd:Description>
+                <cd:BitSize>8</cd:BitSize>
+                <cd:NativeType>uint8</cd:NativeType>
+              </cd:Integer>
+            </cd:Field>
+            <cd:Field name="spare">
+              <cd:Raw>
+                <cd:Description>Spare</cd:Description>
+                <cd:BitSize>8</cd:BitSize>
+              </cd:Raw>
+              <cd:Hidden/>
+            </cd:Field>
+          </cd:Record>
+        </cd:Array>
+      </cd:Field>
+      <cd:Field name="spare">
+        <cd:Raw>
+          <cd:Description>Spare</cd:Description>
+          <cd:BitSize>16</cd:BitSize>
+        </cd:Raw>
+        <cd:Hidden/>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="opt_prop_result">
+    <cd:Record>
+      <cd:Field name="opt_prop_meas_result">
+        <cd:Array>
+          <cd:Dimension>24</cd:Dimension>
+          <cd:Record>
+            <cd:Description>Structure describing the results of the iterative Optical properties algorithm for this measurement</cd:Description>
+            <cd:Field name="extinction_iterative">
+              <cd:Float>
+                <cd:Description>Aerosol extinction as determined by the iterative Optical Properties Algorithm</cd:Description>
+                <cd:Unit>1/m</cd:Unit>
+                <cd:BitSize>64</cd:BitSize>
+                <cd:NativeType>double</cd:NativeType>
+                <ct:NamedTest id="FloatIsFinite"/>
+              </cd:Float>
+            </cd:Field>
+            <cd:Field name="scattering_ratio_iterative">
+              <cd:Float>
+                <cd:Description>Scattering ratio as determined by the iterative Optical Properties Algorithm</cd:Description>
+                <cd:BitSize>64</cd:BitSize>
+                <cd:NativeType>double</cd:NativeType>
+                <ct:NamedTest id="FloatIsFinite"/>
+              </cd:Float>
+            </cd:Field>
+            <cd:Field name="xtalk_detected">
+              <cd:Integer>
+                <cd:Description>Switch to indicate if cross talk was detected or not by the iterative Optical Properties Algorithm</cd:Description>
+                <cd:BitSize>8</cd:BitSize>
+                <cd:NativeType>uint8</cd:NativeType>
+              </cd:Integer>
+            </cd:Field>
+            <cd:Field name="layer_top">
+              <cd:Integer>
+                <cd:Description>Top of the cloud layer detected by the iterative Optical Properties Algorithm</cd:Description>
+                <cd:Unit>m</cd:Unit>
+                <cd:BitSize>32</cd:BitSize>
+                <cd:NativeType>int32</cd:NativeType>
+              </cd:Integer>
+            </cd:Field>
+            <cd:Field name="layer_bottom">
+              <cd:Integer>
+                <cd:Description>Bottom of the cloud layer detected by the iterative Optical Properties Algorithm</cd:Description>
+                <cd:Unit>m</cd:Unit>
+                <cd:BitSize>32</cd:BitSize>
+                <cd:NativeType>int32</cd:NativeType>
+              </cd:Integer>
+            </cd:Field>
+            <cd:Field name="layer_method">
+              <cd:Integer>
+                <cd:Description>Method used by the iterative Optical Properties Algorithm to determine the cloud layer. -1 = Layer Method Undefined; 1 = Layer Method partial bin; 2 = Layer Method filled bins</cd:Description>
+                <cd:BitSize>8</cd:BitSize>
+                <cd:NativeType>int8</cd:NativeType>
+              </cd:Integer>
+            </cd:Field>
+            <cd:Field name="spare">
+              <cd:Raw>
+                <cd:Description>Spare</cd:Description>
+                <cd:BitSize>8</cd:BitSize>
+              </cd:Raw>
+              <cd:Hidden/>
+            </cd:Field>
+          </cd:Record>
+        </cd:Array>
+      </cd:Field>
+      <cd:Field name="spare">
+        <cd:Raw>
+          <cd:Description>Spare</cd:Description>
+          <cd:BitSize>40</cd:BitSize>
+        </cd:Raw>
+        <cd:Hidden/>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="spare">
+    <cd:Raw>
+      <cd:Description>Spare</cd:Description>
+      <cd:BitSize>160</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+</cd:Record>

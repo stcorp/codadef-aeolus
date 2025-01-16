@@ -1,0 +1,381 @@
+<?xml version="1.0"?>
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="xml" last-modified="2025-01-13" name="Specific_Product_Header_Level2B_03_96" namexml="Specific_Product_Header">
+  <cd:Description>Specific Product Header for ALD Level 2B products</cd:Description>
+  <cd:Field name="Sph_Descriptor">
+    <cd:Text namexml="Sph_Descriptor">
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="DOI">
+    <cd:Text namexml="DOI">
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="Spare_1">
+    <cd:Hidden/>
+    <cd:Text namexml="Spare_1">
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="NumMeasurements">
+    <cd:Type namexml="NumMeasurements">
+      <cd:Integer format="ascii">
+        <cd:Description>Number of L1B measurements used in the product</cd:Description>
+        <cd:NativeType>uint32</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="NumMieGroups">
+    <cd:Type namexml="NumMieGroups">
+      <cd:Integer format="ascii">
+        <cd:Description>Number of measurement groups generated for the Mie channel</cd:Description>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="NumRayleighGroups">
+    <cd:Type namexml="NumRayleighGroups">
+      <cd:Integer format="ascii">
+        <cd:Description>Number of measurement groups generated for the Rayleigh channel</cd:Description>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="NumBRCs">
+    <cd:Type namexml="NumBRCs">
+      <cd:Integer format="ascii">
+        <cd:Description>Number of L1B BRC’s that have been selected for L2B processing (this may differ from the number available in the input file due to the time window that can be applied in the JobOrder file.)</cd:Description>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="NumMieWindResults">
+    <cd:Type namexml="NumMieWindResults">
+      <cd:Integer format="ascii">
+        <cd:Description>Number of Mie channel wind retrievals performed on accumulated measurement data</cd:Description>
+        <cd:NativeType>uint32</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="NumRayleighWindResults">
+    <cd:Type namexml="NumRayleighWindResults">
+      <cd:Integer format="ascii">
+        <cd:Description>Number of Rayleigh channel wind retrievals performed on accumulated measurement data</cd:Description>
+        <cd:NativeType>uint32</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="NumMieProfiles">
+    <cd:Type namexml="NumMieProfiles">
+      <cd:Integer format="ascii">
+        <cd:Description>Number of Mie channel wind profiles generated from the individual wind retrievals</cd:Description>
+        <cd:NativeType>uint32</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="NumRayleighProfiles">
+    <cd:Type namexml="NumRayleighProfiles">
+      <cd:Integer format="ascii">
+        <cd:Description>Number of Rayleigh channel wind profiles generated from the individual wind retrievals</cd:Description>
+        <cd:NativeType>uint32</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="NumAMDprofiles">
+    <cd:Type namexml="NumAMDprofiles">
+      <cd:Integer format="ascii">
+        <cd:Description>Number of AMD profiles presented to the L2B processing stage</cd:Description>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="NumFreqIntRef">
+    <cd:Type namexml="NumFreqIntRef">
+      <cd:Integer format="ascii">
+        <cd:Description>Number of frequncies reported for the Mie Non-linearity correction for the
+          internal reference processing array as reported in the Copied Calibration and AUX_PAR_2B
+          Annotation Data Set</cd:Description>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="NumFreqAtmPath">
+    <cd:Type namexml="NumFreqAtmPath">
+      <cd:Integer format="ascii">
+        <cd:Description>Number of frequncies reported for the Mie Non-linearity correction for the
+          atmospheric path processing array as reported in the Copied Calibration and AUX_PAR_2B
+          Annotation Data Set</cd:Description>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="First_Processed_L1B_BRC">
+    <cd:Type namexml="First_Processed_L1B_BRC">
+      <cd:Integer format="ascii">
+        <cd:Description>Index of first L1B BRC that was processed by the L2BP</cd:Description>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Last_Processed_L1B_BRC">
+    <cd:Type namexml="Last_Processed_L1B_BRC">
+      <cd:Integer format="ascii">
+        <cd:Description>Index of last L1B BRC that was processed by the L2BP</cd:Description>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Total_Num_L1B_BRCs">
+    <cd:Type namexml="Total_Num_L1B_BRCs">
+      <cd:Integer format="ascii">
+        <cd:Description>Total number of L1B BRCs that have been processed by the L2BP</cd:Description>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Intersect_Start_Lat">
+    <cd:Type namexml="Intersect_Start_Lat">
+      <cd:Attribute name="unit">
+        <cd:Optional/>
+        <cd:FixedValue>10-6DegN</cd:FixedValue>
+      </cd:Attribute>
+      <cd:Integer format="ascii">
+        <cd:Description>Latitude of the intersection of WGS84 DEM and the satellite line-of-sight for the first measurement (first measurement centroid time of the first BRC)</cd:Description>
+        <cd:Unit>1e-6 degrees_north</cd:Unit>
+        <cd:Conversion denominator="1000000.000000" numerator="1.000000">
+          <cd:Unit>degrees_north</cd:Unit>
+        </cd:Conversion>
+        <cd:NativeType>int32</cd:NativeType>
+        <ct:NamedTest id="RangeLatitude6"/>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Intersect_Start_Long">
+    <cd:Type namexml="Intersect_Start_Long">
+      <cd:Attribute name="unit">
+        <cd:Optional/>
+        <cd:FixedValue>10-6DegE</cd:FixedValue>
+      </cd:Attribute>
+      <cd:Integer format="ascii">
+        <cd:Description>Longitude of the intersection of WGS84 DEM and the satellite line-of-sight for the first measurement (first measurement centroid time of the first BRC)</cd:Description>
+        <cd:Unit>1e-6 degrees_east</cd:Unit>
+        <cd:Conversion denominator="1000000.000000" numerator="1.000000">
+          <cd:Unit>degrees_east</cd:Unit>
+        </cd:Conversion>
+        <cd:NativeType>int32</cd:NativeType>
+        <ct:NamedTest id="RangeLongitude6"/>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Intersect_Stop_Lat">
+    <cd:Type namexml="Intersect_Stop_Lat">
+      <cd:Attribute name="unit">
+        <cd:Optional/>
+        <cd:FixedValue>10-6DegN</cd:FixedValue>
+      </cd:Attribute>
+      <cd:Integer format="ascii">
+        <cd:Description>Latitude of the intersection of WGS84 DEM and the satellite line-of-sight for the last measurement (last measurement centroid time of the last BRC)</cd:Description>
+        <cd:Unit>1e-6 degrees_north</cd:Unit>
+        <cd:Conversion denominator="1000000.000000" numerator="1.000000">
+          <cd:Unit>degrees_north</cd:Unit>
+        </cd:Conversion>
+        <cd:NativeType>int32</cd:NativeType>
+        <ct:NamedTest id="RangeLatitude6"/>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Intersect_Stop_Long">
+    <cd:Type namexml="Intersect_Stop_Long">
+      <cd:Attribute name="unit">
+        <cd:Optional/>
+        <cd:FixedValue>10-6DegE</cd:FixedValue>
+      </cd:Attribute>
+      <cd:Integer format="ascii">
+        <cd:Description>Longitude of the intersection of WGS84 DEM and the satellite line-of-sight for the last measurement (last measurement centroid time of the last BRC)</cd:Description>
+        <cd:Unit>1e-6 degrees_east</cd:Unit>
+        <cd:Conversion denominator="1000000.000000" numerator="1.000000">
+          <cd:Unit>degrees_east</cd:Unit>
+        </cd:Conversion>
+        <cd:NativeType>int32</cd:NativeType>
+        <ct:NamedTest id="RangeLongitude6"/>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Sat_Track">
+    <cd:Type namexml="Sat_Track">
+      <cd:Attribute name="unit">
+        <cd:Optional/>
+        <cd:FixedValue>deg</cd:FixedValue>
+      </cd:Attribute>
+      <cd:Float format="ascii">
+        <cd:Description>Sub-satellite heading at the sensing start time in the MPH</cd:Description>
+        <cd:Unit>degrees</cd:Unit>
+        <cd:NativeType>double</cd:NativeType>
+        <ct:NamedTest id="FloatIsFinite"/>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Spare_2">
+    <cd:Hidden/>
+    <cd:Text namexml="Spare_2">
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="List_of_Valid_Mie_Profile_Counts">
+    <cd:Record namexml="List_of_Valid_Mie_Profile_Counts">
+      <cd:Attribute name="count"/>
+      <cd:Field name="Valid_Mie_Profile_Count">
+        <cd:NamedType id="Level_2BC_Count_Type_XML_03_30"/>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="List_of_Valid_Rayleigh_Profiles_Counts">
+    <cd:Record namexml="List_of_Valid_Rayleigh_Profile_Counts">
+      <cd:Attribute name="count"/>
+      <cd:Field name="Valid_Rayleigh_Profile_Count">
+        <cd:NamedType id="Level_2BC_Count_Type_XML_03_30"/>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="List_of_Invalid_Mie_Profile_Counts">
+    <cd:Record namexml="List_of_Invalid_Mie_Profile_Counts">
+      <cd:Attribute name="count"/>
+      <cd:Field name="Invalid_Mie_Profile_Count">
+        <cd:NamedType id="Level_2BC_Count_Type_XML_03_30"/>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="List_of_Invalid_Rayleigh_Profile_Counts">
+    <cd:Record namexml="List_of_Invalid_Rayleigh_Profile_Counts">
+      <cd:Attribute name="count"/>
+      <cd:Field name="Invalid_Rayleigh_Profile_Count">
+        <cd:NamedType id="Level_2BC_Count_Type_XML_03_30"/>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="Num_Profiles_Surface_Mie">
+    <cd:Type namexml="Num_Profiles_Surface_Mie">
+      <cd:Integer format="ascii">
+        <cd:Description>Number of Mie profiles reported in L2B extending down to the surface</cd:Description>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Num_Profiles_Surface_Ray">
+    <cd:Type namexml="Num_Profiles_Surface_Ray">
+      <cd:Integer format="ascii">
+        <cd:Description>Number of Rayleigh profiles reported in L2B extending down to the surface</cd:Description>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="List_of_Valid_L2B_Mie_Wind_Counts">
+    <cd:Record namexml="List_of_Valid_L2B_Mie_Wind_Counts">
+      <cd:Attribute name="count"/>
+      <cd:Field name="Valid_L2B_Mie_Wind_Count">
+        <cd:NamedType id="Level_2BC_Count_Type_XML_03_30"/>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="List_of_Valid_L2B_Rayleigh_Wind_Counts">
+    <cd:Record namexml="List_of_Valid_L2B_Rayleigh_Wind_Counts">
+      <cd:Attribute name="count"/>
+      <cd:Field name="Valid_L2B_Rayleigh_Wind_Count">
+        <cd:NamedType id="Level_2BC_Count_Type_XML_03_30"/>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="List_of_Invalid_L2B_Mie_Wind_Counts">
+    <cd:Record namexml="List_of_Invalid_L2B_Mie_Wind_Counts">
+      <cd:Attribute name="count"/>
+      <cd:Field name="Invalid_L2B_Mie_Wind_Count">
+        <cd:NamedType id="Level_2BC_Count_Type_XML_03_30"/>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="List_of_Invalid_L2B_Rayleigh_Wind_Counts">
+    <cd:Record namexml="List_of_Invalid_L2B_Rayleigh_Wind_Counts">
+      <cd:Attribute name="count"/>
+      <cd:Field name="Invalid_L2B_Rayleigh_Wind_Count">
+        <cd:NamedType id="Level_2BC_Count_Type_XML_03_30"/>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="Spare_3">
+    <cd:Hidden/>
+    <cd:Text namexml="Spare_3">
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="List_of_O_min_B_Mie_Results">
+    <cd:Record namexml="List_of_O_min_B_Mie_Results">
+      <cd:Attribute name="count"/>
+      <cd:Field name="O_min_B_Mie_Result">
+        <cd:Array>
+          <cd:Dimension>5</cd:Dimension>
+          <cd:Record namexml="O_min_B_Mie_Result">
+            <cd:Field name="Comment">
+              <cd:Text>
+                <cd:Description>Comment describing what data Comment (channel, classification) was used for deriving this O-B result</cd:Description>
+                <cd:NativeType>string</cd:NativeType>
+              </cd:Text>
+            </cd:Field>
+            <cd:Field name="All">
+              <cd:NamedType id="Level_2BC_O_min_B_Result_XML"/>
+            </cd:Field>
+            <cd:Field name="List_of_Bins">
+              <cd:Record>
+                <cd:Attribute name="count"/>
+                <cd:Field name="Bin">
+                  <cd:Array>
+                    <cd:Dimension>24</cd:Dimension>
+                    <cd:NamedType id="Level_2BC_O_min_B_Result_XML"/>
+                    <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                  </cd:Array>
+                </cd:Field>
+              </cd:Record>
+            </cd:Field>
+          </cd:Record>
+          <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+        </cd:Array>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="List_of_O_min_B_Rayleigh_Results">
+    <cd:Record namexml="List_of_O_min_B_Rayleigh_Results">
+      <cd:Attribute name="count"/>
+      <cd:Field name="O_min_B_Rayleigh_Result">
+        <cd:Array>
+          <cd:Dimension>5</cd:Dimension>
+          <cd:Record namexml="O_min_B_Rayleigh_Result">
+            <cd:Field name="Comment">
+              <cd:Text>
+                <cd:Description>Comment describing what data Comment (channel, classification) was used for deriving this O-B result</cd:Description>
+                <cd:NativeType>string</cd:NativeType>
+              </cd:Text>
+            </cd:Field>
+            <cd:Field name="All">
+              <cd:NamedType id="Level_2BC_O_min_B_Result_XML"/>
+            </cd:Field>
+            <cd:Field name="List_of_Bins">
+              <cd:Record>
+                <cd:Attribute name="count"/>
+                <cd:Field name="Bin">
+                  <cd:Array>
+                    <cd:Dimension>24</cd:Dimension>
+                    <cd:NamedType id="Level_2BC_O_min_B_Result_XML"/>
+                    <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                  </cd:Array>
+                </cd:Field>
+              </cd:Record>
+            </cd:Field>
+          </cd:Record>
+          <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+        </cd:Array>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="Spare_5">
+    <cd:Hidden/>
+    <cd:Text namexml="Spare_5">
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="List_of_Dsds">
+    <cd:NamedType id="List_of_Dsds"/>
+  </cd:Field>
+</cd:Record>

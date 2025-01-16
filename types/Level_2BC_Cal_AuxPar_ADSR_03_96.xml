@@ -1,0 +1,304 @@
+<?xml version="1.0"?>
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07"
+  xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="binary" last-modified="2025-01-13"
+  name="Level_2BC_Cal_AuxPar_ADSR_03_96">
+  <cd:Field name="start_of_observation_datetime">
+    <cd:Time timeformat="binary_envisat_datetime">
+      <cd:Description>Date and time of first measurement used for this L2B or L2C product</cd:Description>
+      <ct:NamedTest id="RangeSecond" path="seconds" />
+      <ct:NamedTest id="RangeMicroSecond" path="microseconds" />
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="spare_1">
+    <cd:Text>
+      <cd:Description>Spare</cd:Description>
+      <cd:ByteSize>4</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden />
+  </cd:Field>
+  <cd:Field name="mie_algo_params">
+    <cd:Record>
+      <cd:Description> Structure containing the calibration values and algorithm parameters as
+        used by the Mie wind retrievalFitting_ValFlag algorithm. </cd:Description>
+      <cd:Field name="enforce_fixed_intref_peakPos">
+        <cd:Integer>
+          <cd:Description>If set to True then a fixed value was used for the peak position
+            for the internal reference wind by the Mie processing algorithm. This value
+            is copied from the AUX_PAR_2B file. </cd:Description>
+          <cd:BitSize>8</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="fixed_intref_peakpos_value">
+        <cd:Float>
+          <cd:Description>In case Enforce_Fixed_IntRef_PeakPos is set to true, then this
+            value will be used to fill the peak position for the internal reference wind
+            by the Mie processing algorithm. This value is copied from the AUX_PAR_2B
+            file.</cd:Description>
+          <cd:Unit>ACCD pixel index</cd:Unit>
+          <cd:BitSize>64</cd:BitSize>
+          <cd:NativeType>double</cd:NativeType>
+          <ct:NamedTest id="FloatIsFinite" />
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="override_slope_intercept_intref">
+        <cd:Integer>
+          <cd:Description> In case Enforce_Fixed_IntRef_PeakPos is set to true, then this value will
+            be used to fill the peak position for the internal reference wind by the Mie processing
+            algorithm. This value is copied from the AUX_PAR_2B file.</cd:Description>
+          <cd:BitSize>8</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="mie_slope_intref">
+        <cd:Float>
+          <cd:Description> Slope to use to calculate the internal reference Mie wind in case
+            Override_Slope_Intercept_IntRef is set to True. This value is copied from the
+            AUX_PAR_2B file.</cd:Description>
+          <cd:Unit>ACCD pixel index</cd:Unit>
+          <cd:BitSize>64</cd:BitSize>
+          <cd:NativeType>double</cd:NativeType>
+          <ct:NamedTest id="FloatIsFinite" />
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="mie_intercept_intref">
+        <cd:Float>
+          <cd:Description> Intercept to use to calculate the internal reference Mie wind in
+            case Override_Slope_Intercept_IntRef is set to True. This value is copied from the
+            AUX_PAR_2B file.</cd:Description>
+          <cd:Unit>ACCD pixel index</cd:Unit>
+          <cd:BitSize>64</cd:BitSize>
+          <cd:NativeType>double</cd:NativeType>
+          <ct:NamedTest id="FloatIsFinite" />
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="mie_slope_intercept_src_intref">
+        <cd:Integer>
+          <cd:Description> actual source was for the above defined Mie_Slope_IntRef and
+            Mie_Intercept_IntRef values.</cd:Description>
+          <cd:BitSize>8</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="override_slope_intercept_atmpath">
+        <cd:Integer>
+          <cd:Description> If set to True then the slope and intercept to calculate the atmospheric
+            path Mie wind will be taken from the AUX_PAR_2B file in stead of from the L1B product.
+            Note that the values from the optional AUX_MRC_1B input file will take priority in case
+            that one is used. This value is copied from the AUX_PAR_2B file.</cd:Description>
+          <cd:NativeType>uint8</cd:NativeType>
+          <cd:BitSize>8</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="mie_slope_atmpath">
+        <cd:Float>
+          <cd:Description> Intercept to use to calculate the atmospheric path Mie wind in case
+            Override_Slope_Intercept_AtmPath is set to True. This value is copied from the
+            AUX_PAR_2B file.</cd:Description>
+          <cd:Unit>ACCD pixel index/GHz</cd:Unit>
+          <cd:BitSize>64</cd:BitSize>
+          <cd:NativeType>double</cd:NativeType>
+          <ct:NamedTest id="FloatIsFinite" />
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="mie_intercept_atmpath">
+        <cd:Float>
+          <cd:Description> Intercept to use to calculate the atmospheric path Mie wind in case
+            Override_Slope_Intercept_AtmPath is set to True. This value is copied from the
+            AUX_PAR_2B file.</cd:Description>
+          <cd:Unit>ACCD pixel index</cd:Unit>
+          <cd:BitSize>64</cd:BitSize>
+          <cd:NativeType>double</cd:NativeType>
+          <ct:NamedTest id="FloatIsFinite" />
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="mie_slope_intercept_src_atmpath">
+        <cd:Integer>
+          <cd:Description> This parameter describes what the actual source was for the above defined
+            Mie_Slope_AtmPath and Mie_Intercept_AtmPath values.</cd:Description>
+          <cd:BitSize>8</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="spare_2">
+        <cd:Text>
+          <cd:Description>Spare</cd:Description>
+          <cd:ByteSize>6</cd:ByteSize>
+          <cd:NativeType>string</cd:NativeType>
+        </cd:Text>
+        <cd:Hidden />
+      </cd:Field>
+      <cd:Field name="use_fitted_nonlinear_correction">
+        <cd:Integer>
+          <cd:Description> If set to True then the L2BP will use the fitted Mie nonlinear correction
+            table from the L1B product in stead of the regular table. This fitted table is defined
+            in the AUX_PAR_1B file as used by the L1B processor. This value is copied from the
+            AUX_PAR_2B file</cd:Description>
+          <cd:BitSize>8</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="override_fitted_nl_corr_int_ref">
+        <cd:Integer>
+          <cd:Description> If set to True then the L2BP will use the NWP based Mie nonlinear
+            correction
+            table as defined in the AUX_PAR_2B file for the internal reference calculation.. This
+            overrides the values given in the L1B product. But note that using the optional
+            AUX_MRC_1B input file for the L2BP has priority and will in turn override this current
+            setting. This value is copied from the AUX_PAR_2B file.</cd:Description>
+          <cd:BitSize>8</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="pixel_position_int_ref">
+        <cd:Array>
+          <cd:Description> An array of values defining the pixel positions on which the Mie
+            nonlinear
+            correction for the internal reference is defined. This array has length NumFreqIntRef
+            which value is defined in the SPH header</cd:Description>
+          <!-- <cd:Dimension>65</cd:Dimension> -->
+          <cd:Dimension><![CDATA[int(/sph/NumFreqIntRefprofiles)]]></cd:Dimension>
+          <cd:Float>
+            <cd:BitSize>64</cd:BitSize>
+            <cd:NativeType>double</cd:NativeType>
+            <ct:NamedTest id="FloatIsFinite" />
+          </cd:Float>
+        </cd:Array>
+      </cd:Field>
+      <cd:Field name="fitted_mie_nl_corr_int_ref">
+        <cd:Array>
+          <cd:Description> An array of values defining the Mie nonlinear correction for the internal
+            reference. This array has length NumFreqIntRef which value is defined in the SPH header</cd:Description>
+          <!-- <cd:Dimension>65</cd:Dimension> -->
+          <cd:Dimension><![CDATA[int(/sph/NumFreqIntRefprofiles)]]></cd:Dimension>
+          <cd:Float>
+            <cd:BitSize>64</cd:BitSize>
+            <cd:NativeType>double</cd:NativeType>
+            <ct:NamedTest id="FloatIsFinite" />
+          </cd:Float>
+        </cd:Array>
+      </cd:Field>
+      <cd:Field name="mie_nonlin_source_intref">
+        <cd:Integer>
+          <cd:Description> This parameter describes what the actual source was for the above defined
+            Pixel_Position_IntRef and Fitted_Mie_NL_Corr_IntRef values.</cd:Description>
+          <cd:BitSize>8</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="override_fitted_nl_corr_arm_path">
+        <cd:Integer>
+          <cd:Description>If set to True then the L2BP will use the NWP based Mie nonlinear
+            correction
+            table as defined in the AUX_PAR_2B file for the atmospheric path calculation. This
+            overrides the values given in the L1B product. But note that using the optional
+            AUX_MRC_1B input file for the L2BP has priority and will in turn override this current
+            setting.
+          </cd:Description>
+          <cd:BitSize>8</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="pixel_position_atm_path">
+        <cd:Array>
+          <cd:Description>
+            An array of values defining the pixel positions on which the Mie nonlinear correction
+            for the atmospheric path is defined. This array has length NumFreqAtmPath which value
+            is defined in the SPH header </cd:Description>
+          <!-- <cd:Dimension>65</cd:Dimension> -->
+          <cd:Dimension><![CDATA[int(/sph/NumFreqAtmPath)]]></cd:Dimension>
+          <cd:Float>
+            <cd:BitSize>64</cd:BitSize>
+            <cd:NativeType>double</cd:NativeType>
+            <ct:NamedTest id="FloatIsFinite" />
+          </cd:Float>
+        </cd:Array>
+      </cd:Field>
+      <cd:Field name="fitted_mie_nl_corr_arm_path">
+        <cd:Array>
+          <cd:Description> An array of values defining the Mie nonlinear correction for the
+            atmospheric path. This array has length NumFreqAtmPath which value is defined in the
+            SPH header</cd:Description>
+          <!-- <cd:Dimension>65</cd:Dimension> -->
+          <cd:Dimension><![CDATA[int(/sph/NumFreqAtmPath)]]></cd:Dimension>
+          <cd:Float>
+            <cd:BitSize>64</cd:BitSize>
+            <cd:NativeType>double</cd:NativeType>
+            <ct:NamedTest id="FloatIsFinite" />
+          </cd:Float>
+        </cd:Array>
+      </cd:Field>
+      <cd:Field name="mie_nonlin_source_atmpath">
+        <cd:Integer>
+          <cd:Description> This parameter describes what the actual source was for the above
+            defined
+            Pixel_Position_AtmPath and Fitted_Mie_NL_Corr_AtmPath values.</cd:Description>
+          <cd:BitSize>8</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="rbc_algo_params">
+    <cd:Record>
+      <cd:Description> Structure containing the calibration values and algorithm parameters as used
+        by the Rayleigh wind retrieval algorithm </cd:Description>
+      <cd:Field name="rr_ref_method">
+        <cd:Integer>
+          <cd:Description> Method for calculating the reference Rayleigh response. This value is
+            copied from the AUX_PAR_2B file.</cd:Description>
+          <cd:BitSize>8</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="spare_3">
+        <cd:Text>
+          <cd:Description>Spare</cd:Description>
+          <cd:ByteSize>7</cd:ByteSize>
+          <cd:NativeType>string</cd:NativeType>
+        </cd:Text>
+        <cd:Hidden />
+      </cd:Field>
+      <cd:Field name="fixed_rr_intref_value">
+        <cd:Float>
+          <cd:Description> Constant value used to define the reference Rayleigh Response in case the
+            RR_Ref_Method is set to RR_Ref_Fixed_Method</cd:Description>
+          <cd:BitSize>64</cd:BitSize>
+          <cd:NativeType>double</cd:NativeType>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="mierespfreq_to_rr_offset">
+        <cd:Float>
+          <cd:Description> Offset value used to calculate the reference Rayleigh response value
+            based
+            on the observed Mie response frequency in case the RR_Ref_Method is set to
+            RR_Ref_from_MieEmitFreq_Method</cd:Description>
+          <cd:BitSize>64</cd:BitSize>
+          <cd:NativeType>double</cd:NativeType>
+          <cd:Unit>GHz</cd:Unit>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="mierespfreq_to_rr_slope">
+        <cd:Float>
+          <cd:Description>Slope value used to calculate the reference Rayleigh response value based
+            on the observed Mie response frequency in case the RR_Ref_Method is set to
+            RR_Ref_from_MieEmitFreq_Method</cd:Description>
+          <cd:Unit>1/GHz</cd:Unit>
+          <cd:BitSize>64</cd:BitSize>
+          <cd:NativeType>double</cd:NativeType>
+        </cd:Float>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="spare_4">
+    <cd:Text>
+      <cd:Description>Spare</cd:Description>
+      <cd:ByteSize>8</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden />
+  </cd:Field>
+</cd:Record>

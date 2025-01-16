@@ -1,0 +1,98 @@
+<cd:Array xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="ascii" last-modified="2025-01-13" name="Level_2BC_Count_Type_KVT_03_96">
+  <cd:Dimension>5</cd:Dimension>
+  <cd:Record>
+    <cd:Field name="Comment_title">
+      <cd:Text>
+        <cd:Description>COMMENT=</cd:Description>
+        <cd:FixedValue>COMMENT=</cd:FixedValue>
+        <cd:ByteSize>8</cd:ByteSize>
+        <cd:NativeType>string</cd:NativeType>
+      </cd:Text>
+      <cd:Hidden/>
+    </cd:Field>
+    <cd:Field name="quote_1">
+      <cd:Text>
+        <cd:Description>quotation mark</cd:Description>
+        <cd:FixedValue>"</cd:FixedValue>
+        <cd:ByteSize>1</cd:ByteSize>
+        <cd:NativeType>char</cd:NativeType>
+      </cd:Text>
+      <cd:Hidden/>
+    </cd:Field>
+    <cd:Field name="Comment">
+      <cd:Text>
+        <cd:Description>Comment describing what data (channel, classification) was used for deriving this count result</cd:Description>
+        <cd:ByteSize>50</cd:ByteSize>
+        <cd:NativeType>string</cd:NativeType>
+      </cd:Text>
+    </cd:Field>
+    <cd:Field name="quote_2">
+      <cd:Text>
+        <cd:Description>quotation mark</cd:Description>
+        <cd:FixedValue>"</cd:FixedValue>
+        <cd:ByteSize>1</cd:ByteSize>
+        <cd:NativeType>char</cd:NativeType>
+      </cd:Text>
+      <cd:Hidden/>
+    </cd:Field>
+    <cd:Field name="newline_char_1">
+      <cd:Text>
+        <cd:Description>newline</cd:Description>
+        <cd:FixedValue>\n</cd:FixedValue>
+        <cd:ByteSize>1</cd:ByteSize>
+        <cd:NativeType>char</cd:NativeType>
+      </cd:Text>
+      <cd:Hidden/>
+    </cd:Field>
+    <cd:Field name="classification_type_title">
+      <cd:Text>
+        <cd:Description>CLASSIFICATION_TYPE=</cd:Description>
+        <cd:FixedValue>CLASSIFICATION_TYPE=</cd:FixedValue>
+        <cd:ByteSize>20</cd:ByteSize>
+        <cd:NativeType>string</cd:NativeType>
+      </cd:Text>
+      <cd:Hidden/>
+    </cd:Field>
+    <cd:Field name="classification_type">
+      <cd:Integer format="ascii">
+        <cd:Description>Classification type for which the current counts are reported</cd:Description>
+        <cd:ByteSize>4</cd:ByteSize>
+        <cd:NativeType>uint8</cd:NativeType>
+      </cd:Integer>
+    </cd:Field>
+    <cd:Field name="newline_char_2">
+      <cd:Text>
+        <cd:Description>newline</cd:Description>
+        <cd:FixedValue>\n</cd:FixedValue>
+        <cd:ByteSize>1</cd:ByteSize>
+        <cd:NativeType>char</cd:NativeType>
+      </cd:Text>
+      <cd:Hidden/>
+    </cd:Field>
+    <cd:Field name="count_title">
+      <cd:Text>
+        <cd:Description>COUNT=</cd:Description>
+        <cd:FixedValue>COUNT=</cd:FixedValue>
+        <cd:ByteSize>6</cd:ByteSize>
+        <cd:NativeType>string</cd:NativeType>
+      </cd:Text>
+      <cd:Hidden/>
+    </cd:Field>
+    <cd:Field name="count">
+      <cd:Integer format="ascii">
+        <cd:Description>Count of the amount of winds or profiles reported for the current classification type</cd:Description>
+        <cd:ByteSize>11</cd:ByteSize>
+        <cd:NativeType>uint32</cd:NativeType>
+      </cd:Integer>
+    </cd:Field>
+    <cd:Field name="newline_char_3">
+      <cd:Text>
+        <cd:Description>newline</cd:Description>
+        <cd:FixedValue>\n</cd:FixedValue>
+        <cd:ByteSize>1</cd:ByteSize>
+        <cd:NativeType>char</cd:NativeType>
+      </cd:Text>
+      <cd:Hidden/>
+    </cd:Field>
+  </cd:Record>
+</cd:Array>
