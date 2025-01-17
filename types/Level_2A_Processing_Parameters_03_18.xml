@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07"
-  xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" name="Level_2A_Processing_Parameters_03_18" format="xml" namexml="Level_2A_Processing_Parameters" last-modified="2025-01-14">
+  xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" name="Level_2A_Processing_Parameters_03_18"
+  format="xml" namexml="Level_2A_Processing_Parameters" last-modified="2025-01-14">
   <cd:Field name="List_of_Data_Set_Records">
     <cd:Record namexml="List_of_Data_Set_Records">
       <cd:Description>List of Data Set Records</cd:Description>
@@ -1968,6 +1969,46 @@
                         </cd:Field>
                       </cd:Record>
                     </cd:Field>
+                    <cd:Field name="Quality_Flag_Attenuated_Backscatters">
+                      <cd:Record namexml="Quality_Flag_Attenuated_Backscatters">
+                        <cd:Field name="Mie_Snr_Measurement_Threshold">
+                          <cd:Type namexml="Mie_Snr_Measurement_Threshold">
+                            <cd:Float format="ascii">
+                              <cd:Description>Value of the Mie_Snr_Measurement_Threshold</cd:Description>
+                              <cd:NativeType>double</cd:NativeType>
+                            </cd:Float>
+                          </cd:Type>
+                        </cd:Field>
+                        <cd:Field name="Rayleigh_Snr_Measurement_Threshold">
+                          <cd:Type namexml="Rayleigh_Snr_Measurement_Threshold">
+                            <cd:Float format="ascii">
+                              <cd:Description>Value of the Rayleigh_Snr_Measurement_Threshold</cd:Description>
+                              <cd:NativeType>double</cd:NativeType>
+                            </cd:Float>
+                          </cd:Type>
+                        </cd:Field>
+                        <cd:Field name="Molecular_Signal_Error_Bar_Threshold">
+                          <cd:Type namexml="Molecular_Signal_Error_Bar_Threshold">
+                            <cd:Attribute name="unit" />
+                            <cd:Float format="ascii">
+                              <cd:Description>Value of Molecular_Signal_Error_Bar_Threshold</cd:Description>
+                              <cd:NativeType>double</cd:NativeType>
+                              <cd:Unit>m^-1 sr^-1</cd:Unit>
+                            </cd:Float>
+                          </cd:Type>
+                        </cd:Field>
+                        <cd:Field name="Particulate_Signal_Error_Bar_Threshold">
+                          <cd:Type namexml="Particulate_Signal_Error_Bar_Threshold">
+                            <cd:Attribute name="unit" />
+                            <cd:Float format="ascii">
+                              <cd:Description>Value of Particulate_Signal_Error_Bar_Threshold</cd:Description>
+                              <cd:NativeType>double</cd:NativeType>
+                              <cd:Unit>m^-1 sr^-1</cd:Unit>
+                            </cd:Float>
+                          </cd:Type>
+                        </cd:Field>
+                      </cd:Record>
+                    </cd:Field>
                   </cd:Record>
                 </cd:Field>
                 <cd:Field name="AEL_LSR">
@@ -1991,119 +2032,6 @@
                     <cd:Field name="Multiplier_Stephens">
                       <cd:Type namexml="Multiplier_Stephens">
                         <cd:Float format="ascii">
-                          <cd:Description>Coefficient from Stephens 1994 book applied for molecular correction above any pressure level in Atmosphere</cd:Description>
-                          <cd:NativeType>double</cd:NativeType>
-                        </cd:Float>
-                      </cd:Type>
-                    </cd:Field>
-                    <cd:Field name="Coef_Wavelength">
-                      <cd:Type namexml="Coef_Wavelength">
-                        <cd:Float format="ascii">
-                          <cd:Description>Multiplier of wavelenength parameter for molecular equation from Stephens 1994 book applied for molecular Correction above any pressure level in atmosphere</cd:Description>
-                          <cd:NativeType>double</cd:NativeType>
-                        </cd:Float>
-                      </cd:Type>
-                    </cd:Field>
-                    <cd:Field name="Angle_Aeolus_Ref">
-                      <cd:Type namexml="Angle_Aeolus_Ref">
-                        <cd:Float format="ascii">
-                          <cd:Description>Wavelength-related coefficient for Stephens 1994 formula that alleviates the molecular correction difference for Atmospheric column we consider</cd:Description>
-                          <cd:NativeType>double</cd:NativeType>
-                        </cd:Float>
-                      </cd:Type>
-                    </cd:Field>
-                    <cd:Field name="Aod_Valid_Max">
-                      <cd:Type namexml="Aod_Valid_Max">
-                        <cd:Float format="ascii">
-                          <cd:Description>Arbitrary maximum threshold of AOD at which LSR signal Remains physically useful and not completely attenuated</cd:Description>
-                          <cd:NativeType>double</cd:NativeType>
-                        </cd:Float>
-                      </cd:Type>
-                    </cd:Field>
-                    <cd:Field name="Fill_Value_For_LSR">
-                      <cd:Type namexml="Fill_Value_For_LSR">
-                        <cd:Float format="ascii">
-                          <cd:Description>Fill value used for Aeolus LSR description needed to mask Out missing or wrong values in the output file</cd:Description>
-                          <cd:NativeType>double</cd:NativeType>
-                        </cd:Float>
-                      </cd:Type>
-                    </cd:Field>
-                    <cd:Field name="A_To_B_Conv_Ray">
-                      <cd:Type namexml="A_To_B_Conv_Ray">
-                        <cd:Float format="ascii">
-                          <cd:Description>Constant coming from calculation of ((8 * np.pi) /3) needed To convert Rayleigh backscattering to extinction coefficient'</cd:Description>
-                          <cd:NativeType>double</cd:NativeType>
-                        </cd:Float>
-                      </cd:Type>
-                    </cd:Field>
-                  </cd:Record>
-                </cd:Field>
-                <cd:Field name="Quality_Flag_Attenuated_Backscatters">
-                  <cd:Record namexml="Quality_Flag_Attenuated_Backscatters">
-                    <cd:Field name="Mie_Snr_Measurement_Threshold">
-                      <cd:Type namexml="Mie_Snr_Measurement_Threshold">
-                        <cd:Float format="ascii">
-                          <cd:Description>Value of the Mie_Snr_Measurement_Threshold</cd:Description>
-                          <cd:NativeType>double</cd:NativeType>
-                        </cd:Float>
-                      </cd:Type>
-                    </cd:Field>
-                    <cd:Field name="Rayleigh_Snr_Measurement_Threshold">
-                      <cd:Type namexml="Rayleigh_Snr_Measurement_Threshold">
-                        <cd:Float format="ascii">
-                          <cd:Description>Value of the Rayleigh_Snr_Measurement_Threshold</cd:Description>
-                          <cd:NativeType>double</cd:NativeType>
-                        </cd:Float>
-                      </cd:Type>
-                    </cd:Field>
-                    <cd:Field name="Molecular_Signal_Error_Bar_Threshold">
-                      <cd:Type namexml="Molecular_Signal_Error_Bar_Threshold">
-                        <cd:Attribute name="unit" />
-                        <cd:Float format="ascii">
-                          <cd:Description>Value of Molecular_Signal_Error_Bar_Threshold</cd:Description>
-                          <cd:NativeType>double</cd:NativeType>
-                          <cd:Unit>m^-1 sr^-1</cd:Unit>
-                        </cd:Float>
-                      </cd:Type>
-                    </cd:Field>
-                    <cd:Field name="Particulate_Signal_Error_Bar_Threshold">
-                      <cd:Type namexml="Particulate_Signal_Error_Bar_Threshold">
-                        <cd:Float format="ascii">
-                          <cd:Description>Value of Particulate_Signal_Error_Bar_Threshold</cd:Description>
-                          <cd:NativeType>double</cd:NativeType>
-                          <cd:Unit>m^-1 sr^-1</cd:Unit>
-                        </cd:Float>
-                      </cd:Type>
-                    </cd:Field>
-                  </cd:Record>
-                </cd:Field>
-              </cd:Record>
-            </cd:Field>
-            <cd:Field name="AEL_LSR">
-              <cd:Record namexml="AEL_LSR">
-                <cd:Field name="GADS_AEL_LSR">
-                  <cd:Record namexml="GADS_AEL_LSR">
-                    <cd:Field name="P_Standard">
-                      <cd:Type namexml="P_Standard">
-                        <cd:Float format="ascii">
-                          <cd:Description>Standard pressure required for atmoshperic corrections</cd:Description>
-                          <cd:NativeType>double</cd:NativeType>
-                        </cd:Float>
-                      </cd:Type>
-                    </cd:Field>
-                    <cd:Field name="Coef_Stephens">
-                      <cd:Type namexml="Coef_Stephens">
-                        <cd:Attribute name="unit" />
-                        <cd:Float format="ascii">
-                          <cd:Description>Standard pressure required for atmoshperic corrections</cd:Description>
-                          <cd:NativeType>double</cd:NativeType>
-                          <cd:Unit>mb</cd:Unit>
-                        </cd:Float>
-                      </cd:Type>
-                    </cd:Field>
-                    <cd:Field name="Multiplier_Stephens">
-                      <cd:Type namexml="Multiplier_Stephens">
-                        <cd:Float format="ascii">
                           <cd:Description>Coefficient from Stephens 1994 book applied for molecular
                             correction above any pressure level in Atmosphere</cd:Description>
                           <cd:NativeType>double</cd:NativeType>
@@ -2114,9 +2042,8 @@
                       <cd:Type namexml="Coef_Wavelength">
                         <cd:Float format="ascii">
                           <cd:Description>Multiplier of wavelenength parameter for molecular
-                            equation
-                            from Stephens 1994 book applied for mo-lecular. Correction above any
-                            pressure level in atmosphere</cd:Description>
+                            equation from Stephens 1994 book applied for molecular Correction above
+                            any pressure level in atmosphere</cd:Description>
                           <cd:NativeType>double</cd:NativeType>
                         </cd:Float>
                       </cd:Type>
@@ -2125,7 +2052,7 @@
                       <cd:Type namexml="Angle_Aeolus_Ref">
                         <cd:Float format="ascii">
                           <cd:Description>Wavelength-related coefficient for Stephens 1994 formula
-                            that alleviates the molecular correction difference for. Atmospheric
+                            that alleviates the molecular correction difference for Atmospheric
                             column we consider</cd:Description>
                           <cd:NativeType>double</cd:NativeType>
                         </cd:Float>
@@ -2135,7 +2062,7 @@
                       <cd:Type namexml="Aod_Valid_Max">
                         <cd:Float format="ascii">
                           <cd:Description>Arbitrary maximum threshold of AOD at which LSR signal
-                            Remains physically useful and not completely at-tenuated</cd:Description>
+                            Remains physically useful and not completely attenuated</cd:Description>
                           <cd:NativeType>double</cd:NativeType>
                         </cd:Float>
                       </cd:Type>
@@ -2153,8 +2080,7 @@
                       <cd:Type namexml="A_To_B_Conv_Ray">
                         <cd:Float format="ascii">
                           <cd:Description>Constant coming from calculation of ((8 * np.pi) /3)
-                            needed
-                            To convert Rayleigh backscattering to extinction coefficient</cd:Description>
+                            needed To convert Rayleigh backscattering to extinction coefficient'</cd:Description>
                           <cd:NativeType>double</cd:NativeType>
                         </cd:Float>
                       </cd:Type>
