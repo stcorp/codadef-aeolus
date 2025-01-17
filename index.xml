@@ -2129,6 +2129,11 @@
         <cd:MatchData offset="17">AUX_OWV_1B</cd:MatchData>
         <cd:MatchData offset="95">SD-DoRIT-L1B-006 v4.19 </cd:MatchData>
       </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT="AE_</cd:MatchData>
+        <cd:MatchData offset="17">AUX_OWV_1B</cd:MatchData>
+        <cd:MatchData offset="95">SD-DoRIT-L1B-006 v4.20 </cd:MatchData>
+      </cd:DetectionRule>
     </cd:ProductDefinition>
   </cd:ProductType>
   <cd:ProductType name="AUX_OWV_1B_HDR">
