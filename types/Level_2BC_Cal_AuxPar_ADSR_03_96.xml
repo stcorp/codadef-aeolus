@@ -159,7 +159,6 @@
             nonlinear
             correction for the internal reference is defined. This array has length NumFreqIntRef
             which value is defined in the SPH header</cd:Description>
-          <!-- <cd:Dimension>65</cd:Dimension> -->
           <cd:Dimension><![CDATA[int(/sph/NumFreqIntRefprofiles)]]></cd:Dimension>
           <cd:Float>
             <cd:BitSize>64</cd:BitSize>
@@ -172,7 +171,6 @@
         <cd:Array>
           <cd:Description> An array of values defining the Mie nonlinear correction for the internal
             reference. This array has length NumFreqIntRef which value is defined in the SPH header</cd:Description>
-          <!-- <cd:Dimension>65</cd:Dimension> -->
           <cd:Dimension><![CDATA[int(/sph/NumFreqIntRefprofiles)]]></cd:Dimension>
           <cd:Float>
             <cd:BitSize>64</cd:BitSize>
@@ -208,7 +206,7 @@
             An array of values defining the pixel positions on which the Mie nonlinear correction
             for the atmospheric path is defined. This array has length NumFreqAtmPath which value
             is defined in the SPH header </cd:Description>
-          <!-- <cd:Dimension>65</cd:Dimension> -->
+           
           <cd:Dimension><![CDATA[int(/sph/NumFreqAtmPath)]]></cd:Dimension>
           <cd:Float>
             <cd:BitSize>64</cd:BitSize>
@@ -222,7 +220,7 @@
           <cd:Description> An array of values defining the Mie nonlinear correction for the
             atmospheric path. This array has length NumFreqAtmPath which value is defined in the
             SPH header</cd:Description>
-          <!-- <cd:Dimension>65</cd:Dimension> -->
+           
           <cd:Dimension><![CDATA[int(/sph/NumFreqAtmPath)]]></cd:Dimension>
           <cd:Float>
             <cd:BitSize>64</cd:BitSize>

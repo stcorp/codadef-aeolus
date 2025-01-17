@@ -13,7 +13,6 @@
     <cd:Field name="dsd">
       <cd:Array format="ascii">
         <cd:Dimension><![CDATA[$num_dsd]]></cd:Dimension>
-        <!-- <cd:Dimension>32</cd:Dimension> -->
         <cd:NamedType id="DSD"/>
       </cd:Array>
     </cd:Field>
