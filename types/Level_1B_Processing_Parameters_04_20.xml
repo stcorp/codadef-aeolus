@@ -79,8 +79,8 @@
                 </cd:Field>
               </cd:Record>
             </cd:Field>
-            <cd:Field name="SPQ_Default_Fields">
-              <cd:Record namexml="SPQ_Default_Fields">
+            <cd:Field name="SPH_Default_Fields">
+              <cd:Record namexml="SPH_Default_Fields">
                 <cd:Description>Values responsible for populating the specific product header</cd:Description>
                 <cd:Field name="DOI">
                   <cd:Text namexml="DOI">
@@ -261,6 +261,24 @@
                       <cd:Unit>m</cd:Unit>
                       <cd:NativeType>double</cd:NativeType>
                     </cd:Float>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="Mie_Maximum_DEM_Response_Shift">
+                    <cd:Type namexml="Mie_Maximum_DEM_Response_Shift">
+                      <cd:Attribute name="unit"/>
+                      <cd:Float format="ascii">
+                        <cd:Description>Maximum allowed response shift of ground bin candidates to DEM expected round bin response for Mie data</cd:Description>
+                        <cd:Unit>ACCD pixel</cd:Unit>
+                        <cd:NativeType>double</cd:NativeType>
+                      </cd:Float>
+                  </cd:Type>
+                </cd:Field>
+                  <cd:Field name="Rayleigh_Maximum_DEM_Response_Shift">
+                    <cd:Type namexml="Rayleigh_Maximum_DEM_Response_Shift">
+                      <cd:Float format="ascii">
+                        <cd:Description>Maximum allowed response shift of ground bin candidates to DEM expected round bin response for Rayleigh data.</cd:Description>
+                        <cd:NativeType>double</cd:NativeType>
+                      </cd:Float>
                   </cd:Type>
                 </cd:Field>
                 <cd:Field name="Correction_With_Error_Response_Fit">
@@ -1254,6 +1272,9 @@
                     </cd:Field>
                     <cd:Field name="Peak_Height_Upper_Threshold_Voigt">
                       <cd:Type namexml="Peak_Height_Upper_Threshold_Voigt">
+                      <cd:Attribute name="unit">
+                          <cd:FixedValue>ACCD counts</cd:FixedValue>
+                        </cd:Attribute>
                         <cd:Float format="ascii">
                           <cd:Description>Relative upper threshold for peak height of Voigt function</cd:Description>
                           <cd:NativeType>double</cd:NativeType>
@@ -1262,6 +1283,9 @@
                     </cd:Field>
                     <cd:Field name="Peak_Height_Lower_Threshold_Voigt">
                       <cd:Type namexml="Peak_Height_Lower_Threshold_Voigt">
+                      <cd:Attribute name="unit">
+                          <cd:FixedValue>ACCD counts</cd:FixedValue>
+                        </cd:Attribute>
                         <cd:Float format="ascii">
                           <cd:Description>Relative lower threshold for peak height of Voigt function</cd:Description>
                           <cd:NativeType>double</cd:NativeType>
@@ -1313,8 +1337,52 @@
                         </cd:Integer>
                       </cd:Type>
                     </cd:Field>
+                    <cd:Field name="Use_Highest_Two_Check_Voigt">
+                      <cd:Type namexml="Use_Highest_Two_Check_Voigt">
+                        <cd:Integer format="ascii">
+                          <cd:Description>Check if pixels with the two highest most signals are neighbours</cd:Description>
+                          <cd:NativeType>uint8</cd:NativeType>
+                          <cd:Mapping string="FALSE" value="0"/>
+                          <cd:Mapping string="False" value="0"/>
+                          <cd:Mapping string="false" value="0"/>
+                          <cd:Mapping string="TRUE" value="1"/>
+                          <cd:Mapping string="True" value="1"/>
+                          <cd:Mapping string="true" value="1"/>
+                          <ct:NamedTest id="BooleanXmlTest"/>
+                        </cd:Integer>
+                      </cd:Type>
+                    </cd:Field>
+                    <cd:Field name="Use_Highest_Three_Check_Voigt">
+                      <cd:Type namexml="Use_Highest_Three_Check_Voigt">
+                        <cd:Integer format="ascii">
+                          <cd:Description>Check if pixels with the three highest most signals are neighbours</cd:Description>
+                          <cd:NativeType>uint8</cd:NativeType>
+                          <cd:Mapping string="FALSE" value="0"/>
+                          <cd:Mapping string="False" value="0"/>
+                          <cd:Mapping string="false" value="0"/>
+                          <cd:Mapping string="TRUE" value="1"/>
+                          <cd:Mapping string="True" value="1"/>
+                          <cd:Mapping string="true" value="1"/>
+                          <ct:NamedTest id="BooleanXmlTest"/>
+                        </cd:Integer>
+                      </cd:Type>
+                    </cd:Field>
+                    <cd:Field name="FWHM_Upper_Threshold_Voigt">
+                      <cd:Type namexml="FWHM_Upper_Threshold_Voigt">
+                      <cd:Attribute name="unit">
+                          <cd:FixedValue>ACCD counts</cd:FixedValue>
+                        </cd:Attribute>
+                        <cd:Float format="ascii">
+                          <cd:Description>Upper threshold for FWHM</cd:Description>
+                          <cd:NativeType>double</cd:NativeType>
+                        </cd:Float>
+                      </cd:Type>
+                    </cd:Field>
                     <cd:Field name="FWHM_Lower_Threshold_Voigt">
                       <cd:Type namexml="FWHM_Lower_Threshold_Voigt">
+                      <cd:Attribute name="unit">
+                          <cd:FixedValue>ACCD counts</cd:FixedValue>
+                        </cd:Attribute>
                         <cd:Float format="ascii">
                           <cd:Description>Lower threshold for FWHM</cd:Description>
                           <cd:NativeType>double</cd:NativeType>

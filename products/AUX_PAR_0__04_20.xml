@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:ProductDefinition xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" id="AUX_MRC_1B_04_20" format="xml" last-modified="2025-01-14">
+<cd:ProductDefinition xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" id="AUX_PAR_0__04_20" format="xml" last-modified="2025-01-16">
   <cd:Record format="xml">
     <cd:Field name="Earth_Explorer_File">
       <cd:Record namexml="Earth_Explorer_File">
@@ -18,15 +18,13 @@
                   <cd:NamedType id="Main_Product_Header_v3"/>
                 </cd:Field>
                 <cd:Field name="Specific_Product_Header">
-                  <cd:NamedType id="Specific_Product_Header_Level1BAux_04_03"/>
+                  <cd:NamedType id="Specific_Product_Header_Par"/>
                 </cd:Field>
-                <ct:NamedTest id="IntIsOne" path="Specific_Product_Header/num_of_valid_mie_calibration_results"/>
               </cd:Record>
             </cd:Field>
             <ct:NamedTest id="FileNameCheckEEF" path="Fixed_Header/File_Name"/>
             <ct:NamedTest id="FileNameMatchFileVersionAt51" path="Fixed_Header/File_Name"/>
             <ct:NamedTest id="FileNameMatchValidityStart" path="Fixed_Header/File_Name"/>
-            <ct:NamedTest id="CheckForCommissioningApproval" path="Fixed_Header/Notes"/>
           </cd:Record>
         </cd:Field>
         <cd:Field name="Data_Block">
@@ -35,11 +33,8 @@
               <cd:Optional/>
               <cd:FixedValue>xml</cd:FixedValue>
             </cd:Attribute>
-            <cd:Field name="Auxiliary_Calibration_MRC_Parameters">
-              <cd:NamedType id="Auxiliary_Calibration_MRC_Parameters_04_20"/>
-            </cd:Field>
-            <cd:Field name="Auxiliary_Calibration_MRC">
-              <cd:NamedType id="Auxiliary_Calibration_MRC_04_20"/>
+            <cd:Field name="Level_0_Processing_Parameters">
+              <cd:NamedType id="Level_0_Processing_Parameters_04_20"/>
             </cd:Field>
           </cd:Record>
         </cd:Field>

@@ -1,0 +1,255 @@
+<?xml version="1.0"?>
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="xml" last-modified="2025-01-16" name="Specific_Product_Header_Level0_4_20" namexml="Specific_Product_Header">
+  <cd:Description>Specific Product Header for ALD Level 0 products</cd:Description>
+  <cd:Field name="Sph_Descriptor">
+    <cd:Text namexml="Sph_Descriptor">
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="DOI">
+    <cd:Text namexml="DOI">
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="Start_Lat">
+    <cd:Type namexml="Start_Lat">
+      <cd:Attribute name="unit">
+        <cd:Optional/>
+        <cd:FixedValue>10-6DegN</cd:FixedValue>
+      </cd:Attribute>
+      <cd:Integer format="ascii">
+        <cd:Description>WGS84 latitude of first satellite nadir point at the sensing start time of the MPH (positive North)</cd:Description>
+        <cd:Unit>1e-6 degrees_north</cd:Unit>
+        <cd:Conversion denominator="1000000.000000" numerator="1.000000">
+          <cd:Unit>degrees_north</cd:Unit>
+        </cd:Conversion>
+        <cd:NativeType>int32</cd:NativeType>
+        <ct:NamedTest id="RangeLatitude6"/>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Start_Long">
+    <cd:Type namexml="Start_Long">
+      <cd:Attribute name="unit">
+        <cd:Optional/>
+        <cd:FixedValue>10-6DegE</cd:FixedValue>
+      </cd:Attribute>
+      <cd:Integer format="ascii">
+        <cd:Description>WGS84 longitude of first satellite nadir point at the sensing start time of the MPH (positive East, 0=Greenwich)</cd:Description>
+        <cd:Unit>1e-6 degrees_east</cd:Unit>
+        <cd:Conversion denominator="1000000.000000" numerator="1.000000">
+          <cd:Unit>degrees_east</cd:Unit>
+        </cd:Conversion>
+        <cd:NativeType>int32</cd:NativeType>
+        <ct:NamedTest id="RangeLongitude6"/>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Stop_Lat">
+    <cd:Type namexml="Stop_Lat">
+      <cd:Attribute name="unit">
+        <cd:Optional/>
+        <cd:FixedValue>10-6DegN</cd:FixedValue>
+      </cd:Attribute>
+      <cd:Integer format="ascii">
+        <cd:Description>WGS84 latitude of first satellite nadir point at the sensing stop time of the MPH (positive North)</cd:Description>
+        <cd:Unit>1e-6 degrees_north</cd:Unit>
+        <cd:Conversion denominator="1000000.000000" numerator="1.000000">
+          <cd:Unit>degrees_north</cd:Unit>
+        </cd:Conversion>
+        <cd:NativeType>int32</cd:NativeType>
+        <ct:NamedTest id="RangeLatitude6"/>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Stop_Long">
+    <cd:Type namexml="Stop_Long">
+      <cd:Attribute name="unit">
+        <cd:Optional/>
+        <cd:FixedValue>10-6DegE</cd:FixedValue>
+      </cd:Attribute>
+      <cd:Integer format="ascii">
+        <cd:Description>WGS84 longitude of first satellite nadir point at the sensing stop time of the MPH (positive East, 0=Greenwich)</cd:Description>
+        <cd:Unit>1e-6 degrees_east</cd:Unit>
+        <cd:Conversion denominator="1000000.000000" numerator="1.000000">
+          <cd:Unit>degrees_east</cd:Unit>
+        </cd:Conversion>
+        <cd:NativeType>int32</cd:NativeType>
+        <ct:NamedTest id="RangeLongitude6"/>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Sat_Track">
+    <cd:Type namexml="Sat_Track">
+      <cd:Attribute name="unit">
+        <cd:Optional/>
+        <cd:FixedValue>deg</cd:FixedValue>
+      </cd:Attribute>
+      <cd:Float format="ascii">
+        <cd:Description>Sub-satellite heading at the sensing start time in the MPH</cd:Description>
+        <cd:Unit>degrees</cd:Unit>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Spare_1">
+    <cd:Hidden/>
+    <cd:Text namexml="Spare_1">
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="Isp_TF_CRC_Errors_Significant">
+    <cd:Type namexml="Isp_TF_CRC_Errors_Significant">
+      <cd:Integer format="ascii">
+        <cd:Description>'true' or 'false'. Indicates if number of ISPs with CRC errors in Transfer Frames reported by FEP exceeds treshold</cd:Description>
+        <cd:NativeType>uint8</cd:NativeType>
+        <cd:Mapping string="FALSE" value="0"/>
+        <cd:Mapping string="False" value="0"/>
+        <cd:Mapping string="false" value="0"/>
+        <cd:Mapping string="TRUE" value="1"/>
+        <cd:Mapping string="True" value="1"/>
+        <cd:Mapping string="true" value="1"/>
+        <ct:NamedTest id="BooleanXmlTest"/>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Missing_ISPs_Significant">
+    <cd:Type namexml="Missing_ISPs_Significant">
+      <cd:Integer format="ascii">
+        <cd:Description>'true' or 'false'. Indicates if number of missing ISPs exceeds treshold</cd:Description>
+        <cd:NativeType>uint8</cd:NativeType>
+        <cd:Mapping string="FALSE" value="0"/>
+        <cd:Mapping string="False" value="0"/>
+        <cd:Mapping string="false" value="0"/>
+        <cd:Mapping string="TRUE" value="1"/>
+        <cd:Mapping string="True" value="1"/>
+        <cd:Mapping string="true" value="1"/>
+        <ct:NamedTest id="BooleanXmlTest"/>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="ISP_CRC_Errors_Significant">
+    <cd:Type namexml="ISP_CRC_Errors_Significant">
+      <cd:Integer format="ascii">
+        <cd:Description>'true' or 'false'. Indicates if number of ISPs with CRC errors in SP exceeds treshold</cd:Description>
+        <cd:NativeType>uint8</cd:NativeType>
+        <cd:Mapping string="FALSE" value="0"/>
+        <cd:Mapping string="False" value="0"/>
+        <cd:Mapping string="false" value="0"/>
+        <cd:Mapping string="TRUE" value="1"/>
+        <cd:Mapping string="True" value="1"/>
+        <cd:Mapping string="true" value="1"/>
+        <ct:NamedTest id="BooleanXmlTest"/>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Rs_Corrections_Significant">
+    <cd:Type namexml="Rs_Corrections_Significant">
+      <cd:Integer format="ascii">
+        <cd:Description>'true' or 'false'. Indicates if number of ISPs with Reed Solomon corrections exceeds treshold</cd:Description>
+        <cd:NativeType>uint8</cd:NativeType>
+        <cd:Mapping string="FALSE" value="0"/>
+        <cd:Mapping string="False" value="0"/>
+        <cd:Mapping string="false" value="0"/>
+        <cd:Mapping string="TRUE" value="1"/>
+        <cd:Mapping string="True" value="1"/>
+        <cd:Mapping string="true" value="1"/>
+        <ct:NamedTest id="BooleanXmlTest"/>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Spare_2">
+    <cd:Hidden/>
+    <cd:Text namexml="Spare_2">
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="Num_TF_CRC_Error_Isps">
+    <cd:Type namexml="Num_TF_CRC_Error_Isps">
+      <cd:Integer format="ascii">
+        <cd:Description>Number of ISPs containing Transfer Frames with CRC errors as reported by the FEP</cd:Description>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="TF_CRC_Error_Isps_Thresh">
+    <cd:Type namexml="TF_CRC_Error_Isps_Thresh">
+      <cd:Attribute name="unit">
+        <cd:Optional/>
+        <cd:FixedValue>%</cd:FixedValue>
+      </cd:Attribute>
+      <cd:Float format="ascii">
+        <cd:Description>Threshold at which number if ISPs containing Transfer Frame CRC errors is considered significant (in percent)</cd:Description>
+        <cd:Unit>%</cd:Unit>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Number_Missing_Isps">
+    <cd:Type namexml="Number_Missing_Isps">
+      <cd:Integer format="ascii">
+        <cd:Description>Number of missing ISPs, as determined by header counters</cd:Description>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Missing_Isps_Thresh">
+    <cd:Type namexml="Missing_Isps_Thresh">
+      <cd:Attribute name="unit">
+        <cd:Optional/>
+        <cd:FixedValue>%</cd:FixedValue>
+      </cd:Attribute>
+      <cd:Float format="ascii">
+        <cd:Description>Treshold at which number of ISPs missing is considered significant</cd:Description>
+        <cd:Unit>%</cd:Unit>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Num_ISP_CRC_Errors">
+    <cd:Type namexml="Num_ISP_CRC_Errors">
+      <cd:Integer format="ascii">
+        <cd:Description>Number of ISPs with SP CRC errors or incorrect SP length or errors in key header fields</cd:Description>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="ISP_CRC_Thresh">
+    <cd:Type namexml="ISP_CRC_Thresh">
+      <cd:Attribute name="unit">
+        <cd:Optional/>
+        <cd:FixedValue>%</cd:FixedValue>
+      </cd:Attribute>
+      <cd:Float format="ascii">
+        <cd:Description>Treshold at which number SP CRC or header errors is considered significant</cd:Description>
+        <cd:Unit>%</cd:Unit>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Num_Rs_Isps">
+    <cd:Type namexml="Num_Rs_Isps">
+      <cd:Integer format="ascii">
+        <cd:Description>Number of ISPs with Transfer Frame Reed Solomon corrections as reported by FEP</cd:Description>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Rs_Thresh">
+    <cd:Type namexml="Rs_Thresh">
+      <cd:Attribute name="unit">
+        <cd:Optional/>
+        <cd:FixedValue>%</cd:FixedValue>
+      </cd:Attribute>
+      <cd:Float format="ascii">
+        <cd:Description>Threshold at which number of ISPs with Reed Solomon corrections is considered significant</cd:Description>
+        <cd:Unit>%</cd:Unit>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Spare_3">
+    <cd:Hidden/>
+    <cd:Text namexml="Spare_3">
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="List_of_Dsds">
+    <cd:NamedType id="List_of_Dsds"/>
+  </cd:Field>
+</cd:Record>

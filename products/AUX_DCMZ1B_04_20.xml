@@ -141,8 +141,94 @@
                                   <cd:NativeType>int32</cd:NativeType>
                                 </cd:Integer>
                               </cd:Field>
-                              
-                                                            
+                              <cd:Field name="List_of_Rayleigh_Pixel_Updates_per_Row">
+                                <cd:Record>
+                                  <cd:Attribute name="count" />
+                                  <cd:Field name="Rayleigh_Pixel_Updates_per_Row">
+                                    <cd:Array>
+                                      <cd:Dimension>24</cd:Dimension>
+                                      <cd:Type namexml="Rayleigh_Pixel_Updates_per_Row">
+                                        <cd:Array format="ascii">
+                                          <cd:Dimension>16</cd:Dimension>
+                                          <cd:Float format="ascii">
+                                            <cd:Description>This list contains 16 values, separated
+                                              by blanks. The 16 values correspond to the Rayleigh
+                                              row of the ACCD in the memory zone: '0’ pixel value
+                                              has been copied from the input DCMZ, ‘1’ pixel value
+                                              has been retrieved from the measured data.. The first
+                                              value corresponds to the left most useful pixel on the
+                                              ACCD in the row.</cd:Description>
+                                            <cd:NativeType>double</cd:NativeType>
+                                            <ct:NamedTest id="FloatIsFinite" />
+                                          </cd:Float>
+                                        </cd:Array>
+                                      </cd:Type>
+                                    </cd:Array>
+                                  </cd:Field>
+                                </cd:Record>
+                              </cd:Field>
+                              <cd:Field name="List_of_Mie_Pixel_Updates_per_Row">
+                                <cd:Record>
+                                  <cd:Attribute name="count" />
+                                  <cd:Field name="Mie_Pixel_Updates_per_Row">
+                                    <cd:Array>
+                                      <cd:Dimension>24</cd:Dimension>
+                                      <cd:Type namexml="Mie_Pixel_Updates_per_Row">
+                                        <cd:Array format="ascii">
+                                          <cd:Dimension>16</cd:Dimension>
+                                          <cd:Float format="ascii">
+                                            <cd:Description>This list contains 16 values, separated
+                                              by blanks. The 16 values correspond to the Mie row of
+                                              the ACCD in the memory zone: '0’ pixel value has been
+                                              copied from the input DCMZ, ‘1’ pixel value has been
+                                              retrieved from the measured data.. The first value
+                                              corresponds to the left most useful pixel on the ACCD
+                                              in the row</cd:Description>
+                                            <cd:NativeType>double</cd:NativeType>
+                                            <ct:NamedTest id="FloatIsFinite" />
+                                          </cd:Float>
+                                        </cd:Array>
+                                      </cd:Type>
+                                    </cd:Array>
+                                  </cd:Field>
+                                </cd:Record>
+                              </cd:Field>
+                              <cd:Field name="Rayleigh_Background_Pixel_Updates">
+                                  <cd:Type namexml="Rayleigh_Background_Pixel_Updates">
+                                    <cd:Array format="ascii">
+                                      <cd:Dimension>16</cd:Dimension>
+                                      <cd:Float format="ascii">
+                                        <cd:Description>This list contains 16 values, separated by
+                                          blanks. The 16 values correspond to the Rayleigh
+                                          background row of the ACCD in the memory zone: '0’ pixel
+                                          value has been copied from the input DCMZ, ‘1’ pixel value
+                                          has been retrieved from the measured data.. The first
+                                          value corresponds to the left most useful pixel on the
+                                          ACCD in the row.</cd:Description>
+                                        <cd:NativeType>double</cd:NativeType>
+                                        <ct:NamedTest id="FloatIsFinite" />
+                                      </cd:Float>
+                                    </cd:Array>
+                                  </cd:Type>
+                              </cd:Field>
+                              <cd:Field name="Mie_Background_Pixel_Updates"> 
+                                  <cd:Type namexml="Mie_Background_Pixel_Updates">
+                                    <cd:Array format="ascii">
+                                      <cd:Dimension>16</cd:Dimension>
+                                      <cd:Float format="ascii">
+                                        <cd:Description>This list contains 16 values, separated by
+                                          blanks. The 16 values correspond to the Mie background row
+                                          of the ACCD in the memory zone: '0’ pixel value has been
+                                          copied from the input DCMZ, ‘1’ pixel value has been
+                                          retrieved from the measured data.. The first value
+                                          corresponds to the left most useful pixel on the ACCD in
+                                          the row.</cd:Description>
+                                        <cd:NativeType>double</cd:NativeType>
+                                        <ct:NamedTest id="FloatIsFinite" />
+                                      </cd:Float>
+                                    </cd:Array>
+                                  </cd:Type>
+                              </cd:Field>
                             </cd:Record>
                           </cd:Field>
                           <cd:Field name="List_of_Rayleigh_Dark_Current_Rates_per_Row">
@@ -228,34 +314,12 @@
                           <cd:Field name="DCO_Parameters">
                             <cd:Record namexml="DCO_Parameters">
                               <cd:Description>Structure holding mean DCO and DCO std dev values. Parameters are only filled if Do_Mode_Mean_DCO_Pre_Processing = TRUE and Use_DCO_Correction_Lidar_Atmos = TRUE</cd:Description>
-                              <cd:Field name="Ref_Pulse_Mie_Mean_DCO">
-                                <cd:Type namexml="Ref_Pulse_Mie_Mean_DCO">
-                                  <cd:Array format="ascii">
-                                    <cd:Dimension>25</cd:Dimension>
-                                    <cd:Float format="ascii">
-                                      <cd:Description>List of mode mean Mie DCO values calculated for the 24 atmospheric layers and the background bin.</cd:Description>
-                                      <cd:Unit>ACCD counts</cd:Unit>
-                                      <cd:NativeType>double</cd:NativeType>
-                                      <ct:NamedTest id="FloatIsFinite"/>
-                                    </cd:Float>
-                                  </cd:Array>
-                                </cd:Type>
-                              </cd:Field>
-                              <cd:Field name="Ref_Pulse_Mie_DCO_Std_Dev">
-                                <cd:Type namexml="Ref_Pulse_Mie_DCO_Std_Dev">
-                                  <cd:Array format="ascii">
-                                    <cd:Dimension>25</cd:Dimension>
-                                    <cd:Float format="ascii">
-                                      <cd:Description>List of the standard deviation of Mie DCO values for the 24 atmospheric layers and the background bin.</cd:Description>
-                                      <cd:Unit>ACCD counts</cd:Unit>
-                                      <cd:NativeType>double</cd:NativeType>
-                                      <ct:NamedTest id="FloatIsFinite"/>
-                                    </cd:Float>
-                                  </cd:Array>
-                                </cd:Type>
-                              </cd:Field>
+                              
                               <cd:Field name="Mie_Mean_DCO">
                                 <cd:Type namexml="Mie_Mean_DCO">
+                                <cd:Attribute name="unit">
+                                <cd:FixedValue>ACCD counts</cd:FixedValue>
+                                </cd:Attribute>
                                   <cd:Array format="ascii">
                                     <cd:Dimension>25</cd:Dimension>
                                     <cd:Float format="ascii">
@@ -269,10 +333,45 @@
                               </cd:Field>
                               <cd:Field name="Mie_DCO_Std_Dev">
                                 <cd:Type namexml="Mie_DCO_Std_Dev">
+                                <cd:Attribute name="unit">
+                                <cd:FixedValue>ACCD counts</cd:FixedValue>
+                                </cd:Attribute>
                                   <cd:Array format="ascii">
                                     <cd:Dimension>25</cd:Dimension>
                                     <cd:Float format="ascii">
                                       <cd:Description>List of the standard deviation of Mie DCO values for the 24 atmospheric layers and the background bin.</cd:Description>
+                                      <cd:Unit>ACCD counts</cd:Unit>
+                                      <cd:NativeType>double</cd:NativeType>
+                                      <ct:NamedTest id="FloatIsFinite"/>
+                                    </cd:Float>
+                                  </cd:Array>
+                                </cd:Type>
+                              </cd:Field>
+                              <cd:Field name="Rayleigh_Mean_DCO">
+                                <cd:Type namexml="Rayleigh_Mean_DCO">
+                                <cd:Attribute name="unit">
+                                <cd:FixedValue>ACCD counts</cd:FixedValue>
+                                </cd:Attribute>
+                                  <cd:Array format="ascii">
+                                    <cd:Dimension>25</cd:Dimension>
+                                    <cd:Float format="ascii">
+                                      <cd:Description>List of mode mean Rayleigh DCO values calculated for the 24 atmospheric layers and the background bin.</cd:Description>
+                                      <cd:Unit>ACCD counts</cd:Unit>
+                                      <cd:NativeType>double</cd:NativeType>
+                                      <ct:NamedTest id="FloatIsFinite"/>
+                                    </cd:Float>
+                                  </cd:Array>
+                                </cd:Type>
+                              </cd:Field>
+                              <cd:Field name="Rayleigh_DCO_Std_Dev">
+                                <cd:Type namexml="Rayleigh_DCO_Std_Dev">
+                                <cd:Attribute name="unit">
+                                <cd:FixedValue>ACCD counts</cd:FixedValue>
+                                </cd:Attribute>
+                                  <cd:Array format="ascii">
+                                    <cd:Dimension>25</cd:Dimension>
+                                    <cd:Float format="ascii">
+                                      <cd:Description>List of the standard deviation for the individual Rayleigh DCO values for the 24 atmospheric layers and the background bin.</cd:Description>
                                       <cd:Unit>ACCD counts</cd:Unit>
                                       <cd:NativeType>double</cd:NativeType>
                                       <ct:NamedTest id="FloatIsFinite"/>

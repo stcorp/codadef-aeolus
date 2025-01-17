@@ -229,7 +229,8 @@
                             <cd:Description>24 values of Mie scattering ratio errors separated by
                               blanks. The first value correspnds to the lidar bin which is the upper
                               most in the atmosphere. Values is only calculated if the Voigt results
-                              have been used to calculate the SR. If Mie_Scattering_Ratio is set to -1.0, the field is set to -1.0</cd:Description>
+                              have been used to calculate the SR. If Mie_Scattering_Ratio is set to
+                              -1.0, the field is set to -1.0</cd:Description>
                             <cd:Dimension>24</cd:Dimension>
                             <cd:Float>
                               <cd:NativeType>double</cd:NativeType>
@@ -866,6 +867,15 @@
                                   </cd:Float>
                                 </cd:Type>
                               </cd:Field>
+                              <cd:Field name="Ref_Pulse_Num_Iterations">
+                                <cd:Type namexml="Ref_Pulse_Num_Iterations">
+                                  <cd:Integer format="ascii">
+                                    <cd:Description>Number of executed iterations in the nonlinear
+                                      simplex algorithm</cd:Description>
+                                    <cd:NativeType>uint8</cd:NativeType>
+                                  </cd:Integer>
+                                </cd:Type>
+                              </cd:Field>
                               <cd:Field name="Voigt_Centroid">
                                 <cd:Type namexml="Voigt_Centroid">
                                   <cd:Attribute name="unit">
@@ -922,6 +932,9 @@
                               </cd:Field>
                               <cd:Field name="Voigt_Sigma_Centroid">
                                 <cd:Type namexml="Voigt_Sigma_Centroid">
+                                  <cd:Attribute name="unit">
+                                    <cd:Optional />
+                                  </cd:Attribute>
                                   <cd:Float format="ascii">
                                     <cd:Description>Sigma of centroid retrieved by the Voigt fit.</cd:Description>
                                     <cd:NativeType>double</cd:NativeType>
@@ -931,6 +944,9 @@
                               </cd:Field>
                               <cd:Field name="Voigt_Sigma_Amplitude">
                                 <cd:Type namexml="Voigt_Sigma_Amplitude">
+                                  <cd:Attribute name="unit">
+                                    <cd:Optional />
+                                  </cd:Attribute>
                                   <cd:Float format="ascii">
                                     <cd:Description>Sigma of amplitude retrieved by the Voigt fit.</cd:Description>
                                     <cd:NativeType>double</cd:NativeType>
@@ -940,6 +956,9 @@
                               </cd:Field>
                               <cd:Field name="Voigt_Sigma_Offset">
                                 <cd:Type namexml="Voigt_Sigma_Offset">
+                                  <cd:Attribute name="unit">
+                                    <cd:Optional />
+                                  </cd:Attribute>
                                   <cd:Float format="ascii">
                                     <cd:Description>Sigma of offset retrieved by the Voigt fit.</cd:Description>
                                     <cd:NativeType>double</cd:NativeType>
@@ -958,6 +977,9 @@
                               </cd:Field>
                               <cd:Field name="Ref_Pulse_Voigt_Centroid">
                                 <cd:Type namexml="Ref_Pulse_Voigt_Centroid">
+                                  <cd:Attribute name="unit">
+                                    <cd:Optional />
+                                  </cd:Attribute>
                                   <cd:Float format="ascii">
                                     <cd:Description>Centroid of signal calculated with Voigt fit</cd:Description>
                                     <cd:NativeType>double</cd:NativeType>
@@ -967,6 +989,9 @@
                               </cd:Field>
                               <cd:Field name="Ref_Pulse_Voigt_Amplitude">
                                 <cd:Type namexml="Ref_Pulse_Voigt_Amplitude">
+                                  <cd:Attribute name="unit">
+                                    <cd:Optional />
+                                  </cd:Attribute>
                                   <cd:Float format="ascii">
                                     <cd:Description>Amplitude of signal calculated with Voigt fit.</cd:Description>
                                     <cd:NativeType>double</cd:NativeType>
@@ -976,8 +1001,20 @@
                               </cd:Field>
                               <cd:Field name="Ref_Pulse_Voigt_Offset">
                                 <cd:Type namexml="Ref_Pulse_Voigt_Offset">
+                                  <cd:Attribute name="unit">
+                                    <cd:Optional />
+                                  </cd:Attribute>
                                   <cd:Float format="ascii">
                                     <cd:Description>Offset of signal calculated with Voigt fit.</cd:Description>
+                                    <cd:NativeType>double</cd:NativeType>
+                                    <ct:NamedTest id="FloatIsFinite" />
+                                  </cd:Float>
+                                </cd:Type>
+                              </cd:Field>
+                              <cd:Field name="Ref_Pulse_Voigt_Residual_Error">
+                                <cd:Type namexml="Ref_Pulse_Voigt_Residual_Error">
+                                  <cd:Float format="ascii">
+                                    <cd:Description>Quadratic sum of differences between modelled and measured ACCD counts per pixel</cd:Description>
                                     <cd:NativeType>double</cd:NativeType>
                                     <ct:NamedTest id="FloatIsFinite" />
                                   </cd:Float>
@@ -1001,6 +1038,9 @@
                               </cd:Field>
                               <cd:Field name="Ref_Pulse_Voigt_Sigma_Centroid">
                                 <cd:Type namexml="Ref_Pulse_Voigt_Sigma_Centroid">
+                                <cd:Attribute name="unit">
+                                    <cd:Optional />
+                                  </cd:Attribute>
                                   <cd:Float format="ascii">
                                     <cd:Description>Sigma of centroid retrieved by the Voigt fit.</cd:Description>
                                     <cd:NativeType>double</cd:NativeType>
@@ -1010,6 +1050,9 @@
                               </cd:Field>
                               <cd:Field name="Ref_Pulse_Voigt_Sigma_Amplitude">
                                 <cd:Type namexml="Ref_Pulse_Voigt_Sigma_Amplitude">
+                                <cd:Attribute name="unit">
+                                    <cd:Optional />
+                                  </cd:Attribute>
                                   <cd:Float format="ascii">
                                     <cd:Description>Sigma of amplitude retrieved by the Voigt fit.</cd:Description>
                                     <cd:NativeType>double</cd:NativeType>
@@ -1019,6 +1062,9 @@
                               </cd:Field>
                               <cd:Field name="Ref_Pulse_Voigt_Sigma_Offset">
                                 <cd:Type namexml="Ref_Pulse_Voigt_Sigma_Offset">
+                                <cd:Attribute name="unit">
+                                    <cd:Optional />
+                                  </cd:Attribute>
                                   <cd:Float format="ascii">
                                     <cd:Description>Sigma of offset retrieved by the Voigt fit.</cd:Description>
                                     <cd:NativeType>double</cd:NativeType>
@@ -1214,6 +1260,9 @@
                                         </cd:Field>
                                         <cd:Field name="Voigt_Sigma_Centroid">
                                           <cd:Type namexml="Voigt_Sigma_Centroid">
+                                            <cd:Attribute name="unit">
+                                              <cd:Optional />
+                                            </cd:Attribute>
                                             <cd:Float format="ascii">
                                               <cd:Description>Sigma of centroid retrieved by the
                                                 Voigt fit.</cd:Description>
@@ -1224,6 +1273,9 @@
                                         </cd:Field>
                                         <cd:Field name="Voigt_Sigma_Amplitude">
                                           <cd:Type namexml="Voigt_Sigma_Amplitude">
+                                            <cd:Attribute name="unit">
+                                              <cd:Optional />
+                                            </cd:Attribute>
                                             <cd:Float format="ascii">
                                               <cd:Description>Sigma of amplitude retrieved by the
                                                 Voigt fit.</cd:Description>
@@ -1234,6 +1286,9 @@
                                         </cd:Field>
                                         <cd:Field name="Voigt_Sigma_Offset">
                                           <cd:Type namexml="Voigt_Sigma_Offset">
+                                            <cd:Attribute name="unit">
+                                              <cd:Optional />
+                                            </cd:Attribute>
                                             <cd:Float format="ascii">
                                               <cd:Description>Sigma of offset retrieved by the Voigt
                                                 fit.</cd:Description>
@@ -1411,7 +1466,9 @@
                     </cd:Field>
                     <cd:Field name="Min_Mie_Reference_Pulse_Zero_Freq_Response">
                       <cd:Type namexml="Min_Mie_Reference_Pulse_Zero_Freq_Response">
-                        <cd:Attribute name="unit" />
+                        <cd:Attribute name="unit">
+                          <cd:Optional />
+                        </cd:Attribute>
                         <cd:Float format="ascii">
                           <cd:Description>Minimum zero frequency reponse of internal calibration</cd:Description>
                           <cd:Unit>pixel</cd:Unit>
@@ -1422,7 +1479,9 @@
                     </cd:Field>
                     <cd:Field name="Max_Mie_Reference_Pulse_Zero_Freq_Response">
                       <cd:Type namexml="Max_Mie_Reference_Pulse_Zero_Freq_Response">
-                        <cd:Attribute name="unit" />
+                        <cd:Attribute name="unit">
+                          <cd:Optional />
+                        </cd:Attribute>
                         <cd:Float format="ascii">
                           <cd:Description>Maximum zero frequency reponse of internal calibration</cd:Description>
                           <cd:Unit>pixel</cd:Unit>

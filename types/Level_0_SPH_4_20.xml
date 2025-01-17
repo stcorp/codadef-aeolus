@@ -1,0 +1,659 @@
+<?xml version="1.0"?>
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="ascii" name="Level_0_SPH_4_20" last-modified="2018-06-20">
+  <cd:Field name="sph_descriptor_title">
+    <cd:Text>
+      <cd:Description>SPH_DESCRIPTOR=</cd:Description>
+      <cd:FixedValue>SPH_DESCRIPTOR=</cd:FixedValue>
+      <cd:ByteSize>15</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="quote_1">
+    <cd:Text>
+      <cd:Description>quotation mark</cd:Description>
+      <cd:FixedValue>"</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="sph_descriptor">
+    <cd:Text>
+      <cd:Description>"AEOLUS_L0__SPECIFIC_HEADER" (SPH descriptor ASCII string describing the product.)</cd:Description>
+      <cd:FixedValue>AEOLUS_L0__SPECIFIC_HEADER  </cd:FixedValue>
+      <cd:ByteSize>28</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="quote_2">
+    <cd:Text>
+      <cd:Description>quotation mark</cd:Description>
+      <cd:FixedValue>"</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="newline_char_1">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="doi_descriptor_title">
+    <cd:Text>
+      <cd:Description>DOI=</cd:Description>
+      <cd:FixedValue>DOI=</cd:FixedValue>
+      <cd:ByteSize>4</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="quote_3">
+    <cd:Text>
+      <cd:Description>quotation mark</cd:Description>
+      <cd:FixedValue>"</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="doi_descriptor">
+    <cd:Text>
+      <cd:Description>Digital Object Identifier code associated with the dataset to which this product belongs</cd:Description>
+      <cd:ByteSize>25</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="quote_4">
+    <cd:Text>
+      <cd:Description>quotation mark</cd:Description>
+      <cd:FixedValue>"</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="newline_char_2">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="start_lat_title">
+    <cd:Text>
+      <cd:Description>START_LAT=</cd:Description>
+      <cd:FixedValue>START_LAT=</cd:FixedValue>
+      <cd:ByteSize>10</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="start_lat">
+    <cd:Integer>
+      <cd:Description>WGS84 latitude of first satellite nadir point at the sensing start time of the MPH (positive North)</cd:Description>
+      <cd:Unit>1e-6 degrees_north</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+        <cd:Unit>degrees_north</cd:Unit>
+      </cd:Conversion>
+      <cd:ByteSize>11</cd:ByteSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="start_lat_units">
+    <cd:Text>
+      <cd:FixedValue>\07410-6DegN\076</cd:FixedValue>
+      <cd:ByteSize>10</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="newline_char_3">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="start_long_title">
+    <cd:Text>
+      <cd:Description>START_LONG=</cd:Description>
+      <cd:FixedValue>START_LONG=</cd:FixedValue>
+      <cd:ByteSize>11</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="start_long">
+    <cd:Integer>
+      <cd:Description>WGS84 longitude of first satellite nadir point at the sensing start time of the MPH (positive East, 0=Greenwich)</cd:Description>
+      <cd:Unit>1e-6 degrees_east</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+        <cd:Unit>degrees_east</cd:Unit>
+      </cd:Conversion>
+      <cd:ByteSize>11</cd:ByteSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="start_long_units">
+    <cd:Text>
+      <cd:FixedValue>\07410-6DegE\076</cd:FixedValue>
+      <cd:ByteSize>10</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="newline_char_4">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="stop_lat_title">
+    <cd:Text>
+      <cd:Description>STOP_LAT=</cd:Description>
+      <cd:FixedValue>STOP_LAT=</cd:FixedValue>
+      <cd:ByteSize>9</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="stop_lat">
+    <cd:Integer>
+      <cd:Description>WGS84 latitude of first satellite nadir point at the sensing stop time of the MPH (positive North)</cd:Description>
+      <cd:Unit>1e-6 degrees_north</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+        <cd:Unit>degrees_north</cd:Unit>
+      </cd:Conversion>
+      <cd:ByteSize>11</cd:ByteSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="stop_lat_units">
+    <cd:Text>
+      <cd:FixedValue>\07410-6DegN\076</cd:FixedValue>
+      <cd:ByteSize>10</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="newline_char_5">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="stop_long_title">
+    <cd:Text>
+      <cd:Description>STOP_LONG=</cd:Description>
+      <cd:FixedValue>STOP_LONG=</cd:FixedValue>
+      <cd:ByteSize>10</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="stop_long">
+    <cd:Integer>
+      <cd:Description>WGS84 longitude of first satellite nadir point at the sensing stop time of the MPH (positive East, 0=Greenwich)</cd:Description>
+      <cd:Unit>1e-6 degrees_east</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+        <cd:Unit>degrees_east</cd:Unit>
+      </cd:Conversion>
+      <cd:ByteSize>11</cd:ByteSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="stop_long_units">
+    <cd:Text>
+      <cd:FixedValue>\07410-6DegE\076</cd:FixedValue>
+      <cd:ByteSize>10</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="newline_char_6">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="sat_track_title">
+    <cd:Text>
+      <cd:Description>SAT_TRACK=</cd:Description>
+      <cd:FixedValue>SAT_TRACK=</cd:FixedValue>
+      <cd:ByteSize>10</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="sat_track">
+    <cd:Float>
+      <cd:Description>Sub-satellite heading at the sensing start time in the MPH</cd:Description>
+      <cd:Unit>degrees</cd:Unit>
+      <cd:ByteSize>15</cd:ByteSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="sat_track_units">
+    <cd:Text>
+      <cd:FixedValue>\074deg\076</cd:FixedValue>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="newline_char_7">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="spare_1">
+    <cd:Text>
+      <cd:Description>Spare</cd:Description>
+      <cd:ByteSize>50</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="newline_char_8">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="isp_tf_crc_errors_significant_title">
+    <cd:Text>
+      <cd:Description>ISP_TF_CRC_ERRORS_SIGNIFICANT=</cd:Description>
+      <cd:FixedValue>ISP_TF_CRC_ERRORS_SIGNIFICANT=</cd:FixedValue>
+      <cd:ByteSize>30</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="isp_tf_crc_errors_significant">
+    <cd:Integer>
+      <cd:Description>'1' or '0'. Indicates if number of ISPs with CRC errors in Transfer Frames reported by FEP exceeds treshold</cd:Description>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_char_9">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="missing_isps_significant_title">
+    <cd:Text>
+      <cd:Description>MISSING_ISPS_SIGNIFICANT=</cd:Description>
+      <cd:FixedValue>MISSING_ISPS_SIGNIFICANT=</cd:FixedValue>
+      <cd:ByteSize>25</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="missing_isps_significant">
+    <cd:Integer>
+      <cd:Description>'1' or '0'. Indicates if number of missing ISPs exceeds treshold</cd:Description>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_char_10">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="isp_crc_errors_significant_title">
+    <cd:Text>
+      <cd:Description>ISP_CRC_ERRORS_SIGNIFICANT=</cd:Description>
+      <cd:FixedValue>ISP_CRC_ERRORS_SIGNIFICANT=</cd:FixedValue>
+      <cd:ByteSize>27</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="isp_crc_errors_significant">
+    <cd:Integer>
+      <cd:Description>'1' or '0'. Indicates if number of ISPs with CRC errors in SP exceeds treshold</cd:Description>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_char_11">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="rs_corrections_significant_title">
+    <cd:Text>
+      <cd:Description>RS_CORRECTIONS_SIGNIFICANT=</cd:Description>
+      <cd:FixedValue>RS_CORRECTIONS_SIGNIFICANT=</cd:FixedValue>
+      <cd:ByteSize>27</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="rs_corrections_significant">
+    <cd:Integer>
+      <cd:Description>'1' or '0'. Indicates if number of ISPs with Reed Solomon corrections exceeds treshold</cd:Description>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_char_12">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="spare_2">
+    <cd:Text>
+      <cd:Description>Spare</cd:Description>
+      <cd:ByteSize>50</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="newline_char_13">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="num_tf_crc_error_isps_title">
+    <cd:Text>
+      <cd:Description>NUM_TF_CRC_ERROR_ISPS=</cd:Description>
+      <cd:FixedValue>NUM_TF_CRC_ERROR_ISPS=</cd:FixedValue>
+      <cd:ByteSize>22</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="num_tf_crc_error_isps">
+    <cd:Integer>
+      <cd:Description>Number of ISPs containing Transfer Frames with CRC errors as reported by the FEP</cd:Description>
+      <cd:ByteSize>11</cd:ByteSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_char_14">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="tf_crc_error_isps_thresh_title">
+    <cd:Text>
+      <cd:Description>TF_CRC_ERROR_ISPS_THRESH=</cd:Description>
+      <cd:FixedValue>TF_CRC_ERROR_ISPS_THRESH=</cd:FixedValue>
+      <cd:ByteSize>25</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="tf_crc_error_isps_thresh">
+    <cd:Float>
+      <cd:Description>Threshold at which number if ISPs containing Transfer Frame CRC errors is considered significant (in percent)</cd:Description>
+      <cd:Unit>%</cd:Unit>
+      <cd:ByteSize>15</cd:ByteSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="tf_crc_error_isps_thresh_units">
+    <cd:Text>
+      <cd:FixedValue>\074%\076</cd:FixedValue>
+      <cd:ByteSize>3</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="newline_char_15">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="number_missing_isps_title">
+    <cd:Text>
+      <cd:Description>NUMBER_MISSING_ISPS=</cd:Description>
+      <cd:FixedValue>NUMBER_MISSING_ISPS=</cd:FixedValue>
+      <cd:ByteSize>20</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="number_missing_isps">
+    <cd:Integer>
+      <cd:Description>Number of missing ISPs, as determined by header counters</cd:Description>
+      <cd:ByteSize>11</cd:ByteSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_char_16">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="missing_isps_thresh_title">
+    <cd:Text>
+      <cd:Description>MISSING_ISPS_THRESH=</cd:Description>
+      <cd:FixedValue>MISSING_ISPS_THRESH=</cd:FixedValue>
+      <cd:ByteSize>20</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="missing_isps_thresh">
+    <cd:Float>
+      <cd:Description>Treshold at which number of ISPs missing is considered significant</cd:Description>
+      <cd:Unit>%</cd:Unit>
+      <cd:ByteSize>15</cd:ByteSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="missing_isps_thresh_units">
+    <cd:Text>
+      <cd:FixedValue>\074%\076</cd:FixedValue>
+      <cd:ByteSize>3</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="newline_char_17">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="num_isp_crc_errors_title">
+    <cd:Text>
+      <cd:Description>NUM_ISP_CRC_ERRORS=</cd:Description>
+      <cd:FixedValue>NUM_ISP_CRC_ERRORS=</cd:FixedValue>
+      <cd:ByteSize>19</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="num_isp_crc_errors">
+    <cd:Integer>
+      <cd:Description>Number of ISPs with SP CRC errors or incorrect SP length or errors in key header fields</cd:Description>
+      <cd:ByteSize>11</cd:ByteSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_char_18">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="isp_crc_thresh_title">
+    <cd:Text>
+      <cd:Description>ISP_CRC_THRESH=</cd:Description>
+      <cd:FixedValue>ISP_CRC_THRESH=</cd:FixedValue>
+      <cd:ByteSize>15</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="isp_crc_thresh">
+    <cd:Float>
+      <cd:Description>Treshold at which number SP CRC or header errors is considered significant</cd:Description>
+      <cd:Unit>%</cd:Unit>
+      <cd:ByteSize>15</cd:ByteSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="isp_crc_thresh_units">
+    <cd:Text>
+      <cd:FixedValue>\074%\076</cd:FixedValue>
+      <cd:ByteSize>3</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="newline_char_19">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="num_rs_isps_title">
+    <cd:Text>
+      <cd:Description>NUM_RS_ISPS=</cd:Description>
+      <cd:FixedValue>NUM_RS_ISPS=</cd:FixedValue>
+      <cd:ByteSize>12</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="num_rs_isps">
+    <cd:Integer>
+      <cd:Description>Number of ISPs with Transfer Frame Reed Solomon corrections as reported by FEP</cd:Description>
+      <cd:ByteSize>11</cd:ByteSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_char_20">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="rs_thresh_title">
+    <cd:Text>
+      <cd:Description>RS_THRESH=</cd:Description>
+      <cd:FixedValue>RS_THRESH=</cd:FixedValue>
+      <cd:ByteSize>10</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="rs_thresh">
+    <cd:Float>
+      <cd:Description>Threshold at which number of ISPs with Reed Solomon corrections is considered significant</cd:Description>
+      <cd:Unit>%</cd:Unit>
+      <cd:ByteSize>15</cd:ByteSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="rs_thresh_units">
+    <cd:Text>
+      <cd:FixedValue>\074%\076</cd:FixedValue>
+      <cd:ByteSize>3</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="newline_char_21">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="spare_3">
+    <cd:Text>
+      <cd:Description>Spare</cd:Description>
+      <cd:ByteSize>100</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="newline_char_22">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+</cd:Record>
