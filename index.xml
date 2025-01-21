@@ -2129,6 +2129,9 @@
         <cd:MatchData offset="17">AUX_OWV_1B</cd:MatchData>
         <cd:MatchData offset="95">SD-DoRIT-L1B-006 v4.19 </cd:MatchData>
       </cd:DetectionRule>
+    </cd:ProductDefinition>
+    <cd:ProductDefinition id="AUX_OWV_1B_04_20" format="binary" version="13">
+      <cd:Description>This definition is based on version 4/20 of IODD AED-SD-DoRIT-L1B-008</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData offset="0">PRODUCT="AE_</cd:MatchData>
         <cd:MatchData offset="17">AUX_OWV_1B</cd:MatchData>
@@ -2194,6 +2197,9 @@
       <cd:DetectionRule>
         <cd:MatchData path="/{http://www.esa.int/schemas/ae/AUX_OWV_1B}Earth_Explorer_Header@schemaversion">04.19</cd:MatchData>
       </cd:DetectionRule>
+    </cd:ProductDefinition>
+      <cd:ProductDefinition id="AUX_OWV_1B_HDR_04_20" format="xml" version="4">
+      <cd:Description>This definition is based on version 4/09 of IODD AED-SD-DoRIT-L1B-008</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData path="/{http://www.esa.int/schemas/ae/AUX_OWV_1B}Earth_Explorer_Header@schemaversion">04.20</cd:MatchData>
       </cd:DetectionRule>
