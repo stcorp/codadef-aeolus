@@ -1,0 +1,184 @@
+<?xml version="1.0"?>
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="binary" name="Level_2BC_Rayleigh_Wind_PCD_ADSR_03_97" last-modified="2025-12-10">
+  <cd:Field name="wind_result_id">
+    <cd:Integer>
+      <cd:Description>unique L2B wind result identification number for this L2B file</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="start_of_observation_datetime">
+    <cd:Time timeformat="binary_envisat_datetime">
+      <cd:Description>Start date and time of Measurement</cd:Description>
+      <ct:NamedTest id="RangeSecond" path="seconds"/>
+      <ct:NamedTest id="RangeMicroSecond" path="microseconds"/>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="rayleigh_wind_qc">
+    <cd:Record>
+      <cd:Description>Structure in which the wind retrieval output QC parameters for the Rayleigh channel are collected</cd:Description>
+      <cd:Field name="hlos_error_estimate">
+        <cd:Integer>
+          <cd:Description>Error estimate reported by the Rayleigh processing algorithm, given in cm/s and rounded to the nearest integer</cd:Description>
+          <cd:Unit>cm/s</cd:Unit>
+          <cd:BitSize>16</cd:BitSize>
+          <cd:NativeType>uint16</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="reference_hlos">
+        <cd:Integer>
+          <cd:Description>Reference HLOS wind taken from the matching profile in the AUX_MET file that was used for processing (and as is used for calculating O-B statistics), given in cm/s and rounded to the nearest integer.</cd:Description>
+          <cd:Unit>cm/s</cd:Unit>
+          <cd:BitSize>16</cd:BitSize>
+          <cd:NativeType>int16</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="flags1">
+        <cd:Integer>
+          <cd:Description>First flag describing Rayleigh processing results for the current wind result. Bit 1: missing usefull reference pulse signal Rayleigh Channel A, Bit 2: missing usefull reference pulse signal Rayleigh Channel B, Bit 3: missing usefull signal Rayleigh Channel A, Bit 4: missing usefull signal Rayleigh Channel B, Bit 5: threshold check on RRmes_weighted failed, Bit 6: missing RRmes_weighted value, Bit 7: missing RR_RefPulse_weighted value, Bit 8: missing p_ref value</cd:Description>
+          <cd:BitSize>8</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="flags2">
+        <cd:Integer>
+          <cd:Description>Second flag describing Rayleigh processing results for the current wind result. Bit 1: missing T_ref value, Bit 2: missing rho_weighted value, Bit 3: corr0 threshold failed, Bit 4: corr0dR threshold failed, Bit 5: corr0dT threshold failed, Bit 6: corr0dP threshold failed, Bit 7: corr0drho threshold failed, Bit 8: corr0_RefPulse threshold failed</cd:Description>
+          <cd:BitSize>8</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="flags3">
+        <cd:Integer>
+          <cd:Description>Third flag describing Rayleigh processing results for the current wind result. Bit 1: missing iliad_los_velocity value, Bit 2: missing spacecraft_los_velocity value, Bit 3: missing ground_corr_velocity value, Bit 4: missing internal_reference_los_velocity value, Bit 5: the wind was flagged invalid since it includes measurements that may have ground echoes according to the DEM as reported by the AUX_MET_12 input file, Bit 6: the wind was flagged invalid since it includes measurements that may have ground echoes according to the DEM as reported by the L1B product, Bit 7: the wind was flagged invalid since it contains measurements for which the L1B product reported ground echoes at this range bin level or above, Bit 8: the wind was flagged invalid because the classification “cloudy” is not trusted for the Rayleigh channel (the user has set Flag_Cloudy_Rayleigh_Results_Invalid to True)</cd:Description>
+          <cd:BitSize>8</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="flags4">
+        <cd:Integer>
+          <cd:Description>Fourth flag describing Rayleigh processing results for the current wind result. Bit 1: the wind was manually flagged invalid since this range bin is currently untrusted due to a “hot pixel”, Bit 2: the wind was in the O-B bias check automatically flagged invalid. This range bin is currently untrusted because it may be affected by an uncorrected “hot pixel”, Bit 3: the wind result was flagged invalid due to blacklisting, Bit 4: flagged invalid due to climatological sanity check, Bit 5: flagged invalid due to large O-B bias during moonblinding, Bit 6: The accumulated los_bias_correction was missing, indicating that one of the bias correction calculations failed, Bit 7: Obs. level refined scat. ratio was based on MieCore2, Bit 8: Obs. level refined scat. ratio was based on MieCore3</cd:Description>
+          <cd:BitSize>8</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="input_screening_flags1">
+        <cd:Integer>
+          <cd:Description>First input screening flag describing in detail which condition caused this current wind result to be invalid. Bit 1: L1B_Laser_Freq_Unlocked_Check failed (BRC level check), Bit 2: L1B_Ref_Pulses_Unlocked_Check failed (BRC level check), Bit 3: L1B_Laser_Freq_Offset_Check failed (BRC level check), Bit 4: L1B_Laser_UV_Energy_Check failed (BRC level check), Bit 5: L1B_Laser_Freq_Offs_Stdev_Check failed (BRC level check), Bit 6: L1B_Laser_UV_Energy_Stdev_Check failed (BRC level check), Bit 7: L1B_Mie_Mean_Emit_Freq_Check failed (BRC level check), Bit 8: L1B_Mie_Emit_Freq_Stdev_Check failed (BRC level check).</cd:Description>
+          <cd:BitSize>8</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="input_screening_flags2">
+        <cd:Integer>
+          <cd:Description>Second input screening flag describing in detail which condition caused this current wind result to be invalid. Bit 1: L1B_Rayleigh_Mean_Emit_Freq_Check failed (BRC level check), Bit 2: L1B_RayleighEmitFreqStdev_Check failed (BRC level check), Bit 3: L1B_Sat_Not_on_Target_Check failed (BRC level check), Bit 4: L1B_Mie_Corrupt_Check failed (BRC level check), Bit 5: L1B_Rayleigh_Corrupt_Check failed (BRC level check), Bit 6: L1B_Mie_Ref_PulsesCorrupt_Check failed (BRC level check), Bit 7: L1B_Rayl_RefPulsesCorrupt_Check failed (BRC level check), Bit 8: L1B_Mie_Invalid_Meas_Check failed (BRC level check).</cd:Description>
+          <cd:BitSize>8</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="input_screening_flags3">
+        <cd:Integer>
+          <cd:Description>Third input screening flag describing in detail which condition caused this current wind result to be invalid. Bit 1: L1B_Mie_Invalid_RefPulses_Check failed (BRC level check), Bit 2: L1B_Rayl_Invalid_Meas_Check failed (BRC level check), Bit 3: L1B_Rayl_InvalidRefPulses_Check failed (BRC level check), Bit 4: num_rayleigh_invalid_ref_pulses check failed (meas level check), Bit 5: avg_laser_freq_offset check failed (meas level check), Bit 6: avg_UV_energy check failed (meas level check), Bit 7: laser_freq_offset_std_dev check failed (meas level check), Bit 8: UV_energy_std_dev check failed (meas level check).</cd:Description>
+          <cd:BitSize>8</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="input_screening_flags4">
+        <cd:Integer>
+          <cd:Description>Fourth input screening flag describing in detail which condition caused this current wind result to be invalid. Bit 1: vel_of_att_uncertainty_error check failed (meas level check), Bit 2: rayleigh_mean_emitted_freq check failed (meas level check), Bit 3: rayleigh_emitted_freq_std_dev check failed (meas level check), Bit 4: flag Rayl on mie_emit_freq_stdev check failed (meas level check), Bit 5: moon blinding check failed (meas level check), Bit 6: reserved (always set to 0), Bit 7: reserved (always set to 0), Bit 8: reserved (always set to 0).</cd:Description>
+          <cd:BitSize>8</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="input_screening_flags5">
+        <cd:Integer>
+          <cd:Description>Fifth input screening flag describing in detail which condition caused this current wind result to be invalid. Bit 1: Rayleigh_meas_invalid check failed (meas bin level check), Bit 2: Rayleigh_snr_channel_A check failed (meas bin level check), Bit 3: Rayleigh_snr_channel_B check failed (meas bin level check), Bit 4: Rayleigh_Response on meas. level check failed (meas bin level check), Bit 5: reserved (always set to 0), Bit 6: reserved (always set to 0), Bit 7: reserved (always set to 0), Bit 8: reserved (always set to 0).</cd:Description>
+          <cd:BitSize>8</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="input_screening_flags6">
+        <cd:Integer>
+          <cd:Description>Sixth input screening flag describing in detail which condition caused this current wind result to be invalid. Bit 1: Overall validity flag raised for any meas. included in this wind (copied L1B QC bit), Bit 2: SNR ratio below given threshold flag raised for any meas. included in this wind (copied L1B QC bit), Bit 3: Data saturation found flag raised for any meas. included in this wind (copied L1B QC bit), Bit 4: Data spike found flag raised for any meas. included in this wind (copied L1B QC bit), Bit 5: reserved (always set to 0), Bit 6: Source packet invalid flag raised for any meas. included in this wind (copied L1B QC bit), Bit 7: Laser frequency not locked flag raised for any meas. included in this wind (copied L1B QC bit), Bit 8: Spacecraft attitude not on target raised for any meas. included in this wind (copied L1B QC bit).</cd:Description>
+          <cd:BitSize>8</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="scattering_ratio">
+        <cd:Float>
+          <cd:Description>Scattering_Ratio. Note that this value will always be available if valid signals are present, also in case the value used in Mie decontamination for this wind result is forced to 1.</cd:Description>
+          <cd:BitSize>64</cd:BitSize>
+          <cd:NativeType>double</cd:NativeType>
+          <ct:NamedTest id="FloatIsFinite"/>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="applied_sr_method">
+        <cd:Integer>
+          <cd:Description>Scattering _Ratio_Method used to determine the Scattering_Ratio rho based on the signals used to derive this wind result as has been reported in the Scattering_Ratio field.</cd:Description>
+          <cd:BitSize>8</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="applied_dsr_method">
+        <cd:Integer>
+          <cd:Description>Scattering_Ratio_Method used to determine the Scattering_Ratio rho as has been applied for Mie signal decontamination for this wind result.</cd:Description>
+          <cd:BitSize>8</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="rayl_snr_a">
+        <cd:Float>
+          <cd:Description>Estimated SNR value for the Rayleigh A channel, using the same accumulation as was used for deriving the current wind result.</cd:Description>
+          <cd:BitSize>64</cd:BitSize>
+          <cd:NativeType>double</cd:NativeType>
+          <ct:NamedTest id="FloatIsFinite"/>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="rayl_snr_b">
+        <cd:Float>
+          <cd:Description>Estimated SNR value for the Rayleigh B channel, using the same accumulation as was used for deriving the current wind result.</cd:Description>
+          <cd:BitSize>64</cd:BitSize>
+          <cd:NativeType>double</cd:NativeType>
+          <ct:NamedTest id="FloatIsFinite"/>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="rr_measured">
+        <cd:Float>
+          <cd:Description>Rayleigh response used as input for the atmospheric path part of the wind retrieval calculation (without additional bias corrections)</cd:Description>
+          <cd:BitSize>64</cd:BitSize>
+          <cd:NativeType>double</cd:NativeType>
+          <ct:NamedTest id="FloatIsFinite"/>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="rr_refpulse">
+        <cd:Float>
+          <cd:Description>Reference Rayleigh Response derived from the internal reference Rayleigh signal</cd:Description>
+          <cd:BitSize>64</cd:BitSize>
+          <cd:NativeType>double</cd:NativeType>
+          <ct:NamedTest id="FloatIsFinite"/>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="rr_mie_emit_freq">
+        <cd:Float>
+          <cd:Description>Reference Rayleigh Response (RR) derived RR_mie_emit_freq from the Mie emit frequency as reported by the L1B product on measurement level.</cd:Description>
+          <cd:BitSize>64</cd:BitSize>
+          <cd:NativeType>double</cd:NativeType>
+          <ct:NamedTest id="FloatIsFinite"/>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="spare">
+        <cd:Raw>
+          <cd:Description>Spare</cd:Description>
+          <cd:BitSize>8</cd:BitSize>
+        </cd:Raw>
+        <cd:Hidden/>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="spare">
+    <cd:Raw>
+      <cd:Description>Spare</cd:Description>
+      <cd:BitSize>160</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+</cd:Record>
