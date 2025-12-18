@@ -1,0 +1,468 @@
+<?xml version="1.0"?>
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="xml" last-modified="2025-12-16" name="Level_1B_Processing_RRC_Parameters_04_21" namexml="Level_1B_Processing_RRC_Parameters">
+  <cd:Description>Processing parameters for Rayleigh Response Calibration</cd:Description>
+  <cd:Field name="File_Type">
+    <cd:Text namexml="File_Type">
+      <cd:Description>File type string</cd:Description>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="Sph_Descriptor">
+    <cd:Text namexml="Sph_Descriptor">
+      <cd:Description>ASCII string describing the product</cd:Description>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="Min_Valid_Freq_Per_Cal">
+    <cd:Type namexml="Min_Valid_Freq_Per_Cal">
+      <cd:Integer format="ascii">
+        <cd:Description>Minimum valid frequencies per calibration</cd:Description>
+        <cd:NativeType>uint32</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Min_Valid_Ground_Freq_Per_Cal">
+    <cd:Type namexml="Min_Valid_Ground_Freq_Per_Cal">
+      <cd:Integer format="ascii">
+        <cd:Description>Minimum valid ground frequencies per calibration</cd:Description>
+        <cd:NativeType>uint32</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Min_Valid_Reference_Pulse_Freq_Per_Cal">
+    <cd:Type namexml="Min_Valid_Reference_Pulse_Freq_Per_Cal">
+      <cd:Integer format="ascii">
+        <cd:Description>Minimum valid frequencies per reference pulse calibration</cd:Description>
+        <cd:NativeType>uint32</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Min_Valid_Measurements_Per_Freq">
+    <cd:Type namexml="Min_Valid_Measurements_Per_Freq">
+      <cd:Integer format="ascii">
+        <cd:Description>Minimum valid measurements per frequency</cd:Description>
+        <cd:NativeType>uint32</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Min_Valid_Ground_Measurements_Per_Freq">
+    <cd:Type namexml="Min_Valid_Ground_Measurements_Per_Freq">
+      <cd:Integer format="ascii">
+        <cd:Description>Minimum valid ground measurements per frequency</cd:Description>
+        <cd:NativeType>uint32</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Min_Valid_Reference_Pulses_Per_Freq">
+    <cd:Type namexml="Min_Valid_Reference_Pulses_Per_Freq">
+      <cd:Integer format="ascii">
+        <cd:Description>Minimum valid pulses per frequency</cd:Description>
+        <cd:NativeType>uint32</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Rayleigh_Response_Calibration_Ranges">
+    <cd:Record namexml="Rayleigh_Response_Calibration_Ranges">
+      <cd:Description>Processing parameters for Rayleigh Response Calibration</cd:Description>
+      <cd:Field name="Min_Rayleigh_Measurement_Mean_Sensitivity">
+        <cd:Type namexml="Min_Rayleigh_Measurement_Mean_Sensitivity">
+          <cd:Attribute name="unit">
+            <cd:FixedValue>1/GHz</cd:FixedValue>
+          </cd:Attribute>
+          <cd:Float format="ascii">
+            <cd:Description>Minimum mean sensitivity of atmosperic echo</cd:Description>
+            <cd:Unit>1/GHz</cd:Unit>
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="Min_Rayleigh_Measurement_Zero_Freq_Response">
+        <cd:Type namexml="Min_Rayleigh_Measurement_Zero_Freq_Response">
+          <cd:Float format="ascii">
+            <cd:Description>Minimum zero frequency reponse of atmosperic echo</cd:Description>
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="Max_Rayleigh_Measurement_Mean_Sensitivity">
+        <cd:Type namexml="Max_Rayleigh_Measurement_Mean_Sensitivity">
+          <cd:Attribute name="unit">
+            <cd:FixedValue>1/GHz</cd:FixedValue>
+          </cd:Attribute>
+          <cd:Float format="ascii">
+            <cd:Description>Maximum mean sensitivity of atmosperic echo</cd:Description>
+            <cd:Unit>1/GHz</cd:Unit>
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="Max_Rayleigh_Measurement_Zero_Freq_Response">
+        <cd:Type namexml="Max_Rayleigh_Measurement_Zero_Freq_Response">
+          <cd:Float format="ascii">
+            <cd:Description>Maximum zero frequency reponse of atmosperic echo</cd:Description>
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="Max_Rayleigh_Measurement_Error_Response_Std_Dev">
+        <cd:Type namexml="Max_Rayleigh_Measurement_Error_Response_Std_Dev">
+          <cd:Float format="ascii">
+            <cd:Description>Maximum error response standard deviation of atmosperic echo</cd:Description>
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="Min_Rayleigh_Ground_Measurement_Mean_Sensitivity">
+        <cd:Type namexml="Min_Rayleigh_Ground_Measurement_Mean_Sensitivity">
+          <cd:Attribute name="unit">
+            <cd:FixedValue>1/GHz</cd:FixedValue>
+          </cd:Attribute>
+          <cd:Float format="ascii">
+            <cd:Description>Minimum mean sensitivity of ground echo</cd:Description>
+            <cd:Unit>1/GHz</cd:Unit>
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="Min_Rayleigh_Ground_Measurement_Zero_Freq_Response">
+        <cd:Type namexml="Min_Rayleigh_Ground_Measurement_Zero_Freq_Response">
+          <cd:Float format="ascii">
+            <cd:Description>Minimum zero frequency reponse of ground echo</cd:Description>
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="Max_Rayleigh_Ground_Measurement_Mean_Sensitivity">
+        <cd:Type namexml="Max_Rayleigh_Ground_Measurement_Mean_Sensitivity">
+          <cd:Attribute name="unit">
+            <cd:FixedValue>1/GHz</cd:FixedValue>
+          </cd:Attribute>
+          <cd:Float format="ascii">
+            <cd:Description>Maximum mean sensitivity of ground echo</cd:Description>
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="Max_Rayleigh_Ground_Measurement_Zero_Freq_Response">
+        <cd:Type namexml="Max_Rayleigh_Ground_Measurement_Zero_Freq_Response">
+          <cd:Float format="ascii">
+            <cd:Description>Maximum zero frequency reponse of ground echo</cd:Description>
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="Max_Rayleigh_Ground_Measurement_Error_Response_Std_Dev">
+        <cd:Type namexml="Max_Rayleigh_Ground_Measurement_Error_Response_Std_Dev">
+          <cd:Float format="ascii">
+            <cd:Description>Maximum error response standard deviation of ground echo</cd:Description>
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="Min_Rayleigh_Reference_Pulse_Mean_Sensitivity">
+        <cd:Type namexml="Min_Rayleigh_Reference_Pulse_Mean_Sensitivity">
+          <cd:Attribute name="unit">
+            <cd:FixedValue>1/GHz</cd:FixedValue>
+          </cd:Attribute>
+          <cd:Float format="ascii">
+            <cd:Description>Minimum mean sensitivity of internal calibration</cd:Description>
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="Min_Rayleigh_Reference_Pulse_Zero_Freq_Response">
+        <cd:Type namexml="Min_Rayleigh_Reference_Pulse_Zero_Freq_Response">
+          <cd:Float format="ascii">
+            <cd:Description>Minimum zero frequency reponse of internal calibration</cd:Description>
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="Max_Rayleigh_Reference_Pulse_Mean_Sensitivity">
+        <cd:Type namexml="Max_Rayleigh_Reference_Pulse_Mean_Sensitivity">
+          <cd:Attribute name="unit">
+            <cd:FixedValue>1/GHz</cd:FixedValue>
+          </cd:Attribute>
+          <cd:Float format="ascii">
+            <cd:Description>Maximum mean sensitivity of internal calibration</cd:Description>
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="Max_Rayleigh_Reference_Pulse_Zero_Freq_Response">
+        <cd:Type namexml="Max_Rayleigh_Reference_Pulse_Zero_Freq_Response">
+          <cd:Float format="ascii">
+            <cd:Description>Maximum zero frequency reponse of internal calibration</cd:Description>
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="Max_Rayleigh_Reference_Pulse_Error_Response_Std_Dev">
+        <cd:Type namexml="Max_Rayleigh_Reference_Pulse_Error_Response_Std_Dev">
+          <cd:Float format="ascii">
+            <cd:Description>Maximum error response standard deviation of internal calibration</cd:Description>
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="Rayleigh_Fit_Upper_Frequency_Range">
+        <cd:Type namexml="Rayleigh_Fit_Upper_Frequency_Range">
+          <cd:Attribute name="unit">
+            <cd:FixedValue>GHz</cd:FixedValue>
+          </cd:Attribute>
+          <cd:Float format="ascii">
+            <cd:Description>Upper frequency range when computing the best fit</cd:Description>
+            <cd:Unit>GHz</cd:Unit>
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="Rayleigh_Fit_Lower_Frequency_Range">
+        <cd:Type namexml="Rayleigh_Fit_Lower_Frequency_Range">
+          <cd:Attribute name="unit">
+            <cd:FixedValue>GHz</cd:FixedValue>
+          </cd:Attribute>
+          <cd:Float format="ascii">
+            <cd:Description>Lower frequency range when computing the best fit</cd:Description>
+            <cd:Unit>GHz</cd:Unit>
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Type>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="Error_Fit_Degree">
+    <cd:Type namexml="Error_Fit_Degree">
+      <cd:Integer format="ascii">
+        <cd:Description>Degree of polynomial used for fitting of frequency step response errors, default setting: 5.</cd:Description>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Lower_Altitude_Limit">
+    <cd:Type namexml="Lower_Altitude_Limit">
+      <cd:Attribute name="unit"/>
+      <cd:Float format="ascii">
+        <cd:Description>RRC lower altitude limit</cd:Description>
+        <cd:Unit>m</cd:Unit>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Upper_Altitude_Limit">
+    <cd:Type namexml="Upper_Altitude_Limit">
+      <cd:Attribute name="unit"/>
+      <cd:Float format="ascii">
+        <cd:Description>RRC upper altitude limit</cd:Description>
+        <cd:Unit>m</cd:Unit>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Rayleigh_Land_Useful_Signal_Lower_Threshold">
+    <cd:Type namexml="Rayleigh_Land_Useful_Signal_Lower_Threshold">
+      <cd:Attribute name="unit">
+        <cd:Optional/>
+        <cd:FixedValue>ACCD counts</cd:FixedValue>
+      </cd:Attribute>
+      <cd:Float format="ascii">
+        <cd:Description>Threshold applied to coadded gound signal of a measurement if the surface indicates land surface. If the threshold is met, the signal is added to the sum of the ground signal on observation level</cd:Description>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Rayleigh_Water_Useful_Signal_Lower_Threshold">
+    <cd:Type namexml="Rayleigh_Water_Useful_Signal_Lower_Threshold">
+      <cd:Attribute name="unit">
+        <cd:Optional/>
+        <cd:FixedValue>ACCD counts</cd:FixedValue>
+      </cd:Attribute>
+      <cd:Float format="ascii">
+        <cd:Description>Threshold applied to coadded gound signal of a measurement if the surface indicates water/sea ice surface. If the threshold is met, the signal is added to the sum of the ground signal on observation level</cd:Description>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Rayleigh_Max_Ground_Echo_Bin_Thickness_Above_DEM">
+    <cd:Type namexml="Rayleigh_Max_Ground_Echo_Bin_Thickness_Above_DEM">
+      <cd:Attribute name="unit">
+        <cd:Optional/>
+        <cd:FixedValue>m</cd:FixedValue>
+      </cd:Attribute>
+      <cd:Float format="ascii">
+        <cd:Description>Threshold applied to a bin identified as ground bin candidate. If the threshold is not met, the signal of the bin is not added to the sum of the ground signal on observation level</cd:Description>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Maximum_Upper_DEM_Offset">
+    <cd:Type namexml="Maximum_Upper_DEM_Offset">
+      <cd:Attribute name="unit"/>
+      <cd:Float format="ascii">
+        <cd:Description>Maximum height difference that center of detected ground bin is allowed to be above center of DEM intersection bin.</cd:Description>
+        <cd:Unit>m</cd:Unit>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Maximum_Lower_DEM_Offset">
+    <cd:Type namexml="Maximum_Lower_DEM_Offset">
+      <cd:Attribute name="unit"/>
+      <cd:Float format="ascii">
+        <cd:Description>Maximum height difference that center of detected ground bin is allowed to be below center of DEM intersection bin.</cd:Description>
+        <cd:Unit>m</cd:Unit>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Maximum_DEM_Response_Shift">
+    <cd:Type namexml="Maximum_DEM_Response_Shift">
+      <cd:Float format="ascii">
+        <cd:Description>Maximum allowed response shift of ground bin candidates to DEM expected round bin response for Rayleigh data.</cd:Description>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Min_Rayleigh_Ground_Detection_Signal_Derivative">
+    <cd:Type namexml="Min_Rayleigh_Ground_Detection_Signal_Derivative">
+      <cd:Float format="ascii">
+        <cd:Description>Minimum derivative of Rayleigh signal shift for ground detection</cd:Description>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Max_Rayleigh_Ground_Detection_Response_Shift">
+    <cd:Type namexml="Max_Rayleigh_Ground_Detection_Response_Shift">
+      <cd:Float format="ascii">
+        <cd:Description>Maximum Rayleigh Response shift for ground detection</cd:Description>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Etalon_Temp_Range_Threshold">
+    <cd:Type namexml="Etalon_Temp_Range_Threshold">
+      <cd:Attribute name="unit">
+        <cd:Optional/>
+        <cd:FixedValue>C</cd:FixedValue>
+      </cd:Attribute>
+      <cd:Float format="ascii">
+        <cd:Description>RRC RSP Etalon range threshold</cd:Description>
+        <cd:Unit>degC</cd:Unit>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Outlier_Detection_Flag">
+    <cd:Type namexml="Outlier_Detection_Flag">
+      <cd:Integer format="ascii">
+        <cd:Description>Apply outlier detection algorithm on response TRUE/FALSE.</cd:Description>
+        <cd:NativeType>uint8</cd:NativeType>
+        <cd:Mapping string="FALSE" value="0"/>
+        <cd:Mapping string="False" value="0"/>
+        <cd:Mapping string="false" value="0"/>
+        <cd:Mapping string="TRUE" value="1"/>
+        <cd:Mapping string="True" value="1"/>
+        <cd:Mapping string="true" value="1"/>
+        <ct:NamedTest id="BooleanXmlTest"/>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Outlier_Detection_Atmosphere_Threshold">
+    <cd:Type namexml="Outlier_Detection_Atmosphere_Threshold">
+      <cd:Float format="ascii">
+        <cd:Description>Threshold value for maximum difference between calculated and ideal atmospheric response for a certain frequency step.</cd:Description>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Outlier_Detection_Ground_Threshold">
+    <cd:Type namexml="Outlier_Detection_Ground_Threshold">
+      <cd:Float format="ascii">
+        <cd:Description>Threshold value for maximum difference between calculated and ideal ground response for a certain frequency step.</cd:Description>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Outlier_Detection_Reference_Threshold">
+    <cd:Type namexml="Outlier_Detection_Reference_Threshold">
+      <cd:Float format="ascii">
+        <cd:Description>Threshold value for maximum difference between calculated and ideal reference pulse response for a certain frequency step.</cd:Description>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Scattering_Ratio_Quality_Control_Flag">
+    <cd:Type namexml="Scattering_Ratio_Quality_Control_Flag">
+      <cd:Integer format="ascii">
+        <cd:Description>Apply scattering ratio quality control to atmospheric data TRUE/FALSE.</cd:Description>
+        <cd:NativeType>uint8</cd:NativeType>
+        <cd:Mapping string="FALSE" value="0"/>
+        <cd:Mapping string="False" value="0"/>
+        <cd:Mapping string="false" value="0"/>
+        <cd:Mapping string="TRUE" value="1"/>
+        <cd:Mapping string="True" value="1"/>
+        <cd:Mapping string="true" value="1"/>
+        <ct:NamedTest id="BooleanXmlTest"/>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Scattering_Ratio_Threshold">
+    <cd:Type namexml="Scattering_Ratio_Threshold">
+      <cd:Float format="ascii">
+        <cd:Description>Threshold for maximum Mie scattering ratio used to discard data of Rayleigh atmospheric measurement bins.</cd:Description>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Rayleigh_Ideal_Calibration_Values">
+    <cd:Record>
+      <cd:Description>Ideal slope and intercept values used for RDB correction and outlier detection.</cd:Description>
+      <cd:Field name="Rayleigh_Atmospheric_Slope">
+        <cd:Type namexml="Rayleigh_Atmospheric_Slope">
+          <cd:Float format="ascii">
+            <cd:Description>Ideal atmospheric measurement mean sensitivity (slope of the best straight line of channel response)</cd:Description>
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="Rayleigh_Atmospheric_Offset">
+        <cd:Type namexml="Rayleigh_Atmospheric_Offset">
+          <cd:Float format="ascii">
+            <cd:Description>Ideal atmospheric measurement zero frequency response (y-intercept of the best straight line of channel response)</cd:Description>
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="Rayleigh_Internal_Slope">
+        <cd:Type namexml="Rayleigh_Internal_Slope">
+          <cd:Float format="ascii">
+            <cd:Description>Ideal internal reference pulse mean sensitivity (slope of the best straight line of channel response)</cd:Description>
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="Rayleigh_Internal_Offset">
+        <cd:Type namexml="Rayleigh_Internal_Offset">
+          <cd:Float format="ascii">
+            <cd:Description>Ideal internal reference pulse zero frequency response (y-intercept of the best straight line of channel response)</cd:Description>
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="Rayleigh_Ground_Slope">
+        <cd:Type namexml="Rayleigh_Ground_Slope">
+          <cd:Float format="ascii">
+            <cd:Description>Ideal ground measurement mean sensitivity (slope of the best straight line of channel response)</cd:Description>
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="Rayleigh_Ground_Offset">
+        <cd:Type namexml="Rayleigh_Ground_Offset">
+          <cd:Float format="ascii">
+            <cd:Description>Ideal ground measurement zero frequency response (y-intercept of the best straight line of channel response)</cd:Description>
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Type>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+</cd:Record>

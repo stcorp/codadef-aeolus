@@ -1,0 +1,366 @@
+<?xml version="1.0"?>
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07"
+  xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="binary" last-modified="2025-12-04"
+  name="Level_1B_Spike_Detection_GADS_04_21">
+  <cd:Field name="Num_Solar_Spikes_Mie">
+    <cd:Type namexml="Num_Solar_Spikes_Mie">
+      <cd:Integer>
+        <cd:Description>Number of detected solar spikes for Mie (N_SM)</cd:Description>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="List_Solar_Spikes_Mie">
+    <cd:Array namexml="List_Solar_Spikes_Mie">
+      <cd:Dimension>int(../Num_Solar_Spikes_Mie)</cd:Dimension>
+      <cd:Description>List of detected solar spikes for Mie</cd:Description>
+      <cd:Record>
+
+        <cd:Field name="BRC_Index">
+          <cd:Integer>
+            <cd:Description>Index of the BRC where the spike is detected</cd:Description>
+            <cd:BitSize>16</cd:BitSize>
+            <cd:NativeType>uint16</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="Measurement_Index">
+          <cd:Integer>
+            <cd:Description>Index of the measurement where the spike is detected</cd:Description>
+            <cd:BitSize>8</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="Column_Index">
+          <cd:Integer>
+            <cd:Description>Index of the ACCD column (0, …, 19), where the spike is detected</cd:Description>
+            <cd:BitSize>8</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="Count_Detected">
+          <cd:Integer>
+            <cd:Description>ACCD count of the detected spike before correction</cd:Description>
+            <cd:Unit>ACCD Counts</cd:Unit>
+            <cd:BitSize>16</cd:BitSize>
+            <cd:NativeType>uint16</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="Count_Corrected">
+          <cd:Integer>
+            <cd:Description>ACCD count potentially used for correction, depending on
+              Spike_Correction_Flag</cd:Description>
+            <cd:Unit>ACCD Counts</cd:Unit>
+            <cd:BitSize>16</cd:BitSize>
+            <cd:NativeType>uint16</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+      </cd:Record>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="Num_Atmospheric_Spikes_Mie">
+    <cd:Type namexml="Num_Atmospheric_Spikes_Mie">
+      <cd:Integer>
+        <cd:Description>Number of detected atmospheric spikes for Mie (N_AM)</cd:Description>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="List_Atmospheric_Spikes_Mie">
+    <cd:Array namexml="List_Atmospheric_Spikes_Mie">
+      <cd:Dimension>int(../Num_Atmospheric_Spikes_Mie)</cd:Dimension>
+      <cd:Description>List of detected atmospheric spikes for Mie</cd:Description>
+      <cd:Record>
+        <cd:Field name="BRC_Index">
+          <cd:Integer>
+            <cd:Description>Index of the BRC where the spike is detected</cd:Description>
+            <cd:BitSize>16</cd:BitSize>
+            <cd:NativeType>uint16</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="Measurement_Index">
+          <cd:Integer>
+            <cd:Description>Index of the measurement where the spike is detected</cd:Description>
+            <cd:BitSize>8</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="Row_Index">
+          <cd:Integer>
+            <cd:Description>Index of the ACCD row (0, …, 23), where the spike is detected</cd:Description>
+            <cd:BitSize>8</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="Column_Index">
+          <cd:Integer>
+            <cd:Description>Index of the ACCD column (0, …, 19), where the spike is detected</cd:Description>
+            <cd:BitSize>8</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="Count_Detected">
+          <cd:Integer>
+            <cd:Description>ACCD count of the detected spike before correction</cd:Description>
+            <cd:Unit>ACCD Counts</cd:Unit>
+            <cd:BitSize>16</cd:BitSize>
+            <cd:NativeType>uint16</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="Count_Corrected">
+          <cd:Integer>
+            <cd:Description>ACCD count potentially used for correction, depending on
+              Spike_Correction_Flag</cd:Description>
+            <cd:Unit>ACCD Counts</cd:Unit>
+            <cd:BitSize>16</cd:BitSize>
+            <cd:NativeType>uint16</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+      </cd:Record>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="Num_Internal_Spikes_Mie">
+    <cd:Type namexml="Num_Internal_Spikes_Mie">
+      <cd:Integer>
+        <cd:Description>Number of detected internal spikes for Mie (N_IM)</cd:Description>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="List_Internal_Spikes_Mie">
+    <cd:Array namexml="List_Internal_Spikes_Mie">
+      <cd:Dimension>int(../Num_Internal_Spikes_Mie)</cd:Dimension>
+      <cd:Description>List_Internal_Spikes_Mie</cd:Description>
+      <cd:Record>
+        <cd:Field name="BRC_Index">
+          <cd:Integer>
+            <cd:Description>Index of the BRC where the spike is detected</cd:Description>
+            <cd:BitSize>16</cd:BitSize>
+            <cd:NativeType>uint16</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="Pulse_Index">
+          <cd:Integer>
+            <cd:Description>Index of the measurement where the spike is detected</cd:Description>
+            <cd:BitSize>16</cd:BitSize>
+            <cd:NativeType>uint16</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="Column_Index">
+          <cd:Integer>
+            <cd:Description>Index of the ACCD column (0, …, 19), where the spike is detected</cd:Description>
+            <cd:BitSize>8</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="Count_Detected">
+          <cd:Integer>
+            <cd:Description>ACCD count of the detected spike before correction</cd:Description>
+            <cd:Unit>ACCD Counts</cd:Unit>
+            <cd:BitSize>16</cd:BitSize>
+            <cd:NativeType>uint16</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="Count_Corrected">
+          <cd:Integer>
+            <cd:Description>ACCD count potentially used for correction, depending on
+              Spike_Correction_Flag</cd:Description>
+            <cd:Unit>ACCD Counts</cd:Unit>
+            <cd:BitSize>16</cd:BitSize>
+            <cd:NativeType>uint16</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+      </cd:Record>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="Num_Solar_Spikes_Rayleigh">
+    <cd:Type namexml="Num_Solar_Spikes_Rayleigh">
+      <cd:Integer>
+        <cd:Description>Number of detected solar spikes for Rayleigh (N_SR)</cd:Description>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="List_Solar_Spikes_Rayleigh">
+    <cd:Array namexml="List_Solar_Spikes_Rayleigh">
+      <cd:Dimension>int(../Num_Solar_Spikes_Rayleigh)</cd:Dimension>
+      <cd:Description>List of detected solar spikes for Mie</cd:Description>
+      <cd:Record>
+        <cd:Field name="BRC_Index">
+          <cd:Integer>
+            <cd:Description>Index of the BRC where the spike is detected</cd:Description>
+            <cd:BitSize>16</cd:BitSize>
+            <cd:NativeType>uint16</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="Measurement_Index">
+          <cd:Integer>
+            <cd:Description>Index of the measurement where the spike is detected</cd:Description>
+            <cd:BitSize>8</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="Column_Index">
+          <cd:Integer>
+            <cd:Description>Index of the ACCD column (0, …, 19), where the spike is detected</cd:Description>
+            <cd:BitSize>8</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="Count_Detected">
+          <cd:Integer>
+            <cd:Description>ACCD count of the detected spike before correction</cd:Description>
+            <cd:Unit>ACCD Counts</cd:Unit>
+            <cd:BitSize>16</cd:BitSize>
+            <cd:NativeType>uint16</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="Count_Corrected">
+          <cd:Integer>
+            <cd:Description>ACCD count potentially used for correction, depending on
+              Spike_Correction_Flag</cd:Description>
+            <cd:Unit>ACCD Counts</cd:Unit>
+            <cd:BitSize>16</cd:BitSize>
+            <cd:NativeType>uint16</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+      </cd:Record>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="Num_Atmospheric_Spikes_Rayleigh">
+    <cd:Type namexml="Num_Atmospheric_Spikes_Rayleigh">
+      <cd:Integer>
+        <cd:Description>Number of detected atmospheric spikes for Rayleigh (N_AR)</cd:Description>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="List_Atmospheric_Spikes_Rayleigh">
+    <cd:Array namexml="List_Atmospheric_Spikes_Rayleigh">
+      <cd:Dimension>int(../Num_Atmospheric_Spikes_Rayleigh)</cd:Dimension>
+      <cd:Description>List of detected internal spikes for Rayleigh. Contains an array of N_IM
+        structures</cd:Description>
+        <cd:Record>
+      <cd:Field name="BRC_Index">
+        <cd:Integer>
+          <cd:Description>Index of the BRC where the spike is detected</cd:Description>
+          <cd:BitSize>16</cd:BitSize>
+          <cd:NativeType>uint16</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="Measurement_Index">
+        <cd:Integer>
+          <cd:Description>Index of the measurement where the spike is detected</cd:Description>
+          <cd:BitSize>8</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="Row_Index">
+        <cd:Integer>
+          <cd:Description>Index of the ACCD row (0, …, 23), where the spike is detected</cd:Description>
+          <cd:BitSize>8</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="Column_Index">
+        <cd:Integer>
+          <cd:Description>Index of the ACCD column (0, …, 19), where the spike is detected</cd:Description>
+          <cd:BitSize>8</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="Count_Detected">
+        <cd:Integer>
+          <cd:Description>ACCD count of the detected spike before correction</cd:Description>
+          <cd:Unit>ACCD Counts</cd:Unit>
+          <cd:BitSize>16</cd:BitSize>
+          <cd:NativeType>uint16</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="Count_Corrected">
+        <cd:Integer>
+          <cd:Description>ACCD count potentially used for correction, depending on
+            Spike_Correction_Flag</cd:Description>
+          <cd:Unit>ACCD Counts</cd:Unit>
+          <cd:BitSize>16</cd:BitSize>
+          <cd:NativeType>uint16</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+    </cd:Record>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="Num_Internal_Spikes_Rayleigh">
+    <cd:Type namexml="Num_Internal_Spikes_Rayleigh">
+      <cd:Integer>
+        <cd:Description>Number of detected internal spikes for Rayleigh (N_IR)</cd:Description>
+        <cd:NativeType>uint16</cd:NativeType>
+        <cd:BitSize>16</cd:BitSize>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="List_Internal_Spikes_Rayleigh">
+    <cd:Array namexml="List_Internal_Spikes_Rayleigh">
+      <cd:Dimension>int(../Num_Internal_Spikes_Rayleigh)</cd:Dimension>
+      <cd:Description>List of detected internal spikes for Rayleigh. Contains an array of N_IR
+        structures</cd:Description>
+        <cd:Record>
+      <cd:Field name="BRC_Index">
+        <cd:Integer>
+          <cd:Description>Index of the BRC where the spike is detected</cd:Description>
+          <cd:BitSize>16</cd:BitSize>
+          <cd:NativeType>uint16</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="Pulse_Index">
+        <cd:Integer>
+          <cd:Description>Index of the measurement where the spike is detected</cd:Description>
+          <cd:BitSize>16</cd:BitSize>
+          <cd:NativeType>uint16</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="Column_Index">
+        <cd:Integer>
+          <cd:Description>Index of the ACCD column (0, …, 19), where the spike is detected</cd:Description>
+          <cd:BitSize>8</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="Count_Detected">
+        <cd:Integer>
+          <cd:Description>ACCD count of the detected spike before correction</cd:Description>
+          <cd:Unit>ACCD Counts</cd:Unit>
+          <cd:BitSize>16</cd:BitSize>
+          <cd:NativeType>uint16</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="Count_Corrected">
+        <cd:Integer>
+          <cd:Description>ACCD count potentially used for correction, depending on
+            Spike_Correction_Flag</cd:Description>
+          <cd:Unit>ACCD Counts</cd:Unit>
+          <cd:BitSize>16</cd:BitSize>
+          <cd:NativeType>uint16</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+    </cd:Record>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="Spike_Correction_Flag">
+    <cd:Type namexml="Spike_Correction_Flag">
+      <cd:Integer>
+        <cd:Description>This field is a 1 byte, bit-packed field. It reports if spike correction is
+          enabled for the 6 channel and signal type combinations. Bits are set to 1 if correction is
+          enabled. If spike correction is disabled, corresponding bits are set to 0. Bit 1: Mie
+          solar background, Bit 2: Mie atmospheric signals, Bit 3: Mie internal reference, Bit 4:
+          Rayleigh solar background, Bit 5: Rayleigh atmospheric signals, Bit 6: Rayleigh internal
+          reference, Bit 7, 8: Spare.</cd:Description>
+        <cd:NativeType>uint8</cd:NativeType>
+        <cd:BitSize>8</cd:BitSize>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+</cd:Record>

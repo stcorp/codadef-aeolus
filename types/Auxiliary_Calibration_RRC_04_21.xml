@@ -1,0 +1,2173 @@
+<?xml version="1.0"?>
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="xml" last-modified="2025-12-16" name="Auxiliary_Calibration_RRC_04_21" namexml="Auxiliary_Calibration_RRC">
+  <cd:Description>Auxiliary Calibration RRC</cd:Description>
+  <cd:Field name="List_of_Data_Set_Records">
+    <cd:Record namexml="List_of_Data_Set_Records">
+      <cd:Description>List of Data Set Records</cd:Description>
+      <cd:Attribute name="count"> </cd:Attribute>
+      <cd:Field name="Data_Set_Record">
+        <cd:Array>
+          <cd:Dimension/>
+          <cd:Record namexml="Data_Set_Record">
+            <cd:Description>Data Set Record</cd:Description>
+            <cd:Field name="First_Start_of_Observation_Time">
+              <cd:Type namexml="First_Start_of_Observation_Time">
+                <cd:Time format="ascii" timeformat="ascii_ccsds_datetime_ymd1_with_ref">
+                  <cd:Description>Start of observation time of the first BRC</cd:Description>
+                  <cd:Mapping string="UTC=0000-00-00T00:00:00" value="-inf"/>
+                  <cd:Mapping string="UTC=9999-12-31T23:59:59" value="+inf"/>
+                </cd:Time>
+              </cd:Type>
+            </cd:Field>
+            <cd:Field name="Last_Start_of_Observation_Time">
+              <cd:Type namexml="Last_Start_of_Observation_Time">
+                <cd:Time format="ascii" timeformat="ascii_ccsds_datetime_ymd1_with_ref">
+                  <cd:Description>Start of observation time of the last BRC</cd:Description>
+                  <cd:Mapping string="UTC=0000-00-00T00:00:00" value="-inf"/>
+                  <cd:Mapping string="UTC=9999-12-31T23:59:59" value="+inf"/>
+                </cd:Time>
+              </cd:Type>
+            </cd:Field>
+            <cd:Field name="Calibration_Valid">
+              <cd:Type namexml="Calibration_Valid">
+                <cd:Integer format="ascii">
+                  <cd:Description>TRUE = Rayleigh Response Calibration of the atmospheric echo is valid. Based on acceptable ranges of calibration results for measurement and reference pulse; and the number of valid frequencies</cd:Description>
+                  <cd:NativeType>uint8</cd:NativeType>
+                  <cd:Mapping string="FALSE" value="0"/>
+                  <cd:Mapping string="False" value="0"/>
+                  <cd:Mapping string="false" value="0"/>
+                  <cd:Mapping string="TRUE" value="1"/>
+                  <cd:Mapping string="True" value="1"/>
+                  <cd:Mapping string="true" value="1"/>
+                  <ct:NamedTest id="BooleanXmlTest"/>
+                </cd:Integer>
+              </cd:Type>
+            </cd:Field>
+            <cd:Field name="Ground_Calibration_Valid">
+              <cd:Type namexml="Ground_Calibration_Valid">
+                <cd:Integer format="ascii">
+                  <cd:Description>TRUE = Rayleigh Response Calibration of the ground echo is valid. Based on acceptable ranges of calibration results for ground measurement and reference pulse; and the number of valid frequencies</cd:Description>
+                  <cd:NativeType>uint8</cd:NativeType>
+                  <cd:Mapping string="FALSE" value="0"/>
+                  <cd:Mapping string="False" value="0"/>
+                  <cd:Mapping string="false" value="0"/>
+                  <cd:Mapping string="TRUE" value="1"/>
+                  <cd:Mapping string="True" value="1"/>
+                  <cd:Mapping string="true" value="1"/>
+                  <ct:NamedTest id="BooleanXmlTest"/>
+                </cd:Integer>
+              </cd:Type>
+            </cd:Field>
+            <cd:Field name="List_of_Frequency_Step_Results">
+              <cd:Record namexml="List_of_Frequency_Step_Results">
+                <cd:Description>List of channel response per frequency step.</cd:Description>
+                <cd:Attribute name="count"> </cd:Attribute>
+                <cd:Field name="Frequency_Step_Result">
+                  <cd:Array>
+                    <cd:Dimension/>
+                    <cd:Record namexml="Frequency_Step_Result">
+                      <cd:Field name="Frequency_Offset">
+                        <cd:Type namexml="Frequency_Offset">
+                          <cd:Attribute name="unit">
+                            <cd:Optional/>
+                            <cd:FixedValue>GHz</cd:FixedValue>
+                          </cd:Attribute>
+                          <cd:Float format="ascii">
+                            <cd:Description>Frequency offset</cd:Description>
+                            <cd:Unit>GHz</cd:Unit>
+                            <cd:NativeType>double</cd:NativeType>
+                            <ct:NamedTest id="FloatIsFinite"/>
+                          </cd:Float>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="Frequency_Valid">
+                        <cd:Type namexml="Frequency_Valid">
+                          <cd:Integer format="ascii">
+                            <cd:Description>TRUE = Satisfied minimum number of valid measurements per frequency step</cd:Description>
+                            <cd:NativeType>uint8</cd:NativeType>
+                            <cd:Mapping string="FALSE" value="0"/>
+                            <cd:Mapping string="False" value="0"/>
+                            <cd:Mapping string="false" value="0"/>
+                            <cd:Mapping string="TRUE" value="1"/>
+                            <cd:Mapping string="True" value="1"/>
+                            <cd:Mapping string="true" value="1"/>
+                            <ct:NamedTest id="BooleanXmlTest"/>
+                          </cd:Integer>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="Ground_Frequency_Valid">
+                        <cd:Type namexml="Ground_Frequency_Valid">
+                          <cd:Integer format="ascii">
+                            <cd:Description>TRUE = Satisfied minimum number of valid ground measurements per frequency step</cd:Description>
+                            <cd:NativeType>uint8</cd:NativeType>
+                            <cd:Mapping string="FALSE" value="0"/>
+                            <cd:Mapping string="False" value="0"/>
+                            <cd:Mapping string="false" value="0"/>
+                            <cd:Mapping string="TRUE" value="1"/>
+                            <cd:Mapping string="True" value="1"/>
+                            <cd:Mapping string="true" value="1"/>
+                            <ct:NamedTest id="BooleanXmlTest"/>
+                          </cd:Integer>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="Reference_Pulse_Frequency_Valid">
+                        <cd:Type namexml="Reference_Pulse_Frequency_Valid">
+                          <cd:Integer format="ascii">
+                            <cd:Description>TRUE = Satisfied minimum number of valid pulses per frequency step</cd:Description>
+                            <cd:NativeType>uint8</cd:NativeType>
+                            <cd:Mapping string="FALSE" value="0"/>
+                            <cd:Mapping string="False" value="0"/>
+                            <cd:Mapping string="false" value="0"/>
+                            <cd:Mapping string="TRUE" value="1"/>
+                            <cd:Mapping string="True" value="1"/>
+                            <cd:Mapping string="true" value="1"/>
+                            <ct:NamedTest id="BooleanXmlTest"/>
+                          </cd:Integer>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="Measurement_Response_Valid">
+                        <cd:Type namexml="Measurement_Response_Valid">
+                          <cd:Integer format="ascii">
+                            <cd:Description>TRUE = Measurement response is valid; Rayleigh core algorithm applied successfully the mean atmospheric echo</cd:Description>
+                            <cd:NativeType>uint8</cd:NativeType>
+                            <cd:Mapping string="FALSE" value="0"/>
+                            <cd:Mapping string="False" value="0"/>
+                            <cd:Mapping string="false" value="0"/>
+                            <cd:Mapping string="TRUE" value="1"/>
+                            <cd:Mapping string="True" value="1"/>
+                            <cd:Mapping string="true" value="1"/>
+                            <ct:NamedTest id="BooleanXmlTest"/>
+                          </cd:Integer>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="Ground_Measurement_Response_Valid">
+                        <cd:Type namexml="Ground_Measurement_Response_Valid">
+                          <cd:Integer format="ascii">
+                            <cd:Description>TRUE = Ground measurement response is valid; Rayleigh core algorithm applied successfully the mean ground echo</cd:Description>
+                            <cd:NativeType>uint8</cd:NativeType>
+                            <cd:Mapping string="FALSE" value="0"/>
+                            <cd:Mapping string="False" value="0"/>
+                            <cd:Mapping string="false" value="0"/>
+                            <cd:Mapping string="TRUE" value="1"/>
+                            <cd:Mapping string="True" value="1"/>
+                            <cd:Mapping string="true" value="1"/>
+                            <ct:NamedTest id="BooleanXmlTest"/>
+                          </cd:Integer>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="Reference_Pulse_Response_Valid">
+                        <cd:Type namexml="Reference_Pulse_Response_Valid">
+                          <cd:Integer format="ascii">
+                            <cd:Description>TRUE = Reference Pulse Response is valid; Rayleigh core algorithm applied successfully the mean reference pulse</cd:Description>
+                            <cd:NativeType>uint8</cd:NativeType>
+                            <cd:Mapping string="FALSE" value="0"/>
+                            <cd:Mapping string="False" value="0"/>
+                            <cd:Mapping string="false" value="0"/>
+                            <cd:Mapping string="TRUE" value="1"/>
+                            <cd:Mapping string="True" value="1"/>
+                            <cd:Mapping string="true" value="1"/>
+                            <ct:NamedTest id="BooleanXmlTest"/>
+                          </cd:Integer>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="Measurement_Response">
+                        <cd:Type namexml="Measurement_Response">
+                          <cd:Float format="ascii">
+                            <cd:Description>Measurement channel response</cd:Description>
+                            <cd:NativeType>double</cd:NativeType>
+                            <ct:NamedTest id="FloatIsFinite"/>
+                          </cd:Float>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="Measurement_Error_Rayleigh_Response">
+                        <cd:Type namexml="Measurement_Error_Rayleigh_Response">
+                          <cd:Float format="ascii">
+                            <cd:Description>Measurement Error_Rayleigh_Response</cd:Description>
+                            <cd:NativeType>double</cd:NativeType>
+                            <ct:NamedTest id="FloatIsFinite"/>
+                          </cd:Float>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="Ground_Measurement_Response">
+                        <cd:Type namexml="Ground_Measurement_Response">
+                          <cd:Float format="ascii">
+                            <cd:Description>Ground measurement channel response</cd:Description>
+                            <cd:NativeType>double</cd:NativeType>
+                            <ct:NamedTest id="FloatIsFinite"/>
+                          </cd:Float>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="Ground_Measurement_Error_Rayleigh_Response">
+                        <cd:Type namexml="Ground_Measurement_Error_Rayleigh_Response">
+                          <cd:Float format="ascii">
+                            <cd:Description>Ground measurement Error_Rayleigh_Response</cd:Description>
+                            <cd:NativeType>double</cd:NativeType>
+                            <ct:NamedTest id="FloatIsFinite"/>
+                          </cd:Float>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="Reference_Pulse_Response">
+                        <cd:Type namexml="Reference_Pulse_Response">
+                          <cd:Float format="ascii">
+                            <cd:Description>Reference pulse channel response</cd:Description>
+                            <cd:NativeType>double</cd:NativeType>
+                            <ct:NamedTest id="FloatIsFinite"/>
+                          </cd:Float>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="Reference_Pulse_Error_Rayleigh_Response">
+                        <cd:Type namexml="Reference_Pulse_Error_Rayleigh_Response">
+                          <cd:Float format="ascii">
+                            <cd:Description>Reference pulse Error_Rayleigh_Response</cd:Description>
+                            <cd:NativeType>double</cd:NativeType>
+                            <ct:NamedTest id="FloatIsFinite"/>
+                          </cd:Float>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="Normalized_Useful_Signal">
+                        <cd:Type namexml="Normalized_Useful_Signal">
+                          <cd:Array format="ascii">
+                            <cd:Dimension>24</cd:Dimension>
+                            <cd:Float>
+                              <cd:Description>24 values of useful signal. The first value correspnds to the lidar bin which is the upper most in the atmosphere</cd:Description>
+                              <cd:NativeType>double</cd:NativeType>
+                              <ct:NamedTest id="FloatIsFinite"/>
+                            </cd:Float>
+                          </cd:Array>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="Frequency_Step_Data_Statistics">
+                        <cd:Record namexml="Frequency_Step_Data_Statistics">
+                          <cd:Description>Observation product confidence data</cd:Description>
+                          <cd:Field name="Num_Valid_Measurements">
+                            <cd:Type namexml="Num_Valid_Measurements">
+                              <cd:Integer format="ascii">
+                                <cd:Description>A measurement is a valid measurement if it is usable, see Num_Measurements_Usable, the number of atmospheric height bins within the specified range is not 0, all range bins in the specified range are valid, and at least 1 corresponding reference pulse is valid</cd:Description>
+                                <cd:NativeType>int32</cd:NativeType>
+                              </cd:Integer>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="Num_Measurements_Usable">
+                            <cd:Type namexml="Num_Measurements_Usable">
+                              <cd:Integer format="ascii">
+                                <cd:Description>Number of atmospheric measurements usable. The atmospheric measurement is usable if L1A input data Measurement_Laser_Freq_Locked = TRUE, Measurement_Data_Present = TRUE, Spacecraft_Attitude_On_Target = TRUE and measurement is not corrupted, measurement data was acquired after laser frequency has settled, and all corresponding pulses have the same commanded laser frequency</cd:Description>
+                                <cd:NativeType>int32</cd:NativeType>
+                              </cd:Integer>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="Num_Measurements_Valid_Ground">
+                            <cd:Type namexml="Num_Measurements_Valid_Ground">
+                              <cd:Integer format="ascii">
+                                <cd:Description>A measurement is a valid ground measurement if it is usable, see Num_Measurements_Usable, ground bins have been detected, and at least 1 corresponding reference pulse is valid</cd:Description>
+                                <cd:NativeType>int32</cd:NativeType>
+                              </cd:Integer>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="Num_Reference_Pulses_Usable">
+                            <cd:Type namexml="Num_Reference_Pulses_Usable">
+                              <cd:Integer format="ascii">
+                                <cd:Description>Number reference pulses usable. Reference pulse is usuable if the pulse is valid, data is not corrupted, and pulse data was acquired for a measurement after laser frequency has settled</cd:Description>
+                                <cd:NativeType>int32</cd:NativeType>
+                              </cd:Integer>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="Num_Measurement_Invalid">
+                            <cd:Type namexml="Num_Measurement_Invalid">
+                              <cd:Integer format="ascii">
+                                <cd:Description>Number of measurements that are not counted for Num_Measurements_Usable. OR where reference pulse data of that measurement is invalid</cd:Description>
+                                <cd:NativeType>int32</cd:NativeType>
+                              </cd:Integer>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="Num_Pulse_Validity_Status_Flag_False">
+                            <cd:Type namexml="Num_Pulse_Validity_Status_Flag_False">
+                              <cd:Integer format="ascii">
+                                <cd:Description>Number reference pulses with Pulse_Validity_Status_Flag set to false of all valid measurements (measurements where Measurement_Valid Table 5-16 set to true) that contain only pulses with a frequency offset of the current frequency step</cd:Description>
+                                <cd:NativeType>int32</cd:NativeType>
+                              </cd:Integer>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="Num_Sat_Not_on_Target_Measurements">
+                            <cd:Type namexml="Num_Sat_Not_on_Target_Measurements">
+                              <cd:Integer format="ascii">
+                                <cd:Description>Number of measurements with satellite not on target status</cd:Description>
+                                <cd:NativeType>int32</cd:NativeType>
+                              </cd:Integer>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="Num_Corrupt_Measurement_Bins">
+                            <cd:Type namexml="Num_Corrupt_Measurement_Bins">
+                              <cd:Integer format="ascii">
+                                <cd:Description>Total number of corrupt measurement bins</cd:Description>
+                                <cd:NativeType>int32</cd:NativeType>
+                              </cd:Integer>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="Num_Corrupt_Reference_Pulses">
+                            <cd:Type namexml="Num_Corrupt_Reference_Pulses">
+                              <cd:Integer format="ascii">
+                                <cd:Description>Total number of corrupt reference pulses</cd:Description>
+                                <cd:NativeType>int32</cd:NativeType>
+                              </cd:Integer>
+                            </cd:Type>
+                          </cd:Field>
+                        </cd:Record>
+                      </cd:Field>
+                    </cd:Record>
+                    <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                  </cd:Array>
+                </cd:Field>
+              </cd:Record>
+            </cd:Field>
+            <cd:Field name="List_of_Frequency_Step_Temperatures">
+              <cd:Record namexml="List_of_Frequency_Step_Temperatures">
+                <cd:Attribute name="count"> </cd:Attribute>
+                <cd:Field name="Frequency_Step_Temperature">
+                  <cd:Array>
+                    <cd:Dimension/>
+                    <cd:Record namexml="Frequency_Step_Temperature">
+                      <cd:Field name="Etalon_Average_Temperature">
+                        <cd:Record namexml="Etalon_Average_Temperature">
+                          <cd:Field name="Ray_Spectrometer_Temp_9">
+                            <cd:Type namexml="Ray_Spectrometer_Temp_9">
+                              <cd:Attribute name="unit">
+                                <cd:Optional/>
+                                <cd:FixedValue>C</cd:FixedValue>
+                              </cd:Attribute>
+                              <cd:Float format="ascii">
+                                <cd:Description>Sensor RSP etalon temperature</cd:Description>
+                                <cd:Unit>degC</cd:Unit>
+                                <cd:NativeType>double</cd:NativeType>
+                                <ct:NamedTest id="FloatIsFinite"/>
+                              </cd:Float>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="Ray_Spectrometer_Temp_10">
+                            <cd:Type namexml="Ray_Spectrometer_Temp_10">
+                              <cd:Attribute name="unit">
+                                <cd:Optional/>
+                                <cd:FixedValue>C</cd:FixedValue>
+                              </cd:Attribute>
+                              <cd:Float format="ascii">
+                                <cd:Description>Sensor RSP etalon temperature</cd:Description>
+                                <cd:Unit>degC</cd:Unit>
+                                <cd:NativeType>double</cd:NativeType>
+                                <ct:NamedTest id="FloatIsFinite"/>
+                              </cd:Float>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="Ray_Spectrometer_Temp_11">
+                            <cd:Type namexml="Ray_Spectrometer_Temp_11">
+                              <cd:Attribute name="unit">
+                                <cd:Optional/>
+                                <cd:FixedValue>C</cd:FixedValue>
+                              </cd:Attribute>
+                              <cd:Float format="ascii">
+                                <cd:Description>Sensor RSP etalon temperature</cd:Description>
+                                <cd:Unit>degC</cd:Unit>
+                                <cd:NativeType>double</cd:NativeType>
+                                <ct:NamedTest id="FloatIsFinite"/>
+                              </cd:Float>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="Ray_Spectrometer_Temp_12">
+                            <cd:Type namexml="Ray_Spectrometer_Temp_12">
+                              <cd:Attribute name="unit">
+                                <cd:Optional/>
+                                <cd:FixedValue>C</cd:FixedValue>
+                              </cd:Attribute>
+                              <cd:Float format="ascii">
+                                <cd:Description>Field set fixed to zero</cd:Description>
+                                <cd:Unit>degC</cd:Unit>
+                                <cd:NativeType>double</cd:NativeType>
+                                <ct:NamedTest id="FloatIsFinite"/>
+                              </cd:Float>
+                            </cd:Type>
+                          </cd:Field>
+                        </cd:Record>
+                      </cd:Field>
+                      <cd:Field name="RSPT_Average_Temperature">
+                        <cd:Record namexml="RSPT_Average_Temperature">
+                          <cd:Field name="Thermocouple_8_Ray_Spectrometer_Thermal_Hood_1">
+                            <cd:Type namexml="Thermocouple_8_Ray_Spectrometer_Thermal_Hood_1">
+                              <cd:Attribute name="unit">
+                                <cd:Optional/>
+                                <cd:FixedValue>C</cd:FixedValue>
+                              </cd:Attribute>
+                              <cd:Float format="ascii">
+                                <cd:Description>Sensor RSPT etalon temperature</cd:Description>
+                                <cd:Unit>degC</cd:Unit>
+                                <cd:NativeType>double</cd:NativeType>
+                                <ct:NamedTest id="FloatIsFinite"/>
+                              </cd:Float>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="Thermocouple_9_Ray_Spectrometer_Thermal_Hood_2">
+                            <cd:Type namexml="Thermocouple_9_Ray_Spectrometer_Thermal_Hood_2">
+                              <cd:Attribute name="unit">
+                                <cd:Optional/>
+                                <cd:FixedValue>C</cd:FixedValue>
+                              </cd:Attribute>
+                              <cd:Float format="ascii">
+                                <cd:Description>Sensor RSPT etalon temperature</cd:Description>
+                                <cd:Unit>degC</cd:Unit>
+                                <cd:NativeType>double</cd:NativeType>
+                                <ct:NamedTest id="FloatIsFinite"/>
+                              </cd:Float>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="Thermocouple_10_Ray_Spectrometer_Thermal_Hood_3">
+                            <cd:Type namexml="Thermocouple_10_Ray_Spectrometer_Thermal_Hood_3">
+                              <cd:Attribute name="unit">
+                                <cd:Optional/>
+                                <cd:FixedValue>C</cd:FixedValue>
+                              </cd:Attribute>
+                              <cd:Float format="ascii">
+                                <cd:Description>Sensor RSPT etalon temperature</cd:Description>
+                                <cd:Unit>degC</cd:Unit>
+                                <cd:NativeType>double</cd:NativeType>
+                                <ct:NamedTest id="FloatIsFinite"/>
+                              </cd:Float>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="Thermocouple_11_Ray_Spectrometer_Thermal_Hood_4">
+                            <cd:Type namexml="Thermocouple_11_Ray_Spectrometer_Thermal_Hood_4">
+                              <cd:Attribute name="unit">
+                                <cd:Optional/>
+                                <cd:FixedValue>C</cd:FixedValue>
+                              </cd:Attribute>
+                              <cd:Float format="ascii">
+                                <cd:Description>Sensor RSPT etalon temperature</cd:Description>
+                                <cd:Unit>degC</cd:Unit>
+                                <cd:NativeType>double</cd:NativeType>
+                                <ct:NamedTest id="FloatIsFinite"/>
+                              </cd:Float>
+                            </cd:Type>
+                          </cd:Field>
+                        </cd:Record>
+                      </cd:Field>
+                      <cd:Field name="Optical_Baseplate_Average">
+                        <cd:Type namexml="Optical_Baseplate_Average">
+                          <cd:Attribute name="unit">
+                            <cd:Optional/>
+                            <cd:FixedValue>C</cd:FixedValue>
+                          </cd:Attribute>
+                          <cd:Float format="ascii">
+                            <cd:Description>Sensor OB Ray average temperature of temperatures of sensors 5, 6, 7, 8 for all BRCs with measurements of the frequency step</cd:Description>
+                            <cd:Unit>degC</cd:Unit>
+                            <cd:NativeType>double</cd:NativeType>
+                            <ct:NamedTest id="FloatIsFinite"/>
+                          </cd:Float>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="M1_Average_Temperature">
+                        <cd:Record>
+                          <cd:Field name="Aht_22_Tel_M1">
+                            <cd:Float format="ascii">
+                              <cd:Attribute name="unit"/>
+                              <cd:Description>Average Aht 22 Tel M1 temperature for all BRCs with measurements of the frequency step.</cd:Description>
+                              <cd:Unit>C</cd:Unit>
+                              <cd:NativeType>double</cd:NativeType>
+                              <ct:NamedTest id="FloatIsFinite"/>
+                            </cd:Float>
+                          </cd:Field>
+                          <cd:Field name="Aht_23_Tel_M1">
+                            <cd:Float format="ascii">
+                              <cd:Attribute name="unit"/>
+                              <cd:Description>Average Aht 23 Tel M1 temperature for all BRCs with measurements of the frequency step.</cd:Description>
+                              <cd:Unit>C</cd:Unit>
+                              <cd:NativeType>double</cd:NativeType>
+                              <ct:NamedTest id="FloatIsFinite"/>
+                            </cd:Float>
+                          </cd:Field>
+                          <cd:Field name="Aht_24_Tel_M1">
+                            <cd:Float format="ascii">
+                              <cd:Attribute name="unit"/>
+                              <cd:Description>Average Aht 24 Tel M1 temperature for all BRCs with measurements of the frequency step.</cd:Description>
+                              <cd:Unit>C</cd:Unit>
+                              <cd:NativeType>double</cd:NativeType>
+                              <ct:NamedTest id="FloatIsFinite"/>
+                            </cd:Float>
+                          </cd:Field>
+                          <cd:Field name="Aht_25_Tel_M1">
+                            <cd:Float format="ascii">
+                              <cd:Attribute name="unit"/>
+                              <cd:Description>Average Aht 25 Tel M1 temperature for all BRCs with measurements of the frequency step.</cd:Description>
+                              <cd:Unit>C</cd:Unit>
+                              <cd:NativeType>double</cd:NativeType>
+                              <ct:NamedTest id="FloatIsFinite"/>
+                            </cd:Float>
+                          </cd:Field>
+                          <cd:Field name="Aht_26_Tel_M1">
+                            <cd:Float format="ascii">
+                              <cd:Attribute name="unit"/>
+                              <cd:Description>Average Aht 26 Tel M1 temperature for all BRCs with measurements of the frequency step.</cd:Description>
+                              <cd:Unit>C</cd:Unit>
+                              <cd:NativeType>double</cd:NativeType>
+                              <ct:NamedTest id="FloatIsFinite"/>
+                            </cd:Float>
+                          </cd:Field>
+                          <cd:Field name="Aht_27_Tel_M1">
+                            <cd:Float format="ascii">
+                              <cd:Attribute name="unit"/>
+                              <cd:Description>Average Aht 27 Tel M1 temperature for all BRCs with measurements of the frequency step.</cd:Description>
+                              <cd:Unit>C</cd:Unit>
+                              <cd:NativeType>double</cd:NativeType>
+                              <ct:NamedTest id="FloatIsFinite"/>
+                            </cd:Float>
+                          </cd:Field>
+                          <cd:Field name="Tc_18_Tel_M11">
+                            <cd:Float format="ascii">
+                              <cd:Attribute name="unit"/>
+                              <cd:Description>Average TC 18 Tel M1-1 temperature for all BRCs with measurements of the frequency step.</cd:Description>
+                              <cd:Unit>C</cd:Unit>
+                              <cd:NativeType>double</cd:NativeType>
+                              <ct:NamedTest id="FloatIsFinite"/>
+                            </cd:Float>
+                          </cd:Field>
+                          <cd:Field name="Tc_19_Tel_M12">
+                            <cd:Float format="ascii">
+                              <cd:Attribute name="unit"/>
+                              <cd:Description>Average TC 19 Tel M1-2 temperature for all BRCs with measurements of the frequency step.</cd:Description>
+                              <cd:Unit>C</cd:Unit>
+                              <cd:NativeType>double</cd:NativeType>
+                              <ct:NamedTest id="FloatIsFinite"/>
+                            </cd:Float>
+                          </cd:Field>
+                          <cd:Field name="Tc_20_Tel_M13">
+                            <cd:Float format="ascii">
+                              <cd:Attribute name="unit"/>
+                              <cd:Description>Average TC 20 Tel M1-3 temperature for all BRCs with measurements of the frequency step.</cd:Description>
+                              <cd:Unit>C</cd:Unit>
+                              <cd:NativeType>double</cd:NativeType>
+                              <ct:NamedTest id="FloatIsFinite"/>
+                            </cd:Float>
+                          </cd:Field>
+                          <cd:Field name="Tc_21_Tel_M14">
+                            <cd:Float format="ascii">
+                              <cd:Attribute name="unit"/>
+                              <cd:Description>Average TC 21 Tel M1-4 temperature for all BRCs with measurements of the frequency step.</cd:Description>
+                              <cd:Unit>C</cd:Unit>
+                              <cd:NativeType>double</cd:NativeType>
+                              <ct:NamedTest id="FloatIsFinite"/>
+                            </cd:Float>
+                          </cd:Field>
+                          <cd:Field name="Tc_25_Tm15_Ths1Y">
+                            <cd:Float format="ascii">
+                              <cd:Attribute name="unit"/>
+                              <cd:Description>Average TC 25 TM15 Ths1-Y temperature for all BRCs with measurements of the frequency step.</cd:Description>
+                              <cd:Unit>C</cd:Unit>
+                              <cd:NativeType>double</cd:NativeType>
+                              <ct:NamedTest id="FloatIsFinite"/>
+                            </cd:Float>
+                          </cd:Field>
+                          <cd:Field name="Tc_27_Tm16_Ths1Y">
+                            <cd:Float format="ascii">
+                              <cd:Attribute name="unit"/>
+                              <cd:Description>Average TC 25 TM16 Ths1-Y temperature for all BRCs with measurements of the frequency step.</cd:Description>
+                              <cd:Unit>C</cd:Unit>
+                              <cd:NativeType>double</cd:NativeType>
+                              <ct:NamedTest id="FloatIsFinite"/>
+                            </cd:Float>
+                          </cd:Field>
+                          <cd:Field name="Tc_29_Ths2">
+                            <cd:Float format="ascii">
+                              <cd:Attribute name="unit"/>
+                              <cd:Description>Average TC 29 Ths2 temperature for all BRCs with measurements of the frequency step.</cd:Description>
+                              <cd:Unit>C</cd:Unit>
+                              <cd:NativeType>double</cd:NativeType>
+                              <ct:NamedTest id="FloatIsFinite"/>
+                            </cd:Float>
+                          </cd:Field>
+                          <cd:Field name="Tc_23_Ths1">
+                            <cd:Float format="ascii">
+                              <cd:Attribute name="unit"/>
+                              <cd:Description>Average TC 23 Ths1 temperature for all BRCs with measurements of the frequency step.</cd:Description>
+                              <cd:Unit>C</cd:Unit>
+                              <cd:NativeType>double</cd:NativeType>
+                              <ct:NamedTest id="FloatIsFinite"/>
+                            </cd:Float>
+                          </cd:Field>
+                          <cd:Field name="Tc_32_Ths3">
+                            <cd:Float format="ascii">
+                              <cd:Attribute name="unit"/>
+                              <cd:Description>Average TC 32 Ths3 temperature for all BRCs with measurements of the frequency step.</cd:Description>
+                              <cd:Unit>C</cd:Unit>
+                              <cd:NativeType>double</cd:NativeType>
+                              <ct:NamedTest id="FloatIsFinite"/>
+                            </cd:Float>
+                          </cd:Field>
+                        </cd:Record>
+                      </cd:Field>
+                    </cd:Record>
+                    <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                  </cd:Array>
+                </cd:Field>
+              </cd:Record>
+            </cd:Field>
+            <cd:Field name="Measurement_Response_Calibration">
+              <cd:Record namexml="Measurement_Response_Calibration">
+                <cd:Description>Rayleigh calibration results of atmospheric echo</cd:Description>
+                <cd:Field name="Measurement_Mean_Sensitivity">
+                  <cd:Type namexml="Measurement_Mean_Sensitivity">
+                    <cd:Attribute name="unit">
+                      <cd:FixedValue>1/GHz</cd:FixedValue>
+                    </cd:Attribute>
+                    <cd:Float format="ascii">
+                      <cd:Description>Measurement mean sensitivity</cd:Description>
+                      <cd:NativeType>double</cd:NativeType>
+                      <ct:NamedTest id="FloatIsFinite"/>
+                    </cd:Float>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="Measurement_Zero_Frequency">
+                  <cd:Type namexml="Measurement_Zero_Frequency">
+                    <cd:Float format="ascii">
+                      <cd:Description>Measurement zero frequency response</cd:Description>
+                      <cd:NativeType>double</cd:NativeType>
+                      <ct:NamedTest id="FloatIsFinite"/>
+                    </cd:Float>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="Measurement_Error_Rayleigh_Response_Std_Dev">
+                  <cd:Type namexml="Measurement_Error_Rayleigh_Response_Std_Dev">
+                    <cd:Float format="ascii">
+                      <cd:Description>Measurement Error_Rayleigh_Response standard deviation</cd:Description>
+                      <cd:NativeType>double</cd:NativeType>
+                      <ct:NamedTest id="FloatIsFinite"/>
+                    </cd:Float>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="Measurement_Offset_Frequency">
+                  <cd:Type namexml="Measurement_Offset_Frequency">
+                    <cd:Attribute name="unit">
+                      <cd:Optional/>
+                      <cd:FixedValue>GHz</cd:FixedValue>
+                    </cd:Attribute>
+                    <cd:Float format="ascii">
+                      <cd:Description>Measurement zero response frequency (x-intercept of the best straight line of channel response)</cd:Description>
+                      <cd:Unit>GHz</cd:Unit>
+                      <cd:NativeType>double</cd:NativeType>
+                      <ct:NamedTest id="FloatIsFinite"/>
+                    </cd:Float>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="List_of_Measurement_Error_Fit_Coefficients">
+                  <cd:Record namexml="List_of_Measurement_Error_Fit_Coefficients">
+                    <cd:Description>List of coefficients of polynomial fit of the errors of the measurement response. Order of polynom specified by parameter Error_Fit_Degree. List element 1 &lt;= i &lt;= Error_Fit_Degree +1 is the coefficient of xi-1</cd:Description>
+                    <cd:Attribute name="count"/>
+                    <cd:Field name="Measurement_Error_Fit_Coefficient">
+                      <cd:Array>
+                        <cd:Dimension/>
+                        <cd:Type namexml="Measurement_Error_Fit_Coefficient">
+                          <cd:Float format="ascii">
+                            <cd:Description>One coefficient of the fitted polynomial</cd:Description>
+                            <cd:NativeType>double</cd:NativeType>
+                            <ct:NamedTest id="FloatIsFinite"/>
+                          </cd:Float>
+                        </cd:Type>
+                      </cd:Array>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+              </cd:Record>
+            </cd:Field>
+            <cd:Field name="Ground_Measurement_Response_Calibration">
+              <cd:Record namexml="Ground_Measurement_Response_Calibration">
+                <cd:Description>Rayleigh calibration results of the ground echo</cd:Description>
+                <cd:Field name="Ground_Measurement_Mean_Sensitivity">
+                  <cd:Type namexml="Ground_Measurement_Mean_Sensitivity">
+                    <cd:Attribute name="unit">
+                      <cd:FixedValue>1/GHz</cd:FixedValue>
+                    </cd:Attribute>
+                    <cd:Float format="ascii">
+                      <cd:Description>Ground measurement mean sensitivity</cd:Description>
+                      <cd:Unit>1/GHz</cd:Unit>
+                      <cd:NativeType>double</cd:NativeType>
+                      <ct:NamedTest id="FloatIsFinite"/>
+                    </cd:Float>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="Ground_Measurement_Zero_Frequency">
+                  <cd:Type namexml="Ground_Measurement_Zero_Frequency">
+                    <cd:Float format="ascii">
+                      <cd:Description>Ground measurement zero frequency response</cd:Description>
+                      <cd:NativeType>double</cd:NativeType>
+                      <ct:NamedTest id="FloatIsFinite"/>
+                    </cd:Float>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="Ground_Measurement_Error_Rayleigh_Response_Std_Dev">
+                  <cd:Type namexml="Ground_Measurement_Error_Rayleigh_Response_Std_Dev">
+                    <cd:Float format="ascii">
+                      <cd:Description>Ground measurement Error_Rayleigh_Response standard deviation</cd:Description>
+                      <cd:NativeType>double</cd:NativeType>
+                      <ct:NamedTest id="FloatIsFinite"/>
+                    </cd:Float>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="Ground_Measurement_Offset_Frequency">
+                  <cd:Type namexml="Ground_Measurement_Offset_Frequency">
+                    <cd:Attribute name="unit">
+                      <cd:Optional/>
+                      <cd:FixedValue>GHz</cd:FixedValue>
+                    </cd:Attribute>
+                    <cd:Float format="ascii">
+                      <cd:Description>Ground measurement zero response frequency (x-intercept of the best straight line of channel response)</cd:Description>
+                      <cd:Unit>GHz</cd:Unit>
+                      <cd:NativeType>double</cd:NativeType>
+                      <ct:NamedTest id="FloatIsFinite"/>
+                    </cd:Float>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="List_of_Ground_Measurement_Error_Fit_Coefficients">
+                  <cd:Record namexml="List_of_Ground_Measurement_Error_Fit_Coefficients">
+                    <cd:Description>List of coefficients of polynomial fit of the errors of the ground measurement response. Order of polynom specified by parameter Error_Fit_Degree. List element 1 &lt;= i &lt;= Error_Fit_Degree +1 is the coefficient of xi-1</cd:Description>
+                    <cd:Attribute name="count"/>
+                    <cd:Field name="Ground_Measurement_Error_Fit_Coefficient">
+                      <cd:Array>
+                        <cd:Dimension/>
+                        <cd:Type namexml="Ground_Measurement_Error_Fit_Coefficient">
+                          <cd:Float format="ascii">
+                            <cd:Description>One coefficient of the fitted polynomial</cd:Description>
+                            <cd:NativeType>double</cd:NativeType>
+                            <ct:NamedTest id="FloatIsFinite"/>
+                          </cd:Float>
+                        </cd:Type>
+                      </cd:Array>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+              </cd:Record>
+            </cd:Field>
+            <cd:Field name="Reference_Pulse_Response_Calibration">
+              <cd:Record namexml="Reference_Pulse_Response_Calibration">
+                <cd:Description>Rayleigh calibration results of the internal reference pulse</cd:Description>
+                <cd:Field name="Reference_Pulse_Mean_Sensitivity">
+                  <cd:Type namexml="Reference_Pulse_Mean_Sensitivity">
+                    <cd:Attribute name="unit">
+                      <cd:FixedValue>1/GHz</cd:FixedValue>
+                    </cd:Attribute>
+                    <cd:Float format="ascii">
+                      <cd:Description>Reference pulse mean sensitivity</cd:Description>
+                      <cd:Unit>1/GHz</cd:Unit>
+                      <cd:NativeType>double</cd:NativeType>
+                      <ct:NamedTest id="FloatIsFinite"/>
+                    </cd:Float>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="Reference_Pulse_Zero_Frequency">
+                  <cd:Type namexml="Reference_Pulse_Zero_Frequency">
+                    <cd:Float format="ascii">
+                      <cd:Description>Reference pulse zero frequency response</cd:Description>
+                      <cd:NativeType>double</cd:NativeType>
+                      <ct:NamedTest id="FloatIsFinite"/>
+                    </cd:Float>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="Reference_Pulse_Error_Rayleigh_Response_Std_Dev">
+                  <cd:Type namexml="Reference_Pulse_Error_Rayleigh_Response_Std_Dev">
+                    <cd:Float format="ascii">
+                      <cd:Description>Reference pulse Error_Rayleigh_Response standard deviation</cd:Description>
+                      <cd:NativeType>double</cd:NativeType>
+                      <ct:NamedTest id="FloatIsFinite"/>
+                    </cd:Float>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="Reference_Pulse_Offset_Frequency">
+                  <cd:Type namexml="Reference_Pulse_Offset_Frequency">
+                    <cd:Attribute name="unit">
+                      <cd:Optional/>
+                      <cd:FixedValue>GHz</cd:FixedValue>
+                    </cd:Attribute>
+                    <cd:Float format="ascii">
+                      <cd:Description>Reference pulse zero response frequency (x-intercept of the best straight line of channel response)</cd:Description>
+                      <cd:Unit>GHz</cd:Unit>
+                      <cd:NativeType>double</cd:NativeType>
+                      <ct:NamedTest id="FloatIsFinite"/>
+                    </cd:Float>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="List_of_Reference_Pulse_Error_Fit_Coefficients">
+                  <cd:Record namexml="List_of_Reference_Pulse_Error_Fit_Coefficients">
+                    <cd:Description>List of coefficients of polynomial fit of the errors of the reference pulse response (parameter Reference_Pulse_Error_Rayleigh_Response). Order of polynom specified by parameter Error_Fit_Degree. List element 1 &lt;= i &lt;= Error_Fit_Degree +1 is the coefficient of xi-1</cd:Description>
+                    <cd:Attribute name="count"/>
+                    <cd:Field name="Reference_Pulse_Error_Fit_Coefficient">
+                      <cd:Array>
+                        <cd:Dimension/>
+                        <cd:Type namexml="Reference_Pulse_Error_Fit_Coefficient">
+                          <cd:Float format="ascii">
+                            <cd:Description>One coefficient of the fitted polynomial</cd:Description>
+                            <cd:NativeType>double</cd:NativeType>
+                            <ct:NamedTest id="FloatIsFinite"/>
+                          </cd:Float>
+                        </cd:Type>
+                      </cd:Array>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+              </cd:Record>
+            </cd:Field>
+            <cd:Field name="Calibration_Validity_Indicators">
+              <cd:Record namexml="Calibration_Validity_Indicators">
+                <cd:Description>Calibration validity indicators for atmospheric echo, ground echon, and internal references</cd:Description>
+                <cd:Field name="Freq_Offset_Data_Monotonic">
+                  <cd:Type namexml="Freq_Offset_Data_Monotonic">
+                    <cd:Integer format="ascii">
+                      <cd:Description>TRUE = the frequency offset data trend is monotonic</cd:Description>
+                      <cd:NativeType>uint8</cd:NativeType>
+                      <cd:Mapping string="FALSE" value="0"/>
+                      <cd:Mapping string="False" value="0"/>
+                      <cd:Mapping string="false" value="0"/>
+                      <cd:Mapping string="TRUE" value="1"/>
+                      <cd:Mapping string="True" value="1"/>
+                      <cd:Mapping string="true" value="1"/>
+                      <ct:NamedTest id="BooleanXmlTest"/>
+                    </cd:Integer>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="Measurement_Calibration_Validity">
+                  <cd:Record namexml="Measurement_Calibration_Validity">
+                    <cd:Description>Measurement Calibration Validity</cd:Description>
+                    <cd:Field name="Satisfied_Min_Valid_Freq_Per_Cal">
+                      <cd:Type namexml="Satisfied_Min_Valid_Freq_Per_Cal">
+                        <cd:Integer format="ascii">
+                          <cd:Description>TRUE = Satisfied minimum number of valid frequency steps per calibration</cd:Description>
+                          <cd:NativeType>uint8</cd:NativeType>
+                          <cd:Mapping string="FALSE" value="0"/>
+                          <cd:Mapping string="False" value="0"/>
+                          <cd:Mapping string="false" value="0"/>
+                          <cd:Mapping string="TRUE" value="1"/>
+                          <cd:Mapping string="True" value="1"/>
+                          <cd:Mapping string="true" value="1"/>
+                          <ct:NamedTest id="BooleanXmlTest"/>
+                        </cd:Integer>
+                      </cd:Type>
+                    </cd:Field>
+                    <cd:Field name="Mean_Sensitivity_Valid">
+                      <cd:Type namexml="Mean_Sensitivity_Valid">
+                        <cd:Integer format="ascii">
+                          <cd:Description>TRUE = Mean sensitivity within threshold range</cd:Description>
+                          <cd:NativeType>uint8</cd:NativeType>
+                          <cd:Mapping string="FALSE" value="0"/>
+                          <cd:Mapping string="False" value="0"/>
+                          <cd:Mapping string="false" value="0"/>
+                          <cd:Mapping string="TRUE" value="1"/>
+                          <cd:Mapping string="True" value="1"/>
+                          <cd:Mapping string="true" value="1"/>
+                          <ct:NamedTest id="BooleanXmlTest"/>
+                        </cd:Integer>
+                      </cd:Type>
+                    </cd:Field>
+                    <cd:Field name="Error_Response_Std_Dev_Valid">
+                      <cd:Type namexml="Error_Response_Std_Dev_Valid">
+                        <cd:Integer format="ascii">
+                          <cd:Description>TRUE = Error Response standard deviation within threshold range</cd:Description>
+                          <cd:NativeType>uint8</cd:NativeType>
+                          <cd:Mapping string="FALSE" value="0"/>
+                          <cd:Mapping string="False" value="0"/>
+                          <cd:Mapping string="false" value="0"/>
+                          <cd:Mapping string="TRUE" value="1"/>
+                          <cd:Mapping string="True" value="1"/>
+                          <cd:Mapping string="true" value="1"/>
+                          <ct:NamedTest id="BooleanXmlTest"/>
+                        </cd:Integer>
+                      </cd:Type>
+                    </cd:Field>
+                    <cd:Field name="Zero_Freq_Response_Valid">
+                      <cd:Type namexml="Zero_Freq_Response_Valid">
+                        <cd:Integer format="ascii">
+                          <cd:Description>TRUE = Zero frequency response within threshold range</cd:Description>
+                          <cd:NativeType>uint8</cd:NativeType>
+                          <cd:Mapping string="FALSE" value="0"/>
+                          <cd:Mapping string="False" value="0"/>
+                          <cd:Mapping string="false" value="0"/>
+                          <cd:Mapping string="TRUE" value="1"/>
+                          <cd:Mapping string="True" value="1"/>
+                          <cd:Mapping string="true" value="1"/>
+                          <ct:NamedTest id="BooleanXmlTest"/>
+                        </cd:Integer>
+                      </cd:Type>
+                    </cd:Field>
+                    <cd:Field name="Data_Monotonic">
+                      <cd:Type namexml="Data_Monotonic">
+                        <cd:Integer format="ascii">
+                          <cd:Description>TRUE = measurement data is monotonic</cd:Description>
+                          <cd:NativeType>uint8</cd:NativeType>
+                          <cd:Mapping string="FALSE" value="0"/>
+                          <cd:Mapping string="False" value="0"/>
+                          <cd:Mapping string="false" value="0"/>
+                          <cd:Mapping string="TRUE" value="1"/>
+                          <cd:Mapping string="True" value="1"/>
+                          <cd:Mapping string="true" value="1"/>
+                          <ct:NamedTest id="BooleanXmlTest"/>
+                        </cd:Integer>
+                      </cd:Type>
+                    </cd:Field>
+                    <cd:Field name="Num_Valid_Frequency_Steps">
+                      <cd:Type namexml="Num_Valid_Frequency_Steps">
+                        <cd:Integer format="ascii">
+                          <cd:Description>Number of valid frequency steps in the current calibration</cd:Description>
+                          <cd:NativeType>uint32</cd:NativeType>
+                        </cd:Integer>
+                      </cd:Type>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+                <cd:Field name="Ground_Measurement_Calibration_Validity">
+                  <cd:Record namexml="Ground_Measurement_Calibration_Validity">
+                    <cd:Description>Ground Measurement Calibration Validity</cd:Description>
+                    <cd:Field name="Satisfied_Min_Valid_Freq_Per_Cal">
+                      <cd:Type namexml="Satisfied_Min_Valid_Freq_Per_Cal">
+                        <cd:Integer format="ascii">
+                          <cd:Description>TRUE = Satisfied minimum number of valid frequency steps per gound calibration</cd:Description>
+                          <cd:NativeType>uint8</cd:NativeType>
+                          <cd:Mapping string="FALSE" value="0"/>
+                          <cd:Mapping string="False" value="0"/>
+                          <cd:Mapping string="false" value="0"/>
+                          <cd:Mapping string="TRUE" value="1"/>
+                          <cd:Mapping string="True" value="1"/>
+                          <cd:Mapping string="true" value="1"/>
+                          <ct:NamedTest id="BooleanXmlTest"/>
+                        </cd:Integer>
+                      </cd:Type>
+                    </cd:Field>
+                    <cd:Field name="Mean_Sensitivity_Valid">
+                      <cd:Type namexml="Mean_Sensitivity_Valid">
+                        <cd:Integer format="ascii">
+                          <cd:Description>TRUE = Mean sensitivity within threshold range</cd:Description>
+                          <cd:NativeType>uint8</cd:NativeType>
+                          <cd:Mapping string="FALSE" value="0"/>
+                          <cd:Mapping string="False" value="0"/>
+                          <cd:Mapping string="false" value="0"/>
+                          <cd:Mapping string="TRUE" value="1"/>
+                          <cd:Mapping string="True" value="1"/>
+                          <cd:Mapping string="true" value="1"/>
+                          <ct:NamedTest id="BooleanXmlTest"/>
+                        </cd:Integer>
+                      </cd:Type>
+                    </cd:Field>
+                    <cd:Field name="Error_Response_Std_Dev_Valid">
+                      <cd:Type namexml="Error_Response_Std_Dev_Valid">
+                        <cd:Integer format="ascii">
+                          <cd:Description>TRUE = Error Response standard deviation within threshold range</cd:Description>
+                          <cd:NativeType>uint8</cd:NativeType>
+                          <cd:Mapping string="FALSE" value="0"/>
+                          <cd:Mapping string="False" value="0"/>
+                          <cd:Mapping string="false" value="0"/>
+                          <cd:Mapping string="TRUE" value="1"/>
+                          <cd:Mapping string="True" value="1"/>
+                          <cd:Mapping string="true" value="1"/>
+                          <ct:NamedTest id="BooleanXmlTest"/>
+                        </cd:Integer>
+                      </cd:Type>
+                    </cd:Field>
+                    <cd:Field name="Zero_Freq_Response_Valid">
+                      <cd:Type namexml="Zero_Freq_Response_Valid">
+                        <cd:Integer format="ascii">
+                          <cd:Description>TRUE = Zero frequency response within threshold range</cd:Description>
+                          <cd:NativeType>uint8</cd:NativeType>
+                          <cd:Mapping string="FALSE" value="0"/>
+                          <cd:Mapping string="False" value="0"/>
+                          <cd:Mapping string="false" value="0"/>
+                          <cd:Mapping string="TRUE" value="1"/>
+                          <cd:Mapping string="True" value="1"/>
+                          <cd:Mapping string="true" value="1"/>
+                          <ct:NamedTest id="BooleanXmlTest"/>
+                        </cd:Integer>
+                      </cd:Type>
+                    </cd:Field>
+                    <cd:Field name="Data_Monotonic">
+                      <cd:Type namexml="Data_Monotonic">
+                        <cd:Integer format="ascii">
+                          <cd:Description>TRUE = measurement data is monotonic</cd:Description>
+                          <cd:NativeType>uint8</cd:NativeType>
+                          <cd:Mapping string="FALSE" value="0"/>
+                          <cd:Mapping string="False" value="0"/>
+                          <cd:Mapping string="false" value="0"/>
+                          <cd:Mapping string="TRUE" value="1"/>
+                          <cd:Mapping string="True" value="1"/>
+                          <cd:Mapping string="true" value="1"/>
+                          <ct:NamedTest id="BooleanXmlTest"/>
+                        </cd:Integer>
+                      </cd:Type>
+                    </cd:Field>
+                    <cd:Field name="Num_Valid_Frequency_Steps">
+                      <cd:Type namexml="Num_Valid_Frequency_Steps">
+                        <cd:Integer format="ascii">
+                          <cd:Description>Number of valid frequency steps in the current ground calibration</cd:Description>
+                          <cd:NativeType>uint32</cd:NativeType>
+                        </cd:Integer>
+                      </cd:Type>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+                <cd:Field name="Reference_Pulse_Calibration_Validity">
+                  <cd:Record namexml="Reference_Pulse_Calibration_Validity">
+                    <cd:Description>Reference Pulse Calibration Validity</cd:Description>
+                    <cd:Field name="Satisfied_Min_Valid_Freq_Per_Cal">
+                      <cd:Type namexml="Satisfied_Min_Valid_Freq_Per_Cal">
+                        <cd:Integer format="ascii">
+                          <cd:Description>TRUE = Satisfied minimum number of valid frequency steps per calibration</cd:Description>
+                          <cd:NativeType>uint8</cd:NativeType>
+                          <cd:Mapping string="FALSE" value="0"/>
+                          <cd:Mapping string="False" value="0"/>
+                          <cd:Mapping string="false" value="0"/>
+                          <cd:Mapping string="TRUE" value="1"/>
+                          <cd:Mapping string="True" value="1"/>
+                          <cd:Mapping string="true" value="1"/>
+                          <ct:NamedTest id="BooleanXmlTest"/>
+                        </cd:Integer>
+                      </cd:Type>
+                    </cd:Field>
+                    <cd:Field name="Mean_Sensitivity_Valid">
+                      <cd:Type namexml="Mean_Sensitivity_Valid">
+                        <cd:Integer format="ascii">
+                          <cd:Description>TRUE = Mean sensitivity within threshold range</cd:Description>
+                          <cd:NativeType>uint8</cd:NativeType>
+                          <cd:Mapping string="FALSE" value="0"/>
+                          <cd:Mapping string="False" value="0"/>
+                          <cd:Mapping string="false" value="0"/>
+                          <cd:Mapping string="TRUE" value="1"/>
+                          <cd:Mapping string="True" value="1"/>
+                          <cd:Mapping string="true" value="1"/>
+                          <ct:NamedTest id="BooleanXmlTest"/>
+                        </cd:Integer>
+                      </cd:Type>
+                    </cd:Field>
+                    <cd:Field name="Error_Response_Std_Dev_Valid">
+                      <cd:Type namexml="Error_Response_Std_Dev_Valid">
+                        <cd:Integer format="ascii">
+                          <cd:Description>TRUE = Error Response standard deviation within threshold range</cd:Description>
+                          <cd:NativeType>uint8</cd:NativeType>
+                          <cd:Mapping string="FALSE" value="0"/>
+                          <cd:Mapping string="False" value="0"/>
+                          <cd:Mapping string="false" value="0"/>
+                          <cd:Mapping string="TRUE" value="1"/>
+                          <cd:Mapping string="True" value="1"/>
+                          <cd:Mapping string="true" value="1"/>
+                          <ct:NamedTest id="BooleanXmlTest"/>
+                        </cd:Integer>
+                      </cd:Type>
+                    </cd:Field>
+                    <cd:Field name="Zero_Freq_Response_Valid">
+                      <cd:Type namexml="Zero_Freq_Response_Valid">
+                        <cd:Integer format="ascii">
+                          <cd:Description>TRUE = Zero frequency response within threshold range</cd:Description>
+                          <cd:NativeType>uint8</cd:NativeType>
+                          <cd:Mapping string="FALSE" value="0"/>
+                          <cd:Mapping string="False" value="0"/>
+                          <cd:Mapping string="false" value="0"/>
+                          <cd:Mapping string="TRUE" value="1"/>
+                          <cd:Mapping string="True" value="1"/>
+                          <cd:Mapping string="true" value="1"/>
+                          <ct:NamedTest id="BooleanXmlTest"/>
+                        </cd:Integer>
+                      </cd:Type>
+                    </cd:Field>
+                    <cd:Field name="Data_Monotonic">
+                      <cd:Type namexml="Data_Monotonic">
+                        <cd:Integer format="ascii">
+                          <cd:Description>TRUE = measurement data is monotonic</cd:Description>
+                          <cd:NativeType>uint8</cd:NativeType>
+                          <cd:Mapping string="FALSE" value="0"/>
+                          <cd:Mapping string="False" value="0"/>
+                          <cd:Mapping string="false" value="0"/>
+                          <cd:Mapping string="TRUE" value="1"/>
+                          <cd:Mapping string="True" value="1"/>
+                          <cd:Mapping string="true" value="1"/>
+                          <ct:NamedTest id="BooleanXmlTest"/>
+                        </cd:Integer>
+                      </cd:Type>
+                    </cd:Field>
+                    <cd:Field name="Num_Valid_Frequency_Steps">
+                      <cd:Type namexml="Num_Valid_Frequency_Steps">
+                        <cd:Integer format="ascii">
+                          <cd:Description>Number of valid frequency steps in the current calibration</cd:Description>
+                          <cd:NativeType>uint32</cd:NativeType>
+                        </cd:Integer>
+                      </cd:Type>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+                <cd:Field name="List_of_Additional_Calibration_Results">
+                  <cd:Record namexml="List_of_Additional_Calibration_Results">
+                    <cd:Description>So far the additional calibration results contain information on the ground detection.</cd:Description>
+                    <cd:Attribute name="count"/>
+                    <cd:Field name="Additional_Calibration_Result">
+                      <cd:Array>
+                        <cd:Dimension/>
+                        <cd:Record namexml="Additional_Calibration_Result">
+                          <cd:Field name="List_of_Measurement_Results">
+                            <cd:Record namexml="List_of_Measurement_Results">
+                              <cd:Attribute name="count"> </cd:Attribute>
+                              <cd:Field name="Measurement_Result">
+                                <cd:Array>
+                                  <cd:Dimension/>
+                                  <cd:Record namexml="Measurement_Result">
+                                    <cd:Field name="Altitude_of_DEM_Intersection">
+                                      <cd:Type namexml="Altitude_of_DEM_Intersection">
+                                        <cd:Attribute name="unit">
+                                          <cd:Optional/>
+                                          <cd:FixedValue>m</cd:FixedValue>
+                                        </cd:Attribute>
+                                        <cd:Float format="ascii">
+                                          <cd:Description>Altitude of the intersection of DEM and the line-of-sight</cd:Description>
+                                          <cd:Unit>meters</cd:Unit>
+                                          <cd:NativeType>double</cd:NativeType>
+                                          <ct:NamedTest id="FloatIsFinite"/>
+                                        </cd:Float>
+                                      </cd:Type>
+                                    </cd:Field>
+                                    <cd:Field name="Expected_Ground_Bin_Index">
+                                      <cd:Type namexml="Expected_Ground_Bin_Index">
+                                        <cd:Integer format="ascii">
+                                          <cd:Description>Index of expected ground bin corresponding to the altitude of DEM intersection</cd:Description>
+                                          <cd:NativeType>uint8</cd:NativeType>
+                                        </cd:Integer>
+                                      </cd:Type>
+                                    </cd:Field>
+                                    <cd:Field name="Ground_Bin_Detected">
+                                      <cd:Type namexml="Ground_Bin_Detected">
+                                        <cd:Array format="ascii">
+                                          <cd:Dimension>24</cd:Dimension>
+                                          <cd:Integer format="ascii">
+                                            <cd:Description>This list contains 24 values separated by blanks. The items in this list refer to height bins 1 ... 24. 1 if ground bin was detected, else 0.</cd:Description>
+                                            <cd:NativeType>uint8</cd:NativeType>
+                                            <ct:NamedTest id="IntIsZeroOrOne"/>
+                                          </cd:Integer>
+                                        </cd:Array>
+                                      </cd:Type>
+                                    </cd:Field>
+                                  </cd:Record>
+                                  <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                                </cd:Array>
+                              </cd:Field>
+                            </cd:Record>
+                          </cd:Field>
+                        </cd:Record>
+                        <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                      </cd:Array>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+                <cd:Field name="List_of_Frequency_Step_Spike_Detections">
+                  <cd:Record namexml="List_of_Frequency_Step_Spike_Detections">
+                    <cd:Description>Lists of detected spikes for all frequency steps. The structure
+                      is identical to List_of_Frequency_Step_Spike_Detections of the RRC GADS</cd:Description>
+                    <cd:Attribute name="count" />
+                    <cd:Field name="Frequency_Step_Spike_Detection">
+                      <cd:Array>
+                        <cd:Dimension />
+                        <cd:Record namexml="Frequency_Step_Spike_Detection">
+                          <cd:Description>Frequency_Step_Spike_Detection Content Description</cd:Description>
+                          <cd:Field name="List_of_Solar_Spikes">
+                            <cd:Record namexml="List_of_Solar_Spikes">
+                              <cd:Attribute name="count"> </cd:Attribute>
+                              <cd:Description>List of N_S detected solar spikes for one frequency
+                                step</cd:Description>
+                              <cd:Field name="Solar_Spike">
+                                <cd:Array>
+                                  <cd:Dimension />
+                                  <cd:Record namexml="Solar_Spike">
+                                    <cd:Description>Frequency_Step_Spike_Detection Content
+                                      Description</cd:Description>
+                                    <cd:Field name="BRC_Index">
+                                      <cd:Type namexml="BRC_Index">
+                                        <cd:Integer format="ascii">
+                                          <cd:Description>Index of the BRC where the spike is
+                                            detected</cd:Description>
+                                          <cd:NativeType>uint16</cd:NativeType>
+                                        </cd:Integer>
+                                      </cd:Type>
+                                    </cd:Field>
+                                    <cd:Field name="Measurement_Index">
+                                      <cd:Type namexml="Measurement_Index">
+                                        <cd:Integer format="ascii">
+                                          <cd:Description>Index of the measurement where the spike
+                                            is
+                                            detected</cd:Description>
+                                          <cd:NativeType>uint8</cd:NativeType>
+                                        </cd:Integer>
+                                      </cd:Type>
+                                    </cd:Field>
+                                    <cd:Field name="Column_Index">
+                                      <cd:Type namexml="Column_Index">
+                                        <cd:Integer format="ascii">
+                                          <cd:Description>Index of the ACCD column (0, …, 19), where
+                                            the spike is detected</cd:Description>
+                                          <cd:NativeType>uint8</cd:NativeType>
+                                        </cd:Integer>
+                                      </cd:Type>
+                                    </cd:Field>
+                                    <cd:Field name="Count_Detected">
+                                      <cd:Type namexml="Count_Detected">
+                                        <cd:Attribute name="unit">
+                                          <cd:Optional />
+                                          <cd:FixedValue>ACCD counts</cd:FixedValue>
+                                        </cd:Attribute>
+                                        <cd:Integer format="ascii">
+                                          <cd:Description>ACCD count of the detected spike before
+                                            correction</cd:Description>
+                                          <cd:Unit>ACCD counts</cd:Unit>
+                                          <cd:NativeType>uint16</cd:NativeType>
+                                        </cd:Integer>
+                                      </cd:Type>
+                                    </cd:Field>
+                                    <cd:Field name="Count_Corrected">
+                                      <cd:Type namexml="Count_Corrected">
+                                        <cd:Attribute name="unit">
+                                          <cd:Optional />
+                                          <cd:FixedValue>ACCD counts</cd:FixedValue>
+                                        </cd:Attribute>
+                                        <cd:Integer format="ascii">
+                                          <cd:Description>ACCD count potentially used for
+                                            correction,
+                                            depending on Do_Spike_Correction of Table 8-152</cd:Description>
+                                          <cd:Unit>ACCD counts</cd:Unit>
+                                          <cd:NativeType>uint16</cd:NativeType>
+                                        </cd:Integer>
+                                      </cd:Type>
+                                    </cd:Field>
+                                  </cd:Record>
+                                </cd:Array>
+                              </cd:Field>
+                            </cd:Record>
+                          </cd:Field>
+                          <cd:Field name="List_of_Atmospheric_Spikes">
+                            <cd:Record namexml="List_of_Atmospheric_Spikes">
+                              <cd:Description>List of N_S detected solar spikes for one frequency
+                                step</cd:Description>
+                              <cd:Attribute name="count"> </cd:Attribute>
+                              <cd:Field name="Atmospheric_Spike">
+                                <cd:Array>
+                                  <cd:Dimension />
+                                  <cd:Record namexml="Atmospheric_Spike">
+                                    <cd:Description>Frequency_Step_Spike_Detection Content
+                                      Description</cd:Description>
+                                    <cd:Field name="BRC_Index">
+                                      <cd:Type namexml="BRC_Index">
+                                        <cd:Integer format="ascii">
+                                          <cd:Description>Index of the BRC where the spike is
+                                            detected</cd:Description>
+                                          <cd:NativeType>uint16</cd:NativeType>
+                                        </cd:Integer>
+                                      </cd:Type>
+                                    </cd:Field>
+                                    <cd:Field name="Measurement_Index">
+                                      <cd:Type namexml="Measurement_Index">
+                                        <cd:Integer format="ascii">
+                                          <cd:Description>Index of the measurement where the spike
+                                            is
+                                            detected</cd:Description>
+                                          <cd:NativeType>uint8</cd:NativeType>
+                                        </cd:Integer>
+                                      </cd:Type>
+                                    </cd:Field>
+                                    <cd:Field name="Row_Index">
+                                      <cd:Type namexml="Row_Index">
+                                        <cd:Integer format="ascii">
+                                          <cd:Description>Index of the ACCD row (0, …, 23), where
+                                            the
+                                            spike is detected</cd:Description>
+                                          <cd:NativeType>uint8</cd:NativeType>
+                                        </cd:Integer>
+                                      </cd:Type>
+                                    </cd:Field>
+                                    <cd:Field name="Column_Index">
+                                      <cd:Type namexml="Column_Index">
+                                        <cd:Integer format="ascii">
+                                          <cd:Description>Index of the ACCD column (0, …, 19), where the spike is detected</cd:Description>
+                                          <cd:NativeType>uint8</cd:NativeType>
+                                        </cd:Integer>
+                                      </cd:Type>
+                                    </cd:Field>
+                                    <cd:Field name="Count_Detected">
+                                      <cd:Type namexml="Count_Detected">
+                                        <cd:Attribute name="unit">
+                                          <cd:Optional />
+                                          <cd:FixedValue>ACCD counts</cd:FixedValue>
+                                        </cd:Attribute>
+                                        <cd:Integer format="ascii">
+                                          <cd:Description>ACCD count of the detected spike before correction</cd:Description>
+                                          <cd:Unit>ACCD counts</cd:Unit>
+                                          <cd:NativeType>uint16</cd:NativeType>
+                                        </cd:Integer>
+                                      </cd:Type>
+                                    </cd:Field>
+                                    <cd:Field name="Count_Corrected">
+                                      <cd:Type namexml="Count_Corrected">
+                                        <cd:Attribute name="unit">
+                                          <cd:Optional />
+                                          <cd:FixedValue>ACCD counts</cd:FixedValue>
+                                        </cd:Attribute>
+                                        <cd:Integer format="ascii">
+                                          <cd:Description>ACCD count potentially used correction, depending on Do_Spike_Correction</cd:Description>
+                                          <cd:Unit>ACCD counts</cd:Unit>
+                                          <cd:NativeType>uint16</cd:NativeType>
+                                        </cd:Integer>
+                                      </cd:Type>
+                                    </cd:Field>
+                                  </cd:Record>
+                                </cd:Array>
+                              </cd:Field>
+                            </cd:Record>
+                          </cd:Field>
+                          <cd:Field name="List_of_Internal_Spikes">
+                            <cd:Record namexml="List_of_Internal_Spikes">
+                              <cd:Description>List of N_S detected solar spikes for one frequency
+                                step</cd:Description>
+                              <cd:Attribute name="count"> </cd:Attribute>
+                              <cd:Field name="Internal_Spike">
+                                <cd:Array>
+                                  <cd:Dimension />
+                                  <cd:Record namexml="Internal_Spike">
+                                    <cd:Description>Frequency_Step_Spike_Detection Content
+                                      Description</cd:Description>
+                                    <cd:Field name="BRC_Index">
+                                      <cd:Type namexml="BRC_Index">
+                                        <cd:Integer format="ascii">
+                                          <cd:Description>Index of the BRC where the spike is
+                                            detected</cd:Description>
+                                          <cd:NativeType>uint16</cd:NativeType>
+                                        </cd:Integer>
+                                      </cd:Type>
+                                    </cd:Field>
+                                    <cd:Field name="Pulse_Index">
+                                      <cd:Type namexml="Pulse_Index">
+                                        <cd:Integer format="ascii">
+                                          <cd:Description>Index of the reference pulse where the
+                                            spike
+                                            is detected</cd:Description>
+                                          <cd:NativeType>uint8</cd:NativeType>
+                                        </cd:Integer>
+                                      </cd:Type>
+                                    </cd:Field>
+                                    <cd:Field name="Column_Index">
+                                      <cd:Type namexml="Column_Index">
+                                        <cd:Integer format="ascii">
+                                          <cd:Description>Index of the ACCD column (0, …, 19), where
+                                            the
+                                            spike is detected</cd:Description>
+                                          <cd:NativeType>uint8</cd:NativeType>
+                                        </cd:Integer>
+                                      </cd:Type>
+                                    </cd:Field>
+                                    <cd:Field name="Count_Detected">
+                                      <cd:Type namexml="Count_Detected">
+                                        <cd:Attribute name="unit">
+                                          <cd:Optional />
+                                          <cd:FixedValue>ACCD counts</cd:FixedValue>
+                                        </cd:Attribute>
+                                        <cd:Integer format="ascii">
+                                          <cd:Description>ACCD count of the detected spike before
+                                            correction</cd:Description>
+                                          <cd:Unit>ACCD counts</cd:Unit>
+                                          <cd:NativeType>uint16</cd:NativeType>
+                                        </cd:Integer>
+                                      </cd:Type>
+                                    </cd:Field>
+                                    <cd:Field name="Count_Corrected">
+                                      <cd:Type namexml="Count_Corrected">
+                                        <cd:Attribute name="unit">
+                                          <cd:Optional />
+                                          <cd:FixedValue>ACCD counts</cd:FixedValue>
+                                        </cd:Attribute>
+                                        <cd:Integer format="ascii">
+                                          <cd:Description>ACCD count potentially used for
+                                            correction,
+                                            depending on Do_Spike_Correction of Table 8-152</cd:Description>
+                                          <cd:Unit>ACCD counts</cd:Unit>
+                                          <cd:NativeType>uint16</cd:NativeType>
+                                        </cd:Integer>
+                                      </cd:Type>
+                                    </cd:Field>
+                                  </cd:Record>
+                                </cd:Array>
+                              </cd:Field>
+                            </cd:Record>
+                          </cd:Field>
+                        </cd:Record>
+                      </cd:Array>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+              </cd:Record>
+            </cd:Field>
+            <cd:Field name="Rayleigh_Response_Calibration_Thresholds">
+              <cd:Record namexml="Rayleigh_Response_Calibration_Thresholds">
+                <cd:Description>Processing and quality thresholds as defined by the AUX_PAR_1B file</cd:Description>
+                <cd:Field name="Min_Valid_Freq_Per_Cal">
+                  <cd:Type namexml="Min_Valid_Freq_Per_Cal">
+                    <cd:Integer format="ascii">
+                      <cd:Description>Minimum valid frequencies per calibration, copy of processing input parameter</cd:Description>
+                      <cd:NativeType>uint32</cd:NativeType>
+                    </cd:Integer>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="Min_Valid_Ground_Freq_Per_Cal">
+                  <cd:Type namexml="Min_Valid_Ground_Freq_Per_Cal">
+                    <cd:Integer format="ascii">
+                      <cd:Description>Minimum valid ground frequencies per calibration, copy of processing input parameter</cd:Description>
+                      <cd:NativeType>uint32</cd:NativeType>
+                    </cd:Integer>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="Min_Valid_Reference_Pulse_Freq_Per_Cal">
+                  <cd:Type namexml="Min_Valid_Reference_Pulse_Freq_Per_Cal">
+                    <cd:Integer format="ascii">
+                      <cd:Description>Minimum valid reference pulse frequencies per calibration, copy of processing input parameter</cd:Description>
+                      <cd:NativeType>uint32</cd:NativeType>
+                    </cd:Integer>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="Min_Valid_Measurements_Per_Freq">
+                  <cd:Type namexml="Min_Valid_Measurements_Per_Freq">
+                    <cd:Integer format="ascii">
+                      <cd:Description>Minimum valid measurements per frequency, copy of processing input parameter</cd:Description>
+                      <cd:NativeType>uint32</cd:NativeType>
+                    </cd:Integer>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="Min_Valid_Ground_Measurements_Per_Freq">
+                  <cd:Type namexml="Min_Valid_Ground_Measurements_Per_Freq">
+                    <cd:Integer format="ascii">
+                      <cd:Description>Minimum valid ground measurements per frequency, copy of processing input parameter</cd:Description>
+                      <cd:NativeType>uint32</cd:NativeType>
+                    </cd:Integer>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="Min_Valid_Reference_Pulses_Per_Freq">
+                  <cd:Type namexml="Min_Valid_Reference_Pulses_Per_Freq">
+                    <cd:Integer format="ascii">
+                      <cd:Description>Minimum valid pulses per frequency, copy of processing input parameter</cd:Description>
+                      <cd:NativeType>uint32</cd:NativeType>
+                    </cd:Integer>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="Rayleigh_Response_Calibration_Ranges">
+                  <cd:Record namexml="Rayleigh_Response_Calibration_Ranges">
+                    <cd:Description>Rayleigh Response Calibration Ranges</cd:Description>
+                    <cd:Field name="Min_Rayleigh_Measurement_Mean_Sensitivity">
+                      <cd:Type namexml="Min_Rayleigh_Measurement_Mean_Sensitivity">
+                        <cd:Attribute name="unit">
+                          <cd:FixedValue>1/GHz</cd:FixedValue>
+                        </cd:Attribute>
+                        <cd:Float format="ascii">
+                          <cd:Description>Minimum mean sensitivity of atmosperic echo</cd:Description>
+                          <cd:Unit>1/GHz</cd:Unit>
+                          <cd:NativeType>double</cd:NativeType>
+                          <ct:NamedTest id="FloatIsFinite"/>
+                        </cd:Float>
+                      </cd:Type>
+                    </cd:Field>
+                    <cd:Field name="Min_Rayleigh_Measurement_Zero_Freq_Response">
+                      <cd:Type namexml="Min_Rayleigh_Measurement_Zero_Freq_Response">
+                        <cd:Float format="ascii">
+                          <cd:Description>Minimum zero frequency reponse of atmospheric echo</cd:Description>
+                          <cd:NativeType>double</cd:NativeType>
+                          <ct:NamedTest id="FloatIsFinite"/>
+                        </cd:Float>
+                      </cd:Type>
+                    </cd:Field>
+                    <cd:Field name="Max_Rayleigh_Measurement_Mean_Sensitivity">
+                      <cd:Type namexml="Max_Rayleigh_Measurement_Mean_Sensitivity">
+                        <cd:Attribute name="unit">
+                          <cd:FixedValue>1/GHz</cd:FixedValue>
+                        </cd:Attribute>
+                        <cd:Float format="ascii">
+                          <cd:Description>Maximum mean sensitivity of atmosperic echo</cd:Description>
+                          <cd:Unit>1/GHz</cd:Unit>
+                          <cd:NativeType>double</cd:NativeType>
+                          <ct:NamedTest id="FloatIsFinite"/>
+                        </cd:Float>
+                      </cd:Type>
+                    </cd:Field>
+                    <cd:Field name="Max_Rayleigh_Measurement_Zero_Freq_Response">
+                      <cd:Type namexml="Max_Rayleigh_Measurement_Zero_Freq_Response">
+                        <cd:Float format="ascii">
+                          <cd:Description>Maximum zero frequency reponse of atmosperic echo</cd:Description>
+                          <cd:NativeType>double</cd:NativeType>
+                          <ct:NamedTest id="FloatIsFinite"/>
+                        </cd:Float>
+                      </cd:Type>
+                    </cd:Field>
+                    <cd:Field name="Max_Rayleigh_Measurement_Error_Response_Std_Dev">
+                      <cd:Type namexml="Max_Rayleigh_Measurement_Error_Response_Std_Dev">
+                        <cd:Float format="ascii">
+                          <cd:Description>Maximum error response standard deviation of atmosperic echo</cd:Description>
+                          <cd:NativeType>double</cd:NativeType>
+                          <ct:NamedTest id="FloatIsFinite"/>
+                        </cd:Float>
+                      </cd:Type>
+                    </cd:Field>
+                    <cd:Field name="Min_Rayleigh_Ground_Measurement_Mean_Sensitivity">
+                      <cd:Type namexml="Min_Rayleigh_Ground_Measurement_Mean_Sensitivity">
+                        <cd:Attribute name="unit">
+                          <cd:FixedValue>1/GHz</cd:FixedValue>
+                        </cd:Attribute>
+                        <cd:Float format="ascii">
+                          <cd:Description>Minimum mean sensitivity of ground echo</cd:Description>
+                          <cd:Unit>1/GHz</cd:Unit>
+                          <cd:NativeType>double</cd:NativeType>
+                          <ct:NamedTest id="FloatIsFinite"/>
+                        </cd:Float>
+                      </cd:Type>
+                    </cd:Field>
+                    <cd:Field name="Min_Rayleigh_Ground_Measurement_Zero_Freq_Response">
+                      <cd:Type namexml="Min_Rayleigh_Ground_Measurement_Zero_Freq_Response">
+                        <cd:Float format="ascii">
+                          <cd:Description>Minimum zero frequency reponse of ground echo</cd:Description>
+                          <cd:NativeType>double</cd:NativeType>
+                          <ct:NamedTest id="FloatIsFinite"/>
+                        </cd:Float>
+                      </cd:Type>
+                    </cd:Field>
+                    <cd:Field name="Max_Rayleigh_Ground_Measurement_Mean_Sensitivity">
+                      <cd:Type namexml="Max_Rayleigh_Ground_Measurement_Mean_Sensitivity">
+                        <cd:Attribute name="unit">
+                          <cd:FixedValue>1/GHz</cd:FixedValue>
+                        </cd:Attribute>
+                        <cd:Float format="ascii">
+                          <cd:Description>Maximum mean sensitivity of ground echo</cd:Description>
+                          <cd:Unit>1/GHz</cd:Unit>
+                          <cd:NativeType>double</cd:NativeType>
+                          <ct:NamedTest id="FloatIsFinite"/>
+                        </cd:Float>
+                      </cd:Type>
+                    </cd:Field>
+                    <cd:Field name="Max_Rayleigh_Ground_Measurement_Zero_Freq_Response">
+                      <cd:Type namexml="Max_Rayleigh_Ground_Measurement_Zero_Freq_Response">
+                        <cd:Float format="ascii">
+                          <cd:Description>Maximum zero frequency reponse of ground echo</cd:Description>
+                          <cd:NativeType>double</cd:NativeType>
+                          <ct:NamedTest id="FloatIsFinite"/>
+                        </cd:Float>
+                      </cd:Type>
+                    </cd:Field>
+                    <cd:Field name="Max_Rayleigh_Ground_Measurement_Error_Response_Std_Dev">
+                      <cd:Type namexml="Max_Rayleigh_Ground_Measurement_Error_Response_Std_Dev">
+                        <cd:Float format="ascii">
+                          <cd:Description>Maximum error response standard deviation of ground echo</cd:Description>
+                          <cd:NativeType>double</cd:NativeType>
+                          <ct:NamedTest id="FloatIsFinite"/>
+                        </cd:Float>
+                      </cd:Type>
+                    </cd:Field>
+                    <cd:Field name="Min_Rayleigh_Reference_Pulse_Mean_Sensitivity">
+                      <cd:Type namexml="Min_Rayleigh_Reference_Pulse_Mean_Sensitivity">
+                        <cd:Attribute name="unit">
+                          <cd:FixedValue>1/GHz</cd:FixedValue>
+                        </cd:Attribute>
+                        <cd:Float format="ascii">
+                          <cd:Description>Minimum mean sensitivity of internal calibration</cd:Description>
+                          <cd:Unit>1/GHz</cd:Unit>
+                          <cd:NativeType>double</cd:NativeType>
+                          <ct:NamedTest id="FloatIsFinite"/>
+                        </cd:Float>
+                      </cd:Type>
+                    </cd:Field>
+                    <cd:Field name="Min_Rayleigh_Reference_Pulse_Zero_Freq_Response">
+                      <cd:Type namexml="Min_Rayleigh_Reference_Pulse_Zero_Freq_Response">
+                        <cd:Float format="ascii">
+                          <cd:Description>Minimum zero frequency reponse of internal calibration</cd:Description>
+                          <cd:NativeType>double</cd:NativeType>
+                          <ct:NamedTest id="FloatIsFinite"/>
+                        </cd:Float>
+                      </cd:Type>
+                    </cd:Field>
+                    <cd:Field name="Max_Rayleigh_Reference_Pulse_Mean_Sensitivity">
+                      <cd:Type namexml="Max_Rayleigh_Reference_Pulse_Mean_Sensitivity">
+                        <cd:Attribute name="unit">
+                          <cd:FixedValue>1/GHz</cd:FixedValue>
+                        </cd:Attribute>
+                        <cd:Float format="ascii">
+                          <cd:Description>Maximum mean sensitivity of internal calibration</cd:Description>
+                          <cd:Unit>1/GHz</cd:Unit>
+                          <cd:NativeType>double</cd:NativeType>
+                          <ct:NamedTest id="FloatIsFinite"/>
+                        </cd:Float>
+                      </cd:Type>
+                    </cd:Field>
+                    <cd:Field name="Max_Rayleigh_Reference_Pulse_Zero_Freq_Response">
+                      <cd:Type namexml="Max_Rayleigh_Reference_Pulse_Zero_Freq_Response">
+                        <cd:Float format="ascii">
+                          <cd:Description>Maximum zero frequency reponse of internal calibration</cd:Description>
+                          <cd:NativeType>double</cd:NativeType>
+                          <ct:NamedTest id="FloatIsFinite"/>
+                        </cd:Float>
+                      </cd:Type>
+                    </cd:Field>
+                    <cd:Field name="Max_Rayleigh_Reference_Pulse_Error_Response_Std_Dev">
+                      <cd:Type namexml="Max_Rayleigh_Reference_Pulse_Error_Response_Std_Dev">
+                        <cd:Float format="ascii">
+                          <cd:Description>Maximum error response standard deviation of internal calibration</cd:Description>
+                          <cd:NativeType>double</cd:NativeType>
+                          <ct:NamedTest id="FloatIsFinite"/>
+                        </cd:Float>
+                      </cd:Type>
+                    </cd:Field>
+                    <cd:Field name="Rayleigh_Fit_Upper_Frequency_Range">
+                      <cd:Type namexml="Rayleigh_Fit_Upper_Frequency_Range">
+                        <cd:Attribute name="unit">
+                          <cd:Optional/>
+                          <cd:FixedValue>GHz</cd:FixedValue>
+                        </cd:Attribute>
+                        <cd:Float format="ascii">
+                          <cd:Description>Upper frequency range when computing the best fit</cd:Description>
+                          <cd:Unit>GHz</cd:Unit>
+                          <cd:NativeType>double</cd:NativeType>
+                          <ct:NamedTest id="FloatIsFinite"/>
+                        </cd:Float>
+                      </cd:Type>
+                    </cd:Field>
+                    <cd:Field name="Rayleigh_Fit_Lower_Frequency_Range">
+                      <cd:Type namexml="Rayleigh_Fit_Lower_Frequency_Range">
+                        <cd:Attribute name="unit">
+                          <cd:Optional/>
+                          <cd:FixedValue>GHz</cd:FixedValue>
+                        </cd:Attribute>
+                        <cd:Float format="ascii">
+                          <cd:Description>Upper frequency range when computing the best fit</cd:Description>
+                          <cd:Unit>GHz</cd:Unit>
+                          <cd:NativeType>double</cd:NativeType>
+                          <ct:NamedTest id="FloatIsFinite"/>
+                        </cd:Float>
+                      </cd:Type>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+                <cd:Field name="Lower_Altitude_Limit">
+                  <cd:Type namexml="Lower_Altitude_Limit">
+                    <cd:Attribute name="unit">
+                      <cd:Optional/>
+                      <cd:FixedValue>m</cd:FixedValue>
+                    </cd:Attribute>
+                    <cd:Float format="ascii">
+                      <cd:Description>RRC lower altitude limit, copy of processing input parameter</cd:Description>
+                      <cd:Unit>m</cd:Unit>
+                      <cd:NativeType>double</cd:NativeType>
+                      <ct:NamedTest id="FloatIsFinite"/>
+                    </cd:Float>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="Upper_Altitude_Limit">
+                  <cd:Type namexml="Upper_Altitude_Limit">
+                    <cd:Attribute name="unit">
+                      <cd:Optional/>
+                      <cd:FixedValue>m</cd:FixedValue>
+                    </cd:Attribute>
+                    <cd:Float format="ascii">
+                      <cd:Description>RRC upper altitude limit, copy of processing input parameter</cd:Description>
+                      <cd:Unit>m</cd:Unit>
+                      <cd:NativeType>double</cd:NativeType>
+                      <ct:NamedTest id="FloatIsFinite"/>
+                    </cd:Float>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="Maximum_Upper_DEM_Offset">
+                  <cd:Type namexml="Maximum_Upper_DEM_Offset">
+                    <cd:Attribute name="unit">
+                      <cd:FixedValue>m</cd:FixedValue>
+                    </cd:Attribute>
+                    <cd:Float format="ascii">
+                      <cd:Description>Maximum height difference that center of detected ground bin is allowed to be above center of DEM intersection bin, copy of processing input parameter</cd:Description>
+                      <cd:Unit>m</cd:Unit>
+                      <cd:NativeType>double</cd:NativeType>
+                      <ct:NamedTest id="FloatIsFinite"/>
+                    </cd:Float>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="Maximum_Lower_DEM_Offset">
+                  <cd:Type namexml="Maximum_Lower_DEM_Offset">
+                    <cd:Attribute name="unit">
+                      <cd:FixedValue>m</cd:FixedValue>
+                    </cd:Attribute>
+                    <cd:Float format="ascii">
+                      <cd:Description>Maximum height difference that center of detected ground bin is allowed to be below center of DEM intersection bin, copy of processing input parameter</cd:Description>
+                      <cd:Unit>m</cd:Unit>
+                      <cd:NativeType>double</cd:NativeType>
+                      <ct:NamedTest id="FloatIsFinite"/>
+                    </cd:Float>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="Min_Rayleigh_Ground_Detection_Signal_Derivative">
+                  <cd:Type namexml="Min_Rayleigh_Ground_Detection_Signal_Derivative">
+                    <cd:Float format="ascii">
+                      <cd:Description>Minimum derivative of Rayleigh signal shift for ground detection, copy of processing input parameter</cd:Description>
+                      <cd:NativeType>double</cd:NativeType>
+                      <ct:NamedTest id="FloatIsFinite"/>
+                    </cd:Float>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="Max_Rayleigh_Ground_Detection_Response_Shift">
+                  <cd:Type namexml="Max_Rayleigh_Ground_Detection_Response_Shift">
+                    <cd:Float format="ascii">
+                      <cd:Description>Maximum Rayleigh Response shift for ground detection, copy of processing input parameter</cd:Description>
+                      <cd:NativeType>double</cd:NativeType>
+                      <ct:NamedTest id="FloatIsFinite"/>
+                    </cd:Float>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="Etalon_Temp_Range_Threshold">
+                  <cd:Type namexml="Etalon_Temp_Range_Threshold">
+                    <cd:Attribute name="unit">
+                      <cd:FixedValue>C</cd:FixedValue>
+                    </cd:Attribute>
+                    <cd:Float format="ascii">
+                      <cd:Description>RRC RSP Etalon range threshold, copy of processing input parameter</cd:Description>
+                      <cd:Unit>degC</cd:Unit>
+                      <cd:NativeType>double</cd:NativeType>
+                      <ct:NamedTest id="FloatIsFinite"/>
+                    </cd:Float>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="Scattering_Ratio_Threshold">
+                  <cd:Type namexml="Scattering_Ratio_Threshold">
+                    <cd:Float format="ascii">
+                      <cd:Description>Copy of RRC_Params input parameter</cd:Description>
+                      <cd:NativeType>double</cd:NativeType>
+                      <ct:NamedTest id="FloatIsFinite"/>
+                    </cd:Float>
+                  </cd:Type>
+                </cd:Field>
+              </cd:Record>
+            </cd:Field>
+            <cd:Field name="Diff_Offset_Freq_Ref_Meas">
+              <cd:Type namexml="Diff_Offset_Freq_Ref_Meas">
+                <cd:Attribute name="unit">
+                  <cd:Optional/>
+                  <cd:FixedValue>GHz</cd:FixedValue>
+                </cd:Attribute>
+                <cd:Float format="ascii">
+                  <cd:Description>Difference between reference pulse and atmospheric measurement offset frequencies (difference of x-intercepts of the best straight line fits)</cd:Description>
+                  <cd:Unit>GHz</cd:Unit>
+                  <cd:NativeType>double</cd:NativeType>
+                  <ct:NamedTest id="FloatIsFinite"/>
+                </cd:Float>
+              </cd:Type>
+            </cd:Field>
+            <cd:Field name="Diff_Offset_Freq_Ref_Ground_Meas">
+              <cd:Type namexml="Diff_Offset_Freq_Ref_Ground_Meas">
+                <cd:Attribute name="unit">
+                  <cd:Optional/>
+                  <cd:FixedValue>GHz</cd:FixedValue>
+                </cd:Attribute>
+                <cd:Float format="ascii">
+                  <cd:Description>Difference between reference pulse and ground measurement offset frequencies (difference of x-intercepts of the best straight line fits)</cd:Description>
+                  <cd:Unit>GHz</cd:Unit>
+                  <cd:NativeType>double</cd:NativeType>
+                  <ct:NamedTest id="FloatIsFinite"/>
+                </cd:Float>
+              </cd:Type>
+            </cd:Field>
+            <cd:Field name="Min_Aht_9_Rsp_Etalon">
+              <cd:Type namexml="Min_Aht_9_Rsp_Etalon">
+                <cd:Attribute name="unit">
+                  <cd:FixedValue>C</cd:FixedValue>
+                </cd:Attribute>
+                <cd:Float format="ascii">
+                  <cd:Description>Minimum Etalon temperature for current sensor, over all BRCs and all time samples per BRC</cd:Description>
+                  <cd:Unit>degC</cd:Unit>
+                  <cd:NativeType>double</cd:NativeType>
+                  <ct:NamedTest id="FloatIsFinite"/>
+                </cd:Float>
+              </cd:Type>
+            </cd:Field>
+            <cd:Field name="Max_Aht_9_Rsp_Etalon">
+              <cd:Type namexml="Max_Aht_9_Rsp_Etalon">
+                <cd:Attribute name="unit">
+                  <cd:FixedValue>C</cd:FixedValue>
+                </cd:Attribute>
+                <cd:Float format="ascii">
+                  <cd:Description>Maximum Etalon temperature for current sensor, over all BRCs and all time samples per BRC</cd:Description>
+                  <cd:Unit>degC</cd:Unit>
+                  <cd:NativeType>double</cd:NativeType>
+                  <ct:NamedTest id="FloatIsFinite"/>
+                </cd:Float>
+              </cd:Type>
+            </cd:Field>
+            <cd:Field name="Min_Aht_10_Rsp_Etalon">
+              <cd:Type namexml="Min_Aht_10_Rsp_Etalon">
+                <cd:Attribute name="unit">
+                  <cd:FixedValue>C</cd:FixedValue>
+                </cd:Attribute>
+                <cd:Float format="ascii">
+                  <cd:Description>Minimum Etalon temperature for current sensor, over all BRCs and all time samples per BRC</cd:Description>
+                  <cd:Unit>degC</cd:Unit>
+                  <cd:NativeType>double</cd:NativeType>
+                  <ct:NamedTest id="FloatIsFinite"/>
+                </cd:Float>
+              </cd:Type>
+            </cd:Field>
+            <cd:Field name="Max_Aht_10_Rsp_Etalon">
+              <cd:Type namexml="Max_Aht_10_Rsp_Etalon">
+                <cd:Attribute name="unit">
+                  <cd:FixedValue>C</cd:FixedValue>
+                </cd:Attribute>
+                <cd:Float format="ascii">
+                  <cd:Description>Maximum Etalon temperature for current sensor, over all BRCs and all time samples per BRC</cd:Description>
+                  <cd:Unit>degC</cd:Unit>
+                  <cd:NativeType>double</cd:NativeType>
+                  <ct:NamedTest id="FloatIsFinite"/>
+                </cd:Float>
+              </cd:Type>
+            </cd:Field>
+            <cd:Field name="Min_Aht_11_Rsp_Etalon">
+              <cd:Type namexml="Min_Aht_11_Rsp_Etalon">
+                <cd:Attribute name="unit">
+                  <cd:FixedValue>C</cd:FixedValue>
+                </cd:Attribute>
+                <cd:Float format="ascii">
+                  <cd:Description>Minimum Etalon temperature for current sensor, over all BRCs and all time samples per BRC</cd:Description>
+                  <cd:Unit>degC</cd:Unit>
+                  <cd:NativeType>double</cd:NativeType>
+                  <ct:NamedTest id="FloatIsFinite"/>
+                </cd:Float>
+              </cd:Type>
+            </cd:Field>
+            <cd:Field name="Max_Aht_11_Rsp_Etalon">
+              <cd:Type namexml="Max_Aht_11_Rsp_Etalon">
+                <cd:Attribute name="unit">
+                  <cd:FixedValue>C</cd:FixedValue>
+                </cd:Attribute>
+                <cd:Float format="ascii">
+                  <cd:Description>Maximum Etalon temperature for current sensor, over all BRCs and all time samples per BRC</cd:Description>
+                  <cd:Unit>degC</cd:Unit>
+                  <cd:NativeType>double</cd:NativeType>
+                  <ct:NamedTest id="FloatIsFinite"/>
+                </cd:Float>
+              </cd:Type>
+            </cd:Field>
+            <cd:Field name="Min_Aht_12_Rsp_Etalon">
+              <cd:Type namexml="Min_Aht_12_Rsp_Etalon">
+                <cd:Attribute name="unit">
+                  <cd:FixedValue>C</cd:FixedValue>
+                </cd:Attribute>
+                <cd:Float format="ascii">
+                  <cd:Description>Minimum Etalon temperature for current sensor, over all BRCs and all time samples per BRC</cd:Description>
+                  <cd:Unit>degC</cd:Unit>
+                  <cd:NativeType>double</cd:NativeType>
+                  <ct:NamedTest id="FloatIsFinite"/>
+                </cd:Float>
+              </cd:Type>
+            </cd:Field>
+            <cd:Field name="Max_Aht_12_Rsp_Etalon">
+              <cd:Type namexml="Max_Aht_12_Rsp_Etalon">
+                <cd:Attribute name="unit">
+                  <cd:FixedValue>C</cd:FixedValue>
+                </cd:Attribute>
+                <cd:Float format="ascii">
+                  <cd:Description>Maximum Etalon temperature for current sensor, over all BRCs and all time samples per BRC</cd:Description>
+                  <cd:Unit>degC</cd:Unit>
+                  <cd:NativeType>double</cd:NativeType>
+                  <ct:NamedTest id="FloatIsFinite"/>
+                </cd:Float>
+              </cd:Type>
+            </cd:Field>
+            <cd:Field name="Data_Is_Valid">
+              <cd:Type namexml="Data_Is_Valid">
+                <cd:Integer format="ascii">
+                  <cd:Description>FALSE if one of the sensor temperature ranges (difference between min and max values over all the BRCs and time samples) is greater than the allowed threshold. TRUE otherwise</cd:Description>
+                  <cd:NativeType>uint8</cd:NativeType>
+                  <cd:Mapping string="FALSE" value="0"/>
+                  <cd:Mapping string="False" value="0"/>
+                  <cd:Mapping string="false" value="0"/>
+                  <cd:Mapping string="TRUE" value="1"/>
+                  <cd:Mapping string="True" value="1"/>
+                  <cd:Mapping string="true" value="1"/>
+                </cd:Integer>
+              </cd:Type>
+            </cd:Field>
+            <cd:Field name="List_of_Frequency_Step_Geolocations">
+              <cd:Record namexml="List_of_Frequency_Step_Geolocations">
+                <cd:Description>List of geolocation information for all frequency steps. This information is needed by the AUX_CSR/AUX_PRR generator running at the APMF</cd:Description>
+                <cd:Attribute name="count"/>
+                <cd:Field name="Frequency_Step_Geolocation">
+                  <cd:Array>
+                    <cd:Dimension/>
+                    <cd:Record namexml="Frequency_Step_Geolocation">
+                      <cd:Field name="Start_of_Observation_Time_Last_BRC">
+                        <cd:Type namexml="Start_of_Observation_Time_Last_BRC">
+                          <cd:Time format="ascii" timeformat="ascii_ccsds_datetime_ymd1_with_ref">
+                            <cd:Description>Observation centroid time</cd:Description>
+                            <cd:Mapping string="UTC=0000-00-00T00:00:00" value="-inf"/>
+                            <cd:Mapping string="UTC=9999-12-31T23:59:59" value="+inf"/>
+                          </cd:Time>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="Latitude_of_DEM_Intersection">
+                        <cd:Type namexml="Latitude_of_DEM_Intersection">
+                          <cd:Attribute name="unit">
+                            <cd:FixedValue>10-6DegN</cd:FixedValue>
+                          </cd:Attribute>
+                          <cd:Float format="ascii">
+                            <cd:Description>Latitude of the intersection of WGS84 DEM and the satellite line-of-sight</cd:Description>
+                            <cd:Unit>1e-6 degrees_north</cd:Unit>
+                            <cd:Conversion denominator="1000000.000000" numerator="1.000000">
+                              <cd:Unit>degrees_north</cd:Unit>
+                            </cd:Conversion>
+                            <cd:NativeType>double</cd:NativeType>
+                            <ct:NamedTest id="RangeLatitude6"/>
+                            <ct:NamedTest id="FloatIsFinite"/>
+                          </cd:Float>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="Longitude_of_DEM_Intersection">
+                        <cd:Type namexml="Longitude_of_DEM_Intersection">
+                          <cd:Attribute name="unit">
+                            <cd:FixedValue>10-6DegE</cd:FixedValue>
+                          </cd:Attribute>
+                          <cd:Float format="ascii">
+                            <cd:Description>Longitude of the intersection of WGS84 DEM and the satellite line-of-sight</cd:Description>
+                            <cd:Unit>1e-6 degrees_east</cd:Unit>
+                            <cd:Conversion denominator="1000000.000000" numerator="1.000000">
+                              <cd:Unit>degrees_east</cd:Unit>
+                            </cd:Conversion>
+                            <cd:NativeType>double</cd:NativeType>
+                            <ct:NamedTest id="RangeLongitude6"/>
+                            <ct:NamedTest id="FloatIsFinite"/>
+                          </cd:Float>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="Altitude">
+                        <cd:Type namexml="Altitude">
+                          <cd:Description>This list contains 25 values, separated by blanks. The first item contains the height of the upper edge of the top-most bin. The remaining 24 items contain the height of the lower edge of each height bin.</cd:Description>
+                          <cd:Attribute name="unit">
+                            <cd:FixedValue>m</cd:FixedValue>
+                          </cd:Attribute>
+                          <cd:Array format="ascii">
+                            <cd:Dimension>25</cd:Dimension>
+                            <cd:Float format="ascii">
+                              <cd:NativeType>double</cd:NativeType>
+                              <ct:NamedTest id="FloatIsFinite"/>
+                            </cd:Float>
+                          </cd:Array>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="Satellite_Range">
+                        <cd:Type namexml="Satellite_Range">
+                          <cd:Description>This list contains 25 values, separated by blanks. The first item contains the distance along LOS of the upper edge of the top-most bin. The remaining 24 items contain the distance along LOS of the lower edge of each height bin.</cd:Description>
+                          <cd:Attribute name="unit">
+                            <cd:FixedValue>m</cd:FixedValue>
+                          </cd:Attribute>
+                          <cd:Array format="ascii">
+                            <cd:Dimension>25</cd:Dimension>
+                            <cd:Float format="ascii">
+                              <cd:NativeType>double</cd:NativeType>
+                              <ct:NamedTest id="FloatIsFinite"/>
+                            </cd:Float>
+                          </cd:Array>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="List_of_Geoid_Separations">
+                        <cd:Record namexml="List_of_Geoid_Separations">
+                          <cd:Description>List of geoid separation values, one value for each BRC contributing to the results of the frequency step.
+                            With nominal settings 3 BRCs per frequency step.</cd:Description>
+                          <cd:Attribute name="count"/>
+                          <cd:Field name="Geoid_Separation">
+                            <cd:Array>
+                              <cd:Dimension/>
+                              <cd:Type namexml="Geoid_Separation">
+                                <cd:Attribute name="unit">
+                                  <cd:FixedValue>m</cd:FixedValue>
+                                </cd:Attribute>
+                                <cd:Float format="ascii">
+                                  <cd:Description>Height of geoid above WGS84 ellipsoid.</cd:Description>
+                                  <cd:Unit>m</cd:Unit>
+                                  <cd:NativeType>double</cd:NativeType>
+                                  <ct:NamedTest id="FloatIsFinite"/>
+                                </cd:Float>
+                              </cd:Type>
+                              <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                            </cd:Array>
+                          </cd:Field>
+                        </cd:Record>
+                      </cd:Field>
+                    </cd:Record>
+                    <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                  </cd:Array>
+                </cd:Field>
+              </cd:Record>
+            </cd:Field>
+            <cd:Field name="List_of_Frequency_Step_Centroid_Values">
+              <cd:Record namexml="List_of_Frequency_Step_Centroid_Values">
+                <cd:Description>List of information on energetic centroid and std dev of the Rayleigh spots for all frequency steps.</cd:Description>
+                <cd:Attribute name="count"/>
+                <cd:Field name="Frequency_Step_Centroid_Values">
+                  <cd:Array>
+                    <cd:Dimension/>
+                    <cd:Record namexml="Frequency_Step_Centroid_Values">
+                      <cd:Field name="Enc_Col_Ref_Pulse_A">
+                        <cd:Type namexml="Enc_Col_Ref_Pulse_A">
+                          <cd:Attribute name="unit">
+                            <cd:FixedValue>ACCD pixel index</cd:FixedValue>
+                          </cd:Attribute>
+                          <cd:Float format="ascii">
+                            <cd:Description>Col value of the energetic centroid of the mean reference pulse of the frequency step for channel A. Value set to 0 if parameter couldn’t be retrieved.</cd:Description>
+                            <cd:Unit>ACCD pixel index</cd:Unit>
+                            <cd:NativeType>double</cd:NativeType>
+                            <ct:NamedTest id="FloatIsFinite"/>
+                          </cd:Float>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="Enc_Col_Ref_Pulse_Std_Dev_A">
+                        <cd:Float format="ascii">
+                          <cd:Description>Energetic centroid column standard deviation for the mean reference pulse of channel A. Value set to 0 if parameter couldn’t be retrieved.</cd:Description>
+                          <cd:NativeType>double</cd:NativeType>
+                          <ct:NamedTest id="FloatIsFinite"/>
+                        </cd:Float>
+                      </cd:Field>
+                      <cd:Field name="Enc_Col_Ref_Pulse_B">
+                        <cd:Type namexml="Enc_Col_Ref_Pulse_B">
+                          <cd:Attribute name="unit">
+                            <cd:FixedValue>ACCD pixel index</cd:FixedValue>
+                          </cd:Attribute>
+                          <cd:Float format="ascii">
+                            <cd:Description>Col value of the energetic centroid of the mean reference pulse of the frequency step for channel B. Value set to 0 if parameter couldn’t be retrieved.</cd:Description>
+                            <cd:Unit>ACCD pixel index</cd:Unit>
+                            <cd:NativeType>double</cd:NativeType>
+                            <ct:NamedTest id="FloatIsFinite"/>
+                          </cd:Float>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="Enc_Col_Ref_Pulse_Std_Dev_B">
+                        <cd:Float format="ascii">
+                          <cd:Description>Energetic centroid column standard deviation for the mean reference pulse of channel B. Value set to 0 if parameter couldn’t be retrieved.</cd:Description>
+                          <cd:NativeType>double</cd:NativeType>
+                          <ct:NamedTest id="FloatIsFinite"/>
+                        </cd:Float>
+                      </cd:Field>
+                      <cd:Field name="Enc_Col_A">
+                        <cd:Type namexml="Enc_Col_A">
+                          <cd:Description>This list contains 25 values, separated by blanks. Col values of the energetic centroids of the mean signal pixel index of the frequency step for channel A: the first 24 values for the atmospheric bins, and the last element for the solar background bin. Value set to 0 if parameter couldn’t be retrieved.</cd:Description>
+                          <cd:Attribute name="unit">
+                            <cd:FixedValue>ACCD pixel index</cd:FixedValue>
+                          </cd:Attribute>
+                          <cd:Array format="ascii">
+                            <cd:Dimension>25</cd:Dimension>
+                            <cd:Float format="ascii">
+                              <cd:NativeType>double</cd:NativeType>
+                              <ct:NamedTest id="FloatIsFinite"/>
+                            </cd:Float>
+                          </cd:Array>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="Enc_Col_Std_Dev_A">
+                        <cd:Type namexml="Enc_Col_Std_Dev_A">
+                          <cd:Description>This list contains 25 values, separated by blanks. Energetic centroid column standard deviation values for channel A: the first 24 values for the atmospheric bins, and the last element for the solar background bin. Value set to 0 if parameter couldn’t be retrieved.</cd:Description>
+                          <cd:Array format="ascii">
+                            <cd:Dimension>25</cd:Dimension>
+                            <cd:Float format="ascii">
+                              <cd:NativeType>double</cd:NativeType>
+                              <ct:NamedTest id="FloatIsFinite"/>
+                            </cd:Float>
+                          </cd:Array>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="Enc_Col_B">
+                        <cd:Type namexml="Enc_Col_B">
+                          <cd:Description>This list contains 25 values, separated by blanks. Col values of the energetic centroids of the mean signal pixel index of the frequency step for channel A: the first 24 values for the atmospheric bins, and the last element for the solar background bin. Value set to 0 if parameter couldn’t be retrieved.</cd:Description>
+                          <cd:Attribute name="unit">
+                            <cd:FixedValue>ACCD pixel index</cd:FixedValue>
+                          </cd:Attribute>
+                          <cd:Array format="ascii">
+                            <cd:Dimension>25</cd:Dimension>
+                            <cd:Float format="ascii">
+                              <cd:NativeType>double</cd:NativeType>
+                              <ct:NamedTest id="FloatIsFinite"/>
+                            </cd:Float>
+                          </cd:Array>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="Enc_Col_Std_Dev_B">
+                        <cd:Type namexml="Enc_Col_Std_Dev_B">
+                          <cd:Description>This list contains 25 values, separated by blanks. Energetic centroid column standard deviation values for channel A: the first 24 values for the atmospheric bins, and the last element for the solar background bin. Value set to 0 if parameter couldn’t be retrieved.</cd:Description>
+                          <cd:Array format="ascii">
+                            <cd:Dimension>25</cd:Dimension>
+                            <cd:Float format="ascii">
+                              <cd:NativeType>double</cd:NativeType>
+                              <ct:NamedTest id="FloatIsFinite"/>
+                            </cd:Float>
+                          </cd:Array>
+                        </cd:Type>
+                      </cd:Field>
+                    </cd:Record>
+                  </cd:Array>
+                </cd:Field>
+              </cd:Record>
+            </cd:Field>
+            <cd:Field name="DCO_Parameters">
+              <cd:Record namexml="DCO_Parameters">
+                <cd:Description>Structure holding mean DCO and DCO std dev values. Parameters are only filled if Do_Mode_Mean_DCO_Pre_Processing = TRUE and Use_DCO_Correction_Lidar_Atmos = TRUE</cd:Description>
+                <cd:Field name="Ref_Pulse_Rayleigh_Mean_DCO">
+                  <cd:Type namexml="Ref_Pulse_Rayleigh_Mean_DCO">
+                    <cd:Attribute name="unit">
+                      <cd:Optional/>
+                      <cd:FixedValue>ACCD counts</cd:FixedValue>
+                    </cd:Attribute>
+                    <cd:Float format="ascii">
+                      <cd:Description>Mode mean DCO value calculated for the Rayleigh reference pulses.</cd:Description>
+                      <cd:Unit>ACCD counts</cd:Unit>
+                      <cd:NativeType>double</cd:NativeType>
+                      <ct:NamedTest id="FloatIsFinite"/>
+                    </cd:Float>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="Ref_Pulse_Rayleigh_DCO_Std_Dev">
+                  <cd:Type namexml="Ref_Pulse_Rayleigh_DCO_Std_Dev">
+                    <cd:Attribute name="unit">
+                      <cd:Optional/>
+                      <cd:FixedValue>ACCD counts</cd:FixedValue>
+                    </cd:Attribute>
+                    <cd:Float format="ascii">
+                      <cd:Description>Standard deviation of the Rayleigh reference pulse DCO values.</cd:Description>
+                      <cd:Unit>ACCD counts</cd:Unit>
+                      <cd:NativeType>double</cd:NativeType>
+                      <ct:NamedTest id="FloatIsFinite"/>
+                    </cd:Float>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="Rayleigh_Mean_DCO">
+                  <cd:Type namexml="Rayleigh_Mean_DCO">
+                    <cd:Attribute name="unit">
+                      <cd:Optional/>
+                      <cd:FixedValue>ACCD counts</cd:FixedValue>
+                    </cd:Attribute>
+                    <cd:Array format="ascii">
+                      <cd:Dimension>25</cd:Dimension>
+                      <cd:Float format="ascii">
+                        <cd:Description>List of mode mean Rayleigh DCO values calculated for the 24 atmospheric layers and the background bin.</cd:Description>
+                        <cd:Unit>ACCD counts</cd:Unit>
+                        <cd:NativeType>double</cd:NativeType>
+                        <ct:NamedTest id="FloatIsFinite"/>
+                      </cd:Float>
+                    </cd:Array>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="Rayleigh_DCO_Std_Dev">
+                  <cd:Type namexml="Rayleigh_DCO_Std_Dev">
+                    <cd:Attribute name="unit">
+                      <cd:Optional/>
+                      <cd:FixedValue>ACCD counts</cd:FixedValue>
+                    </cd:Attribute>
+                    <cd:Array format="ascii">
+                      <cd:Dimension>25</cd:Dimension>
+                      <cd:Float format="ascii">
+                        <cd:Description>List of the standard deviation of Rayleigh DCO values for the 24 atmospheric layers and the background bin.</cd:Description>
+                        <cd:Unit>ACCD counts</cd:Unit>
+                        <cd:NativeType>double</cd:NativeType>
+                        <ct:NamedTest id="FloatIsFinite"/>
+                      </cd:Float>
+                    </cd:Array>
+                  </cd:Type>
+                </cd:Field>
+              </cd:Record>
+            </cd:Field>
+          </cd:Record>
+          <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+        </cd:Array>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+</cd:Record>

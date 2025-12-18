@@ -1,0 +1,191 @@
+<?xml version="1.0"?>
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="xml" last-modified="2025-12-15" name="Level_1B_Processing_LBM_Parameters_04_21" namexml="Level_1B_Processing_LBM_Parameters">
+  <cd:Description>Processing parameters for Laser Beam Monitoring Calibration</cd:Description>
+  <cd:Field name="File_Type">
+    <cd:Text namexml="File_Type">
+      <cd:Description>File type string</cd:Description>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="Sph_Descriptor">
+    <cd:Text namexml="Sph_Descriptor">
+      <cd:Description>ASCII string describing the product</cd:Description>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="Mie_Image_Binarization_Factor">
+    <cd:Type namexml="Mie_Image_Binarization_Factor">
+      <cd:Float format="ascii">
+        <cd:Description>Factor used to calculate the binarization threshold</cd:Description>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Max_Iterations_Ellipse_Fit">
+    <cd:Type namexml="Max_Iterations_Ellipse_Fit">
+      <cd:Integer format="ascii">
+        <cd:Description>Maximum iterations of least squares ellipse fit</cd:Description>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Step_Size_Factor">
+    <cd:Type namexml="Step_Size_Factor">
+      <cd:Float format="ascii">
+        <cd:Description>Factor used to vary diagonal elements of transmission matrix</cd:Description>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Max_Step_Factor">
+    <cd:Type namexml="Max_Step_Factor">
+      <cd:Float format="ascii">
+        <cd:Description>Maximum variation of diagonal elements of transmission matrix</cd:Description>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Min_Step_Factor">
+    <cd:Type namexml="Min_Step_Factor">
+      <cd:Float format="ascii">
+        <cd:Description>Minimum variation of diagonal elements of transmission matrix</cd:Description>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Stop_Tolerance">
+    <cd:Type namexml="Stop_Tolerance">
+      <cd:Float format="ascii">
+        <cd:Description>Tolerance to check convergence of least squares error</cd:Description>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Start_Frequency_Ramp">
+    <cd:Type namexml="Start_Frequency_Ramp">
+      <cd:Attribute name="unit">
+        <cd:FixedValue>GHz</cd:FixedValue>
+      </cd:Attribute>
+      <cd:Float format="ascii">
+        <cd:Description>Lower frequency threshold for frequency steps to be used for the calibration result calculation.</cd:Description>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Stop_Frequency_Ramp">
+    <cd:Type namexml="Stop_Frequency_Ramp">
+      <cd:Attribute name="unit">
+        <cd:FixedValue>GHz</cd:FixedValue>
+      </cd:Attribute>
+      <cd:Float format="ascii">
+        <cd:Description>Upper frequency threshold for frequency steps to be used for the calibration result calculation.</cd:Description>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Min_Num_Valid_Images">
+    <cd:Type namexml="Min_Num_Valid_Images">
+      <cd:Integer format="ascii">
+        <cd:Description>Minimum number of valid images required to assume frequency step results valid.</cd:Description>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="PD74_UV_Energy_Translation">
+    <cd:Type namexml="PD74_UV_Energy_Translation">
+      <cd:Float format="ascii">
+        <cd:Description>Factor used to scale the reported PD74 energy.</cd:Description>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Image_Row_Max">
+    <cd:Type namexml="Image_Row_Max">
+      <cd:Integer format="ascii">
+        <cd:Description>Maximum row number used to calculate the Rayleigh spot size.</cd:Description>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Image_Row_Min">
+    <cd:Type namexml="Image_Row_Min">
+      <cd:Integer format="ascii">
+        <cd:Description>Minimum row number used to calculate the Rayleigh spot size.</cd:Description>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Image_Column_Channel1_Max">
+    <cd:Type namexml="Image_Column_Channel1_Max">
+      <cd:Integer format="ascii">
+        <cd:Description>Maximum column attributed to channel 1.</cd:Description>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Image_Column_Channel1_Min">
+    <cd:Type namexml="Image_Column_Channel1_Min">
+      <cd:Integer format="ascii">
+        <cd:Description>Minimum column attributed to channel 1.</cd:Description>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Image_Column_Channel2_Max">
+    <cd:Type namexml="Image_Column_Channel2_Max">
+      <cd:Integer format="ascii">
+        <cd:Description>Maximum column attributed to channel 1.</cd:Description>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Image_Column_Channel2_Min">
+    <cd:Type namexml="Image_Column_Channel2_Min">
+      <cd:Integer format="ascii">
+        <cd:Description>Minimum column attributed to channel 1.</cd:Description>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="ACCD_Edge_Length">
+    <cd:Type namexml="ACCD_Edge_Length">
+      <cd:Attribute name="unit">
+        <cd:FixedValue>cm</cd:FixedValue>
+      </cd:Attribute>
+      <cd:Float format="ascii">
+        <cd:Description>Edge length of one pixel of the ACCD.</cd:Description>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Mie_Gradient_Correction_Slope">
+    <cd:Type namexml="Mie_Gradient_Correction_Slope">
+      <cd:Float format="ascii">
+        <cd:Description>Slope used for the Mie horizontal gradient correction</cd:Description>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Mie_Gradient_Correction_Offset">
+    <cd:Type namexml="Mie_Gradient_Correction_Offset">
+      <cd:Float format="ascii">
+        <cd:Description>Offset used for the Mie horizontal gradient correction</cd:Description>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Rayleigh_Gradient_Correction_Slope">
+    <cd:Type namexml="Rayleigh_Gradient_Correction_Slope">
+      <cd:Float format="ascii">
+        <cd:Description>Slope used for the Rayleigh horizontal gradient correction</cd:Description>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Rayleigh_Gradient_Correction_Offset">
+    <cd:Type namexml="Rayleigh_Gradient_Correction_Offset">
+      <cd:Float format="ascii">
+        <cd:Description>Offset used for the Rayleigh horizontal gradient correction</cd:Description>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+</cd:Record>

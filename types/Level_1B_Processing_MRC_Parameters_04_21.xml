@@ -1,0 +1,353 @@
+<?xml version="1.0"?>
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="xml" last-modified="2025-12-08" name="Level_1B_Processing_MRC_Parameters_04_21" namexml="Level_1B_Processing_MRC_Parameters">
+  <cd:Description>Processing parameters for Mie Response Calibration</cd:Description>
+  <cd:Field name="File_Type">
+    <cd:Text namexml="File_Type">
+      <cd:Description>File type string</cd:Description>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="Sph_Descriptor">
+    <cd:Text namexml="Sph_Descriptor">
+      <cd:Description>ASCII string describing the product</cd:Description>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="Min_Valid_Freq_Per_Cal">
+    <cd:Type namexml="Min_Valid_Freq_Per_Cal">
+      <cd:Integer format="ascii">
+        <cd:Description>Minimum valid frequencies per calibration</cd:Description>
+        <cd:NativeType>uint32</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Min_Valid_Reference_Pulse_Freq_Per_Cal">
+    <cd:Type namexml="Min_Valid_Reference_Pulse_Freq_Per_Cal">
+      <cd:Integer format="ascii">
+        <cd:Description>Minimum valid frequencies per reference pulse calibration</cd:Description>
+        <cd:NativeType>uint32</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Min_Valid_Measurements_Per_Freq">
+    <cd:Type namexml="Min_Valid_Measurements_Per_Freq">
+      <cd:Integer format="ascii">
+        <cd:Description>Minimum valid measurements per frequency</cd:Description>
+        <cd:NativeType>uint32</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Min_Valid_Reference_Pulses_Per_Freq">
+    <cd:Type namexml="Min_Valid_Reference_Pulses_Per_Freq">
+      <cd:Integer format="ascii">
+        <cd:Description>Minimum valid pulses per frequency</cd:Description>
+        <cd:NativeType>uint32</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Mie_Response_Calibration_Ranges">
+    <cd:Record namexml="Mie_Response_Calibration_Ranges">
+      <cd:Description>Processing parameters for Rayleigh Response Calibration</cd:Description>
+      <cd:Field name="Min_Mie_Measurement_Mean_Sensitivity">
+        <cd:Type namexml="Min_Mie_Measurement_Mean_Sensitivity">
+          <cd:Attribute name="unit">
+            <cd:Optional/>
+            <cd:FixedValue>ACCD pixel index/GHz</cd:FixedValue>
+          </cd:Attribute>
+          <cd:Float format="ascii">
+            <cd:Description>Minimum mean sensitivity of atmosperic echo</cd:Description>
+            <cd:Unit>pixel/GHz</cd:Unit>
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="Min_Mie_Measurement_Zero_Freq_Response">
+        <cd:Type namexml="Min_Mie_Measurement_Zero_Freq_Response">
+          <cd:Attribute name="unit">
+            <cd:Optional/>
+            <cd:FixedValue>ACCD pixel index</cd:FixedValue>
+          </cd:Attribute>
+          <cd:Float format="ascii">
+            <cd:Description>Minimum zero frequency reponse of atmosperic echo</cd:Description>
+            <cd:Unit>pixel</cd:Unit>
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="Max_Mie_Measurement_Mean_Sensitivity">
+        <cd:Type namexml="Max_Mie_Measurement_Mean_Sensitivity">
+          <cd:Attribute name="unit">
+            <cd:Optional/>
+            <cd:FixedValue>ACCD pixel index/GHz</cd:FixedValue>
+          </cd:Attribute>
+          <cd:Float format="ascii">
+            <cd:Description>Maximum mean sensitivity of atmosperic echo</cd:Description>
+            <cd:Unit>pixel/GHz</cd:Unit>
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="Max_Mie_Measurement_Zero_Freq_Response">
+        <cd:Type namexml="Max_Mie_Measurement_Zero_Freq_Response">
+          <cd:Attribute name="unit">
+            <cd:Optional/>
+            <cd:FixedValue>ACCD pixel index</cd:FixedValue>
+          </cd:Attribute>
+          <cd:Float format="ascii">
+            <cd:Description>Maximum zero frequency reponse of atmosperic echo</cd:Description>
+            <cd:Unit>pixel</cd:Unit>
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="Max_Mie_Measurement_Error_Response_Std_Dev">
+        <cd:Type namexml="Max_Mie_Measurement_Error_Response_Std_Dev">
+          <cd:Float format="ascii">
+            <cd:Description>Maximum error response standard deviation of atmosperic echo</cd:Description>
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="Min_Mie_Reference_Pulse_Mean_Sensitivity">
+        <cd:Type namexml="Min_Mie_Reference_Pulse_Mean_Sensitivity">
+          <cd:Attribute name="unit">
+            <cd:Optional/>
+            <cd:FixedValue>ACCD pixel index/GHz</cd:FixedValue>
+          </cd:Attribute>
+          <cd:Float format="ascii">
+            <cd:Description>Minimum mean sensitivity of internal calibration</cd:Description>
+            <cd:Unit>pixel/GHz</cd:Unit>
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="Min_Mie_Reference_Pulse_Zero_Freq_Response">
+        <cd:Type namexml="Min_Mie_Reference_Pulse_Zero_Freq_Response">
+          <cd:Attribute name="unit">
+            <cd:Optional/>
+            <cd:FixedValue>ACCD pixel index</cd:FixedValue>
+          </cd:Attribute>
+          <cd:Float format="ascii">
+            <cd:Description>Minimum zero frequency reponse of internal calibration</cd:Description>
+            <cd:Unit>pixel</cd:Unit>
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="Max_Mie_Reference_Pulse_Mean_Sensitivity">
+        <cd:Type namexml="Max_Mie_Reference_Pulse_Mean_Sensitivity">
+          <cd:Attribute name="unit">
+            <cd:Optional/>
+            <cd:FixedValue>ACCD pixel index/GHz</cd:FixedValue>
+          </cd:Attribute>
+          <cd:Float format="ascii">
+            <cd:Description>Maximum mean sensitivity of internal calibration</cd:Description>
+            <cd:Unit>pixel/GHz</cd:Unit>
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="Max_Mie_Reference_Pulse_Zero_Freq_Response">
+        <cd:Type namexml="Max_Mie_Reference_Pulse_Zero_Freq_Response">
+          <cd:Attribute name="unit">
+            <cd:Optional/>
+            <cd:FixedValue>ACCD pixel index</cd:FixedValue>
+          </cd:Attribute>
+          <cd:Float format="ascii">
+            <cd:Description>Maximum zero frequency reponse of internal calibration</cd:Description>
+            <cd:Unit>pixel</cd:Unit>
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="Max_Mie_Reference_Pulse_Error_Response_Std_Dev">
+        <cd:Type namexml="Max_Mie_Reference_Pulse_Error_Response_Std_Dev">
+          <cd:Float format="ascii">
+            <cd:Description>Maximum error response standard deviation of internal calibration</cd:Description>
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="Mie_Fit_Upper_Frequency_Range">
+        <cd:Type namexml="Mie_Fit_Upper_Frequency_Range">
+          <cd:Attribute name="unit">
+            <cd:Optional/>
+            <cd:FixedValue>GHz</cd:FixedValue>
+          </cd:Attribute>
+          <cd:Float format="ascii">
+            <cd:Description>Upper frequency range when computing the best fit</cd:Description>
+            <cd:Unit>GHz</cd:Unit>
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="Mie_Fit_Lower_Frequency_Range">
+        <cd:Type namexml="Mie_Fit_Lower_Frequency_Range">
+          <cd:Attribute name="unit">
+            <cd:Optional/>
+            <cd:FixedValue>GHz</cd:FixedValue>
+          </cd:Attribute>
+          <cd:Float format="ascii">
+            <cd:Description>Lower frequency range when computing the best fit</cd:Description>
+            <cd:Unit>GHz</cd:Unit>
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Type>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="Mie_Land_Useful_Signal_Lower_Threshold">
+    <cd:Type namexml="Mie_Land_Useful_Signal_Lower_Threshold">
+      <cd:Attribute name="unit">
+        <cd:Optional/>
+        <cd:FixedValue>ACCD counts</cd:FixedValue>
+      </cd:Attribute>
+      <cd:Float format="ascii">
+        <cd:Description>Threshold applied to coadded gound signal of a measurement if the surface indicates land surface. If the threshold is met, the signal is added to the sum of the ground signal on observation level</cd:Description>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Mie_Water_Useful_Signal_Lower_Threshold">
+    <cd:Type namexml="Mie_Water_Useful_Signal_Lower_Threshold">
+      <cd:Attribute name="unit">
+        <cd:Optional/>
+        <cd:FixedValue>ACCD counts</cd:FixedValue>
+      </cd:Attribute>
+      <cd:Float format="ascii">
+        <cd:Description>Threshold applied to coadded gound signal of a measurement if the surface indicates water/sea ice surface. If the threshold is met, the signal is added to the sum of the ground signal on observation level</cd:Description>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Mie_Max_Ground_Echo_Bin_Thickness_Above_DEM">
+    <cd:Type namexml="Mie_Max_Ground_Echo_Bin_Thickness_Above_DEM">
+      <cd:Attribute name="unit">
+        <cd:Optional/>
+        <cd:FixedValue>m</cd:FixedValue>
+      </cd:Attribute>
+      <cd:Float format="ascii">
+        <cd:Description>Threshold applied to a bin identified as ground bin candidate. If the threshold is not met, the signal of the bin is not added to the sum of the ground signal on observation level</cd:Description>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Maximum_Upper_DEM_Offset">
+    <cd:Type namexml="Maximum_Upper_DEM_Offset">
+      <cd:Attribute name="unit"/>
+      <cd:Float format="ascii">
+        <cd:Description>Maximum height difference that center of detected ground bin is allowed to be above center of DEM intersection bin</cd:Description>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Maximum_Lower_DEM_Offset">
+    <cd:Type namexml="Maximum_Lower_DEM_Offset">
+      <cd:Attribute name="unit"/>
+      <cd:Float format="ascii">
+        <cd:Description>Maximum height difference that center of detected ground bin is allowed to be below center of DEM intersection bin</cd:Description>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Maximum_DEM_Response_Shift">
+    <cd:Type namexml="Maximum_DEM_Response_Shift">
+      <cd:Attribute name="unit">
+        <cd:Optional/>
+        <cd:FixedValue>ACCD pixel</cd:FixedValue>
+      </cd:Attribute>
+      <cd:Float format="ascii">
+        <cd:Description>Maximum allowed response shift of ground bin candidates to DEM expected round bin response for Mie data</cd:Description>
+        <cd:Unit>pixel</cd:Unit>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Max_Mie_Ground_Detection_Response_Shift">
+    <cd:Type namexml="Max_Mie_Ground_Detection_Response_Shift">
+      <cd:Attribute name="unit">
+        <cd:Optional/>
+        <cd:FixedValue>ACCD pixel</cd:FixedValue>
+      </cd:Attribute>
+      <cd:Float format="ascii">
+        <cd:Description>Maximum Mie Resonse shift for ground detection</cd:Description>
+        <cd:Unit>pixel</cd:Unit>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Min_Mie_Ground_Detection_Signal_Derivative">
+    <cd:Type namexml="Min_Mie_Ground_Detection_Signal_Derivative">
+      <cd:Attribute name="unit">
+        <cd:Optional/>
+        <cd:FixedValue>ACCD counts</cd:FixedValue>
+      </cd:Attribute>
+      <cd:Float format="ascii">
+        <cd:Description>Minimum derivative of Mie signal for ground detection</cd:Description>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Ground_Detection_FWHM_Upper_Threshold">
+    <cd:Type namexml="Ground_Detection_FWHM_Upper_Threshold">
+      <cd:Attribute name="unit">
+        <cd:Optional/>
+        <cd:FixedValue>ACCD pixel</cd:FixedValue>
+      </cd:Attribute>
+      <cd:Float format="ascii">
+        <cd:Description>If MieCore2 is used and the retrieved FWHM of the ground return signal is above this threshold, the ground detection is flagged invalid.</cd:Description>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Mie_Ideal_Calibration_Values">
+    <cd:Record>
+      <cd:Description>Ideal slope and intercept values used for RDB correction.</cd:Description>
+      <cd:Field name="Mie_Internal_Slope">
+        <cd:Type namexml="Mie_Internal_Slope">
+          <cd:Float format="ascii">
+            <cd:Description>Ideal internal reference pulse mean sensitivity (slope of the best straight line of channel response)</cd:Description>
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="Mie_Internal_Offset">
+        <cd:Type namexml="Mie_Internal_Offset">
+          <cd:Float format="ascii">
+            <cd:Description>Ideal internal reference pulse zero frequency response (y-intercept of the best straight line of channel response)</cd:Description>
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="Mie_Ground_Slope">
+        <cd:Type namexml="Mie_Ground_Slope">
+          <cd:Float format="ascii">
+            <cd:Description>Ideal ground measurement mean sensitivity (slope of the best straight line of channel response)</cd:Description>
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="Mie_Ground_Offset">
+        <cd:Type namexml="Mie_Ground_Offset">
+          <cd:Float format="ascii">
+            <cd:Description>Ideal ground measurement zero frequency response (y-intercept of the best straight line of channel response)</cd:Description>
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Type>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="Use_Weighted_Linear_Fit">
+    <cd:Type namexml="Use_Weighted_Linear_Fit">
+      <cd:Integer format="ascii">
+        <cd:Description>Flag TRUE/FALSE to indicate if a weighted or unweighted linear least squares fit is used to compute the mean slope and intercept of the Mie response</cd:Description>
+        <cd:NativeType>uint8</cd:NativeType>
+        <cd:Mapping string="FALSE" value="0"/>
+        <cd:Mapping string="False" value="0"/>
+        <cd:Mapping string="false" value="0"/>
+        <cd:Mapping string="TRUE" value="1"/>
+        <cd:Mapping string="True" value="1"/>
+        <cd:Mapping string="true" value="1"/>
+        <ct:NamedTest id="BooleanXmlTest"/>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+</cd:Record>

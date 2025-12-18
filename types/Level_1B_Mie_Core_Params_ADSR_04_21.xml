@@ -1,0 +1,414 @@
+<?xml version="1.0"?>
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="binary" last-modified="2025-12-15" name="Level_1B_Mie_Core_Params_ADSR_04_21">
+  <cd:Field name="gaussian_width_a">
+    <cd:Float>
+      <cd:Description>Gaussian width a. This value should be approximately the fringe FWHM</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+      <ct:NamedTest id="FloatIsFinite"/>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="peak_error_treshold">
+    <cd:Float>
+      <cd:Description>Peak error threshold</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+      <ct:NamedTest id="FloatIsFinite"/>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="peak_error_threshold_reference_pulse">
+    <cd:Float>
+      <cd:Description>Peak error threshold for internal reference path signal</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+      <ct:NamedTest id="FloatIsFinite"/>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="max_num_iterations">
+    <cd:Integer>
+      <cd:Description>Maximum number of gaussian iterations</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="snr_threshold">
+    <cd:Float>
+      <cd:Description>Threshold to switch Mie-Core processing on/off</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+      <ct:NamedTest id="FloatIsFinite"/>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="start_fwhm">
+    <cd:Float>
+      <cd:Description>Starting value for FWHM</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+      <ct:NamedTest id="FloatIsFinite"/>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="residual_error_threshold">
+    <cd:Float>
+      <cd:Description>Stop threshold for quadratic sum of differences between modeled and measured ACCD counts per pixel</cd:Description>
+      <cd:Unit>AU</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+      <ct:NamedTest id="FloatIsFinite"/>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="max_iterations_lorentz_fit">
+    <cd:Integer>
+      <cd:Description>Maximum number of iterations in Lorentz fit-loop</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="fwhm_upper_threshold">
+    <cd:Float>
+      <cd:Description>Upper threshold for FWHM of Lorentz function for quality check</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+      <ct:NamedTest id="FloatIsFinite"/>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="fwhm_lower_threshold">
+    <cd:Float>
+      <cd:Description>Lower threshold for FWHM of Lorentz function for quality check</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+      <ct:NamedTest id="FloatIsFinite"/>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="peak_height_upper_threshold">
+    <cd:Float>
+      <cd:Description>Relative threshold for peak height of Lorentz function</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+      <ct:NamedTest id="FloatIsFinite"/>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="peak_height_lower_threshold">
+    <cd:Float>
+      <cd:Description>Relative threshold for peak height of Lorentz function</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+      <ct:NamedTest id="FloatIsFinite"/>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="peak_location_threshold">
+    <cd:Float>
+      <cd:Description>Peak location threshold</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+      <ct:NamedTest id="FloatIsFinite"/>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="nonlinear_optimization_threshold">
+    <cd:Float>
+      <cd:Description>Stop threshold for Downhill Simplex algorithm merit function</cd:Description>
+      <cd:Unit>AU</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+      <ct:NamedTest id="FloatIsFinite"/>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="max_iterations_nonlinear_optimization">
+    <cd:Integer>
+      <cd:Description>Maximum number of iterations of Downhill Simplex algorithm</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="num_spectral_sub_samples">
+    <cd:Integer>
+      <cd:Description>Number of functional evaluations of Lorentz fit function for one pixel</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="snr_threshold_reference_pulse">
+    <cd:Float>
+      <cd:Description>Threshold to switch Mie-Core processing on/off for internal reference path signal</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+      <ct:NamedTest id="FloatIsFinite"/>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="start_fwhm_reference_pulse">
+    <cd:Float>
+      <cd:Description>Starting value for FWHM for internal reference path signal</cd:Description>
+      <cd:Unit>ACCD pixel</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+      <ct:NamedTest id="FloatIsFinite"/>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="residual_error_threshold_reference_pulse">
+    <cd:Float>
+      <cd:Description>Stop threshold for change of quadratic sum of differences between modeled and measured ACCD counts per pixel: if the difference between the quadratic sum from the previous to the next iteration loop is below this threshold, the iteration is stopped for internal reference path signal.</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+      <ct:NamedTest id="FloatIsFinite"/>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="max_iterations_lorentz_fit_reference_pulse">
+    <cd:Integer>
+      <cd:Description>Maximum number of iterations in Lorentz fit-loop for internal reference path signal</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="fwhm_upper_threshold_reference_pulse">
+    <cd:Float>
+      <cd:Description>Upper threshold for FWHM of Lorentz function for quality check for internal reference path signal</cd:Description>
+      <cd:Unit>ACCD pixel</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+      <ct:NamedTest id="FloatIsFinite"/>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="fwhm_lower_threshold_reference_pulse">
+    <cd:Float>
+      <cd:Description>Lower threshold for FWHM of Lorentz function for quality check for internal reference path signal</cd:Description>
+      <cd:Unit>ACCD pixel</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+      <ct:NamedTest id="FloatIsFinite"/>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="peak_height_upper_threshold_reference_pulse">
+    <cd:Float>
+      <cd:Description>Relative threshold for peak height of Lorentz function for internal reference path signal</cd:Description>
+      <cd:Unit>ACCD counts</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+      <ct:NamedTest id="FloatIsFinite"/>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="peak_height_lower_threshold_reference_pulse">
+    <cd:Float>
+      <cd:Description>Relative threshold for peak height of Lorentz function for internal reference path signal</cd:Description>
+      <cd:Unit>ACCD counts</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+      <ct:NamedTest id="FloatIsFinite"/>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="peak_location_threshold_reference_pulse">
+    <cd:Float>
+      <cd:Description>Peak location threshold for internal reference path signal</cd:Description>
+      <cd:Unit>ACCD pixel</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+      <ct:NamedTest id="FloatIsFinite"/>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="nonlinear_optimization_threshold_reference_pulse">
+    <cd:Float>
+      <cd:Description>Stop threshold for Downhill Simplex algorithm merit function for internal reference path signal</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+      <ct:NamedTest id="FloatIsFinite"/>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="max_iterations_nonlinear_optimization_reference_pulse">
+    <cd:Integer>
+      <cd:Description>Maximum number of iterations of Downhill Simplex algorithm for internal reference path signal</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="num_spectral_sub_samples_reference_pulse">
+    <cd:Integer>
+      <cd:Description>Number of functional evaluations of Lorentz fit function for one pixel for internal reference path signal</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="downhill_simplex_on">
+    <cd:Integer>
+      <cd:Description>Flag showing if the downhill simplex is on or off. If it is off (FALSE) a method using least squares minimization is used instead of DownHill Simplex</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+      <ct:NamedTest id="BooleanBinTest"/>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="use_emsr_not_tobs">
+    <cd:Integer>
+      <cd:Description>Use the EMSR correction values instead of the TOBS correction values for all Mie processing</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+      <ct:NamedTest id="BooleanBinTest"/>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="use_internal_emsr">
+    <cd:Integer>
+      <cd:Description>Use the internal EMSR array to coorect the Mie reference pulses for the non-uniform illumination of the Fizeau</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+      <ct:NamedTest id="BooleanBinTest"/>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="use_voigt_fit">
+    <cd:Integer>
+      <cd:Description>Run a Voigt fit on the Mie data in addition</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+      <ct:NamedTest id="BooleanBinTest"/>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="min_num_points_voigt_fit_meas">
+    <cd:Integer>
+      <cd:Description>Minimum number of valid points in one ACCD row that are required to do the Voigt fit</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="min_num_points_voigt_fit_obs">
+    <cd:Integer>
+      <cd:Description>Minimum number of valid points in one ACCD row that are required to do the Voigt fit for observations</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="min_useful_signal_voigt_fit_obs">
+    <cd:Float>
+      <cd:Description>Minimum useful signal required to start the Voigt fit for observations</cd:Description>
+      <cd:Unit>ACCD counts</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+      <ct:NamedTest id="FloatIsFinite"/>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="use_voigt_output_for_wind_and_mrc">
+    <cd:Integer>
+      <cd:Description>If set to TRUE, the Mie Core 3 output (peak position) is used to derive the wind and MRC data</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+      <ct:NamedTest id="BooleanBinTest"/>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="num_spectral_sub_sample_voigt">
+    <cd:Integer>
+      <cd:Description>Number of spectral sub-samples for Voigt function</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="fwhm_voigt_atmosphere">
+    <cd:Float>
+      <cd:Description>Fixed Voigt function FWHM used in the Mie Core 3 for atmospheric signals.</cd:Description>
+      <cd:Unit>ACCD pixel</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+      <ct:NamedTest id="FloatIsFinite"/>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="fwhm_voigt_reference_pulse">
+    <cd:Float>
+      <cd:Description>Fixed Voigt function FWHM used in the Mie Core 3 for the internal reference</cd:Description>
+      <cd:Unit>ACCD pixel</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+      <ct:NamedTest id="FloatIsFinite"/>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="lorentzian_fration_of_voigt_atmosphere">
+    <cd:Float>
+      <cd:Description>Fixed fraction of Lorentzian function of Voigt used in the Mie Core 3 for atmospheric signals</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+      <ct:NamedTest id="FloatIsFinite"/>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="lorentzian_fration_of_voigt_reference_pulse">
+    <cd:Float>
+      <cd:Description>Fixed fraction of Lorentzian function of Voigt used in the Mie Core 3 for the internal reference</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+      <ct:NamedTest id="FloatIsFinite"/>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="peak_height_upper_threshold_voigt">
+    <cd:Float>
+      <cd:Description>Relative upper threshold for peak height of Voigt function</cd:Description>
+      <cd:Unit>ACCD counts</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+      <ct:NamedTest id="FloatIsFinite"/>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="peak_height_lower_threshold_voigt">
+    <cd:Float>
+      <cd:Description>Relative lower threshold for peak height of Voigt function</cd:Description>
+      <cd:Unit>ACCD counts</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+      <ct:NamedTest id="FloatIsFinite"/>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="use_observation_offset_voigt">
+    <cd:Integer>
+      <cd:Description>Use observation level offset to calculate measurement level SR values</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+      <ct:NamedTest id="BooleanBinTest"/>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="use_fwhm_check_voigt">
+    <cd:Integer>
+      <cd:Description>Estimate FWHM bylinear interpolation and check against upper/lower threshold</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+      <ct:NamedTest id="BooleanBinTest"/>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="use_clear_air_check_voigt">
+    <cd:Integer>
+      <cd:Description>Check mean signal of lowest 12 against highestsignal in ACCD row</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+      <ct:NamedTest id="BooleanBinTest"/>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="use_highest_two_check_voigt">
+    <cd:Integer>
+      <cd:Description>Check if pixels with the two highest most signals areneighbours</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+      <ct:NamedTest id="BooleanBinTest"/>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="use_highest_three_check_voigt">
+    <cd:Integer>
+      <cd:Description>Check if pixels with the three highest signals are neighbours</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+      <ct:NamedTest id="BooleanBinTest"/>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="fwhm_upper_threshold_voigt">
+    <cd:Float>
+      <cd:Description>Upper threshold for FWHM</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+      <ct:NamedTest id="FloatIsFinite"/>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="fwhm_lower_threshold_voigt">
+    <cd:Float>
+      <cd:Description>Lower threshold for FWHM</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+      <ct:NamedTest id="FloatIsFinite"/>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="rayleigh_distance_voigt">
+    <cd:Float>
+      <cd:Description>Threshold between mean and maximum signal for clear air check</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+      <ct:NamedTest id="FloatIsFinite"/>
+    </cd:Float>
+  </cd:Field>
+</cd:Record>
