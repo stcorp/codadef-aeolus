@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="binary" last-modified="2025-12-10" name="Level_2A_AEL_LSR_PCD_ADSR_03_19">
+  <cd:Field name="starttime">
+    <cd:Time timeformat="binary_envisat_datetime">
+      <cd:Description>Start date and time of the AEL-PRO profile covered by the present DSR. This is
+        the centroid time of the first measurement of the profile.</cd:Description>
+      <ct:NamedTest id="RangeSecond" path="seconds" />
+      <ct:NamedTest id="RangeMicroSecond" path="microseconds" />
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="measurement_ael_lsr_pcd">
+    <cd:Array>
+      <cd:Dimension><![CDATA[$num_meas_max_brc]]></cd:Dimension>
+      <cd:Record>
+        <cd:Description>Structure containing AEL-LSR PCD information for the measurements of the BRC</cd:Description>
+        <cd:Field name="siab_error">
+          <cd:Float>
+            <cd:Description>Error of Lidar Surface Return (LSR) or Surface In-tegrated Attenuated
+              Backcscatter (SIAB)</cd:Description>
+            <cd:BitSize>64</cd:BitSize>
+            <cd:NativeType>double</cd:NativeType>
+            <cd:Unit>sr^-1</cd:Unit>
+            <ct:NamedTest id="FloatIsFinite" />
+          </cd:Float>
+        </cd:Field>
+        <cd:Field name="siab_raw_error">
+          <cd:Float>
+            <cd:Description>Error of Uncorrected Surface Integrated Attenuated Backcscatter (SIAB)</cd:Description>
+            <cd:BitSize>64</cd:BitSize>
+            <cd:NativeType>double</cd:NativeType>
+            <cd:Unit>sr^-1</cd:Unit>
+            <ct:NamedTest id="FloatIsFinite" />
+          </cd:Float>
+        </cd:Field>
+        <cd:Field name="aod_error">
+          <cd:Float>
+            <cd:Description>Error of AOD (Aerosol Optical Depth)</cd:Description>
+            <cd:BitSize>64</cd:BitSize>
+            <cd:NativeType>double</cd:NativeType>
+            <ct:NamedTest id="FloatIsFinite" />
+          </cd:Float>
+        </cd:Field>
+        <cd:Field name="quality_flag">
+          <cd:Integer>
+            <cd:Description>Quality Flag ATM reflecting atmospheric conditions over bin</cd:Description>
+            <cd:BitSize>32</cd:BitSize>
+            <cd:NativeType>uint32</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="atmospheric_quality_flag">
+          <cd:Float>
+            <cd:Description>Atmospheric_Quality_Flag</cd:Description>
+            <cd:BitSize>64</cd:BitSize>
+            <cd:NativeType>double</cd:NativeType>
+            <ct:NamedTest id="FloatIsFinite" />
+          </cd:Float>
+        </cd:Field>
+        <cd:Field name="surface_flag">
+          <cd:Integer>
+            <cd:Description>Surface flag taken from L1 data 1, 2 = water; 0, 3 = surface</cd:Description>
+            <cd:BitSize>8</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+
+      </cd:Record>
+    </cd:Array>
+  </cd:Field>
+</cd:Record>

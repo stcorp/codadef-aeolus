@@ -1,0 +1,534 @@
+<?xml version="1.0"?>
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="ascii" name="Level_2A_SPH_03_19" last-modified="2025-12-10">
+  <cd:Field name="sph_descriptor_title">
+    <cd:Text>
+      <cd:Description>SPH_DESCRIPTOR=</cd:Description>
+      <cd:FixedValue>SPH_DESCRIPTOR=</cd:FixedValue>
+      <cd:ByteSize>15</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="quote_1">
+    <cd:Text>
+      <cd:Description>quotation mark</cd:Description>
+      <cd:FixedValue>"</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="sph_descriptor">
+    <cd:Text>
+      <cd:Description>"AEOLUS_OPT_PROP_SPEC_HEADER" (SPH descriptor ASCII string describing the product.)</cd:Description>
+      <cd:FixedValue>AEOLUS_L2A_SPECIFIC_HEADER  </cd:FixedValue>
+      <cd:ByteSize>28</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="quote_2">
+    <cd:Text>
+      <cd:Description>quotation mark</cd:Description>
+      <cd:FixedValue>"</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="newline_char_1">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="doi_title">
+    <cd:Text>
+      <cd:Description>DOI=</cd:Description>
+      <cd:FixedValue>DOI=</cd:FixedValue>
+      <cd:ByteSize>4</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="quote_3">
+    <cd:Text>
+      <cd:Description>quotation mark</cd:Description>
+      <cd:FixedValue>"</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+ 
+  <cd:Field name="doi">
+    <cd:Text>
+      <cd:Description>Document Identifier</cd:Description>
+      <cd:ByteSize>25</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="quote_4">
+    <cd:Text>
+      <cd:Description>quotation mark</cd:Description>
+      <cd:FixedValue>"</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="newline_char_2">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="spare_1">
+    <cd:Text>
+      <cd:Description>Spare</cd:Description>
+      <cd:ByteSize>40</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="newline_char_3">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="intersect_start_lat_title">
+    <cd:Text>
+      <cd:Description>INTERSECT_START_LAT=</cd:Description>
+      <cd:FixedValue>INTERSECT_START_LAT=</cd:FixedValue>
+      <cd:ByteSize>20</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="intersect_start_lat">
+    <cd:Integer>
+      <cd:Description>Latitude of the intersection of WGS84 DEM and the satellite line-of-sight for the first measurement (first measurement centroid time of the first BRC)</cd:Description>
+      <cd:Unit>1e-6 degrees_north</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+        <cd:Unit>degrees_north</cd:Unit>
+      </cd:Conversion>
+      <cd:ByteSize>11</cd:ByteSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="intersect_start_lat_units">
+    <cd:Text>
+      <cd:FixedValue>\07410-6DegN\076</cd:FixedValue>
+      <cd:ByteSize>10</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="newline_char_4">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="intersect_start_long_title">
+    <cd:Text>
+      <cd:Description>INTERSECT_START_LONG=</cd:Description>
+      <cd:FixedValue>INTERSECT_START_LONG=</cd:FixedValue>
+      <cd:ByteSize>21</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="intersect_start_long">
+    <cd:Integer>
+      <cd:Description>Latitude of the intersection of WGS84 DEM and the satellite line-of-sight for the first measurement (first measurement centroid time of the first BRC)</cd:Description>
+      <cd:Unit>1e-6 degrees_east</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+        <cd:Unit>degrees_east</cd:Unit>
+      </cd:Conversion>
+      <cd:ByteSize>11</cd:ByteSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="intersect_start_long_units">
+    <cd:Text>
+      <cd:FixedValue>\07410-6DegE\076</cd:FixedValue>
+      <cd:ByteSize>10</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="newline_char_5">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="intersect_stop_lat_title">
+    <cd:Text>
+      <cd:Description>INTERSECT_STOP_LAT=</cd:Description>
+      <cd:FixedValue>INTERSECT_STOP_LAT=</cd:FixedValue>
+      <cd:ByteSize>19</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="intersect_stop_lat">
+    <cd:Integer>
+      <cd:Description>Latitude of the intersection of WGS84 DEM and the satellite line-of-sight for the last measurement (last measurement centroid time of the last BRC)</cd:Description>
+      <cd:Unit>1e-6 degrees_north</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+        <cd:Unit>degrees_north</cd:Unit>
+      </cd:Conversion>
+      <cd:ByteSize>11</cd:ByteSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="intersect_stop_lat_units">
+    <cd:Text>
+      <cd:FixedValue>\07410-6DegN\076</cd:FixedValue>
+      <cd:ByteSize>10</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="newline_char_6">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="intersect_stop_long_title">
+    <cd:Text>
+      <cd:Description>INTERSECT_STOP_LONG=</cd:Description>
+      <cd:FixedValue>INTERSECT_STOP_LONG=</cd:FixedValue>
+      <cd:ByteSize>20</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="intersect_stop_long">
+    <cd:Integer>
+      <cd:Description>Latitude of the intersection of WGS84 DEM and the satellite line-of-sight for the last measurement (last measurement centroid time of the last BRC)</cd:Description>
+      <cd:Unit>1e-6 degrees_east</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+        <cd:Unit>degrees_east</cd:Unit>
+      </cd:Conversion>
+      <cd:ByteSize>11</cd:ByteSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="intersect_stop_long_units">
+    <cd:Text>
+      <cd:FixedValue>\07410-6DegE\076</cd:FixedValue>
+      <cd:ByteSize>10</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="newline_char_7">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="sat_track_title">
+    <cd:Text>
+      <cd:Description>SAT_TRACK=</cd:Description>
+      <cd:FixedValue>SAT_TRACK=</cd:FixedValue>
+      <cd:ByteSize>10</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="sat_track">
+    <cd:Float>
+      <cd:Description>Sub-satellite track heading at the Sensing Start time in the MPH</cd:Description>
+      <cd:Unit>degrees</cd:Unit>
+      <cd:ByteSize>15</cd:ByteSize>
+      <cd:NativeType>double</cd:NativeType>
+      <ct:NamedTest id="FloatIsFinite"/>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="sat_track_units">
+    <cd:Text>
+      <cd:FixedValue>\074deg\076</cd:FixedValue>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="newline_char_8">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="spare_2">
+    <cd:Text>
+      <cd:Description>Spare</cd:Description>
+      <cd:ByteSize>40</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="newline_char_9">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="num_brc_title">
+    <cd:Text>
+      <cd:Description>NUM_BRC=</cd:Description>
+      <cd:FixedValue>NUM_BRC=</cd:FixedValue>
+      <cd:ByteSize>8</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="num_brc">
+    <cd:Integer>
+      <cd:Description>Number of L1B input BRCs.</cd:Description>
+      <cd:ByteSize>11</cd:ByteSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_char_10">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="num_meas_max_brc_title">
+    <cd:Text>
+      <cd:Description>NUM_MEAS_MAX_BRC=</cd:Description>
+      <cd:FixedValue>NUM_MEAS_MAX_BRC=</cd:FixedValue>
+      <cd:ByteSize>17</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="num_meas_max_brc">
+    <cd:Integer>
+      <cd:Description>Maximum number of measurements per BRC of the L1B input data.</cd:Description>
+      <cd:ByteSize>11</cd:ByteSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_char_11">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="num_bins_per_meas_title">
+    <cd:Text>
+      <cd:Description>NUM_BINS_PER_MEAS=</cd:Description>
+      <cd:FixedValue>NUM_BINS_PER_MEAS=</cd:FixedValue>
+      <cd:ByteSize>18</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="num_bins_per_meas">
+    <cd:Integer>
+      <cd:Description>Number height bins without background bin.</cd:Description>
+      <cd:ByteSize>11</cd:ByteSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_char_12">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="num_prof_sca_title">
+    <cd:Text>
+      <cd:Description>NUM_PROF_SCA=</cd:Description>
+      <cd:FixedValue>NUM_PROF_SCA=</cd:FixedValue>
+      <cd:ByteSize>13</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="num_prof_sca">
+    <cd:Integer>
+      <cd:Description>Number of SCA BRC level profiles reported in this product.</cd:Description>
+      <cd:ByteSize>11</cd:ByteSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_char_13">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="num_prof_mle_title">
+    <cd:Text>
+      <cd:Description>NUM_PROF_MLE=</cd:Description>
+      <cd:FixedValue>NUM_PROF_MLE=</cd:FixedValue>
+      <cd:ByteSize>13</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="num_prof_mle">
+    <cd:Integer>
+      <cd:Description>Number of MLE BRC level profiles reported in this product.</cd:Description>
+      <cd:ByteSize>11</cd:ByteSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_char_14">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="num_prof_mca_title">
+    <cd:Text>
+      <cd:Description>NUM_PROF_MCA=</cd:Description>
+      <cd:FixedValue>NUM_PROF_MCA=</cd:FixedValue>
+      <cd:ByteSize>13</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="num_prof_mca">
+    <cd:Integer>
+      <cd:Description>Number of MCA BRC level profiles reported in this product.</cd:Description>
+      <cd:ByteSize>11</cd:ByteSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_char_15">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="num_group_tot_title">
+    <cd:Text>
+      <cd:Description>NUM_GROUP_TOT=</cd:Description>
+      <cd:FixedValue>NUM_GROUP_TOT=</cd:FixedValue>
+      <cd:ByteSize>14</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="num_group_tot">
+    <cd:Integer>
+      <cd:Description>Number of group profiles reported in this product.</cd:Description>
+      <cd:ByteSize>11</cd:ByteSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_char_16">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="num_prof_per_brc_mlesub_title">
+    <cd:Text>
+      <cd:Description>NUM_PROF_PER_BRC_MLESUB=</cd:Description>
+      <cd:FixedValue>NUM_PROF_PER_BRC_MLESUB=</cd:FixedValue>
+      <cd:ByteSize>24</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="num_prof_per_brc_mlesub">
+    <cd:Integer>
+      <cd:Description>Number of profile per BRC to be optimized by the MLEsub.</cd:Description>
+      <cd:ByteSize>11</cd:ByteSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_char_17">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="denoising_optimizer_switch_on_title">
+    <cd:Text>
+      <cd:Description>DENOISING_OPTIMIZER_SWITCH_ON=</cd:Description>
+      <cd:FixedValue>DENOISING_OPTIMIZER_SWITCH_ON=</cd:FixedValue>
+      <cd:ByteSize>30</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="denoising_optimizer_switch_on">
+    <cd:Integer>
+      <cd:Description>Spare</cd:Description>
+      <cd:ByteSize>10</cd:ByteSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_char_18">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <ct:NamedTest id="NumScaIcaMcaTotGreaterThanZero"/>
+</cd:Record>

@@ -10,7 +10,7 @@
       <ct:NamedTest id="RangeMicroSecond" path="microseconds" />
     </cd:Time>
   </cd:Field>
-  <cd:Field name="measurement_ael_pro_lsr_properties">
+  <cd:Field name="measurement_ael_lsr_properties">
     <cd:Array>
       <cd:Dimension><![CDATA[$num_meas_max_brc]]></cd:Dimension>
       <cd:Record>
@@ -20,6 +20,14 @@
             <cd:Description>Lidar Surface Return (LSR) or Surface Integrated Attenuated Backcscatter
               (SIAB)</cd:Description>
             <cd:Unit>sr^-1</cd:Unit>
+            <cd:BitSize>64</cd:BitSize>
+            <cd:NativeType>double</cd:NativeType>
+            <ct:NamedTest id="FloatIsFinite" />
+          </cd:Float>
+        </cd:Field>
+        <cd:Field name="molecule_optical_depth">
+          <cd:Float>
+            <cd:Description>MOD (Molecular Optical Depth)</cd:Description>
             <cd:BitSize>64</cd:BitSize>
             <cd:NativeType>double</cd:NativeType>
             <ct:NamedTest id="FloatIsFinite" />
@@ -37,14 +45,6 @@
         <cd:Field name="aod">
           <cd:Float>
             <cd:Description>Aerosol Optical Depth (AOD) calculated from extinction of L2 AEL_PRO</cd:Description>
-            <cd:BitSize>64</cd:BitSize>
-            <cd:NativeType>double</cd:NativeType>
-            <ct:NamedTest id="FloatIsFinite" />
-          </cd:Float>
-        </cd:Field>
-        <cd:Field name="molecule_optical_depth">
-          <cd:Float>
-            <cd:Description>MOD (Molecular Optical Depth)</cd:Description>
             <cd:BitSize>64</cd:BitSize>
             <cd:NativeType>double</cd:NativeType>
             <ct:NamedTest id="FloatIsFinite" />

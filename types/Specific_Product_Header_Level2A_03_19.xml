@@ -1,0 +1,179 @@
+<?xml version="1.0"?>
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="xml" last-modified="2025-12-10" name="Specific_Product_Header_Level2A_03_19" namexml="Specific_Product_Header">
+  <cd:Description>Specific Product Header for ALD Level 2A products</cd:Description>
+  <cd:Field name="Sph_Descriptor">
+    <cd:Text namexml="Sph_Descriptor">
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="DOI">
+    <cd:Text namexml="DOI">
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="Spare_1">
+    <cd:Hidden/>
+    <cd:Text namexml="Spare_1">
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="Intersect_Start_Lat">
+    <cd:Type namexml="Intersect_Start_Lat">
+      <cd:Attribute name="unit">
+        <cd:Optional/>
+        <cd:FixedValue>10-6DegN</cd:FixedValue>
+      </cd:Attribute>
+      <cd:Integer format="ascii">
+        <cd:Description>Latitude of the intersection of WGS84 DEM and the satellite line-of-sight for the first measurement (first measurement centroid time of the first BRC)</cd:Description>
+        <cd:Unit>1e-6 degrees_north</cd:Unit>
+        <cd:Conversion denominator="1000000.000000" numerator="1.000000">
+          <cd:Unit>degrees_north</cd:Unit>
+        </cd:Conversion>
+        <cd:NativeType>int32</cd:NativeType>
+        <ct:NamedTest id="RangeLatitude6"/>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Intersect_Start_Long">
+    <cd:Type namexml="Intersect_Start_Long">
+      <cd:Attribute name="unit">
+        <cd:Optional/>
+        <cd:FixedValue>10-6DegE</cd:FixedValue>
+      </cd:Attribute>
+      <cd:Integer format="ascii">
+        <cd:Description>Longitude of the intersection of WGS84 DEM and the satellite line-of-sight for the first measurement (first measurement centroid time of the first BRC)</cd:Description>
+        <cd:Unit>1e-6 degrees_east</cd:Unit>
+        <cd:Conversion denominator="1000000.000000" numerator="1.000000">
+          <cd:Unit>degrees_east</cd:Unit>
+        </cd:Conversion>
+        <cd:NativeType>int32</cd:NativeType>
+        <ct:NamedTest id="RangeLongitude6"/>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Intersect_Stop_Lat">
+    <cd:Type namexml="Intersect_Stop_Lat">
+      <cd:Attribute name="unit">
+        <cd:Optional/>
+        <cd:FixedValue>10-6DegN</cd:FixedValue>
+      </cd:Attribute>
+      <cd:Integer format="ascii">
+        <cd:Description>Latitude of the intersection of WGS84 DEM and the satellite line-of-sight for the last measurement (last measurement centroid time of the last BRC)</cd:Description>
+        <cd:Unit>1e-6 degrees_north</cd:Unit>
+        <cd:Conversion denominator="1000000.000000" numerator="1.000000">
+          <cd:Unit>degrees_north</cd:Unit>
+        </cd:Conversion>
+        <cd:NativeType>int32</cd:NativeType>
+        <ct:NamedTest id="RangeLatitude6"/>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Intersect_Stop_Long">
+    <cd:Type namexml="Intersect_Stop_Long">
+      <cd:Attribute name="unit">
+        <cd:Optional/>
+        <cd:FixedValue>10-6DegE</cd:FixedValue>
+      </cd:Attribute>
+      <cd:Integer format="ascii">
+        <cd:Description>Longitude of the intersection of WGS84 DEM and the satellite line-of-sight for the last measurement (last measurement centroid time of the last BRC)</cd:Description>
+        <cd:Unit>1e-6 degrees_east</cd:Unit>
+        <cd:Conversion denominator="1000000.000000" numerator="1.000000">
+          <cd:Unit>degrees_east</cd:Unit>
+        </cd:Conversion>
+        <cd:NativeType>int32</cd:NativeType>
+        <ct:NamedTest id="RangeLongitude6"/>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Sat_Track">
+    <cd:Type namexml="Sat_Track">
+      <cd:Attribute name="unit">
+        <cd:Optional/>
+        <cd:FixedValue>deg</cd:FixedValue>
+      </cd:Attribute>
+      <cd:Float format="ascii">
+        <cd:Description>Sub-satellite heading at the sensing start time in the MPH</cd:Description>
+        <cd:Unit>degrees</cd:Unit>
+        <cd:NativeType>double</cd:NativeType>
+        <ct:NamedTest id="FloatIsFinite"/>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Spare_2">
+    <cd:Hidden/>
+    <cd:Text namexml="Spare_2">
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="Num_Brc">
+    <cd:Type namexml="Num_Brc">
+      <cd:Integer format="ascii">
+        <cd:Description>Number of BRCs in the product. This is also the number of Data Set Records in the Measurement Data Sets as there is systematically one DSR for each BRC</cd:Description>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Num_Meas_Max_Brc">
+    <cd:Type namexml="Num_Meas_Max_Brc">
+      <cd:Integer format="ascii">
+        <cd:Description>Maximum number of measurements per BRC of the L1B input data.</cd:Description>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Num_Bins_Per_Meas">
+    <cd:Type namexml="Num_Bins_Per_Meas">
+      <cd:Integer format="ascii">
+        <cd:Description>Number height bins without background bin.</cd:Description>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Num_Prof_Sca">
+    <cd:Type namexml="Num_Prof_Sca">
+      <cd:Integer format="ascii">
+        <cd:Description>Number of SCA BRC level profiles reported in this product.</cd:Description>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Num_Prof_Mle">
+    <cd:Type namexml="Num_Prof_Mle">
+      <cd:Integer format="ascii">
+        <cd:Description>Number of MLE BRC level profiles reported in this product.</cd:Description>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Num_Prof_Mca">
+    <cd:Type namexml="Num_Prof_Mca">
+      <cd:Integer format="ascii">
+        <cd:Description>Number of MCA BRC level profiles reported in this product.</cd:Description>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Num_Group_Tot">
+    <cd:Type namexml="Num_Group_Tot">
+      <cd:Integer format="ascii">
+        <cd:Description>Number of group profiles reported in this product.</cd:Description>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Num_Prof_Per_Brc_Mlesub">
+    <cd:Type namexml="Num_Prof_Per_Brc_Mlesub">
+      <cd:Integer format="ascii">
+        <cd:Description>Number of group profiles reported in this product.</cd:Description>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Denoising_Optimizer_Switch_On">
+    <cd:Type namexml="Denoising_Optimizer_Switch_On">
+      <cd:Integer format="ascii">
+        <cd:Description>Setting of switch for denoising approach that was used for processing.</cd:Description>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="List_of_Dsds">
+    <cd:NamedType id="List_of_Dsds"/>
+  </cd:Field>
+</cd:Record>
