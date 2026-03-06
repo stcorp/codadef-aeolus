@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="binary" last-modified="2025-01-14" name="Level_2A_AEL_LSR_PCD_ADSR_03_18">
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" format="binary" last-modified="2026-03-06" name="Level_2A_AEL_LSR_PCD_ADSR_03_18">
   <cd:Field name="starttime">
     <cd:Time timeformat="binary_envisat_datetime">
       <cd:Description>Start date and time of the AEL-PRO profile covered by the present DSR. This is
@@ -8,7 +8,7 @@
       <ct:NamedTest id="RangeMicroSecond" path="microseconds" />
     </cd:Time>
   </cd:Field>
-  <cd:Field name="measurement_ael_pro_pcd">
+  <cd:Field name="measurement_ael_lsr_pcd">
     <cd:Array>
       <cd:Dimension><![CDATA[$num_meas_max_brc]]></cd:Dimension>
       <cd:Record>
@@ -41,21 +41,27 @@
           </cd:Float>
         </cd:Field>
         <cd:Field name="quality_flag">
-          <cd:Float>
+          <cd:Integer>
             <cd:Description>Quality Flag ATM reflecting atmospheric conditions over bin</cd:Description>
+            <cd:BitSize>32</cd:BitSize>
+            <cd:NativeType>uint32</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="atmospheric_quality_flag">
+          <cd:Float>
+            <cd:Description>Atmospheric_Quality_Flag</cd:Description>
             <cd:BitSize>64</cd:BitSize>
             <cd:NativeType>double</cd:NativeType>
             <ct:NamedTest id="FloatIsFinite" />
           </cd:Float>
         </cd:Field>
-        <cd:Field name="atmospheric_quality_flag">
+        <cd:Field name="surface_flag">
           <cd:Integer>
-            <cd:Description>Atmospheric_Quality_Flag</cd:Description>
-            <cd:BitSize>32</cd:BitSize>
-            <cd:NativeType>int32</cd:NativeType>
+            <cd:Description>Surface flag taken from L1 data 1, 2 = water; 0, 3 = surface</cd:Description>
+            <cd:BitSize>8</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
           </cd:Integer>
         </cd:Field>
-
       </cd:Record>
     </cd:Array>
   </cd:Field>
